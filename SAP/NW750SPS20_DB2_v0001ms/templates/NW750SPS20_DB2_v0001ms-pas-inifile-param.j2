@@ -10,7 +10,7 @@
 
 # Location of Export CD
 SAPINST.CD.PACKAGE.LOAD                                                                     = /usr/sap/install/CD_EXPORT
-SAPINST.CD.PACKAGE.RDBMS.CLIENT                                                             = /usr/sap/install/sapdb2_software/db2client
+SAPINST.CD.PACKAGE.CLIENT                                                                   = /usr/sap/install/sapdb2_software/db2client
 SAPINST.CD.PACKAGE.RDBMS                                                                    = /usr/sap/install/sapdb2_software/db2server/LINUXX86_64
 NW_Unpack.sapExeDbSar                                                                       = /usr/sap/install/download_basket
 NW_Unpack.sapExeSar                                                                         = /usr/sap/install/download_basket
@@ -23,9 +23,9 @@ NW_CI_Instance.scsVirtualHostname                                               
 NW_CI_Instance_ABAP_Reports.executeReportsForDepooling                                      = true
 NW_DB6_DB.db6.abap.connect.user                                                             = sap{{ db_sid | lower }}
 NW_DB6_DB.db6.abap.schema                                                                   = sap{{ db_sid | lower }}
-NW_DDIC_Password.needDDICPasswords                                                          = false
 NW_GetMasterPassword.masterPwd                                                              = {{ main_password }}
 NW_readProfileDir.profileDir                                                                = {{ sap_profile_dir }}
+NW_DDIC_Password.needDDICPasswords                                                          = false
 
 NW_checkMsgServer.abapMSPort                                                                = 36{{ scs_instance_number }}
 NW_getLoadType.loadType                                                                     = SAP
@@ -34,5 +34,6 @@ NW_getUnicode.isUnicode                                                         
 nwUsers.sapadmUID                                                                           = {{ sapadm_uid }}
 nwUsers.sapsysGID                                                                           = {{ sapsys_gid }}
 nwUsers.sidAdmUID                                                                           = {{ sidadm_uid }}
+
 NW_getDBInfoGeneric.dbhost                                                                  = {{ sap_db_hostname }}
 NW_getDBInfoGeneric.dbsid                                                                   = {{ db_sid | upper }}
