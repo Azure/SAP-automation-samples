@@ -152,31 +152,35 @@ database_vm_use_DHCP = true
 
 # Oracle
 #database_vm_image={
-#  source_image_id=""
-#  publisher="Oracle"
-#  offer= "Oracle-Linux",
-#  sku= "82-gen2",
-#  version="latest"
-#}
-
-#SUSE 15 SP3
-#database_vm_image = {
 #  os_type         = ""
 #  source_image_id = ""
-#  publisher       = "SUSE"
-#  offer           = "sles-sap-15-sp3"
-#  sku             = "gen2"
-#  version         = "latest"
+#  publisher       = "Oracle"
+#  offer           = "Oracle-Linux",
+#  sku             = "82-gen2",
+#  version         = "latest",
+#  type            = "marketplace"
 #}
+
+#Windows 2022
+# database_vm_image = {
+#   os_type         = "WINDOWS",
+#   source_image_id = "",
+#   publisher       = "MicrosoftWindowsServer",
+#   offer           = "windowsserver",
+#   sku             = "2022-datacenter",
+#   version         = "latest",
+#   type            = "marketplace"
+# }
 
 #RedHat
 #database_vm_image={
-#  os_type="linux"
-#  source_image_id=""
-#  publisher="RedHat"
-#  offer="RHEL-SAP-HA"
-#  sku="82sapha-gen2"
-#  version="latest"
+#  os_type         = "LINUX"
+#  source_image_id = ""
+#  publisher       = "RedHat"
+#  offer           = "RHEL-SAP-HA"
+#  sku             = "82sapha-gen2"
+#  version         = "8.2.2021040902"
+#  type            = "marketplace"
 #}
 
 # The vm_image defines the Virtual machine image to use, 
@@ -184,12 +188,13 @@ database_vm_use_DHCP = true
 # in this case os_type must also be specified
 
 database_vm_image = {
-  os_type="",
-  source_image_id="",
-  publisher="SUSE",
-  offer="sles-sap-15-sp3",
-  sku="gen2",
-  version="latest"
+  os_type         = "",
+  source_image_id = "",
+  publisher       = "SUSE",
+  offer           = "sles-sap-15-sp3",
+  sku             = "gen2",
+  version         = "latest",
+  type            = "marketplace"
 }
 
 # database_vm_zones is an optional list defining the availability zones to deploy the database servers
@@ -257,12 +262,13 @@ scs_server_zones = ["1"]
 # if source_image_id is specified the deployment will use the custom image provided, 
 # in this case os_type must also be specified
 scs_server_image = {
-  os_type="",
-  source_image_id="",
-  publisher="SUSE",
-  offer="sles-sap-15-sp3",
-  sku="gen2",
-  version=""
+  os_type         = "",
+  source_image_id = "",
+  publisher       = "SUSE",
+  offer           = "sles-sap-15-sp3",
+  sku             = "gen2",
+  version         = "",
+  type            = "marketplace"
 }
 
 # scs_server_no_ppg defines the that the SCS virtual machines will not be placed in a proximity placement group
@@ -337,12 +343,13 @@ application_server_count = 2
 # if source_image_id is specified the deployment will use the custom image provided, 
 # in this case os_type must also be specified
 application_server_image = {
-  os_type="LINUX",
-  source_image_id="",
-  publisher="SUSE",
-  offer="sles-sap-15-sp3",
-  sku="gen2",
-  version="latest"
+  os_type         = "LINUX",
+  source_image_id = "",
+  publisher       = "SUSE",
+  offer           = "sles-sap-15-sp3",
+  sku             = "gen2",
+  version         = "latest",
+  type            = "marketplace"
 }
 
 #application_server_vm_avset_arm_ids = []
@@ -739,6 +746,3 @@ sapmnt_volume_size = 128
 #deployer_tfstate_key = null
 
 #landscape_tfstate_key = null
-
-database_loadbalancer_ips=["10.110.96.5"]
-scs_server_loadbalancer_ips=["10.110.32.6","10.110.32.7"]

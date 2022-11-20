@@ -61,7 +61,7 @@ use_zonal_markers = false
 #use_secondary_ips = false
 
 # subscription is the subscription in which the system will be deployed (informational only)
-subscription = "/subscriptions/8d8422a3-a9c1-4fe9-b880-adcf61557c71"
+#subscription = "/subscriptions/xxx"
 
 # bom_name is the name of the SAP Bill of Materials file
 #bom_name = ""
@@ -160,7 +160,8 @@ database_vm_use_DHCP = true
 #  publisher       = "Oracle"
 #  offer           = "Oracle-Linux",
 #  sku             = "82-gen2",
-#  version         = "latest"
+#  version         = "latest",
+#  type            = "marketplace"
 #}
 
 #SUSE 15 SP3
@@ -170,7 +171,8 @@ database_vm_use_DHCP = true
 #  publisher       = "SUSE"
 #  offer           = "sles-sap-15-sp3"
 #  sku             = "gen2"
-#  version         = "latest"
+#  version         = "latest",
+#  type            = "marketplace"
 #}
 
 #RedHat
@@ -180,7 +182,8 @@ database_vm_use_DHCP = true
 #  publisher       = "RedHat"
 #  offer           = "RHEL-SAP-HA"
 #  sku             = "8_4"
-#  version         = "latest"
+#  version         = "latest",
+#  type            = "marketplace"
 #}
 
 # The vm_image defines the Virtual machine image to use, 
@@ -193,7 +196,8 @@ database_vm_image = {
   publisher       = "RedHat",
   offer           = "RHEL-SAP-HA",
   sku             = "gen2",
-  version         = "8.2.2022031402"
+  version         = "latest",
+  type            = "marketplace"
 }
 
 # database_vm_zones is an optional list defining the availability zones to deploy the database servers
@@ -266,7 +270,8 @@ scs_server_image = {
   publisher       = "RedHat",
   offer           = "RHEL-SAP-HA",
   sku             = "gen2",
-  version         = "8.2.2022031402"
+  version         = "latest",
+  type            = "marketplace"
 }
 
 # scs_server_no_ppg defines the that the SCS virtual machines will not be placed in a proximity placement group
@@ -348,7 +353,8 @@ application_server_image = {
   publisher       = "RedHat",
   offer           = "RHEL-SAP-HA",
   sku             = "gen2",
-  version         = "8.2.2022031402"
+  version         = "latest",
+  type            = "marketplace"
 }
 
 #application_server_vm_avset_arm_ids = []
