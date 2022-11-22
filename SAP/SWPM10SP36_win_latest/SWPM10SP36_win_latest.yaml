@@ -14,7 +14,6 @@ materials:
       extract:                  true
       extractDir:               SWPM
       url:                      https://softwaredownloads.sap.com/file/0020000001549392022
-      path:                     download_basket
 
 
 ...
