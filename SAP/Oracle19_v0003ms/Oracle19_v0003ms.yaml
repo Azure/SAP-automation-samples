@@ -1,90 +1,103 @@
----
-name:    'Oracle19_v0003ms'
-target:  'Oracle 19'
-version: 3
+name:    'ORACLE_19_00_v0003ms'
+target:  'Oracle 19c'
+version: "3"
 platform: "ORACLE"
-# New SBP Patch included  in this version
+
+product_ids:
+  scs:     NW_ABAP_ASCS:NW750.ORA.ABAP
+  scs_ha:  NW_ABAP_ASCS:NW750.ORA.ABAPHA
+  ers:     NW_ERS:NW750.ORA.ABAPHA
+  ers_ha:  NW_ERS:NW750.ORA.ABAPHA
+  dbl:     NW_ABAP_DB:NW750.ORA.ABAP
+  pas:     NW_ABAP_CI:NW750.ORA.ABAP
+  app:     NW_DI:NW750.ORA.PD
+  generic: NW_Users_Create:GENERIC.ORA.PD
+  web:
 
 materials:
+  dependencies:
+    - name:     Oracle19_v0003ms
+    - name:     SWPM10SP36_latest
 
   media:
-    - name:         Oracle Client
-      archive:      51055071.ZIP
-      checksum:     d63ba8bf707f96782101d66cbde9677a8bc11b9cfcfc6bbd167b6728c0243806
-      extract:      true
-      extractDir:   oraclient
+    # SAPCAR 7.22
+    - name:         "SAPCAR 7.22; OS: Linux on x86_64 64bit"
+      archive:      SAPCAR_1115-70006178.EXE
+      checksum:     765412436934362cc5497e3d659fbb78be91093a091c11ec4fbe84dfb415a0e5
+      filename:     SAPCAR
+      permissions:  '0755'
+      url:          https://softwaredownloads.sap.com/file/0020000000098642022
+
+# SAP Oracle executables, SWMP and Installation exports
+
+    - name:         "DB Independent Kernel Files"
+      archive:      SAPEXE_801-80002573.SAR
+      checksum:     c1efbbd12cb16134720b251fd18cab4fdbc8a0a3ee93b54c2ee41671bc3048fc
+      extract:      false
+      # download:     true
       path:         download_basket
-      download:     true
-      url:          https://softwaredownloads.sap.com/file/0030000001424202021
+      # creates:     SIGNATURE.SMF
+      url:          https://softwaredownloads.sap.com/file/0020000000937192021
 
-
-    - name:         Oracle Software Server
-      archive:      51053828.ZIP
-      checksum:     a12e10404572813ce78862c34ce3d1288b67ebbffa12fbd6fe758a6743773154
-      extract:      true
-      download:     true
-      extractDir:   oraserver
+    - name:         "Oracle DB specific kernel files"
+      archive:      SAPEXEDB_801-80002605.SAR
+      checksum:     3682acc6bbc9b5a122af422835217875e01cecd372b04649ef0659fcade3163e
+      extract:      false
+      # download:     true
       path:         download_basket
       # creates:     SIGNATURE.SMF
-      url:          https://softwaredownloads.sap.com/file/0030000002299742019          # Not all S-users have permissions to download the oracle software.
+      url:          https://softwaredownloads.sap.com/file/0020000000937422021
+
+    - name:         "Oracle DBATOOLS"
+      archive:      DBATL740O11_48-80002605.SAR
+      checksum:     ff8dd3a33d4c9f044b073e2d9591a0f204469e5e568f3e3dc136c33931cd4eed
+      extract:      false
+      # download:     true
+      path:         download_basket
+      # creates:     SIGNATURE.SMF
+      url:          https://softwaredownloads.sap.com/file/0020000001371372022
+
+    #   # SWPM
+    # - name:         "SWPM20SP09 OS: Linux on x86_64 64bit"
+    #   archive:      SWPM10SP32_5-20009701.SAR
+    #   checksum:     48c479550d76354ba28f8765c1171d4795d82fea185e150ec1035a7fcfb90f29
+    #   extract:      true
+    #   extractDir:   SWPM
+    #   creates:      SIGNATURE.SMF
+    #   url:          https://softwaredownloads.sap.com/file/0020000001253802021
 
 
-# SBP Patches are downloaded based on SAP Note 2799920 - Patches 19c: Database
+    - name:       "Oracle installation dump"
+      archive:     51050829_3.ZIP
+      checksum:    06c3a3cd5d1ad266f61ca202552468501d94cfdc7641ffdadf0a9abad82b648a
+      extract:     true
+      download:    true
+      extractDir:  EXPORT
+      path:        download_basket
+      # creates:    SIGNATURE.SMF
+      url:         https://softwaredownloads.sap.com/file/0030000000635092016
 
-    - name:         "Oracle SBP - Bundle patches for 19c: GIRU"
-      archive:      GIRU19P_2205-70004508.ZIP
-      checksum:     8ec67f7905c03bca99cc1098c3af81d49753af1e8934a4e2d551cfdc3473cb1c
+    - name:         "SAP Host Agent"
+      archive:      SAPHOSTAGENT53_53-80004822.SAR
+      checksum:     a8d8df83417bf15b4d822ccce5aef7f19917cafc0784457a0aa5946a4252aadf
       extract:      false
       download:     true
-      extractDir:   SBP/GIRU19P
-      path:         SBP
-      # creates:     SIGNATURE.SMF
-      url:          https://softwaredownloads.sap.com/file/0020000000674042022
+      path:         download_basket
+      url:          https://softwaredownloads.sap.com/file/0020000001179602021
 
-    - name:         "Oracle SBP - Bundle patches for 19c: SAP19P"
-      archive:      SAP19P_2205-70004508.ZIP
-      checksum:     494999a9407ab2d7bcbe3280eda1f9c2ecbb5123341833401f2477fee6674a70
-      extract:      true
-      extractDir:   SBP/SAPSBP
-      path:         SBP
-      # creates:     SIGNATURE.SMF
-      url:          https://softwaredownloads.sap.com/file/0020000000679362022
-
-    - name:         "Oracle SBP - Bundle patches for 19c: SBPJDK19P"
-      archive:      SBPJDK19P_2205-70004508.ZIP
-      checksum:     64cbffbc281dd22c111a47e9a3a42132088b387915f4faab14a326564d031e5a
+    - name:         "SAP IGS"
+      archive:      igsexe_13-80003187.sar
+      checksum:     b508b1ff97ec0e3b7f4dd8f57e3840eb547b6326434df677927b8cfd6b4faa12
       extract:      false
-      extractDir:   SBP/SBPJDK
-      path:         SBP
-      # creates:     SIGNATURE.SMF
-      url:          https://softwaredownloads.sap.com/file/0020000000673682022
-
-    - name:         "Oracle SBP - Bundle patches for 19c: OPatch"
-      archive:      OPATCH19P_2205-70004508.ZIP
-      checksum:     f90ea13f80da7b9bafb7380bde2f7feda8f6aaa5fdca167371499527e3513a83
-      extract:      true
-      extractDir:   SBP/OPATCH
-      path:         SBP
-      # creates:     SIGNATURE.SMF
-      url:          https://softwaredownloads.sap.com/file/0020000000679462022
+      download:     true
+      path:         download_basket
+      url:          https://softwaredownloads.sap.com/file/0020000000534572021
 
 
-    - name:         "Oracle compact-lib"
-      archive:      compat-libcap1-1.10-7.el7.x86_64.rpm
+    - name:         "SAP IGSHELPER"
+      archive:      igshelper_17-10010245.sar
+      checksum:     bc405afc4f8221aa1a10a8bc448f8afd9e4e00111100c5544097240c57c99732
       extract:      false
-      checksum:     30FB28F1266049493E5AEFFE18E8939B1BB4A889F1013EBEF6DABE496156B501
-      url:          https://public-yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackage/compat-libcap1-1.10-7.el7.x86_64.rpm
-
-    - name:         "Oracle ASMSUPPORT RPM"
-      archive:      oracleasm-support-2.1.12-1.el8.x86_64.rpm
-      extract:      false
-      checksum:     A60037BEECBF5CC95957CB04ED7CDF511867FE8F65CFD014033FCEFC3BB29C0C
-      url:          https://public-yum.oracle.com/repo/OracleLinux/OL8/addons/x86_64/getPackage/oracleasm-support-2.1.12-1.el8.x86_64.rpm
-
-    - name:         "Oracle ASMLIB RPM"
-      archive:      oracleasmlib-2.0.17-1.el8.x86_64.rpm
-      extract:      false
-      checksum:     0ABF6BD267E67C472D194DBBEFC723D3A1910AAF8D688FAE4BB6980CE1F3281A
-      url:          https://download.oracle.com/otn_software/asmlib/oracleasmlib-2.0.17-1.el8.x86_64.rpm
-
-...
+      download:     true
+      path:         download_basket
+      url:          https://softwaredownloads.sap.com/file/0020000000703122018

@@ -1,0 +1,96 @@
+#   2482103 - Installation with SWPM in unattended mode using parameter input file fails
+#   2393060 - SAPinst Framework 749 Central Note
+
+SAPINST.CD.PACKAGE.CD1                                                	= {{ sap_cd_package_cd1 }}
+SAPINST.CD.PACKAGE.CD2                                                	= {{ sap_cd_package_cd2 }}
+SAPINST.CD.PACKAGE.CD3                                                	= {{ sap_cd_package_cd3 }}
+SAPINST.CD.PACKAGE.CD4                                                	= {{ sap_cd_package_cd4 }}
+SAPINST.CD.PACKAGE.CD5                                                	= {{ sap_cd_package_cd5 }}
+SAPINST.CD.PACKAGE.HDBCLIENT                                          	= {{ sap_cd_package_hdbclient }}
+
+archives.downloadBasket                                              	= {{ target_media_location }}/download_basket
+
+HDB_Schema_Check_Dialogs.schemaName                                   	= {{ hana_schema }}
+HDB_Schema_Check_Dialogs.schemaPassword                               	= {{ main_password }}
+
+# Database hostnames that will be set directly in hdbuserstore without resolving them in HANA. Comma separated. Example (host1,host2)
+HDB_Userstore.doNotResolveHostnames                                   	= {{ virt_do_not_resolve_hostname }}
+{# HDB_Schema_Check_Dialogs.dropSchema                                   	= {{ drop_schema }} #}
+
+hostAgent.sapAdmPassword                                             	= {{ main_password }}
+
+NW_adaptProfile.skipSecurityProfileSettings                          	= true
+NW_AS.instanceNumber                                                  	= {{ app_instance_number }}
+NW_checkMsgServer.abapMSPort                                          	= 36{{ scs_instance_number }}
+
+NW_CI_Instance.ascsVirtualHostname                                    	= {{ sap_scs_hostname }}
+NW_CI_Instance.ciInstanceNumber                                       	= {{ sap_ciInstanceNumber }}
+NW_CI_Instance.ciMSPort                                               	= 36{{ scs_instance_number }}
+NW_CI_Instance.ciVirtualHostname                                      	= {{ sap_ciVirtualHostname }}
+NW_CI_Instance.scsVirtualHostname                                     	= {{ sap_scs_hostname }}
+
+NW_DDIC_Password.needDDICPasswords                                    	= false
+
+NW_Delete_Sapinst_Users.removeUsers                                  	= true
+NW_DI_Instance.virtualHostname                                        	= {{ sap_appVirtualHostname }}
+
+NW_getFQDN.FQDN                                                      	= {{ sap_fqdn }}
+NW_getLoadType.loadType                                               	= SAP
+NW_GetMasterPassword.masterPwd                                       	= {{ main_password }}
+NW_GetSidNoProfiles.sid                                               	= {{ web_sid| upper }}
+
+NW_HDB_DB.abapSchemaName                                              	= {{ hana_schema }}
+NW_HDB_DB.abapSchemaPassword                                          	= {{ main_password }}
+NW_HDB_DBClient.clientPathStrategy                                    	= SAPCPE
+NW_HDB_getDBInfo.dbhost                                               	= {{ sap_db_hostname }}
+NW_HDB_getDBInfo.dbhost                                               	= {{ sap_db_hostname }}
+NW_HDB_getDBInfo.dbsid                                                	= {{ db_sid | upper }}
+NW_HDB_getDBInfo.instanceNumber                                       	= {{ db_instance_number }}
+NW_HDB_getDBInfo.systemDbPassword                                     	= {{ main_password }}
+NW_HDB_getDBInfo.systemid                                             	= {{ db_sid | upper }}
+NW_HDB_getDBInfo.systemPassword                                       	= {{ main_password }}
+NW_HDB_getDBInfo.usingSSL                                             	= true
+
+nw_instance_ers.ersInstanceNumber                                    	= {{ ers_instance_number }}
+nw_instance_ers.ersVirtualHostname                                   	= {{ ers_virtual_hostname }}
+
+NW_readProfileDir.profileDir                                         	= /sapmnt/{{ sap_sid | upper }}/profile
+
+NW_Recovery_Install_HDB.extractLocation                               	= /usr/sap/{{ db_sid | upper }}/{{ db_sid | upper }}{{ db_instance_number }}/backup/data/DB_HDB
+NW_Recovery_Install_HDB.extractParallelJobs                           	= 24
+NW_Recovery_Install_HDB.sidAdmName                                    	= {{ db_sid | lower }}adm
+NW_Recovery_Install_HDB.sidAdmPassword                                	= {{ main_password }}
+
+NW_SCS_Instance.ascsInstallGateway                                   	= true
+NW_SCS_Instance.ascsInstallWebDispatcher                             	= false
+NW_SCS_Instance.instanceNumber                                        	= {{ scs_instance_number }}
+NW_SCS_Instance.scsVirtualHostname                                   	= {{ sap_scs_hostname }}
+
+NW_System.installSAPHostAgent                                         	= {{ sap_installSAPHostAgent }}
+
+NW_Users_Create.dbsid                                                 	= {{ db_sid | upper }}
+NW_Users_Create.hasABAP                                               	= true
+NW_Users_Create.installDBUsers                                        	= false
+NW_Users_Create.sid                                                   	= {{ sap_sid | upper }}
+
+NW_webdispatcher_Instance.activateICF                                 	= false
+NW_webdispatcher_Instance.backEndSID                                  	= {{ sap_sid | upper }}
+NW_webdispatcher_Instance.msHost                                      	= {{ sap_scs_hostname }}
+NW_webdispatcher_Instance.msHTTPPort                                  	= 81{{ sap_ciInstanceNumber }}
+NW_webdispatcher_Instance.rfcHost                                     	= {{ sap_scs_hostname }}
+NW_webdispatcher_Instance.scenarioSize                                	= 500
+NW_webdispatcher_Instance.wdHTTPPort                                  	= 80{{ web_instance_number }}
+NW_webdispatcher_Instance.wdHTTPSPort                                 	= 443{{ web_instance_number }}
+NW_Webdispatcher_Instance.wdInstanceNumber                            	= {{ web_instance_number }}
+NW_webdispatcher_Instance.wdVirtualHostname                           	= {{ sap_webVirtualHostname }}
+NW_WPConfiguration.ciBtcWPNumber                                      	= {{ sap_ciBtcWPNumber }}
+NW_WPConfiguration.ciDialogWPNumber                                   	= {{ sap_ciDialogWPNumber}}
+
+nwUsers.dbtype                                                        	= ind
+nwUsers.sapadmUID                                                     	= {{ sapadm_uid }}
+nwUsers.sapsysGID                                                    	= {{ sapsys_gid }}
+nwUsers.sidadmPassword                                               	= {{ main_password }}
+nwUsers.sidAdmUID                                                     	= {{ sidadm_uid }}
+
+storageBasedCopy.hdb.instanceNumber                                   	= {{ db_instance_number }}
+storageBasedCopy.hdb.systemPassword                                   	= {{ main_password }}
