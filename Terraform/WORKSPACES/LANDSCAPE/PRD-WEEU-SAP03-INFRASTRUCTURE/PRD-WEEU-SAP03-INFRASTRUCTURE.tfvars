@@ -316,7 +316,7 @@ ANF_service_level = "Ultra"
 #ANF_pool_name = ""
 
 #ANF_pool_size is the pool size in TB for the NetApp pool
-ANF_pool_size = 4
+ANF_pool_size = 8
 
 #ANF_qos_type defines the Quality of Service type of the pool (Auto or Manual)
 ANF_qos_type = "Manual"
