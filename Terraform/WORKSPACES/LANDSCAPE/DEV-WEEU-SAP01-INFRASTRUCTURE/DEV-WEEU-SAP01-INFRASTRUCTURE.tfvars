@@ -68,7 +68,7 @@ network_logical_name = "SAP01"
 network_address_space = "10.110.0.0/16"
 
 # use_private_endpoint is a boolean flag controlling if the key vaults and storage accounts have private endpoints
-use_private_endpoint = false
+use_private_endpoint = true
 
 # use_service_endpoint is a boolean flag controlling if the key vaults and storage accounts have service endpoints
 use_service_endpoint = true
@@ -77,7 +77,7 @@ use_service_endpoint = true
 peer_with_control_plane_vnet = true
 
 # Defines if access to the key vaults and storage accounts is restricted to the SAP and deployer VNets
-#enable_firewall_for_keyvaults_and_storage = false
+enable_firewall_for_keyvaults_and_storage = true
 
 #########################################################################################
 #                                                                                       #
@@ -283,7 +283,7 @@ transport_volume_size = 128
 #                                                                                       #
 #########################################################################################
 
-dns_label = "sap.contoso.net"
+dns_label = "weeu.sap.contoso.net"
 
 # If defined provides the name of the resource group hosting the Private DNS zone
 #dns_resource_group_name = ""
