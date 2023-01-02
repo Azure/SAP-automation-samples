@@ -1,7 +1,7 @@
 ---
 
 name:                                  "NW750SPS20_SYBASE_v0001ms"
-target:                                "SAP NW750 SPS20 DB2"
+target:                                "SAP NW750 SPS20 ASE"
 platform:                              "SYBASE"
 version: 1
 defaults:
