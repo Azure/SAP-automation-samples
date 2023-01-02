@@ -13,8 +13,8 @@ materials:
       download:     false
       url:          https://softwaredownloads.sap.com/file/0020000000001112023
 
-    - name:         "Patch 4 for SOFTWARE UPDATE MANAGER 2.0 SP15 (Windows)"
-      archive:      SUM20SP15_4-80002458.SAR
-      checksum:     45af533c9a2d9b23548bcbf711d64f51bc19a1ccc049c73656e7be2465debe61
+    - name:         "Patch 5 for SOFTWARE UPDATE MANAGER 2.0 SP15 (Windows)"
+      archive:      SUM20SP15_5-80002458.SAR
+      checksum:     e37332825f6890b3e67a4bffebc928bb12981993ec3a0188bcf1d29ae09af290
       download:     false
-      url:          https://softwaredownloads.sap.com/file/0020000001705832022
+      url:          https://softwaredownloads.sap.com/file/0020000000001072023
