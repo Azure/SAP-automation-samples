@@ -186,7 +186,7 @@ materials:
 
     - name:                            "ST-PI 740: SP 0016"
       archive:                         K-74016INSTPI.SAR
-      checksum:     0d5a3c74f813dad48345023c7acd146dc9ef84c121c6d854292cb534006c40a5
+      checksum:                        0d5a3c74f813dad48345023c7acd146dc9ef84c121c6d854292cb534006c40a5
       url:                             https://softwaredownloads.sap.com/file/0010000001454472021
       download:                        false
 
