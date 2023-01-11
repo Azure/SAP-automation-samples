@@ -1,18 +1,23 @@
-name:    'ORACLE_19_00_v0002ms'
+---
+name:    'ORACLE_19_00_ASM_v0001ms'
 target:  'Oracle 19c'
-version: "2"
+version: "1"
 platform: "ORACLE"
 
 product_ids:
-  scs:    NW_ABAP_ASCS:NW750.ORA.ABAP
-  dbl:    NW_ABAP_DB:NW750.ORA.ABAP
-  pas:    NW_ABAP_CI:NW750.ORA.ABAP
-  app:    NW_DI:NW750.ORA.PD
+  scs:     NW_ABAP_ASCS:NW750.ORA.ABAP
+  scs_ha:  NW_ABAP_ASCS:NW750.ORA.ABAPHA
+  ers:     NW_ERS:NW750.ORA.ABAPHA
+  ers_ha:  NW_ERS:NW750.ORA.ABAPHA
+  dbl:     NW_ABAP_DB:NW750.ORA.ABAP
+  pas:     NW_ABAP_CI:NW750.ORA.ABAP
+  app:     NW_DI:NW750.ORA.PD
+  generic: NW_Users_Create:GENERIC.ORA.PD
   web:
 
 materials:
   dependencies:
-    - name:     Oracle19_v0003ms
+    - name:     Oracle19_v0004ms
     - name:     SWPM10SP36_latest
 
   media:
@@ -45,13 +50,13 @@ materials:
       url:          https://softwaredownloads.sap.com/file/0020000000937422021
 
     - name:         "Oracle DBATOOLS"
-      archive:      DBATL740O11_16-10012436.SAR
-      checksum:     a7be05eab0d68fbe61f2394cd310095f4e8c3e6946553b9e8d210af1aa6083bc
+      archive:      DBATL740O11_48-80002605.SAR
+      checksum:     ff8dd3a33d4c9f044b073e2d9591a0f204469e5e568f3e3dc136c33931cd4eed
       extract:      false
       # download:     true
       path:         download_basket
       # creates:     SIGNATURE.SMF
-      url:          https://softwaredownloads.sap.com/file/0020000000225632015
+      url:          https://softwaredownloads.sap.com/file/0020000001371372022
 
     #   # SWPM
     # - name:         "SWPM20SP09 OS: Linux on x86_64 64bit"
