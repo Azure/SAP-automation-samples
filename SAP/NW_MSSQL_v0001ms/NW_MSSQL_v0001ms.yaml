@@ -23,7 +23,7 @@ product_ids:
 materials:
   dependencies:
     - name:                     "MSSQLSRV_2019_v0001ms"
-    - name:                     "SUM20SP14_win_latest"
+    - name:                     "SUM20SP15_win_latest"
     - name:                     "SWPM10SP36_win_latest"
 
   media:
