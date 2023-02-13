@@ -471,10 +471,10 @@ materials:
       path:             download_basket
       download:         false
 
-    - name:             "Patch 9 for SOFTWARE UPDATE MANAGER 1.1 SP00"
-      archive:          SUM11SP00_9-80006800.SAR
-      checksum:         bbf1d8b989f443ce94a6b41b2e8a047dade3fd7d2743b5d886cfef9fed99fa48
-      url:              https://softwaredownloads.sap.com/file/0020000001751502022
+    - name:             "Patch 11 for SOFTWARE UPDATE MANAGER 1.1 SP00"
+      archive:          SUM11SP00_11-80006800.SAR
+      checksum:         a715cfab53a4740988a4382be4e9cc6e4f8c127a177db85e48d7e6f93907d114
+      url:              https://softwaredownloads.sap.com/file/0020000000055522023
       path:             download_basket
       download:         false
 
