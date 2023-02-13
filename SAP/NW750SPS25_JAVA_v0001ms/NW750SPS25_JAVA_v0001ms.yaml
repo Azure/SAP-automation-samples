@@ -256,6 +256,7 @@ materials:
 
     - name:             "SAP HANA CLIENT Version 2.14"
       archive:          IMDB_CLIENT20_014_24-80002082.SAR
+      checksum:         8a7a425aff84515497109f1ac8e84f5be1f0bac8223598d7aa6eeaefaafe152b
       url:              https://softwaredownloads.sap.com/file/0020000001642632022
       path:             download_basket
       download:         false
