@@ -55,9 +55,11 @@ MessageServer.configureAclInfo                                       = false
 
 ora.multitenant.pdbsid                                               = {{ db_sid }}
 ora.whatInstallation                                                 = isSingle
-# ora.whatIsASM                                                      = false
-storageBasedCopy.ora.clientVersion                                   = 19
-storageBasedCopy.ora.serverVersion                                   = 19
+ora.whatIsASM                                                        = isASM
+storageBasedCopy.ora.clientVersion                                   = {{ ora_release }}
+storageBasedCopy.ora.serverVersion                                   = {{ ora_release }}
 storageBasedCopy.ora.ABAPSchema                                      = SAPSR3
 storageBasedCopy.ora.listenerName                                    = LISTENER
 storageBasedCopy.ora.listenerPort                                    = 1521
+
+ora.dbhome                                                            = /oracle/{{ db_sid| upper }}/{{ ora_release }}
