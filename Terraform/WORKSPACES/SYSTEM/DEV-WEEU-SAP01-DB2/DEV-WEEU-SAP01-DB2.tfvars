@@ -102,7 +102,7 @@ use_private_endpoint = true
 #                                                                                       #
 #########################################################################################
 
-database_sid = "SD2"
+database_sid = "DB2"
 
 # database_platform defines the database backend, supported values are
 # - HANA
