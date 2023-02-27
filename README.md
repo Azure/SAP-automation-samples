@@ -29,7 +29,16 @@ During execution the repositories will interact with each other by using the fol
 flowchart LR
     subgraph deployer-agent
         pipeline--uses-->templated-pipelines
+        templated-pipelines--uses-->workspace-configuration
+        subgraph customer repository
+            workspace-configuration
+            pipeline
+        end
         templated-pipelines--uses-->sample-BoMs
+        subgraph sample repository
+            sample-BoMs
+            pipeline
+        end
         subgraph sample repository
             sample-BoMs
             pipeline
