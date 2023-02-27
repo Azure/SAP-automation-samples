@@ -30,16 +30,16 @@ During execution the repositories will interact with each other by using the fol
 flowchart LR
     subgraph deployer-agent
         pipeline--uses-->templated-pipelines
-        templated-pipelines--uses-->bom-file
+        templated-pipelines--uses-->bom-name
         subgraph customer repository
-            bom-file
+            bom-name
             pipeline
         end
-        subgraph sap-automation
+        subgraph sap-automation repository    
         templated-pipelines--executes-->software-download
         end
-        subgraph sap-samples
-        bom-file--defines-->software
+        subgraph sap-samples repository
+        bom-name--defines-->SAP application
         end
     end
 ```
