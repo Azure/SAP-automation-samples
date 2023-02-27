@@ -21,6 +21,7 @@ contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additio
 During software acquisition both the sample repositories and the sap-automation repositories need to be present on the deployer-agent. Each of the repositories will be mapped using the following:
 
 - sap-automation will be mapped to ```/sap-automation```
+- customer configuration repository will be mapped to ```/config```
 - sample repository will be mapped to ```/samples```
 
 During execution the repositories will interact with each other by using the following:
@@ -32,15 +33,6 @@ flowchart LR
         templated-pipelines--uses-->workspace-configuration
         subgraph customer repository
             workspace-configuration
-            pipeline
-        end
-        templated-pipelines--uses-->sample-BoMs
-        subgraph sample repository
-            sample-BoMs
-            pipeline
-        end
-        subgraph sample repository
-            sample-BoMs
             pipeline
         end
         subgraph sap-automation
