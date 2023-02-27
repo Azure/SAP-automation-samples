@@ -39,7 +39,7 @@ flowchart LR
         templated-pipelines--executes-->software-download
         end
         subgraph sap-samples repository
-        bom-name--defines-->SAP application
+        bom-name--defines-->SAP-application
         end
     end
 ```
