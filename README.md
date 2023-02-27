@@ -44,6 +44,8 @@ flowchart LR
     end
 ```
 
+The Ansible playbooks leverage a variable ```BOM_directory``` that should contain the path to the cloned 'sap-samples' repository. 
+
 ## Trademarks
 
 This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft
