@@ -31,14 +31,14 @@ flowchart LR
     subgraph deployer-agent
         pipeline--uses-->templated-pipelines
         templated-pipelines--uses-->bom-name
-        subgraph customer repository
+        subgraph 'WORKSPACES'
             bom-name
             pipeline
         end
-        subgraph sap-automation repository    
+        subgraph 'sap-automation'
         templated-pipelines--executes-->software-download
         end
-        subgraph sap-samples repository
+        subgraph 'sap-automation-samples'
         bom-name--defines-->SAP-application
         end
     end
