@@ -1,10 +1,12 @@
 ---
 
-    name:      "SAP S/4HANA 2020 SPS 03"
-    filename:  "S42020SPS03_v0003ms"
-    target:    'S/4 HANA 2020 SPS 03'
-    version:   3
-    platform:  'HANA'
+    name:                              "SAP S/4HANA 2020 SPS 03"
+    filename:                          "S42020SPS03_v0003ms"
+    target:                            'S/4 HANA 2020 SPS 03'
+    version:                           3
+    platform:                          'HANA'
+    InstanceType:                      "ABAP"
+
     defaults:
       target_location:             "{{ target_media_location }}/download_basket"
 

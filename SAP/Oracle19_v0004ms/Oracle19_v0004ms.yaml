@@ -1,8 +1,10 @@
 ---
-name:    'Oracle19_v0004ms'
-target:  'Oracle 19'
-version: 4
-platform: "ORACLE"
+name:                                  'Oracle19_v0004ms'
+filename:                              "Oracle19_v0004ms.yaml"
+target:                                'Oracle 19'
+version:                               4
+platform:                              "ORACLE"
+InstanceType:                          "ABAP"
 # New SBP Patch included  in this version
 
 materials:

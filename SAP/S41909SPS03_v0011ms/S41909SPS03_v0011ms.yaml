@@ -2,11 +2,12 @@
 # Download time:  70 Minutes (Full - 63GB)
 # Download time:  43 Minutes (Partial - 38GB)
 #
-name:      "SAP S/4HANA 1909 SPS 03"
-filename:  'S41909SPS03_v00011ms'
-target:    'S/4 HANA 1909 SPS 03'
-version:   11
-platform:  "HANA"
+name:             "SAP S/4HANA 1909 SPS 03"
+filename:         'S41909SPS03_v00011ms'
+target:           'S/4 HANA 1909 SPS 03'
+version:          11
+platform:         "HANA"
+InstanceType:     "ABAP"
 
 product_ids:
   dbl:       NW_ABAP_DB:S4HANA1909.CORE.HDB.ABAP
@@ -23,7 +24,7 @@ product_ids:
 
 materials:
   dependencies:
-    - name:     HANA_2_00_059_v0004ms
+    - name:     HANA_2_00_059_v0005ms
     - name:     SWPM20SP13_latest
     - name:     SUM20SP15_latest
 

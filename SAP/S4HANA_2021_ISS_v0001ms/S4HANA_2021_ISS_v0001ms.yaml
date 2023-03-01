@@ -5,6 +5,8 @@ filename:                              "S4HANA_2021_ISS_v0001ms"
 target:                                "S/4 HANA 2021 ISS 00"
 version:                               1
 platform:                              'HANA'
+InstanceType:                          "ABAP"
+
 defaults:
   target_location:                     "{{ target_media_location }}/download_basket"
 
