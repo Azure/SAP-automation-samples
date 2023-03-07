@@ -86,169 +86,169 @@ materials:
       path:                            download_basket
 
     # DB Export components
-    - name:                            "File on DVD - S4CORE106_INST_EXPORT_1.zip"
+    - name:                            "File on DVD - S4CORE107_INST_EXPORT_1.zip"
       archive:                         S4CORE107_INST_EXPORT_1.zip
       checksum:                        5aad867d61cf19cb5b6a4b28c1b531a90dfd783fc974f9fb9a11afab2f68b16b
       url:                             https://softwaredownloads.sap.com/file/0030000001314832022
       path:                            download_basket
 
-    - name:                            "File on DVD - S4CORE106_INST_EXPORT_2.zip"
+    - name:                            "File on DVD - S4CORE107_INST_EXPORT_2.zip"
       archive:                         S4CORE107_INST_EXPORT_2.zip
       checksum:                        d9fc0f8ff388e0efad47f6ded3c6ac353314d2fbb03ed3cf775fd30a69c129aa
       url:                             https://softwaredownloads.sap.com/file/0030000001314982022
       path:                            download_basket
 
-    - name:                            "File on DVD - S4CORE106_INST_EXPORT_3.zip"
+    - name:                            "File on DVD - S4CORE107_INST_EXPORT_3.zip"
       archive:                         S4CORE107_INST_EXPORT_3.zip
       checksum:                        b9e423890536c27dfc5398fe8691a77848bd9d13797635ccfc344ec627dd2e24
       url:                             https://softwaredownloads.sap.com/file/0030000001315202022
       path:                            download_basket
 
-    - name:                            "File on DVD - S4CORE106_INST_EXPORT_4.zip"
+    - name:                            "File on DVD - S4CORE107_INST_EXPORT_4.zip"
       archive:                         S4CORE107_INST_EXPORT_4.zip
       checksum:                        9ba50e9cceb6cff8e343d716caab8866a5529579ab642b8c7354259cf80a0767
       url:                             https://softwaredownloads.sap.com/file/0030000001315222022
       path:                            download_basket
 
-    - name:                            "File on DVD - S4CORE106_INST_EXPORT_5.zip"
+    - name:                            "File on DVD - S4CORE107_INST_EXPORT_5.zip"
       archive:                         S4CORE107_INST_EXPORT_5.zip
       checksum:                        3341bcaef84519ef5aefc077296935e15f1ec6167cc076238183de3c81dcb8ae
       url:                             https://softwaredownloads.sap.com/file/0030000001315232022
       path:                            download_basket
 
-    - name:                            "File on DVD - S4CORE106_INST_EXPORT_6.zip"
+    - name:                            "File on DVD - S4CORE107_INST_EXPORT_6.zip"
       archive:                         S4CORE107_INST_EXPORT_6.zip
       checksum:                        da705d7e9cd81e7e9d40b967768e6352675f843389801ea94b4939f223d0524f
       url:                             https://softwaredownloads.sap.com/file/0030000001315252022
       path:                            download_basket
 
-    - name:                            "File on DVD - S4CORE106_INST_EXPORT_7.zip"
+    - name:                            "File on DVD - S4CORE107_INST_EXPORT_7.zip"
       archive:                         S4CORE107_INST_EXPORT_7.zip
       checksum:                        86b72a759114c99d99f92d9b5b49a38c340ed1cdbdda89713c4af3194eadd961
       url:                             https://softwaredownloads.sap.com/file/0030000001315292022
       path:                            download_basket
 
-    - name:                            "File on DVD - S4CORE106_INST_EXPORT_8.zip"
+    - name:                            "File on DVD - S4CORE107_INST_EXPORT_8.zip"
       archive:                         S4CORE107_INST_EXPORT_8.zip
       checksum:                        ae563c913d70f702af7ef27f9a8c4664ee4796815e0c4754499eb174534649e0
       url:                             https://softwaredownloads.sap.com/file/0030000001315312022
       path:                            download_basket
 
-    - name:                            "File on DVD - S4CORE106_INST_EXPORT_9.zip"
+    - name:                            "File on DVD - S4CORE107_INST_EXPORT_9.zip"
       archive:                         S4CORE107_INST_EXPORT_9.zip
       checksum:                        c4bd746054e633be73ff2cb910bfecd68ac7c0a5016c674c7b3111df5a728ac7
       url:                             https://softwaredownloads.sap.com/file/0030000001326492022
       path:                            download_basket
 
-    - name:                            "File on DVD - S4CORE106_INST_EXPORT_10.zip"
+    - name:                            "File on DVD - S4CORE107_INST_EXPORT_10.zip"
       archive:                         S4CORE107_INST_EXPORT_10.zip
       checksum:                        f92ae9350955df3662ac4bb6d1a1d86fb0d91de5e694cd1420de31f84a01c103
       url:                             https://softwaredownloads.sap.com/file/0030000001314842022
       path:                            download_basket
 
-    - name:                            "File on DVD - S4CORE106_INST_EXPORT_11.zip"
+    - name:                            "File on DVD - S4CORE107_INST_EXPORT_11.zip"
       archive:                         S4CORE107_INST_EXPORT_11.zip
       checksum:                        041b1520b2894c434932e17202871b1f82cf0748bb6205c17c0b84c8f33bd8d6
       url:                             https://softwaredownloads.sap.com/file/0030000001314852022
       path:                            download_basket
 
-    - name:                            "File on DVD - S4CORE106_INST_EXPORT_12.zip"
+    - name:                            "File on DVD - S4CORE107_INST_EXPORT_12.zip"
       archive:                         S4CORE107_INST_EXPORT_12.zip
       checksum:                        c6275415035b1fe0deea3eff4e23357fd7eca90c094741907805281a8e18628f
       url:                             https://softwaredownloads.sap.com/file/0030000001314862022
       path:                            download_basket
 
-    - name:                            "File on DVD - S4CORE106_INST_EXPORT_13.zip"
+    - name:                            "File on DVD - S4CORE107_INST_EXPORT_13.zip"
       archive:                         S4CORE107_INST_EXPORT_13.zip
       checksum:                        2e8f02a639e810e5b688dce7a1e3511e4358e1ccfe020f752f0588876a3bb462
       url:                             https://softwaredownloads.sap.com/file/0030000001314882022
       path:                            download_basket
 
-    - name:                            "File on DVD - S4CORE106_INST_EXPORT_14.zip"
+    - name:                            "File on DVD - S4CORE107_INST_EXPORT_14.zip"
       archive:                         S4CORE107_INST_EXPORT_14.zip
       checksum:                        b016046dc9b4fc3a3f0cee50c36c9110d93715da3e451dbf2d40599d36b4ae11
       url:                             https://softwaredownloads.sap.com/file/0030000001314892022
       path:                            download_basket
 
-    - name:                            "File on DVD - S4CORE106_INST_EXPORT_15.zip"
+    - name:                            "File on DVD - S4CORE107_INST_EXPORT_15.zip"
       archive:                         S4CORE107_INST_EXPORT_15.zip
       checksum:                        3af1414635b29d0c1d82a8d7425f1ad44858f334c4ac425029aa8972691111c7
       url:                             https://softwaredownloads.sap.com/file/0030000001314902022
       path:                            download_basket
 
-    - name:                            "File on DVD - S4CORE106_INST_EXPORT_16.zip"
+    - name:                            "File on DVD - S4CORE107_INST_EXPORT_16.zip"
       archive:                         S4CORE107_INST_EXPORT_16.zip
       checksum:                        dad2dc88e6a329f039227cdf48b9985d09dd2263f6c9f3904fc9fccee07787c7
       url:                             https://softwaredownloads.sap.com/file/0030000001314912022
       path:                            download_basket
 
-    - name:                            "File on DVD - S4CORE106_INST_EXPORT_17.zip"
+    - name:                            "File on DVD - S4CORE107_INST_EXPORT_17.zip"
       archive:                         S4CORE107_INST_EXPORT_17.zip
       checksum:                        fd87ebfe1196159eca3a53b4c0ffa48912602b3e5db6f17f7b091755bfca0ffc
       url:                             https://softwaredownloads.sap.com/file/0030000001314932022
       path:                            download_basket
 
-    - name:                            "File on DVD - S4CORE106_INST_EXPORT_18.zip"
+    - name:                            "File on DVD - S4CORE107_INST_EXPORT_18.zip"
       archive:                         S4CORE107_INST_EXPORT_18.zip
       checksum:                        9ab7634901b1357f45c7677f16f6e9c51ba4c0b69cdddc8ff0605ac8e1e81fb1
       url:                             https://softwaredownloads.sap.com/file/0030000001314952022
       path:                            download_basket
 
-    - name:                            "File on DVD - S4CORE106_INST_EXPORT_19.zip"
+    - name:                            "File on DVD - S4CORE107_INST_EXPORT_19.zip"
       archive:                         S4CORE107_INST_EXPORT_19.zip
       checksum:                        9889c7185bc649370067bff6aa8fc9584bc927e6252a1b359f6bb8abb59b4365
       url:                             https://softwaredownloads.sap.com/file/0030000001314962022
       path:                            download_basket
 
-    - name:                            "File on DVD - S4CORE106_INST_EXPORT_20.zip"
+    - name:                            "File on DVD - S4CORE107_INST_EXPORT_20.zip"
       archive:                         S4CORE107_INST_EXPORT_20.zip
       checksum:                        53434047e264c8e119cdf5656e6e09895b22d2610ba4c27a55922671e60faf1d
       url:                             https://softwaredownloads.sap.com/file/0030000001315022022
       path:                            download_basket
 
-    - name:                            "File on DVD - S4CORE106_INST_EXPORT_21.zip"
+    - name:                            "File on DVD - S4CORE107_INST_EXPORT_21.zip"
       archive:                         S4CORE107_INST_EXPORT_21.zip
       checksum:                        7eb5e78fb9ffe75ffde35a2d64abbbdb2022bca0ca87dd8985419652c0e2439f
       url:                             https://softwaredownloads.sap.com/file/0030000001315042022
       path:                            download_basket
 
-    - name:                            "File on DVD - S4CORE106_INST_EXPORT_22.zip"
+    - name:                            "File on DVD - S4CORE107_INST_EXPORT_22.zip"
       archive:                         S4CORE107_INST_EXPORT_22.zip
       checksum:                        d8e1a9539db3a78b66989d99a0bf65d6e7381318a284e901b9a2e02536ce92c9
       url:                             https://softwaredownloads.sap.com/file/0030000001315052022
       path:                            download_basket
 
-    - name:                            "File on DVD - S4CORE106_INST_EXPORT_23.zip"
+    - name:                            "File on DVD - S4CORE107_INST_EXPORT_23.zip"
       archive:                         S4CORE107_INST_EXPORT_23.zip
       checksum:                        54a4e6a6b50ac4a7de3a1bc37210f6051707032c9e8618ab2c52c7cd38755d02
       url:                             https://softwaredownloads.sap.com/file/0030000001315062022
       path:                            download_basket
 
-    - name:                            "File on DVD - S4CORE106_INST_EXPORT_24.zip"
+    - name:                            "File on DVD - S4CORE107_INST_EXPORT_24.zip"
       archive:                         S4CORE107_INST_EXPORT_24.zip
       checksum:                        a30de08c368b0c0a0ed621ecd59cbd98877c82b4656566d51c0da831476f766c
       url:                             https://softwaredownloads.sap.com/file/0030000001315072022
       path:                            download_basket
 
-    - name:                            "File on DVD - S4CORE106_INST_EXPORT_25.zip"
+    - name:                            "File on DVD - S4CORE107_INST_EXPORT_25.zip"
       archive:                         S4CORE107_INST_EXPORT_25.zip
       checksum:                        82fe9b2dca00fde5efe9e190009a2f3462ecf31f9a76d958bf778f2216173ab2
       url:                             https://softwaredownloads.sap.com/file/0030000001315102022
       path:                            download_basket
 
-    - name:                            "File on DVD - S4CORE106_INST_EXPORT_26.zip"
+    - name:                            "File on DVD - S4CORE107_INST_EXPORT_26.zip"
       archive:                         S4CORE107_INST_EXPORT_26.zip
       checksum:                        af6e71648328d6d1926ef99279a7f23a842a6aeda19e3840ebd8d76b47754193
       url:                             https://softwaredownloads.sap.com/file/0030000001315142022
       path:                            download_basket
 
-    - name:                            "File on DVD - S4CORE106_INST_EXPORT_27.zip"
+    - name:                            "File on DVD - S4CORE107_INST_EXPORT_27.zip"
       archive:                         S4CORE107_INST_EXPORT_27.zip
       checksum:                        9b6089c57bdfef0a2c2d97b2a8d12ffec7712be96b981dc33a0dee7a957800bb
       url:                             https://softwaredownloads.sap.com/file/0030000001315152022
       path:                            download_basket
 
-    - name:                            "File on DVD - S4CORE106_INST_EXPORT_28.zip"
+    - name:                            "File on DVD - S4CORE107_INST_EXPORT_28.zip"
       archive:                         S4CORE107_INST_EXPORT_28.zip
       checksum:                        007db0d5d8e11c567f738e52cfacedd61f3336bca0cc7db69f8f8f73fa0ab4dc
       url:                             https://softwaredownloads.sap.com/file/0030000001315162022
