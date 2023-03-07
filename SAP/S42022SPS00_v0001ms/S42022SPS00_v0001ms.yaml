@@ -41,25 +41,24 @@ materials:
 
     # kernel components
     # Kernel
-    - name:                            "Kernel Part I (785); OS: Linux on x86_64 64bit ; DB: Database independent"
+    - name:                            "Kernel Part I (789) ; OS: Linux on x86_64 64bit ; DB: Database independent"
       archive:                         SAPEXE_52-70006642.SAR
       checksum:                        0bae6f0aa3fa3e23f6eb7018c963a07b9d67dc53d0a5f1ccc0b14702c7e1a30a
       url:                             https://softwaredownloads.sap.com/file/0020000001469782022
       path:                            download_basket
 
-    - name:                            "Kernel Part II (785); OS: Linux on x86_64 64bit ; DB: SAP HANA database"
+    - name:                            "Kernel Part II (789) ; OS: Linux on x86_64 64bit ; DB: SAP HANA database"
       archive:                         SAPEXEDB_52-70006641.SAR
       checksum:                        390b03df73db3eeb47623c0915a0b5a46d7b8518642facbad88a471176121538
       url:                             https://softwaredownloads.sap.com/file/0020000001469752022
       path:                            download_basket
 
     # SAP Host Agent
-    - name:                            "SAP HOST AGENT 7.22 SP55"
-      archive:                         SAPHOSTAGENT58_58-80004822
-      checksum:                        b14fc73f3ebc01eebf192033577d64c3e3a0259d10fb010b74708940ff04f29b
-      url:                             https://softwaredownloads.sap.com/file/0020000001370172022
+    - name:                            "SAP HOST AGENT 7.22 SP59 ; OS: Linux on x86_64 64bit"
+      archive:                         SAPHOSTAGENT59_59-80004822.SAR
+      checksum:                        3cfd90fa184c1e6d6c45b0a40c612d7e313a72f0955ebd8fb96e0fa05e815dea
+      url:                             https://softwaredownloads.sap.com/file/0020000000122952011
       path:                            download_basket
-
     # IGS components
     - name:                            "Installation for SAP IGS integrated in SAP Kernel"
       archive:                         igsexe_1-70005417.sar
