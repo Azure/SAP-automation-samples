@@ -54,10 +54,10 @@ materials:
       path:                            download_basket
 
     # SAP Host Agent
-    - name:                            "SAP HOST AGENT 7.22 SP59 ; OS: Linux on x86_64 64bit"
-      archive:                         SAPHOSTAGENT59_59-80004822.SAR
-      checksum:                        3cfd90fa184c1e6d6c45b0a40c612d7e313a72f0955ebd8fb96e0fa05e815dea
-      url:                             https://softwaredownloads.sap.com/file/0020000000122952011
+    - name:                            "SAP HOST AGENT 7.22 SP58 ; OS: Linux on x86_64 64bit"
+      archive:                         SAPHOSTAGENT58_58-80004825.SAR
+      checksum:                        cece895888c6e3f88bdc4787103310d242f97d22190d3cfb0bf90b5803e90ae3
+      url:                             https://softwaredownloads.sap.com/file/0020000001370252022
       path:                            download_basket
     # IGS components
     - name:                            "Installation for SAP IGS integrated in SAP Kernel"
