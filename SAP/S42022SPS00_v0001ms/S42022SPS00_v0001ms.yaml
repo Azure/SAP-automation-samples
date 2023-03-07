@@ -297,7 +297,7 @@ materials:
 
     - name:                            "Attribute Change Package 17 for EA-HR 608"
       archive:                         S4HCM100
-      checksum:                        4eaf52b5dee04ecf787e2e6e83db4795e2ab07775350aa98f7523d35848aebac
+      checksum:                        bd4a09eeb95c6ae9c6f873107da4d192d96f4ab7fb10dff4ecd1dae6dd067355
       url:                             https://softwaredownloads.sap.com/file/0010000001431132022
       download:                        false
 
