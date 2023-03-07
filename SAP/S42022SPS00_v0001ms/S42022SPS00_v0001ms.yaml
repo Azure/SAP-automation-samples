@@ -283,310 +283,310 @@ materials:
  # other components
     # SPAM
     - name:                            "SPAM/SAINT Update - Version 756/0081"
-      archive:                         KD75783.SAR
+      archive:                         SAPKD75783.SAR
       checksum:                        38ea6502aa190d9e32a8afc92241a61b7ea97d03bba0c59ece0e6cdf2fcf1923
       url:                             https://softwaredownloads.sap.com/file/0010000000806892022
-      download:                        true
+      download:                        false
 
     # Support Packs
     - name:                            "Attribute Change Package 17 for EA-HR 608"
       archive:                         SAPEXEDB_52-70006641.SAR
       checksum:                        390b03df73db3eeb47623c0915a0b5a46d7b8518642facbad88a471176121538
       url:                             https://softwaredownloads.sap.com/file/0020000001469752022
-      download:                        true
+      download:                        false
 
     - name:                            "Attribute Change Package 17 for EA-HR 608"
       archive:                         S4HCM100
       checksum:                        4eaf52b5dee04ecf787e2e6e83db4795e2ab07775350aa98f7523d35848aebac
       url:                             https://softwaredownloads.sap.com/file/0010000001431132022
-      download:                        true
+      download:                        false
 
     - name:                            "Attribute Change Package 17 for EA-HR 608"
       archive:                         ST-PI740
       checksum:                        2b87eb02fa26dd8279a37eaa4c1ee64adab8bccbaca668f1e32ff421bdfbf9c8
       url:                             https://softwaredownloads.sap.com/file/0010000000297212015
-      download:                        true
+      download:                        false
 
     - name:                            "Attribute Change Package 19 for GBX01HR 600"
       archive:                         GBX01HR5605
       checksum:                        19d06ed87c3fc1b9390fafa94d9a2d25ddabd3c0e61777a693e6155f113fa167
       url:                             https://softwaredownloads.sap.com/file/0010000000033172015
-      download:                        true
+      download:                        false
  
     - name:                            "UIHR002 100: SP 0001"
       archive:                         UIHR002100
       checksum:                        af4dc627a4e9896a29506cff4b0804085299f97ce8a414ebf930d5bff0aad2b6
       url:                             https://softwaredownloads.sap.com/file/0010000020208092017
-      download:                        true
+      download:                        false
 
     - name:                            "UIHR002 100: SP 0001"
       archive:                         UIMDG001200
       checksum:                        7764b042e148ce8162d59872f9ba31e3ee30a9dddb3dbf459038c417adf8a28d
       url:                             https://softwaredownloads.sap.com/file/0010000014247222017
-      download:                        true
+      download:                        false
   
     - name:                            "Attribute Change Package 14 for UITRV001 300"
       archive:                         UITRV001300
       checksum:                        2e25b1abd4a98ed6a36776d79c92fbce733c38b214e0f697c11db9efd11177cb
       url:                             https://softwaredownloads.sap.com/file/0010000000561182019
-      download:                        true
+      download:                        false
   
     - name:                            "UIHR002 100: SP 0001"
       archive:                         K-10001INUIHR002
       checksum:                        fcea0646281bea84985537527c8be840a328a08b24f36e458d98f3aa61040f08
       url:                             https://softwaredownloads.sap.com/file/0010000020421312017
-      download:                        true
+      download:                        false
 
     - name:                            "UIHR002 100: SP 0002"
       archive:                         K-10002INUIHR002
       checksum:                        3e9c7fab54796ad9ca241f9fd9a9edf82cfe9df152511b8b6796adafc8ed40c3
       url:                             https://softwaredownloads.sap.com/file/0010000000493432018
-      download:                        true
+      download:                        false
 
     - name:                            "UIHR002 100: SP 0003"
       archive:                         K-10003INUIHR002
       checksum:                        1c01075973bfc2bc3b41535ca27eb7c71220cdac529d79c40e83e21f8c5a1c97
       url:                             https://softwaredownloads.sap.com/file/0010000001141912018
-      download:                        true
+      download:                        false
 
     - name:                            "UIHR002 100: SP 0004"
       archive:                         K-10004INUIHR002
       checksum:                        9992f1728fa5ed4c320e3ff5d6e2162a53072d7dac22d9d257d56d22b672f279
       url:                             https://softwaredownloads.sap.com/file/0010000001934802018
-      download:                        true
+      download:                        false
 
     - name:                            "UIHR002 100: SP 0005"
       archive:                         K-10005INUIHR002
       checksum:                        8d7b880dfe89aebff047018f9ca86a0f7a831befdc856764f8ab124c4260068c
       url:                             https://softwaredownloads.sap.com/file/0010000000045522019
-      download:                        true
+      download:                        false
 
     - name:                            "UIHR002 100: SP 0006"
       archive:                         K-10006INUIHR002
       checksum:                        6f05090977e230c30feb2a25b24ee9780eae53b8ba7d79248736252623224002
       url:                             https://softwaredownloads.sap.com/file/0010000000464552019   
-      download:                        true
+      download:                        false
 
     - name:                            "UIHR002 100: SP 0007"
       archive:                         K-10007INUIHR002
       checksum:                        4010e8821ce9badd733d92e8b372f0584e39bc0b5805e2af0ce1402ea8d5f09a
       url:                             https://softwaredownloads.sap.com/file/0010000001273902019   
-      download:                        true
+      download:                        false
 
     - name:                            "UIHR002 100: SP 0008"
       archive:                         K-10008INUIHR002
       checksum:                        3d92662ec19af3af3acdeeac1b500c47ff613fe24b570ae0f81aa4616231093d
       url:                             https://softwaredownloads.sap.com/file/0010000001810332019
-      download:                        true
+      download:                        false
 
     - name:                            "UIHR002 100: SP 0009"
       archive:                         K-10009INUIHR002
       checksum:                        5ef6474c9ba556ba10cfa849f95a9791e612d1fe050747bfc06a2e93d0407422
       url:                             https://softwaredownloads.sap.com/file/0010000000341482020   
-      download:                        true
+      download:                        false
 
     - name:                            "UIHR002 100: SP 0010"
       archive:                         K-10010INUIHR002
       checksum:                        0c568d19b8f4ea31dc00d651db24287386128395704f691657b2f6ad0d74af40
       url:                             https://softwaredownloads.sap.com/file/0010000000979992020
-      download:                        true
+      download:                        false
 
     - name:                            "UIHR002 100: SP 0011"
       archive:                         K-10011INUIHR002
       checksum:                        e45f87ba029f88ade45fd2c198a71986c8c935c76ae5a62e872b8b6f5a8398ea
       url:                             https://softwaredownloads.sap.com/file/0010000001525832020
-      download:                        true
+      download:                        false
 
     - name:                            "UIHR002 100: SP 0012"
       archive:                         K-10012INUIHR002
       checksum:                        799288a50cf8e57fffb73462e17c8e87908f260833329ebd68ad8fd351364b77
       url:                             https://softwaredownloads.sap.com/file/0010000002085752020
-      download:                        true
+      download:                        false
 
     - name:                            "UIHR002 100: SP 0013"
       archive:                         K-10013INUIHR002
       checksum:                        69a457f49431ad66397b8b9078070ae296bac2f4943a2b098117583180bbaca6
       url:                             https://softwaredownloads.sap.com/file/0010000000335032021
-      download:                        true
+      download:                        false
 
     - name:                            "UIHR002 100: SP 0014"
       archive:                         K-10014INUIHR002
       checksum:                        d889cc1563769b27d591b8d2222fc5c67b38e5a577e11bc4c42a7bb0b91fae03
       url:                             https://softwaredownloads.sap.com/file/0010000000819382021
-      download:                        true
+      download:                        false
 
     - name:                            "UIHR002 100: Add-On Installation"
       archive:                         K-10015INUIHR002
       checksum:                        de8bfea033dab01e00cba79aac9e2a1953020544407f64ecd8a5c28d4a3c3810
       url:                             https://softwaredownloads.sap.com/file/0010000001278192021
-      download:                        true
+      download:                        false
 
     - name:                            "UIMDG001 200: Support Package 0001"
       archive:                         K-10016INUIHR002
       checksum:                        dff7b0a1a61c0b31e57520fba89631c60b10235a9a0b2376bbf47c1805321704
       url:                             https://softwaredownloads.sap.com/file/0010000001713232021
-      download:                        true
+      download:                        false
 
     - name:                            "UIMDG001 200: SP 0002"
       archive:                         K-10017INUIHR002
       checksum:                        8b253e80b06ac0f1177a3cdf90c3d881e092c7ae9d7ea12b6fa691f0c33130ec
       url:                             https://softwaredownloads.sap.com/file/0010000000335842022
-      download:                        true
+      download:                        false
 
     - name:                            "UIMDG001 200: SP 0004"
       archive:                         K-100AGINUIHR002
       checksum:                        704d117df4cac91c11d51767a57af7df08e484b5a6b9da79382e82465411b4a7
       url:                             https://softwaredownloads.sap.com/file/0010000019183952017
-      download:                        true
+      download:                        false
 
     - name:                            "UIMDG001 200: SP 0005"
       archive:                         K-20001INUIMDG001
       checksum:                        3639089001a6f15dd04d74826160bbf50c01f5e6cd595a00efebb18bc155e70a
       url:                             https://softwaredownloads.sap.com/file/0010000001029322016
-      download:                        true
+      download:                        false
 
     - name:                            "UIMDG001 200: SP 0006"
       archive:                         K-20002INUIMDG001
       checksum:                        7c4872138665abcc330fa0d19e684614acf24e39432c28a1d5cb0e8aaf9567b2
       url:                             https://softwaredownloads.sap.com/file/0010000014298612017
-      download:                        true
+      download:                        false
 
     - name:                            "UIMDG001 200: SP 0006"
       archive:                         K-20003INUIMDG001
       checksum:                        861af02e6f495c92d0dc49f2677fd3642f15b69e87e0c124257a4f1edb9064eb
       url:                             https://softwaredownloads.sap.com/file/0010000019125502017
-      download:                        true
+      download:                        false
       
     - name:                            "UIMDG001 200: SP 0006"
       archive:                         K-20004INUIMDG001
       checksum:                        d9c795e1d59924dbe4d0990f7df1ab0810c87b06d98f3fe712b1ac20fd8b685e
       url:                             https://softwaredownloads.sap.com/file/0010000019849022017
-      download:                        true
+      download:                        false
       
     - name:                            "UIMDG001 200: SP 0006"
       archive:                         K-20005INUIMDG001
       checksum:                        529614708b9b17b002b1c3f5eb9082cad12d738a40d19de52ea1120746494ffa
       url:                             https://softwaredownloads.sap.com/file/0010000020421762017
-      download:                        true
+      download:                        false
       
     - name:                            "UIMDG001 200: SP 0006"
       archive:                         K-20006INUIMDG001
       checksum:                        eb5a15d27b619ae30e16992eca95379af3634ee0b0a9b1c62f761c891a05b5cf
       url:                             https://softwaredownloads.sap.com/file/0010000000493392018
-      download:                        true
+      download:                        false
    
     - name:                            "UIMDG001 200: SP 0006"
       archive:                         K-20007INUIMDG001
       checksum:                        2690224cca026a4024c5ebdbbfcdf64151cc5122c3b2f7a3d824b4f9f3405197
       url:                             https://softwaredownloads.sap.com/file/0010000001935022018
-      download:                        true
+      download:                        false
 
     - name:                            "UIMDG001 200: SP 0006"
       archive:                         K-20008INUIMDG001
       checksum:                        e3889def8a21765d43bbee56ed4c24b7ecdf2b85a7b2652481d20942101ca127
       url:                             https://softwaredownloads.sap.com/file/0010000000464372019
-      download:                        true
+      download:                        false
 
     - name:                            "UIMDG001 200: SP 0006"
       archive:                         K-20009INUIMDG001
       checksum:                        ffa03f6352323ddc48c91fefbcbccec8f17be6e3a031a72b6493f4832dc391c1
       url:                             https://softwaredownloads.sap.com/file/0010000001525852020
-      download:                        true
+      download:                        false
 
     - name:                            "UIMDG001 200: SP 0006"
       archive:                         K-20010INUIMDG001
       checksum:                        093bb0d51add5f3886f3f74174d5137e0a26740f7159b3eef824cc1c8d788720
       url:                             https://softwaredownloads.sap.com/file/0010000002085772020
-      download:                        true
+      download:                        false
 
     - name:                            "UIMDG001 200: SP 0006"
       archive:                         K-20011INUIMDG001
       checksum:                        e73c99075ec2348a649bda5eba57f97a0bbb7c7dd243e858c704dc7baf4300fd
       url:                             https://softwaredownloads.sap.com/file/0010000001278222021
-      download:                        true
+      download:                        false
 
     - name:                            "UIMDG001 200: SP 0006"
       archive:                         K-20012INUIMDG001
       checksum:                        84c6f3ffce55e0ca00b6a19ac5babf5327e519e4b059861ea94140baae204305
       url:                             https://softwaredownloads.sap.com/file/0010000000335852022
-      download:                        true
+      download:                        false
 
     - name:                            "UIMDG001 200: SP 0006"
       archive:                         K-200AGINUIMDG001
       checksum:                        9467d4a3a3e8aec8f8a7139863ba6f903ce5ae6aa16f4d0a726e709501a581ab
       url:                             https://softwaredownloads.sap.com/file/0010000000696272016
-      download:                        true
+      download:                        false
 
     - name:                            "UIMDG001 200: SP 0006"
       archive:                         K-30001INUITRV001
       checksum:                        d54e623fc3ad3a4b617ea5f1c94eddefd8f51ac43e3b0626d095d4c05e4cd1e9
       url:                             https://softwaredownloads.sap.com/file/0010000000045572019
-      download:                        true
+      download:                        false
 
     - name:                            "UIMDG001 200: SP 0006"
       archive:                         K-30002INUITRV001
       checksum:                        d54e623fc3ad3a4b617ea5f1c94eddefd8f51ac43e3b0626d095d4c05e4cd1e9
       url:                             https://softwaredownloads.sap.com/file/0010000000045572019
-      download:                        true
+      download:                        false
 
     - name:                            "UIMDG001 200: SP 0006"
       archive:                         K-30003INUITRV001
       checksum:                        e7d9b4924bb946e06f386aedc98f8a6ddf6bf78c1bfb534cc1bc88ae3862b583
       url:                             https://softwaredownloads.sap.com/file/0010000001810452019
-      download:                        true
+      download:                        false
 
     - name:                            "UIMDG001 200: SP 0006"
       archive:                         K-30004INUITRV001
       checksum:                        39aa1d34fe9b12db2c9141a2bc1c16388a8c696ad12a2df4a935bb49c585802d
       url:                             https://softwaredownloads.sap.com/file/0010000000341512020
-      download:                        true
+      download:                        false
 
     - name:                            "UIMDG001 200: SP 0006"
       archive:                         K-30005INUITRV001
       checksum:                        80a791a3939e8c53cabcb69f9c07e21aac6d9f23938a33fd70a66741089dec4b
       url:                             https://softwaredownloads.sap.com/file/0010000001616922020
-      download:                        true
+      download:                        false
 
     - name:                            "UIMDG001 200: SP 0006"
       archive:                         K-30006INUITRV001
       checksum:                        e90f40adbfc56cd39e293589041e1dc83adbbc39aec4f1944781ef0f13d9bb9e
       url:                             https://softwaredownloads.sap.com/file/0010000000335052021
-      download:                        true      
+      download:                        false      
 
     - name:                            "UIMDG001 200: SP 0006"
       archive:                         K-30007INUITRV001
       checksum:                        442d12c4760a678d7e7969b39d2907e00d97f93874fa08e1c5d423786ff53f33
       url:                             https://softwaredownloads.sap.com/file/0010000001278572021
-      download:                        true 
+      download:                        false 
 
     - name:                            "UIMDG001 200: SP 0006"
       archive:                         K-300AGINUITRV001
       checksum:                        ab970fce38141f3fc2752fb2169447681bb739471ebbb37385058eb50f72f02f
       url:                             https://softwaredownloads.sap.com/file/0010000001909232018
-      download:                        true 
+      download:                        false 
       
     - name:                            "UIMDG001 200: SP 0006"
       archive:                         K-75701INSAPUI
       checksum:                        0eaed73180e5fcf73ae39a6aa41ad894cd545cfcc8e429004964d70c433a558f
       url:                             https://softwaredownloads.sap.com/file/0010000001310042022
-      download:                        true 
+      download:                        false 
       
     - name:                            "UIMDG001 200: SP 0006"
       archive:                         K-757AGINUIBAS001
       checksum:                        d5488c81ee00a48b3bd5116a735be031ffb2197e7a316fb626d2dbf4ddfeb04f
       url:                             https://softwaredownloads.sap.com/file/0010000000611422022
-      download:                        true 
+      download:                        false 
       
     - name:                            "UIMDG001 200: SP 0006"
       archive:                         K-800AGINUIS4HOP1
       checksum:                        f0a55286cd30e042e345b2322d5673f0f8a7c876ed57ffb0bcd6dedcc9681d1f
       url:                             https://softwaredownloads.sap.com/file/0010000001018992022
-      download:                        true 
+      download:                        false 
       
     - name:                            "UIMDG001 200: SP 0006"
       archive:                         K-901AGINUIAPFI70
       checksum:                        2c5bf09f7dc4258649e92655e20a0fd40169371a13d5682e0a1076e0da80b122
       url:                             https://softwaredownloads.sap.com/file/0010000001018862022
-      download:                        true 
+      download:                        false 
   
 ...
