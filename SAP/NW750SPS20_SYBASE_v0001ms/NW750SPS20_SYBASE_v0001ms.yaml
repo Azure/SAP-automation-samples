@@ -39,13 +39,6 @@ materials:
       permissions:                     '0755'
       url:                             https://softwaredownloads.sap.com/file/0020000000098642022
 
-    # DB components
-
-    - name:                            "SAP ASE 16.0 FOR BUS. SUITE"
-      archive:                         51055871_1.ZIP
-      url:                             https://softwaredownloads.sap.com/file/0030000001227482022
-      path:                            download_basket
-      
     # kernel components
 
     - name:                            "Support Package SAP KERNEL 7.53 64-BIT UNICODE Linux on x86_64 64bit SAP ASE"
