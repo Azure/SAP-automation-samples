@@ -26,7 +26,7 @@ materials:
   dependencies:
     - name:                            SYBASE_1603SP11_v0001ms
     - name:                            SWPM10SP36_latest
-    - name:                            SUM20SP15_latest
+    - name:                            SUM20SP16_latest
 
   media:
 
