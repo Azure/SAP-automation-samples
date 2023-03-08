@@ -43,23 +43,26 @@ materials:
 
     - name:                            "Support Package SAP KERNEL 7.53 64-BIT UNICODE Linux on x86_64 64bit SAP ASE"
       archive:                         SAPEXEDB_1100-80002616.SAR
+      checksum:                        a0631869c8595438968769d616ae96fb86b337b153ddcc9a1bab5008cc0f9834
       url:                             https://softwaredownloads.sap.com/file/0020000001664192022
       path:                            download_basket
 
     - name:                            "Kernel Part I (753) ; OS: Linux on x86_64 64bit ; DB: Database independent"
-      archive:                         SAPEXE_900-80002573.SAR
-      url:                             https://softwaredownloads.sap.com/file/0020000001557032021
+      archive:                         SAPEXE_1100-80002573.SAR
+      checksum:                        290fdab37be4adf9255b06db1a2d8e839540d2730019c9f267751bb8484f001f
+      url:                             https://softwaredownloads.sap.com/file/0020000001664462022
       path:                            download_basket
 
-    - name:                            "SAP HOST AGENT 7.22 SP55"
-      archive:                         SAPHOSTAGENT55_55-80004822.SAR
-      url:                             https://softwaredownloads.sap.com/file/0020000000239812022
+    - name:                            "SAP HOST AGENT 7.22 SP58"
+      archive:                         SAPHOSTAGENT58_58-80004822.SAR
+      checksum:                        b14fc73f3ebc01eebf192033577d64c3e3a0259d10fb010b74708940ff04f29b
+      url:                             https://softwaredownloads.sap.com/file/0020000001370172022
       path:                            download_basket
 
-    - name:                            "SAP HOST AGENT 7.22 SP54"
-      archive:                         SAPHOSTAGENT54_54-80004822.SAR
-      checksum:                        5899a0934bd8d37a887d0d67de6ac0520f907a66ff7c3bc79176fff99171a878
-      url:                             https://softwaredownloads.sap.com/file/0020000001542872021
+    - name:                            "SAP HOST AGENT 7.22 SP59"
+      archive:                         SAPHOSTAGENT59_59-80004822.SAR
+      checksum:                        6e3d509418244c3ed5a7803d68e2921f40e3e94ea1798520ffa0b4345b81a5f7
+      url:                             https://softwaredownloads.sap.com/file/0020000000021552023
       path:                            download_basket
 
     - name:                            "Installation for SAP IGS integrated in SAP Kernel"
