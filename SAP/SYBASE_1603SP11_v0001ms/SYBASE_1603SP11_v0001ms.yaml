@@ -13,7 +13,7 @@ materials:
       checksum:    db5dbb56278143114f055d687af3b1fcfa5ad6840fdee5fdbb143052463e6065
       extract:     true
       download:    true
-      extractDir:  CD_SYB/dbsoftware
+      extractDir:  CD_SYBSERVER
       path:        download_basket
       creates:     CDLABEL.ASC
       url:         https://softwaredownloads.sap.com/file/0030000000023842023
