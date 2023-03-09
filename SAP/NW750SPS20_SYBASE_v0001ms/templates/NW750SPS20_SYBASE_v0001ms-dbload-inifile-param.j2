@@ -10,18 +10,17 @@
 ###############################################################################################################################################################################
 
 # Location of Export CD
-SAPINST.CD.PACKAGE.RDBMS-SYB                                                 = /usr/sap/install/CD_SYBSERVER
-SAPINST.CD.PACKAGE.RDBMS-SYB-CLIENT
-SAPINST.CD.PACKAGE.CD1                                                  = /usr/sap/install/CD_EXPORT/DATA_UNITS/EXP1
-SAPINST.CD.PACKAGE.CD2                                                  = /usr/sap/install/CD_EXPORT/DATA_UNITS/EXP2
-SAPINST.CD.PACKAGE.CD3                                                  = /usr/sap/install/CD_EXPORT/DATA_UNITS/EXP3
+SAPINST.CD.PACKAGE.RDBMS                                            = {{db_install_media_path}}
+SAPINST.CD.PACKAGE.LOAD                                             = {{dbexport_folder_path}}
+archives.downloadBasket                                             = {{ kernel_media_folder }}
+NW_Unpack.sapExeDbSar                                               = {{ sap_exe_full_path }}
+NW_Unpack.sapExeSar                                                 = {{ sap_exe_full_path }}
 
-archives.downloadBasket                                                 = /usr/sap/install/download_basket
 NW_readProfileDir.profilesAvailable                                     = false
 nwUsers.sapadmUID                                                       = {{ sapadm_uid }}
 nwUsers.sapsysGID                                                       = {{ sapsys_gid }}
 nwUsers.sidAdmUID                                                       = {{ asesidadm_uid }}
-nwUsers.syb.sybsidId                                                    = {{ asesidadm_uid }}
+nwUsers.syb.sybsidId                                                    = {{ asesapsid_uid }}
 
 NW_Delete_Sapinst_Users.removeUsers                                     = true
 NW_GetMasterPassword.masterPwd                                          = {{ main_password }}
@@ -93,10 +92,10 @@ SYB.NW_DB.autoExpandSaptoolsThresholdLog                                = 2
 
 
 # Database device information like 'type','folder','size','maxsize','growsize','name'
-SYB.NW_DB.databaseDevices = data device for SAP,/sybase/{{ db_sid|upper }}/sapdata_1,12,,10,{{ db_sid|upper }}_data_001,log device for SAP,/sybase/{{ db_sid|upper }}/saplog_1,7,,5,{{ db_sid|upper }}_log_00
-1,data device for saptools,/sybase/{{ db_sid|upper }}/sapdiag,4,,2,saptools_data_001,log device for saptools,/sybase/{{ db_sid|upper }}/sapdiag,4,,2,saptools_log_001,data devi
-ce for sybsecurity,/sybase/{{ db_sid|upper }}/sybsecurity,1,,,sybsecurity_data_001,data device for sybsecurity,/sybase/{{ db_sid|upper }}/sybsecurity,1,,,sybsecurity_data_002,
-log device for sybsecurity,/sybase/{{ db_sid|upper }}/sybsecurity,0.5,,,sybsecurity_log_001,temp device for SAP,/sybase/{{ db_sid|upper }}/saptemp,8,,,saptempdb_data_001,
+SYB.NW_DB.databaseDevices = data device for SAP,/sybase/{{ db_sid|upper }}/sapdata_1,64,,10,{{ db_sid|upper }}_data_001,log device for SAP,/sybase/{{ db_sid|upper }}/saplog_1,32,,5,{{ db_sid|upper }}_log_00
+1,data device for saptools,/sybase/{{ db_sid|upper }}/sapdiag,14,,2,saptools_data_001,log device for saptools,/sybase/{{ db_sid|upper }}/sapdiag,8,,2,saptools_log_001,data devi
+ce for sybsecurity,/sybase/{{ db_sid|upper }}/sybsecurity,8,,,sybsecurity_data_001,data device for sybsecurity,/sybase/{{ db_sid|upper }}/sybsecurity,8,,,sybsecurity_data_002,
+log device for sybsecurity,/sybase/{{ db_sid|upper }}/sybsecurity,4,,,sybsecurity_log_001,temp device for SAP,/sybase/{{ db_sid|upper }}/saptemp,8,,,saptempdb_data_001,
 
 
 # Type of SAP ASE
