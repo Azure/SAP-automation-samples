@@ -453,17 +453,3 @@ utility_vm_count = 0
 # Defines if the utility virtual machine IP
 #utility_vm_nic_ips = []
 
-#########################################################################################
-#                                                                                       #
-#  SAP Application Information                                                          #
-#                                                                                       #
-#########################################################################################
-
-# bom_name is the name of the SAP Application Bill of Materials file
-
-bom_name = "NW_MSSQL_v0001ms"
-
-# configuration_settings is a dictionary containing values that will be persisted in sap-parameters.yaml
-configuration_settings = {
-  domain_name = "sap.contoso.net",
-}

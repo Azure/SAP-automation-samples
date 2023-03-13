@@ -3,12 +3,10 @@
 
 ########################################################################################################################################################################################################
 #                                                                                                                                                                                                      #
-# Installation service 'SAP S/4HANA Server 2021 > SAP HANA Database > Installation > Application Server ABAP                                                                                           #
-#                       > Distributed System > ASCS Instance', product id 'NW_ABAP_ASCS:S4HANA2021.CORE.HDB.ABAP'                                                                                      #
-#                       > Distributed System > Database Instance', product id 'NW_ABAP_DB:S4HANA2021.CORE.HDB.ABAP'                                                                                    #
-#                       > Distributed System > Primary Application Server Instance', product id 'NW_ABAP_CI:S4HANA2021.CORE.HDB.ABAP'                                                                  #
-#                       > Additional SAP System Instances > Additional Application Server Instance', product id 'NW_DI:S4HANA2021.CORE.HDB.PD'                                                         #
-#                       Generic Options > SAP HANA Database > Preparations > Operating System Users and Groups', product id 'NW_Users_Create:GENERIC.HDB.PD'                                           #
+# Installation service 'SAP S/4HANA Server 2022 > SAP HANA Database > Installation > Application Server ABAP
+#                       > Distributed System > ASCS Instance', product id 'NW_ABAP_ASCS:S4HANA2022.CORE.HDB.ABAP' #
+#                       > Distributed System > Database Instance', product id 'NW_ABAP_DB:S4HANA2022.CORE.HDB.ABAP' #
+#                                                                                                                                                                                                      #
 ########################################################################################################################################################################################################
 
 # Location of Export CD
@@ -41,10 +39,14 @@ NW_getFQDN.FQDN                                                       = {{ sap_f
 
 HDB_Schema_Check_Dialogs.schemaName                                   = SAPHANADB
 HDB_Schema_Check_Dialogs.schemaPassword                               = {{ main_password }}
+# Specify if Software Provisioning Manager is to drop the schema if it exists.
+{# HDB_Schema_Check_Dialogs.dropSchema                                   = {{ drop_schema }} #}
 
 NW_HDB_DB.abapSchemaName                                              = SAPHANADB
 NW_HDB_DB.abapSchemaPassword                                          = {{ main_password }}
+
 NW_HDB_DBClient.clientPathStrategy                                    = SAPCPE
+
 NW_HDB_getDBInfo.dbhost                                               = {{ sap_db_hostname }}
 NW_HDB_getDBInfo.dbsid                                                = {{ db_sid | upper }}
 NW_HDB_getDBInfo.instanceNumber                                       = {{ db_instance_number }}
@@ -53,7 +55,7 @@ NW_HDB_getDBInfo.systemPassword                                       = {{ main_
 NW_HDB_getDBInfo.systemid                                             = {{ db_sid | upper }}
 NW_HDB_getDBInfo.usingSSL                                             = true
 
-NW_Recovery_Install_HDB.extractLocation                               = /hana/backup/{{ db_sid | upper }}/HDB{{ db_instance_number }}/backup/data/DB_{{ db_sid | upper }}{{ db_instance_number }}
+NW_Recovery_Install_HDB.extractLocation                               = {{ hana_backup_path }}/{{ db_sid | upper }}/HDB{{ db_instance_number }}/backup/data/DB_{{ db_sid | upper }}{{ db_instance_number }}
 NW_Recovery_Install_HDB.extractParallelJobs                           = 24
 NW_Recovery_Install_HDB.sidAdmName                                    = {{ db_sid | lower }}adm
 NW_Recovery_Install_HDB.sidAdmPassword                                = {{ main_password }}
@@ -61,3 +63,4 @@ NW_Recovery_Install_HDB.sidAdmPassword                                = {{ main_
 NW_checkMsgServer.abapMSPort                                          = 36{{ scs_instance_number }}
 NW_getLoadType.loadType                                               = SAP
 NW_readProfileDir.profileDir                                          = {{ sap_profile_dir }}
+
