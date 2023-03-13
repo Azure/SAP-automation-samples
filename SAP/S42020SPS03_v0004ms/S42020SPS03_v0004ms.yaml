@@ -995,7 +995,7 @@
 
         - name:         "Attribute Change Package 04 for SAP_UI 755"
           archive:      SAP_UI755.SAR
-          checksum:     0bd4eee6628a2d8d66592f78d9b520f7c758b89cd133a824d5960836a3636d2b
+          checksum:     ac15136030130fcdbe11529f971f873674fb7abcdc2815d9bb4c11659ce04603
           url:          https://softwaredownloads.sap.com/file/0010000000211202021
           download:     false
 
