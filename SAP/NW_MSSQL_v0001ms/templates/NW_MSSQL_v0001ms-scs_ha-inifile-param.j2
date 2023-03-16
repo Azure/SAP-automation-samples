@@ -47,9 +47,6 @@ NW_getFQDN.FQDN                                                       = {{ sap_f
 # The folder containing all archives that have been downloaded from http://support.sap.com/swdc and are supposed to be used in this procedure
 archives.downloadBasket                                               = {{ target_media_location }}\download_basket
 
-# Password of the sidadm user.
-db2.sidAdmPassword                                                    = {{ main_password }}
-
 # Windows only: The domain of the SAP Host Agent user
 # hostAgent.domain =
 
@@ -63,7 +60,7 @@ nwUsers.sapServiceSIDPassword                                         = {{ sid_s
 # The password of the '<sapsid>adm' user
 nwUsers.sidadmPassword                                                = {{ domain_user_password }}
 
-NW_GetSidFromCluster.fileShare                                        = {{ cluster_share }}
+{# NW_GetSidFromCluster.fileShare                                        = {{ cluster_share }} #}
 
 # The hostname to use
 NW_GetSidFromCluster.networkName                                      = {{ sap_scs_hostname }}
