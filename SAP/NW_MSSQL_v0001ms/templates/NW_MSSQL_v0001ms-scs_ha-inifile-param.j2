@@ -58,7 +58,7 @@ nwUsers.sidadmPassword                                               = {{ domain
 {# NW_GetSidFromCluster.fileShare                                    = {{ cluster_share }} #}
 
 # The hostname to use
-NW_GetSidFromCluster.networkName                                     = {{ cluster_name }}
+NW_GetSidFromCluster.networkName                                     = {{ scs_virtual_hostname }}
 
 # Choose "CSD"  if you are using the cluster shared drive or Choose "FS" if you are using the File Share.
 NW_GetSidFromCluster.shareDecision                                   = {{ win_cluster_share_type }}
