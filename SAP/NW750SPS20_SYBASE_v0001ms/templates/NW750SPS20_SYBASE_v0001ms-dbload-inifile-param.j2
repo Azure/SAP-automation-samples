@@ -182,7 +182,7 @@ SYB.NW_DB.sqlServerCores                                                = 4
 SYB.NW_DB.sqlServerHostname                                             = {{ sap_db_hostname }}
 
 # Physical memory (in GB) for the database server
-SYB.NW_DB.sqlServerMemory                                               = 7000
+SYB.NW_DB.sqlServerMemory                                               = {{ sybase_memory }}
 
 # Password for SSL encrypted data transfer
 SYB.NW_DB.sslPassword                                                   = {{ main_password }}
