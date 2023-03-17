@@ -1198,4 +1198,12 @@ materials:
       download:     false
       url:          https://softwaredownloads.sap.com/file/0030000001632152019
 
+# Web Dispatcher
+
+    - name:                            "Support Package SAP WEB DISPATCHER 7.81 Linux on x86_64 64bit"
+      archive:                         SAPWEBDISP_SP_110-70005393.SAR
+      checksum:                        706e5f4eab5d8a3573c3cc2bf6695562b8c71c59b5079e2f7e7b8afb283ee5fc
+      url:                             https://softwaredownloads.sap.com/file/0020000000314542021
+      download:                        true
+
 ...
