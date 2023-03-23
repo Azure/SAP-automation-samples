@@ -7,9 +7,9 @@ materials:
 
   media:
     # SUM
-    - name:         "Patch 1 for SOFTWARE UPDATE MANAGER 2.0 SP16 (Linux on x86_64)"
-      archive:      SUM20SP16_1-80002456.SAR
-      checksum:     fee7a5882f4e35e95b0f08823bf7cca36c681e103a0759685272c4b3a946ec22
+    - name:         "Patch 2 for SOFTWARE UPDATE MANAGER 2.0 SP16 (Linux on x86_64)"
+      archive:      SUM20SP16_2-80002456.SAR
+      checksum:     9bba9fdc390b1aa17e17ed55c7d9e0c9a4f9d236900dee6345043044fc658113
       download:     false
-      url:          https://softwaredownloads.sap.com/file/0020000000269852023
+      url:          https://softwaredownloads.sap.com/file/0020000000331032023
 
