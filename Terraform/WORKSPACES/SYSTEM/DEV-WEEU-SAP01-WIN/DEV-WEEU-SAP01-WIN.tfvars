@@ -761,5 +761,5 @@ bom_name = "NW_MSSQL_v0001ms"
 
 # configuration_settings is a dictionary containing values that will be persisted in sap-parameters.yaml
 configuration_settings = {
-  domain_name = "sap.contoso.net",
+  domain_name = "sdaf.contoso.net",
 }
