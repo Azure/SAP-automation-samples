@@ -1,14 +1,14 @@
 ---
 name:    'SUM20SP16'
 target:  'SUM20SP16'
-version: 001
+version: 003
 
 materials:
 
   media:
 
-    - name:         "Patch 1 for SOFTWARE UPDATE MANAGER 2.0 SP16 (Windows)"
-      archive:      SUM20SP16_1-80002458.SAR
-      checksum:     9667e4225952a31ef2a3b2d22e097a5bf0b6981bb9211478b0e12a502b5edaf6
+    - name:         "Patch 3 for SOFTWARE UPDATE MANAGER 2.0 SP16 (Windows)"
+      archive:      SUM20SP16_3-80002458.SAR
+      checksum:     77781cc776c234a09c118971826b6e0e40ada0d2c37574b06a16906b957a15e6
       download:     false
-      url:          https://softwaredownloads.sap.com/file/0020000000269812023
+      url:          https://softwaredownloads.sap.com/file/0020000000394502023
