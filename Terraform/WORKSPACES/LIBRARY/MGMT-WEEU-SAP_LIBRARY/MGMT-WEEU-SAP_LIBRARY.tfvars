@@ -125,7 +125,7 @@ location="westeurope"
 #########################################################################################
 
 # dns_label if specified is the DNS name of the private DNS zone
-dns_label="sdaf.contoso.net"
+dns_label="azure.sdaf.contoso.net"
 
 # Boolean value indicating if a custom dns a record should be created when using private endpoints
 # use_custom_dns_a_registration = false

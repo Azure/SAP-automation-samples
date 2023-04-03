@@ -283,7 +283,7 @@ transport_volume_size = 128
 #                                                                                       #
 #########################################################################################
 
-dns_label = "sdaf.contoso.net"
+dns_label = "azure.sdaf.contoso.net"
 
 # If defined provides the name of the resource group hosting the Private DNS zone
 #dns_resource_group_name = ""
