@@ -16,7 +16,7 @@ product_ids:
 
 materials:
   dependencies:
-    - name:     SWPM10SP34_latest
+    - name:                            SWPM10SP36_latest
 
   media:
     # SAPCAR 7.22
