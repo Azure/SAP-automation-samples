@@ -76,7 +76,6 @@ NW_SCS_Instance.instanceNumber                                       = {{ scs_in
 nw_instance_ers.ersInstanceNumber                                    = {{ ers_instance_number }}
 
 # Host name of the ERS instance. It can be either the physical host name or -  in case of  high-availability system installation, - one of the virtual host names.
-# nw_instance_ers.ersVirtualHostname                                 = {{ ers_virtual_hostname }}
 nw_instance_ers.ersVirtualHostname                                   = {{ ansible_hostname }}
 
 # Restart (A)SCS instance during ERS installation. Default value 'true'. Possible values 'true' or 'false'. Leave empty for default.
