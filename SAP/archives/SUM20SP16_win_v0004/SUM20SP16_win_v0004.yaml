@@ -1,0 +1,14 @@
+---
+name:    'SUM20SP16'
+target:  'SUM20SP16'
+version: 004
+
+materials:
+
+  media:
+
+    - name:         "Patch 4 for SOFTWARE UPDATE MANAGER 2.0 SP16 (Windows)"
+      archive:      SUM20SP16_4-80002458.SAR
+      checksum:     35a3e62a1728ab2ba254ea1d9c395b3d93f75c6e20dd6eec381e019de0d1a005
+      download:     false
+      url:          https://softwaredownloads.sap.com/file/0020000000422662023
