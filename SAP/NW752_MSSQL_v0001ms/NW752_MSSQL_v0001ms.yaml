@@ -1,23 +1,24 @@
 ---
 
-name: "SAP_NETWEAVER_7_5"
+name: "SAP_NETWEAVER_7_5_2"
 target:                         "SAP NETWEAVER 7.5"
 version:                        "1"
 platform:                       "SQLSERVER"
+InstanceType:                   "ABAP"
 
 defaults:
   target_location: "{{ target_media_location }}/download_basket"
 
 product_ids:
-  scs:                          NW_ABAP_ASCS:NW750.MSS.ABAP
-  scs_ha:                       NW_FirstClusterNode_ABAP:NW750.MSS.ABAPHA
-  dbl:                          NW_ABAP_DB:NW750.MSS.ABAP
-  pas:                          NW_ABAP_CI:NW750.MSS.ABAP
+  scs:                          NW_ABAP_ASCS:NW752.MSS.ABAP
+  scs_ha:                       NW_FirstClusterNode_ABAP:NW752.MSS.ABAPHA
+  dbl:                          NW_ABAP_DB:NW752.MSS.ABAP
+  pas:                          NW_ABAP_CI:NW752.MSS.ABAP
   pas_ha:
-  app:                          NW_DI:NW750.MSS.PD
-  app_ha:                       NW_DI:NW750.MSS.ABAPHA
+  app:                          NW_DI:NW752.MSS.PD
+  app_ha:                       NW_DI:NW752.MSS.ABAPHA
   web:
-  ers:                          NW_SecondClusterNode:NW750.MSS.ABAPHA
+  ers:                          NW_SecondClusterNode:NW752.MSS.ABAPHA
 
 materials:
   dependencies:
@@ -60,15 +61,33 @@ materials:
       path:                            download_basket
 
     # DB export
-    - name:                            "NetWeaver AS ABAP 7.50 Innovation Pkg - Installation Exp"
-      archive:                         51050829_3.ZIP
-      checksum:                        06c3a3cd5d1ad266f61ca202552468501d94cfdc7641ffdadf0a9abad82b648a
+
+    - name:                            "NetWeaver AS ABAP 7.52 Innovation Pkg - Installation Exp 1/2"
+      archive:                         51051806_part1.exe
+      checksum:                        399228ad1ede56ea97a4676e5cfd9ff2ebccded55b8128718029188bc704682e
       extract:                         true
       extractDir:                      CD_EXPORT
       creates:                         CDLABEL.ASC
-      url:                             https://softwaredownloads.sap.com/file/0030000000635092016
+      url:                             https://softwaredownloads.sap.com/file/0030000019659142017
+
+    - name:                            "NetWeaver AS ABAP 7.52 Innovation Pkg - Installation Exp 2/2"
+      archive:                         51051806_part2.rar
+      checksum:                        d968835cadfea8514a552ec977421043649bbb59140629a9dd897a7f0c47480b
+      extract:                         true
+      extractDir:                      CD_EXPORT
+      creates:                         CDLABEL.ASC
+      url:                             https://softwaredownloads.sap.com/file/0030000019659152017
 
     # Languages
+    - name:                            "NetWeaver AS ABAP 7.52 Innovation Pkg - Languages 3/2"
+      archive:                         51051806_LNG1_part1.exe
+      checksum:                        98e42ebcb32a6ac6feabf6dd231e0624e4c4f902ab2ad3ad68704563f0a0630c
+      url:                             https://softwaredownloads.sap.com/file/0030000019659262017
+
+    - name:                            "NetWeaver AS ABAP 7.52 Innovation Pkg - Languages 4/2"
+      archive:                         51051806_LNG1_part2.rar
+      checksum:                        a40808749c6fc7f13e75f12c92e11a60fbc90c6622f941d3b0392844bb99610a
+      url:                             https://softwaredownloads.sap.com/file/0030000019659272017
 
     # other components
 
