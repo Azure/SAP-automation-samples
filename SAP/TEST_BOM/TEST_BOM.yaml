@@ -1,0 +1,1008 @@
+---
+
+name: "ERP6_HANADB_v01ms"
+target: "SAP NETWEAVER 7.5"
+version: 0001
+platform: 'HANA'
+
+defaults:
+  target_location: "{{ target_media_location }}/download_basket"
+
+product_ids:
+  scs:                          NW_ABAP_ASCS:NW750.HDB.ABAP
+  scs_ha:
+  dbl:                          NW_ABAP_DB:NW750.HDB.ABAP
+  pas:                          NW_ABAP_CI:NW750.HDB.ABAP
+  pas_ha:
+  app:
+  app_ha:
+  web:
+  ers:
+  ers_ha:
+  generic:                      NW_Users_Create:GENERIC.HDB.PD
+
+materials:
+  dependencies:
+      - name:         "HANA_2_00_059_v0001ms"  # <- edit as needed
+      - name: SWPM10SP36_latest
+      - name: SUM20SP15_latest
+
+  media:
+
+    # kernel components
+
+    - name:                            "SAP HANA CLIENT Version 2.16 ; OS: Linux on x86_64 64bit"
+      archive:                         IMDB_CLIENT20_016_21-80002082
+      checksum:                        cd1c65c78704b57497e52173415c3e397e7313f7a7b580e774f2e0919530226d
+      url:                             https://softwaredownloads.sap.com/file/0020000000333652023
+      download:                        true  
+    - name:                            "Revision 2.00.070.0 (SPS07) for HANA DB 2.0 ; OS: Linux on x86_64 64bit"
+      archive:                         IMDB_SERVER20_070_0-80002031
+      checksum:                        7500196c70945b4ca9c272f2b170f3313214a114115b84cbff7de33661888dc2
+      url:                             https://softwaredownloads.sap.com/file/0020000000414462023
+      download:                        true  
+    - name:                            "GRCPIERP V1100_700: SP 0001"
+      archive:                         K-11301INGRCPIERP
+      checksum:                        cde3c5948d9282ad8178d195cdb9e024b1f00de619aed5cbe2310ff3a7aa2cac
+      url:                             https://softwaredownloads.sap.com/file/0010000000048622013
+      download:                        true 
+    - name:                            "GRCPIERP V1100_700: SP 0002"
+      archive:                         K-11302INGRCPIERP
+      checksum:                        ddd3d1b4185c3f346fab34b49da69b7c5449af8eafac6deff4aac22c052a8331
+      url:                             https://softwaredownloads.sap.com/file/0010000000048672013
+      download:                        true 
+    - name:                            "GRCPIERP V1100_700: SP 0003"
+      archive:                         K-11303INGRCPIERP
+      checksum:                        fc632260340755cee5fd6b929f19d66ad225e1e0b7c3f1d22bd53bcdd2944a6e
+      url:                             https://softwaredownloads.sap.com/file/0010000000048712013
+      download:                        true
+    - name:                            "GRCPIERP V1100_700: SP 0004"
+      archive:                         K-11304INGRCPIERP
+      checksum:                        8be0019b9787fa72c2ac080ce396663a76075167848c18daf63481b3780070b8
+      url:                             https://softwaredownloads.sap.com/file/0010000000048972014
+      download:                        true
+    - name:                            "GRCPIERP V1100_700: SP 0005"
+      archive:                         K-11305INGRCPIERP
+      checksum:                        cb0d2ebf48077c7ef27a58354b84f11b9e98e05af55241a40dff6ede3f695f85
+      url:                             https://softwaredownloads.sap.com/file/0010000000049012014
+      download:                        true 
+    - name:                            "GRCPIERP V1100_700: SP 0006"
+      archive:                         K-11306INGRCPIERP
+      checksum:                        06f5b49b27697b0ba8c70d34bded299479601f6514f34747f873b2e17f695de2
+      url:                             https://softwaredownloads.sap.com/file/0010000000049072014
+      download:                        true
+    - name:                            "GRCPIERP V1100_700: SP 0007"
+      archive:                         K-11307INGRCPIERP
+      checksum:                        bc41d3ce106694c2255f1d46d79905ce3370da57a3172561e57c22aba0d161e7
+      url:                             https://softwaredownloads.sap.com/file/0010000000049182014
+      download:                        true
+    - name:                            "GRCPIERP V1100_700: SP 0008"
+      archive:                         K-11308INGRCPIERP
+      checksum:                        7be05b6271692931a7ffc81edebe58b5b57768cf3f9391c31bed45175a048bd5
+      url:                             https://softwaredownloads.sap.com/file/0010000000035842015
+      download:                        true
+    - name:                            "GRCPIERP V1100_700: SP 0009"
+      archive:                         K-11309INGRCPIERP
+      checksum:                        f010fa05c82392a2a54216f2662046c7affb717499358df7334e63cbf546c7d9
+      url:                             https://softwaredownloads.sap.com/file/0010000000036012015
+      download:                        true 
+    - name:                            "GRCPIERP V1100_700: SP 0010"
+      archive:                         K-11310INGRCPIERP
+      checksum:                        3af86081e7b002e7c5ee234f44a1a3676661e70971d2e7280958c38fc3cc73fb
+      url:                             https://softwaredownloads.sap.com/file/0010000000036062015
+      download:                        true
+    - name:                            "GRCPIERP V1100_700: SP 0011"
+      archive:                         K-11311INGRCPIERP
+      checksum:                        0c683bf59505916f8bfbf73ff6abc087eded20db720ee79e8436d631b1074e58
+      url:                             https://softwaredownloads.sap.com/file/0010000000036112015
+      download:                        true
+    - name:                            "GRCPIERP V1100_700: SP 0012"
+      archive:                         K-11312INGRCPIERP
+      checksum:                        72b5e2bd9f1f7090215afa7b83891d2b3f1bdc158b0c107ecde64db803c62e64
+      url:                             https://softwaredownloads.sap.com/file/0010000000026712016
+      download:                        true
+    - name:                            "GRCPIERP V1100_700: SP 0013"
+      archive:                         K-11313INGRCPIERP
+      checksum:                        ccddf44c853da330eb66116d38fac24d0c90bdd74c6bf5340fb2e9545d110e2d
+      url:                             https://softwaredownloads.sap.com/file/0010000000026742016
+      download:                        true
+    - name:                            "GRCPIERP V1100_700: SP 0014"
+      archive:                         K-11314INGRCPIERP
+      checksum:                        197ce68cc12a23bf1a7934e9518babe55df6d0be1cb1801c944dbf82bdad85ec
+      url:                             https://softwaredownloads.sap.com/file/0010000000761162016
+      download:                        true
+    - name:                            "GRCPIERP V1100_700: SP 0015"
+      archive:                         K-11315INGRCPIERP
+      checksum:                        14b5a1881f9975994be852fcdc4aacd580994f375936340679740801901e8db5
+      url:                             https://softwaredownloads.sap.com/file/0010000000077612017
+      download:                        true
+    - name:                            "GRCPIERP V1100_700: SP 0016"
+      archive:                         K-11316INGRCPIERP
+      checksum:                        3db36e16f19fb18db2e01d493ff99df8c9d6e33fade8865e35d8b536cc6a7816
+      url:                             https://softwaredownloads.sap.com/file/0010000014243972017
+      download:                        true
+    - name:                            "GRCPIERP V1100_700: SP 0017"
+      archive:                         K-11317INGRCPIERP
+      checksum:                        6f1b88d0d83ff2994af84a57161e789d158453e71a94b7ea8b6b7eb982aed328
+      url:                             https://softwaredownloads.sap.com/file/0010000019249922017
+      download:                        true
+    - name:                            "GRCPIERP V1100_700: SP 0018"
+      archive:                         K-11318INGRCPIERP
+      checksum:                        926012ab3907eb49e6a9a9c30b2f88b9f89471b74b48564cc263117e5ca03a06
+      url:                             https://softwaredownloads.sap.com/file/0010000019933482017
+      download:                        true
+    - name:                            "GRCPIERP V1100_700: SP 0019"
+      archive:                         K-11319INGRCPIERP
+      checksum:                        aed592f8ba2af2e707b20f7c21e343ed3ea6ef85ec012a587dfdb636777982aa
+      url:                             https://softwaredownloads.sap.com/file/0010000000121642018
+      download:                        true
+    - name:                            "GRCPIERP V1100_700: SP 0020"
+      archive:                         K-11320INGRCPIERP
+      checksum:                        dbf25b3c1591cd3974334f30b601abf44ace54bedfd95df7b20e1e84983b6db4
+      url:                             https://softwaredownloads.sap.com/file/0010000000904872018
+      download:                        true
+    - name:                            "GRCPIERP V1100_700: SP 0021"
+      archive:                         K-11321INGRCPIERP
+      checksum:                        3a9b473da4f0a85914afc26962efbeb9fbd357b4baa300b052562f3c74129cc9
+      url:                             https://softwaredownloads.sap.com/file/0010000001756062018
+      download:                        true 
+    - name:                            "GRCPIERP V1100_700: SP 0022"
+      archive:                         K-11322INGRCPIERP
+      checksum:                        28b13bd7c5aae71e50d68de2d26435cfea12a6bbc85a667b1db4999376a9c100
+      url:                             https://softwaredownloads.sap.com/file/0010000000009302019
+      download:                        true   
+    - name:                            "GRCPIERP V1100_700: SP 0023"
+      archive:                         K-11323INGRCPIERP
+      checksum:                        d828a54dbc15aecad6feea6584e824a746ba513c5260bb2f0a01d8bdad33ed6d
+      url:                             https://softwaredownloads.sap.com/file/0010000000685892019
+      download:                        true 	  
+    - name:                            "GRCPIERP V1100_700: Add-On Installation"
+      archive:                         K-113AGINGRCPIERP
+      checksum:                        1fcf8bd75148133fc2a0230f230e179ee59c8c612afbd4ca2500170145f4503e
+      url:                             https://softwaredownloads.sap.com/file/0010000000049142013
+      download:                        true	  
+    - name:                            "GRCPINW V1100_731: SP 0001"
+      archive:                         K-11501INGRCPINW
+      checksum:                        23acab28499494fbcf73e84114f1ddb3a63c688d36ab96e2fcca84727446edcb
+      url:                             https://softwaredownloads.sap.com/file/0010000000063022013
+      download:                        true 	  
+    - name:                            "GRCPINW V1100_731: SP 0002"
+      archive:                         K-11502INGRCPINW
+      checksum:                        06ba32adb85298d612816950f0961ea4f8bf5895a2d3388755a03670ee2f4472
+      url:                             https://softwaredownloads.sap.com/file/0010000000063032013
+      download:                        true	  
+    - name:                            "GRCPINW V1100_731: SP 0003"
+      archive:                         K-11503INGRCPINW
+      checksum:                        c28ace3c8435b87ce0fb4a4862425be378fee2e1648cd43f4f30b6542235d0ff
+      url:                             https://softwaredownloads.sap.com/file/0010000000063042013
+      download:                        true	  
+    - name:                            "GRCPINW V1100_731: SP 0004"
+      archive:                         K-11504INGRCPINW
+      checksum:                        ec48f2fa63c42186b3a7621c1d8b8ecd9839c637f60c0588e7b698c641fe286b
+      url:                             https://softwaredownloads.sap.com/file/0010000000049442014
+      download:                        true	  
+    - name:                            "GRCPINW V1100_731: SP 0005"
+      archive:                         K-11505INGRCPINW
+      checksum:                        63d06a32e9679717632f2f262c419a6f41891c611c348fd0b0022f6433306883
+      url:                             https://softwaredownloads.sap.com/file/0010000000062672014
+      download:                        true	  
+    - name:                            "GRCPINW V1100_731: SP 0006"
+      archive:                         K-11506INGRCPINW
+      checksum:                        fbed5cacf40326bd3d6a1008ea5dbeeb1190ab74f0a79fb50c905514e2e64a93
+      url:                             https://softwaredownloads.sap.com/file/0010000000062682014
+      download:                        true	  
+    - name:                            "GRCPINW V1100_731: SP 0007"
+      archive:                         K-11507INGRCPINW
+      checksum:                        49cd970ffbaa61c300b74ba954f5c346453e251d14260ed1fd2529b982b0ef8a
+      url:                             https://softwaredownloads.sap.com/file/0010000000062692014
+      download:                        true	  
+    - name:                            "GRCPINW V1100_731: SP 0008"
+      archive:                         K-11508INGRCPINW
+      checksum:                        180048adb02ffc40081894ab58ad9b54dda53df8f09c74130990cdc44e4bba1b
+      url:                             https://softwaredownloads.sap.com/file/0010000000049622015
+      download:                        true	  
+    - name:                            "GRCPINW V1100_731: SP 0009"
+      archive:                         K-11509INGRCPINW
+      checksum:                        e19f7c715cf417381626fbb41b004ba1138e004aa1f04bd7fc888171adf4f5a2
+      url:                             https://softwaredownloads.sap.com/file/0010000000049632015
+      download:                        true	  
+    - name:                            "GRCPINW V1100_731: SP 0010"
+      archive:                         K-11510INGRCPINW
+      checksum:                        54222397955dfbd5b10a060e51e7c95582b81cdcea87e01a6912b15f6254034c
+      url:                             https://softwaredownloads.sap.com/file/0010000000049642015
+      download:                        true
+    - name:                            "GRCPINW V1100_731: SP 0011"
+      archive:                         K-11511INGRCPINW
+      checksum:                        71dd24bc63abc9b0b5c0d16b8ae5ac6f3671149d350dd0ab8a5f436e79fb70b8
+      url:                             https://softwaredownloads.sap.com/file/0010000000049652015
+      download:                        true  
+    - name:                            "GRCPINW V1100_731: SP 0012"
+      archive:                         K-11512INGRCPINW
+      checksum:                        9e7c064704074f668ba994f6ecdc5ec41b904a0a04fc88aa7825464165817d4a
+      url:                             https://softwaredownloads.sap.com/file/0010000000049662015
+      download:                        true 
+    - name:                            "GRCPINW V1100_731: SP 0013"
+      archive:                         K-11513INGRCPINW
+      checksum:                        8304d6fc564e70483f6f094cdd649d51bb24c9698e7cc7c718a2dd0405ffcb43
+      url:                             https://softwaredownloads.sap.com/file/0010000000060322016
+      download:                        true 
+    - name:                            "GRCPINW V1100_731: SP 0014"
+      archive:                         K-11514INGRCPINW
+      checksum:                        5a941be23778d9dc2eea813a45c9a97b5c665893e61e014befd8a0218088da1a
+      url:                             https://softwaredownloads.sap.com/file/0010000000060332016
+      download:                        true 
+    - name:                            "GRCPINW V1100_731: SP 0015"
+      archive:                         K-11515INGRCPINW
+      checksum:                        74180095a0fb033350269ae7da21e22df1d48d37f57de65fa35a31c878423745
+      url:                             https://softwaredownloads.sap.com/file/0010000000382972016
+      download:                        true 
+    - name:                            "GRCPINW V1100_731: SP 0016"
+      archive:                         K-11516INGRCPINW
+      checksum:                        cc09876e3627ec940647aed3ede1bc7954b05cd1248e1fdacfd36fc28c38f008
+      url:                             https://softwaredownloads.sap.com/file/0010000000761152016
+      download:                        true 	  
+    - name:                            "GRCPINW V1100_731: SP 0017"
+      archive:                         K-11517INGRCPINW
+      checksum:                        fa85f55e7eb45a2789627143f2edfee3d1d1c4b69995ec4fa1c2ddf37797eaa2
+      url:                             https://softwaredownloads.sap.com/file/0010000000077632017
+      download:                        true 	  
+    - name:                            "GRCPINW V1100_731: SP 0018"
+      archive:                         K-11518INGRCPINW
+      checksum:                        5a926eb85e44b89020cf51945bb985f3fe7202f4df34129e8d71b6cf9f5adbba
+      url:                             https://softwaredownloads.sap.com/file/0010000014243982017
+      download:                        true   
+    - name:                            "GRCPINW V1100_731: SP 0019"
+      archive:                         K-11519INGRCPINW
+      checksum:                        313fef61ed27170a012ab4d33452c54a1c07f98f4a32344abe961ab4882c7e98
+      url:                             https://softwaredownloads.sap.com/file/0010000019249952017
+      download:                        true     
+    - name:                            "GRCPINW V1100_731: SP 0020"
+      archive:                         K-11520INGRCPINW
+      checksum:                        396a6ce0610a693ffff8500c5d9c4e94e529d60363b62ef63f622dec696e6568
+      url:                             https://softwaredownloads.sap.com/file/0010000019933512017
+      download:                        true 	  
+    - name:                            "GRCPINW V1100_731: SP 0021"
+      archive:                         K-11521INGRCPINW
+      checksum:                        edc8e56c56a989f8156ef71fa53ac18fc3add503f1e8dd6e0b26b0d58469e8fa
+      url:                             https://softwaredownloads.sap.com/file/0010000000121672018
+      download:                        true	  
+    - name:                            "GRCPINW V1100_731: SP 0022"
+      archive:                         K-11522INGRCPINW
+      checksum:                        44cb1bfd5e84b05bd044f4a82a67ebb6e7a7ad0e1d70d6a6a8112bd906392aab
+      url:                             https://softwaredownloads.sap.com/file/0010000000904902018
+      download:                        true 	  
+    - name:                            "GRCPINW V1100_731: SP 0023"
+      archive:                         K-11523INGRCPINW
+      checksum:                        3aa4c6d1e64d82735befecba4d8cb05851a16bc2a743765f82546f5edba45f87
+      url:                             https://softwaredownloads.sap.com/file/0010000001756172018
+      download:                        true	  
+    - name:                            "GRCPINW V1100_731: SP 0024"
+      archive:                         K-11524INGRCPINW
+      checksum:                        ab531ea5e2b45fcc33af0022070c3a4e9bec8ea5f090cb994ae67acd9caecf80
+      url:                             https://softwaredownloads.sap.com/file/0010000000009282019
+      download:                        true 
+    - name:                            "GRCPINW V1100_731: SP 0025"
+      archive:                         K-11525INGRCPINW
+      checksum:                        916163086a766a2c7c25608f5092d2cba74b0402a4bb1d581bc04d6bb1dad956
+      url:                             https://softwaredownloads.sap.com/file/0010000000685862019
+      download:                        true
+    - name:                            "GRCPINW V1100_731: SP 0026"
+      archive:                         K-11526INGRCPINW
+      checksum:                        29c1be7638651054df4f129c11b54114a8b1928fe4ab95111125d1aaf2fe307b
+      url:                             https://softwaredownloads.sap.com/file/0010000001473702019
+      download:                        true 	
+    - name:                            "GRCPINW V1100_731: Add-On Installation"
+      archive:                         K-115AGINGRCPINW
+      checksum:                        a743f1819f0ec71c25bdb7f241da73bb03229926af92e362a5892510fb814810
+      url:                             https://softwaredownloads.sap.com/file/0010000000063082013
+      download:                        true 	  	  	  
+    - name:                            "PERSONAS 300: SP 0001"
+      archive:                         K-30001INPERSONAS
+      checksum:                        d6356256be43dc6700682144e25fde0bd70cd553e6970905e7dcf8ea238be790
+      url:                             https://softwaredownloads.sap.com/file/0010000000036812015
+      download:                        true 	  	  
+    - name:                            "PERSONAS 300: SP 0002"
+      archive:                         K-30002INPERSONAS
+      checksum:                        58db980d2bf777fadfc58bf8ebec65660ce7930ba0b5595420b309343a4d5d38
+      url:                             https://softwaredownloads.sap.com/file/0010000000036882015
+      download:                        true 	
+    - name:                            "PERSONAS 300: SP 0003"
+      archive:                         K-30003INPERSONAS
+      checksum:                        c18817cdd9165f8ffb8edd4375e92523c0ea8283c0560484a15774b228ce7428
+      url:                             https://softwaredownloads.sap.com/file/0010000000027092016
+      download:                        true 	  
+    - name:                            "GRCPIERP V1100_700: SP 0001"
+      archive:                         K-11301INGRCPIERP
+      checksum:                        cde3c5948d9282ad8178d195cdb9e024b1f00de619aed5cbe2310ff3a7aa2cac
+      url:                             https://softwaredownloads.sap.com/file/0010000000048622013
+      download:                        true 
+    - name:                            "GRCPIERP V1100_700: SP 0002"
+      archive:                         K-11302INGRCPIERP
+      checksum:                        ddd3d1b4185c3f346fab34b49da69b7c5449af8eafac6deff4aac22c052a8331
+      url:                             https://softwaredownloads.sap.com/file/0010000000048672013
+      download:                        true
+    - name:                            "GRCPIERP V1100_700: SP 0003"
+      archive:                         K-11303INGRCPIERP
+      checksum:                        fc632260340755cee5fd6b929f19d66ad225e1e0b7c3f1d22bd53bcdd2944a6e
+      url:                             https://softwaredownloads.sap.com/file/0010000000048712013
+      download:                        true
+    - name:                            "GRCPINW V1100_731: SP 0026"
+      archive:                         K-11526INGRCPINW
+      checksum:                        29c1be7638651054df4f129c11b54114a8b1928fe4ab95111125d1aaf2fe307b
+      url:                             https://softwaredownloads.sap.com/file/0010000001473702019
+      download:                        true
+    - name:                            "PERSONAS 300: SP 0001"
+      archive:                         K-30001INPERSONAS
+      checksum:                        d6356256be43dc6700682144e25fde0bd70cd553e6970905e7dcf8ea238be790
+      url:                             https://softwaredownloads.sap.com/file/0010000000036812015
+      download:                        true
+    - name:                            "PERSONAS 300: SP 0002"
+      archive:                         K-30002INPERSONAS
+      checksum:                        58db980d2bf777fadfc58bf8ebec65660ce7930ba0b5595420b309343a4d5d38
+      url:                             https://softwaredownloads.sap.com/file/0010000000036882015
+      download:                        true
+    - name:                            "PERSONAS 300: SP 0003"
+      archive:                         K-30003INPERSONAS
+      checksum:                        c18817cdd9165f8ffb8edd4375e92523c0ea8283c0560484a15774b228ce7428
+      url:                             https://softwaredownloads.sap.com/file/0010000000027092016
+      download:                        true
+    - name:                            "PERSONAS 300: SP 0004"
+      archive:                         K-30004INPERSONAS
+      checksum:                        8861ebd2f288c9bae555e41fd0630ec77c90537d7563ee99f1145ca0ee68be55
+      url:                             https://softwaredownloads.sap.com/file/0010000000770462016
+      download:                        true
+    - name:                            "PERSONAS 300: SP 0005"
+      archive:                         K-30005INPERSONAS
+      checksum:                        6bdbcee46508ffd1a603ed31a2cf97d966a717740f4485516f9830a3aaefd1df
+      url:                             https://softwaredownloads.sap.com/file/0010000014312652017
+      download:                        true
+    - name:                            "PERSONAS 300: SP 0008"
+      archive:                         K-30008INPERSONAS
+      checksum:                        1e9b809b3b4cf6b9f25537532b6dcc8e9d22f650557ffa76c2bdc82fd3f8451d
+      url:                             https://softwaredownloads.sap.com/file/0010000002317892018
+      download:                        true
+    - name:                            "PERSONAS 300: SP 0008"
+      archive:                         K-30008INPERSONAS
+      checksum:                        1e9b809b3b4cf6b9f25537532b6dcc8e9d22f650557ffa76c2bdc82fd3f8451d
+      url:                             https://softwaredownloads.sap.com/file/0010000002317892018
+      download:                        true
+    - name:                            "PERSONAS 300: SP 0011"
+      archive:                         K-30011INPERSONAS
+      checksum:                        e1592ad0a26aebb1f3073ca98b7d52a2a936fdfd13518dd608a5acccfddccbf3
+      url:                             https://softwaredownloads.sap.com/file/0010000000798592020
+      download:                        true
+    - name:                            "ECC-SE 605: SP 0001"
+      archive:                         K-60501INECCSE
+      checksum:                        1e312891f68a903f128676389a62cf77e1bd86c063831fc26aa5fab75797a7f1
+      url:                             https://softwaredownloads.sap.com/file/0010000000032572010
+      download:                        true
+    - name:                            "ECC-SE 605: SP 0002"
+      archive:                         K-60502INECCSE
+      checksum:                        cf48cae8d69fb7d8144d926362778ca4456107e28667b6f765cf2875482943c2
+      url:                             https://softwaredownloads.sap.com/file/0010000000033092010
+      download:                        true
+    - name:                            "ECC-SE 605: SP 0003"
+      archive:                         K-60503INECCSE
+      checksum:                        439dc25b4b47586256d481019676c49ca3ae92bd1d758d8037bec9190bd90bdc
+      url:                             https://softwaredownloads.sap.com/file/0010000000033372010
+      download:                        true
+    - name:                            "ECC-SE 605: SP 0004"
+      archive:                         K-60504INECCSE
+      checksum:                        8b39bb9717ba331c17fd37f572e89f4c36ba7dc8dd898fcca1f080c11a9b632b
+      url:                             https://softwaredownloads.sap.com/file/0010000000041162011
+      download:                        true
+    - name:                            "ECC-SE 605: SP 0005"
+      archive:                         K-60505INECCSE
+      checksum:                        d0ec37c952548ccb79e35a9518251181a7d2f81d098c0906132d5779c906c1b5
+      url:                             https://softwaredownloads.sap.com/file/0010000000041452011
+      download:                        true
+    - name:                            "ECC-SE 605: SP 0006"
+      archive:                         K-60506INECCSE
+      checksum:                        b6c7db97434ac227f6454c9dc560e240710ac210685378ee82e238ad1f0f59b4
+      url:                             https://softwaredownloads.sap.com/file/0010000000041682011
+      download:                        true
+    - name:                            "ECC-SE 605: SP 0007"
+      archive:                         K-60507INECCSE
+      checksum:                        b3ab0074c5539fd8d75b242e9e9985b27d1d0084dc17765fc9a4a19ba5e354d0
+      url:                             https://softwaredownloads.sap.com/file/0010000000041932011
+      download:                        true
+    - name:                            "ECC-SE 605: SP 0008"
+      archive:                         K-60508INECCSE
+      checksum:                        62e329cb68cd4e40953e81391597babb134466b7a1418085fd1ebef75ef54722
+      url:                             https://softwaredownloads.sap.com/file/0010000000053352012
+      download:                        true 
+    - name:                            "ECC-SE 605: SP 0009"
+      archive:                         K-60509INECCSE
+      checksum:                        34ea50afbfe78d06c0202914223c354e8de23750b80b58663cfade9f605adee8
+      url:                             https://softwaredownloads.sap.com/file/0010000000053592012
+      download:                        true	  
+    - name:                            "ECC-SE 605: SP 0010"
+      archive:                         K-60510INECCSE
+      checksum:                        9070ad822c7abc4ad9f37aeab8f5daf9ce85e6c00160f1ff8fb38948419af4b1
+      url:                             https://softwaredownloads.sap.com/file/0010000000050322013
+      download:                        true	  
+    - name:                            "ECC-SE 605: SP 0011"
+      archive:                         K-60511INECCSE
+      checksum:                        63be33682ebd74f013ad14443cfed135920b9212d52a3d04bf263d384acab6e1
+      url:                             https://softwaredownloads.sap.com/file/0010000000050512013
+      download:                        true
+    - name:                            "ECC-SE 605: SP 0012"
+      archive:                         K-60512INECCSE
+      checksum:                        2ef4a1168db0e5768f8d3e03e2fb4d6313c26407c4725f1498a574aad8770715
+      url:                             https://softwaredownloads.sap.com/file/0010000000050322014
+      download:                        true
+    - name:                            "ECC-SE 605: SP 0013"
+      archive:                         K-60513INECCSE
+      checksum:                        9339719bab512d0cbf7d2f455651274e5f552e95a057d332a5c1ab28bbe55510
+      url:                             https://softwaredownloads.sap.com/file/0010000000050512014
+      download:                        true  
+    - name:                            "ST-PI 740: SP 0001"
+      archive:                         K-74001INSTPI
+      checksum:                        9f1d977f9c233ff34943eda01a29f646307d90434a54e2334ffed8c208d4d77a 
+      url:                             https://softwaredownloads.sap.com/file/0010000000069562014
+      download:                        true
+    - name:                            "ST-PI 740: SP 0002"
+      archive:                         K-74002INSTPI
+      checksum:                        75459275d69d7d25e6e575dc790a6ffb12a675784922778c646a7896b5ca4d51 
+      url:                             https://softwaredownloads.sap.com/file/0010000000057482015
+      download:                        true
+    - name:                            "ST-PI 740: SP 0003"
+      archive:                         K-74003INSTPI
+      checksum:                        8a172b86e52884d17abe3ac51072bc26cea93df865906f7a3a16eb7918733b1f 
+      url:                             https://softwaredownloads.sap.com/file/0010000000057492015
+      download:                        true
+    - name:                            "ST-PI 740: SP 0004"
+      archive:                         K-74004INSTPI
+      checksum:                        d8bfeb01d995a4c5ed45440e4ea3880bf7101d5efba1c4416a9005745ec4b71e 
+      url:                             https://softwaredownloads.sap.com/file/0010000000059202016
+      download:                        true
+    - name:                            "ST-PI 740: SP 0005"
+      archive:                         K-74005INSTPI
+      checksum:                        74da5763244258c103319fe3bd25a461213a33de4fe1093f8aaaf0e0c20ee50b 
+      url:                             https://softwaredownloads.sap.com/file/0010000000841352016
+      download:                        true 
+    - name:                            "ST-PI 740: SP 0006"
+      archive:                         K-74006INSTPI
+      checksum:                        8954136a9b093769b57d7c5a34bf9983127cd81e9b9d3880c2f5caad3879d2c3 
+      url:                             https://softwaredownloads.sap.com/file/0010000012329692017
+      download:                        true
+    - name:                            "ST-PI 740: SP 0007"
+      archive:                         K-74007INSTPI
+      checksum:                        a56d4f0a78c9b2cc4893523b9f1ecdcfa9a958254a9841948a857f5d7bd70e40 
+      url:                             https://softwaredownloads.sap.com/file/0010000019616252017
+      download:                        true
+    - name:                            "ST-PI 740: SP 0008"
+      archive:                         K-74008INSTPI
+      checksum:                        ebb16c56e0103036fb2e4e6e6c9a18a55e9562557e929c6163bfde568febe0ac 
+      url:                             https://softwaredownloads.sap.com/file/0010000000623832018
+      download:                        true
+    - name:                            "PI_BASIS 740: SP 0009"
+      archive:                         K-74009INPIBASIS
+      checksum:                        edf0afbd28b39fcaf401611916b80c6dcfa8d6e7c19eb403f4e5e4f5557f99fb 
+      url:                             https://softwaredownloads.sap.com/file/0010000000069652014
+      download:                        true
+   - name:                            "SAP_GWFND 740: SP 0009"
+      archive:                         K-74009INSAPGWFND
+      checksum:                        d29f361c10583fd99ca833563886ec6e349b06d1686d671709ddb0c1ba0118ca 
+      url:                             https://softwaredownloads.sap.com/file/0010000000069662014
+      download:                        true
+    - name:                            "SAP_GWFND 740: SP 0009"
+      archive:                         K-74009INSAPGWFND
+      checksum:                        d29f361c10583fd99ca833563886ec6e349b06d1686d671709ddb0c1ba0118ca
+      url:                             https://softwaredownloads.sap.com/file/0010000000069662014
+      download:                        true
+    - name:                            "ST-PI 740: SP 0009"
+      archive:                         K-74009INSTPI
+      checksum:                        77e1cf3db89da6db87bd4af5f625d82454d25ba483dce0c450d9b260f313526d
+      url:                             https://softwaredownloads.sap.com/file/0010000002257102018
+      download:                        true
+    - name:                            "PI_BASIS 740: SP 0010"
+      archive:                         K-74010INPIBASIS
+      checksum:                        5e83b3c0ac3065b712258d02e221777200ca309462f228618614ead1269c922e
+      url:                             https://softwaredownloads.sap.com/file/0010000000057502015
+      download:                        true
+    - name:                            "SAP_GWFND 740: SP 0010"
+      archive:                        K-74010INSAPGWFND
+      checksum:                        6ad5d4db0552e54a729ec8415404f6cc3175c424f0dc98b344346f0436d76f1c
+      url:                             https://softwaredownloads.sap.com/file/0010000000057512015
+      download:                        true
+    - name:                            "SAP_UI 740: SP 0010"
+      archive:                        K-74010INSAPUI
+      checksum:                        749676c24e12d5203551f39cc2fa8b976f31710b848b818f5be60fcf509373cd
+      url:                             https://softwaredownloads.sap.com/file/0010000000069682014
+      download:                        true
+    - name:                            "ST-PI 740: SP 0010"
+      archive:                         K-74010INSTPI
+      checksum:                        ffccb6ea79f034dc39aff3d66ea69b75d468d81002ece6ed98ca9a9419d68d2e
+      url:                             https://softwaredownloads.sap.com/file/0010000000161692019
+      download:                        true
+    - name:                            "PI_BASIS 740: SP 0011"
+      archive:                         K-74011INPIBASIS
+      checksum:                        195e89cd62851d3deac5bae9e4c67665dbda5d3ed6d950ca027d2638085384ec
+      url:                             https://softwaredownloads.sap.com/file/0010000000057522015
+      download:                        true
+    - name:                            "SAP_GWFND 740: SP 0011"
+      archive:                         K-74011INSAPGWFND
+      checksum:                        f90853a3a594081982f8abf34b3cf214bd7b6fa1c2beb7257084215a9bdb1020
+      url:                             https://softwaredownloads.sap.com/file/0010000000057532015
+      download:                        true
+    - name:                            "SAP_UI 740: SP 0011"
+      archive:                         K-74011INSAPUI
+      checksum:                        d3efbc11a6c6b90c32a313cd3ccf91c3348c3e8aaac84900c3db18f1a4e75d19
+      url:                             https://softwaredownloads.sap.com/file/0010000000069692014
+      download:                        true
+    - name:                            "ST-PI 740: SP 0011"
+      archive:                         K-74011INSTPI
+      checksum:                        22712d84ee8e098e27941510567bdc00829f40997daae66fdb80c1c5cb720e79
+      url:                             https://softwaredownloads.sap.com/file/0010000001051532019
+      download:                        true
+    - name:                            "PI_BASIS 740: SP 0012"
+      archive:                         K-74012INPIBASIS
+      checksum:                        6c281275450237be40d9e4cdbe3408c595a33229711f514cd66594e33f57d5d9
+      url:                             https://softwaredownloads.sap.com/file/0010000000057542015
+      download:                        true
+    - name:                            "SAP_GWFND 740: SP 0012"
+      archive:                         K-74012INSAPGWFND
+      checksum:                        e0f66e558b769ad87232129f7dfeeb9c6846d7596c9d25adc9dcdb18b3ba5420
+      url:                             https://softwaredownloads.sap.com/file/0010000000057552015
+      download:                        true
+    - name:                            "SAP_UI 740: SP 0012"
+      archive:                         K-74012INSAPUI
+      checksum:                        dca8fa94956a858bb6628f50c2a3850f542e29a47af0c90b33bdfedfde6bc7ff
+      url:                             https://softwaredownloads.sap.com/file/0010000000057562015
+      download:                        true
+    - name:                            "ST-PI 740: SP 0012"
+      archive:                         K-74012INSTPI
+      checksum:                        0f385ce50d6119fca8457aaaea49f7337b5315993d930a16403e04db713f083b
+      url:                             https://softwaredownloads.sap.com/file/0010000002162182019
+      download:                        true
+    - name:                            "PI_BASIS 740: SP 0013"
+      archive:                         K-74013INPIBASIS
+      checksum:                        2db1400f3b80e5e48cba2d42e9d8fee271b84b6c41d943456ba293b69a2e1818
+      url:                             https://softwaredownloads.sap.com/file/0010000000057572015
+      download:                        true
+    - name:                            "SAP_GWFND 740: SP 0013"
+      archive:                         K-74013INSAPGWFND
+      checksum:                        c7bca5210d7cc4ba5c92fd85c41646dc3c9cd54587516bdfe80dc7939644ece9
+      url:                             https://softwaredownloads.sap.com/file/0010000000057582015
+      download:                        true
+    - name:                            "SAP_UI 740: SP 0013"
+      archive:                         K-74013INSAPUI
+      checksum:                        0905ad566597d43f7b9cf5c86c8e8f82a13b9ea7604af1be27adbd9c6e46d705
+      url:                             https://softwaredownloads.sap.com/file/0010000000057592015
+      download:                        true
+    - name:                            "ST-PI 740: SP 0013"
+      archive:                         K-74013INSTPI
+      checksum:                        e1270d366de17b67ab2f971195da4fa944509274eea778e664b8050b078d0c45
+      url:                             https://softwaredownloads.sap.com/file/0010000000660652020
+      download:                        true
+    - name:                            "PI_BASIS 740: SP 0014"
+      archive:                         K-74014INPIBASIS
+      checksum:                        6e4435b4c75538547f77e24c175989ca1ab239b8b6a3b7cb5121a34d2d4c5396
+      url:                             https://softwaredownloads.sap.com/file/0010000000063302016
+      download:                        true
+    - name:                            "SAP_GWFND 740: SP 0014"
+      archive:                         K-74014INSAPGWFND
+      checksum:                        f09b7bb44d4ff378933436fafb51081ab342d447072fabda6fab611c18da1e4c
+      url:                             https://softwaredownloads.sap.com/file/0010000000063312016
+      download:                        true
+    - name:                            "ST-PI 740: SP 0014"
+      archive:                         K-74014INSTPI
+      checksum:                        f1a9058c623360d576469c51a74e5e649b7055bcac200c5b0f8165801a189048
+      url:                             https://softwaredownloads.sap.com/file/0010000001984822020
+      download:                        true
+    - name:                            "PI_BASIS 740: SP 0015"
+      archive:                         K-74015INPIBASIS
+      checksum:                        419189094c648a232e9905213518d890dbea8e1ec2fdb0ea6b5a4f7930d60a91
+      url:                             https://softwaredownloads.sap.com/file/0010000000063322016
+      download:                        true
+    - name:                            "SAP_GWFND 740: SP 0015"
+      archive:                         K-74015INSAPGWFND
+      checksum:                        0c7696839a3aeaa703676b42df6ce17814942d4478be4a7641aa91614597ec8c
+      url:                             https://softwaredownloads.sap.com/file/0010000000063332016
+      download:                        true
+    - name:                            "ST-PI 740: SP 0015"
+      archive:                         K-74015INSTPI
+      checksum:                        d877446c5d3c41af8d10dda15b11a61d9ac36b795fe6ace9b7f99654576278af
+      url:                             https://softwaredownloads.sap.com/file/0010000000853222021
+      download:                        true
+    - name:                            "PI_BASIS 740: SP 0016"
+      archive:                         K-74016INPIBASIS
+      checksum:                        ac869dc88548e057e1b8c4fa664f7eacd6518d16f79a2b3e1ccb01e52086a997
+      url:                             https://softwaredownloads.sap.com/file/0010000000669102016
+      download:                        true
+    - name:                            "SAP_GWFND 740: SP 0016"
+      archive:                         K-74016INSAPGWFND
+      checksum:                        41930452b580235afc08ba6404525ab91d2d06624ccf6a9c370646ee7e3db1b5
+      url:                             https://softwaredownloads.sap.com/file/0010000000669112016
+      download:                        true
+    - name:                            "ST-PI 740: SP 0016"
+      archive:                         K-74016INSTPI
+      checksum:                        0d5a3c74f813dad48345023c7acd146dc9ef84c121c6d854292cb534006c40a5
+      url:                             https://softwaredownloads.sap.com/file/0010000001454472021
+      download:                        true
+    - name:                            "PI_BASIS 740: SP 0017"
+      archive:                         K-74017INPIBASIS
+      checksum:                        0ffc6d7b2ecb0a4444e31ff312e8a9ae8520576125a593e14641dcccbeb8b946
+      url:                             https://softwaredownloads.sap.com/file/0010000018833052017
+      download:                        true
+    - name:                            "SAP_GWFND 740: SP 0017"
+      archive:                         K-74017INSAPGWFND
+      checksum:                        f09d6602e7c97398f7779303c97b100523a75cd59e756bbfa4a233bcc1a5eab3
+      url:                             https://softwaredownloads.sap.com/file/0010000018833102017
+      download:                        true
+    - name:                            "ST-PI 740: SP 0017"
+      archive:                         K-74017INSTPI
+      checksum:                        31b7567ef9510cb1c7dc1434fd55a27531342e4ed8b9b90bc9ca8bd5393b5a64
+      url:                             https://softwaredownloads.sap.com/file/0010000000096822022
+      download:                        true
+    - name:                            "PI_BASIS 740: SP 0018"
+      archive:                         K-74018INPIBASIS
+      checksum:                        165940b93d21975ef9232950478c61a530faf1cc4196567862dddd11fa0eee01
+      url:                             https://softwaredownloads.sap.com/file/0010000019714412017
+      download:                        true
+    - name:                            "SAP_GWFND 740: SP 0018"
+      archive:                         K-74018INSAPGWFND
+      checksum:                        2473daddec420b0bddb80869206ed3e58c07c3ad232e0ec6c4b351c16a16bc8b
+      url:                             https://softwaredownloads.sap.com/file/0010000019714422017
+      download:                        true
+    - name:                            "ST-PI 740: SP 0018"
+      archive:                         K-74018INSTPI
+      checksum:                        335237b94424f625f65fb599c4c48771daa64d37e773fa8b1111131e73ad0112
+      url:                             https://softwaredownloads.sap.com/file/0010000000509342022
+      download:                        true
+    - name:                            "PI_BASIS 740: SP 0019"
+      archive:                         K-74019INPIBASIS
+      checksum:                        0d2c5caed334bd002aa37c4d149cd236643346dc3bfb614e12cfdf29c443f402
+      url:                             https://softwaredownloads.sap.com/file/0010000020366632017
+      download:                        true
+    - name:                            "SAP_GWFND 740: SP 0019"
+      archive:                         K-74019INSAPGWFND
+      checksum:                        23440bcc2bf9c40cfb4636f0542782f6ec11b479b3cfbb1a34b930a18ce30928
+      url:                             https://softwaredownloads.sap.com/file/0010000020366642017
+      download:                        true
+    - name:                            "ST-PI 740: SP 0019"
+      archive:                         K-74019INSTPI
+      checksum:                        4f46e84736c31cea16c2095b6337347a7e9707982ed969a434ba44350842abd2
+      url:                             https://softwaredownloads.sap.com/file/0010000000788312022
+      download:                        true
+    - name:                            "SAP_GWFND 740: SP 0020"
+      archive:                         K-74020INSAPGWFND
+      checksum:                        8d64cb8c99be000d497793d3ecdebcf8bbfc1ab8a48e3274a68a7b92bcb8f05e
+      url:                             https://softwaredownloads.sap.com/file/0010000001245082018
+      download:                        true
+    - name:                            "ST-PI 740: SP 0020"
+      archive:                         K-74020INSTPI
+      checksum:                        17cf5b9b5919f4a74eb2897b7d8a0c463c4fa9c7787541a87580964ccd82bae8
+      url:                             https://softwaredownloads.sap.com/file/0010000001268542022
+      download:                        true
+    - name:                            "SAP_GWFND 740: SP 0021"
+      archive:                         K-74021INSAPGWFND
+      checksum:                        5c97a512b528b74a5f51a5af35ec740ba418afc6b7a610690de3cf2000311eec
+      url:                             https://softwaredownloads.sap.com/file/0010000002335032018
+      download:                        true
+    - name:                            "ST-PI 740: SP 0021"
+      archive:                         K-74021INSTPI
+      checksum:                        4d1b497ff6332bdf3b27b7acbed03de07f74de35e999f83ba0b3e5a82c1a2e89
+      url:                             https://softwaredownloads.sap.com/file/0010000000003862023
+      download:                        true
+    - name:                            "SAP_GWFND 740: SP 0022"
+      archive:                         K-74022INSAPGWFND
+      checksum:                        401d4d5d7fcb6c81c4780993d8d56b62fc628d7aee913cbc89d0811ad3a243cb
+      url:                             https://softwaredownloads.sap.com/file/0010000001166802019
+      download:                        true
+    - name:                            "ST-PI 740: SP 0022"
+      archive:                         K-74022INSTPI
+      checksum:                        b823dce9183a94ec3d88d75ba7aaad9c18dc4a135f4e74a0936a37444ee71b7d
+      url:                             https://softwaredownloads.sap.com/file/0010000000316762023
+      download:                        true
+    - name:                            "SAP_GWFND 740: SP 0023"
+      archive:                         K-74023INSAPGWFND
+      checksum:                        04c2e7ef03417d744f7fcc37d7f9d57ff04efaf25090b16c5d1bc1c55abaf3c2
+      url:                             https://softwaredownloads.sap.com/file/0010000002140112019
+      download:                        true
+    - name:                            "SAP_GWFND 740: SP 0024"
+      archive:                         K-74024INSAPGWFND
+      checksum:                        0eff2b4297e4d2899af74ff7b12818d42fd5ab065aa40980e00c8a5b58896217
+      url:                             https://softwaredownloads.sap.com/file/0010000001016392020
+      download:                        true
+    - name:                            "SAP_GWFND 740: SP 0025"
+      archive:                         K-74025INSAPGWFND
+      checksum:                        7dc77e39977f428d307f01ff85286f34bbdc54e8cf76252948a54d42047a1126
+      url:                             https://softwaredownloads.sap.com/file/0010000001928582020
+      download:                        true
+    - name:                            "SAP_GWFND 740: SP 0026"
+      archive:                         K-74026INSAPGWFND
+      checksum:                        f0786fecbac15bbbe6a01b2e8ff76d9c86a932f41a4ec06964a994f3d44ee79d
+      url:                             https://softwaredownloads.sap.com/file/0010000000892102021
+      download:                        true
+    - name:                            "SAP_GWFND 740: SP 0027"
+      archive:                         K-74027INSAPGWFND
+      checksum:                        87aef55d0044022343c22acaa2c1e3d161551e15b03b005ebce6d025f81e011c
+      url:                             https://softwaredownloads.sap.com/file/0010000001797292021
+      download:                        true
+    - name:                            "SAP_GWFND 740: SP 0028"
+      archive:                         K-74028INSAPGWFND
+      checksum:                        8d809e0540100e4628c49e531233b0b8f916b1b64b58a7f39a1a385ce3e436ca
+      url:                             https://softwaredownloads.sap.com/file/0010000000822602022
+      download:                        true
+    - name:                            "SAP_GWFND 740: SP 0029"
+      archive:                         K-74029INSAPGWFND
+      checksum:                        848bf221af79df9d10e342a901de853e7c40ff7b7881421fe3c3e11bf6b95932
+      url:                             https://softwaredownloads.sap.com/file/0010000001692902022
+      download:                        true
+    - name:                            "SAP_UI 754: SP 0001"
+      archive:                         K-75401INSAPUI
+      checksum:                        212fc7d928ced7bd9a9c1e587f65457a6e40bb2bb49527ea88834e4f32b3639e
+      url:                             https://softwaredownloads.sap.com/file/0010000001661402019
+      download:                        true
+    - name:                            "SAP_UI 754: SP 0002"
+      archive:                         K-75402INSAPUI
+      checksum:                        3a4bcfd61b3015083e5e28a6db294c9c09277778b49d0259debebbf63443996d
+      url:                             https://softwaredownloads.sap.com/file/0010000002197612019
+      download:                        true
+    - name:                            "GRCPIERP V1100_700: SP 0003"
+      archive:                         K-11303INGRCPIERP
+      checksum:                        fc632260340755cee5fd6b929f19d66ad225e1e0b7c3f1d22bd53bcdd2944a6e
+      url:                             https://softwaredownloads.sap.com/file/0010000000048712013
+      download:                        true
+    - name:                            "SAP_BW 740: SP 0019"
+      archive:                         KW74019
+      checksum:                        c663e3ecb69e3f8ccf28f9ac9d5cb8a316d734494354494339665ae92c8c116f 
+      url:                             https://softwaredownloads.sap.com/file/0010000020366682017
+      download:                        true     
+    - name:                            "SAP IGS Fonts and Textures"
+      archive:                         igshelper_17-10010245
+      checksum:                        bc405afc4f8221aa1a10a8bc448f8afd9e4e00111100c5544097240c57c99732 
+      url:                             https://softwaredownloads.sap.com/file/0020000000703122018
+      download:                        true
+    - name:                            "Installation for SAP IGS integrated in SAP Kernel ; OS: Linux on x86_64"
+      archive:                         igsexe_1-80007786
+      checksum:                        e174b6d3e18fd1d23697d6b32ef7969acb24787588f712d204766612dd9aae4c 
+      url:                             https://softwaredownloads.sap.com/file/0020000000345862023
+      download:                        true
+    - name:                            "SWPM 1.0 SP37 for NW higher than 7.0x ; OS: Linux on x86_64 64bit"
+      archive:                         SWPM10SP37_3-20009701
+      checksum:                        190e360c10f84c8bacebf0de84c1ac3a82f9e7b542b0516261886534462c7836 
+      url:                             https://softwaredownloads.sap.com/file/0020000000384002023
+      download:                        true
+    - name:                            "Patch 2 for SOFTWARE UPDATE MANAGER 1.1 SP01 ; OS: Linux on x86_64 64bit"
+      archive:                         SUM11SP01_2-80006800
+      checksum:                        97385e1634a3a22aecfafb74327342c566dd9d12753f3125505d142a4e8a63c5 
+      url:                             https://softwaredownloads.sap.com/file/0020000000353242023
+      download:                        true
+    - name:                            "SAP HOST AGENT 7.22 SP60 ; OS: Linux on x86_64 64bit"
+      archive:                         SAPHOSTAGENT60_60-80004822
+      checksum:                        5b1e76f2617ca7c9154aaf6275a746f804bf4963d1a584fe3f9b66fb218f858d 
+      url:                             https://softwaredownloads.sap.com/file/0020000000406172023
+      download:                        true
+    - name:                            "Kernel Part I (754) ; OS: Linux on x86_64 64bit ; DB: Database independe"
+      archive:                         SAPEXE_100-80007612
+      checksum:                        5164944a8c3fafc58a0516795b3912e47889bcabdca46f38744be982fb392c26 
+      url:                             https://softwaredownloads.sap.com/file/0020000000185792023
+      download:                        true
+    - name:                            "Kernel Part II (754) ; OS: Linux on x86_64 64bit ; DB: SAP HANA database"
+      archive:                         SAPEXEDB_100-80007611
+      checksum:                        5040abcfff03d34706424c27188403337ee3dc53d5f633bbb97fdbcb2ef44fe1 
+      url:                             https://softwaredownloads.sap.com/file/0020000000185542023
+      download:                        true
+    - name:                            "SAP_BW 740: SP 0018"
+      archive:                          KW74018
+      checksum:                        680a1d8d3bbbe12529bde2fcab8fa5f3992e30a72212891bff37a0480d0e110e 
+      url:                             https://softwaredownloads.sap.com/file/0010000019714492017
+      download:                        true
+    - name:                            "SAP_BW 740: SP 0017"
+      archive:                         KW74017
+      checksum:                        6f9dc4921b8c38a304e18f489855da8849ada084fe2d35088149f4b546d2ca47 
+      url:                             https://softwaredownloads.sap.com/file/0010000018833072017
+      download:                        true
+    - name:                            "SAP_BW 740: SP 0016"
+      archive:                         KW74016
+      checksum:                        9f00a8adbeb35a901993ca5a012db85997441166d71302ccfdc3ea787ea04a36 
+      url:                             https://softwaredownloads.sap.com/file/0010000000669092016
+      download:                        true
+    - name:                            "SAP_BW 740: SP 0015"
+      archive:                         KW74015
+      checksum:                        7b53d366307e5b59c3bc73250d5fae6d7301923d170d3b6d74f77c37db564a82 
+      url:                             https://softwaredownloads.sap.com/file/0010000000064162016
+      download:                        true
+    - name:                            "SAP_BW 740: SP 0014"
+      archive:                         KW74014
+      checksum:                        253683836cf9a266ef10ba2ad6e68dcd94800e2d23a7628ff3829f9d3a94f360 
+      url:                             https://softwaredownloads.sap.com/file/0010000000064152016
+      download:                        true
+    - name:                            "SAP_BW 740: SP 0013"
+      archive:                         KW74013
+      checksum:                        41c43c0fc9fa4d1344dcd43570e9b74cfe5699a70f50ad6b14a24687e074c835 
+      url:                             https://softwaredownloads.sap.com/file/0010000000060222015
+      download:                        true
+    - name:                            "SAP_BW 740: SP 0012"
+      archive:                         KW74012
+      checksum:                        fe43e9aa9b693157121683cae68235be58925fa6cf1674cb85e75c2f21ecfd73 
+      url:                             https://softwaredownloads.sap.com/file/0010000000060212015
+      download:                        true
+    - name:                            "SAP_BW 740: SP 0011"
+      archive:                         KW74011
+      checksum:                        2a8157e301a590baa4a99d699bd352859fa8d681f1718356366b522c2a4b9f4e 
+      url:                             https://softwaredownloads.sap.com/file/0010000000060202015
+      download:                        true
+    - name:                            "SAP_BW 740: SP 0010"
+      archive:                         KW74010
+      checksum:                        2ffb07edcf72c874f1c0545462ea297b0b318ef752e7f6348cdb9e6d2ab157b4 
+      url:                             https://softwaredownloads.sap.com/file/0010000000060192015
+      download:                        true
+    - name:                            "SAP_BW 740: SP 0009"
+      archive:                         KW74009
+      checksum:                        3771920f148113c33b79eefed26a4e07022480adef3d36e78223e72064a6c4ca 
+      url:                             https://softwaredownloads.sap.com/file/0010000000071792014
+      download:                        true
+    - name:                            "SPAM/SAINT Update - Version 740/0084"
+      archive:                         KD74084
+      checksum:                        c401c6b81e05105fb7d12cc0bd0cbcedbad96021200cbb7ed05c453fff252c0e 
+      url:                             https://softwaredownloads.sap.com/file/0010000000152422023
+      download:                        true
+    - name:                            "SAP_BASIS 740: SP 0019"
+      archive:                         KB74019
+      checksum:                        98a157d8355be4c9b6e475565305f69cec6c69d1c2af87e8222a18de6eff5f73 
+      url:                             https://softwaredownloads.sap.com/file/0010000020366672017
+      download:                        true
+    - name:                            "SAP_BASIS 740: SP 0018"
+      archive:                         KB74018
+      checksum:                        b4220086114cb41361bee97f3aa2cf363ff491be000b4d60b8431bd91946697c 
+      url:                             https://softwaredownloads.sap.com/file/0010000019714482017
+      download:                        true
+    - name:                            "SAP_BASIS 740: SP 0017"
+      archive:                         KB74017
+      checksum:                        a0484127aae9816c2c4f81e25e164d42e60c027c111ecc2e9644f593d1e264a3 
+      url:                             https://softwaredownloads.sap.com/file/0010000015414202017
+      download:                        true
+    - name:                            "SAP_BASIS 740: SP 0016"
+      archive:                         KB74016
+      checksum:                        dc389164cf6086356eaf74a7399698ff5a141d6f7356bdb13a74944feed53066 
+      url:                             https://softwaredownloads.sap.com/file/0010000000669142016
+      download:                        true
+    - name:                            "SAP_BASIS 740: SP 0015"
+      archive:                         KB74015
+      checksum:                        372f966396008457cbe78fbd1257f6cfa80b8cb110a7e00115246fa2113d510b 
+      url:                             https://softwaredownloads.sap.com/file/0010000000064012016
+      download:                        true
+    - name:                            "SAP_BASIS 740: SP 0014"
+      archive:                         KB74014
+      checksum:                        650e1e1f2f11aba8ec7464ad9b6cf58787aa69097a6b01274edc65d9ffe45ab0 
+      url:                             https://softwaredownloads.sap.com/file/0010000000064002016
+      download:                        true
+    - name:                            "SAP_BASIS 740: SP 0013"
+      archive:                         KB74013
+      checksum:                        45538904a1aa978431ee90ba7a0f5b24aa7f785b4f32cd5fa24ce5d408149195 
+      url:                             https://softwaredownloads.sap.com/file/0010000000059892015
+      download:                        true
+    - name:                            "SAP_BASIS 740: SP 0012"
+      archive:                         KB74012
+      checksum:                        866500ecdb5c849db652ae9cb968edcf6d6d87c7b14a0cbcda42de8f39cc5ca3 
+      url:                             https://softwaredownloads.sap.com/file/0010000000059842015
+      download:                        true
+    - name:                            "SAP_BASIS 740: SP 0011"
+      archive:                         KB74011
+      checksum:                        c8711b5435ed6b920a2deff597d12a416a78fa8e639c4999cceda577346d1a17 
+      url:                             https://softwaredownloads.sap.com/file/0010000000059812015
+      download:                        true
+    - name:                            "SAP_BASIS 740: SP 0010"
+      archive:                         KB74010
+      checksum:                        01996fed2c2ef352f44703b890995ea4ca2aa7fc54e5aa3f60d706548faf7b43 
+      url:                             https://softwaredownloads.sap.com/file/0010000000059782015
+      download:                        true
+    - name:                            "SAP_BASIS 740: SP 0009"
+      archive:                         KB74009
+      checksum:                        c5c5d3d5d70db76a69611547df0f71a7df98f25030b1b19be0c75cc3386c931f 
+      url:                             https://softwaredownloads.sap.com/file/0010000000071422014
+      download:                        true
+    - name:                            "SAP_ABA 740: SP 0019"
+      archive:                         KA74019
+      checksum:                        55641513d5c69c0afd66bd2899c582e98e101f94f9b94c095b5db59b0602d77a 
+      url:                             https://softwaredownloads.sap.com/file/0010000020366652017
+      download:                        true
+    - name:                            "SAP_ABA 740: SP 0018"
+      archive:                         KA74018
+      checksum:                        78cd1ed53e6e30f289b8e607e236d436eb93e6a84bc558ef720f81e76dad5be7 
+      url:                             https://softwaredownloads.sap.com/file/0010000019714432017
+      download:                        true
+    - name:                            "SAP_ABA 740: SP 0017"
+      archive:                         KA74017
+      checksum:                        9e096fe0420b20fb820efb49a93d7f64e378519ca428da57b1393a3671fe26e7 
+      url:                             https://softwaredownloads.sap.com/file/0010000018833042017
+      download:                        true
+    - name:                            "SAP_ABA 740: SP 0016"
+      archive:                         KA74016
+      checksum:                        27d0d96b8e750b9a00847da147d58682f23c81af59614edd5298c120764df77f 
+      url:                             https://softwaredownloads.sap.com/file/0010000000669132016
+      download:                        true
+    - name:                            "SAP_ABA 740: SP 0015"
+      archive:                         KA74015
+      checksum:                        35921bda6b75523ed1608553615fe202528b835fc5d01a8fffa9f882ada607f3 
+      url:                             https://softwaredownloads.sap.com/file/0010000000063962016
+      download:                        true
+    - name:                            "SAP_ABA 740: SP 0014"
+      archive:                         KA74014
+      checksum:                        21ff60ad62b3cfbf0bc49c505a7069df42ccbb0159bf168ca40ac0d9e56ea2c4 
+      url:                             https://softwaredownloads.sap.com/file/0010000000063952016
+      download:                        true
+    - name:                            "SAP_ABA 740: SP 0013"
+      archive:                         KA74013
+      checksum:                        e03029f98d03b2b3b9bdbdd2db01283ac95d696cb4f9a6c2a3885f9980b42cd0 
+      url:                             https://softwaredownloads.sap.com/file/0010000000059432015
+      download:                        true
+
+    - name:                            "SAP_ABA 740: SP 0012"
+      archive:                         KA74012
+      checksum:                        a5634700534b9b5ea448bee0e46aeab1962875eb1056432c5659d4f3a881afed 
+      url:                             https://softwaredownloads.sap.com/file/0010000000059412015
+      download:                        true
+    - name:                            "SAP_ABA 740: SP 0011"
+      archive:                         KA74011
+      checksum:                        3da0a4fd39cd39728f74b73185ecf02773c49d12bda24a06ff01db0780a4f633 
+      url:                             https://softwaredownloads.sap.com/file/0010000000059392015
+      download:                        true
+    - name:                           "SAP_ABA 740: SP 0010"
+      archive:                         KA74010
+      checksum:                        8970db2bf15a1e77c66f3c0fee58df5c1413b6ad3e593473276aa1b8b0239b37 
+      url:                             https://softwaredownloads.sap.com/file/0010000000059382015
+      download:                        true
+    - name:                            "SAP_ABA 740: SP 0009"
+      archive:                         KA74009
+      checksum:                        ba4dd7024b41363f4f78f9314fbce10e9d993c20b1a8662ab8d8bb8947aea6c1 
+      url:                             https://softwaredownloads.sap.com/file/0010000000071352014
+      download:                        true
+
+    - name:                            "SAP_UI 754: SP 0012"
+      archive:                         K-75412INSAPUI
+      checksum:                        d29f03429178db7d2fbd923c5776df12cf219062274fc152beaf881baefbb667 
+      url:                             https://softwaredownloads.sap.com/file/0010000000289022023
+      download:                        true
+    - name:                            "SAP_UI 754: SP 0011"
+      archive:                         K-75411INSAPUI
+      checksum:                        cf62014f3a864dad00e1e962167c2239afad85510384662f5202cb196c63cc62 
+      url:                             https://softwaredownloads.sap.com/file/0010000001058842022
+      download:                        true
+    - name:                            "SAP_UI 754: SP 0010"
+      archive:                     K-75410INSAPUI
+      checksum:                        5c159481c2c68b342ae72fc08ee77047852d32c83a153f8a4f24e7f3a352538b
+      url:                             https://softwaredownloads.sap.com/file/0010000000689632022
+      download:                        true
+    - name:                            "SAP_UI 754: SP 0009"
+      archive:                         K-75409INSAPUI
+      checksum:                        4199fd610e3b4bbe0c5cbb33b77c55500114883c322bfb93b90a0b6c02880529
+      url:                             https://softwaredownloads.sap.com/file/0010000000299862022
+      download:                        true
+    - name:                            "SAP_UI 754: SP 0008"
+      archive:                         K-75408INSAPUI
+      checksum:                        4d990a8c4136d2b0d3af2d78f8f8239957c8d8def649e8453e06f1161c7870dd
+      url:                             https://softwaredownloads.sap.com/file/0010000001264832021
+      download:                        true
+    - name:                            "SAP_UI 754: SP 0007"
+      archive:                         K-75407INSAPUI
+      checksum:                        029ae0aab2aefca59da36cf8d9bbc30bc693bca810c7c361c2f07d1028b9cfdb
+      url:                             https://softwaredownloads.sap.com/file/0010000000771642021
+      download:                        true
+    - name:                            "SAP_UI 754: SP 0006"
+      archive:                         K-75406INSAPUI
+      checksum:                        9ebca229381c5b56aef1641351d0dddde7e8ca547a71ff6efc787fa3f0180c1b
+      url:                             https://softwaredownloads.sap.com/file/0010000000325802021
+      download:                        true
+    - name:                            "SAP_UI 754: SP 0005"
+      archive:                         K-75405INSAPUI
+      checksum:                        a493ff19b33d555960d10e53657f5803a21bdf1c7ca3b91345da24afa5671e6e
+      url:                             https://softwaredownloads.sap.com/file/0010000001523772020
+      download:                        true
+    - name:                            "SAP_UI 754: SP 0004"
+      archive:                         K-75404INSAPUI
+      checksum:                        260318324bf29dff72a59cac8ce4d607803ba27abfcfd30e999b9b0bc373bb9c
+      url:                             https://softwaredownloads.sap.com/file/0010000000876572020
+      download:                        true
+    - name:                            "SAP_UI 754: SP 0003"
+      archive:                         K-75403INSAPUI
+      checksum:                        0a7640a5a2174b0dee45810466473932265f67bf6b0aa6e355930315513379c3
+      url:                             https://softwaredownloads.sap.com/file/0010000000380882020
+      download:                        true
+
+	  
+...
