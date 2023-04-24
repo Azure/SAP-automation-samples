@@ -41,16 +41,16 @@ materials:
 
     # kernel components
     # Kernel
-    - name:                            "Kernel Part I (785); OS: Linux on x86_64 64bit ; DB: Database independent"
-      archive:                         SAPEXE_100-80005374.SAR
-      checksum:                        31002d86645b5ed2f03a5ee5508083939b0e219116e2a7a126c3930beb642888
-      url:                             https://softwaredownloads.sap.com/file/0020000000249732022
+    - name:                            "Support Package SAP KERNEL 7.89 64-BIT UNICODE ; DB: Database independent"
+      archive:                         SAPEXE_100-70006642.SAR
+      checksum:                        297dc6b2563f00ced5586bc9007afee29037071ac481398c0f6a0d51c5f1df19
+      url:                             https://softwaredownloads.sap.com/file/0020000000254052023
       path:                            download_basket
 
-    - name:                            "Kernel Part II (785); OS: Linux on x86_64 64bit ; DB: SAP HANA database"
-      archive:                         SAPEXEDB_100-80005373.SAR
-      checksum:                        05a16e9ba5c6c882972fc37ee09c675ca5c06e02d56ea3cd36e39aa0bb809b37
-      url:                             https://softwaredownloads.sap.com/file/0020000000250002022
+    - name:                            "Support Package SAP KERNEL 7.89 64-BIT UNICODE Linux on x86_64 64bit SAP HANA database"
+      archive:                         SAPEXEDB_100-70006641.SAR
+      checksum:                        19c7ed6a502aa7b2ac0b2cef0ff6086ad626679004eb0492887d88b5a4f374d7
+      url:                             https://softwaredownloads.sap.com/file/0020000000254022023
       path:                            download_basket
 
     # SAP Host Agent
