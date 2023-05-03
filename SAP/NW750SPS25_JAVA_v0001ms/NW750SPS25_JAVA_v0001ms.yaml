@@ -30,7 +30,7 @@ materials:
   media:
     # DB Export
     - name:             "NW 7.5 JAVA Installation Export"
-      archive: 	        51055106.ZIP
+      archive:          51055106.ZIP
       checksum:         6cf18b4ab1d1d48809e3103810ccf3f0c73ca4bce6b92b6b187aff27a044d21b
       extract:          true
       extractDir:       CD_EXPORT
