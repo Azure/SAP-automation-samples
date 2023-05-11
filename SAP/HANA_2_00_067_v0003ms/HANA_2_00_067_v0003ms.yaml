@@ -35,21 +35,21 @@ materials:
       path:         download_basket
       url:          https://softwaredownloads.sap.com/file/0020000000563052023
 
-    - name:         "SAP HANA AFL Rev 67.0 only for HANA 2.0 Rev 67"
-      archive:      IMDB_AFL20_067_0-80001894.SAR
-      checksum:     1ed2ce43f54688a3fc530175139c89fc7c555500f329b2c9e76d5098a4ca8bac
+    - name:         "SAP HANA AFL Rev 67.100 only for HANA 2.0 Rev 67.01"
+      archive:      IMDB_AFL20_067P_101-80001894.SAR
+      checksum:     c151edb352fc54f498e5bb1f1a701269bb57154370272706f8f025d99858b0ca
       extract:      true
       extractDir:   CD_HDBSERVER/COMPONENTS
       creates:      COMPONENTS/SAP_HANA_AFL/packages
-      url:          https://softwaredownloads.sap.com/file/0020000000317552023
+      url:          https://softwaredownloads.sap.com/file/0020000000570252023
 
-    - name:         "LCAPPS for HANA 2.0 Rev 67 Build 101.09 PL 001"
-      archive:      IMDB_LCAPPS_2067_0-20010426.SAR
-      checksum:     b6a624df859d1e0af6abc6d81e1d5af6ad6c4a8e9e7347f80bad8f566e2be6b9
+    - name:         "LCAPPS for HANA 2.0 Rev 67.01 Build 101.09 PL 006"
+      archive:      IMDB_LCAPPS_2067P_100-20010426.SAR
+      checksum:     b36277dbc17cb4d43810a6342a7d22801717b1c4eb83f88157482baf323d460e
       extract:      true
       extractDir:   CD_HDBSERVER/COMPONENTS
       creates:      COMPONENTS/SAP_HANA_LCAPPS/packages
-      url:          https://softwaredownloads.sap.com/file/0020000000317442023
+      url:          https://softwaredownloads.sap.com/file/0020000000563002023
 
     - name:         "VCH AFL 2021 Rev 67.1 only for HANA 2.0 Rev 67"
       archive:      VCH202100_2067_1-70006349.SAR
