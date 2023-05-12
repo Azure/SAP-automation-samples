@@ -924,7 +924,7 @@ materials:
       url: "https://softwaredownloads.sap.com/file/0010000001467632021"
       download: false
 
-    - name: "Attribute Change Package 35 for SAP_HR 608"
+    - name: "Attribute Change Package 36 for SAP_HR 608"
       archive: "SAP_HR608.SAR"
       url: "https://softwaredownloads.sap.com/file/0010000000249512014"
       download: false
