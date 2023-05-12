@@ -51,13 +51,13 @@ materials:
       creates:      COMPONENTS/SAP_HANA_LCAPPS/packages
       url:          https://softwaredownloads.sap.com/file/0020000000563002023
 
-    - name:         "VCH AFL 2021 Rev 67.1 only for HANA 2.0 Rev 67"
-      archive:      VCH202100_2067_1-70006349.SAR
-      checksum:     b37db204604e44683523e8f99c1c4404cd058b11b61e0ece94b4da66ef636996
+    - name:         "VCH AFL 2021 Rev 67.100 only for HANA 2.0 Rev 67.01"
+      archive:      VCH202100_2067P_100-70006349.SAR
+      checksum:     65305242f8515feef5ad31329ff405e86b4162d3f7830a1134829350a51c93c4
       extract:      true
       extractDir:   CD_HDBSERVER/COMPONENTS
       creates:      COMPONENTS/VCH_AFL_2021/packages
-      url:          https://softwaredownloads.sap.com/file/0020000000380812023
+      url:          https://softwaredownloads.sap.com/file/0020000000562902023
 
     - name:         "SAP HOST AGENT 7.22 SP56"
       archive:      SAPHOSTAGENT56_56-80004822.SAR
