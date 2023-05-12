@@ -25,8 +25,8 @@ materials:
       path:         download_basket
       url:          https://softwaredownloads.sap.com/file/0020000000919882022
 
-    # v2_00_067 Revision 2.00.067.0 (SPS06) for HANA DB 2.0
-    - name:         "HANA Server"
+    # HANA Server data, please update all the 4 files whenever you update the HANA Server
+    - name:         "Revision 2.00.067.1 (SPS06) for HANA DB 2.0"
       archive:      IMDB_SERVER20_067_1-80002031.SAR
       checksum:     c4ffa0b9f0b4500015c6b8ad0cd2caf170d8492161eb767ce56e006b515a363f
       extract:      true
@@ -59,6 +59,7 @@ materials:
       creates:      COMPONENTS/VCH_AFL_2021/packages
       url:          https://softwaredownloads.sap.com/file/0020000000562902023
 
+    # Host Agent 7.22
     - name:         "SAP HOST AGENT 7.22 SP56"
       archive:      SAPHOSTAGENT56_56-80004822.SAR
       checksum:     9bd51d95caae86fdb33cb74ae8e478b7689f7321bb20058d5d27143ac54566c1

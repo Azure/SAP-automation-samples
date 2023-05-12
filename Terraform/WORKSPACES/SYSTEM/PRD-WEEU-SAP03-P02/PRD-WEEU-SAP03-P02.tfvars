@@ -336,10 +336,10 @@ application_server_zones = ["3"]
 #app_tier_authentication_type = ""
 
 # application_server_no_ppg defines the that the application server virtual machines will not be placed in a proximity placement group
-#application_server_no_ppg = true
+#application_server_use_ppg = true
 
 # application_server_no_avset defines the that the application server virtual machines will not be placed in an availability set
-#application_server_no_avset = true
+#application_server_use_avset = true
 
 # application_server_tags, if defined provides the tags to be associated to the application servers
 #application_server_tags = {}
@@ -388,10 +388,10 @@ webdispatcher_server_count = 0
 #webdispatcher_server_sku = ""
 
 # webdispatcher_server_no_ppg defines the that the Web dispatcher virtual machines will not be placed in a proximity placement group
-#webdispatcher_server_no_ppg = true
+webdispatcher_server_use_ppg = true
 
 #webdispatcher_server_no_avset defines the that the Web dispatcher virtual machines will not be placed in an availability set
-#webdispatcher_server_no_avset = true
+webdispatcher_server_use_avset = true
 
 # webdispatcher_server_tags, if defined provides the tags to be associated to the web dispatchers
 #webdispatcher_server_tags = {}

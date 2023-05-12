@@ -1,38 +1,43 @@
 {
     "availabilityset_names": {
         "app": [
-            "app-avset"
+            "z1_app-avset",
+            "z2_app-avset"
         ],
         "db": [
-            "db-avset"
+            "z1_db-avset",
+            "z2_db-avset"
         ],
         "scs": [
-            "scs-avset"
+            "z1_scs-avset",
+            "z2_scs-avset"
         ],
         "web": [
-            "web-avset"
+            "z1_web-avset",
+            "z2_web-avset"
         ]
     },
     "keyvault_names": {
         "DEPLOYER": {
-            "private_access": "DEVWEEUprvtF6F",
-            "user_access": "DEVWEEUuserF6F"
+            "private_access": "DEVWEEUprvt86D",
+            "user_access": "DEVWEEUuser86D"
         },
         "LIBRARY": {
-            "private_access": "DEVWEEUSAPLIBprvtF6F",
-            "user_access": "DEVWEEUSAPLIBuserF6F"
+            "private_access": "DEVWEEUSAPLIBprvt86D",
+            "user_access": "DEVWEEUSAPLIBuser86D"
         },
         "SDU": {
-            "private_access": "DEVWEEUSAP01X00pF6F",
-            "user_access": "DEVWEEUSAP01X00uF6F"
+            "private_access": "DEVWEEUSAP01X00p86D",
+            "user_access": "DEVWEEUSAP01X00u86D"
         },
         "WORKLOAD_ZONE": {
-            "private_access": "DEVWEEUSAP01prvtF6F",
-            "user_access": "DEVWEEUSAP01userF6F"
+            "private_access": "DEVWEEUSAP01prvt86D",
+            "user_access": "DEVWEEUSAP01user86D"
         }
     },
     "ppg_names": [
-        "DEV-WEEU-SAP01-X00-ppg"
+        "-z1-ppg",
+        "-z2-ppg"
     ],
     "prefix": {
         "DEPLOYER": "DEV-WEEU-",
@@ -50,10 +55,12 @@
         "app_alb": "",
         "app_asg": "",
         "app_avset": "",
+        "app_service_plan": "",
         "app_subnet": "",
         "app_subnet_nsg": "",
         "bastion_host": "",
         "bastion_pip": "",
+        "cluster_disk": "",
         "db_alb": "",
         "db_alb_bepool": "",
         "db_alb_feip": "",
@@ -61,6 +68,7 @@
         "db_alb_rule": "",
         "db_asg": "",
         "db_avset": "",
+        "db_clst_feip": "",
         "db_nic": "",
         "db_subnet": "",
         "db_subnet_nsg": "",
@@ -81,6 +89,7 @@
         "firewall_rule_app": "",
         "firewall_rule_db": "",
         "fw_route": "",
+        "hana_avg": "",
         "hanadata": "",
         "hanalog": "",
         "hanashared": "",
@@ -172,13 +181,15 @@
         "app_subnet_nsg": "appSubnet-nsg",
         "bastion_host": "bastion-host",
         "bastion_pip": "bastion-pip",
+        "cluster_disk": "cluster-disks",
         "db_alb": "db-alb",
         "db_alb_bepool": "dbAlb-bePool",
         "db_alb_feip": "dbAlb-feip",
         "db_alb_hp": "dbAlb-hp",
-        "db_alb_rule": "dbAlb-rule_",
+        "db_alb_rule": "dbAlb-rule",
         "db_asg": "db-asg",
         "db_avset": "db-avset",
+        "db_clst_feip": "dbClst-feip",
         "db_nic": "-db-nic",
         "db_subnet": "db-subnet",
         "db_subnet_nsg": "dbSubnet-nsg",
@@ -200,6 +211,7 @@
         "firewall_rule_app": "firewall-rule-app",
         "firewall_rule_db": "firewall-rule-db",
         "fw_route": "firewall-route",
+        "hana_avg": "hana-avg",
         "hanadata": "hanadata",
         "hanalog": "hanalog",
         "hanashared": "hanashared",
@@ -207,8 +219,8 @@
         "install_volume_smb": "install-smb",
         "iscsi_subnet": "iscsi-subnet",
         "iscsi_subnet_nsg": "iscsiSubnet-nsg",
-        "keyvault_private_link": "-keyvault-privatelink",
-        "keyvault_private_svc": "-keyvault-privateservice",
+        "keyvault_private_link": "-keyvault-private-endpoint",
+        "keyvault_private_svc": "-keyvault-private-service",
         "kv": "",
         "library_rg": "-SAP_LIBRARY",
         "library_state": "_SAP-LIBRARY.terraform.tfstate",
@@ -241,20 +253,20 @@
         "scs_scs_rule": "scsScs-rule",
         "sdu_rg": "",
         "storage_nic": "-storage-nic",
-        "storage_private_link_diag": "-diag-storage-privatelink",
-        "storage_private_link_install": "-install-storage-privatelink",
-        "storage_private_link_sap": "-sap-storage-privatelink",
-        "storage_private_link_sapmnt": "-sapmnt-storage-privatelink",
-        "storage_private_link_tf": "-tf-storage-privatelink",
-        "storage_private_link_transport": "-transport-storage-privatelink",
-        "storage_private_link_witness": "-witness-storage-privatelink",
-        "storage_private_svc_diag": "-diag-storage-privateservice",
-        "storage_private_svc_install": "-install-storage-privateservice",
-        "storage_private_svc_sap": "-sap-storage-privateservice",
-        "storage_private_svc_sapmnt": "-sapmnt-storage-privateservice",
-        "storage_private_svc_tf": "-tf-storage-privateservice",
-        "storage_private_svc_transport": "-transport-storage-privateservice",
-        "storage_private_svc_witness": "-witness-storage-privateservice",
+        "storage_private_link_diag": "-diag-storage-private-endpoint",
+        "storage_private_link_install": "-install-storage-private-endpoint",
+        "storage_private_link_sap": "-sap-storage-private-endpoint",
+        "storage_private_link_sapmnt": "-sapmnt-storage-private-endpoint",
+        "storage_private_link_tf": "-tf-storage-private-endpoint",
+        "storage_private_link_transport": "-transport-storage-private-endpoint",
+        "storage_private_link_witness": "-witness-storage-private-endpoint",
+        "storage_private_svc_diag": "-diag-storage-private-service",
+        "storage_private_svc_install": "-install-storage-private-service",
+        "storage_private_svc_sap": "-sap-storage-private-service",
+        "storage_private_svc_sapmnt": "-sapmnt-storage-private-service",
+        "storage_private_svc_tf": "-tf-storage-private-service",
+        "storage_private_svc_transport": "-transport-storage-private-service",
+        "storage_private_svc_witness": "-witness-storage-private-service",
         "storage_subnet": "_storage-subnet",
         "storage_subnet_nsg": "_storageSubnet-nsg",
         "tfstate": "tfstate",
@@ -279,82 +291,106 @@
     },
     "separator": "_",
     "storageaccount_names": {
-        "DEPLOYER": "devweeudiagf6f",
+        "DEPLOYER": "devweeudiag86d",
         "LIBRARY": {
-            "library_storageaccount_name": "devweeusaplibf6f",
-            "terraformstate_storageaccount_name": "devweeutfstatef6f"
+            "library_storageaccount_name": "devweeusaplib86d",
+            "terraformstate_storageaccount_name": "devweeutfstate86d"
         },
-        "SDU": "devweeusap01diagf6f",
+        "SDU": "devweeusap01diag86d",
         "WORKLOAD_ZONE": {
-            "landscape_shared_transport_storage_account_name": "devweeusap01sharedf6f",
-            "landscape_storageaccount_name": "devweeusap01diagf6f",
-            "witness_storageaccount_name": "devweeusap01witnessf6f"
+            "landscape_shared_install_storage_account_name": "devweeusap01install86d",
+            "landscape_shared_transport_storage_account_name": "devweeusap01transport86d",
+            "landscape_storageaccount_name": "devweeusap01diag86d",
+            "witness_storageaccount_name": "devweeusap01witness86d"
         }
     },
     "virtualmachine_names": {
-        "ANCHOR_COMPUTERNAME": [],
-        "ANCHOR_SECONDARY_DNSNAME": [],
-        "ANCHOR_VMNAME": [],
+        "ANCHOR_COMPUTERNAME": [
+            "x00anchorz101l86d",
+            "x00anchorz202l86d"
+        ],
+        "ANCHOR_SECONDARY_DNSNAME": [
+            "x00anchorz101l86d",
+            "x00anchorz202l86d"
+        ],
+        "ANCHOR_VMNAME": [
+            "x00anchor_z1_01l86d",
+            "x00anchor_z2_02l86d"
+        ],
         "ANYDB_COMPUTERNAME": [
-            "x00db00l0f6f"
+            "x00db01l086d",
+            "x00db01l186d"
         ],
         "ANYDB_SECONDARY_DNSNAME": [
-            "x00dhdb00l0f6f",
-            "x00dhdb00l1f6f"
+            "vx00dhdb01l086",
+            "vx00dhdb01l186"
         ],
         "ANYDB_VMNAME": [
-            "x00db00l0f6f"
+            "x00db01l086d",
+            "x00db01l186d"
         ],
         "APP_COMPUTERNAME": [
-            "x00app00lf6f",
-            "x00app01lf6f"
+            "x00app01l86d",
+            "x00app02l86d"
         ],
         "APP_SECONDARY_DNSNAME": [
-            "x00app00lf6f",
-            "x00app01lf6f"
+            "vx00app01l86",
+            "vx00app02l86"
         ],
         "APP_VMNAME": [
-            "x00app00lf6f",
-            "x00app01lf6f"
+            "x00app01l86d",
+            "x00app02l86d"
         ],
         "DEPLOYER": [
-            "devweeudeploy00"
+            "devweeudeploy01"
         ],
         "HANA_COMPUTERNAME": [
-            "x00dhdb00l0f6"
+            "x00dhdb01l086",
+            "x00dhdb01l186"
         ],
         "HANA_SECONDARY_DNSNAME": [
-            "x00dhdb00l0f6"
+            "vx00dhdb01l086",
+            "vx00dhdb01l186"
         ],
         "HANA_VMNAME": [
-            "x00dhdb00l0f6f"
+            "x00dhdb01l086d",
+            "x00dhdb01l186d"
         ],
         "ISCSI_COMPUTERNAME": [
             "devsap01weeuiscsi00"
         ],
         "OBSERVER_COMPUTERNAME": [
-            "x00observer00lf6f"
+            "x00observer01l86d",
+            "x00observer02l86d"
         ],
         "OBSERVER_VMNAME": [
-            "x00observer00lf6f"
+            "x00observer01l86d",
+            "x00observer02l86d"
         ],
         "SCS_COMPUTERNAME": [
-            "x00scs00lf6f"
+            "x00scs01l86d",
+            "x00scs02l86d"
         ],
         "SCS_SECONDARY_DNSNAME": [
-            "x00scs00lf6f"
+            "vx00scs01l86",
+            "vx00scs02l86"
         ],
         "SCS_VMNAME": [
-            "x00scs00lf6f"
+            "x00scs01l86d",
+            "x00scs02l86d"
         ],
         "WEB_COMPUTERNAME": [
-            "x00web00lf6f"
+            "x00web01l86d",
+            "x00web02l86d"
         ],
         "WEB_SECONDARY_DNSNAME": [
-            "x00web00lf6f"
+            "vw01web01l86",
+            "vw01web02l86"
         ],
         "WEB_VMNAME": [
-            "x00web00lf6f"
-        ]
+            "w01web01l86d",
+            "w01web02l86d"
+        ],
+        "WORKLOAD_VMNAME": []
     }
 }
