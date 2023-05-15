@@ -945,9 +945,9 @@ materials:
       download:     false
       url:          https://softwaredownloads.sap.com/file/0010000001496942020
 
-    - name:         "Attribute Change Package 33 for SAP_HR 608"
+    - name:         "Attribute Change Package 36 for SAP_HR 608"
       archive:      SAP_HR608.SAR
-      checksum:     26ced531487527864dc223d7f8e9c1574803d38519614bae9cdd63cdda9e6e82
+      checksum:     5156fa6f34989662311371aab548e93878f134e099cd65f80f722131ffbfaf48
       download:     false
       url:          https://softwaredownloads.sap.com/file/0010000000249512014
 
