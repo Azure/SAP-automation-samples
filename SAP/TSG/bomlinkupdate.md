@@ -1,16 +1,9 @@
 # Updating BOM Links
 
-1.  [Questions](#questions)
 1.  [Key points about folder and file structure](#key-points-about-folder-and-file-structure)
 1.  [Procedure](#procedure)
 1.  [How to get the updated BOM link](#how-to-get-the-updated-bom-link)
-
-## Questions
-1.  Are the folder names and the yaml file names to be same?
-1.  Are the version numbers of the format ```v<versionnumber>ms```?
-1.  What kind of link is the link to the file. What should I call it? link to SAP package?
-1.  Can I make a reference to the BOM validator pipeline even though it is not visible outside microsoft but the samples repo is? 
-1.  Which link should be used as the updated link? Should it be the latest one for Linux on x86_64 64bit? If so then why did we not update one of the packages today? Was it because the previous version was still available to download? So as long as the previous version is available to download, we will not update the bom link is it?
+1.  [FAQs](#questions)
 
 ## Key points about folder and file structure
 1.  The folder structure for a BOM is such that the BOM file is contained within a folder that is named with the same name as the BOM file (excluding the file extension).
@@ -29,7 +22,8 @@
 1.  The overall goal is to update BOM files that reference an outdated link.
     This could be a link to a SAP package, SWPM module etc.
     We should also preserve the earlier versions of the file which contain the outdated links for book-keeping purposes.
-    For this reason we need to move the outdated files to the archives folder.
+    For this reason we need to move the outdated files to the archives folder. 
+    For updating SWPM and SUM packages make sure to check [this](#procedure-for-swpm-and-sum-files) out once.
 1.  Get the new BOM link.
     Click [here](#how-to-get-the-updated-bom-link) to check the procedure for procuring the updated link.
 1.  Find the files where the outdated BOM link has been referred to. 
@@ -42,25 +36,44 @@
 1.  The files also contain the version number and the file name mentioned within them as shown [here](#key-points-about-folder-and-file-structure). 
     The version number and the file name needs to be updated inside the file too.
 
-## How to identify that a BOM link has expired
+## Procedure for SWPM and SUM files
 
-When a BOM link expires, the BOM validator pipeline will fail. If we check the failure logs, we can figure out which package has expired. All the files where the outdated package has been referred to should then be updated with the new link.
+1.  For the SWPM and the SUM files, the folder and file name has the version number ```latest``` appended to the file and folder name. 
+    Example: SUM20SP16_latest.yaml is contained within SUM20SP16_latest folder.
+1.  When we copy this folder to the archives directory, we remove the ```latest``` from the file and folder name and replace it with a version number that is greater than the version number of the latest entry of that BOM file in the archives directory.
+    For example, Lets say the last BOM directory for SUM20SP16 present in the archives folder is SUM20SP16_v0006.
+    This means when we copy SUM20SP16_latest to the archives folder, we will rename it to SUM20SP16_v0007 and the BOM file within it will be renamed as SUM20SP16_v0007.yaml.
+1. Once we have copied the SUM / SWPM directory into the archives folder maintining the constraints mentioned in the preceding points, we can simply update the outdated link in the SUM20SP16_latest.yaml in the SUM20SP16_latest folder (The one present outside the archives directory).
 
 ## How to get the updated BOM link
 
 1.  Logon to [SAP Support Portal](https://launchpad.support.sap.com/#/softwarecenter)
 1.  Go to Software Downloads
 1.  Seach for the file by the archive name of the file excluding the version.
-    For Example for SUM20SP16_6-80002456.SAR, search with SUM20SP16 XXX(What is this called? Package name?).
-    XXX(This can be obtained from the BOM validator pipeline failure) 
+    For Example for SUM20SP16_6-80002456.SAR, search with the package name SUM20SP16.
+1.  If there is a later version for this package, that should be the new link for the package.
+1.  Make sure that the link for the correct target OS is used. 
 
-## List of dependent packages
+## Knowledge Base of dependent packages from previous BOM link updates
+
+|Is installer component  |  Archive name (Example) | Dependent Archive name examples |
+|------------------------|-------------------------|------|
+| No          |  IMDB_SERVER20_067_1-80002031.SAR | IMDB_AFL20_067_0-80001894.SAR, IMDB_LCAPPS_2067_0-20010426.SAR, VCH202100_2067_1-70006349.SAR, |
+| No          |  SAP_HR608.SAR  |  None |
+| Yes         | SUM20SP16_6-80002456.SAR | None |
 
 
-|Is installer component  |  Archive name (Example) | Dependent Archive name examples | Search links for relevant packages| Potential regressions | List of files to be updated
-|------------------------|-------------------------|------|------|-----|-----|
-| No          |  IMDB_SERVER20_067_1-80002031.SAR | HANA Server | IMDB_AFL20_067_0-80001894.SAR, IMDB_LCAPPS_2067_0-20010426.SAR, VCH202100_2067_1-70006349.SAR, | None | List of files |
-| No          |  SAP_HR  |  Dependent Packages | Search Links |  None  | List of files to be updated
+## FAQs
+1.  Are the folder names and the yaml file names to be same?
+    * Yes the folder names and the BOM files contained within them have the same name excluding the extension for the file name.
+1.  Are the version numbers of the format ```v<versionnumber>ms```?
+    * Yes the version numbers should be of the format ```v<versionnumber>ms```.
+    For example, v0007ms is a valid version.
+    For SWPM and SUM BOMs, the version number ```latest``` is used outside of the archives folder.
+    When a SWPM / SUM BOM is moved to archives, it is given a version number depending on what the last version number for that BOM was in the archives directory.
+1.  How to get the updated link for a package?
+    * Check [this](#how-to-get-the-updated-bom-link).
+
 
 
 
