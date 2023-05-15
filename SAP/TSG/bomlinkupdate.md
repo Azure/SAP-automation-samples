@@ -44,6 +44,18 @@
     For example, Lets say the last BOM directory for SUM20SP16 present in the archives folder is SUM20SP16_v0006.
     This means when we copy SUM20SP16_latest to the archives folder, we will rename it to SUM20SP16_v0007 and the BOM file within it will be renamed as SUM20SP16_v0007.yaml.
 1. Once we have copied the SUM / SWPM directory into the archives folder maintining the constraints mentioned in the preceding points, we can simply update the outdated link in the SUM20SP16_latest.yaml in the SUM20SP16_latest folder (The one present outside the archives directory).
+1. Increase the version number present in the SUM / SWPM BOM file present in this format:
+    ```yaml
+    name:    'SWPM10SP36'
+    target:  'SWPM10SP36'
+    version: 004
+    ```
+    The version number here will get updated to 005 and this will look like this after modification:
+    ```yaml
+    name:    'SWPM10SP36'
+    target:  'SWPM10SP36'
+    version: 005
+    ```
 
 ## How to get the updated BOM link
 
