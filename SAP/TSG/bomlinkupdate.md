@@ -7,10 +7,10 @@
 
 ## Key points about folder and file structure
 1.  The folder structure for a BOM is such that the BOM file is contained within a folder that is named with the same name as the BOM file (excluding the file extension).
-1.  For ex: HANA_2_00_067_v0003.yaml is contained within a folder named HANA_2_00_067_v0003.
+1.  For ex: HANA_2_00_067_v0003ms.yaml is contained within a folder named HANA_2_00_067_v0003ms.
 1.  The folder and file for a particular BOM contains the version number appended to the end of the name. 
-    In the example provided in the preceding point, the version number is v0003.
-1.  The BOM file (in this case HANA_2_00_067_v0003.yaml) contains the file name and the version number mentioned at the very beginning of the file. Ex:
+    In the example provided in the preceding point, the version number is v0003ms.
+1.  The BOM file (in this case HANA_2_00_067_v0003ms.yaml) contains the file name and the version number mentioned at the very beginning of the file. Ex:
     ```yaml
     name:               'HANA_2_00_067_v0003ms'
     target:             'HANA 2.0'
@@ -29,12 +29,13 @@
 1.  Find the files where the outdated BOM link has been referred to. 
     Let's say there are two files which reference the outdated link - NAME_01_00_v0005ms.yaml, NAME2_02_22_v0004ms.yaml that are present in folders named NAME_01_00_v0005ms and NAME2_02_22_v0004ms.
     Note that each folder and file will have a certain version number that has been appended at the end of the folder name.
-    The version is of the format ```v<versionnumber>ms``` as in NAME_01_00_v0005ms. XXX(What other files can be )
+    The version is of the format ```v<versionnumber>ms``` as in NAME_01_00_v0005ms.
 1.  The folders NAME_01_00_v0005ms, NAME2_02_22_v0004ms need to be copied into to the archives folder (This is done to preserve the previous versions of the BOM file).
 1.  Now update the name of the folders and the BOM file contained in the folder so that the version number present at the end of the folder name  and the file name is updated. 
     In this case, the folder names should get updated to NAME_01_00_v0006ms and NAME2_02_22_v0005ms and the file names should get updated to NAME_01_00_v0006ms.yaml NAME2_02_22_v0005ms.yaml.
 1.  The files also contain the version number and the file name mentioned within them as shown [here](#key-points-about-folder-and-file-structure). 
     The version number and the file name needs to be updated inside the file too.
+    The file name has the version number appended to it and therefore requires an update.
 
 ## Procedure for SWPM and SUM files
 
@@ -46,15 +47,15 @@
 1. Once we have copied the SUM / SWPM directory into the archives folder maintining the constraints mentioned in the preceding points, we can simply update the outdated link in the SUM20SP16_latest.yaml in the SUM20SP16_latest folder (The one present outside the archives directory).
 1. Increase the version number present in the SUM / SWPM BOM file present in this format:
     ```yaml
-    name:    'SWPM10SP36'
-    target:  'SWPM10SP36'
-    version: 004
+    name:    'SUM20SP16'
+    target:  'SUM20SP16'
+    version: 007
     ```
-    The version number here will get updated to 005 and this will look like this after modification:
+    The version number here will get updated to 008 and this will look like this after modification:
     ```yaml
-    name:    'SWPM10SP36'
-    target:  'SWPM10SP36'
-    version: 005
+    name:    'SUM20SP16'
+    target:  'SUM20SP16'
+    version: 008
     ```
 
 ## How to get the updated BOM link
