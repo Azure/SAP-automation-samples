@@ -10,8 +10,8 @@
 
 ## Key points about folder and file structure
 1. The BOM folder structure follows a specific pattern: The BOM file is placed inside a folder with the same name as the BOM file (excluding the file extension).
-   For example, the file HANA_2_00_067_v0003.yaml is contained within a folder named HANA_2_00_067_v0003.
-2. Each BOM folder and file includes a version number at the end of its name. In the previous example, the version number is v0003.
+   For example, the file HANA_2_00_067_v0003ms.yaml is contained within a folder named HANA_2_00_067_v0003ms.
+2. Each BOM folder and file includes a version number at the end of its name. In the previous example, the version number is v0003ms.
 3. The BOM file itself contains the file name and version number at the beginning of the file. For instance:
    ```yaml
    name: 'HANA_2_00_067_v0003ms'
@@ -41,6 +41,19 @@ For example, let's assume that the latest BOM directory for SUM20SP16 in the arc
 3. Copy the SUM/SWPM directory to the archives folder, maintaining the constraints mentioned earlier. Rename the copied directory from SUM20SP16_latest to SUM20SP16_v0007, and rename the BOM file within it as SUM20SP16_v0007.yaml.
 
 4. Once the SUM/SWPM directory is copied to the archives folder, update the outdated link in the SUM20SP16_latest.yaml file located in the SUM20SP16_latest folder (outside the archives directory).
+
+1. The SUM / SWPM BOM file also has a version number mentioned within it. Increase the version number present in the SUM / SWPM BOM file present in this format:
+    ```yaml
+    name:    'SUM20SP16'
+    target:  'SUM20SP16'
+    version: 007
+    ```
+    The version number here will get updated to 008 and this will look like this after modification:
+    ```yaml
+    name:    'SUM20SP16'
+    target:  'SUM20SP16'
+    version: 008
+    ```
 
 ## How to Get the Updated BOM Link
 
