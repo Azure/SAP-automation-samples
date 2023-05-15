@@ -21,7 +21,7 @@
 
 1.  The overall goal is to update BOM files that reference an outdated link.
     This could be a link to a SAP package, SWPM module etc.
-    We should also preserve the earlier versions of the file which contain the outdated links for book-keeping purposes.
+    We should also preserve the earlier versions of the file which contain the outdated links.
     For this reason we need to move the outdated files to the archives folder. 
     For updating SWPM and SUM packages make sure to check [this](#procedure-for-swpm-and-sum-files) out once.
 1.  Get the new BOM link.
