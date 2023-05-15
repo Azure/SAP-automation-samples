@@ -23,7 +23,7 @@
     This could be a link to a SAP package, SWPM module etc.
     We should also preserve the earlier versions of the file which contain the outdated links.
     For this reason we need to move the outdated files to the archives folder. 
-    For updating SWPM and SUM packages make sure to check [this](#procedure-for-swpm-and-sum-files) out once.
+    For updating SWPM and SUM BOMs make sure to check [this](#procedure-for-swpm-and-sum-files) out once.
 1.  Get the new BOM link.
     Click [here](#how-to-get-the-updated-bom-link) to check the procedure for procuring the updated link.
 1.  Find the files where the outdated BOM link has been referred to. 
@@ -35,7 +35,6 @@
     In this case, the folder names should get updated to NAME_01_00_v0006ms and NAME2_02_22_v0005ms and the file names should get updated to NAME_01_00_v0006ms.yaml NAME2_02_22_v0005ms.yaml.
 1.  The files also contain the version number and the file name mentioned within them as shown [here](#key-points-about-folder-and-file-structure). 
     The version number and the file name needs to be updated inside the file too.
-    The file name has the version number appended to it and therefore requires an update.
 
 ## Procedure for SWPM and SUM files
 
