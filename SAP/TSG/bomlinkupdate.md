@@ -1,92 +1,77 @@
 # Updating BOM Links
 
-1.  [Key points about folder and file structure](#key-points-about-folder-and-file-structure)
-1.  [Procedure](#procedure)
-1.  [How to get the updated BOM link](#how-to-get-the-updated-bom-link)
-1.  [FAQs](#questions)
+- [Updating BOM Links](#updating-bom-links)
+  - [Key points about folder and file structure](#key-points-about-folder-and-file-structure)
+  - [Procedure](#procedure)
+  - [Procedure for SWPM and SUM files](#procedure-for-swpm-and-sum-files)
+  - [How to Get the Updated BOM Link](#how-to-get-the-updated-bom-link)
+  - [Knowledge Base of Dependent Packages from Previous BOM Link Updates](#knowledge-base-of-dependent-packages-from-previous-bom-link-updates)
+  - [FAQs](#faqs)
 
 ## Key points about folder and file structure
-1.  The folder structure for a BOM is such that the BOM file is contained within a folder that is named with the same name as the BOM file (excluding the file extension).
-1.  For ex: HANA_2_00_067_v0003ms.yaml is contained within a folder named HANA_2_00_067_v0003ms.
-1.  The folder and file for a particular BOM contains the version number appended to the end of the name. 
-    In the example provided in the preceding point, the version number is v0003ms.
-1.  The BOM file (in this case HANA_2_00_067_v0003ms.yaml) contains the file name and the version number mentioned at the very beginning of the file. Ex:
-    ```yaml
-    name:               'HANA_2_00_067_v0003ms'
-    target:             'HANA 2.0'
-    version:            3
-    platform:           'HANA'
-    ```
-## Procedure
+1. The BOM folder structure follows a specific pattern: The BOM file is placed inside a folder with the same name as the BOM file (excluding the file extension).
+   For example, the file HANA_2_00_067_v0003.yaml is contained within a folder named HANA_2_00_067_v0003.
+2. Each BOM folder and file includes a version number at the end of its name. In the previous example, the version number is v0003.
+3. The BOM file itself contains the file name and version number at the beginning of the file. For instance:
+   ```yaml
+   name: 'HANA_2_00_067_v0003ms'
+   target: 'HANA 2.0'
+   version: 3
+   platform: 'HANA'
+   ```
 
-1.  The overall goal is to update BOM files that reference an outdated link.
-    This could be a link to a SAP package, SWPM module etc.
-    We should also preserve the earlier versions of the file which contain the outdated links.
-    For this reason we need to move the outdated files to the archives folder. 
-    For updating SWPM and SUM BOMs make sure to check [this](#procedure-for-swpm-and-sum-files) out once.
-1.  Get the new BOM link.
-    Click [here](#how-to-get-the-updated-bom-link) to check the procedure for procuring the updated link.
-1.  Find the files where the outdated BOM link has been referred to. 
-    Let's say there are two files which reference the outdated link - NAME_01_00_v0005ms.yaml, NAME2_02_22_v0004ms.yaml that are present in folders named NAME_01_00_v0005ms and NAME2_02_22_v0004ms.
-    Note that each folder and file will have a certain version number that has been appended at the end of the folder name.
-    The version is of the format ```v<versionnumber>ms``` as in NAME_01_00_v0005ms.
-1.  The folders NAME_01_00_v0005ms, NAME2_02_22_v0004ms need to be copied into to the archives folder (This is done to preserve the previous versions of the BOM file).
-1.  Now update the name of the folders and the BOM file contained in the folder so that the version number present at the end of the folder name  and the file name is updated. 
-    In this case, the folder names should get updated to NAME_01_00_v0006ms and NAME2_02_22_v0005ms and the file names should get updated to NAME_01_00_v0006ms.yaml NAME2_02_22_v0005ms.yaml.
-1.  The files also contain the version number and the file name mentioned within them as shown [here](#key-points-about-folder-and-file-structure). 
-    The version number and the file name needs to be updated inside the file too.
+## Procedure
+1. The goal is to update BOM files that reference outdated links, such as SAP packages or SWPM modules.
+   To maintain a record of previous versions with outdated links, we move the old files to the archives folder.
+   If you need to update SWPM and SUM packages, refer to [this procedure](#procedure-for-swpm-and-sum-files).
+2. Obtain the new BOM link by following the procedure described [here](#how-to-get-the-updated-bom-link).
+3. Identify the files that reference the outdated BOM link. For example, let's assume there are two files, NAME_01_00_v0005ms.yaml and NAME2_02_22_v0004ms.yaml, located in folders named NAME_01_00_v0005ms and NAME2_02_22_v0004ms respectively.
+   Each folder and file has a version number appended at the end of its name, following the format `v<versionnumber>ms` (e.g., NAME_01_00_v0005ms).
+4. Copy the folders NAME_01_00_v0005ms and NAME2_02_22_v0004ms to the archives folder to preserve the previous versions of the BOM files.
+5. Update the folder names and the BOM file names within the folders to reflect the updated version number. In this case, the folder names should be updated to NAME_01_00_v0006ms and NAME2_02_22_v0005ms, and the file names should be updated to NAME_01_00_v0006ms.yaml and NAME2_02_22_v0005ms.yaml.
+6. Update the version number and file name within the BOM files themselves, as explained in the [key points about folder and file structure](#key-points-about-folder-and-file-structure).
 
 ## Procedure for SWPM and SUM files
 
-1.  For the SWPM and the SUM files, the folder and file name has the version number ```latest``` appended to the file and folder name. 
-    Example: SUM20SP16_latest.yaml is contained within SUM20SP16_latest folder.
-1.  When we copy this folder to the archives directory, we remove the ```latest``` from the file and folder name and replace it with a version number that is greater than the version number of the latest entry of that BOM file in the archives directory.
-    For example, Lets say the last BOM directory for SUM20SP16 present in the archives folder is SUM20SP16_v0006.
-    This means when we copy SUM20SP16_latest to the archives folder, we will rename it to SUM20SP16_v0007 and the BOM file within it will be renamed as SUM20SP16_v0007.yaml.
-1. Once we have copied the SUM / SWPM directory into the archives folder maintining the constraints mentioned in the preceding points, we can simply update the outdated link in the SUM20SP16_latest.yaml in the SUM20SP16_latest folder (The one present outside the archives directory).
-1. Increase the version number present in the SUM / SWPM BOM file present in this format:
-    ```yaml
-    name:    'SUM20SP16'
-    target:  'SUM20SP16'
-    version: 007
-    ```
-    The version number here will get updated to 008 and this will look like this after modification:
-    ```yaml
-    name:    'SUM20SP16'
-    target:  'SUM20SP16'
-    version: 008
-    ```
+1. For SWPM and SUM files, the folder and file names include the version number `latest`. For example, the file SUM20SP16_latest.yaml is contained within the folder SUM20SP16_latest.
+2. When copying this folder to the archives directory, remove the `latest` from the file and folder names, and replace it with a version number higher than the latest version in the archives directory for that BOM file.
 
-## How to get the updated BOM link
+For example, let's assume that the latest BOM directory for SUM20SP16 in the archives folder is SUM20SP16_v0006. To update the BOM links, follow these steps:
 
-1.  Logon to [SAP Support Portal](https://launchpad.support.sap.com/#/softwarecenter)
-1.  Go to Software Downloads
-1.  Seach for the file by the archive name of the file excluding the version.
-    For Example for SUM20SP16_6-80002456.SAR, search with the package name SUM20SP16.
-1.  If there is a later version for this package, that should be the new link for the package.
-1.  Make sure that the link for the correct target OS is used. 
+3. Copy the SUM/SWPM directory to the archives folder, maintaining the constraints mentioned earlier. Rename the copied directory from SUM20SP16_latest to SUM20SP16_v0007, and rename the BOM file within it as SUM20SP16_v0007.yaml.
 
-## Knowledge Base of dependent packages from previous BOM link updates
+4. Once the SUM/SWPM directory is copied to the archives folder, update the outdated link in the SUM20SP16_latest.yaml file located in the SUM20SP16_latest folder (outside the archives directory).
 
-|Is installer component  |  Archive name (Example) | Dependent Archive name examples |
-|------------------------|-------------------------|------|
-| No          |  IMDB_SERVER20_067_1-80002031.SAR | IMDB_AFL20_067_0-80001894.SAR, IMDB_LCAPPS_2067_0-20010426.SAR, VCH202100_2067_1-70006349.SAR, |
-| No          |  SAP_HR608.SAR  |  None |
-| Yes         | SUM20SP16_6-80002456.SAR | None |
+## How to Get the Updated BOM Link
 
+To obtain the updated BOM link, follow these steps:
+
+1. Log on to the [SAP Support Portal](https://launchpad.support.sap.com/#/softwarecenter).
+2. Go to Software Downloads.
+3. Search for the file using the archive name, excluding the version. For example, if the file is named SUM20SP16_6-80002456.SAR, search with the package name "SUM20SP16".
+4. If there is a later version available for this package, that should be the new link for the package. Ensure that you use the link for the correct target operating system.
+
+## Knowledge Base of Dependent Packages from Previous BOM Link Updates
+
+Here is a knowledge base of dependent packages resulting from previous BOM link updates:
+
+| Is installer component | Archive name (Example)          | Dependent Archive name examples                                                                 |
+|------------------------|---------------------------------|--------------------------------------------------------------------------------------------------|
+| No                     | IMDB_SERVER20_067_1-80002031.SAR | IMDB_AFL20_067_0-80001894.SAR, IMDB_LCAPPS_2067_0-20010426.SAR, VCH202100_2067_1-70006349.SAR    |
+| No                     | SAP_HR608.SAR                   | None                                                                                             |
+| Yes                    | SUM20SP16_6-80002456.SAR        | None                                                                                             |
 
 ## FAQs
-1.  Are the folder names and the yaml file names to be same?
-    * Yes the folder names and the BOM files contained within them have the same name excluding the extension for the file name.
-1.  Are the version numbers of the format ```v<versionnumber>ms```?
-    * Yes the version numbers should be of the format ```v<versionnumber>ms```.
-    For example, v0007ms is a valid version.
-    For SWPM and SUM BOMs, the version number ```latest``` is used outside of the archives folder.
-    When a SWPM / SUM BOM is moved to archives, it is given a version number depending on what the last version number for that BOM was in the archives directory.
-1.  How to get the updated link for a package?
-    * Check [this](#how-to-get-the-updated-bom-link).
 
+Here are some frequently asked questions:
 
+1. Are the folder names and YAML file names the same?
+   - Yes, the folder names and the BOM files within them should have the same name, excluding the file extension.
 
+2. Are the version numbers in the format `v<versionnumber>ms`?
+   - Yes, the version numbers should follow the format `v<versionnumber>ms`. 
+   - As an example, `v0007ms` is a valid version representing the 7th version of a BOM. 
+   - For SWPM and SUM BOMs, the version number `latest` is used outside the archives folder. When a SWPM/SUM BOM is moved to the archives, it is given a version number based on the last version number present in the archives directory.
 
-
+3. How can I obtain the updated link for a package?
+   - Refer to the section on [how to get the updated BOM link](#how-to-get-the-updated-bom-link) for step-by-step instructions.
