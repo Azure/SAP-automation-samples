@@ -25,7 +25,7 @@
 
     materials:
       dependencies:
-        - name:     HANA_2_00_066_v0001ms
+        - name:     HANA_2_00_067_v0003ms
 
       media:
 
@@ -987,15 +987,15 @@
           url:          https://softwaredownloads.sap.com/file/0010000001467632021
           download:     false
 
-        - name:         "Attribute Change Package 35 for SAP_HR 608"
+        - name:         "Attribute Change Package 36 for SAP_HR 608"
           archive:      SAP_HR608.SAR
-          checksum:     26ced531487527864dc223d7f8e9c1574803d38519614bae9cdd63cdda9e6e82
+          checksum:     5156fa6f34989662311371aab548e93878f134e099cd65f80f722131ffbfaf48
           url:          https://softwaredownloads.sap.com/file/0010000000249512014
           download:     false
 
         - name:         "Attribute Change Package 04 for SAP_UI 755"
           archive:      SAP_UI755.SAR
-          checksum:     0bd4eee6628a2d8d66592f78d9b520f7c758b89cd133a824d5960836a3636d2b
+          checksum:     ac15136030130fcdbe11529f971f873674fb7abcdc2815d9bb4c11659ce04603
           url:          https://softwaredownloads.sap.com/file/0010000000211202021
           download:     false
 
@@ -1016,5 +1016,13 @@
           checksum:     d69cd7b88f4f5adf04b44c882fa98f7687e062f3b8da02149186e74f510cad8a
           url:          https://softwaredownloads.sap.com/file/0010000001415322021
           download:     false
+
+# Web Dispatcher
+
+    - name:                            "Support Package SAP WEB DISPATCHER 7.81 Linux on x86_64 64bit"
+      archive:                         SAPWEBDISP_SP_110-70005393.SAR
+      checksum:                        706e5f4eab5d8a3573c3cc2bf6695562b8c71c59b5079e2f7e7b8afb283ee5fc
+      url:                             https://softwaredownloads.sap.com/file/0020000000314542021
+      download:                        true
 
 ...

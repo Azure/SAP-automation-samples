@@ -26,7 +26,7 @@ product_ids:
 
 materials:
   dependencies:
-    - name:                            "HANA_2_00_066_v0001ms"
+    - name:                            "HANA_2_00_067_v0003ms"
     - name:                            "SWPM20SP14_latest"
     - name:                            "SUM20SP16_latest"
   media:
@@ -41,16 +41,16 @@ materials:
 
     # kernel components
     # Kernel
-    - name:                            "Kernel Part I (785); OS: Linux on x86_64 64bit ; DB: Database independent"
-      archive:                         SAPEXE_100-80005374.SAR
-      checksum:                        31002d86645b5ed2f03a5ee5508083939b0e219116e2a7a126c3930beb642888
-      url:                             https://softwaredownloads.sap.com/file/0020000000249732022
+    - name:                            "Support Package SAP KERNEL 7.89 64-BIT UNICODE ; DB: Database independent"
+      archive:                         SAPEXE_100-70006642.SAR
+      checksum:                        297dc6b2563f00ced5586bc9007afee29037071ac481398c0f6a0d51c5f1df19
+      url:                             https://softwaredownloads.sap.com/file/0020000000254052023
       path:                            download_basket
 
-    - name:                            "Kernel Part II (785); OS: Linux on x86_64 64bit ; DB: SAP HANA database"
-      archive:                         SAPEXEDB_100-80005373.SAR
-      checksum:                        05a16e9ba5c6c882972fc37ee09c675ca5c06e02d56ea3cd36e39aa0bb809b37
-      url:                             https://softwaredownloads.sap.com/file/0020000000250002022
+    - name:                            "Support Package SAP KERNEL 7.89 64-BIT UNICODE Linux on x86_64 64bit SAP HANA database"
+      archive:                         SAPEXEDB_100-70006641.SAR
+      checksum:                        19c7ed6a502aa7b2ac0b2cef0ff6086ad626679004eb0492887d88b5a4f374d7
+      url:                             https://softwaredownloads.sap.com/file/0020000000254022023
       path:                            download_basket
 
     # SAP Host Agent
@@ -529,9 +529,9 @@ materials:
       url:                             https://softwaredownloads.sap.com/file/0010000000914092021
       download:                        false
 
-    - name:                            "Attribute Change Package 35 for SAP_HR 608"
+    - name:                            "Attribute Change Package 36 for SAP_HR 608"
       archive:                         SAP_HR608.SAR
-      checksum:                        26ced531487527864dc223d7f8e9c1574803d38519614bae9cdd63cdda9e6e82
+      checksum:                        5156fa6f34989662311371aab548e93878f134e099cd65f80f722131ffbfaf48
       url:                             https://softwaredownloads.sap.com/file/0010000000249512014
       download:                        false
 
@@ -576,5 +576,14 @@ materials:
       checksum:                        2e25b1abd4a98ed6a36776d79c92fbce733c38b214e0f697c11db9efd11177cb
       url:                             https://softwaredownloads.sap.com/file/0010000000561182019
       download:                        false
+
+# Web Dispatcher
+
+    - name:                            "Support Package SAP WEB DISPATCHER 7.81 Linux on x86_64 64bit"
+      archive:                         SAPWEBDISP_SP_110-70005393.SAR
+      checksum:                        706e5f4eab5d8a3573c3cc2bf6695562b8c71c59b5079e2f7e7b8afb283ee5fc
+      url:                             https://softwaredownloads.sap.com/file/0020000000314542021
+      download:                        true
+
 
 ...

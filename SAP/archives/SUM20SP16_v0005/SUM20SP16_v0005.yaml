@@ -1,0 +1,15 @@
+---
+name:    'SUM20SP16'
+target:  'SUM20SP16'
+version: 005
+
+materials:
+
+  media:
+    # SUM
+    - name:         "Patch 5 for SOFTWARE UPDATE MANAGER 2.0 SP16 (Linux on x86_64)"
+      archive:      SUM20SP16_5-80002456.SAR
+      checksum:     d7635fc362db5b25399a6f17d92041c561d4b4b6ed645d219c1a3a300f830f52
+      download:     false
+      url:          https://softwaredownloads.sap.com/file/0020000000464752023
+

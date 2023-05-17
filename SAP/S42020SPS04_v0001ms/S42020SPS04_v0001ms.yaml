@@ -23,9 +23,9 @@ product_ids:
 
 materials:
   dependencies:
-    - name:     HANA_2_00_066_v0001ms
-    - name:     SWPM20SP13_latest
-    - name:     SUM20SP15_latest
+    - name:     HANA_2_00_067_v0002ms
+    - name:     SWPM20SP14_latest
+    - name:     SUM20SP16_latest
 
   media:
 
@@ -1025,7 +1025,7 @@ materials:
       url: https://softwaredownloads.sap.com/file/0010000001467632021
       download: false
 
-    - name: "Attribute Change Package 35 for SAP_HR 608"
+    - name: "Attribute Change Package 36 for SAP_HR 608"
       archive: SAP_HR608.SAR
       url: https://softwaredownloads.sap.com/file/0010000000249512014
       download: false

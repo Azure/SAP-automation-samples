@@ -17,18 +17,22 @@ product_ids:
   app:                          NW_DI:NW750.MSS.PD
   app_ha:                       NW_DI:NW750.MSS.ABAPHA
   web:
-  ers:                          NW_SecondClusterNode:NW750.DB6.ABAP
-  ers_ha:                       NW_SecondClusterNode:NW750.MSS.ABAPHA
+  ers:                          NW_SecondClusterNode:NW750.MSS.ABAPHA
 
 materials:
   dependencies:
     - name:                     "MSSQLSRV_2019_v0001ms"
-    - name:                     "SUM20SP15_win_latest"
-    - name:                     "SWPM10SP36_win_latest"
+    - name:                     "SUM20SP16_win_latest"
+    - name:                     "SWPM10SP37_win_latest"
 
   media:
 
     # kernel components
+    - name:                            "SAPCAR 7.22; OS: Windows on x64 64bit"
+      archive:                         SAPCAR_1115-70006231.EXE
+      checksum:                        0808008d58f45d52b8ce38175117a37c97c133e939434644f95e6c6d815370fb
+      filename:                        SAPCAR.exe
+      url:                             https://softwaredownloads.sap.com/file/0020000000098632022
 
     - name:                            "Kernel Part II (753)"
       archive:                         SAPEXEDB_1000-80002611.SAR

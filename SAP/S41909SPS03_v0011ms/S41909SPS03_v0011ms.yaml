@@ -24,7 +24,7 @@ product_ids:
 
 materials:
   dependencies:
-    - name:     HANA_2_00_059_v0005ms
+    - name:     HANA_2_00_059_v0006ms
     - name:     SWPM20SP14_latest
     - name:     SUM20SP16_latest
 
@@ -933,9 +933,9 @@ materials:
       download:     false
       url:          https://softwaredownloads.sap.com/file/0010000001496942020
 
-    - name:         "Attribute Change Package 33 for SAP_HR 608"
+    - name:         "Attribute Change Package 36 for SAP_HR 608"
       archive:      SAP_HR608.SAR
-      checksum:     26ced531487527864dc223d7f8e9c1574803d38519614bae9cdd63cdda9e6e82
+      checksum:     5156fa6f34989662311371aab548e93878f134e099cd65f80f722131ffbfaf48
       download:     false
       url:          https://softwaredownloads.sap.com/file/0010000000249512014
 
@@ -1197,5 +1197,13 @@ materials:
       checksum:     eb64fc54d91003a779e8bb7908dce9385b244ccd277738081a21e7c9e97b4fa2
       download:     false
       url:          https://softwaredownloads.sap.com/file/0030000001632152019
+
+# Web Dispatcher
+
+    - name:                            "Support Package SAP WEB DISPATCHER 7.81 Linux on x86_64 64bit"
+      archive:                         SAPWEBDISP_SP_110-70005393.SAR
+      checksum:                        706e5f4eab5d8a3573c3cc2bf6695562b8c71c59b5079e2f7e7b8afb283ee5fc
+      url:                             https://softwaredownloads.sap.com/file/0020000000314542021
+      download:                        true
 
 ...

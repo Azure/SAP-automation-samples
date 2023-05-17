@@ -213,10 +213,10 @@ database_vm_zones = ["1"]
 #database_vm_avset_arm_ids = []
 
 # Optional, Defines the that the database virtual machines will not be placed in a proximity placement group
-database_no_ppg = false
+database_use_ppg = true
 
 # Optional, Defines the that the database virtual machines will not be placed in an availability set
-database_no_avset = false
+database_use_avset = true
 
 # Optional, Defines if the tags for the database virtual machines
 #database_tags = {}
@@ -278,10 +278,10 @@ scs_server_image = {
 }
 
 # scs_server_no_ppg defines the that the SCS virtual machines will not be placed in a proximity placement group
-scs_server_no_ppg = false
+scs_server_use_ppg = true
 
 # scs_server_no_avset defines the that the SCS virtual machines will not be placed in an availability set
-scs_server_no_avset = false
+scs_server_use_avset = true
 
 # scs_server_app_nic_ips, if provided provides the static IP addresses 
 # for the network interface cards connected to the application subnet
@@ -339,10 +339,10 @@ app_tier_dual_nics = false
 #app_tier_authentication_type = ""
 
 # application_server_no_ppg defines the that the application server virtual machines will not be placed in a proximity placement group
-application_server_no_ppg = false
+application_server_use_ppg = true
 
 # application_server_no_avset defines the that the application server virtual machines will not be placed in an availability set
-application_server_no_avset = false
+application_server_use_avset = true
 
 # application_server_tags, if defined provides the tags to be associated to the application servers
 #application_server_tags = {}
@@ -391,10 +391,10 @@ webdispatcher_server_count = 0
 #webdispatcher_server_sku = ""
 
 # webdispatcher_server_no_ppg defines the that the Web dispatcher virtual machines will not be placed in a proximity placement group
-#webdispatcher_server_no_ppg = false
+webdispatcher_server_use_ppg = true
 
 #webdispatcher_server_no_avset defines the that the Web dispatcher virtual machines will not be placed in an availability set
-#webdispatcher_server_no_avset = false
+webdispatcher_server_use_avset = true
 
 # webdispatcher_server_tags, if defined provides the tags to be associated to the web dispatchers
 #webdispatcher_server_tags = {}

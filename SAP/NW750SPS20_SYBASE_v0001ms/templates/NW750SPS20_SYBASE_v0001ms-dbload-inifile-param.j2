@@ -10,8 +10,8 @@
 ###############################################################################################################################################################################
 
 # Location of Export CD
-SAPINST.CD.PACKAGE.RDBMS                                                = {{db_install_media_path}}
-SAPINST.CD.PACKAGE.LOAD                                                 = {{dbexport_folder_path}}
+SAPINST.CD.PACKAGE.RDBMS                                                = {{ db_install_media_path }}
+SAPINST.CD.PACKAGE.LOAD                                                 = {{ dbexport_folder_path }}
 archives.downloadBasket                                                 = {{ kernel_media_folder }}
 NW_Unpack.sapExeDbSar                                                   = {{ sap_exe_full_path }}
 NW_Unpack.sapExeSar                                                     = {{ sap_exe_full_path }}
@@ -47,7 +47,7 @@ NW_SYB_DBPostload.numberParallelStatisticJobs                           = 10
 # The database host
 NW_getDBInfoGeneric.dbhost                                              = {{ sap_db_hostname }}
 # The database ID (DBSID)
-NW_getDBInfoGeneric.dbsid                                               = {{ db_sid|upper }}
+NW_getDBInfoGeneric.dbsid                                               = {{ db_sid | upper }}
 # SAP INTERNAL USE ONLY
 NW_System.installSAPHostAgent = false
 
@@ -61,7 +61,7 @@ NW_getLoadType.loadType                                                 = SAP
 NW_getUnicode.isUnicode                                                 = true
 
 # Provide  'profile' directory of SAP Netweaver-based system.
-NW_readProfileDir.profileDir                                            = /sapmnt/{{ db_sid|upper }}/profile
+NW_readProfileDir.profileDir                                            = /sapmnt/{{ db_sid | upper }}/profile
 
 # Sort order configuration of the database server
 SYB.NW_DB.aseSortOrder                                                  = binaryalt
@@ -113,22 +113,22 @@ SYB.NW_DB.enableGranularPermissions                                     = true
 SYB.NW_DB.enableStrongCipherSuitesForSSL                                = false
 
 # Path to ASE database software
-SYB.NW_DB.folderDatabaseSoftware                                        = /sybase/{{ db_sid|upper }}
+SYB.NW_DB.folderDatabaseSoftware                                        = /sybase/{{ db_sid | upper }}
 
 # Path to diagnostic database devices
-SYB.NW_DB.folderDiagDevice                                              = /sybase/{{ db_sid|upper }}/sapdiag
+SYB.NW_DB.folderDiagDevice                                              = /sybase/{{ db_sid | upper }}/sapdiag
 
 # Path to SAP tempdb device
-SYB.NW_DB.folderSAPTempdbDevice                                         = /sybase/{{ db_sid|upper }}/saptemp
+SYB.NW_DB.folderSAPTempdbDevice                                         = /sybase/{{ db_sid | upper }}/saptemp
 
 # Path to sybsecurity device
-SYB.NW_DB.folderSecurityDevices                                         = /sybase/{{ db_sid|upper }}/sybsecurity
+SYB.NW_DB.folderSecurityDevices                                         = /sybase/{{ db_sid | upper }}/sybsecurity
 
 # Path to data server 'system' devices
-SYB.NW_DB.folderSystemDevices                                           = /sybase/{{ db_sid|upper }}/sybsystem
+SYB.NW_DB.folderSystemDevices                                           = /sybase/{{ db_sid | upper }}/sybsystem
 
 # Path to data server 'temp' device
-SYB.NW_DB.folderTempdbDevice                                            = /sybase/{{ db_sid|upper }}/sybtemp
+SYB.NW_DB.folderTempdbDevice                                            = /sybase/{{ db_sid | upper }}/sybtemp
 
 # Number of consumers used by the 'create index with consumers' command
 SYB.NW_DB.indexConsumers                                                = 3
@@ -188,10 +188,13 @@ SYB.NW_DB.sqlServerMemory                                               = {{ syb
 SYB.NW_DB.sslPassword                                                   = {{ main_password }}
 
 # Path to folder for sybmgmtdb database data device
-SYB.NW_DB.sybmgmtdbDataDeviceFolder                                     = /sybase/{{ db_sid|upper }}/sybsystem
+SYB.NW_DB.sybmgmtdbDataDeviceFolder                                     = /sybase/{{ db_sid | upper }}/sybsystem
 
 # Path to folder for sybmgmtdb database log device
-SYB.NW_DB.sybmgmtdbLogDeviceFolder                                      = /sybase/{{ db_sid|upper }}/sybsystem
+SYB.NW_DB.sybmgmtdbLogDeviceFolder                                      = /sybase/{{ db_sid | upper }}/sybsystem
+
+# Host name in the SAP ASE user store location path
+SYB.NW_DB.userstore_hostname                                            = {{ sap_db_hostname }}
 
 # Host name in the SAP ASE user store location path
 SYB.NW_DB.userstore_hostname                                            = {{ sap_db_hostname }}

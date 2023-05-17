@@ -21,7 +21,7 @@ product_ids:
 
 materials:
   dependencies:
-    - name:                            HANA_2_00_066_v0001ms
+    - name:                            HANA_2_00_067_v0002ms
     - name:                            SWPM10SP36_latest
     - name:                            SUM20SP15_latest
 
@@ -71,6 +71,7 @@ materials:
       checksum:                        399228ad1ede56ea97a4676e5cfd9ff2ebccded55b8128718029188bc704682e
       extract:                         true
       extractDir:                      CD_EXPORT
+      tempDir:                         '51051806'
       creates:                         CDLABEL.ASC
       url:                             https://softwaredownloads.sap.com/file/0030000019659142017
 
@@ -79,6 +80,7 @@ materials:
       checksum:                        d968835cadfea8514a552ec977421043649bbb59140629a9dd897a7f0c47480b
       extract:                         true
       extractDir:                      CD_EXPORT
+      tempDir:                         '51051806'
       creates:                         CDLABEL.ASC
       url:                             https://softwaredownloads.sap.com/file/0030000019659152017
 
