@@ -1,19 +1,18 @@
 ---
 name:    'SWPM10SP37'
 target:  'SWPM10SP37'
-version: 005
+version: 004
 
 materials:
 
   media:
     # SWPM
     - name:         "SWPM 1.0 SP37 for NW higher than 7.0x; Support Package SOFTWARE PROVISIONING MGR 1.0 Linux on x86_64 64bit"
-      archive:      SWPM10SP37_5-20009701.SAR
-      checksum:     4ab3f7ba13c99a9b48601749ff7b1d587eee5206b44e745b33fb122d2e211aa9
+      archive:      SWPM10SP37_4-20009701.SAR
+      checksum:     fe0439b6853c417a83c4ecafacf42220e3f0acb64d0907bc6fff2f4d6e47b0ed
       extract:      true
       extractDir:   SWPM
       creates:      SIGNATURE.SMF
-      url:          https://softwaredownloads.sap.com/file/0020000000551692023
-      
+      url:          https://softwaredownloads.sap.com/file/0020000000469512023
 
 ...
