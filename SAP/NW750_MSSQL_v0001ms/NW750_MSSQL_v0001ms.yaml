@@ -60,7 +60,7 @@ materials:
       path:                            download_basket
 
     # DB export
-    - name:                            "NetWeaver AS ABAP 7.50 Innovation Pkg - Installation Exp"
+    - name:                            "NW 7.5 Installation Export"
       archive:                         51050829_3.ZIP
       checksum:                        06c3a3cd5d1ad266f61ca202552468501d94cfdc7641ffdadf0a9abad82b648a
       extract:                         true
