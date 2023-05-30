@@ -33,15 +33,15 @@ materials:
 
 # SBP Patches are downloaded based on SAP Note 2799920 - Patches 19c: Database
     
-    - name:         "Oracle SBP - Bundle patches for 19c: GIRU"
-      archive:      GIRU19P_2208-70004508.ZIP
-      checksum:     c49e0e1c84d1601c8bdf6352f57913f58ea22e100dc40aebbf0c60393d78785b
+    - name:         "Oracle SBP - Grid Infrastructure Release Update 19.14.0.0.220118"
+      archive:      GIRU19P_2202-70004555.ZIP
+      checksum:     b6d3dc58900d61d875409ed8c1c1f84178d00ce82e1cabc15a8d7b14beb94b40
       extract:      false
       download:     true
       # extractDir:   SBP/GIRU19P
       path:         SBP
       # creates:     SIGNATURE.SMF
-      url:          https://softwaredownloads.sap.com/file/0020000001073602022
+      url:          https://softwaredownloads.sap.com/file/0020000001090712022
 
     - name:         "Oracle SBP - Bundle patches for 19c: SAP19P"
       archive:      SAP19P_2208-70004508.ZIP
