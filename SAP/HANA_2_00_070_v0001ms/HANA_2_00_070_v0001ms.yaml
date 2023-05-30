@@ -35,13 +35,13 @@ materials:
       path:         download_basket
       url:          https://softwaredownloads.sap.com/file/0020000000414462023
 
-    - name:         "SAP HANA AFL Rev 70.0 only for HANA 2.0 Rev 70"
-      archive:      IMDB_AFL20_070_0-80001894.SAR
-      checksum:     93076759952d664b002591639df2f6ad504d35b8445854d2874e9f0d16ea70b2
+    - name:         "SAP HANA AFL Rev 70.4 only for HANA 2.0 Rev 70"
+      archive:      IMDB_AFL20_070_4-80001894.SAR
+      checksum:     a1e55835168ebfa6ed933ca2d71ab2b18fd2f1b62416269f168d457d4dbdfa0b
       extract:      true
       extractDir:   CD_HDBSERVER/COMPONENTS
       creates:      COMPONENTS/SAP_HANA_AFL/packages
-      url:          https://softwaredownloads.sap.com/file/0020000000414562023
+      url:          https://softwaredownloads.sap.com/file/0020000000591412023
 
     - name:         "LCAPPS for HANA 2.0 Rev 70 Build 101.09 PL 005"
       archive:      IMDB_LCAPPS_2070_0-20010426.SAR
