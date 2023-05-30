@@ -92,33 +92,33 @@ materials:
 # Oracle ASM GRID Patches
 # GRID SBP Patches are downloaded based on SAP Note 2799920 - Patches 19c: Database
 
-    - name:         "Oracle GRID SBP - Bundle patches for 19c: GIRU"
-      archive:      GIRU19P_2208-70004550.ZIP
-      checksum:     b9ea460210cf4d5232d77cf263982ce338169698db7f51356cc06dfc637baef2
-      extract:      false
-      download:     true
-      # extractDir:   SBP/GIRU19P
-      path:         SBP
-      # creates:     SIGNATURE.SMF
-      url:          https://softwaredownloads.sap.com/file/0020000001093022022
+    # - name:         "Oracle GRID SBP - Bundle patches for 19c: GIRU"
+    #   archive:      GIRU19P_2208-70004550.ZIP
+    #   checksum:     b9ea460210cf4d5232d77cf263982ce338169698db7f51356cc06dfc637baef2
+    #   extract:      false
+    #   download:     true
+    #   # extractDir:   SBP/GIRU19P
+    #   path:         SBP
+    #   # creates:     SIGNATURE.SMF
+    #   url:          https://softwaredownloads.sap.com/file/0020000001093022022
 
     - name:         "Oracle GRID SBP - Bundle patches for 19c: SGR"
-      archive:      SGR19P_2208-70004550.ZIP
-      checksum:     fd4dc4383e4b9fe1f588a24b13dd42742ede8550ec37c0a596e4c75edd20be0b
+      archive:      SGR19P_2305-70004550.ZIP
+      checksum:     4318e9834651495d18b6c218965b0668783e912f735e58f5cb18a41ccdc7cdfc
       extract:      false
       download:     true
       extractDir:   SBP/SGR19P
       path:         SBP
       # creates:     SIGNATURE.SMF
-      url:          https://softwaredownloads.sap.com/file/0020000001075272022
+      url:          https://softwaredownloads.sap.com/file/0020000000597712023
   
-    - name:         "Oracle GRID SBP - Bundle patches for 19c: SBPJDK19P"
-      archive:      SBPJDK19P_2208-70004550.ZIP
-      checksum:     a871c9da35cdce3b8bcf3b21726b0fa52829816dbcbdf40c1737864cb375cbaf
-      extract:      false
-      extractDir:   SBP/SBPJDK
-      path:         SBP
-      # creates:     SIGNATURE.SMF
-      url:          https://softwaredownloads.sap.com/file/0020000001074602022
+    # - name:         "Oracle GRID SBP - Bundle patches for 19c: SBPJDK19P"
+    #   archive:      SBPJDK19P_2208-70004550.ZIP
+    #   checksum:     a871c9da35cdce3b8bcf3b21726b0fa52829816dbcbdf40c1737864cb375cbaf
+    #   extract:      false
+    #   extractDir:   SBP/SBPJDK
+    #   path:         SBP
+    #   # creates:     SIGNATURE.SMF
+    #   url:          https://softwaredownloads.sap.com/file/0020000001074602022
 
 ...
