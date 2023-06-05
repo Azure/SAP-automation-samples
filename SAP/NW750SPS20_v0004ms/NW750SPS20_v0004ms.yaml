@@ -722,6 +722,6 @@ materials:
     - name:                            "SAPCAR"
       archive:                         SAPCAR_1115-70006178.EXE
       checksum:                        765412436934362cc5497e3d659fbb78be91093a091c11ec4fbe84dfb415a0e5
-      override_target_filename:        "SAPCAR"
+      filename:                        SAPCAR
+      permissions:                     '0755'
       url:                             https://softwaredownloads.sap.com/file/0020000000098642022
-      path:                            downloads
