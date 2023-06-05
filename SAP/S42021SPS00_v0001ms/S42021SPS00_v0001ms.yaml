@@ -28,9 +28,9 @@ materials:
 
     # kernel components
 
-    - name:                            "SP12 Patch6 for UMML4HANA 1"
-      archive:                         HANAUMML12_6-70001054.ZIP
-      url:                             https://softwaredownloads.sap.com/file/0020000000356792022
+    - name:                            "SP12 Patch7 for UMML4HANA 1"
+      archive:                         HANAUMML12_7-70001054.ZIP
+      url:                             https://softwaredownloads.sap.com/file/0020000000665292023
       path:                            download_basket
 
     - name:                            "SAP HANA CLIENT Version 2.12"
