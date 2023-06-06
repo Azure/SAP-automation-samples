@@ -1,5 +1,5 @@
 ---
-name:    'ORACLE_19_00_ASM_v0001ms'
+name:    'NW750_ORACLE_19_ASM_v0001ms'
 target:  'Oracle 19c'
 version: "1"
 platform: "ORACLE"
