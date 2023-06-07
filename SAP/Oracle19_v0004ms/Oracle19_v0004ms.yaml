@@ -38,9 +38,9 @@ materials:
       checksum:     c97737e0f4483bad9d17ce512b0db4b5c9d1441768bc43ec51feb7d3d24cd211
       extract:      false
       download:     true
-      # extractDir:   SBP/GIRU19P
+      extractDir:   SBP/GIRU19P
       path:         SBP
-      # creates:     SIGNATURE.SMF
+      creates:      SIGNATURE.SMF
       url:          https://softwaredownloads.sap.com/file/0020000000246142023
 
     - name:         "Oracle SBP - Bundle patches for 19c: SAP19P"
@@ -49,7 +49,7 @@ materials:
       extract:      true
       extractDir:   SBP/SAPSBP
       path:         SBP
-      # creates:     SIGNATURE.SMF
+      creates:      SIGNATURE.SMF
       url:          https://softwaredownloads.sap.com/file/0020000000191902023
 
     - name:         "Oracle SBP - Bundle patches for 19c: SBPJDK19P"
@@ -58,7 +58,7 @@ materials:
       extract:      false
       extractDir:   SBP/SBPJDK
       path:         SBP
-      # creates:     SIGNATURE.SMF
+      creates:      SIGNATURE.SMF
       url:          https://softwaredownloads.sap.com/file/0020000000191792023
 
     - name:         "Oracle SBP - Bundle patches for 19c: OPatch"
@@ -67,7 +67,7 @@ materials:
       extract:      true
       extractDir:   SBP/OPATCH
       path:         SBP
-      # creates:     SIGNATURE.SMF
+      creates:      SIGNATURE.SMF
       url:          https://softwaredownloads.sap.com/file/0020000000597692023
 
 
