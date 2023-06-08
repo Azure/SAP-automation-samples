@@ -23,8 +23,8 @@
 ##########################################################################################
 
 # The automation supports both creating resources (greenfield) or using existing resources (brownfield)
-# For the greenfield scenario the automation defines default names for resources, 
-# if there is a XXXXname variable then the name is customizable 
+# For the greenfield scenario the automation defines default names for resources,
+# if there is a XXXXname variable then the name is customizable
 # for the brownfield scenario the Azure resource identifiers for the resources must be specified
 
 #########################################################################################
@@ -58,14 +58,16 @@ use_prefix = true
 use_zonal_markers = true
 
 # use_secondary_ips controls if the virtual machines should be deployed with two IP addresses. Required for SAP Virtual Hostname support
-#use_secondary_ips = false
+use_secondary_ips = false
 
 # subscription is the subscription in which the system will be deployed (informational only)
 #subscription = ""
 
-# bom_name is the name of the SAP Bill of Materials file
-#bom_name = ""
+# use_scalesets_for_deployment defines if Flexible Virtual Machine Scale Sets are used for the deployment
+use_scalesets_for_deployment = false
 
+# database_use_premium_v2_storage defines if the database tier will use premium v2 storage
+database_use_premium_v2_storage = false
 
 #########################################################################################
 #                                                                                       #
@@ -77,7 +79,7 @@ use_zonal_markers = true
 # 1. Subnets are defined as part of the workload zone  deployment                       #
 #    In this model multiple SAP System share the subnets                                #
 # 2. Subnets are deployed as part of the SAP system                                     #
-#    In this model each SAP system has its own sets of subnets                          # 
+#    In this model each SAP system has its own sets of subnets                          #
 #                                                                                       #
 # The automation supports both creating the subnets (greenfield)                        #
 # or using existing subnets (brownfield)                                                #
@@ -87,7 +89,7 @@ use_zonal_markers = true
 #                                                                                       #
 #########################################################################################
 
-# The network logical name is mandatory - it is used in the naming convention and should map to the workload virtual network logical name 
+# The network logical name is mandatory - it is used in the naming convention and should map to the workload virtual network logical name
 network_logical_name = "SAP01"
 
 # use_loadbalancers_for_standalone_deployments is a boolean flag that can be used to control if standalone deployments (non HA) will have load balancers
@@ -95,6 +97,20 @@ use_loadbalancers_for_standalone_deployments = true
 
 # use_private_endpoint is a boolean flag controlling if the key vaults and storage accounts have private endpoints
 use_private_endpoint = true
+
+
+#########################################################################################
+#                                                                                       #
+#  Cluster settings                                                                     #
+#                                                                                       #
+#########################################################################################
+
+# use_msi_for_clusters if defined will use managed service identity for the Pacemaker cluster fencing
+use_msi_for_clusters = true
+
+# fencing_role_name, If specified the role name to use for the fencing agent
+#fencing_role_name = ""
+
 
 #########################################################################################
 #                                                                                       #
@@ -108,7 +124,8 @@ database_sid = "DB2"
 # - HANA
 # - DB2
 # - ORACLE
-# - ASE
+# - ORACLE-ASM
+# - SYBASE
 # - SQLSERVER
 # - NONE (in this case no database tier is deployed)
 database_platform = "DB2"
@@ -123,6 +140,9 @@ database_high_availability = false
 # If using a custom disk sizing populate with the node name for Database you have used in the file custom_disk_sizes_filename
 database_size = "512"
 
+# database_vm_sku, if provided defines the Virtual Machine SKU to use for the database virtual machines"
+#database_vm_sku = ""
+
 # database_instance_number if provided defines the instance number of the HANA database
 #database_instance_number = ""
 
@@ -132,22 +152,22 @@ database_vm_use_DHCP = true
 # Optional, Defines if the database server will have two network interfaces
 #database_dual_nics = false
 
-# database_vm_db_nic_ips, if provided provides the static IP addresses 
+# database_vm_db_nic_ips, if provided provides the static IP addresses
 # for the network interface cards connected to the database subnet
 #database_vm_db_nic_ips = []
 
-# database_vm_db_nic_secondary_ips, if provided provides the secondary static IP addresses 
+# database_vm_db_nic_secondary_ips, if provided provides the secondary static IP addresses
 # for the network interface cards connected to the application subnet
 #database_vm_db_nic_secondary_ips = []
 
-# database_vm_admin_nic_ips, if provided provides the static IP addresses 
+# database_vm_admin_nic_ips, if provided provides the static IP addresses
 # for the network interface cards connected to the admin subnet
 #database_vm_admin_nic_ips = []
 
 # database_loadbalancer_ips defines the load balancer IP addresses for the database tier's load balancer.
 #database_loadbalancer_ips = []
 
-# database_vm_admin_nic_ips, if provided provides the static IP addresses 
+# database_vm_admin_nic_ips, if provided provides the static IP addresses
 # for the network interface cards connected to the storage subnet
 #database_vm_storage_nic_ips = []
 
@@ -160,8 +180,7 @@ database_vm_use_DHCP = true
 #  publisher       = "Oracle"
 #  offer           = "Oracle-Linux",
 #  sku             = "82-gen2",
-#  version         = "latest",
-#  type            = "marketplace"
+#  version         = "latest"
 #  type            = "marketplace"
 #}
 
@@ -172,8 +191,7 @@ database_vm_use_DHCP = true
 #  publisher       = "SUSE"
 #  offer           = "sles-sap-15-sp3"
 #  sku             = "gen2"
-#  version         = "latest",
-#  type            = "marketplace"
+#  version         = "latest"
 #  type            = "marketplace"
 #}
 
@@ -184,23 +202,22 @@ database_vm_use_DHCP = true
 #  publisher       = "RedHat"
 #  offer           = "RHEL-SAP-HA"
 #  sku             = "8_4"
-#  version         = "latest",
-#  type            = "marketplace"
+#  version         = "latest"
 #  type            = "marketplace"
 #}
 
-# The vm_image defines the Virtual machine image to use, 
-# if source_image_id is specified the deployment will use the custom image provided, 
+# The vm_image defines the Virtual machine image to use,
+# if source_image_id is specified the deployment will use the custom image provided,
 # in this case os_type must also be specified
 
 database_vm_image = {
-  os_type         = "LINUX",
+  os_type = "LINUX",
   source_image_id = "",
-  publisher       = "RedHat",
-  offer           = "RHEL-SAP-HA",
-  sku             = "8_4",
-  version         = "latest",
-  type            = "marketplace"
+  publisher = "RedHat",
+  offer = "RHEL-SAP-HA",
+  sku = "8_4",
+  version = "latest",
+  type = "marketplace"
 }
 
 # database_vm_zones is an optional list defining the availability zones to deploy the database servers
@@ -238,7 +255,7 @@ enable_app_tier_deployment = true
 app_tier_use_DHCP = true
 
 # sid is a mandatory field that defines the SAP Application SID
-sid = "SD2"
+sid = "DB2"
 
 #########################################################################################
 #                                                                                       #
@@ -252,11 +269,15 @@ scs_server_count = 1
 # scs_high_availability is a boolean flag controlling if SCS should be highly available
 scs_high_availability = false
 
-# scs_instance_number
-#scs_instance_number = ""
+# scs_instance_number defines the instance number for SCS
+scs_instance_number = "00"
 
-# ers_instance_number
-#ers_instance_number = ""
+# ers_instance_number defines the instance number for ERS
+ers_instance_number = "01"
+
+# pas_instance_number defines the instance number for PAS
+pas_instance_number = "00"
+
 
 # scs_server_zones is an optional list defining the availability zones to which deploy the SCS servers
 scs_server_zones = ["1"]
@@ -264,34 +285,34 @@ scs_server_zones = ["1"]
 # scs_server_sku, if defined provides the SKU to use for the SCS servers
 #scs_server_sku = ""
 
-# The vm_image defines the Virtual machine image to use for the application servers, 
-# if source_image_id is specified the deployment will use the custom image provided, 
+# The vm_image defines the Virtual machine image to use for the application servers,
+# if source_image_id is specified the deployment will use the custom image provided,
 # in this case os_type must also be specified
 scs_server_image = {
-  os_type         = "LINUX",
+  os_type = "LINUX",
   source_image_id = "",
-  publisher       = "RedHat",
-  offer           = "RHEL-SAP-HA",
-  sku             = "8_4",
-  version         = "latest",
-  type            = "marketplace"
+  publisher = "RedHat",
+  offer = "RHEL-SAP-HA",
+  sku = "8_4",
+  version = "latest",
+  type = "marketplace"
 }
 
-# scs_server_no_ppg defines the that the SCS virtual machines will not be placed in a proximity placement group
+# scs_server_use_ppg defines the that the SCS virtual machines will be placed in a proximity placement group
 scs_server_use_ppg = true
 
-# scs_server_no_avset defines the that the SCS virtual machines will not be placed in an availability set
+# scs_server_use_avset defines the that the SCS virtual machines will be placed in an availability set
 scs_server_use_avset = true
 
-# scs_server_app_nic_ips, if provided provides the static IP addresses 
+# scs_server_app_nic_ips, if provided provides the static IP addresses
 # for the network interface cards connected to the application subnet
 #scs_server_app_nic_ips = []
 
-# scs_server_nic_secondary_ips, if provided provides the secondary static IP addresses 
+# scs_server_nic_secondary_ips, if provided provides the secondary static IP addresses
 # for the network interface cards connected to the application subnet
 #scs_server_nic_secondary_ips = []
 
-# scs_server_app_admin_nic_ips, if provided provides the static IP addresses 
+# scs_server_app_admin_nic_ips, if provided provides the static IP addresses
 # for the network interface cards connected to the application subnet
 #scs_server_admin_nic_ips = []
 
@@ -320,15 +341,15 @@ application_server_count = 2
 # app_tier_dual_nics is a boolean flag controlling if the application tier servers should have two network cards
 app_tier_dual_nics = false
 
-# application_server_app_nic_ips, if provided provides the static IP addresses 
+# application_server_app_nic_ips, if provided provides the static IP addresses
 # for the network interface cards connected to the application subnet
 #application_server_app_nic_ips = []
 
-# application_server_nic_secondary_ips, if provided provides the secondary static IP addresses 
+# application_server_nic_secondary_ips, if provided provides the secondary static IP addresses
 # for the network interface cards connected to the application subnet
 #application_server_nic_secondary_ips = []
 
-# application_server_app_admin_nic_ips, if provided provides the static IP addresses 
+# application_server_app_admin_nic_ips, if provided provides the static IP addresses
 # for the network interface cards connected to the admin subnet
 #application_server_admin_nic_ips = []
 
@@ -338,26 +359,26 @@ app_tier_dual_nics = false
 # Optional, Defines the default authentication model for the Applicatiuon tier VMs (key/password)
 #app_tier_authentication_type = ""
 
-# application_server_no_ppg defines the that the application server virtual machines will not be placed in a proximity placement group
+# application_server_use_ppg defines the that the application server virtual machines will be placed in a proximity placement group
 application_server_use_ppg = true
 
-# application_server_no_avset defines the that the application server virtual machines will not be placed in an availability set
+# application_server_use_avset defines the that the application server virtual machines will be placed in an availability set
 application_server_use_avset = true
 
 # application_server_tags, if defined provides the tags to be associated to the application servers
 #application_server_tags = {}
 
-# The vm_image defines the Virtual machine image to use for the application servers, 
-# if source_image_id is specified the deployment will use the custom image provided, 
+# The vm_image defines the Virtual machine image to use for the application servers,
+# if source_image_id is specified the deployment will use the custom image provided,
 # in this case os_type must also be specified
 application_server_image = {
-  os_type         = "LINUX",
+  os_type = "LINUX",
   source_image_id = "",
-  publisher       = "RedHat",
-  offer           = "RHEL-SAP-HA",
-  sku             = "8_4",
-  version         = "latest",
-  type            = "marketplace"
+  publisher = "RedHat",
+  offer = "RHEL-SAP-HA",
+  sku = "8_4",
+  version = "latest",
+  type = "marketplace"
 }
 
 #application_server_vm_avset_arm_ids = []
@@ -371,15 +392,22 @@ application_server_image = {
 # webdispatcher_server_count defines how many web dispatchers to deploy
 webdispatcher_server_count = 0
 
-# webdispatcher_server_app_nic_ips, if provided provides the static IP addresses 
+# web_sid is the Web Dispatcher SID
+#web_sid = ""
+
+# web_instance_number defines the web instance number
+web_instance_number = "00"
+
+
+# webdispatcher_server_app_nic_ips, if provided provides the static IP addresses
 # for the network interface cards connected to the application subnet
 #webdispatcher_server_app_nic_ips = []
 
-# webdispatcher_server_nic_secondary_ips, if provided provides the secondary static IP addresses 
+# webdispatcher_server_nic_secondary_ips, if provided provides the secondary static IP addresses
 # for the network interface cards connected to the application subnet
 #webdispatcher_server_nic_secondary_ips = []
 
-# webdispatcher_server_app_admin_nic_ips, if provided provides the static IP addresses 
+# webdispatcher_server_app_admin_nic_ips, if provided provides the static IP addresses
 # for the network interface cards connected to the application subnet
 #webdispatcher_server_admin_nic_ips = []
 
@@ -390,10 +418,10 @@ webdispatcher_server_count = 0
 # webdispatcher_server_sku, if defined provides the SKU to use for the web dispatchers
 #webdispatcher_server_sku = ""
 
-# webdispatcher_server_no_ppg defines the that the Web dispatcher virtual machines will not be placed in a proximity placement group
+# webdispatcher_server_use_ppg defines the that the Web dispatcher virtual machines will be placed in a proximity placement group
 webdispatcher_server_use_ppg = true
 
-#webdispatcher_server_no_avset defines the that the Web dispatcher virtual machines will not be placed in an availability set
+#webdispatcher_server_use_avset defines the that the Web dispatcher virtual machines will be placed in an availability set
 webdispatcher_server_use_avset = true
 
 # webdispatcher_server_tags, if defined provides the tags to be associated to the web dispatchers
@@ -402,10 +430,12 @@ webdispatcher_server_use_avset = true
 # webdispatcher_server_zones is an optional list defining the availability zones to which deploy the web dispatchers
 #webdispatcher_server_zones = []
 
-# The vm_image defines the Virtual machine image to use for the web dispatchers, 
-# if source_image_id is specified the deployment will use the custom image provided, 
+# The vm_image defines the Virtual machine image to use for the web dispatchers,
+# if source_image_id is specified the deployment will use the custom image provided,
 # in this case os_type must also be specified
 #webdispatcher_server_image = {}
+
+
 
 #########################################################################################
 #                                                                                       #
@@ -414,14 +444,17 @@ webdispatcher_server_use_avset = true
 #########################################################################################
 
 # resource_offset can be used to provide an offset for resource naming
-# server#, disk# 
+# server#, disk#
 resource_offset = 1
 
-# vm_disk_encryption_set_id if defined defines the custom encryption key 
+# vm_disk_encryption_set_id if defined defines the custom encryption key
 #vm_disk_encryption_set_id = ""
 
 # deploy_application_security_groups if defined will create application security groups
 deploy_application_security_groups = true
+
+# deploy_v1_monitoring_extension Defines if the Microsoft.AzureCAT.AzureEnhancedMonitoring extension will be deployed
+deploy_v1_monitoring_extension = true
 
 #########################################################################################
 #                                                                                       #
@@ -434,12 +467,20 @@ deploy_application_security_groups = true
 # ANF indicates that Azure NetApp Files is used
 # NFS indicates that a custom solution is used for NFS
 NFS_provider = "AFS"
-
+# sapmnt_volume_size defines the size of the sapmnt volume in GB
 sapmnt_volume_size = 128
 
+# azure_files_sapmnt_id defines the Resource identifier for Azure Files for NFS storage account for sapmnt
 #azure_files_sapmnt_id = ""
 
+# sapmnt_private_endpoint_id defines the Resource identifier for the private endpoint for Azure Files for NFS storage account for sapmnt
 #sapmnt_private_endpoint_id = ""
+
+# use_random_id_for_storageaccounts defines if the sapmnt storage account name will have a random suffix
+use_random_id_for_storageaccounts = true
+
+# ANF_HANA_use_AVG defines if the ANF volume will be created in an Application Volume Group
+ANF_HANA_use_AVG = false
 
 #########################################################################################
 #                                                                                       #
@@ -509,7 +550,7 @@ sapmnt_volume_size = 128
 
 #########################################################################################
 #                                                                                       #
-#  /usr/sap                                                                             #
+#  Azure NetApp Files /usr/sap                                                          #
 #                                                                                       #
 #########################################################################################
 
@@ -531,12 +572,15 @@ sapmnt_volume_size = 128
 
 #########################################################################################
 #                                                                                       #
-#  sapmnt                                                                               #
+#  Azure NetApp Files sapmnt                                                            #
 #                                                                                       #
 #########################################################################################
 
 # ANF_sapmnt, if defined, will create Azure NetApp Files volume for /sapmnt
 #ANF_sapmnt = false
+
+# ANF_sapmnt_use_clone_in_secondary_zone, if defined, uses clone in secondary region for sapmnt volume.
+#ANF_sapmnt_use_clone_in_secondary_zone = false
 
 # ANF_sapmnt_volume_size, if defined, provides the size of the /sapmnt volume.
 #ANF_sapmnt_volume_size = 0
@@ -571,13 +615,13 @@ sapmnt_volume_size = 128
 # If empty Terraform will create the ssh key and persist it in keyvault
 #automation_path_to_private_key = ""
 
-# vm_disk_encryption_set_id if defined defines the custom encryption key 
+# vm_disk_encryption_set_id if defined defines the custom encryption key
 #vm_disk_encryption_set_id = ""
 
 # nsg_asg_with_vnet if set controls where the Application Security Groups are created
 nsg_asg_with_vnet = false
 
-# RESOURCEGROUP
+# RESOURCE GROUP
 # The two resource group name and arm_id can be used to control the naming and the creation of the resource group
 # The resourcegroup_name value is optional, it can be used to override the name of the resource group that will be provisioned
 # The resourcegroup_name arm_id is optional, it can be used to provide an existing resource group for the deployment
@@ -587,11 +631,11 @@ nsg_asg_with_vnet = false
 #resourcegroup_arm_id = ""
 
 # PPG
-# The proximity placement group names and arm_ids are optional can be used to 
+# The proximity placement group names and arm_ids are optional can be used to
 # control the naming and the creation of the proximity placement groups
-# The proximityplacementgroup_names list value is optional, 
+# The proximityplacementgroup_names list value is optional,
 # it can be used to override the name of the proximity placement groups that will be provisioned
-# The proximityplacementgroup_arm_ids list value is optional, 
+# The proximityplacementgroup_arm_ids list value is optional,
 # it can be used to provide an existing proximity placement groups for the deployment
 
 #proximityplacementgroup_names = []
@@ -617,7 +661,7 @@ enable_purge_control_for_keyvaults = false
 #########################################################################################
 
 # If defined these parameters control the subnet name and the subnet prefix
-# admin_subnet_name is an optional parameter and should only be used if the default naming is not acceptable 
+# admin_subnet_name is an optional parameter and should only be used if the default naming is not acceptable
 #admin_subnet_name = ""
 
 # admin_subnet_address_prefix is a mandatory parameter if the subnets are not defined in the workload or if existing subnets are not used
@@ -626,7 +670,7 @@ enable_purge_control_for_keyvaults = false
 # admin_subnet_arm_id is an optional parameter that if provided specifies Azure resource identifier for the existing subnet to use
 #admin_subnet_arm_id = ""
 
-# admin_subnet_nsg_name is an optional parameter and should only be used if the default naming is not acceptable for the network security group name 
+# admin_subnet_nsg_name is an optional parameter and should only be used if the default naming is not acceptable for the network security group name
 #admin_subnet_nsg_name = ""
 
 # admin_subnet_nsg_arm_id is an optional parameter that if provided specifies Azure resource identifier for the existing network security group to use
@@ -639,7 +683,7 @@ enable_purge_control_for_keyvaults = false
 #########################################################################################
 
 # If defined these parameters control the subnet name and the subnet prefix
-# db_subnet_name is an optional parameter and should only be used if the default naming is not acceptable 
+# db_subnet_name is an optional parameter and should only be used if the default naming is not acceptable
 #db_subnet_name = ""
 
 # db_subnet_address_prefix is a mandatory parameter if the subnets are not defined in the workload or if existing subnets are not used
@@ -648,7 +692,7 @@ enable_purge_control_for_keyvaults = false
 # db_subnet_arm_id is an optional parameter that if provided specifies Azure resource identifier for the existing subnet to use
 #db_subnet_arm_id = ""
 
-# db_subnet_nsg_name is an optional parameter and should only be used if the default naming is not acceptable for the network security group name 
+# db_subnet_nsg_name is an optional parameter and should only be used if the default naming is not acceptable for the network security group name
 #db_subnet_nsg_name = ""
 
 # db_subnet_nsg_arm_id is an optional parameter that if provided specifies Azure resource identifier for the existing network security group to use
@@ -661,7 +705,7 @@ enable_purge_control_for_keyvaults = false
 #########################################################################################
 
 # If defined these parameters control the subnet name and the subnet prefix
-# app_subnet_name is an optional parameter and should only be used if the default naming is not acceptable 
+# app_subnet_name is an optional parameter and should only be used if the default naming is not acceptable
 #app_subnet_name = ""
 
 # app_subnet_address_prefix is an optional parameter that if provided specifies Azure resource identifier for the existing subnet to use
@@ -670,7 +714,7 @@ enable_purge_control_for_keyvaults = false
 # app_subnet_arm_id is an optional parameter that if provided specifies Azure resource identifier for the existing subnet to use
 #app_subnet_arm_id = ""
 
-# app_subnet_nsg_name is an optional parameter and should only be used if the default naming is not acceptable for the network security group name 
+# app_subnet_nsg_name is an optional parameter and should only be used if the default naming is not acceptable for the network security group name
 #app_subnet_nsg_name = ""
 
 # app_subnet_nsg_arm_id is an optional parameter that if provided specifies Azure resource identifier for the existing network security group to use
@@ -683,7 +727,7 @@ enable_purge_control_for_keyvaults = false
 #########################################################################################
 
 # If defined these parameters control the subnet name and the subnet prefix
-# web_subnet_name is an optional parameter and should only be used if the default naming is not acceptable 
+# web_subnet_name is an optional parameter and should only be used if the default naming is not acceptable
 #web_subnet_name = ""
 
 # web_subnet_address_prefix is an optional parameter that if provided specifies Azure resource identifier for the existing subnet to use
@@ -692,7 +736,7 @@ enable_purge_control_for_keyvaults = false
 # web_subnet_arm_id is an optional parameter that if provided specifies Azure resource identifier for the existing subnet to use
 #web_subnet_arm_id = ""
 
-# web_subnet_nsg_name is an optional parameter and should only be used if the default naming is not acceptable for the network security group name 
+# web_subnet_nsg_name is an optional parameter and should only be used if the default naming is not acceptable for the network security group name
 #web_subnet_nsg_name = ""
 
 # web_subnet_nsg_arm_id is an optional parameter that if provided specifies Azure resource identifier for the existing network security group to use
@@ -721,7 +765,7 @@ enable_purge_control_for_keyvaults = false
 # Defines if the anchor VM should use accelerated networking
 #anchor_vm_accelerated_networking = false
 
-# The anchor_vm_image defines the Virtual machine image to use, 
+# The anchor_vm_image defines the Virtual machine image to use,
 # if source_image_id is specified the deployment will use the custom image provided
 # in this case os_type must also be specified
 #anchor_vm_image = {}
@@ -754,4 +798,16 @@ enable_purge_control_for_keyvaults = false
 
 #landscape_tfstate_key = null
 
-use_msi_for_clusters = true
+
+#########################################################################################
+#                                                                                       #
+#  SAP Application Information                                                          #
+#                                                                                       #
+#########################################################################################
+
+# bom_name is the name of the SAP Application Bill of Materials file
+
+#bom_name = ""
+
+# configuration_settings is a dictionary containing values that will be persisted in sap-parameters.yaml
+#configuration_settings = {}

@@ -58,7 +58,7 @@ use_prefix = true
 use_zonal_markers = true
 
 # use_secondary_ips controls if the virtual machines should be deployed with two IP addresses. Required for SAP Virtual Hostname support
-#use_secondary_ips = false
+use_secondary_ips = true
 
 # subscription is the subscription in which the system will be deployed (informational only)
 #subscription = ""
@@ -114,7 +114,7 @@ database_platform = "ORACLE-ASM"
 database_server_count = 1
 
 # database_high_availability is a boolean flag controlling if the database tier is deployed highly available (more than 1 node)
-#database_high_availability = false
+database_high_availability = false
 
 # For M series VMs use the SKU name for instance "M32ts"
 # If using a custom disk sizing populate with the node name for Database you have used in the file custom_disk_sizes_filename
@@ -188,13 +188,13 @@ database_vm_use_DHCP = true
 # in this case os_type must also be specified
 
 database_vm_image = {
-  os_type="LINUX",
-  source_image_id="",
-  publisher="Oracle",
-  offer="Oracle-Linux",
-  sku="ol86-lvm-gen2",
-  version="latest",
-  type="marketplace"
+  os_type = "LINUX",
+  source_image_id = "",
+  publisher = "Oracle",
+  offer = "Oracle-Linux",
+  sku = "ol86-lvm-gen2",
+  version = "latest",
+  type = "marketplace"
 }
 
 # database_vm_zones is an optional list defining the availability zones to deploy the database servers
@@ -210,7 +210,7 @@ database_vm_zones = ["1"]
 database_use_ppg = true
 
 # Optional, Defines the that the database virtual machines will not be placed in an availability set
-database_use_avset = true
+database_use_avset = false
 
 # Optional, Defines if the tags for the database virtual machines
 #database_tags = {}
@@ -266,13 +266,13 @@ scs_server_zones = ["1"]
 # if source_image_id is specified the deployment will use the custom image provided,
 # in this case os_type must also be specified
 scs_server_image = {
-  os_type="LINUX",
-  source_image_id="",
-  publisher="RedHat",
-  offer="RHEL-SAP-HA",
-  sku="86sapha-gen2",
-  version="latest",
-  type="marketplace"
+  os_type = "LINUX",
+  source_image_id = "",
+  publisher = "RedHat",
+  offer = "RHEL-SAP-HA",
+  sku = "86sapha-gen2",
+  version = "latest",
+  type = "marketplace"
 }
 
 # scs_server_no_ppg defines the that the SCS virtual machines will not be placed in a proximity placement group
@@ -349,13 +349,13 @@ application_server_use_avset = true
 # if source_image_id is specified the deployment will use the custom image provided,
 # in this case os_type must also be specified
 application_server_image = {
-  os_type="LINUX",
-  source_image_id="",
-  publisher="Oracle",
-  offer="Oracle-Linux",
-  sku="ol86-lvm-gen2",
-  version="latest",
-  type="marketplace"
+  os_type = "LINUX",
+  source_image_id = "",
+  publisher = "Oracle",
+  offer = "Oracle-Linux",
+  sku = "ol86-lvm-gen2",
+  version = "latest",
+  type = "marketplace"
 }
 
 #application_server_vm_avset_arm_ids = []
@@ -389,10 +389,10 @@ webdispatcher_server_count = 0
 #webdispatcher_server_sku = ""
 
 # webdispatcher_server_no_ppg defines the that the Web dispatcher virtual machines will not be placed in a proximity placement group
-webdispatcher_server_use_ppg = true
+webdispatcher_server_use_ppg = false
 
 #webdispatcher_server_no_avset defines the that the Web dispatcher virtual machines will not be placed in an availability set
-webdispatcher_server_use_avset = true
+#webdispatcher_server_no_avset = false
 
 # webdispatcher_server_tags, if defined provides the tags to be associated to the web dispatchers
 #webdispatcher_server_tags = {}
@@ -404,6 +404,8 @@ webdispatcher_server_use_avset = true
 # if source_image_id is specified the deployment will use the custom image provided,
 # in this case os_type must also be specified
 #webdispatcher_server_image = {}
+
+
 
 #########################################################################################
 #                                                                                       #
@@ -444,6 +446,8 @@ sapmnt_volume_size = 128
 # sapmnt_private_endpoint_id defines the Resource identifier for the private endpoint for Azure Files for NFS storage account for sapmnt
 #sapmnt_private_endpoint_id = ""
 
+# use_random_id_for_storageaccounts defines if the sapmnt storage account name will have a random suffix
+use_random_id_for_storageaccounts = true
 #########################################################################################
 #                                                                                       #
 #  HANA Data                                                                            #
@@ -772,6 +776,6 @@ enable_purge_control_for_keyvaults = false
 configuration_settings = {
   ora_release = "19",
   ora_version = "19.0.0",
-  oracle_sbp_patch = "SAP19P_2208-70004508.ZIP",
-  oraclegrid_sbp_patch = "GIRU19P_2208-70004508.ZIP",
+  oracle_sbp_patch = "SAP19P_2305-70004508.ZIP",
+  oraclegrid_sbp_patch = "GIRU19P_2305-70004508.ZIP"
 }
