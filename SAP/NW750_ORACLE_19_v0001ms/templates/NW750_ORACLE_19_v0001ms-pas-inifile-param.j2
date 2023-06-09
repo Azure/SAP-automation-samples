@@ -18,6 +18,7 @@ nwUsers.sapadmUID                                                    = {{ sapadm
 nwUsers.sapsysGID                                                    = {{ sapsys_gid }}
 nwUsers.sidAdmUID                                                    = {{ sidadm_uid }}
 nwUsers.sidadmPassword                                               = {{ main_password }}
+NW_IcmAuth.webadmPassword                                            = {{ main_password }}
 
 NW_Delete_Sapinst_Users.removeUsers                                  = true
 NW_GetMasterPassword.masterPwd                                       = {{ main_password }}
@@ -31,21 +32,33 @@ NW_SCS_Instance.scsVirtualHostname                                   = {{ sap_sc
 NW_adaptProfile.skipSecurityProfileSettings                          = true
 NW_getFQDN.FQDN                                                      = {{ sap_fqdn }}
 
-NW_DDIC_Password.needDDICPasswords                                   = false
+NW_DDIC_Password.needDDICPasswords                                   = true
+NW_DDIC_Password.ddic000Password                                     = {{ main_password }}
+NW_DDIC_Password.ddic001Password                                     = {{ main_password }}
+
 NW_GetMasterPassword.masterPwd                                       = {{ main_password }}
 NW_checkMsgServer.abapMSPort                                         = 36{{ scs_instance_number }}
 NW_getDBInfoGeneric.dbhost                                           = {{ sap_db_hostname }}
 NW_getDBInfoGeneric.dbsid                                            = {{ db_sid }}
 NW_getLoadType.loadType                                              = SAP
+NW_getUnicode.isUnicode                                              = true
 NW_readProfileDir.profileDir                                         = {{ sap_profile_dir }}
+
+ora.multitenant.installMT                                            = FALSE
 ora.multitenant.pdbsid                                               = {{ db_sid }}
+
 ora.whatInstallation                                                 = isSingle
+ora.whatIsInstance                                                   = isSingle
 ora.whatIsASM                                                        = isNonASM
+ora.whatIsCDB                                                        = isNonCDB
+
+ora.whatIsOracleUser                                                 = true
 storageBasedCopy.ora.clientVersion                                   = {{ ora_release }}
 storageBasedCopy.ora.serverVersion                                   = {{ ora_release }}
 storageBasedCopy.ora.ABAPSchema                                      = SAPSR3
 storageBasedCopy.ora.listenerName                                    = LISTENER
 storageBasedCopy.ora.listenerPort                                    = 1521
+storageBasedCopy.ora.swowner                                         = oracle
 
 NW_CI_Instance.ascsVirtualHostname                                    = {{ sap_scs_hostname }}
 NW_CI_Instance.ciInstanceNumber                                       = {{ sap_ciInstanceNumber }}

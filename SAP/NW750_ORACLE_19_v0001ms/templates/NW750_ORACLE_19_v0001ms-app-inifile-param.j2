@@ -40,7 +40,10 @@ NW_getFQDN.FQDN                                                      = {{ sap_fq
 
 NW_System.installSAPHostAgent                                         = {{ sap_installSAPHostAgent }}
 
-NW_DDIC_Password.needDDICPasswords                                   = false
+NW_DDIC_Password.needDDICPasswords                                   = true
+NW_DDIC_Password.ddic000Password                                     = {{ main_password }}
+NW_DDIC_Password.ddic001Password                                     = {{ main_password }}
+
 NW_GetMasterPassword.masterPwd                                       = {{ main_password }}
 NW_checkMsgServer.abapMSPort                                         = 36{{ scs_instance_number }}
 NW_getDBInfoGeneric.dbhost                                           = {{ sap_db_hostname }}
