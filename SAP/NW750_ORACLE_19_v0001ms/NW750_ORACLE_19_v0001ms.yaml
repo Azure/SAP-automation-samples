@@ -1,5 +1,6 @@
 ---
-name:    'NW750_ORACLE_19_ASM_v0001ms'
+name:    'NW750_ORACLE_19_v0001ms'
+filename: 'NW750_ORACLE_19_v0001ms.yaml'
 target:  'Oracle 19c'
 version: "1"
 platform: "ORACLE"
@@ -13,7 +14,7 @@ product_ids:
   pas:     NW_ABAP_CI:NW750.ORA.ABAP
   app:     NW_DI:NW750.ORA.PD
   generic: NW_Users_Create:GENERIC.ORA.PD
-  web:
+  web:     NW_Webdispatcher:NW750.IND.PD
 
 materials:
   dependencies:
