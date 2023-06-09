@@ -15,6 +15,7 @@ materials:
       checksum:     d63ba8bf707f96782101d66cbde9677a8bc11b9cfcfc6bbd167b6728c0243806
       extract:      true
       extractDir:   oraclient
+      creates:      LABEL.ASC
       path:         download_basket
       download:     true
       url:          https://softwaredownloads.sap.com/file/0030000001424202021
@@ -25,6 +26,7 @@ materials:
       checksum:     a12e10404572813ce78862c34ce3d1288b67ebbffa12fbd6fe758a6743773154
       extract:      true
       download:     true
+      creates:      LABEL.ASC
       extractDir:   oraserver
       path:         download_basket
       # creates:     SIGNATURE.SMF
@@ -40,7 +42,7 @@ materials:
       download:     true
       # extractDir:   SBP/GIRU19P
       path:         SBP
-      # creates:     SIGNATURE.SMF
+      creates:     SIGNATURE.SMF
       url:          https://softwaredownloads.sap.com/file/0020000001073602022
 
     - name:         "Oracle SBP - Bundle patches for 19c: SAP19P"
@@ -49,7 +51,7 @@ materials:
       extract:      true
       extractDir:   SBP/SAPSBP
       path:         SBP
-      # creates:     SIGNATURE.SMF
+      creates:     SIGNATURE.SMF
       url:          https://softwaredownloads.sap.com/file/0020000001073002022
 
     - name:         "Oracle SBP - Bundle patches for 19c: SBPJDK19P"
@@ -58,7 +60,7 @@ materials:
       extract:      false
       extractDir:   SBP/SBPJDK
       path:         SBP
-      # creates:     SIGNATURE.SMF
+      creates:     SIGNATURE.SMF
       url:          https://softwaredownloads.sap.com/file/0020000001073412022
 
     - name:         "Oracle SBP - Bundle patches for 19c: OPatch"
@@ -67,7 +69,7 @@ materials:
       extract:      true
       extractDir:   SBP/OPATCH
       path:         SBP
-      # creates:     SIGNATURE.SMF
+      creates:     SIGNATURE.SMF
       url:          https://softwaredownloads.sap.com/file/0020000001092672022
 
 
