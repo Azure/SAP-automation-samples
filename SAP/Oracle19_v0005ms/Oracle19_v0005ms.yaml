@@ -102,15 +102,15 @@ materials:
     #   # creates:     SIGNATURE.SMF
     #   url:          https://softwaredownloads.sap.com/file/0020000001093022022
 
-    - name:         "Oracle GRID SBP - Bundle patches for 19c: SGR"
-      archive:      SGR19P_2305-70004550.ZIP
-      checksum:     4318e9834651495d18b6c218965b0668783e912f735e58f5cb18a41ccdc7cdfc
-      extract:      false
-      download:     true
-      extractDir:   SBP/SGR19P
-      path:         SBP
-      # creates:     SIGNATURE.SMF
-      url:          https://softwaredownloads.sap.com/file/0020000000597712023
+    # - name:         "Oracle GRID SBP - Bundle patches for 19c: SGR"
+    #   archive:      SGR19P_2305-70004550.ZIP
+    #   checksum:     4318e9834651495d18b6c218965b0668783e912f735e58f5cb18a41ccdc7cdfc
+    #   extract:      false
+    #   download:     true
+    #   extractDir:   SBP/SGR19P
+    #   path:         SBP
+    #   # creates:     SIGNATURE.SMF
+    #   url:          https://softwaredownloads.sap.com/file/0020000000597712023
   
     # - name:         "Oracle GRID SBP - Bundle patches for 19c: SBPJDK19P"
     #   archive:      SBPJDK19P_2208-70004550.ZIP
