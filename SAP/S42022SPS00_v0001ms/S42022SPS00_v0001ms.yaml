@@ -27,7 +27,7 @@ product_ids:
 materials:
   dependencies:
     - name:                            "HANA_2_00_070_v0001ms"
-    - name:                            "SWPM20SP14_latest"
+    - name:                            "SWPM20SP15_latest"
     - name:                            "SUM20SP17_latest"
   media:
 
