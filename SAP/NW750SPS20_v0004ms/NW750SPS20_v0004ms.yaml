@@ -23,7 +23,7 @@ materials:
   dependencies:
     - name:                            HANA_2_00_067_v0003ms
     - name:                            SWPM10SP37_latest
-    - name:                            SUM20SP16_latest
+    - name:                            SUM20SP17_latest
 
   media:
     # Kernel
