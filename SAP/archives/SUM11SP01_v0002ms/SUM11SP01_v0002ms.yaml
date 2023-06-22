@@ -1,0 +1,15 @@
+---
+name:    'SUM11SP01'
+target:  'SUM11SP01'
+version: 002
+
+materials:
+
+  media:
+    # SUM
+    - name:         "Support Package SOFTWARE UPDATE MANAGER 1.1 Linux on x86_64 64bit"
+      archive:      SUM11SP01_2-80006800.SAR
+      checksum:     97385e1634a3a22aecfafb74327342c566dd9d12753f3125505d142a4e8a63c5
+      download:     false
+      url:          https://softwaredownloads.sap.com/file/0020000000353242023
+
