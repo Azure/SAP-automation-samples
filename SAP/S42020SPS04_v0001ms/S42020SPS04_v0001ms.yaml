@@ -1020,7 +1020,7 @@ materials:
       url: https://softwaredownloads.sap.com/file/0010000001758902020
       download: false
 
-    - name: "Attribute Change Package 04 for SAP_BASIS 755"
+    - name: "Attribute Change Package 10 for SAP_BASIS 755"
       archive: SAP_BASIS755.SAR
       url: https://softwaredownloads.sap.com/file/0010000001467632021
       download: false
