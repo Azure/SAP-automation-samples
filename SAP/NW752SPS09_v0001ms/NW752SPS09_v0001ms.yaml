@@ -27,6 +27,14 @@ materials:
 
   media:
 
+    # SAPCAR 7.22
+    - name:                            "SAPCAR 7.22; OS: Linux on x86_64 64bit"
+      archive:                         SAPCAR_1115-70006178.EXE
+      checksum:                        765412436934362cc5497e3d659fbb78be91093a091c11ec4fbe84dfb415a0e5
+      filename:                        SAPCAR
+      permissions:                     '0755'
+      url:                             https://softwaredownloads.sap.com/file/0020000000098642022
+
     # kernel components
 
     - name:                            "Kernel Part II (753)"
@@ -188,7 +196,7 @@ materials:
 
     - name:                            "ST-PI 740: SP 0016"
       archive:                         K-74016INSTPI.SAR
-      checksum:     0d5a3c74f813dad48345023c7acd146dc9ef84c121c6d854292cb534006c40a5
+      checksum:                        0d5a3c74f813dad48345023c7acd146dc9ef84c121c6d854292cb534006c40a5
       url:                             https://softwaredownloads.sap.com/file/0010000001454472021
       download:                        false
 
@@ -487,12 +495,5 @@ materials:
       download:                        false
 
     # other components
-
-    - name:                            "SAPCAR"
-      archive:                         SAPCAR_1115-70006178.EXE
-      checksum:                        765412436934362cc5497e3d659fbb78be91093a091c11ec4fbe84dfb415a0e5
-      override_target_filename:        "SAPCAR.EXE"
-      url:                             https://softwaredownloads.sap.com/file/0020000000098642022
-      path:                            download_basket
 
 ...
