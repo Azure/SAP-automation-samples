@@ -26,7 +26,7 @@ product_ids:
 
 materials:
   dependencies:
-    - name:                            "HANA_2_00_070_v0001ms"
+    - name:                            "HANA_2_00_071_v0001ms"
     - name:                            "SWPM20SP15_latest"
     - name:                            "SUM20SP17_latest"
   media:
@@ -296,8 +296,8 @@ materials:
 
     - name:                            "Attribute Change Package 17 for EA-HR 608"
       archive:                         S4HCM100
-      checksum:                        bd4a09eeb95c6ae9c6f873107da4d192d96f4ab7fb10dff4ecd1dae6dd067355
-      url:                             https://softwaredownloads.sap.com/file/0010000001431132022
+      checksum:                        89a1d8cb86855050e6fbbb9ed4613785bf703db181d45ada7d5909e0560bd41c
+      url:                             https://softwaredownloads.sap.com/file/0010000000828662023
       download:                        false
 
     - name:                            "Attribute Change Package 17 for EA-HR 608"
