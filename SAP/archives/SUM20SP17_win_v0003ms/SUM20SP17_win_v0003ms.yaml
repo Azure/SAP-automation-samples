@@ -1,0 +1,14 @@
+---
+name:    'SUM20SP17'
+target:  'SUM20SP17'
+version: 003
+
+materials:
+
+  media:
+
+    - name:         "Patch 3 for SOFTWARE UPDATE MANAGER 2.0 SP17 (Windows)"
+      archive:      SUM20SP17_3-80002458.SAR
+      checksum:     c40b2e786e9a51f666b380626308fa2e0c911e57494a4591330a01a2bb365347
+      download:     false
+      url:          https://softwaredownloads.sap.com/file/0020000000861492023
