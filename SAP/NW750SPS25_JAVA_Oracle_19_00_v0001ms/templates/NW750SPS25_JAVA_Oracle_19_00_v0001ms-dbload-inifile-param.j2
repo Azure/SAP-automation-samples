@@ -1,0 +1,46 @@
+#   2482103 - Installation with SWPM in unattended mode using parameter input file fails
+#   2393060 - SAPinst Framework 749 Central Note
+#   2506859 - SAP system Installation on Oracle database with SWPM in unattended mode
+
+###############################################################################################################################################################################
+#                                                                                                                                                                      #
+# Installation service 'SAP NetWeaver 7.5 > Oracle > Installation > Application Server Java > Distributed System > Database Instance', product id 'NW_Java_DB:NW750.ORA.PD' #                                                                                                                                                                      #
+###############################################################################################################################################################################
+
+# Location of Export CD
+SAPINST.CD.PACKAGE.ORACLI                                  = {{ target_media_location }}/oraclient
+SAPINST.CD.PACKAGE.CD1                                     = {{ target_media_location }}/CD_EXPORT/DATA_UNITS
+#SAPINST.CD.PACKAGE.SCA                                    = {{ target_media_location }}/downloads
+archives.downloadBasket                                    = {{ target_media_location }}/download_basket
+NW_Unpack.dbaToolsSar                                      = {{ target_media_location }}/download_basket/DBATL740O11_48-80002605.SAR
+NW_Unpack.sapExeDbSar                                      = {{ target_media_location }}/download_basket/SAPEXEDB_801-80002605.SAR
+
+# Netweaver parameters
+NW_Delete_Sapinst_Users.removeUsers                        = true
+NW_GetMasterPassword.masterPwd                             = {{ main_password }}
+NW_getDBInfoGeneric.dbhost                                 = {{ sap_db_hostname }}
+NW_getFQDN.FQDN                                            = {{ sap_fqdn }}
+NW_getLoadType.loadType                                    = SAP
+NW_readProfileDir.profileDir                               = /sapmnt/{{ sap_sid | upper }}/profile
+nwUsers.sapadmUID                                          = {{ sapadm_uid }}
+nwUsers.sapsysGID                                          = {{ sapsys_gid}}
+nwUsers.sidAdmUID                                          = {{ sidadm_uid }}
+nwUsers.sidadmPassword                                     = {{ main_password }}
+
+#Database parameters
+NW_getDBInfoGeneric.dbsid                                  = {{ db_sid | upper }}
+ora.SysPassword                                            = {{ main_password }}
+ora.SystemPassword                                         = {{ main_password }}
+ora.createStatisticsCodeJAVA                               = CREATE
+ora.dbhome                                                 = /oracle/{{ db_sid | upper }}/19
+ora.multitenant.installMT = FALSE
+ora.multitenant.pdbsid                                     = {{ db_sid | upper }}
+ora.oraclePassword                                         = {{ main_password }}
+ora.orasidPassword                                         = {{ main_password }}
+ora.whatInstallation = isSingle
+ora.whatIsOracleUser = true
+storageBasedCopy.javaSchemaPassword                        = {{ main_password }}
+storageBasedCopy.ora.JavaSchema                            = SAPSR3DB
+storageBasedCopy.ora.clientVersion                         = 19
+storageBasedCopy.ora.serverVersion                         = 19
+storageBasedCopy.ora.swowner                               = oracle
