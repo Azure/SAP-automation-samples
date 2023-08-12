@@ -125,7 +125,7 @@ management_bastion_subnet_address_prefix = "10.11.20.128/26"
 #
 ########################################################
 
-deployer_enable_public_ip = true
+deployer_enable_public_ip = false
 
 
 # deployer_size is optional and defines the virtual machine SKU
