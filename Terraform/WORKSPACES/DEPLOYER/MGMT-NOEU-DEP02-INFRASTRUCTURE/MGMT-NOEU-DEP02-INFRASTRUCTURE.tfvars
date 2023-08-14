@@ -207,7 +207,7 @@ This block describes the variables for the authentication section block in the j
 #deployer_assign_subscription_permissions=true
 
 # use_private_endpoint is a boolean flag controlling if the keyvaults and storage accounts have private endpoints
-# use_private_endpoint=false
+use_private_endpoint=true
 
 # use_service_endpoint is a boolean flag controlling service_endpoints are used
 use_service_endpoint = true
@@ -217,7 +217,7 @@ use_service_endpoint = true
 auto_configure_deployer = true
 
 # Boolean value indicating if firewall should be enabled for key vaults and storage
-enable_firewall_for_keyvaults_and_storage = false
+enable_firewall_for_keyvaults_and_storage = true
 
 # List of object IDs to add to key vault policies"
 #additional_users_to_add_to_keyvault_policies=["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy"]
