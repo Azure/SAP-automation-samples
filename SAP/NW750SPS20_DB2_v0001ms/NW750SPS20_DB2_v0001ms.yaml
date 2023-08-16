@@ -440,9 +440,9 @@ materials:
       url:          https://softwaredownloads.sap.com/file/0010000020115572017
       download:     false
 
-    - name:         "Attribute Change Package 06 for SAP_UI 754"
+    - name:         "Attribute Change Package 07 for SAP_UI 754"
       archive:      SAP_UI754.SAR
-      checksum:     9bbf3de543c5efbbd91e930a606704b2353edda3bb3661b47dee2edca8f3cf80
+      checksum:     cc0d69286eaec4bd21510984b06f02368df2a84c34e5080c72305bae1498dae4
       url:          https://softwaredownloads.sap.com/file/0010000000031692020
       download:     false
 

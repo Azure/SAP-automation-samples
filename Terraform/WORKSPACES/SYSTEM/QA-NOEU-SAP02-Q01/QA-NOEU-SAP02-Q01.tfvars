@@ -37,7 +37,7 @@
 environment = "QA"
 
 # The location value is a mandatory field, it is used to control where the resources are deployed
-location = "westeurope"
+location = "northeurope"
 
 #If you want to customize the disk sizes for VMs use the following parameter to specify the custom sizing file.
 #custom_disk_sizes_filename = ""
@@ -210,10 +210,10 @@ database_vm_zones = ["1", "2"]
 #database_vm_avset_arm_ids = []
 
 # Optional, Defines the that the database virtual machines will not be placed in a proximity placement group
-#database_use_ppg = true
+database_use_ppg = false
 
 # Optional, Defines the that the database virtual machines will not be placed in an availability set
-#database_use_avset = true
+database_use_avset = false
 
 # Optional, Defines if the tags for the database virtual machines
 #database_tags = {}
@@ -274,10 +274,10 @@ scs_server_image = {
 }
 
 # scs_server_no_ppg defines the that the SCS virtual machines will not be placed in a proximity placement group
-#scs_server_use_ppg = true
+scs_server_use_ppg = true
 
 # scs_server_no_avset defines the that the SCS virtual machines will not be placed in an availability set
-#scs_server_use_avset = true
+scs_server_use_avset = false
 
 # scs_server_app_nic_ips, if provided provides the static IP addresses 
 # for the network interface cards connected to the application subnet
@@ -335,10 +335,10 @@ application_server_count = 2
 app_tier_authentication_type = "key"
 
 # application_server_no_ppg defines the that the application server virtual machines will not be placed in a proximity placement group
-#application_server_use_ppg = true
+application_server_use_ppg = true
 
 # application_server_no_avset defines the that the application server virtual machines will not be placed in an availability set
-#application_server_use_avset = true
+application_server_use_avset = true
 
 # application_server_tags, if defined provides the tags to be associated to the application servers
 #application_server_tags = {}

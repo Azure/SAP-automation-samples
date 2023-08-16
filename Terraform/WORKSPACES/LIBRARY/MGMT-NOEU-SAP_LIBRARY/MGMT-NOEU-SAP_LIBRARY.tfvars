@@ -126,10 +126,6 @@ location = "northeurope"
 dns_label = "azure.sdaf.contoso.net"
 
 # use_private_endpoint is a boolean flag controlling if the keyvaults and storage accounts have private endpoints
-#use_private_endpoint=false
-
-
-# use_service_endpoint is a boolean flag controlling service_endpoints are used
-#use_service_endpoint=false
+use_private_endpoint=true
 
 

@@ -53,7 +53,7 @@ resourcegroup_tags = {
 #management_network_name=""
 management_network_logical_name = "DEP02"
 #management_network_arm_id=""
-management_network_address_space = "10.10.20.0/24"
+management_network_address_space = "10.11.20.0/24"
 
 # management subnet
 # If defined these parameters control the subnet name and the subnet prefix
@@ -125,7 +125,7 @@ management_bastion_subnet_address_prefix = "10.11.20.128/26"
 #
 ########################################################
 
-deployer_enable_public_ip = true
+deployer_enable_public_ip = false
 
 
 # deployer_size is optional and defines the virtual machine SKU
@@ -207,7 +207,7 @@ This block describes the variables for the authentication section block in the j
 #deployer_assign_subscription_permissions=true
 
 # use_private_endpoint is a boolean flag controlling if the keyvaults and storage accounts have private endpoints
-# use_private_endpoint=false
+use_private_endpoint=true
 
 # use_service_endpoint is a boolean flag controlling service_endpoints are used
 use_service_endpoint = true
@@ -217,7 +217,7 @@ use_service_endpoint = true
 auto_configure_deployer = true
 
 # Boolean value indicating if firewall should be enabled for key vaults and storage
-enable_firewall_for_keyvaults_and_storage = false
+enable_firewall_for_keyvaults_and_storage = true
 
 # List of object IDs to add to key vault policies"
 #additional_users_to_add_to_keyvault_policies=["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy"]

@@ -34,10 +34,10 @@
 #########################################################################################
 
 # The environment value is a mandatory field, it is used for partitioning the environments, for example (PROD and NP)
-environment = "DEV"
+environment = "QA"
 
 # The location value is a mandatory field, it is used to control where the resources are deployed
-location = "westeurope"
+location = "northeurope"
 
 #If you want to customize the disk sizes for VMs use the following parameter to specify the custom sizing file.
 #custom_disk_sizes_filename = ""
@@ -88,7 +88,7 @@ use_zonal_markers = true
 #########################################################################################
 
 # The network logical name is mandatory - it is used in the naming convention and should map to the workload virtual network logical name 
-network_logical_name = "SAP01"
+network_logical_name = "SAP02"
 
 # use_loadbalancers_for_standalone_deployments is a boolean flag that can be used to control if standalone deployments (non HA) will have load balancers
 use_loadbalancers_for_standalone_deployments = true
@@ -102,7 +102,7 @@ use_private_endpoint = true
 #                                                                                       #
 #########################################################################################
 
-database_sid = "SD2"
+database_sid = "QD2"
 
 # database_platform defines the database backend, supported values are
 # - HANA
@@ -238,7 +238,7 @@ enable_app_tier_deployment = true
 app_tier_use_DHCP = true
 
 # sid is a mandatory field that defines the SAP Application SID
-sid = "SD2"
+sid = "QD2"
 
 #########################################################################################
 #                                                                                       #
