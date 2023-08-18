@@ -237,9 +237,9 @@
           url: https://softwaredownloads.sap.com/file/0010000000059642016
           download: false
 
-        - name: "Attribute Change Package 26 for GBX01HR5 605"
+        - name: "Attribute Change Package 28 for GBX01HR5 605"
           archive: GBX01HR5605.SAR
-          checksum: 19d06ed87c3fc1b9390fafa94d9a2d25ddabd3c0e61777a693e6155f113fa167
+          checksum: 9b5f3fca5b87ba80f4048f857a22b2a63033b58ffb977a19241b1316a4731701
           url: https://softwaredownloads.sap.com/file/0010000000033172015
           download: false
 
@@ -993,9 +993,9 @@
           url: https://softwaredownloads.sap.com/file/0010000000060132013
           download: false
 
-        - name: "Attribute Change Package 45 for ST-PI 740"
+        - name: "Attribute Change Package 56 for ST-PI 740"
           archive: ST-PI740.SAR
-          checksum: 2b87eb02fa26dd8279a37eaa4c1ee64adab8bccbaca668f1e32ff421bdfbf9c8
+          checksum: 564fcbe7d359516cb09d21098223dd87ca81873777e7d3ab36a2a73b2406871c
           url: https://softwaredownloads.sap.com/file/0010000000297212015
           download: false
 

@@ -4181,7 +4181,7 @@ materials:
       url: https://softwaredownloads.sap.com/file/0010000000067452016
       download: false
 
-    - name: "Attribute Change Package 45 for ST-PI 740"
+    - name: "Attribute Change Package 56 for ST-PI 740"
       archive: ST-PI740.SAR
       url: https://softwaredownloads.sap.com/file/0010000000297212015
       download: false
