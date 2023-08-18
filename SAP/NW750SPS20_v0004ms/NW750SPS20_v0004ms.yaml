@@ -711,9 +711,9 @@ materials:
       download:                        false
       url:                             https://softwaredownloads.sap.com/file/0010000000031692020
 
-    - name:                            "Attribute Change Package 34 for ST-PI 740"
+    - name:                            "Attribute Change Package 56 for ST-PI 740"
       archive:                         ST-PI740.SAR
-      checksum:                        02132b43b349c45e8fc6731ceb8a78ef406477a942637bb53b8228d9e11ad6a7
+      checksum:                        564fcbe7d359516cb09d21098223dd87ca81873777e7d3ab36a2a73b2406871c
       download:                        false
       url:                             https://softwaredownloads.sap.com/file/0010000000297212015
 
