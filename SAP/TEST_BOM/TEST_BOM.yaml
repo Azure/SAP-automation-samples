@@ -1129,9 +1129,9 @@ materials:
       checksum:                       e5e0239d48ad104c78316a5f3367daf3e51d07a881182904db585195f222d42d 
       url:                            https://softwaredownloads.sap.com/file/0010000000048162010
       download:                       true
-    - name:                           "Attribute Change Package 54 for ST-PI 740"
+    - name:                           "Attribute Change Package 56 for ST-PI 740"
       archive:                        ST-PI740.SAR
-      checksum:                       2b87eb02fa26dd8279a37eaa4c1ee64adab8bccbaca668f1e32ff421bdfbf9c8 
+      checksum:                       564fcbe7d359516cb09d21098223dd87ca81873777e7d3ab36a2a73b2406871c 
       url:                            https://softwaredownloads.sap.com/file/0010000000297212015
       download:                       true
     - name:                           "Attribute Change Package 06 for SAP_AP 700"

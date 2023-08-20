@@ -294,7 +294,7 @@ materials:
       url:          https://softwaredownloads.sap.com/file/0010000000059642016
       download:     false
 
-    - name:         "Attribute Change Package 22 for GBX01HR5 605"
+    - name:         "Attribute Change Package 28 for GBX01HR5 605"
       archive:      GBX01HR5605.SAR
       url:          https://softwaredownloads.sap.com/file/0010000000033172015
       download:     false
@@ -709,7 +709,7 @@ materials:
       url:          https://softwaredownloads.sap.com/file/0010000000249512014
       download:     false
 
-    - name:         "Attribute Change Package 45 for ST-PI 740"
+    - name:         "Attribute Change Package 56 for ST-PI 740"
       archive:      ST-PI740.SAR
       url:          https://softwaredownloads.sap.com/file/0010000000297212015
       download:     false
@@ -724,7 +724,7 @@ materials:
       url:          https://softwaredownloads.sap.com/file/0010000001617952021
       download:     false
 
-    - name:         "Attribute Change Package 30 for UIHR002 100"
+    - name:         "Attribute Change Package 33 for UIHR002 100"
       archive:      UIHR002100.SAR
       url:          https://softwaredownloads.sap.com/file/0010000020208092017
       download:     false
