@@ -8,8 +8,6 @@
 - hosts:                               localhost
   name:                                "Host tasks"
   gather_facts:                        true
-  vars_files:
-    - vars/ansible-input-api.yaml # API Input template with defaults
 
   # -------------------------------------+---------------------------------------8
   #
@@ -65,8 +63,6 @@
 
   name:                                "Examples on how to run commands on remote hosts"
   gather_facts:                        true
-  vars_files:
-    - vars/ansible-input-api.yaml # API Input template with defaults
   tasks:
 
     - name:                            "Calculate information about the OS distribution"
