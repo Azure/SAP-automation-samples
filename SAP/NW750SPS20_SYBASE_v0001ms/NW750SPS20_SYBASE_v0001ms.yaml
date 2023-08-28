@@ -24,7 +24,7 @@ product_ids:
 
 materials:
   dependencies:
-    - name:                            SYBASE_1603SP11_v0001ms
+    - name:                            SYBASE_1603SP14_v0001ms
     - name:                            SWPM10SP38_latest
     - name:                            SUM20SP17_latest
 
