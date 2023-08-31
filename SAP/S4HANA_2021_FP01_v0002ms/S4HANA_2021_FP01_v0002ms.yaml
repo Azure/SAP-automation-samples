@@ -24,7 +24,7 @@ product_ids:
 
 materials:
   dependencies:
-    - name:         "HANA_2_00_067_v0002ms"
+    - name:         "HANA_2_00_067_v0004ms"
   media:
 
     # SWPM - Dynamic Download
