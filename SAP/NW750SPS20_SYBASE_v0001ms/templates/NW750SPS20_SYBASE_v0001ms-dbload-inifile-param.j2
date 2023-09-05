@@ -176,7 +176,7 @@ SYB.NW_DB.sapsso_pass                                                   = {{ mai
 SYB.NW_DB.sqlServerConnections                                          = 200
 
 # Number of CPU cores for the database server
-SYB.NW_DB.sqlServerCores                                                = 4
+SYB.NW_DB.sqlServerCores                                                = {{ core_count }}
 
 # Host name of the database server
 SYB.NW_DB.sqlServerHostname                                             = {{ sap_db_hostname }}
