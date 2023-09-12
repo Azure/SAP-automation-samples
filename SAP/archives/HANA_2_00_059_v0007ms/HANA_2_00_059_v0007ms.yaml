@@ -1,7 +1,7 @@
 ---
 name:     'HANA_2_00_059_v0006ms'
 target:   'HANA 2.0'
-version:  6
+version:  7
 platform: 'HANA'
 
 materials:
