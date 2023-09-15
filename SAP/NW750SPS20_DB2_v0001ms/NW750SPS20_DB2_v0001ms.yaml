@@ -43,16 +43,19 @@ materials:
 
     - name:                            "Kernel Part II (753)"
       archive:                         SAPEXEDB_900-80002603.SAR
+      checksum:                        ae6bfadfd82577ccc010fae24cc82bc65795aa1cfe3186eb1d6ec4d019bac8db
       url:                             https://softwaredownloads.sap.com/file/0020000001557492021
       path:                            download_basket
 
     - name:                            "Kernel Part I (753)"
       archive:                         SAPEXE_900-80002573.SAR
+      checksum:                        f5755f3df7be0bd0f1f07c959bc55c806a51ba3131287c568c2535bd8fdf713d
       url:                             https://softwaredownloads.sap.com/file/0020000001557032021
       path:                            download_basket
 
     - name:                            "SAP HOST AGENT 7.22 SP55"
       archive:                         SAPHOSTAGENT55_55-80004822.SAR
+      checksum:                        9a93391c1a52dff5368e834dc0d16c84e69f99ef39d3b6bdfc58b99af6d85553
       url:                             https://softwaredownloads.sap.com/file/0020000000239812022
       path:                            download_basket
 
