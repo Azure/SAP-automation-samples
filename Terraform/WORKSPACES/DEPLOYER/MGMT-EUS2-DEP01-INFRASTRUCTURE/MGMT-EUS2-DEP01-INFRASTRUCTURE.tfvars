@@ -183,3 +183,6 @@ auto_configure_deployer = true
 
 # List of object IDs to add to key vault policies"
 #additional_users_to_add_to_keyvault_policies=["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy"]
+
+# List of subnet IDs to add to storage account and key vault firewalls"
+#subnets_to_add_to_firewall_for_keyvaults_and_storage=["<azure_resource_id_for_subnet>"]

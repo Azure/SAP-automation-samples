@@ -9,7 +9,7 @@ materials:
   media:
     - name:         "DB2 Software"
       archive:      51055306.ZIP
-      #checksum:     
+      checksum:     756713a7229e432f2aeb3be6376720b5fe1d25760a95f8a2b28f1336eaa660a0
       extract:      true
       extractDir:   sapdb2_software/db2server
       path:         download_basket
@@ -18,7 +18,7 @@ materials:
 
     - name:         "DB2 Client"
       archive:      51055308.ZIP
-      #checksum:     
+      checksum:     404a23fa9ec10781a05d5a4cf2a6107e9673348daa9a549d2bb517784e136b37
       extract:      true
       download:     true
       extractDir:   sapdb2_software/db2client

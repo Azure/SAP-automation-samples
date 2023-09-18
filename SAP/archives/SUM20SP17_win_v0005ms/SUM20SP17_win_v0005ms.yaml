@@ -1,0 +1,14 @@
+---
+name:    'SUM20SP17'
+target:  'SUM20SP17'
+version: 005
+
+materials:
+
+  media:
+
+    - name:         "Patch 5 for SOFTWARE UPDATE MANAGER 2.0 SP17 (Windows)"
+      archive:      SUM20SP17_5-80002458.SAR
+      checksum:     023ce9daf7ce31b34ff5ec814a729360241adcb099d926f124603c142a73e8d7
+      download:     false
+      url:          https://softwaredownloads.sap.com/file/0020000000946252023

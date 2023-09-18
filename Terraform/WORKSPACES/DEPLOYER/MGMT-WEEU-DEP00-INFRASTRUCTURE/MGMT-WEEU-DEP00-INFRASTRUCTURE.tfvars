@@ -225,3 +225,5 @@ auto_configure_deployer = true
 # Boolean value indicating if firewall should be enabled for key vaults and storage
 enable_firewall_for_keyvaults_and_storage = false
 
+# List of subnet IDs to add to storage account and key vault firewalls"
+#subnets_to_add_to_firewall_for_keyvaults_and_storage=["<azure_resource_id_for_subnet>"]
