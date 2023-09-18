@@ -63,7 +63,7 @@ materials:
 
     - name:         "Oracle SBP - Bundle patches for 19c: OPatch 12.2.0.1.36"
       archive:      OPATCH19P_2308-70004508.ZIP
-      checksum:     148501259633ee3f14e81d59d55ce189a95eb045d88dbf64653ac0c158dbf8ce
+      checksum:     6863b0e56e4e3ae4ad26d90b671570849a9265d60a4cbe3f3c6eee5c83c6e230
       extract:      true
       extractDir:   SBP/OPATCH
       path:         SBP
@@ -104,7 +104,7 @@ materials:
 
     - name:         "Oracle GRID SBP - Bundle patches for 19c: SGR"
       archive:      SGR19P_2308-70004550.ZIP
-      checksum:     4318e9834651495d18b6c218965b0668783e912f735e58f5cb18a41ccdc7cdfc
+      checksum:     472549e1b19b960561a21a96761f633df2f008ce6850e40004db2b9511911e9d
       extract:      false
       download:     true
       extractDir:   GSBP/SGR19P
