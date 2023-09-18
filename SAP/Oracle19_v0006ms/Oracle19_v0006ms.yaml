@@ -120,5 +120,14 @@ materials:
       path:         GSBP
       # creates:     SIGNATURE.SMF
       url:          https://softwaredownloads.sap.com/file/0020000000993202023
+    
 
+    - name:         "Grid Infrastructure OCW Merge 19.20.0.0.230718"
+      archive:      GIMERGEOCW19P_2308-70004550.ZIP
+      checksum:     b3e1ef0a757e251f3e6992af7a451f20a257b24252d2d596d2e2a6a814ddcc49
+      extract:      false
+      extractDir:   GSBP/SBPJDK
+      path:         GSBP
+      # creates:     SIGNATURE.SMF
+      url:          https://softwaredownloads.sap.com/file/0020000000993152023
 ...
