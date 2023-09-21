@@ -1,6 +1,6 @@
 ---
 
-name:                                   "SAP S/4 HANA 2022 FP02"
+name:                                   "SAP S/4HANA 2022 FP 02"
 filename:                               "S42022_SP01_v01"
 target:                                 "S/4 HANA 2022"
 version:                                1
@@ -721,7 +721,7 @@ materials:
     - name: "SAP_BW 757: SP 0001"
       archive: K-75701INSAPBW.SAR
       url: https://softwaredownloads.sap.com/file/0010000001643282022
-      checksum: 
+      checksum: 9bf9da73e2294eb2ffd2d25e50b28bcda55bea978f52f31a9a43f82584990a44
       download: false9bf9da73e2294eb2ffd2d25e50b28bcda55bea978f52f31a9a43f82584990a44
 
     - name: "SAP_GWFND 757: SP 0001"
@@ -937,20 +937,19 @@ materials:
     - name: "Servicetools for SAP Basis 731 and higher"
       archive: KITABC3.SAR
       url: https://softwaredownloads.sap.com/file/0010000001370422022
+      checksum: 6c6fc1d02395bec4ddacd592d0db7e6173168dd4066f89dd061b097b51f168a0
       download: false
 
     - name: "Servicetools for SAP Basis 731 and higher"
       archive: KITABC4.SAR
       url: https://softwaredownloads.sap.com/file/0010000001370422022
+      checksum: 6c6fc1d02395bec4ddacd592d0db7e6173168dd4066f89dd061b097b51f168a0
       download: false
 
     - name: "Servicetools for SAP Basis 731 and higher"
       archive: KITABC5.SAR
       url: https://softwaredownloads.sap.com/file/0010000001370422022
-      download: false
-
-    - name: "Patch  For  Linux on x86_64 64bit"
-      archive: R3trans_126-70006642.SAR
+      checksum: 6c6fc1d02395bec4ddacd592d0db7e6173168dd4066f89dd061b097b51f168a0
       download: false
 
     - name: "Attribute Change Package 05 for S4HCM 100"
