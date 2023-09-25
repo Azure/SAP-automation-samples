@@ -102,6 +102,17 @@ materials:
       # creates:     SIGNATURE.SMF
       url:          https://softwaredownloads.sap.com/file/0020000000993572023
 
+
+    - name:         "Oracle GRID SBP - Opatch"
+      archive:      OPATCH19P_2308-70004550.ZIP
+      checksum:     75705a034723671c6317f7c4ba03d242385a15d653e623c36cdbbb7ce55d4e34
+      extract:      true
+      download:     true
+      extractDir:   GSBP/OPATCH
+      path:         GSBP
+      creates:      SIGNATURE.SMF
+      url:          https://softwaredownloads.sap.com/file/0020000000993172023
+
     - name:         "Oracle GRID SBP - Bundle patches for 19c: SGR"
       archive:      SGR19P_2308-70004550.ZIP
       checksum:     472549e1b19b960561a21a96761f633df2f008ce6850e40004db2b9511911e9d
