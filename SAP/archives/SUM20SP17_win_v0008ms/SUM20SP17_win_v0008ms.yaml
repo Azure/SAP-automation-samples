@@ -1,0 +1,14 @@
+---
+name:    'SUM20SP17'
+target:  'SUM20SP17'
+version: 008
+
+materials:
+
+  media:
+
+    - name:         "Patch 8 for SOFTWARE UPDATE MANAGER 2.0 SP17 (Windows)"
+      archive:      SUM20SP17_8-80002458.SAR
+      checksum:     3a28411bf6affdd2d7793efe21cb1a3774d4de2ae26564b3e86ae3b0ca9483ba
+      download:     false
+      url:          https://softwaredownloads.sap.com/file/0020000001090732023
