@@ -102,7 +102,6 @@ materials:
       # creates:     SIGNATURE.SMF
       url:          https://softwaredownloads.sap.com/file/0020000000993572023
 
-
     - name:         "Oracle GRID SBP - Opatch"
       archive:      OPATCH19P_2308-70004550.ZIP
       checksum:     75705a034723671c6317f7c4ba03d242385a15d653e623c36cdbbb7ce55d4e34
