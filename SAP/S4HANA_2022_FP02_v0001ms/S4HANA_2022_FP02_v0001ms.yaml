@@ -58,11 +58,11 @@ materials:
       checksum: 280c13ca76d3b2fb1aba5cccdff9b9e3ae7988f6ca5f2553563fd2360dc8f688
       path: download_basket
 
-    - name: "SP12 Patch7 for UMML4HANA 1"
-      archive: HANAUMML12_7-70001054.ZIP
-      url: https://softwaredownloads.sap.com/file/0020000000665292023
-      checksum: c26328f2fd99eb8188aa4ff66d682818a6c402bc37efd8631ed166ad585ca44d
-      path: download_basket
+    # - name: "SP12 Patch7 for UMML4HANA 1"
+    #  archive: HANAUMML12_7-70001054.ZIP
+    #  url: https://softwaredownloads.sap.com/file/0020000000665292023
+    #  checksum: c26328f2fd99eb8188aa4ff66d682818a6c402bc37efd8631ed166ad585ca44d
+    #  path: download_basket
       
     - name: "Predi. Analy. APL 2203 for SAP HANA 2.0 SPS03 and beyond"
       archive: SAPPAAPL4_2203_2-80004547.ZIP
