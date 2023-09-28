@@ -63,6 +63,11 @@ use_secondary_ips = true
 # subscription is the subscription in which the system will be deployed (informational only)
 #subscription = ""
 
+# use_scalesets_for_deployment defines if Flexible Virtual Machine Scale Sets are used for the deployment
+use_scalesets_for_deployment = false
+
+# database_use_premium_v2_storage defines if the database tier will use premium v2 storage
+database_use_premium_v2_storage = false
 
 #########################################################################################
 #                                                                                       #
@@ -93,6 +98,23 @@ use_loadbalancers_for_standalone_deployments = true
 # use_private_endpoint is a boolean flag controlling if the key vaults and storage accounts have private endpoints
 #use_private_endpoint = false
 
+
+#########################################################################################
+#                                                                                       #
+#  Cluster settings                                                                     #
+#                                                                                       #
+#########################################################################################
+
+# use_msi_for_clusters if defined will use managed service identity for the Pacemaker cluster fencing
+use_msi_for_clusters = true
+
+# fencing_role_name, If specified the role name to use for the fencing agent
+#fencing_role_name = ""
+
+# use_simple_mount specifies if Simple mounts are used (Applicable for SLES 15 SP# or newer)
+use_simple_mount = false
+
+
 #########################################################################################
 #                                                                                       #
 #  Database tier                                                                        #                                                                                       #
@@ -105,7 +127,8 @@ database_sid = "ORA"
 # - HANA
 # - DB2
 # - ORACLE
-# - ASE
+# - ORACLE-ASM
+# - SYBASE
 # - SQLSERVER
 # - NONE (in this case no database tier is deployed)
 database_platform = "ORACLE-ASM"
@@ -119,6 +142,9 @@ database_high_availability = false
 # For M series VMs use the SKU name for instance "M32ts"
 # If using a custom disk sizing populate with the node name for Database you have used in the file custom_disk_sizes_filename
 database_size = "1024"
+
+# database_vm_sku, if provided defines the Virtual Machine SKU to use for the database virtual machines"
+#database_vm_sku = ""
 
 # database_instance_number if provided defines the instance number of the HANA database
 #database_instance_number = ""
@@ -275,10 +301,10 @@ scs_server_image = {
   type = "marketplace"
 }
 
-# scs_server_no_ppg defines the that the SCS virtual machines will not be placed in a proximity placement group
+# scs_server_use_ppg defines the that the SCS virtual machines will be placed in a proximity placement group
 scs_server_use_ppg = true
 
-# scs_server_no_avset defines the that the SCS virtual machines will not be placed in an availability set
+# scs_server_use_avset defines the that the SCS virtual machines will be placed in an availability set
 scs_server_use_avset = true
 
 # scs_server_app_nic_ips, if provided provides the static IP addresses
@@ -336,10 +362,10 @@ app_tier_dual_nics = false
 # Optional, Defines the default authentication model for the Applicatiuon tier VMs (key/password)
 #app_tier_authentication_type = ""
 
-# application_server_no_ppg defines the that the application server virtual machines will not be placed in a proximity placement group
+# application_server_use_ppg defines the that the application server virtual machines will be placed in a proximity placement group
 application_server_use_ppg = true
 
-# application_server_no_avset defines the that the application server virtual machines will not be placed in an availability set
+# application_server_use_avset defines the that the application server virtual machines will be placed in an availability set
 application_server_use_avset = true
 
 # application_server_tags, if defined provides the tags to be associated to the application servers
@@ -369,6 +395,13 @@ application_server_image = {
 # webdispatcher_server_count defines how many web dispatchers to deploy
 webdispatcher_server_count = 0
 
+# web_sid is the Web Dispatcher SID
+#web_sid = ""
+
+# web_instance_number defines the web instance number
+web_instance_number = "00"
+
+
 # webdispatcher_server_app_nic_ips, if provided provides the static IP addresses
 # for the network interface cards connected to the application subnet
 #webdispatcher_server_app_nic_ips = []
@@ -388,11 +421,11 @@ webdispatcher_server_count = 0
 # webdispatcher_server_sku, if defined provides the SKU to use for the web dispatchers
 #webdispatcher_server_sku = ""
 
-# webdispatcher_server_no_ppg defines the that the Web dispatcher virtual machines will not be placed in a proximity placement group
+# webdispatcher_server_use_ppg defines the that the Web dispatcher virtual machines will be placed in a proximity placement group
 webdispatcher_server_use_ppg = false
 
-#webdispatcher_server_no_avset defines the that the Web dispatcher virtual machines will not be placed in an availability set
-#webdispatcher_server_no_avset = false
+#webdispatcher_server_use_avset defines the that the Web dispatcher virtual machines will be placed in an availability set
+webdispatcher_server_use_avset = true
 
 # webdispatcher_server_tags, if defined provides the tags to be associated to the web dispatchers
 #webdispatcher_server_tags = {}
@@ -423,8 +456,8 @@ resource_offset = 1
 # deploy_application_security_groups if defined will create application security groups
 deploy_application_security_groups = true
 
-# use_msi_for_clusters if defined will use managed service identity for the Pacemaker cluster fencing
-use_msi_for_clusters = true
+# deploy_v1_monitoring_extension Defines if the Microsoft.AzureCAT.AzureEnhancedMonitoring extension will be deployed
+deploy_v1_monitoring_extension = true
 
 #########################################################################################
 #                                                                                       #
@@ -448,6 +481,10 @@ sapmnt_volume_size = 128
 
 # use_random_id_for_storageaccounts defines if the sapmnt storage account name will have a random suffix
 use_random_id_for_storageaccounts = true
+
+# ANF_HANA_use_AVG defines if the ANF volume will be created in an Application Volume Group
+ANF_HANA_use_AVG = false
+
 #########################################################################################
 #                                                                                       #
 #  HANA Data                                                                            #
@@ -543,7 +580,10 @@ use_random_id_for_storageaccounts = true
 #########################################################################################
 
 # ANF_sapmnt, if defined, will create Azure NetApp Files volume for /sapmnt
-#ANF_sapmnt_use_existing = null
+#ANF_sapmnt = false
+
+# ANF_sapmnt_use_clone_in_secondary_zone, if defined, uses clone in secondary region for sapmnt volume.
+#ANF_sapmnt_use_clone_in_secondary_zone = false
 
 # ANF_sapmnt_volume_size, if defined, provides the size of the /sapmnt volume.
 #ANF_sapmnt_volume_size = 0
@@ -777,5 +817,6 @@ configuration_settings = {
   ora_release = "19",
   ora_version = "19.0.0",
   oracle_sbp_patch = "SAP19P_2305-70004508.ZIP",
-  oraclegrid_sbp_patch = "GIRU19P_2305-70004508.ZIP"
+  oraclegrid_sbp_patch = "GIRU19P_2305-70004508.ZIP",
 }
+
