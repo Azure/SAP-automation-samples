@@ -1,0 +1,47 @@
+---
+name:               "Tools"
+target:             "Deployer"
+version:            1
+defaults:
+  target_location:  "{{ target_media_location }}/download_basket"
+
+  generic:          "NW_Users_Create:GENERIC.HDB.PD"
+
+materials:
+  media:
+
+    # SWPM - Dynamic Download
+    - name:         swpm20
+      dynamic:      true
+      platform:     LNX
+      extract:      true
+      extractDir:   SWPM
+      creates:      SIGNATURE.SMF
+      path:         linuxswpm20
+
+    # SWPM - Dynamic Download
+    - name:         swpm10
+      dynamic:      true
+      platform:     LNX
+      extract:      true
+      extractDir:   SWPM
+      creates:      SIGNATURE.SMF
+      path:         linuxswpm10
+
+    # SUM - Dynamic Download
+    - name:         sum20
+      dynamic:      true
+      platform:     LNX
+      download:     false
+      path:         linuxsum20
+
+    # SAPCAR 7.22
+    - name:         "SAPCAR 7.22; OS: Linux on x86_64 64bit"
+      archive:      SAPCAR_1115-70006178.EXE
+      checksum:     765412436934362cc5497e3d659fbb78be91093a091c11ec4fbe84dfb415a0e5
+      filename:     SAPCAR
+      permissions:  '0755'
+      url:          https://softwaredownloads.sap.com/file/0020000000098642022
+
+
+...
