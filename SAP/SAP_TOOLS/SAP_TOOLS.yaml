@@ -19,14 +19,14 @@ materials:
       creates:      SIGNATURE.SMF
       path:         linuxswpm20
 
-    # SWPM - Dynamic Download
-    - name:         swpm10
-      dynamic:      true
-      platform:     LNX
-      extract:      true
-      extractDir:   SWPM
-      creates:      SIGNATURE.SMF
-      path:         linuxswpm10
+    # # SWPM - Dynamic Download
+    # - name:         swpm10
+    #   dynamic:      true
+    #   platform:     LNX
+    #   extract:      true
+    #   extractDir:   SWPM
+    #   creates:      SIGNATURE.SMF
+    #   path:         linuxswpm10
 
     # SUM - Dynamic Download
     - name:         sum20
