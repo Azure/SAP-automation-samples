@@ -42,4 +42,37 @@ materials:
       download:     false
       path:         linuxsum10
 
+    # SWPM - Dynamic Download
+    - name:         swpm20
+      dynamic:      true
+      platform:     WIN
+      extract:      true
+      extractDir:   SWPM
+      creates:      SIGNATURE.SMF
+      path:         winswpm20
+
+    # SWPM - Dynamic Download
+    - name:         swpm10sp3
+      dynamic:      true
+      platform:     WIN
+      extract:      true
+      extractDir:   SWPM
+      creates:      SIGNATURE.SMF
+      path:         winswpm10
+
+    # SUM - Dynamic Download
+    - name:         sum20
+      dynamic:      true
+      platform:     WIN
+      download:     false
+      path:         winsum20
+
+    # SUM - Dynamic Download
+    - name:         sum11
+      dynamic:      true
+      platform:     WIN
+      download:     false
+      path:         winsum10
+
+
 ...
