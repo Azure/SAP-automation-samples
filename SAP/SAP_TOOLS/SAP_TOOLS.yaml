@@ -36,7 +36,7 @@ materials:
       path:         linuxsum20
 
     # SUM - Dynamic Download
-    - name:         sum10
+    - name:         sum11
       dynamic:      true
       platform:     LNX
       download:     false
