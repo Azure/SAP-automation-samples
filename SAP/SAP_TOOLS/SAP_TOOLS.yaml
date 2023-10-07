@@ -42,11 +42,4 @@ materials:
       download:     false
       path:         linuxsum10
 
-    # SAPCAR 7.22
-    - name:         sapcar
-      dynamic:      true
-      platform:     LNX
-      download:     false
-      path:         linuxsapcar
-
 ...
