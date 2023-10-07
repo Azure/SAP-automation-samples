@@ -20,7 +20,7 @@ materials:
       path:         linuxswpm20
 
     # SWPM - Dynamic Download
-    - name:         swpm10
+    - name:         swpm10sp3
       dynamic:      true
       platform:     LNX
       extract:      true
