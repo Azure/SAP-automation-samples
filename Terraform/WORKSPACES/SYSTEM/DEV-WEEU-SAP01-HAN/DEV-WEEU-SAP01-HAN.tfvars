@@ -279,7 +279,7 @@ scs_instance_number = "01"
 ers_instance_number = "02"
 
 # pas_instance_number defines the instance number for PAS
-pas_instance_number = "00"
+pas_instance_number = "03"
 
 
 # scs_server_zones is an optional list defining the availability zones to which deploy the SCS servers
