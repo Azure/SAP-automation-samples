@@ -942,8 +942,8 @@ materials:
 
     - name:         "Servicetools for SAP Basis 731 and higher (KITABC4.SAR)"
       archive:      KITABC4.SAR
-      url:          https://softwaredownloads.sap.com/file/0010000000512722022
-      checksum:     3041541cc92cfd6bc2164d540b128060bdf96909b1fe871dee8db866e4c89037
+      url:          https://softwaredownloads.sap.com/file/0010000001370422022
+      checksum:     6c6fc1d02395bec4ddacd592d0db7e6173168dd4066f89dd061b097b51f168a0
       download: false
 
     - name:         "Servicetools for SAP Basis 731 and higher (KITABC5.SAR)"
