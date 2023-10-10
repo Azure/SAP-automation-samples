@@ -1,6 +1,6 @@
 ---
 
-name:                                   "SAP S/4HANA 2022 FP 02"
+name:                                   "SAP S/4HANA 2022 FPS02"
 filename:                               "S42022_SP01_v01"
 target:                                 "S/4 HANA 2022"
 version:                                1
@@ -934,22 +934,28 @@ materials:
       checksum: 2c5bf09f7dc4258649e92655e20a0fd40169371a13d5682e0a1076e0da80b122
       download: false
 
-    - name: "Servicetools for SAP Basis 731 and higher"
-      archive: KITABC3.SAR
-      url: https://softwaredownloads.sap.com/file/0010000001370422022
-      checksum: 6c6fc1d02395bec4ddacd592d0db7e6173168dd4066f89dd061b097b51f168a0
+    - name:         "Servicetools for SAP Basis 731 and higher (KITABC3.SAR)"
+      archive:      KITABC3.SAR
+      url:          https://softwaredownloads.sap.com/file/0010000000512722022
+      checksum:     3041541cc92cfd6bc2164d540b128060bdf96909b1fe871dee8db866e4c89037
       download: false
 
-    - name: "Servicetools for SAP Basis 731 and higher"
-      archive: KITABC4.SAR
-      url: https://softwaredownloads.sap.com/file/0010000001370422022
-      checksum: 6c6fc1d02395bec4ddacd592d0db7e6173168dd4066f89dd061b097b51f168a0
+    - name:         "Servicetools for SAP Basis 731 and higher (KITABC4.SAR)"
+      archive:      KITABC4.SAR
+      url:          https://softwaredownloads.sap.com/file/0010000001370422022
+      checksum:     6c6fc1d02395bec4ddacd592d0db7e6173168dd4066f89dd061b097b51f168a0
       download: false
 
-    - name: "Servicetools for SAP Basis 731 and higher"
-      archive: KITABC5.SAR
-      url: https://softwaredownloads.sap.com/file/0010000001370422022
-      checksum: 6c6fc1d02395bec4ddacd592d0db7e6173168dd4066f89dd061b097b51f168a0
+    - name:         "Servicetools for SAP Basis 731 and higher (KITABC5.SAR)"
+      archive:      KITABC5.SAR
+      url:          https://softwaredownloads.sap.com/file/0010000000419832023
+      checksum:     52af226f22a1759376a695767657b1061304c9a09a49de75e84bd14ec3d9b75e
+      download: false
+
+    - name:         "Servicetools for SAP Basis 731 and higher (KITAB9Y.SAR)"
+      archive:      KITAB9Y.SAR
+      url:          https://softwaredownloads.sap.com/file/0010000000469212020
+      checksum:     02c07a82c809c19fc66254c70449cad39851342b246263f3184aad453b333580
       download: false
 
     - name: "Attribute Change Package 05 for S4HCM 100"
