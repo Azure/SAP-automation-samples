@@ -61,7 +61,7 @@ materials:
       creates:      SIGNATURE.SMF
       url:          https://softwaredownloads.sap.com/file/0020000000988802023
 
-    - name:         "Oracle SBP - Bundle patches for 19c: OPatch 12.2.0.1.36"
+    - name:         "Oracle SBP - Bundle patches for 19c: OPatch 12.2.0.1.37"
       archive:      OPATCH19P_2308-70004508.ZIP
       checksum:     6863b0e56e4e3ae4ad26d90b671570849a9265d60a4cbe3f3c6eee5c83c6e230
       extract:      true
@@ -98,7 +98,7 @@ materials:
       extract:      false
       download:     true
       # extractDir:   SBP/GIRU19P
-      path:         GSBP
+      path:         SBP
       # creates:     SIGNATURE.SMF
       url:          https://softwaredownloads.sap.com/file/0020000000993572023
 
@@ -107,8 +107,8 @@ materials:
       checksum:     75705a034723671c6317f7c4ba03d242385a15d653e623c36cdbbb7ce55d4e34
       extract:      true
       download:     true
-      extractDir:   GSBP/OPATCH
-      path:         GSBP
+      extractDir:   SBP/GSBP/OPATCH
+      path:         SBP
       creates:      SIGNATURE.SMF
       url:          https://softwaredownloads.sap.com/file/0020000000993172023
 
@@ -117,8 +117,8 @@ materials:
       checksum:     472549e1b19b960561a21a96761f633df2f008ce6850e40004db2b9511911e9d
       extract:      false
       download:     true
-      extractDir:   GSBP/SGR19P
-      path:         GSBP
+      extractDir:   SBP/SGR19P
+      path:         SBP
       # creates:     SIGNATURE.SMF
       url:          https://softwaredownloads.sap.com/file/0020000000993042023
   
@@ -126,8 +126,8 @@ materials:
       archive:      SBPJDK19P_2308-70004550.ZIP
       checksum:     d36c7caee0c7101933bf2221d7fe61e20ce39122f30c97de663dd05191003ce9
       extract:      false
-      extractDir:   GSBP/SBPJDK
-      path:         GSBP
+      extractDir:   SBP/SBPJDK
+      path:         SBP
       # creates:     SIGNATURE.SMF
       url:          https://softwaredownloads.sap.com/file/0020000000993202023
     
@@ -136,8 +136,8 @@ materials:
       archive:      GIMERGEOCW19P_2308-70004550.ZIP
       checksum:     b3e1ef0a757e251f3e6992af7a451f20a257b24252d2d596d2e2a6a814ddcc49
       extract:      false
-      extractDir:   GSBP/SBPJDK
-      path:         GSBP
+      extractDir:   SBP/SBPJDK
+      path:         SBP
       # creates:     SIGNATURE.SMF
       url:          https://softwaredownloads.sap.com/file/0020000000993152023
 ...
