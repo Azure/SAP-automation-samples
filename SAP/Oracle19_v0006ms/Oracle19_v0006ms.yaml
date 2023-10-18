@@ -89,6 +89,17 @@ materials:
       checksum:     0ABF6BD267E67C472D194DBBEFC723D3A1910AAF8D688FAE4BB6980CE1F3281A
       url:          https://download.oracle.com/otn_software/asmlib/oracleasmlib-2.0.17-1.el8.x86_64.rpm
 
+#  MOPATCH & OPATCH OLDER Version for FIX
+    
+    - name:         "Oracle SBP - Bundle patches for 19c: OPatch 12.2.0.1.36"
+      archive:      OPATCH19P_2305-70004508.ZIP
+      checksum:     148501259633ee3f14e81d59d55ce189a95eb045d88dbf64653ac0c158dbf8ce
+      extract:      true
+      extractDir:   SBP/OPATCH/OLD
+      path:         SBP
+      creates:      SIGNATURE.SMF
+      url:          https://softwaredownloads.sap.com/file/0020000000597692023
+
     - name:         "Oracle SBP - Bundle patches for 19c: SAP19P"
       archive:      SAP19P_2305-70004508.ZIP
       checksum:     e6693ded406e4bca410c1e3ef32df3edc39570da652c8c56257461517ad443fe
