@@ -89,6 +89,15 @@ materials:
       checksum:     0ABF6BD267E67C472D194DBBEFC723D3A1910AAF8D688FAE4BB6980CE1F3281A
       url:          https://download.oracle.com/otn_software/asmlib/oracleasmlib-2.0.17-1.el8.x86_64.rpm
 
+    - name:         "Oracle SBP - Bundle patches for 19c: SAP19P"
+      archive:      SAP19P_2305-70004508.ZIP
+      checksum:     e6693ded406e4bca410c1e3ef32df3edc39570da652c8c56257461517ad443fe
+      extract:      true
+      extractDir:   SBP/SAPSBP/OLD
+      path:         SBP
+      creates:      SIGNATURE.SMF
+      url:          https://softwaredownloads.sap.com/file/0020000000597652023
+
 # Oracle ASM GRID Patches
 # GRID SBP Patches are downloaded based on SAP Note 2799920 - Patches 19c: Database
 
