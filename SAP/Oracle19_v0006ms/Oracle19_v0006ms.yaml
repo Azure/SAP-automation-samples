@@ -127,7 +127,7 @@ materials:
       checksum:     75705a034723671c6317f7c4ba03d242385a15d653e623c36cdbbb7ce55d4e34
       extract:      true
       download:     true
-      extractDir:   GSBP/OPATCH
+      extractDir:   SBP/GSBP/OPATCH
       path:         SBP/GSBP
       creates:      SIGNATURE.SMF
       url:          https://softwaredownloads.sap.com/file/0020000000993172023
@@ -137,7 +137,7 @@ materials:
       checksum:     472549e1b19b960561a21a96761f633df2f008ce6850e40004db2b9511911e9d
       extract:      true
       download:     true
-      extractDir:   GSBP/SGR19P
+      extractDir:   SBP/GSBP/SGR19P
       path:         SBP/GSBP
       # creates:     SIGNATURE.SMF
       url:          https://softwaredownloads.sap.com/file/0020000000993042023
@@ -146,7 +146,7 @@ materials:
       archive:      SBPJDK19P_2308-70004550.ZIP
       checksum:     d36c7caee0c7101933bf2221d7fe61e20ce39122f30c97de663dd05191003ce9
       extract:      false
-      extractDir:   GSBP/SBPJDK
+      extractDir:   SBP/GSBP/SBPJDK
       path:         SBP/GSBP
       # creates:     SIGNATURE.SMF
       url:          https://softwaredownloads.sap.com/file/0020000000993202023
@@ -156,7 +156,7 @@ materials:
       archive:      GIMERGEOCW19P_2308-70004550.ZIP
       checksum:     b3e1ef0a757e251f3e6992af7a451f20a257b24252d2d596d2e2a6a814ddcc49
       extract:      false
-      extractDir:   GSBP/SBPJDK
+      extractDir:   SBP/GSBP/SBPJDK
       path:         SBP/GSBP
       # creates:     SIGNATURE.SMF
       url:          https://softwaredownloads.sap.com/file/0020000000993152023
