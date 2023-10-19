@@ -91,23 +91,23 @@ materials:
 
 #  MOPATCH & OPATCH OLDER Version for FIX
     
-    - name:         "Oracle SBP - Bundle patches for 19c: OPatch 12.2.0.1.36"
-      archive:      OPATCH19P_2305-70004508.ZIP
-      checksum:     148501259633ee3f14e81d59d55ce189a95eb045d88dbf64653ac0c158dbf8ce
-      extract:      true
-      extractDir:   SBP/OPATCH/OLD
-      path:         SBP
-      creates:      SIGNATURE.SMF
-      url:          https://softwaredownloads.sap.com/file/0020000000597692023
+    # - name:         "Oracle SBP - Bundle patches for 19c: OPatch 12.2.0.1.36"
+    #   archive:      OPATCH19P_2305-70004508.ZIP
+    #   checksum:     148501259633ee3f14e81d59d55ce189a95eb045d88dbf64653ac0c158dbf8ce
+    #   extract:      true
+    #   extractDir:   SBP/GSBP/OPATCH
+    #   path:         SBP
+    #   creates:      SIGNATURE.SMF
+    #   url:          https://softwaredownloads.sap.com/file/0020000000597692023
 
-    - name:         "Oracle SBP - Bundle patches for 19c: SAP19P"
-      archive:      SAP19P_2305-70004508.ZIP
-      checksum:     e6693ded406e4bca410c1e3ef32df3edc39570da652c8c56257461517ad443fe
-      extract:      true
-      extractDir:   SBP/SAPSBP/OLD
-      path:         SBP
-      creates:      SIGNATURE.SMF
-      url:          https://softwaredownloads.sap.com/file/0020000000597652023
+    # - name:         "Oracle SBP - Bundle patches for 19c: SAP19P"
+    #   archive:      SAP19P_2305-70004508.ZIP
+    #   checksum:     e6693ded406e4bca410c1e3ef32df3edc39570da652c8c56257461517ad443fe
+    #   extract:      true
+    #   extractDir:   SBP/GSBP/SAPSBP/
+    #   path:         SBP
+    #   creates:      SIGNATURE.SMF
+    #   url:          https://softwaredownloads.sap.com/file/0020000000597652023
 
 # Oracle ASM GRID Patches
 # GRID SBP Patches are downloaded based on SAP Note 2799920 - Patches 19c: Database
@@ -118,7 +118,7 @@ materials:
       extract:      false
       download:     true
       # extractDir:   SBP/GIRU19P
-      path:         SBP
+      path:         SBP/GSBP
       # creates:     SIGNATURE.SMF
       url:          https://softwaredownloads.sap.com/file/0020000000993572023
 
@@ -127,8 +127,8 @@ materials:
       checksum:     75705a034723671c6317f7c4ba03d242385a15d653e623c36cdbbb7ce55d4e34
       extract:      true
       download:     true
-      extractDir:   SBP/GSBP/OPATCH
-      path:         SBP
+      extractDir:   GSBP/OPATCH
+      path:         SBP/GSBP
       creates:      SIGNATURE.SMF
       url:          https://softwaredownloads.sap.com/file/0020000000993172023
 
@@ -137,8 +137,8 @@ materials:
       checksum:     472549e1b19b960561a21a96761f633df2f008ce6850e40004db2b9511911e9d
       extract:      true
       download:     true
-      extractDir:   SBP/SGR19P
-      path:         SBP
+      extractDir:   GSBP/SGR19P
+      path:         SBP/GSBP
       # creates:     SIGNATURE.SMF
       url:          https://softwaredownloads.sap.com/file/0020000000993042023
   
@@ -146,8 +146,8 @@ materials:
       archive:      SBPJDK19P_2308-70004550.ZIP
       checksum:     d36c7caee0c7101933bf2221d7fe61e20ce39122f30c97de663dd05191003ce9
       extract:      false
-      extractDir:   SBP/SBPJDK
-      path:         SBP
+      extractDir:   GSBP/SBPJDK
+      path:         SBP/GSBP
       # creates:     SIGNATURE.SMF
       url:          https://softwaredownloads.sap.com/file/0020000000993202023
     
@@ -156,8 +156,8 @@ materials:
       archive:      GIMERGEOCW19P_2308-70004550.ZIP
       checksum:     b3e1ef0a757e251f3e6992af7a451f20a257b24252d2d596d2e2a6a814ddcc49
       extract:      false
-      extractDir:   SBP/SBPJDK
-      path:         SBP
+      extractDir:   GSBP/SBPJDK
+      path:         SBP/GSBP
       # creates:     SIGNATURE.SMF
       url:          https://softwaredownloads.sap.com/file/0020000000993152023
 ...
