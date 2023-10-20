@@ -111,6 +111,9 @@ use_msi_for_clusters = true
 # fencing_role_name, If specified the role name to use for the fencing agent
 #fencing_role_name = ""
 
+# use_simple_mount specifies if Simple mounts are used (Applicable for SLES 15 SP# or newer)
+use_simple_mount = false
+
 
 #########################################################################################
 #                                                                                       #
@@ -221,7 +224,7 @@ database_vm_image = {
 }
 
 # database_vm_zones is an optional list defining the availability zones to deploy the database servers
-database_vm_zones = ["1", "2"]
+database_vm_zones = ["1"]
 
 # Optional, Defines the default authentication model for the Database VMs (key/password)
 #database_vm_authentication_type = ""
@@ -280,7 +283,7 @@ pas_instance_number = "00"
 
 
 # scs_server_zones is an optional list defining the availability zones to which deploy the SCS servers
-scs_server_zones = ["1", "2"]
+scs_server_zones = ["1"]
 
 # scs_server_sku, if defined provides the SKU to use for the SCS servers
 #scs_server_sku = ""
@@ -333,7 +336,7 @@ scs_server_use_avset = false
 application_server_count = 2
 
 # application_server_zones is an optional list defining the availability zones to which deploy the application servers
-application_server_zones = ["1", "2"]
+application_server_zones = ["1"]
 
 # application_server_sku, if defined provides the SKU to use for the application servers
 #application_server_sku = ""
@@ -486,6 +489,10 @@ sapmnt_volume_size = 128
 
 # use_random_id_for_storageaccounts defines if the sapmnt storage account name will have a random suffix
 use_random_id_for_storageaccounts = true
+
+# ANF_HANA_use_AVG defines if the ANF volume will be created in an Application Volume Group
+ANF_HANA_use_AVG = false
+
 #########################################################################################
 #                                                                                       #
 #  HANA Data                                                                            #

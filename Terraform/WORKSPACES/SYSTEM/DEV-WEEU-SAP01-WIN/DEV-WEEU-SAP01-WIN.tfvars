@@ -63,6 +63,11 @@ use_secondary_ips = false
 # subscription is the subscription in which the system will be deployed (informational only)
 #subscription = ""
 
+# use_scalesets_for_deployment defines if Flexible Virtual Machine Scale Sets are used for the deployment
+use_scalesets_for_deployment = false
+
+# database_use_premium_v2_storage defines if the database tier will use premium v2 storage
+database_use_premium_v2_storage = false
 
 #########################################################################################
 #                                                                                       #
@@ -93,6 +98,23 @@ use_loadbalancers_for_standalone_deployments = true
 # use_private_endpoint is a boolean flag controlling if the key vaults and storage accounts have private endpoints
 #use_private_endpoint = false
 
+
+#########################################################################################
+#                                                                                       #
+#  Cluster settings                                                                     #
+#                                                                                       #
+#########################################################################################
+
+# use_msi_for_clusters if defined will use managed service identity for the Pacemaker cluster fencing
+use_msi_for_clusters = true
+
+# fencing_role_name, If specified the role name to use for the fencing agent
+#fencing_role_name = ""
+
+# use_simple_mount specifies if Simple mounts are used (Applicable for SLES 15 SP# or newer)
+use_simple_mount = false
+
+
 #########################################################################################
 #                                                                                       #
 #  Database tier                                                                        #                                                                                       #
@@ -105,6 +127,7 @@ database_sid = "WIN"
 # - HANA
 # - DB2
 # - ORACLE
+# - ORACLE-ASM
 # - SYBASE
 # - SQLSERVER
 # - NONE (in this case no database tier is deployed)
@@ -119,6 +142,9 @@ database_high_availability = false
 # For M series VMs use the SKU name for instance "M32ts"
 # If using a custom disk sizing populate with the node name for Database you have used in the file custom_disk_sizes_filename
 database_size = "512"
+
+# database_vm_sku, if provided defines the Virtual Machine SKU to use for the database virtual machines"
+#database_vm_sku = ""
 
 # database_instance_number if provided defines the instance number of the HANA database
 #database_instance_number = ""
@@ -430,8 +456,8 @@ webdispatcher_server_use_avset = false
 # deploy_application_security_groups if defined will create application security groups
 deploy_application_security_groups = true
 
-# use_msi_for_clusters if defined will use managed service identity for the Pacemaker cluster fencing
-use_msi_for_clusters = true
+# deploy_v1_monitoring_extension Defines if the Microsoft.AzureCAT.AzureEnhancedMonitoring extension will be deployed
+deploy_v1_monitoring_extension = true
 
 #########################################################################################
 #                                                                                       #
@@ -455,6 +481,10 @@ sapmnt_volume_size = 128
 
 # use_random_id_for_storageaccounts defines if the sapmnt storage account name will have a random suffix
 use_random_id_for_storageaccounts = true
+
+# ANF_HANA_use_AVG defines if the ANF volume will be created in an Application Volume Group
+ANF_HANA_use_AVG = false
+
 #########################################################################################
 #                                                                                       #
 #  HANA Data                                                                            #
