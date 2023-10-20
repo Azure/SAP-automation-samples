@@ -1,6 +1,6 @@
 ---
 
-name:                                   "SAP S/4HANA 2022 FP 02"
+name:                                   "SAP S/4HANA 2022 FPS02"
 filename:                               "S42022_SP01_v01"
 target:                                 "S/4 HANA 2022"
 version:                                1
@@ -934,22 +934,28 @@ materials:
       checksum: 2c5bf09f7dc4258649e92655e20a0fd40169371a13d5682e0a1076e0da80b122
       download: false
 
-    - name: "Servicetools for SAP Basis 731 and higher"
-      archive: KITABC3.SAR
-      url: https://softwaredownloads.sap.com/file/0010000001370422022
-      checksum: 6c6fc1d02395bec4ddacd592d0db7e6173168dd4066f89dd061b097b51f168a0
+    - name:         "Servicetools for SAP Basis 731 and higher (KITABC3.SAR)"
+      archive:      KITABC3.SAR
+      url:          https://softwaredownloads.sap.com/file/0010000000512722022
+      checksum:     3041541cc92cfd6bc2164d540b128060bdf96909b1fe871dee8db866e4c89037
       download: false
 
-    - name: "Servicetools for SAP Basis 731 and higher"
-      archive: KITABC4.SAR
-      url: https://softwaredownloads.sap.com/file/0010000001370422022
-      checksum: 6c6fc1d02395bec4ddacd592d0db7e6173168dd4066f89dd061b097b51f168a0
+    - name:         "Servicetools for SAP Basis 731 and higher (KITABC4.SAR)"
+      archive:      KITABC4.SAR
+      url:          https://softwaredownloads.sap.com/file/0010000001370422022
+      checksum:     6c6fc1d02395bec4ddacd592d0db7e6173168dd4066f89dd061b097b51f168a0
       download: false
 
-    - name: "Servicetools for SAP Basis 731 and higher"
-      archive: KITABC5.SAR
-      url: https://softwaredownloads.sap.com/file/0010000001370422022
-      checksum: 6c6fc1d02395bec4ddacd592d0db7e6173168dd4066f89dd061b097b51f168a0
+    - name:         "Servicetools for SAP Basis 731 and higher (KITABC5.SAR)"
+      archive:      KITABC5.SAR
+      url:          https://softwaredownloads.sap.com/file/0010000000419832023
+      checksum:     52af226f22a1759376a695767657b1061304c9a09a49de75e84bd14ec3d9b75e
+      download: false
+
+    - name:         "Servicetools for SAP Basis 731 and higher (KITAB9Y.SAR)"
+      archive:      KITAB9Y.SAR
+      url:          https://softwaredownloads.sap.com/file/0010000000469212020
+      checksum:     02c07a82c809c19fc66254c70449cad39851342b246263f3184aad453b333580
       download: false
 
     - name: "Attribute Change Package 05 for S4HCM 100"
@@ -976,22 +982,22 @@ materials:
       checksum: 564fcbe7d359516cb09d21098223dd87ca81873777e7d3ab36a2a73b2406871c
       download: false
 
-    - name: "Attribute Change Package 33 for UIHR002 100"
+    - name: "Attribute Change Package 34 for UIHR002 100"
       archive: UIHR002100.SAR
       url: https://softwaredownloads.sap.com/file/0010000020208092017
-      checksum: cf8a38e5b94d27ebc35f1b79ecd7d3363c350518e4d9a7ef0de830c8fc3ba350
+      checksum: 42855b1adafb859b31e6b368bbaa4c288e0eba4a820abf8132ea31f0e5bd31ba
       download: false
 
-    - name: "Attribute Change Package 14 for UIMDG001 200"
+    - name: "Attribute Change Package 16 for UIMDG001 200"
       archive: UIMDG001200.SAR
       url: https://softwaredownloads.sap.com/file/0010000014247222017
-      checksum: 7764b042e148ce8162d59872f9ba31e3ee30a9dddb3dbf459038c417adf8a28d
+      checksum: 3f5bb13ffe5031f12594c94fb25df3f02588f0156f14be76a3094c2dacc8bfd7
       download: false
 
-    - name: "Attribute Change Package 14 for UITRV001 300"
+    - name: "Attribute Change Package 17 for UITRV001 300"
       archive: UITRV001300.SAR
       url: https://softwaredownloads.sap.com/file/0010000000561182019
-      checksum: 2e25b1abd4a98ed6a36776d79c92fbce733c38b214e0f697c11db9efd11177cb
+      checksum: 3468732be13146e4de55665a989da2f76e87386f76f7b8bb48d4d233363d2e77
       download: false
 
     - name:  "Support Package SAP WEB DISPATCHER 7.81 Linux on x86_64 64bit"
