@@ -11,7 +11,7 @@ defaults:
 
 product_ids:
   scs:                          NW_JAVA_ASCS:NW752.MSS.ABAP
-  scs_ha:                       NW_FirstClusterNode_JAVA:NW752.MSS.ABAPHA
+  scs_ha:                       NW_FirstClusterNode_JAVA:NW752.MSS.JAVAHA
   dbl:                          NW_JAVA_DB:NW752.MSS.JAVA
   pas:                          NW_JAVA_CI:NW752.MSS.JAVA
   pas_ha:
