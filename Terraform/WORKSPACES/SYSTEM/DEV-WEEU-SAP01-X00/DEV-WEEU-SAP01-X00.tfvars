@@ -69,6 +69,9 @@ use_scalesets_for_deployment = false
 # database_use_premium_v2_storage defines if the database tier will use premium v2 storage
 database_use_premium_v2_storage = false
 
+# upgrade_packages defines if all packages should be upgraded after installation
+upgrade_packages = false
+
 #########################################################################################
 #                                                                                       #
 #  Networking                                                                           #
@@ -96,7 +99,7 @@ network_logical_name = "SAP01"
 use_loadbalancers_for_standalone_deployments = true
 
 # use_private_endpoint is a boolean flag controlling if the key vaults and storage accounts have private endpoints
-#use_private_endpoint = false
+use_private_endpoint = true
 
 
 #########################################################################################
@@ -822,3 +825,14 @@ enable_purge_control_for_keyvaults = false
 
 # configuration_settings is a dictionary containing values that will be persisted in sap-parameters.yaml
 #configuration_settings = {}
+
+############################################################################################
+#                                                                                          #
+#                                  Tags for all resources                                  #
+#                                                                                          #
+############################################################################################
+
+# These tags will be applied to all resources
+tags = {
+  DeployedBy = "SDAF",
+}

@@ -326,7 +326,7 @@ dns_label = "azure.sdaf.contoso.net"
 # AFS indicates that Azure Files for NFS is used
 # ANF indicates that Azure NetApp Files is used
 # NFS indicates that a custom solution is used for NFS
-#NFS_provider = ""
+NFS_provider = "AFS"
 
 #########################################################################################
 #                                                                                       #
