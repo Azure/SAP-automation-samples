@@ -208,7 +208,7 @@ web_subnet_address_prefix = "10.111.128.0/19"
 #management_dns_subscription_id = ""
 
 # Defines if a custom dns solution is used
-#use_custom_dns_a_registration = false
+use_custom_dns_a_registration = false
 
 # Defines if the Virtual network for the Virtual machines is registered with DNS
 # This also controls the creation of DNS entries for the load balancers
@@ -480,3 +480,14 @@ utility_vm_useDHCP = true
 
 # Defines if the utility virtual machine IP
 #utility_vm_nic_ips = []
+
+############################################################################################
+#                                                                                          #
+#                                  Tags for all resources                                  #
+#                                                                                          #
+############################################################################################
+
+# These tags will be applied to all resources
+tags = {
+  DeployedBy = "SDAF",
+}

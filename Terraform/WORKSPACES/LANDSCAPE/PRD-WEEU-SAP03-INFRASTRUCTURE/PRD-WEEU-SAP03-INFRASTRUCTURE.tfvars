@@ -488,3 +488,14 @@ utility_vm_image = {
 
 # Defines if the utility virtual machine IP
 #utility_vm_nic_ips = []
+
+############################################################################################
+#                                                                                          #
+#                                  Tags for all resources                                  #
+#                                                                                          #
+############################################################################################
+
+# These tags will be applied to all resources
+tags = {
+  DeployedBy = "SDAF",
+}
