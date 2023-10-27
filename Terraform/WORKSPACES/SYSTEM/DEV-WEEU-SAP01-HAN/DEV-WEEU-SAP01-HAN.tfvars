@@ -40,7 +40,7 @@ environment = "DEV"
 location = "westeurope"
 
 #If you want to customize the disk sizes for VMs use the following parameter to specify the custom sizing file.
-#custom_disk_sizes_filename = "DEV-WEEU-SAP01-X00_custom_sizes.json"
+#custom_disk_sizes_filename = ""
 
 #If you want to provide a custom naming json use the following parameter.
 #name_override_file = ""
@@ -68,6 +68,9 @@ use_scalesets_for_deployment = false
 
 # database_use_premium_v2_storage defines if the database tier will use premium v2 storage
 database_use_premium_v2_storage = false
+
+# upgrade_packages defines if all packages should be upgraded after installation
+upgrade_packages = false
 
 #########################################################################################
 #                                                                                       #
@@ -822,3 +825,15 @@ enable_purge_control_for_keyvaults = false
 
 # configuration_settings is a dictionary containing values that will be persisted in sap-parameters.yaml
 #configuration_settings = {}
+
+############################################################################################
+#                                                                                          #
+#                                  Tags for all resources                                  #
+#                                                                                          #
+############################################################################################
+
+# These tags will be applied to all resources
+tags = {
+  DeployedBy = "SDAF",
+}
+

@@ -20,26 +20,29 @@ NW_DB6_DB.db6.abap.schema                                            = sap{{ db_
 NW_getDBInfoGeneric.dbhost                                           = {{ sap_db_hostname }}
 NW_getDBInfoGeneric.dbsid                                            = {{ db_sid | upper }}
 NW_getFQDN.FQDN                                                      = {{ sap_fqdn }}
-NW_getLoadType.loadType = SAP
+NW_getLoadType.loadType                                              = DB6BR
 NW_GetMasterPassword.masterPwd                                       = {{ main_password }}
 NW_GetSidNoProfiles.sapdrive                                         = undefined
 NW_GetSidNoProfiles.sid                                              = {{ sap_sid | upper }}
 NW_GetSidNoProfiles.unicode                                          = true
+
+# ABAP system is Unicode (true|false), only needed if it cannot be determined from the system.
+NW_getUnicode.isUnicode                                              = true
 NW_readProfileDir.profileDir                                         = {{ sap_profile_dir }}
 NW_readProfileDir.profilesAvailable                                  = true
+
+# Passwords for sap and db2 users
+
+nwUsers.db6.db2sidPassword                                           = {{ main_password }}
 nwUsers.db6.db2sidUid                                                = {{ db2sidadm_uid }}
+nwUsers.db6.sapsidPassword                                           = {{ main_password }}
 nwUsers.db6.sapsidPassword                                           = {{ main_password }}
 nwUsers.db6.sapsidUid                                                = {{ db2sapsid_uid }}
 nwUsers.sapadmUID                                                    = {{ sapadm_uid }}
 nwUsers.sapsysGID                                                    = {{ sapsys_gid }}
+nwUsers.sidadmPassword                                               = {{ main_password }}
 nwUsers.sidAdmUID                                                    = {{ sidadm_uid }}
 
-
-# Passwords for sap and db2 users
-
-nwUsers.db6.db2sidPassword                                          = {{ main_password }}
-nwUsers.db6.sapsidPassword                                          = {{ main_password }}
-nwUsers.sidadmPassword                                              = {{ main_password }}
 
 #Database Parameters
 

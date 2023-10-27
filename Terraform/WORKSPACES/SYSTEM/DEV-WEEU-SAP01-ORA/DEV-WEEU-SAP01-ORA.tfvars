@@ -69,6 +69,9 @@ use_scalesets_for_deployment = false
 # database_use_premium_v2_storage defines if the database tier will use premium v2 storage
 database_use_premium_v2_storage = false
 
+# upgrade_packages defines if all packages should be upgraded after installation
+upgrade_packages = false
+
 #########################################################################################
 #                                                                                       #
 #  Networking                                                                           #
@@ -820,3 +823,13 @@ configuration_settings = {
   oraclegrid_sbp_patch = "GIRU19P_2305-70004508.ZIP",
 }
 
+############################################################################################
+#                                                                                          #
+#                                  Tags for all resources                                  #
+#                                                                                          #
+############################################################################################
+
+# These tags will be applied to all resources
+tags = {
+  DeployedBy = "SDAF",
+}
