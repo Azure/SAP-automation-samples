@@ -1,0 +1,14 @@
+---
+name:    'SUM20SP18'
+target:  'SUM20SP18'
+version: 003
+
+materials:
+
+  media:
+
+    - name:         "Patch 3 for SOFTWARE UPDATE MANAGER 2.0 SP18 (Windows)"
+      archive:      SUM20SP18_3-80002458.SAR
+      checksum:     fbeab441239b10332c97736123c18186134f43d81f01942779c523a1db1afd6f
+      download:     false
+      url:          https://softwaredownloads.sap.com/file/0020000001290692023
