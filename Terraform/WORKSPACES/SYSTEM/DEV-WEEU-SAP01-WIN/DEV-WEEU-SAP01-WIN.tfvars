@@ -69,6 +69,9 @@ use_scalesets_for_deployment = false
 # database_use_premium_v2_storage defines if the database tier will use premium v2 storage
 database_use_premium_v2_storage = false
 
+# upgrade_packages defines if all packages should be upgraded after installation
+upgrade_packages = false
+
 #########################################################################################
 #                                                                                       #
 #  Networking                                                                           #
@@ -815,4 +818,15 @@ enable_purge_control_for_keyvaults = false
 # configuration_settings is a dictionary containing values that will be persisted in sap-parameters.yaml
 configuration_settings = {
   domain_name = "sdaf.contoso.net",
+}
+
+############################################################################################
+#                                                                                          #
+#                                  Tags for all resources                                  #
+#                                                                                          #
+############################################################################################
+
+# These tags will be applied to all resources
+tags = {
+  DeployedBy = "SDAF",
 }

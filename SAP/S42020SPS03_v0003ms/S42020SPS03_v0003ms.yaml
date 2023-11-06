@@ -26,8 +26,8 @@
     materials:
       dependencies:
         - name:     HANA_2_00_067_v0005ms
-        - name:     SWPM20SP15_latest
-        - name:     SUM20SP17_latest
+        - name:     SWPM20SP16_latest
+        - name:     SUM20SP18_latest
 
       media:
         # SAPCAR 7.XX

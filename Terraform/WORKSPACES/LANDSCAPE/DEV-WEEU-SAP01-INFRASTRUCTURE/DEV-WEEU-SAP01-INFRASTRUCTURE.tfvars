@@ -202,10 +202,10 @@ web_subnet_address_prefix = "10.110.128.0/19"
 #########################################################################################
 
 # custom dns resource group name
-management_dns_resourcegroup_name = ""
+#management_dns_resourcegroup_name = ""
 
 # custom dns subscription
-management_dns_subscription_id = ""
+#management_dns_subscription_id = ""
 
 # Defines if a custom dns solution is used
 use_custom_dns_a_registration = false
@@ -326,7 +326,7 @@ dns_label = "azure.sdaf.contoso.net"
 # AFS indicates that Azure Files for NFS is used
 # ANF indicates that Azure NetApp Files is used
 # NFS indicates that a custom solution is used for NFS
-NFS_provider = "NONE"
+NFS_provider = "AFS"
 
 #########################################################################################
 #                                                                                       #
@@ -480,3 +480,14 @@ utility_vm_useDHCP = true
 
 # Defines if the utility virtual machine IP
 #utility_vm_nic_ips = []
+
+############################################################################################
+#                                                                                          #
+#                                  Tags for all resources                                  #
+#                                                                                          #
+############################################################################################
+
+# These tags will be applied to all resources
+tags = {
+  DeployedBy = "SDAF",
+}

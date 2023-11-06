@@ -25,6 +25,7 @@ NW_DB6_DB.db6.abap.schema                                                       
 NW_DDIC_Password.needDDICPasswords                                                          = false
 NW_GetMasterPassword.masterPwd                                                              = {{ main_password }}
 NW_readProfileDir.profileDir                                                                = {{ sap_profile_dir }}
+NW_readProfileDir.profilesAvailable                                                         = true
 
 NW_checkMsgServer.abapMSPort                                                                = 36{{ scs_instance_number }}
 NW_getLoadType.loadType                                                                     = SAP
@@ -38,7 +39,7 @@ NW_getDBInfoGeneric.dbhost                                                      
 NW_getDBInfoGeneric.dbsid                                                                   = {{ db_sid | upper }}
 
 # ABAP system is Unicode (true|false), only needed if it cannot be determined from the system.
-NW_getUnicode.isUnicode = true
+NW_getUnicode.isUnicode                                                                     = true
 
 # Specify whether this system is to be a Unicode system.
-NW_GetSidNoProfiles.unicode = true
+NW_GetSidNoProfiles.unicode                                                                 = true
