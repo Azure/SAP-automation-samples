@@ -52,7 +52,7 @@ materials:
       url:          https://softwaredownloads.sap.com/file/0020000001377172023
 
     - name:         "VCH AFL 2021 Rev 74.0 only for HANA 2.0 Rev 74"
-      archive:      VCH202100_2071_1-70006349.SAR
+      archive:      VCH202100_2074_0-70006349.SAR
       checksum:     8d4ff8c7b83f7e52e2a212458947403e9b7f2be12e2561c017d225f933fe808c
       extract:      true
       extractDir:   CD_HDBSERVER/COMPONENTS
