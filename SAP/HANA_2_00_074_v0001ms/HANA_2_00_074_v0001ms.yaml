@@ -1,0 +1,74 @@
+---
+name:               'HANA_2_00_074_v0001ms'
+target:             'HANA 2.0'
+version:            1
+platform:           'HANA'
+materials:
+
+  media:
+    # SAPCAR 7.22
+    - name:         "SAPCAR 7.22; OS: Linux on x86_64 64bit"
+      archive:      SAPCAR_1115-70006178.EXE
+      checksum:     765412436934362cc5497e3d659fbb78be91093a091c11ec4fbe84dfb415a0e5
+      filename:     SAPCAR
+      permissions:  '0755'
+      path:          downloads
+      url:          https://softwaredownloads.sap.com/file/0020000000098642022
+
+    # HANA Client v2.13
+    - name:         "SAP HANA CLIENT Version 2.13"
+      archive:      IMDB_CLIENT20_013_22-80002082.SAR
+      checksum:     5e16ba25d28420fcf7814c7aa3fe33e51ad33951e4d93f77d3e0e297d2f6fc0c
+      extract:      true
+      extractDir:   CD_HDBCLIENT
+      creates:      SIGNATURE.SMF
+      path:         download_basket
+      url:          https://softwaredownloads.sap.com/file/0020000000919882022
+
+    # v2_00_074 Revision 2.00.074.0 (SPS07) for HANA DB 2.0
+    - name:         "SAP HANA 2 SPS07 Revision 074.00"
+      archive:      IMDB_SERVER20_074_0-80002031.SAR
+      checksum:     cecc5b172fb2982c5c82448cfd0d56bd17c97ee081cb10c3066bd95233e052c0
+      extract:      true
+      extractDir:   CD_HDBSERVER
+      creates:      SIGNATURE.SMF
+      path:         download_basket
+      url:          https://softwaredownloads.sap.com/file/0020000001379232023
+
+    - name:         "SAP HANA AFL Rev 74.0 only for HANA 2.0 Rev 74"
+      archive:      IMDB_AFL20_074_0-80001894.SAR
+      checksum:     f03f8d6b7204ec9cce9ac36a2e9f58a26782379d66d06f499779b94a0bcc9717
+      extract:      true
+      extractDir:   CD_HDBSERVER/COMPONENTS
+      creates:      COMPONENTS/SAP_HANA_AFL/packages
+      url:          https://softwaredownloads.sap.com/file/0020000001377122023
+
+    - name:         "LCAPPS for HANA 2.0 Rev 74 Build 101.11 PL 007"
+      archive:      IMDB_LCAPPS_2074_0-20010426.SAR
+      checksum:     36bb31c308e24539fca12fed8494334d763d238f31439acf85e071e7b6e4b086
+      extract:      true
+      extractDir:   CD_HDBSERVER/COMPONENTS
+      creates:      COMPONENTS/SAP_HANA_LCAPPS/packages
+      url:          https://softwaredownloads.sap.com/file/0020000001377172023
+
+    - name:         "VCH AFL 2021 Rev 74.0 only for HANA 2.0 Rev 74"
+      archive:      VCH202100_2074_0-70006349.SAR
+      checksum:     8d4ff8c7b83f7e52e2a212458947403e9b7f2be12e2561c017d225f933fe808c
+      extract:      true
+      extractDir:   CD_HDBSERVER/COMPONENTS
+      creates:      COMPONENTS/VCH_AFL_2021/packages
+      url:          https://softwaredownloads.sap.com/file/0020000001377262023
+
+    - name:         "SAP HOST AGENT 7.22 SP56"
+      archive:      SAPHOSTAGENT56_56-80004822.SAR
+      checksum:     9bd51d95caae86fdb33cb74ae8e478b7689f7321bb20058d5d27143ac54566c1
+      path:         download_basket
+      url:          https://softwaredownloads.sap.com/file/0020000000591682022
+
+
+    - name:         "SAPHostAgent RPM Package"
+      archive:      saphostagentrpm_56-80004822.rpm
+      checksum:     d1085bee4dd10814e02e0c7c60abe2772e3b8748b2a08c906157415f22cffb2f
+      url:          https://softwaredownloads.sap.com/file/0020000000578012022
+
+...

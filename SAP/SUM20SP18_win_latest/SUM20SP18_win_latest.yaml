@@ -1,0 +1,14 @@
+---
+name:    'SUM20SP18'
+target:  'SUM20SP18'
+version: 005
+
+materials:
+
+  media:
+
+    - name:         "Patch 5 for SOFTWARE UPDATE MANAGER 2.0 SP18 (Windows)"
+      archive:      SUM20SP18_5-80002458.SAR
+      checksum:     272a1872c6e3b5a3bd0df6a4469912a603ccea3ef7dd7346c69c0bfeb9fa5cc0
+      download:     false
+      url:          https://softwaredownloads.sap.com/file/0020000001421852023
