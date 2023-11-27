@@ -28,7 +28,7 @@
 environment = "DEV"
 
 # The location value is a mandatory field, it is used to control where the resources are deployed
-location = "westeurope"
+location = "northeurope"
 
 #If you want to provide a custom naming json use the following parameter.
 #name_override_file = ""
@@ -65,7 +65,7 @@ network_logical_name = "SAP01"
 #network_arm_id = ""
 
 # network_address_space is a mandatory parameter when an existing Virtual network is not used
-network_address_space = "10.110.0.0/16"
+network_address_space = "10.120.0.0/16"
 
 # use_private_endpoint is a boolean flag controlling if the key vaults and storage accounts have private endpoints
 use_private_endpoint = true
@@ -95,7 +95,7 @@ place_delete_lock_on_resources = true
 #admin_subnet_name = ""
 
 # admin_subnet_address_prefix is a mandatory parameter if the subnets are not defined in the workload or if existing subnets are not used
-admin_subnet_address_prefix = "10.110.0.0/19"
+admin_subnet_address_prefix = "10.120.0.0/19"
 
 # admin_subnet_arm_id is an optional parameter that if provided specifies Azure resource identifier for the existing subnet to use
 #admin_subnet_arm_id = ""
@@ -117,7 +117,7 @@ admin_subnet_address_prefix = "10.110.0.0/19"
 #db_subnet_name = ""
 
 # db_subnet_address_prefix is a mandatory parameter if the subnets are not defined in the workload or if existing subnets are not used
-db_subnet_address_prefix = "10.110.96.0/19"
+db_subnet_address_prefix = "10.120.96.0/19"
 
 # db_subnet_arm_id is an optional parameter that if provided specifies Azure resource identifier for the existing subnet to use
 #db_subnet_arm_id = ""
@@ -139,7 +139,7 @@ db_subnet_address_prefix = "10.110.96.0/19"
 #app_subnet_name = ""
 
 # app_subnet_address_prefix is a mandatory parameter if the subnets are not defined in the workload or if existing subnets are not used
-app_subnet_address_prefix = "10.110.32.0/19"
+app_subnet_address_prefix = "10.120.32.0/19"
 
 # app_subnet_arm_id is an optional parameter that if provided specifies Azure resource identifier for the existing subnet to use
 #app_subnet_arm_id = ""
@@ -161,7 +161,7 @@ app_subnet_address_prefix = "10.110.32.0/19"
 #web_subnet_name = ""
 
 # web_subnet_address_prefix is a mandatory parameter if the subnets are not defined in the workload or if existing subnets are not used
-web_subnet_address_prefix = "10.110.128.0/19"
+web_subnet_address_prefix = "10.120.128.0/19"
 
 # web_subnet_arm_id is an optional parameter that if provided specifies Azure resource identifier for the existing subnet to use
 #web_subnet_arm_id = ""
@@ -320,7 +320,7 @@ storage_account_replication_type = "ZRS"
 #########################################################################################
 
 # If defined provides the DNS label for the Virtual Network
-dns_label = "azure.contoso.net"
+dns_label = "azure.sdaf.contoso.net"
 
 #If defined provides the lsit of DNS servers to attach to the Virtual NEtwork
 #dns_server_list = []
