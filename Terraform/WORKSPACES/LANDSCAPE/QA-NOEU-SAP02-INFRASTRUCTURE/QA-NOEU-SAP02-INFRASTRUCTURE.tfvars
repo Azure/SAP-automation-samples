@@ -25,10 +25,10 @@
 #########################################################################################
 
 # The environment value is a mandatory field, it is used for partitioning the environments, for example (PROD and NP)
-environment = "DEV"
+environment = "QA"
 
 # The location value is a mandatory field, it is used to control where the resources are deployed
-location = "westeurope"
+location = "northeurope"
 
 #If you want to provide a custom naming json use the following parameter.
 #name_override_file = ""
@@ -56,7 +56,7 @@ location = "westeurope"
 #########################################################################################
 
 # The network logical name is mandatory - it is used in the naming convention and should map to the workload virtual network logical name
-network_logical_name = "SAP01"
+network_logical_name = "SAP02"
 
 # The name is optional - it can be used to override the default naming
 #network_name = ""
@@ -65,7 +65,7 @@ network_logical_name = "SAP01"
 #network_arm_id = ""
 
 # network_address_space is a mandatory parameter when an existing Virtual network is not used
-network_address_space = "10.110.0.0/16"
+network_address_space = "10.121.0.0/16"
 
 # use_private_endpoint is a boolean flag controlling if the key vaults and storage accounts have private endpoints
 use_private_endpoint = true
@@ -95,7 +95,7 @@ place_delete_lock_on_resources = true
 #admin_subnet_name = ""
 
 # admin_subnet_address_prefix is a mandatory parameter if the subnets are not defined in the workload or if existing subnets are not used
-admin_subnet_address_prefix = "10.110.0.0/19"
+admin_subnet_address_prefix = "10.121.0.0/19"
 
 # admin_subnet_arm_id is an optional parameter that if provided specifies Azure resource identifier for the existing subnet to use
 #admin_subnet_arm_id = ""
@@ -117,7 +117,7 @@ admin_subnet_address_prefix = "10.110.0.0/19"
 #db_subnet_name = ""
 
 # db_subnet_address_prefix is a mandatory parameter if the subnets are not defined in the workload or if existing subnets are not used
-db_subnet_address_prefix = "10.110.96.0/19"
+db_subnet_address_prefix = "10.121.96.0/19"
 
 # db_subnet_arm_id is an optional parameter that if provided specifies Azure resource identifier for the existing subnet to use
 #db_subnet_arm_id = ""
@@ -139,7 +139,7 @@ db_subnet_address_prefix = "10.110.96.0/19"
 #app_subnet_name = ""
 
 # app_subnet_address_prefix is a mandatory parameter if the subnets are not defined in the workload or if existing subnets are not used
-app_subnet_address_prefix = "10.110.32.0/19"
+app_subnet_address_prefix = "10.121.32.0/19"
 
 # app_subnet_arm_id is an optional parameter that if provided specifies Azure resource identifier for the existing subnet to use
 #app_subnet_arm_id = ""
@@ -161,7 +161,7 @@ app_subnet_address_prefix = "10.110.32.0/19"
 #web_subnet_name = ""
 
 # web_subnet_address_prefix is a mandatory parameter if the subnets are not defined in the workload or if existing subnets are not used
-web_subnet_address_prefix = "10.110.128.0/19"
+web_subnet_address_prefix = "10.121.128.0/19"
 
 # web_subnet_arm_id is an optional parameter that if provided specifies Azure resource identifier for the existing subnet to use
 #web_subnet_arm_id = ""
@@ -229,7 +229,7 @@ register_virtual_network_to_dns = true
 #spn_keyvault_id = ""
 
 # enable_purge_control_for_keyvaults is an optional parameter that czan be used to disable the purge protection fro Azure keyvaults
-enable_purge_control_for_keyvaults = false
+enable_purge_control_for_keyvaults = true
 
 # enable_rbac_authorization_for_keyvault Controls the access policy model for the workload zone keyvault.
 enable_rbac_authorization_for_keyvault = false
@@ -320,7 +320,7 @@ storage_account_replication_type = "ZRS"
 #########################################################################################
 
 # If defined provides the DNS label for the Virtual Network
-dns_label = "azure.contoso.net"
+dns_label = "azure.sdaf.contoso.net"
 
 #If defined provides the lsit of DNS servers to attach to the Virtual NEtwork
 #dns_server_list = []
@@ -416,7 +416,7 @@ ANF_qos_type = "Manual"
 #iscsi_subnet_arm_id = ""
 
 # iscsi_subnet_address_prefix is a mandatory parameter if the subnets are not defined in the workload or if existing subnets are not used
-#iscsi_subnet_address_prefix = ""
+iscsi_subnet_address_prefix = "10.121.64.0/28"
 
 # iscsi_subnet_nsg_arm_id is an optional parameter that if provided specifies Azure resource identifier for the existing nsg
 #iscsi_subnet_nsg_arm_id = ""
@@ -432,7 +432,7 @@ ANF_qos_type = "Manual"
 ###########################################################################
 
 # Number of iSCSI devices to be created
-iscsi_count = "0"
+iscsi_count = "3"
 
 # Size of iSCSI Virtual Machines to be created
 iscsi_size = "Standard_D2s_v3"
@@ -441,7 +441,15 @@ iscsi_size = "Standard_D2s_v3"
 iscsi_useDHCP = true
 
 # Defines the Virtual Machine image for the iSCSI devices
-#iscsi_image = {}
+iscsi_image = {
+  os_type = "LINUX",
+  source_image_id = "",
+  publisher = "SUSE",
+  offer = "sles-sap-15-sp5",
+  sku = "gen2",
+  version = "latest",
+  type = "marketplace"
+}
 
 # Defines the Virtual Machine authentication type for the iSCSI devices
 iscsi_authentication_type = "key"
