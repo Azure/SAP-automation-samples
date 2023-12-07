@@ -96,6 +96,9 @@ management_firewall_subnet_address_prefix = "10.11.20.0/26"
 #
 ##################################################
 
+# use_webapp is a boolean flag controlling if configuration Web App is to be deployed in the deployer VNet
+use_webapp = false
+
 # one of the following two parameters is required when deploying the web app as a part of the control plane infrastructure
 
 # webapp_subnet_address_prefix is a mandatory parameter if an existing subnet is not used

@@ -114,7 +114,7 @@ management_bastion_subnet_address_prefix = "10.170.20.128/26"
 #########################################################################################
 
 # use_webapp is a boolean flag controlling if configuration Web App is to be deployed in the deployer VNet
-use_webapp = true
+use_webapp = false
 
 # webapp_subnet_arm_id is an optional parameter that if provided specifies Azure resource
 # identifier for the existing  subnet
@@ -122,6 +122,8 @@ use_webapp = true
 
 # webapp_subnet_address_prefix is a mandatory parameter if the Web App is to be deployed
 webapp_subnet_address_prefix = "10.170.20.80/28"
+
+
 
 #########################################################################################
 #                                                                                       #
