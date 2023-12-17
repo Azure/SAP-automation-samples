@@ -275,9 +275,6 @@ install_volume_size = 1024
 # create_transport_storage defines if the workload zone will host storage for the transport data
 create_transport_storage = true
 
-# create_transport_storage defines if the workload zone will host storage for the transport data
-create_transport_storage = true
-
 # Defines the size of the transport volume
 transport_volume_size = 128
 
