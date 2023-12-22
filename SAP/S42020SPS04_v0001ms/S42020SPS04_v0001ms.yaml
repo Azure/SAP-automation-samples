@@ -999,9 +999,9 @@ materials:
           url: https://softwaredownloads.sap.com/file/0010000000211202021
           download: false
 
-        - name: "Attribute Change Package 19 for SRA004 600"
+        - name: "Attribute Change Package 23 for SRA004 600"
           archive: SRA004600.SAR
-          checksum: 9148d468ff874691a662b6c6428b01a09a54c48af369e1accd8e6c72c5ddf823
+          checksum: ae231eadcb360d1be79959357036814874eefa92d7988c5a2c65d9c26cc173af
           url: https://softwaredownloads.sap.com/file/0010000000060132013
           download: false
 
