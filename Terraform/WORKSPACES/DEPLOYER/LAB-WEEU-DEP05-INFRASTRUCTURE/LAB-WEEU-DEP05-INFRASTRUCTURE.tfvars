@@ -132,7 +132,7 @@ webapp_subnet_address_prefix = "10.175.20.80/28"
 #########################################################################################
 
 # deployer_enable_public_ip defines if the deployers will be deployed with a public IP address
-deployer_enable_public_ip = false
+deployer_enable_public_ip = true
 
 # deployer_count is an optional parameter that specifies the number of deployer VMs to be provisioned
 deployer_count = 1
