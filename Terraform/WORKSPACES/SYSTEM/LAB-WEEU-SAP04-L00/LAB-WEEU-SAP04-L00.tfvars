@@ -34,7 +34,7 @@
 #########################################################################################
 
 # The environment value is a mandatory field, it is used for partitioning the environments, for example (PROD and NP)
-environment = "DEV"
+environment = "LAB"
 
 # The location value is a mandatory field, it is used to control where the resources are deployed
 location = "westeurope"
@@ -46,7 +46,7 @@ location = "westeurope"
 #name_override_file = ""
 
 # save_naming_information,defines that a json formatted file defining the resource names will be created
-save_naming_information = false
+save_naming_information = true
 
 # custom_prefix defines the prefix that will be added to the resource names
 #custom_prefix = ""
@@ -55,10 +55,10 @@ save_naming_information = false
 use_prefix = true
 
 # use_zonal_markers defines if a zonal markers will be added to the virtual machine resource names
-use_zonal_markers = true
+use_zonal_markers = false
 
 # use_secondary_ips controls if the virtual machines should be deployed with two IP addresses. Required for SAP Virtual Hostname support
-use_secondary_ips = true
+use_secondary_ips = false
 
 # subscription is the subscription in which the system will be deployed (informational only)
 #subscription = ""
@@ -74,7 +74,7 @@ use_scalesets_for_deployment = false
 database_use_premium_v2_storage = false
 
 # upgrade_packages defines if all packages should be upgraded after installation
-upgrade_packages = false
+upgrade_packages = true
 
 # user_assigned_identity_id defines the user assigned identity to be assigned to the Virtual machines
 #user_assigned_identity_id = ""
@@ -100,13 +100,13 @@ upgrade_packages = false
 #########################################################################################
 
 # The network logical name is mandatory - it is used in the naming convention and should map to the workload virtual network logical name
-network_logical_name = "SAP01"
+network_logical_name = "SAP04"
 
 # use_loadbalancers_for_standalone_deployments is a boolean flag that can be used to control if standalone deployments (non HA) will have load balancers
-use_loadbalancers_for_standalone_deployments = true
+use_loadbalancers_for_standalone_deployments = false
 
 # use_private_endpoint is a boolean flag controlling if the key vaults and storage accounts have private endpoints
-#use_private_endpoint = false
+use_private_endpoint = false
 
 
 #########################################################################################
@@ -128,7 +128,7 @@ use_msi_for_clusters = true
 #fencing_role_name = ""
 
 # use_simple_mount specifies if Simple mounts are used (Applicable for SLES 15 SP# or newer)
-use_simple_mount = false
+use_simple_mount = true
 
 
 #########################################################################################
@@ -137,7 +137,7 @@ use_simple_mount = false
 #                                                                                       #
 #########################################################################################
 
-database_sid = "ORA"
+database_sid = "HDB"
 
 # database_platform defines the database backend, supported values are
 # - HANA
@@ -147,7 +147,7 @@ database_sid = "ORA"
 # - SYBASE
 # - SQLSERVER
 # - NONE (in this case no database tier is deployed)
-database_platform = "ORACLE-ASM"
+database_platform = "HANA"
 
 # Defines the number of database servers
 database_server_count = 1
@@ -157,7 +157,7 @@ database_high_availability = false
 
 # For M series VMs use the SKU name for instance "M32ts"
 # If using a custom disk sizing populate with the node name for Database you have used in the file custom_disk_sizes_filename
-database_size = "1024"
+database_size = "E20ds_v4"
 
 # database_vm_sku, if provided defines the Virtual Machine SKU to use for the database virtual machines"
 #database_vm_sku = ""
@@ -232,9 +232,9 @@ database_vm_use_DHCP = true
 database_vm_image = {
   os_type = "LINUX",
   source_image_id = "",
-  publisher = "Oracle",
-  offer = "Oracle-Linux",
-  sku = "ol86-lvm-gen2",
+  publisher = "SUSE",
+  offer = "sles-sap-15-sp5",
+  sku = "gen2",
   version = "latest",
   type = "marketplace"
 }
@@ -249,7 +249,7 @@ database_vm_zones = ["1"]
 #database_vm_avset_arm_ids = []
 
 # Optional, Defines the that the database virtual machines will not be placed in a proximity placement group
-database_use_ppg = true
+database_use_ppg = false
 
 # Optional, Defines the that the database virtual machines will not be placed in an availability set
 database_use_avset = false
@@ -274,7 +274,7 @@ enable_app_tier_deployment = true
 app_tier_use_DHCP = true
 
 # sid is a mandatory field that defines the SAP Application SID
-sid = "ORA"
+sid = "L00"
 
 #########################################################################################
 #                                                                                       #
@@ -310,9 +310,9 @@ scs_server_zones = ["1"]
 scs_server_image = {
   os_type = "LINUX",
   source_image_id = "",
-  publisher = "RedHat",
-  offer = "RHEL-SAP-HA",
-  sku = "86sapha-gen2",
+  publisher = "SUSE",
+  offer = "sles-sap-15-sp5",
+  sku = "gen2",
   version = "latest",
   type = "marketplace"
 }
@@ -321,7 +321,7 @@ scs_server_image = {
 scs_server_use_ppg = true
 
 # scs_server_use_avset defines the that the SCS virtual machines will be placed in an availability set
-scs_server_use_avset = true
+scs_server_use_avset = false
 
 # scs_server_app_nic_ips, if provided provides the static IP addresses
 # for the network interface cards connected to the application subnet
@@ -352,7 +352,7 @@ scs_server_use_avset = true
 application_server_count = 2
 
 # application_server_zones is an optional list defining the availability zones to which deploy the application servers
-#application_server_zones = []
+application_server_zones = ["1"]
 
 # application_server_sku, if defined provides the SKU to use for the application servers
 #application_server_sku = ""
@@ -393,9 +393,9 @@ application_server_use_avset = true
 application_server_image = {
   os_type = "LINUX",
   source_image_id = "",
-  publisher = "Oracle",
-  offer = "Oracle-Linux",
-  sku = "ol86-lvm-gen2",
+  publisher = "SUSE",
+  offer = "sles-sap-15-sp4",
+  sku = "gen2",
   version = "latest",
   type = "marketplace"
 }
@@ -409,10 +409,10 @@ application_server_image = {
 ############################################################################################
 
 # webdispatcher_server_count defines how many web dispatchers to deploy
-webdispatcher_server_count = 0
+webdispatcher_server_count = 1
 
 # web_sid is the Web Dispatcher SID
-#web_sid = ""
+web_sid = "W00"
 
 # web_instance_number defines the web instance number
 web_instance_number = "00"
@@ -441,18 +441,26 @@ web_instance_number = "00"
 webdispatcher_server_use_ppg = false
 
 #webdispatcher_server_use_avset defines the that the Web dispatcher virtual machines will be placed in an availability set
-webdispatcher_server_use_avset = true
+webdispatcher_server_use_avset = false
 
 # webdispatcher_server_tags, if defined provides the tags to be associated to the web dispatchers
 #webdispatcher_server_tags = {}
 
 # webdispatcher_server_zones is an optional list defining the availability zones to which deploy the web dispatchers
-#webdispatcher_server_zones = []
+webdispatcher_server_zones = ["1"]
 
 # The vm_image defines the Virtual machine image to use for the web dispatchers,
 # if source_image_id is specified the deployment will use the custom image provided,
 # in this case os_type must also be specified
-#webdispatcher_server_image = {}
+webdispatcher_server_image = {
+  os_type = "LINUX",
+  source_image_id = "",
+  publisher = "SUSE",
+  offer = "sles-sap-15-sp5",
+  sku = "gen2",
+  version = "latest",
+  type = "marketplace"
+}
 
 
 
@@ -838,12 +846,7 @@ enable_purge_control_for_keyvaults = false
 #bom_name = ""
 
 # configuration_settings is a dictionary containing values that will be persisted in sap-parameters.yaml
-configuration_settings = {
-  "ora_release" = "19",
-  "ora_version" = "19.0.0",
-  "oracle_sbp_patch" = "SAP19P_2311-70004508.ZIP",
-  "oraclegrid_sbp_patch" = "GIRU19P_2311-70004508.ZIP",
-}
+#configuration_settings = {}
 
 ############################################################################################
 #                                                                                          #
