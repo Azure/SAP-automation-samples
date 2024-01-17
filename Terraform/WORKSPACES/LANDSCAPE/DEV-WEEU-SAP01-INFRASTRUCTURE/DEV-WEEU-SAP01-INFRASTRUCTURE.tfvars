@@ -231,6 +231,9 @@ register_virtual_network_to_dns = true
 # enable_purge_control_for_keyvaults is an optional parameter that czan be used to disable the purge protection fro Azure keyvaults
 enable_purge_control_for_keyvaults = false
 
+# enable_rbac_authorization_for_keyvault Controls the access policy model for the workload zone keyvault.
+enable_rbac_authorization_for_keyvault = false
+
 #########################################################################################
 #                                                                                       #
 #  Credentials                                                                          #
@@ -268,6 +271,9 @@ install_volume_size = 1024
 
 # azurerm_private_endpoint_connection_install_id defines the Azure resource id for the install storage account's private endpoint connection
 #install_private_endpoint_id = ""
+
+# create_transport_storage defines if the workload zone will host storage for the transport data
+create_transport_storage = true
 
 # Defines the size of the transport volume
 transport_volume_size = 128
@@ -311,7 +317,7 @@ storage_account_replication_type = "ZRS"
 #########################################################################################
 
 # If defined provides the DNS label for the Virtual Network
-dns_label = "azure.sdaf.contoso.net"
+dns_label = "azure.contoso.net"
 
 #If defined provides the lsit of DNS servers to attach to the Virtual NEtwork
 #dns_server_list = []
@@ -394,7 +400,7 @@ ANF_qos_type = "Manual"
 
 ###########################################################################
 #                                                                         #
-#                                    ISCSI                                #
+#                                    ISCSI Networking                     #
 #                                                                         #
 ###########################################################################
 
@@ -423,25 +429,31 @@ ANF_qos_type = "Manual"
 ###########################################################################
 
 # Number of iSCSI devices to be created
-#iscsi_count = null
+iscsi_count = "0"
 
-#Size of iSCSI Virtual Machines to be created
-#iscsi_size = null
+# Size of iSCSI Virtual Machines to be created
+iscsi_size = "Standard_D2s_v3"
 
 # Defines if the iSCSI devices use DHCP
-#iscsi_useDHCP = null
+iscsi_useDHCP = true
 
 # Defines the Virtual Machine image for the iSCSI devices
-#iscsi_image = null
+#iscsi_image = {}
 
 # Defines the Virtual Machine authentication type for the iSCSI devices
-#iscsi_authentication_type = null
+iscsi_authentication_type = "key"
 
 # Defines the username for the iSCSI devices
-#iscsi_authentication_username = null
+iscsi_authentication_username = "azureadm"
 
 # Defines the IP Addresses for the iSCSI devices
-#iscsi_nic_ips = null
+#iscsi_nic_ips = []
+
+# Defines the Availability zones for the iSCSI devices
+#iscsi_vm_zones = []
+
+# user_assigned_identity_id defines the user assigned identity to be assigned to the Virtual machines
+#user_assigned_identity_id = ""
 
 ##########################################################################################
 #                                                                                        #
@@ -489,5 +501,5 @@ utility_vm_useDHCP = true
 
 # These tags will be applied to all resources
 tags = {
-  DeployedBy = "SDAF",
+  "DeployedBy" = "SDAF",
 }
