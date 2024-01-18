@@ -1,0 +1,14 @@
+---
+name:    'SUM20SP18'
+target:  'SUM20SP18'
+version: 007
+
+materials:
+
+  media:
+
+    - name:         "Patch 7 for SOFTWARE UPDATE MANAGER 2.0 SP18 (Windows)"
+      archive:      SUM20SP18_7-80002458.SAR
+      checksum:     aadf8aca466b59d40f575c5e6f321ac51df7017a305d3f4382a8af10554f9193
+      download:     false
+      url:          https://softwaredownloads.sap.com/file/0020000001547432023
