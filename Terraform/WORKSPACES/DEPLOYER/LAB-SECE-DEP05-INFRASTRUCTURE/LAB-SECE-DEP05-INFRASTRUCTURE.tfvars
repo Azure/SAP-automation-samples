@@ -20,7 +20,7 @@
 #########################################################################################
 environment = "LAB"
 # The location/region value is a mandatory field, it is used to control where the resources are deployed
-location = "westeurope"
+location = "swedencentral"
 
 # RESOURCEGROUP
 # The two resource group name and arm_id can be used to control the naming and the creation of the resource group
