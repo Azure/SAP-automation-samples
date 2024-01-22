@@ -231,6 +231,9 @@ register_virtual_network_to_dns = true
 # enable_purge_control_for_keyvaults is an optional parameter that czan be used to disable the purge protection fro Azure keyvaults
 enable_purge_control_for_keyvaults = true
 
+# enable_rbac_authorization_for_keyvault Controls the access policy model for the workload zone keyvault.
+enable_rbac_authorization_for_keyvault = false
+
 #########################################################################################
 #                                                                                       #
 #  Credentials                                                                          #
@@ -268,6 +271,9 @@ install_volume_size = 1024
 
 # azurerm_private_endpoint_connection_install_id defines the Azure resource id for the install storage account's private endpoint connection
 #install_private_endpoint_id = ""
+
+# create_transport_storage defines if the workload zone will host storage for the transport data
+create_transport_storage = true
 
 # Defines the size of the transport volume
 transport_volume_size = 128
@@ -327,6 +333,9 @@ dns_label = "azure.sdaf.contoso.net"
 # ANF indicates that Azure NetApp Files is used
 # NFS indicates that a custom solution is used for NFS
 NFS_provider = "AFS"
+
+# use_AFS_for_installation_media defines if shared media is on AFS even when using ANF for data
+use_AFS_for_installation_media = true
 
 #########################################################################################
 #                                                                                       #
@@ -394,7 +403,7 @@ ANF_qos_type = "Manual"
 
 ###########################################################################
 #                                                                         #
-#                                    ISCSI                                #
+#                                    ISCSI Networking                     #
 #                                                                         #
 ###########################################################################
 
@@ -423,40 +432,49 @@ ANF_qos_type = "Manual"
 ###########################################################################
 
 # Number of iSCSI devices to be created
-#iscsi_count = null
+iscsi_count = 0
 
-#Size of iSCSI Virtual Machines to be created
-#iscsi_size = null
+# Size of iSCSI Virtual Machines to be created
+iscsi_size = "Standard_D2s_v3"
 
 # Defines if the iSCSI devices use DHCP
-#iscsi_useDHCP = null
+iscsi_useDHCP = true
 
 # Defines the Virtual Machine image for the iSCSI devices
-#iscsi_image = null
+#iscsi_image = {}
 
 # Defines the Virtual Machine authentication type for the iSCSI devices
-#iscsi_authentication_type = null
+iscsi_authentication_type = "key"
 
 # Defines the username for the iSCSI devices
-#iscsi_authentication_username = null
+iscsi_authentication_username = "azureadm"
 
 # Defines the IP Addresses for the iSCSI devices
-#iscsi_nic_ips = null
+#iscsi_nic_ips = []
 
-##########################################################################################
-#                                                                                        #
-#  Terraform deployment parameters (internal)                                            #
-#                                                                                        #
-##########################################################################################
+# Defines the Availability zones for the iSCSI devices
+#iscsi_vm_zones = []
 
-# - tfstate_resource_id is the Azure resource identifier for the Storage account in the SAP Library
-#   that will contain the Terraform state files
-# - deployer_tfstate_key is the state file name for the deployer
+# user_assigned_identity_id defines the user assigned identity to be assigned to the Virtual machines
+#user_assigned_identity_id = ""
+
+#########################################################################################
+#                                                                                       #
+#  Terraform deployment parameters                                                      #
+#                                                                                       #
+#########################################################################################
+
 # These are required parameters, if using the deployment scripts they will be auto populated otherwise they need to be entered
 
+# tfstate_resource_id is the Azure resource identifier for the Storage account in the SAP Library
+# that will contain the Terraform state files
 #tfstate_resource_id = ""
 
+# deployer_tfstate_key is the state file name for the deployer
 #deployer_tfstate_key = ""
+
+# use_spn defines if the deployments are performed using Service Principals or the deployer's managed identiry, true=SPN, false=MSI
+use_spn = true
 
 
 #########################################################################################
@@ -471,6 +489,13 @@ utility_vm_count = 0
 
 # Defines the SKU for the workload virtual machine
 #utility_vm_size = ""
+
+# Defines the size of the OS disk for the Virtual Machine
+utility_vm_os_disk_size = "128"
+
+# Defines the type of the OS disk for the Virtual Machine
+utility_vm_os_disk_type = "Premium_LRS"
+
 
 # Defines if the utility virtual machine uses DHCP
 utility_vm_useDHCP = true
@@ -489,5 +514,5 @@ utility_vm_useDHCP = true
 
 # These tags will be applied to all resources
 tags = {
-  DeployedBy = "SDAF",
+  "DeployedBy" = "SDAF",
 }
