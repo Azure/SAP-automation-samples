@@ -66,8 +66,18 @@ use_secondary_ips = false
 # use_scalesets_for_deployment defines if Flexible Virtual Machine Scale Sets are used for the deployment
 use_scalesets_for_deployment = false
 
+# scaleset_id defines the scale set Azure resource Id
+#scaleset_id = ""
+
+
 # database_use_premium_v2_storage defines if the database tier will use premium v2 storage
 database_use_premium_v2_storage = false
+
+# upgrade_packages defines if all packages should be upgraded after installation
+upgrade_packages = false
+
+# user_assigned_identity_id defines the user assigned identity to be assigned to the Virtual machines
+#user_assigned_identity_id = ""
 
 #########################################################################################
 #                                                                                       #
@@ -104,6 +114,12 @@ use_loadbalancers_for_standalone_deployments = true
 #  Cluster settings                                                                     #
 #                                                                                       #
 #########################################################################################
+
+# scs_cluster_type defines cluster quorum type; AFA (Azure Fencing Agent), ASD (Azure Shared Disk), ISCSI
+scs_cluster_type = "AFA"
+
+# database_cluster_type defines cluster quorum type; AFA (Azure Fencing Agent), ASD (Azure Shared Disk), ISCSI
+database_cluster_type = "AFA"
 
 # use_msi_for_clusters if defined will use managed service identity for the Pacemaker cluster fencing
 use_msi_for_clusters = true
@@ -267,7 +283,7 @@ sid = "P02"
 #########################################################################################
 
 # scs_server_count defines how many SCS servers to deploy
-scs_server_count = 1
+scs_server_count = "1"
 
 # scs_high_availability is a boolean flag controlling if SCS should be highly available
 scs_high_availability = true
@@ -363,7 +379,7 @@ app_tier_dual_nics = false
 #app_tier_authentication_type = ""
 
 # application_server_use_ppg defines the that the application server virtual machines will be placed in a proximity placement group
-#application_server_use_ppg = false
+application_server_use_ppg = true
 
 # application_server_use_avset defines the that the application server virtual machines will be placed in an availability set
 application_server_use_avset = true
@@ -458,6 +474,9 @@ deploy_application_security_groups = true
 
 # deploy_v1_monitoring_extension Defines if the Microsoft.AzureCAT.AzureEnhancedMonitoring extension will be deployed
 deploy_v1_monitoring_extension = true
+
+# dns_a_records_for_secondary_names defines if DNS records should be created for the virtual host names
+dns_a_records_for_secondary_names = true
 
 #########################################################################################
 #                                                                                       #
@@ -624,26 +643,39 @@ ANF_HANA_log_volume_throughput = 64
 # nsg_asg_with_vnet if set controls where the Application Security Groups are created
 nsg_asg_with_vnet = false
 
+#########################################################################################
 # RESOURCE GROUP
 # The two resource group name and arm_id can be used to control the naming and the creation of the resource group
 # The resourcegroup_name value is optional, it can be used to override the name of the resource group that will be provisioned
 # The resourcegroup_name arm_id is optional, it can be used to provide an existing resource group for the deployment
+#########################################################################################
 
 #resourcegroup_name = ""
 
 #resourcegroup_arm_id = ""
 
-# PPG
-# The proximity placement group names and arm_ids are optional can be used to
-# control the naming and the creation of the proximity placement groups
-# The proximityplacementgroup_names list value is optional,
-# it can be used to override the name of the proximity placement groups that will be provisioned
-# The proximityplacementgroup_arm_ids list value is optional,
-# it can be used to provide an existing proximity placement groups for the deployment
+#########################################################################################
+#                                                                                       #
+#  PPG                                                                                  #
+#    The proximity placement group names and arm_ids are optional can be used to
+#    control the naming and the creation of the proximity placement groups
+#                                                                                       #
+#########################################################################################
 
+# If provided, names of the proximity placement groups
 #proximityplacementgroup_names = []
 
+# If provided, azure resource ids for the proximity placement groups
 #proximityplacementgroup_arm_ids = []
+
+# Boolean value indicating if an proximity placement group should be used for the app tier VMs
+use_app_proximityplacementgroups = false
+
+# If provided, names of the application proximity placement groups
+#app_proximityplacementgroup_names = []
+
+# If provided, azure resource ids for the application proximity placement groups
+#app_proximityplacementgroup_arm_ids = []
 
 #########################################################################################
 #                                                                                       #
@@ -785,22 +817,24 @@ enable_purge_control_for_keyvaults = false
 
 #########################################################################################
 #                                                                                       #
-#  Terraform deploy parameters                                                          #
+#  Terraform deployment parameters                                                      #
 #                                                                                       #
 #########################################################################################
 
-# - tfstate_resource_id is the Azure resource identifier for the Storage account in the SAP Library
-#   that will contain the Terraform state files
-# - deployer_tfstate_key is the state file name for the deployer
-# - landscape_tfstate_key is the state file name for the workload deployment
 # These are required parameters, if using the deployment scripts they will be auto populated otherwise they need to be entered
 
+# tfstate_resource_id is the Azure resource identifier for the Storage account in the SAP Library
+# that will contain the Terraform state files
 #tfstate_resource_id = null
 
+# deployer_tfstate_key is the state file name for the deployer
 #deployer_tfstate_key = null
 
+# landscape_tfstate_key is the state file name for the workload deployment
 #landscape_tfstate_key = null
 
+# use_spn defines if the deployments are performed using Service Principals or the deployer's managed identiry, true=SPN, false=MSI
+use_spn = true
 
 #########################################################################################
 #                                                                                       #
@@ -814,3 +848,12 @@ enable_purge_control_for_keyvaults = false
 
 # configuration_settings is a dictionary containing values that will be persisted in sap-parameters.yaml
 #configuration_settings = {}
+
+############################################################################################
+#                                                                                          #
+#                                  Tags for all resources                                  #
+#                                                                                          #
+############################################################################################
+
+# These tags will be applied to all resources
+#tags = {}
