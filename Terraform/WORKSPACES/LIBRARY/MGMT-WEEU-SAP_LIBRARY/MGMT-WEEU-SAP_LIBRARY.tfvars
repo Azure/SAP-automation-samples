@@ -159,3 +159,5 @@ management_dns_resourcegroup_name = ""
 
 #deployer_tfstate_key=null
 
+# use_spn defines if the deployments are performed using Service Principals or the deployer's managed identiry, true=SPN, false=MSI
+# use_spn = true
