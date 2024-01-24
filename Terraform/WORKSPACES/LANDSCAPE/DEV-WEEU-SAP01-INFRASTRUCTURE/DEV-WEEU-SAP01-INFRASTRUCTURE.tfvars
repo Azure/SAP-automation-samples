@@ -334,8 +334,8 @@ dns_label = "azure.contoso.net"
 # NFS indicates that a custom solution is used for NFS
 NFS_provider = "AFS"
 
-# use_AFS_for_installation_media defines if shared media is on AFS even when using ANF for data
-use_AFS_for_installation_media = true
+# use_AFS_for_shared_storage defines if shared media is on AFS even when using ANF for data
+use_AFS_for_shared_storage = true
 
 #########################################################################################
 #                                                                                       #

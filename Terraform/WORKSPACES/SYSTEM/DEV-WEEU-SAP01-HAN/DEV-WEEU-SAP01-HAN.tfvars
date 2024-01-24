@@ -283,7 +283,7 @@ sid = "HAN"
 #########################################################################################
 
 # scs_server_count defines how many SCS servers to deploy
-scs_server_count = "0"
+scs_server_count = 0
 
 # scs_high_availability is a boolean flag controlling if SCS should be highly available
 scs_high_availability = false
