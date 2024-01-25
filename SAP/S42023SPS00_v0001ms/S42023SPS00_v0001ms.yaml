@@ -581,7 +581,7 @@ materials:
       checksum: 2ff2ef8e5528751c1738b980636af4eb59cb2241a1e4a9712de9f982149bae1c
 
     - name: "UIAPFI70 902: Add-On Installation"
-      archive: K-902AGINUIAPFI70.SAR
+      archive: SAPK-902AGINUIAPFI70
       url: https://me.sap.com/softwarecenter/object/0010000000703232023
       download: false
       checksum: 18b2edd5348a6b523b3b9ee7f900b79d1edf97acb638306c6b388fac71f9e46a
