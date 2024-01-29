@@ -7,7 +7,7 @@ materials:
 
   media:
     - name:         Oracle Client
-      archive:      51054541.zip
+      archive:      51054541.ZIP
       checksum:     80009b7b25e9d307c0bb9f9996b1444d7aafd38c0783fe3d91138829ebc67b7b
       extract:      true
       extractDir:   oraclient
@@ -16,7 +16,7 @@ materials:
       url:          https://softwaredownloads.sap.com/file/0030000001432222020
 
     - name:         Oracle Software Server
-      archive:      51053828.zip
+      archive:      51053828.ZIP
       checksum:     a12e10404572813ce78862c34ce3d1288b67ebbffa12fbd6fe758a6743773154
       extract:      true
       download:     true
