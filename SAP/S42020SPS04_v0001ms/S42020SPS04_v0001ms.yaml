@@ -243,9 +243,9 @@ materials:
 
         # other components
 
-        - name: "Attribute Change Package 17 for EA-HR 608"
+        - name: "Attribute Change Package 18 for EA-HR 608"
           archive: EA-HR608.SAR
-          checksum: 2a772c2fb7466b6de3b5c54354ae4b08d5e2daf5e916ce244aa2d4586ec32ad1
+          checksum: 5d709769878a6f53ca658ada1fe272b1d776619cc6f29042217786362659d0bc
           url: https://softwaredownloads.sap.com/file/0010000000059642016
           download: false
 
@@ -987,9 +987,9 @@ materials:
           url: https://softwaredownloads.sap.com/file/0010000001467632021
           download: false
 
-        - name: "Attribute Change Package 36 for SAP_HR 608"
+        - name: "Attribute Change Package 37 for SAP_HR 608"
           archive: SAP_HR608.SAR
-          checksum: 5156fa6f34989662311371aab548e93878f134e099cd65f80f722131ffbfaf48
+          checksum: 21055a344d47909f65f40a1c6febf7268650ea2623e6bfbef2f68b607388d469
           url: https://softwaredownloads.sap.com/file/0010000000249512014
           download: false
 
