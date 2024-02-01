@@ -9,33 +9,22 @@
 ##########################################################################################################################################################################################
 
 # Location of Export CD
-SAPINST.CD.PACKAGE.HDBCLIENT                                         = {{ sap_cd_package_hdbclient }}
-SAPINST.CD.PACKAGE.CD1                                               = {{ sap_cd_package_cd1 }}
-SAPINST.CD.PACKAGE.CD2                                               = {{ sap_cd_package_cd2 }}
-SAPINST.CD.PACKAGE.CD3                                               = {{ sap_cd_package_cd3 }}
-SAPINST.CD.PACKAGE.CD4                                               = {{ sap_cd_package_cd4 }}
-SAPINST.CD.PACKAGE.CD5                                               = {{ sap_cd_package_cd5 }}
-
-
 archives.downloadBasket                                               = {{ target_media_location }}/download_basket
-
-nwUsers.sapadmUID                                                     = {{ sapadm_uid }}
-nwUsers.sapsysGID                                                     = {{ sapsys_gid }}
-nwUsers.sidAdmUID                                                     = {{ sidadm_uid }}
-nwUsers.sidadmPassword                                                = {{ main_password }}
-
-NW_Delete_Sapinst_Users.removeUsers                                   = true
-NW_GetMasterPassword.masterPwd                                        = {{ main_password }}
-
-
-
+hanadb.landscape.reorg.useCheckProcedureFile                          = DONOTRUN
+hanadb.landscape.reorg.useParameterFile                               = DONOTUSEFILE
 HDB_Schema_Check_Dialogs.schemaName                                   = SAPABAP1
 HDB_Schema_Check_Dialogs.schemaPassword                               = {{ main_password }}
-
 HDB_Software_Dialogs.useMediaCD                                       = true
+NW_ABAP_Import_Dialog.dbCodepage = 4103
 NW_ABAP_Import_Dialog.migmonJobNum                                    = 12
-hanadb.landscape.reorg.useParameterFile                               = DONOTUSEFILE
-
+NW_ABAP_Import_Dialog.migmonLoadArgs                                  = -c 100000 -rowstorelist /tmp/sapinst_instdir/NW750/HDB/INSTALL/HA/ABAP/DB/rowstorelist.txt
+NW_checkMsgServer.abapMSPort                                          = 36{{ scs_instance_number }}
+NW_Delete_Sapinst_Users.removeUsers                                   = true
+NW_getLoadType.loadType                                               = SAP
+NW_getLoadType.loadType = SAP
+NW_GetMasterPassword.masterPwd                                        = {{ main_password }}
+NW_GetSidNoProfiles.sapdrive = undefined
+NW_GetSidNoProfiles.sid = PH2
 NW_HDB_DB.abapSchemaName                                              = SAPABAP1
 NW_HDB_DB.abapSchemaPassword                                          = {{ main_password }}
 NW_HDB_DBClient.clientPathStrategy                                    = SAPCPE
@@ -43,12 +32,21 @@ NW_HDB_getDBInfo.dbhost                                               = {{ sap_d
 NW_HDB_getDBInfo.dbsid                                                = {{ db_sid | upper }}
 NW_HDB_getDBInfo.instanceNumber                                       = {{ db_instance_number }}
 NW_HDB_getDBInfo.systemDbPassword                                     = {{ main_password }}
-NW_HDB_getDBInfo.systemPassword                                       = {{ main_password }}
 NW_HDB_getDBInfo.systemid                                             = {{ db_sid | upper }}
+NW_HDB_getDBInfo.systemPassword                                       = {{ main_password }}
 NW_HDB_getDBInfo.usingSSL                                             = true
-
-NW_Recovery_Install_HDB.extractLocation                               = {{ hana_backup_path }}/{{ db_sid | upper }}/HDB{{ db_instance_number }}/backup/data/DB_{{ db_sid | upper }}{{ db_instance_number }}
-
-NW_checkMsgServer.abapMSPort                                          = 36{{ scs_instance_number }}
-NW_getLoadType.loadType                                               = SAP
 NW_readProfileDir.profileDir                                          = {{ sap_profile_dir }}
+NW_readProfileDir.profilesAvailable = false
+NW_Recovery_Install_HDB.extractLocation                               = {{ hana_backup_path }}/{{ db_sid | upper }}/HDB{{ db_instance_number }}/backup/data/DB_{{ db_sid | upper }}{{ db_instance_number }}
+nwUsers.sapadmUID                                                     = {{ sapadm_uid }}
+nwUsers.sapsysGID                                                     = {{ sapsys_gid }}
+nwUsers.sapsysGID = 2000
+nwUsers.sidadmPassword                                                = {{ main_password }}
+nwUsers.sidAdmUID                                                     = {{ sidadm_uid }}
+nwUsers.sidAdmUID = 2003
+SAPINST.CD.PACKAGE.CD1                                               = {{ sap_cd_package_cd1 }}
+SAPINST.CD.PACKAGE.CD2                                               = {{ sap_cd_package_cd2 }}
+SAPINST.CD.PACKAGE.CD3                                               = {{ sap_cd_package_cd3 }}
+SAPINST.CD.PACKAGE.CD4                                               = {{ sap_cd_package_cd4 }}
+SAPINST.CD.PACKAGE.CD5                                               = {{ sap_cd_package_cd5 }}
+SAPINST.CD.PACKAGE.HDBCLIENT                                         = {{ sap_cd_package_hdbclient }}
