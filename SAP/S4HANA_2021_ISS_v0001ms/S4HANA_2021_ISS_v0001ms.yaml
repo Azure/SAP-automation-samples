@@ -553,15 +553,15 @@ materials:
       url:                             https://softwaredownloads.sap.com/file/0010000001617952021
       download:                        false
 
-    - name:                            "Attribute Change Package 34 for UIHR002 100"
+    - name:                            "Attribute Change Package 36 for UIHR002 100"
       archive:                         UIHR002100.SAR
-      checksum:                        42855b1adafb859b31e6b368bbaa4c288e0eba4a820abf8132ea31f0e5bd31ba
+      checksum:                        689436077b2a9033cba4e2805127d351d580e61916952f060b3758991b6d5faf
       url:                             https://softwaredownloads.sap.com/file/0010000020208092017
       download:                        false
 
-    - name:                            "Attribute Change Package 16 for UIMDG001 200"
+    - name:                            "Attribute Change Package 18 for UIMDG001 200"
       archive:                         UIMDG001200.SAR
-      checksum:                        3f5bb13ffe5031f12594c94fb25df3f02588f0156f14be76a3094c2dacc8bfd7
+      checksum:                        efe6263197cdbb31f80bf4770d3431cc03c4d6aed954e33d68ce930eac5ffa2a
       url:                             https://softwaredownloads.sap.com/file/0010000014247222017
       download:                        false
 
@@ -571,9 +571,9 @@ materials:
       url:                             https://softwaredownloads.sap.com/file/0010000000382242022
       download:                        false
 
-    - name:                            "Attribute Change Package 17 for UITRV001 300"
+    - name:                            "Attribute Change Package 19 for UITRV001 300"
       archive:                         UITRV001300.SAR
-      checksum:                        3468732be13146e4de55665a989da2f76e87386f76f7b8bb48d4d233363d2e77
+      checksum:                        049a690586683062f6f4ef887a70e11479eefafdb467619b6dc5f920dd32ac86
       url:                             https://softwaredownloads.sap.com/file/0010000000561182019
       download:                        false
 
