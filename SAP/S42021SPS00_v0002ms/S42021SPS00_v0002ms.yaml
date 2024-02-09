@@ -86,10 +86,10 @@ materials:
       path:                            download_basket
 
     # MISC
-    - name:                            "SP12 Patch7 for UMML4HANA 1"
-      archive:                         HANAUMML12_7-70001054.ZIP
-      checksum:                        c26328f2fd99eb8188aa4ff66d682818a6c402bc37efd8631ed166ad585ca44d
-      url:                             https://softwaredownloads.sap.com/file/0020000000665292023
+    - name:                            "SP12 Patch8 for UMML4HANA 1"
+      archive:                         HANAUMML12_8-70001054.ZIP
+      checksum:                        ef60422cab183f76cae3c3296f0e9d08c9f692ff44542d23e94e0dedd50fbae4
+      url:                             https://softwaredownloads.sap.com/file/0020000000146922024
       path:                            download_basket
 
     - name:                            "Predi. Analy. APL 2008 for SAP HANA 2.0 SPS03 and beyond"
