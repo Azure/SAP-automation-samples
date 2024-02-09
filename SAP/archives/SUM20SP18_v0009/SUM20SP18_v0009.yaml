@@ -1,0 +1,15 @@
+---
+name:    'SUM20SP18'
+target:  'SUM20SP18'
+version: 009
+
+materials:
+
+  media:
+    # SUM
+    - name:         "Patch 9 for SOFTWARE UPDATE MANAGER 2.0 SP18 (Linux on x86_64)"
+      archive:      SUM20SP18_9-80002456.SAR
+      checksum:     71245e58531157ff49998a41e6c6472808a7f8bef3a524f8901de0dc75552583
+      download:     false
+      url:          https://softwaredownloads.sap.com/file/0020000000047982024
+
