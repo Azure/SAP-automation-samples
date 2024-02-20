@@ -1,8 +1,9 @@
 ---
-name:     "BW4HANA2021SPS01_v0003ms"
-target:   "SAP BW/4HANA 2021"
-version:  3
-platform: "HANA"
+name:             "BW4HANA2021SPS01_v0003ms"
+target:           "SAP BW/4HANA 2021"
+version:          3
+platform:         "HANA"
+InstanceType:     "ABAP"
 
 defaults:
   target_location: "{{ target_media_location }}/download_basket"
