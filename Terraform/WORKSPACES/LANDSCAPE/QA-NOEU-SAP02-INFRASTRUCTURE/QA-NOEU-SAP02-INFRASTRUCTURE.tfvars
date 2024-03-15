@@ -334,6 +334,9 @@ dns_label = "azure.sdaf.contoso.net"
 # NFS indicates that a custom solution is used for NFS
 NFS_provider = "AFS"
 
+# use_AFS_for_shared_storage defines if shared media is on AFS even when using ANF for data
+use_AFS_for_shared_storage = true
+
 #########################################################################################
 #                                                                                       #
 #  Azure NetApp files support                                                           #
@@ -429,7 +432,7 @@ iscsi_subnet_address_prefix = "10.121.64.0/28"
 ###########################################################################
 
 # Number of iSCSI devices to be created
-iscsi_count = "3"
+iscsi_count = 3
 
 # Size of iSCSI Virtual Machines to be created
 iscsi_size = "Standard_D2s_v3"
@@ -463,20 +466,23 @@ iscsi_authentication_username = "azureadm"
 # user_assigned_identity_id defines the user assigned identity to be assigned to the Virtual machines
 #user_assigned_identity_id = ""
 
-##########################################################################################
-#                                                                                        #
-#  Terraform deployment parameters (internal)                                            #
-#                                                                                        #
-##########################################################################################
+#########################################################################################
+#                                                                                       #
+#  Terraform deployment parameters                                                      #
+#                                                                                       #
+#########################################################################################
 
-# - tfstate_resource_id is the Azure resource identifier for the Storage account in the SAP Library
-#   that will contain the Terraform state files
-# - deployer_tfstate_key is the state file name for the deployer
 # These are required parameters, if using the deployment scripts they will be auto populated otherwise they need to be entered
 
+# tfstate_resource_id is the Azure resource identifier for the Storage account in the SAP Library
+# that will contain the Terraform state files
 #tfstate_resource_id = ""
 
+# deployer_tfstate_key is the state file name for the deployer
 #deployer_tfstate_key = ""
+
+# use_spn defines if the deployments are performed using Service Principals or the deployer's managed identiry, true=SPN, false=MSI
+use_spn = true
 
 
 #########################################################################################
@@ -491,6 +497,13 @@ utility_vm_count = 0
 
 # Defines the SKU for the workload virtual machine
 #utility_vm_size = ""
+
+# Defines the size of the OS disk for the Virtual Machine
+utility_vm_os_disk_size = "128"
+
+# Defines the type of the OS disk for the Virtual Machine
+utility_vm_os_disk_type = "Premium_LRS"
+
 
 # Defines if the utility virtual machine uses DHCP
 utility_vm_useDHCP = true

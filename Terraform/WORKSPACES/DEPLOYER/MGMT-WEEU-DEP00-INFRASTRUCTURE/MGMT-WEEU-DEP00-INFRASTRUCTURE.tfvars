@@ -157,8 +157,8 @@ deployer_image = {
   "os_type"         = "Linux"
   "source_image_id" = ""
   "publisher"       = "Canonical"
-  "offer"           = "0001-com-ubuntu-server-focal"
-  "sku"             = "20_04-lts-gen2"
+  "offer"           = "0001-com-ubuntu-server-jammy"
+  "sku"             = "22_04-lts-gen2"
   "version"         = "latest"
 }
 
@@ -175,6 +175,12 @@ plan = {
 
 # deployer_authentication_type defines the authentication type for the deployer virtual machine
 #deployer_authentication_type="key"
+
+# use_spn defines if the deployments are performed using Service Principals or the deployer's managed identiry, true=SPN, false=MSI
+# use_spn = true
+
+# user_assigned_identity_id defines the user assigned identity that will be assigned to the deployers
+#user_assigned_identity_id="/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/XXXXXXXX/providers/Microsoft.ManagedIdentity/userAssignedIdentities/xxxxxxxxxx"
 
 
 #########################################################################################

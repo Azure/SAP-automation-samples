@@ -23,15 +23,11 @@ product_ids:
 materials:
   dependencies:
     - name:                            HANA_2_00_067_v0006ms
-    - name:                            SWPM10SP36_latest
-    - name:                            SUM20SP15_latest
+    - name:                            SWPM10SP40_latest
+    - name:                            SUM20SP19_latest
 
   media:
     # kernel components
-    - name: "SAP HANA CLIENT Version 2.14"
-      archive: IMDB_CLIENT20_014_23-80002082.SAR
-      url: https://softwaredownloads.sap.com/file/0020000001534392022
-      path: download_basket
 
     - name: "Kernel Part II (753)"
       archive: SAPEXEDB_1000-80002572.SAR

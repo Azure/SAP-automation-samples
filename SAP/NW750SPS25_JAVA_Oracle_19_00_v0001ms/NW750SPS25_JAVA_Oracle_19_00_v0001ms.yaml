@@ -20,7 +20,7 @@ product_ids:
 materials:
   dependencies:
     - name:     Oracle19_v0005ms
-    - name:     SWPM10SP39_latest
+    - name:     SWPM10SP40_latest
 
   media:
     # DB Export

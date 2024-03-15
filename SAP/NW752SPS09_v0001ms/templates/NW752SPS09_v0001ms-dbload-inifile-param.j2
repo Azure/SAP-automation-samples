@@ -27,14 +27,18 @@ nwUsers.sidadmPassword                                                = {{ main_
 NW_Delete_Sapinst_Users.removeUsers                                   = true
 NW_GetMasterPassword.masterPwd                                        = {{ main_password }}
 
+hanadb.landscape.reorg.useCheckProcedureFile                          = DONOTUSEFILE
+hanadb.landscape.reorg.useParameterFile                               = DONOTUSEFILE
+NW_ABAP_Import_Dialog.dbCodepage                                      = 4103
+NW_ABAP_Import_Dialog.migmonJobNum                                    = 12
+NW_ABAP_Import_Dialog.migmonLoadArgs                                  = -c 100000 -rowstorelist /tmp/sapinst_instdir/NW750/HDB/INSTALL/HA/ABAP/DB/rowstorelist.txt
+NW_checkMsgServer.abapMSPort                                          = 36{{ scs_instance_number }}
 
 
 HDB_Schema_Check_Dialogs.schemaName                                   = SAPABAP1
 HDB_Schema_Check_Dialogs.schemaPassword                               = {{ main_password }}
 
 HDB_Software_Dialogs.useMediaCD                                       = true
-NW_ABAP_Import_Dialog.migmonJobNum                                    = 12
-hanadb.landscape.reorg.useParameterFile                               = DONOTUSEFILE
 
 NW_HDB_DB.abapSchemaName                                              = SAPABAP1
 NW_HDB_DB.abapSchemaPassword                                          = {{ main_password }}

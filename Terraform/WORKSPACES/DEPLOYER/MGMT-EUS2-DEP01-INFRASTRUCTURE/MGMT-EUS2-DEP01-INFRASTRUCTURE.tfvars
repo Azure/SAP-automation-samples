@@ -115,14 +115,35 @@ deployer_enable_public_ip = true
 #
 # The deployer_image defines the Virtual machine image to use, if source_image_id is specified the deployment will use the custom image provided, in this case os_type must also be specified
 
-#deployer_image={
-#    "os_type"         = "Linux"    
-#    "source_image_id" =""
-#    "publisher"       ="Canonical"
-#    "offer"           ="UbuntuServer"
-#    "sku"             ="18.04-LTS"
-#    "version"         ="latest"
-#}
+deployer_image = {
+  "type"            = "marketplace"
+  "os_type"         = "Linux"
+  "source_image_id" = ""
+  "publisher"       = "Canonical"
+  "offer"           = "0001-com-ubuntu-server-jammy"
+  "sku"             = "22_04-lts-gen2"
+  "version"         = "latest"
+}
+
+# Use this field if you are using a marketplace image that has a plan attached to it
+plan = {
+  "use"       = false
+  "name"      = ""
+  "publisher" = ""
+  "product"   = ""
+}
+
+# deployer_diagnostics_account_arm_id defines the diagnosting storage account for the deployer
+# deployer_diagnostics_account_arm_id = ""
+
+# deployer_authentication_type defines the authentication type for the deployer virtual machine
+#deployer_authentication_type="key"
+
+# use_spn defines if the deployments are performed using Service Principals or the deployer's managed identiry, true=SPN, false=MSI
+# use_spn = true
+
+# user_assigned_identity_id defines the user assigned identity that will be assigned to the deployers
+#user_assigned_identity_id="/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/XXXXXXXX/providers/Microsoft.ManagedIdentity/userAssignedIdentities/xxxxxxxxxx"
 
 # deployer_diagnostics_account_arm_id defines the diagnosting storage account for the deployer
 #deployer_diagnostics_account_arm_id = ""

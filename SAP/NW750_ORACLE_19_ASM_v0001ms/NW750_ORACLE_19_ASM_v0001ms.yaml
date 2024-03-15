@@ -13,12 +13,12 @@ product_ids:
   pas:     NW_ABAP_CI:NW750.ORA.ABAP
   app:     NW_DI:NW750.ORA.PD
   generic: NW_Users_Create:GENERIC.ORA.PD
-  web:
+  web:     NW_Webdispatcher:NW750.IND.PD
 
 materials:
   dependencies:
     - name:     Oracle19_v0008ms
-    - name:     SWPM10SP39_latest
+    - name:     SWPM10SP40_latest
 
   media:
     # SAPCAR 7.22
