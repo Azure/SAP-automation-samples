@@ -1,11 +1,12 @@
 ---
-name:                                  'Oracle19_v0006ms'
-filename:                              "Oracle19_v0006ms.yaml"
+name:                                  'Oracle19_v0008ms'
+filename:                              "Oracle19_v0008ms.yaml"
 target:                                'Oracle 19'
-version:                               6
+version:                               8
 platform:                              "ORACLE"
 InstanceType:                          "ABAP"
-# New SBP Patch included  in this version
+# New SBP Patch included in this version
+# 03/16/2024
 
 materials:
 
