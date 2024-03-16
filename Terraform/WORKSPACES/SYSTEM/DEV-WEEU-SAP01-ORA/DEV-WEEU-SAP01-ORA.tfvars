@@ -850,8 +850,8 @@ use_spn = true
 configuration_settings = {
   "ora_release" = "19",
   "ora_version" = "19.0.0",
-  "oracle_sbp_patch" = "SAP19P_2311-70004508.ZIP",
-  "oraclegrid_sbp_patch" = "GIRU19P_2311-70004508.ZIP",
+  "oracle_sbp_patch" = "SAP19P_2402-70004508.ZIP",
+  "oraclegrid_sbp_patch" = "GIRU19P_2402-70004508.ZIP",
 }
 
 ############################################################################################
