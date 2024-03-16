@@ -36,6 +36,21 @@ location = "westeurope"
 
 #########################################################################################
 #                                                                                       #
+#  Resource group details                                                               #
+#                                                                                       #
+#########################################################################################
+
+# The two resource group name and arm_id can be used to control the naming and the creation of the resource group
+
+# The resourcegroup_name value is optional, it can be used to override the name of the resource group that will be provisioned
+#resourcegroup_name = ""
+
+# The resourcegroup_name arm_id is optional, it can be used to provide an existing resource group for the deployment
+#resourcegroup_arm_id = ""
+
+
+#########################################################################################
+#                                                                                       #
 #  Networking                                                                           #
 #                                                                                       #
 #########################################################################################
@@ -195,6 +210,54 @@ web_subnet_address_prefix = "10.111.128.0/19"
 # anf_subnet_nsg_arm_id is an optional parameter that if provided specifies Azure resource identifier for the existing network security group to use
 #anf_subnet_nsg_arm_id = ""
 
+
+###########################################################################
+#                                                                         #
+#                                    ISCSI Networking                     #
+#                                                                         #
+###########################################################################
+
+/* iscsi subnet information */
+# If defined these parameters control the subnet name and the subnet prefix
+# iscsi_subnet_name is an optional parameter and should only be used if the default naming is not acceptable
+#iscsi_subnet_name = ""
+
+# iscsi_subnet_arm_id is an optional parameter that if provided specifies Azure resource identifier for the existing subnet
+#iscsi_subnet_arm_id = ""
+
+# iscsi_subnet_address_prefix is a mandatory parameter if the subnets are not defined in the workload or if existing subnets are not used
+#iscsi_subnet_address_prefix = ""
+
+# iscsi_subnet_nsg_arm_id is an optional parameter that if provided specifies Azure resource identifier for the existing nsg
+#iscsi_subnet_nsg_arm_id = ""
+
+# iscsi_subnet_nsg_name is an optional parameter and should only be used if the default naming is not acceptable for the network security group name
+#iscsi_subnet_nsg_name = ""
+
+###########################################################################
+#                                                                         #
+#                               AMS Networking                            #
+#                                                                         #
+###########################################################################
+
+/* ams subnet information */
+# If defined these parameters control the subnet name and the subnet prefix
+# ams_subnet_name is an optional parameter and should only be used if the default naming is not acceptable
+#ams_subnet_name = ""
+
+# ams_subnet_arm_id is an optional parameter that if provided specifies Azure resource identifier for the existing subnet
+#ams_subnet_arm_id = ""
+
+# ams_subnet_address_prefix is a mandatory parameter if the subnets are not defined in the workload or if existing subnets are not used
+#ams_subnet_address_prefix = ""
+
+# ams_subnet_nsg_arm_id is an optional parameter that if provided specifies Azure resource identifier for the existing nsg
+#ams_subnet_nsg_arm_id = ""
+
+# ams_subnet_nsg_name is an optional parameter and should only be used if the default naming is not acceptable for the network security group name
+#ams_subnet_nsg_name = ""
+
+
 #########################################################################################
 #                                                                                       #
 #  DNS Settings                                                                         #
@@ -233,6 +296,12 @@ enable_purge_control_for_keyvaults = true
 
 # enable_rbac_authorization_for_keyvault Controls the access policy model for the workload zone keyvault.
 enable_rbac_authorization_for_keyvault = false
+
+# Defines a list of Object IDs to be added to the keyvault
+#additional_users_to_add_to_keyvault_policies = []
+
+# The number of days that items should be retained in the soft delete period
+soft_delete_retention_days = 14
 
 #########################################################################################
 #                                                                                       #
@@ -297,21 +366,6 @@ storage_account_replication_type = "ZRS"
 
 #########################################################################################
 #                                                                                       #
-#  Resource group details                                                               #
-#                                                                                       #
-#########################################################################################
-
-# The two resource group name and arm_id can be used to control the naming and the creation of the resource group
-
-# The resourcegroup_name value is optional, it can be used to override the name of the resource group that will be provisioned
-#resourcegroup_name = ""
-
-# The resourcegroup_name arm_id is optional, it can be used to provide an existing resource group for the deployment
-#resourcegroup_arm_id = ""
-
-
-#########################################################################################
-#                                                                                       #
 #  Private DNS support                                                                  #                                                                                       #
 #                                                                                       #
 #########################################################################################
@@ -370,17 +424,20 @@ ANF_qos_type = "Manual"
 #                                                                                       #
 #########################################################################################
 
-#ANF_transport_volume_use_existing defines if an existing volume is used for transport
+# ANF_transport_volume_use_existing defines if an existing volume is used for transport
 #ANF_transport_volume_use_existing = false
 
-#ANF_transport_volume_name is the name of the transport volume
+# ANF_transport_volume_name is the name of the transport volume
 #ANF_transport_volume_name = ""
 
-#ANF_transport_volume_throughput is the throughput for the transport volume
+# ANF_transport_volume_throughput is the throughput for the transport volume
 #ANF_transport_volume_throughput = 0
 
-#ANF_transport_volume_size is the size for the transport volume
+# ANF_transport_volume_size is the size for the transport volume
 #ANF_transport_volume_size = 0
+
+# ANF_transport_volume_zone is the zone for the transport volume
+#ANF_transport_volume_zone = []
 
 #########################################################################################
 #                                                                                       #
@@ -400,30 +457,8 @@ ANF_qos_type = "Manual"
 #ANF_install_volume_size is the size for the install volume
 #ANF_install_volume_size = 0
 
-
-###########################################################################
-#                                                                         #
-#                                    ISCSI Networking                     #
-#                                                                         #
-###########################################################################
-
-/* iscsi subnet information */
-# If defined these parameters control the subnet name and the subnet prefix
-# iscsi_subnet_name is an optional parameter and should only be used if the default naming is not acceptable
-#iscsi_subnet_name = ""
-
-# iscsi_subnet_arm_id is an optional parameter that if provided specifies Azure resource identifier for the existing subnet
-#iscsi_subnet_arm_id = ""
-
-# iscsi_subnet_address_prefix is a mandatory parameter if the subnets are not defined in the workload or if existing subnets are not used
-#iscsi_subnet_address_prefix = ""
-
-# iscsi_subnet_nsg_arm_id is an optional parameter that if provided specifies Azure resource identifier for the existing nsg
-#iscsi_subnet_nsg_arm_id = ""
-
-# iscsi_subnet_nsg_name is an optional parameter and should only be used if the default naming is not acceptable for the network security group name
-#iscsi_subnet_nsg_name = ""
-
+# ANF_install_volume_zone is the zone for the transport volume
+#ANF_install_volume_zone = []
 
 ###########################################################################
 #                                                                         #
@@ -516,3 +551,18 @@ utility_vm_useDHCP = true
 tags = {
   "DeployedBy" = "SDAF",
 }
+
+############################################################################################
+#                                                                                          #
+#                                  AMS Configuration                                       #
+#                                                                                          #
+############################################################################################
+
+# If true, an AMS instance will be created
+create_ams_instance = false
+
+# ams_instance_name If provided, the name of the AMS instance
+#ams_instance_name = ""
+
+# ams_laws_arm_id if provided, Azure resource id for the Log analytics workspace in AMS
+#ams_laws_arm_id = ""
