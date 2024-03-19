@@ -1,29 +1,67 @@
-name:                                'NW750SPS25_JAVA_ORACLE_19_00_v0001ms'
-target:                              'Oracle 19c'
-version:                             "1"
-InstanceType:                        "JAVA"
-platform:                            "ORACLE"
+---
+
+name: "SAP_NETWEAVER_7_5_2"
+target:                         "SAP NETWEAVER 7.5"
+version:                        "1"
+platform:                       "SQLSERVER"
+InstanceType:                   "JAVA"
+
+defaults:
+  target_location: "{{ target_media_location }}/download_basket"
 
 product_ids:
-  dbl:                                NW_Java_DB:NW750.ORA.PD
-  scs:                                NW_Java_SCS:NW750.ORA.PD
-  scs_ha:                             NW_Java_SCS:NW750.ORA.HA
-  pas:                                NW_Java_CI:NW750.ORA.PD
-  pas_ha:                             NW_Java_CI:NW750.ORA.HA
-  app:                                NW_DI:NW750.ORA.PD
-  app_ha:                             NW_DI:NW750.ORA.HA
-  web:                                NW_Webdispatcher:NW750.IND.PD
-  ers:                                NW_ERS:NW750.ORA.PD
-  ers_ha:                             NW_ERS:NW750.ORA.HA
-  generic:                            NW_Users_Create:GENERIC.ORA.PD
+  scs:                          NW_JAVA_ASCS:NW752.MSS.ABAP
+  scs_ha:                       NW_FirstClusterNode_JAVA:NW752.MSS.JAVAHA
+  dbl:                          NW_JAVA_DB:NW752.MSS.JAVA
+  pas:                          NW_JAVA_CI:NW752.MSS.JAVA
+  pas_ha:
+  app:                          NW_DI:NW752.MSS.PD
+  app_ha:                       NW_DI:NW752.MSS.JAVAHA
+  web:
+  ers:                          NW_SecondClusterNode:NW752.MSS.JAVAHA
 
 materials:
   dependencies:
-    - name:     Oracle19_v0008ms
-    - name:     SWPM10SP40_latest
+    - name:                     "MSSQLSRV_2019_v0001ms"
+    - name:                     "SUM20SP17_win_latest"
+    - name:                     "SWPM10SP37_win_latest"
 
   media:
-    # DB Export
+
+    # kernel components
+    - name:                            "SAPCAR 7.22; OS: Windows on x64 64bit"
+      archive:                         SAPCAR_1115-70006231.EXE
+      checksum:                        0808008d58f45d52b8ce38175117a37c97c133e939434644f95e6c6d815370fb
+      filename:                        SAPCAR.exe
+      url:                             https://softwaredownloads.sap.com/file/0020000000098632022
+
+    - name:                            "Kernel Part II (753)"
+      archive:                         SAPEXEDB_1000-80002611.SAR
+      url:                             https://softwaredownloads.sap.com/file/0020000000360542022
+      path:                            download_basket
+
+    - name:                            "Kernel Part I (753)"
+      archive:                         SAPEXE_1000-80002612.SAR
+      url:                             https://softwaredownloads.sap.com/file/0020000000362102022
+      path:                            download_basket
+
+    - name:                            "SAP HOST AGENT 7.22 SP57"
+      archive:                         SAPHOSTAGENT57_57-80004825.SAR
+      url:                             https://softwaredownloads.sap.com/file/0020000000983332022
+      path:                            download_basket
+
+    - name:                            "Installation for SAP IGS integrated in SAP Kernel"
+      archive:                         igsexe_13-80003241.sar
+      url:                             https://softwaredownloads.sap.com/file/0020000001223862021
+      path:                            download_basket
+
+    - name:                            "SAP IGS Fonts and Textures"
+      archive:                         igshelper_17-10010245.sar
+      url:                             https://softwaredownloads.sap.com/file/0020000000703122018
+      path:                            download_basket
+
+    # DB export
+
     - name:             "NW 7.5 JAVA Installation Export"
       archive:          51055106.ZIP
       checksum:         6cf18b4ab1d1d48809e3103810ccf3f0c73ca4bce6b92b6b187aff27a044d21b
@@ -32,73 +70,16 @@ materials:
       creates:          CDLABEL.ASC
       url:              https://softwaredownloads.sap.com/file/0030000000231172022
 
-    # kernel components
     
-#     # SAPCAR 7.22
-    - name:         "SAPCAR 7.22; OS: Linux on x86_64 64bit"
-      archive:      SAPCAR_1115-70006178.EXE
-      checksum:     765412436934362cc5497e3d659fbb78be91093a091c11ec4fbe84dfb415a0e5
-      filename:     SAPCAR
-      permissions:  '0755'
-      url:          https://softwaredownloads.sap.com/file/0020000000098642022
-
-# # SAP Oracle executables, SWMP and Installation exports
-
-    - name:         "DB Independent Kernel Files"
-      archive:      SAPEXE_801-80002573.SAR
-      checksum:     c1efbbd12cb16134720b251fd18cab4fdbc8a0a3ee93b54c2ee41671bc3048fc
-      extract:      false
-      # download:     true
-      path:         download_basket
-      # creates:     SIGNATURE.SMF
-      url:          https://softwaredownloads.sap.com/file/0020000000937192021
-
-    - name:         "Oracle DB specific kernel files"
-      archive:      SAPEXEDB_801-80002605.SAR
-      checksum:     3682acc6bbc9b5a122af422835217875e01cecd372b04649ef0659fcade3163e
-      extract:      false
-      # download:     true
-      path:         download_basket
-      # creates:     SIGNATURE.SMF
-      url:          https://softwaredownloads.sap.com/file/0020000000937422021
-
-    - name:         "Oracle DBATOOLS"
-      archive:      DBATL740O11_48-80002605.SAR
-      checksum:     ff8dd3a33d4c9f044b073e2d9591a0f204469e5e568f3e3dc136c33931cd4eed
-      extract:      false
-      # download:     true
-      path:         download_basket
-      # creates:     SIGNATURE.SMF
-      url:          https://softwaredownloads.sap.com/file/0020000001371372022
-
-      
     - name:             "SAP JVM 8.1"
       archive:          SAPJVM8_91-80000202.SAR
       checksum:         781368906b03a2e3494d3d92ee23789af18549e57f4c9d9f5a7a29f80c51b1ae
       url:              https://softwaredownloads.sap.com/file/0020000001443282022
       path:             download_basket
 
-    # SAP Host Agent
-    - name:             "SAP HOST AGENT 7.22 SP58"
-      archive:          SAPHOSTAGENT58_58-80004822.SAR
-      checksum:         b14fc73f3ebc01eebf192033577d64c3e3a0259d10fb010b74708940ff04f29b
-      url:              https://softwaredownloads.sap.com/file/0020000001370172022
-      path:             download_basket
 
-    # IGS
-    - name:             "Installation for SAP IGS integrated in SAP Kernel"
-      archive:          igsexe_13-80003187.sar
-      checksum:         b508b1ff97ec0e3b7f4dd8f57e3840eb547b6326434df677927b8cfd6b4faa12
-      url:              https://softwaredownloads.sap.com/file/0020000000534572021
-      path:             download_basket
+    # other components
 
-    - name:             "SAP IGS Fonts and Textures"
-      archive:          igshelper_17-10010245.sar
-      checksum:         bc405afc4f8221aa1a10a8bc448f8afd9e4e00111100c5544097240c57c99732
-      url:              https://softwaredownloads.sap.com/file/0020000000703122018
-      path:             download_basket
-
-    # Other files
     - name:             "SP25 for AJAX RUNTIME 7.50"
       archive:          AJAXRUNTIME25_0-80000486.SCA
       checksum:         3206429721ce840530e4a0dc141cb08583f57e062a5d9463260a39138b560e88
@@ -563,5 +544,4 @@ materials:
       path:             download_basket
       download:         false
 
-
-    
+...
