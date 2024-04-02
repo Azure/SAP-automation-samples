@@ -1,7 +1,10 @@
 ---
-name:               "Tools"
-target:             "Deployer"
-version:            1
+name:                           "Tools"
+target:                         "Deployer"
+version:                        1
+maintenance_planner_tools:      true
+target_directory:               "tools"
+
 defaults:
   target_location:  "{{ target_media_location }}/download_basket"
 
@@ -14,15 +17,17 @@ materials:
     - name:         swpm20
       dynamic:      true
       platform:     LNX
+      filename:     swpm20
       extract:      true
       extractDir:   SWPM
       creates:      SIGNATURE.SMF
       path:         linuxswpm20
 
     # SWPM - Dynamic Download
-    - name:         swpm10sp3
+    - name:         swpm10s4
       dynamic:      true
       platform:     LNX
+      filename:     swpm10
       extract:      true
       extractDir:   SWPM
       creates:      SIGNATURE.SMF
