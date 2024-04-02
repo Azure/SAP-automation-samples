@@ -13,6 +13,15 @@ defaults:
 materials:
   media:
 
+    # SAPCAR 7.22
+    - name:         "SAPCAR 7.22; OS: Linux on x86_64 64bit"
+      archive:      SAPCAR_1115-70006178.EXE
+      checksum:     765412436934362cc5497e3d659fbb78be91093a091c11ec4fbe84dfb415a0e5
+      filename:     SAPCAR
+      permissions:  '0755'
+      url:          https://softwaredownloads.sap.com/file/0020000000098642022
+
+
     # SWPM - Dynamic Download
     - name:         swpm20
       dynamic:      true
@@ -33,59 +42,6 @@ materials:
       creates:      SIGNATURE.SMF
       path:         linuxswpm10
 
-    # SAPCAR 7.22
-    - name:         "SAPCAR 7.22; OS: Linux on x86_64 64bit"
-      archive:      SAPCAR_1115-70006178.EXE
-      checksum:     765412436934362cc5497e3d659fbb78be91093a091c11ec4fbe84dfb415a0e5
-      filename:     SAPCAR
-      permissions:  '0755'
-      url:          https://softwaredownloads.sap.com/file/0020000000098642022
-
-    # # SUM - Dynamic Download
-    # - name:         sum20
-    #   dynamic:      true
-    #   platform:     LNX
-    #   download:     false
-    #   path:         linuxsum20
-
-    # # SUM - Dynamic Download
-    # - name:         sum11
-    #   dynamic:      true
-    #   platform:     LNX
-    #   download:     false
-    #   path:         linuxsum10
-
-    # # SWPM - Dynamic Download
-    # - name:         swpm20
-    #   dynamic:      true
-    #   platform:     WIN
-    #   extract:      true
-    #   extractDir:   SWPM
-    #   creates:      SIGNATURE.SMF
-    #   path:         winswpm20
-
-    # # SWPM - Dynamic Download
-    # - name:         swpm10sp3
-    #   dynamic:      true
-    #   platform:     WIN
-    #   extract:      true
-    #   extractDir:   SWPM
-    #   creates:      SIGNATURE.SMF
-    #   path:         winswpm10
-
-    # # SUM - Dynamic Download
-    # - name:         sum20
-    #   dynamic:      true
-    #   platform:     WIN
-    #   download:     false
-    #   path:         winsum20
-
-    # # SUM - Dynamic Download
-    # - name:         sum11
-    #   dynamic:      true
-    #   platform:     WIN
-    #   download:     false
-    #   path:         winsum10
 
 
 ...
