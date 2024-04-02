@@ -1,0 +1,14 @@
+---
+name:    'SUM20SP19'
+target:  'SUM20SP19'
+version: 003
+
+materials:
+
+  media:
+
+    - name:         "Patch 03 for SOFTWARE UPDATE MANAGER 2.0 SP19 (Windows)"
+      archive:      SUM20SP19_3-80002458.SAR
+      checksum:     f7ba90c9ceb05966ee638d644d93e0c5398410a261724f7b57b1a22ac7508d98
+      download:     false
+      url:          https://softwaredownloads.sap.com/file/0020000000322992024
