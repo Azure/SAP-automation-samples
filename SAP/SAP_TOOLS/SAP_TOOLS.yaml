@@ -21,27 +21,25 @@ materials:
       permissions:  '0755'
       url:          https://softwaredownloads.sap.com/file/0020000000098642022
 
-
-    # SWPM - Dynamic Download
-    - name:         swpm20
-      dynamic:      true
-      platform:     LNX
+    - name:         "SWPM 2.0 SP17 ; OS: Linux on x86_64 64bit"
+      archive:      SWPM20SP17_1-80003424.SAR
+      checksum:     cbab76099db4b66b62b54904ce4cf5ae93d7333d581eb2466685f1b9eb1c75f2
       filename:     swpm20
       extract:      true
       extractDir:   SWPM
       creates:      SIGNATURE.SMF
+      url:          https://softwaredownloads.sap.com/file/0020000000324532024
       path:         linuxswpm20
 
-    # SWPM - Dynamic Download
-    - name:         swpm10
-      dynamic:      true
-      platform:     LNX
+    - name:         "SWPM 1.0 SP40 for NW higher than 7.0x; Support Package SOFTWARE PROVISIONING MGR 1.0 Linux on x86_64 64bit"
+      archive:      SWPM10SP40_2-20009701.SAR
+      checksum:     305f2263b94962c167a07f2642b076abc8250fd96a0a70cf8823287d784acd30
       filename:     swpm10
       extract:      true
       extractDir:   SWPM
       creates:      SIGNATURE.SMF
       path:         linuxswpm10
-
+      url:          https://softwaredownloads.sap.com/file/0020000000324852024
 
 
 ...
