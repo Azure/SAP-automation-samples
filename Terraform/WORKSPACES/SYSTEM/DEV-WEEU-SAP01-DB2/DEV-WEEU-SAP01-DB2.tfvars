@@ -118,8 +118,26 @@ use_private_endpoint = true
 # scs_cluster_type defines cluster quorum type; AFA (Azure Fencing Agent), ASD (Azure Shared Disk), ISCSI
 scs_cluster_type = "AFA"
 
+#scs_cluster_disk_lun defines the LUN number for the SAP Central Services cluster disk
+scs_cluster_disk_lun = 5
+
+#scs_cluster_disk_size defines the size for the SAP Central Services cluster disk
+scs_cluster_disk_size = 128
+
+#scs_cluster_disk_type defines the storage_account_type of the shared disk for the SAP Central Services cluster
+scs_cluster_disk_type = "Premium_ZRS"
+
 # database_cluster_type defines cluster quorum type; AFA (Azure Fencing Agent), ASD (Azure Shared Disk), ISCSI
 database_cluster_type = "AFA"
+
+#database_cluster_disk_lun defines the LUN number for the database cluster disk
+database_cluster_disk_lun = 8
+
+#database_cluster_disk_size defines the size for the database cluster disk
+database_cluster_disk_size = 128
+
+#database_cluster_disk_type defines the storage_account_type of the shared disk for the Database cluster
+database_cluster_disk_type = "Premium_ZRS"
 
 # use_msi_for_clusters if defined will use managed service identity for the Pacemaker cluster fencing
 use_msi_for_clusters = true
@@ -130,6 +148,20 @@ use_msi_for_clusters = true
 # use_simple_mount specifies if Simple mounts are used (Applicable for SLES 15 SP# or newer)
 use_simple_mount = false
 
+# Configure fencing device based on the fence agent fence_kdump for both SCS and DB clusters
+use_fence_kdump = false
+
+# Default size of the kdump disk which will be attached to the VMs which are part DB cluster
+use_fence_kdump_size_gb_db = 128
+
+# Default LUN number of the kdump disk which will be attached to the VMs which are part of DB cluster
+use_fence_kdump_lun_db = 8
+
+# Default size of the kdump disk which will be attached to the VMs which are part of SCS cluster
+use_fence_kdump_size_gb_scs = 64
+
+# Default LUN number of the kdump disk which will be attached to the VMs which are part of SCS cluster
+use_fence_kdump_lun_scs = 4
 
 #########################################################################################
 #                                                                                       #
@@ -257,7 +289,6 @@ database_use_avset = true
 # Optional, Defines if the tags for the database virtual machines
 #database_tags = {}
 
-#database_HANA_use_ANF_scaleout_scenario = ""
 
 #########################################################################################
 #                                                                                       #
@@ -501,8 +532,18 @@ sapmnt_volume_size = 128
 # use_random_id_for_storageaccounts defines if the sapmnt storage account name will have a random suffix
 use_random_id_for_storageaccounts = true
 
+#########################################################################################
+#                                                                                       #
+#  ANF                                                                                  #
+#                                                                                       #
+#########################################################################################
+
 # ANF_HANA_use_AVG defines if the ANF volume will be created in an Application Volume Group
 ANF_HANA_use_AVG = false
+
+# ANF_HANA_use_Zones defines if the ANF volume will be created in an Availability zones
+ANF_HANA_use_Zones = true
+
 
 #########################################################################################
 #                                                                                       #
@@ -524,6 +565,9 @@ ANF_HANA_use_AVG = false
 
 # ANF_HANA_data_volume_name, if defined, provides the name of the HANA data volume(s).
 #ANF_HANA_data_volume_name = ""
+
+# Number of ANF Data Volumes
+ANF_HANA_data_volume_count = 1
 
 
 #########################################################################################
@@ -547,6 +591,8 @@ ANF_HANA_use_AVG = false
 # ANF_HANA_log_volume_name, if defined, provides the name of the HANA log volume(s).
 #ANF_HANA_log_volume_name = ""
 
+# Number of ANF Data Volumes
+ANF_HANA_log_volume_count = 1
 
 #########################################################################################
 #                                                                                       #
@@ -857,3 +903,35 @@ use_spn = true
 
 # These tags will be applied to all resources
 #tags = {}
+
+
+#########################################################################################
+#                                                                                       #
+#  Scaleout variables                                                                   #
+#                                                                                       #
+#########################################################################################
+
+#If true, the database tier will be configured for scaleout scenario
+database_HANA_use_ANF_scaleout_scenario = false
+
+# Defined the standbynode count in a scaleout scenario
+stand_by_node_count = 0
+
+
+#########################################################################################
+#                                                                                       #
+#  AMS variables                                                                        #
+#                                                                                       #
+#########################################################################################
+
+# If defined, will enable prometheus high availability cluster monitoring
+enable_ha_monitoring = false
+
+# If defined, will enable prometheus operating system level monitoring
+enable_os_monitoring = false
+
+# If defined, will use the specified Azure Monitor for SAP instance, else will use the AMS instance in the workload zone.
+#ams_resource_id = ""
+
+
+

@@ -1,23 +1,24 @@
 ---
-name:                                  'Oracle19_v0006ms'
-filename:                              "Oracle19_v0006ms.yaml"
+name:                                  'Oracle19_v0008ms'
+filename:                              "Oracle19_v0008ms.yaml"
 target:                                'Oracle 19'
-version:                               6
+version:                               8
 platform:                              "ORACLE"
 InstanceType:                          "ABAP"
-# New SBP Patch included  in this version
-
+# New SBP Patch included in this version
+# 03/16/2024
+# ORacle client software download updated 03/19/2024
 materials:
 
   media:
     - name:         Oracle Client
-      archive:      51055071.ZIP
-      checksum:     d63ba8bf707f96782101d66cbde9677a8bc11b9cfcfc6bbd167b6728c0243806
+      archive:      51057419.ZIP
+      checksum:     c99a68633d4c836072f76525b82ff9f97c5008d82ea0e351d82a6d3c8b0d3174
       extract:      true
       extractDir:   oraclient
       path:         download_basket
       download:     true
-      url:          https://softwaredownloads.sap.com/file/0030000001424202021
+      url:          https://softwaredownloads.sap.com/file/0030000000188162024
 
 
     - name:         Oracle Software Server
