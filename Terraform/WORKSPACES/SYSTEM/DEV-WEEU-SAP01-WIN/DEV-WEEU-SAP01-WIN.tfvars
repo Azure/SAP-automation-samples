@@ -39,6 +39,10 @@ environment = "DEV"
 # The location value is a mandatory field, it is used to control where the resources are deployed
 location = "westeurope"
 
+# Description of the SAP system.
+Description = "SQLSERVER distributed system on MicrosoftWindowsServer windowsserver 2022-datacenter"
+
+
 #If you want to customize the disk sizes for VMs use the following parameter to specify the custom sizing file.
 #custom_disk_sizes_filename = ""
 
@@ -443,7 +447,7 @@ application_server_image = {
 webdispatcher_server_count = 0
 
 # web_sid is the Web Dispatcher SID
-#web_sid = ""
+web_sid = "WWN"
 
 # web_instance_number defines the web instance number
 web_instance_number = "00"
@@ -504,10 +508,19 @@ webdispatcher_server_use_avset = false
 deploy_application_security_groups = true
 
 # deploy_v1_monitoring_extension Defines if the Microsoft.AzureCAT.AzureEnhancedMonitoring extension will be deployed
-deploy_v1_monitoring_extension = true
+deploy_v1_monitoring_extension = false
+
+# If defined, will add the Microsoft.Azure.Monitor.AzureMonitorLinuxAgent extension to the virtual machines
+deploy_monitoring_extension = true
+
+# If defined, will add the Microsoft.Azure.Security.Monitoring extension to the virtual machines
+deploy_defender_extension = true
 
 # dns_a_records_for_secondary_names defines if DNS records should be created for the virtual host names
 dns_a_records_for_secondary_names = true
+
+# register_endpoints_with_dns defines if the endpoints should be registered with the DNS
+register_endpoints_with_dns = true
 
 #########################################################################################
 #                                                                                       #
@@ -917,6 +930,9 @@ tags = {
 
 #If true, the database tier will be configured for scaleout scenario
 database_HANA_use_ANF_scaleout_scenario = false
+
+#If true, the database scale out tier will not have a standby role
+database_HANA_no_standby_role = false
 
 # Defined the standbynode count in a scaleout scenario
 stand_by_node_count = 0
