@@ -44,12 +44,12 @@ materials:
       url:          https://softwaredownloads.sap.com/file/0020000000356752024
 
     - name:         "LCAPPS for HANA 2.0 Rev 77 Build 101.13 PL 003"
-      archive:      IMDB_LCAPPS_2077_0-20010426.SAR
-      checksum:     06619ae24f98c6502b007e3b1584fa445bca3c4a3e490bc0a3b662a5ca2c9133
+      archive:      IMDB_LCAPPS_2077_1-20010426.SAR
+      checksum:     b84029016b75ccff1e221e37a5cc06dda1440ef255ea533ef595d505fee9e0b0
       extract:      true
       extractDir:   CD_HDBSERVER/COMPONENTS
       creates:      COMPONENTS/SAP_HANA_LCAPPS/packages
-      url:          https://softwaredownloads.sap.com/file/0020000000356882024
+      url:          https://softwaredownloads.sap.com/file/0020000000404202024
 
     - name:         "VCH AFL 2021 Rev 77.0 only for HANA 2.0 Rev 77"
       archive:      VCH202100_2077_0-70006349.SAR
