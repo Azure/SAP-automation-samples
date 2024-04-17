@@ -17,13 +17,13 @@ materials:
       url:          https://softwaredownloads.sap.com/file/0020000000098642022
 
     - name:         "SWPM 2.0 SP17 ; OS: Linux on x86_64 64bit"
-      archive:      SWPM20SP17_2-80003424.SAR
-      checksum:     cbab76099db4b66b62b54904ce4cf5ae93d7333d581eb2466685f1b9eb1c75f2
+      archive:      SWPM20SP17_3-80003424.SAR
+      checksum:     f3692b680c1ac6a166a0c5da311a8a149e4c944f9c4adad49808cc1df6becad7
       filename:     swpm20
       extract:      true
       extractDir:   SWPM
       creates:      SIGNATURE.SMF
-      url:          https://softwaredownloads.sap.com/file/0020000000394222024
+      url:          https://softwaredownloads.sap.com/file/0020000000442942024
       path:         linuxswpm20
 
     - name:         "SWPM 1.0 SP40 for NW higher than 7.0x; Support Package SOFTWARE PROVISIONING MGR 1.0 Linux on x86_64 64bit"
