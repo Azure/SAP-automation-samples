@@ -27,13 +27,13 @@ materials:
 
     # SAP HANA 2 SPS07 Revision 076.00
     - name:         "SAP HANA 2 SPS07 Revision 076.00"
-      archive:      IMDB_SERVER20_076_0-80002046.SAR
-      checksum:     ba1986fba532616e84a2b9d5278400f0d71990959268c094975129858b1f52f7
+      archive:      IMDB_SERVER20_076_0-80002031.SAR
+      checksum:     aba305485f9b3a8a851a9d050905a0733ae66695ae9bd5b5d7e01d59eb4cf350
       extract:      true
       extractDir:   CD_HDBSERVER
       creates:      SIGNATURE.SMF
       path:         download_basket
-      url:          https://softwaredownloads.sap.com/file/0020000000455352024
+      url:          https://softwaredownloads.sap.com/file/0020000000455312024
 
     - name:         "SAP HANA AFL Rev 76.0 only for HANA 2.0 Rev 76"
       archive:      IMDB_AFL20_076_0-80001894.SAR
