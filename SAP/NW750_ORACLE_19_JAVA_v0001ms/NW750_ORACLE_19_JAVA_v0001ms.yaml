@@ -63,13 +63,13 @@ materials:
       url:          https://softwaredownloads.sap.com/file/0020000000937422021
 
     - name:         "Oracle DBATOOLS"
-      archive:      DBATL740O11_48-80002605.SAR
-      checksum:     ff8dd3a33d4c9f044b073e2d9591a0f204469e5e568f3e3dc136c33931cd4eed
+      archive:      DBATL740O11_49-80007644.SAR
+      checksum:     8ac9e9b063975f6ec05cb953ada9d6430815066c6247c555f126fc2e13845802
       extract:      false
       # download:     true
       path:         download_basket
       # creates:     SIGNATURE.SMF
-      url:          https://softwaredownloads.sap.com/file/0020000001371372022
+      url:          https://softwaredownloads.sap.com/file/0020000001370652022
 
       
     - name:             "SAP JVM 8.1"
