@@ -1,0 +1,15 @@
+---
+name:    'SUM20SP19'
+target:  'SUM20SP19'
+version: 007
+
+materials:
+
+  media:
+    # SUM
+    - name:         "Patch 07 for SOFTWARE UPDATE MANAGER 2.0 SP19 (Linux on x86_64)"
+      archive:      SUM20SP19_7-80002456.SAR
+      checksum:     a797a81182e0d8cb1fa66e0033b93b1fc30a36d0c7f255f31fb458ebf20d731b
+      download:     false
+      url:          https://softwaredownloads.sap.com/file/0020000000504752024
+
