@@ -1,0 +1,1009 @@
+---
+
+name:                                   "SAP S/4HANA 2022 FPS02"
+filename:                               "S42022_SP01_v02"
+target:                                 "S/4 HANA 2022"
+version:                                1
+platform:                              'HANA'
+InstanceType:                          'ABAP'
+
+defaults:
+  target_location: "{{ target_media_location }}/download_basket"
+
+product_ids:
+  scs:                                 "NW_ABAP_ASCS:S4HANA2022.CORE.HDB.ABAP"
+  scs_ha:                              "NW_ABAP_ASCS:S4HANA2022.CORE.HDB.ABAPHA"
+  dbl:                                 "NW_ABAP_DB:S4HANA2022.CORE.HDB.ABAP"
+  pas:                                 "NW_ABAP_CI:S4HANA2022.CORE.HDB.ABAP"
+  pas_ha:                              "NW_ABAP_CI:S4HANA2022.CORE.HDB.ABAPHA"
+  app:                                 "NW_DI:S4HANA2022.CORE.HDB.PD"
+  app_ha:                              "NW_DI:S4HANA2022.CORE.HDB.ABAPHA"
+  web:                                 "NW_Webdispatcher:NW750.IND.PD"
+  ers:                                 "NW_ERS:S4HANA2022.CORE.HDB.ABAP"
+  ers_ha:                              "NW_ERS:S4HANA2022.CORE.HDB.ABAPHA"
+  generic:                             "NW_Users_Create:GENERIC.HDB.PD"
+
+materials:
+  dependencies:
+    - name:                            "HANA_2_00_076_v0001ms"
+    - name:                            "SWPM20SP17_latest"
+    - name:                            "SUM20SP19_latest"
+
+  media:
+
+      # SAPCAR 7.22
+    - name:                            "SAPCAR 7.22; OS: Linux on x86_64 64bit"
+      archive:                         SAPCAR_1115-70006178.EXE
+      checksum:                        765412436934362cc5497e3d659fbb78be91093a091c11ec4fbe84dfb415a0e5
+      filename:                        SAPCAR
+      permissions:                     '0755'
+      url:                             https://softwaredownloads.sap.com/file/0020000000098642022
+    # kernel components
+
+    - name: "Kernel Part II (789)"
+      archive: SAPEXEDB_200-70006641.SAR
+      url: https://softwaredownloads.sap.com/file/0020000001028962023
+      checksum: 6e90520c2854a56fcb6f1a45f239930b4dad10d3580199265cf951ac39bb32b8
+      path: download_basket
+
+    - name: "Kernel Part I (789)"
+      archive: SAPEXE_200-70006642.SAR
+      url: https://softwaredownloads.sap.com/file/0020000001028842023
+      checksum: 9882e6fb984a6b8b12ba71d1f79c8f9dee7f5534347cba2ff838ab4cfdee9881
+      path: download_basket
+
+    - name: "SAP HOST AGENT 7.22 SP61"
+      archive: SAPHOSTAGENT61_61-80004822.SAR
+      url: https://softwaredownloads.sap.com/file/0020000000867792023
+      checksum: 280c13ca76d3b2fb1aba5cccdff9b9e3ae7988f6ca5f2553563fd2360dc8f688
+      path: download_basket
+
+    - name: "SP12 Patch8 for UMML4HANA 1"
+      archive: HANAUMML12_8-70001054.ZIP
+      url: https://softwaredownloads.sap.com/file/0020000000146922024
+      checksum: ef60422cab183f76cae3c3296f0e9d08c9f692ff44542d23e94e0dedd50fbae4
+      path: download_basket
+      
+    - name: "Predi. Analy. APL 2203 for SAP HANA 2.0 SPS03 and beyond"
+      archive: SAPPAAPL4_2203_2-80004547.ZIP
+      url: https://softwaredownloads.sap.com/file/0020000000163142022
+      checksum: c5d5d750d26b343edd8582f9f683cb25978e01c86d8da8493b7f4f4023956c73
+      path: download_basket
+
+    - name: "Installation for SAP IGS integrated in SAP Kernel"
+      archive: igsexe_3-70005417.sar
+      url: https://softwaredownloads.sap.com/file/0020000000632872023
+      checksum: c92e7ed27bd33c9e416a45e363032baad84039bf958f4a182e85b099be3fe377
+      path: download_basket
+
+    - name: "SAP IGS Fonts and Textures"                           
+      archive: igshelper_17-10010245.sar
+      url: https://softwaredownloads.sap.com/file/0020000000703122018
+      checksum: bc405afc4f8221aa1a10a8bc448f8afd9e4e00111100c5544097240c57c99732
+      path: download_basket
+
+    # db export components
+
+    - name: "File on DVD - S4CORE107_INST_EXPORT_1.zip"
+      archive: S4CORE107_INST_EXPORT_1.zip
+      url: https://softwaredownloads.sap.com/file/0030000001314832022
+      checksum: 5aad867d61cf19cb5b6a4b28c1b531a90dfd783fc974f9fb9a11afab2f68b16b
+      path: download_basket
+
+    - name: "File on DVD - S4CORE107_INST_EXPORT_10.zip"
+      archive: S4CORE107_INST_EXPORT_10.zip
+      url: https://softwaredownloads.sap.com/file/0030000001314842022
+      checksum: f92ae9350955df3662ac4bb6d1a1d86fb0d91de5e694cd1420de31f84a01c103
+      path: download_basket
+
+    - name: "File on DVD - S4CORE107_INST_EXPORT_11.zip"
+      archive: S4CORE107_INST_EXPORT_11.zip
+      url: https://softwaredownloads.sap.com/file/0030000001314852022
+      checksum: 041b1520b2894c434932e17202871b1f82cf0748bb6205c17c0b84c8f33bd8d6
+      path: download_basket
+
+    - name: "File on DVD - S4CORE107_INST_EXPORT_12.zip"
+      archive: S4CORE107_INST_EXPORT_12.zip
+      url: https://softwaredownloads.sap.com/file/0030000001314862022
+      checksum: c6275415035b1fe0deea3eff4e23357fd7eca90c094741907805281a8e18628f
+      path: download_basket
+
+    - name: "File on DVD - S4CORE107_INST_EXPORT_13.zip"
+      archive: S4CORE107_INST_EXPORT_13.zip
+      url: https://softwaredownloads.sap.com/file/0030000001314882022
+      checksum: 2e8f02a639e810e5b688dce7a1e3511e4358e1ccfe020f752f0588876a3bb462
+      path: download_basket
+
+    - name: "File on DVD - S4CORE107_INST_EXPORT_14.zip"
+      archive: S4CORE107_INST_EXPORT_14.zip
+      url: https://softwaredownloads.sap.com/file/0030000001314892022
+      checksum: b016046dc9b4fc3a3f0cee50c36c9110d93715da3e451dbf2d40599d36b4ae11
+      path: download_basket
+
+    - name: "File on DVD - S4CORE107_INST_EXPORT_15.zip"
+      archive: S4CORE107_INST_EXPORT_15.zip
+      url: https://softwaredownloads.sap.com/file/0030000001314902022
+      checksum: 3af1414635b29d0c1d82a8d7425f1ad44858f334c4ac425029aa8972691111c7
+      path: download_basket
+
+    - name: "File on DVD - S4CORE107_INST_EXPORT_16.zip"
+      archive: S4CORE107_INST_EXPORT_16.zip
+      url: https://softwaredownloads.sap.com/file/0030000001314912022
+      checksum: dad2dc88e6a329f039227cdf48b9985d09dd2263f6c9f3904fc9fccee07787c7
+      path: download_basket
+
+    - name: "File on DVD - S4CORE107_INST_EXPORT_17.zip"
+      archive: S4CORE107_INST_EXPORT_17.zip
+      url: https://softwaredownloads.sap.com/file/0030000001314932022
+      checksum: fd87ebfe1196159eca3a53b4c0ffa48912602b3e5db6f17f7b091755bfca0ffc
+      path: download_basket
+
+    - name: "File on DVD - S4CORE107_INST_EXPORT_18.zip"
+      archive: S4CORE107_INST_EXPORT_18.zip
+      url: https://softwaredownloads.sap.com/file/0030000001314952022
+      checksum: 9ab7634901b1357f45c7677f16f6e9c51ba4c0b69cdddc8ff0605ac8e1e81fb1
+      path: download_basket
+
+    - name: "File on DVD - S4CORE107_INST_EXPORT_19.zip"
+      archive: S4CORE107_INST_EXPORT_19.zip
+      url: https://softwaredownloads.sap.com/file/0030000001314962022
+      checksum: 9889c7185bc649370067bff6aa8fc9584bc927e6252a1b359f6bb8abb59b4365
+      path: download_basket
+
+    - name: "File on DVD - S4CORE107_INST_EXPORT_2.zip"
+      archive: S4CORE107_INST_EXPORT_2.zip
+      url: https://softwaredownloads.sap.com/file/0030000001314982022
+      checksum: d9fc0f8ff388e0efad47f6ded3c6ac353314d2fbb03ed3cf775fd30a69c129aa
+      path: download_basket
+
+    - name: "File on DVD - S4CORE107_INST_EXPORT_20.zip"
+      archive: S4CORE107_INST_EXPORT_20.zip
+      url: https://softwaredownloads.sap.com/file/0030000001315022022
+      checksum: 53434047e264c8e119cdf5656e6e09895b22d2610ba4c27a55922671e60faf1d
+      path: download_basket
+
+    - name: "File on DVD - S4CORE107_INST_EXPORT_21.zip"
+      archive: S4CORE107_INST_EXPORT_21.zip
+      url: https://softwaredownloads.sap.com/file/0030000001315042022
+      checksum: 7eb5e78fb9ffe75ffde35a2d64abbbdb2022bca0ca87dd8985419652c0e2439f
+      path: download_basket
+
+    - name: "File on DVD - S4CORE107_INST_EXPORT_22.zip"
+      archive: S4CORE107_INST_EXPORT_22.zip
+      url: https://softwaredownloads.sap.com/file/0030000001315052022
+      checksum: d8e1a9539db3a78b66989d99a0bf65d6e7381318a284e901b9a2e02536ce92c9
+      path: download_basket
+
+    - name: "File on DVD - S4CORE107_INST_EXPORT_23.zip"
+      archive: S4CORE107_INST_EXPORT_23.zip
+      url: https://softwaredownloads.sap.com/file/0030000001315062022
+      checksum: 54a4e6a6b50ac4a7de3a1bc37210f6051707032c9e8618ab2c52c7cd38755d02
+      path: download_basket
+
+    - name: "File on DVD - S4CORE107_INST_EXPORT_24.zip"
+      archive: S4CORE107_INST_EXPORT_24.zip
+      url: https://softwaredownloads.sap.com/file/0030000001315072022
+      checksum: a30de08c368b0c0a0ed621ecd59cbd98877c82b4656566d51c0da831476f766c
+      path: download_basket
+
+    - name: "File on DVD - S4CORE107_INST_EXPORT_25.zip"
+      archive: S4CORE107_INST_EXPORT_25.zip
+      url: https://softwaredownloads.sap.com/file/0030000001315102022
+      checksum: 82fe9b2dca00fde5efe9e190009a2f3462ecf31f9a76d958bf778f2216173ab2
+      path: download_basket
+
+    - name: "File on DVD - S4CORE107_INST_EXPORT_26.zip"
+      archive: S4CORE107_INST_EXPORT_26.zip
+      url: https://softwaredownloads.sap.com/file/0030000001315142022
+      checksum: af6e71648328d6d1926ef99279a7f23a842a6aeda19e3840ebd8d76b47754193
+      path: download_basket
+
+    - name: "File on DVD - S4CORE107_INST_EXPORT_27.zip"
+      archive: S4CORE107_INST_EXPORT_27.zip
+      url: https://softwaredownloads.sap.com/file/0030000001315152022
+      checksum: 9b6089c57bdfef0a2c2d97b2a8d12ffec7712be96b981dc33a0dee7a957800bb
+      path: download_basket
+
+    - name: "File on DVD - S4CORE107_INST_EXPORT_28.zip"
+      archive: S4CORE107_INST_EXPORT_28.zip
+      url: https://softwaredownloads.sap.com/file/0030000001315162022
+      checksum: 007db0d5d8e11c567f738e52cfacedd61f3336bca0cc7db69f8f8f73fa0ab4dc
+      path: download_basket
+
+    - name: "File on DVD - S4CORE107_INST_EXPORT_29.zip"
+      archive: S4CORE107_INST_EXPORT_29.zip
+      url: https://softwaredownloads.sap.com/file/0030000001315192022
+      checksum: 4d9e40c334208aef81c3f16a2fe2f2619956ffcae61bef27f5a85c9d2afe6a7b
+      path: download_basket
+
+    - name: "File on DVD - S4CORE107_INST_EXPORT_3.zip"
+      archive: S4CORE107_INST_EXPORT_3.zip
+      url: https://softwaredownloads.sap.com/file/0030000001315202022
+      checksum: b9e423890536c27dfc5398fe8691a77848bd9d13797635ccfc344ec627dd2e24
+      path: download_basket
+
+    - name: "File on DVD - S4CORE107_INST_EXPORT_30.zip"
+      archive: S4CORE107_INST_EXPORT_30.zip
+      url: https://softwaredownloads.sap.com/file/0030000001315332022
+      checksum: 5fa413b55ea5ae113a3c0914488c4035aacedba8fbe57900cdc6f5eb1c8f9b3f
+      path: download_basket
+
+    - name: "File on DVD - S4CORE107_INST_EXPORT_4.zip"
+      archive: S4CORE107_INST_EXPORT_4.zip
+      url: https://softwaredownloads.sap.com/file/0030000001315222022
+      checksum: 9ba50e9cceb6cff8e343d716caab8866a5529579ab642b8c7354259cf80a0767
+      path: download_basket
+
+    - name: "File on DVD - S4CORE107_INST_EXPORT_5.zip"
+      archive: S4CORE107_INST_EXPORT_5.zip
+      url: https://softwaredownloads.sap.com/file/0030000001315232022
+      checksum: 3341bcaef84519ef5aefc077296935e15f1ec6167cc076238183de3c81dcb8ae
+      path: download_basket
+
+    - name: "File on DVD - S4CORE107_INST_EXPORT_6.zip"
+      archive: S4CORE107_INST_EXPORT_6.zip
+      url: https://softwaredownloads.sap.com/file/0030000001315252022
+      checksum: da705d7e9cd81e7e9d40b967768e6352675f843389801ea94b4939f223d0524f
+      path: download_basket
+
+    - name: "File on DVD - S4CORE107_INST_EXPORT_7.zip"
+      archive: S4CORE107_INST_EXPORT_7.zip
+      url: https://softwaredownloads.sap.com/file/0030000001315292022
+      checksum: 86b72a759114c99d99f92d9b5b49a38c340ed1cdbdda89713c4af3194eadd961
+      path: download_basket
+
+    - name: "File on DVD - S4CORE107_INST_EXPORT_8.zip"
+      archive: S4CORE107_INST_EXPORT_8.zip
+      url: https://softwaredownloads.sap.com/file/0030000001315312022
+      checksum: ae563c913d70f702af7ef27f9a8c4664ee4796815e0c4754499eb174534649e0
+      path: download_basket
+
+    - name: "File on DVD - S4CORE107_INST_EXPORT_9.zip"
+      archive: S4CORE107_INST_EXPORT_9.zip
+      url: https://softwaredownloads.sap.com/file/0030000001326492022
+      checksum: c4bd746054e633be73ff2cb910bfecd68ac7c0a5016c674c7b3111df5a728ac7
+      path: download_basket
+
+# Language packs, only add the mandatory ones i.e. German and English
+
+    - name: "File on DVD - S4HANAOP107_ERP_LANG_DE.SAR"
+      archive: S4HANAOP107_ERP_LANG_DE.SAR
+      url: https://softwaredownloads.sap.com/file/0030000001312472022
+      checksum: 2a5163d584936e38cb8dd46385e1ecbc3eb0884a8cc99c5196b8bcabd93059ed
+      path: download_basket
+
+    - name: "File on DVD - S4HANAOP107_ERP_LANG_EN.SAR"
+      archive: S4HANAOP107_ERP_LANG_EN.SAR
+      url: https://softwaredownloads.sap.com/file/0030000001312512022
+      checksum: 195ff523a3e513d304753ff20be583072d1fff5fbcfd2e7c3fc315f02a302735
+      path: download_basket
+
+    # other components
+      # SPAM
+    - name: "SPAM/SAINT Update - Version 757/0085"
+      archive: KD75785.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000601752023
+      checksum: cab40a5114770e3d726b3fea88a2089d7fa4b50474c3a966630974e5fbaa5b27
+      download: false
+
+    - name: "Attribute Change Package 28 for GBX01HR5 605"
+      archive: GBX01HR5605.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000033172015
+      checksum: 9b5f3fca5b87ba80f4048f857a22b2a63033b58ffb977a19241b1316a4731701
+      download: false
+
+    - name: "S4HCM 100: SP 0001"
+      archive: K-10001INS4HCM.SAR
+      url: https://softwaredownloads.sap.com/file/0010000001526762022
+      checksum: a795aacf04549f579f92178208198e4e4523e80d91916583df8e54d9d99874b4
+      download: false
+
+    - name: "UIHR002 100: SP 0001"
+      archive: K-10001INUIHR002.SAR
+      url: https://softwaredownloads.sap.com/file/0010000020421312017
+      checksum: fcea0646281bea84985537527c8be840a328a08b24f36e458d98f3aa61040f08
+      download: false
+
+    - name: "S4HCM 100: SP 0002"
+      archive: K-10002INS4HCM.SAR
+      url: https://softwaredownloads.sap.com/file/0010000001639732022
+      checksum: 556f85085c4564cdbbce28baeef48d24eff95aff82e06ed2cc82367164c55a29
+      download: false
+
+    - name: "UIHR002 100: SP 0002"
+      archive: K-10002INUIHR002.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000493432018
+      checksum: 3e9c7fab54796ad9ca241f9fd9a9edf82cfe9df152511b8b6796adafc8ed40c3
+      download: false
+
+    - name: "S4HCM 100: SP 0003"
+      archive: K-10003INS4HCM.SAR
+      url: https://softwaredownloads.sap.com/file/0010000001704582022
+      checksum: ae1c2dbde52d4d77022979ddbfc97ed464c366bb1d6f31c587a6f0662552da7e
+      download: false
+
+    - name: "UIHR002 100: SP 0003"
+      archive: K-10003INUIHR002.SAR
+      url: https://softwaredownloads.sap.com/file/0010000001141912018
+      checksum: 1c01075973bfc2bc3b41535ca27eb7c71220cdac529d79c40e83e21f8c5a1c97
+      download: false
+
+    - name: "S4HCM 100: SP 0004"
+      archive: K-10004INS4HCM.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000053642023
+      checksum: d1f7c72920c698e5cd22f8683c6eb20dd1d26e16fff2bb4824b39e31875ba214
+      download: false
+
+    - name: "UIHR002 100: SP 0004"
+      archive: K-10004INUIHR002.SAR
+      url: https://softwaredownloads.sap.com/file/0010000001934802018
+      checksum: 9992f1728fa5ed4c320e3ff5d6e2162a53072d7dac22d9d257d56d22b672f279
+      download: false
+
+    - name: "S4HCM 100: SP 0005"
+      archive: K-10005INS4HCM.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000139912023
+      checksum: fc3e9354d2cd2475d0acdadd9048c2bb7012bfc62f9b3c7a5f0314ee02dd236e
+      download: false
+
+    - name: "UIHR002 100: SP 0005"
+      archive: K-10005INUIHR002.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000045522019
+      checksum: 8d7b880dfe89aebff047018f9ca86a0f7a831befdc856764f8ab124c4260068c
+      download: false
+
+    - name: "S4HCM 100: SP 0006"
+      archive: K-10006INS4HCM.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000271182023
+      checksum: ccde9a84d30efd71eb4dfe988a5333f24c995e90352e40e7177bef89dc6c7b4f
+      download: false
+
+    - name: "UIHR002 100: SP 0006"
+      archive: K-10006INUIHR002.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000464552019
+      checksum: 6f05090977e230c30feb2a25b24ee9780eae53b8ba7d79248736252623224002
+      download: false
+
+    - name: "UIHR002 100: SP 0007"
+      archive: K-10007INUIHR002.SAR
+      url: https://softwaredownloads.sap.com/file/0010000001273902019
+      checksum: 4010e8821ce9badd733d92e8b372f0584e39bc0b5805e2af0ce1402ea8d5f09a
+      download: false
+
+    - name: "UIHR002 100: SP 0008"
+      archive: K-10008INUIHR002.SAR
+      url: https://softwaredownloads.sap.com/file/0010000001810332019
+      checksum: 3d92662ec19af3af3acdeeac1b500c47ff613fe24b570ae0f81aa4616231093d
+      download: false
+
+    - name: "UIHR002 100: SP 0009"
+      archive: K-10009INUIHR002.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000341482020
+      checksum: 5ef6474c9ba556ba10cfa849f95a9791e612d1fe050747bfc06a2e93d0407422
+      download: false
+
+    - name: "UIHR002 100: SP 0010"
+      archive: K-10010INUIHR002.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000979992020
+      checksum: 0c568d19b8f4ea31dc00d651db24287386128395704f691657b2f6ad0d74af40
+      download: false
+
+    - name: "UIHR002 100: SP 0011"
+      archive: K-10011INUIHR002.SAR
+      url: https://softwaredownloads.sap.com/file/0010000001525832020
+      checksum: e45f87ba029f88ade45fd2c198a71986c8c935c76ae5a62e872b8b6f5a8398ea
+      download: false
+
+    - name: "UIHR002 100: SP 0012"
+      archive: K-10012INUIHR002.SAR
+      url: https://softwaredownloads.sap.com/file/0010000002085752020
+      checksum: 799288a50cf8e57fffb73462e17c8e87908f260833329ebd68ad8fd351364b77
+      download: false
+
+    - name: "UIHR002 100: SP 0013"
+      archive: K-10013INUIHR002.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000335032021
+      checksum: 69a457f49431ad66397b8b9078070ae296bac2f4943a2b098117583180bbaca6
+      download: false
+
+    - name: "UIHR002 100: SP 0014"
+      archive: K-10014INUIHR002.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000819382021
+      checksum: d889cc1563769b27d591b8d2222fc5c67b38e5a577e11bc4c42a7bb0b91fae03
+      download: false
+
+    - name: "UIHR002 100: SP 0015"
+      archive: K-10015INUIHR002.SAR
+      url: https://softwaredownloads.sap.com/file/0010000001278192021
+      checksum: de8bfea033dab01e00cba79aac9e2a1953020544407f64ecd8a5c28d4a3c3810
+      download: false
+
+    - name: "UIHR002 100: SP 0016"
+      archive: K-10016INUIHR002.SAR
+      url: https://softwaredownloads.sap.com/file/0010000001713232021
+      checksum: dff7b0a1a61c0b31e57520fba89631c60b10235a9a0b2376bbf47c1805321704
+      download: false
+
+    - name: "UIHR002 100: SP 0017"
+      archive: K-10017INUIHR002.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000335842022
+      checksum: 8b253e80b06ac0f1177a3cdf90c3d881e092c7ae9d7ea12b6fa691f0c33130ec
+      download: false
+
+    - name: "UIHR002 100: SP 0018"
+      archive: K-10018INUIHR002.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000733592022
+      checksum: 310626b98a3685ed6ddbdafcc86e0322f99463dc3bbe9f954b87fa8b6c15d88a
+      download: false
+
+    - name: "UIHR002 100: SP 0019"
+      archive: K-10019INUIHR002.SAR
+      url: https://softwaredownloads.sap.com/file/0010000001142932022
+      checksum: 0034e549e985ddeef22276a239e80642769cb991f13353cbc2ff35522cda0bc6
+      download: false
+
+    - name: "UIHR002 100: SP 0020"
+      archive: K-10020INUIHR002.SAR
+      url: https://softwaredownloads.sap.com/file/0010000001681592022
+      checksum: 8016a50c637c13a8450577f9bc1f72631e4dbc0359002220c270773a167518a2
+      download: false
+
+    - name: "UIHR002 100: SP 0021"
+      archive: K-10021INUIHR002.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000242992023
+      checksum: b02bef1b245ea82a0429bee751cd28edc95a83a0f84289d980c41db208cfa3b3
+      download: false
+
+    - name: "UIHR002 100: Add-On Installation"
+      archive: K-100AGINUIHR002.SAR
+      url: https://softwaredownloads.sap.com/file/0010000019183952017
+      checksum: 704d117df4cac91c11d51767a57af7df08e484b5a6b9da79382e82465411b4a7
+      download: false
+
+    - name: "S4CEXT 107: SP 0001"
+      archive: K-10701INS4CEXT.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000028182023
+      checksum: 2d68fa1340dc6a781ba3390a01c86e4171ed8a477dd42fafdb909ca757c7a40c
+      download: false
+
+    - name: "S4CORE 107: SP 0001"
+      archive: K-10701INS4CORE.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000028362023
+      checksum: 7644d2239cb6295285e10388f79e19e9dc852cec8fe5806c52d580a8ce08a41f
+      download: false
+
+    - name: "S4COREOP 107: SP 0001"
+      archive: K-10701INS4COREOP.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000028372023
+      checksum: aa016ebba5e1b0bd36be81fa2203f581fbaa936533b06f9eaf6e88a6f73a82e7
+      download: false
+
+    - name: "S4DEPREC 107: SP 0001"
+      archive: K-10701INS4DEPREC.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000028382023
+      checksum: d5961230b7ea71ec8c811a3c8f6f24d310b873bd9dc8cd2c67108b82b7b345b0
+      download: false
+
+    - name: "S4FND 107: SP 0001"
+      archive: K-10701INS4FND.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000028392023
+      checksum: 38d1d798fab7bb59ddff028c9527791961aa436bb2bb1ebae36ef0ee28d22a06
+      download: false
+
+    - name: "S4CEXT 107: SP 0002"
+      archive: K-10702INS4CEXT.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000490422023
+      checksum: db3b9ae6447f81262602b3b1eb21f0aed73911a094a563f9073df6a9d146f214
+      download: false
+
+    - name: "S4CORE 107: SP 0002"
+      archive: K-10702INS4CORE.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000490432023
+      checksum: 3da8ceb3772db609f8fe64473845ace1c92935e9d1c0f842c9440307eee71e84
+      download: false
+
+    - name: "S4COREOP 107: SP 0002"
+      archive: K-10702INS4COREOP.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000490442023
+      checksum: 9dbc4d805959f0225a2b15275598ef434f3c918f342704b16e561a48a321d53c
+      download: false
+
+    - name: "S4DEPREC 107: SP 0002"
+      archive: K-10702INS4DEPREC.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000490452023
+      checksum: fe30108ca2ea529dcf952bf54442b0e41df0383749df37bfbde69fafd19f0d1c
+      download: false
+
+    - name: "S4FND 107: SP 0002"
+      archive: K-10702INS4FND.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000490462023
+      checksum: 0418880f28e48d8ffdbef79cda910fccf2b09fcc982a961f71eb77d2581d8634
+      download: false
+
+    - name: "UIMDG001 200: Support Package 0001"
+      archive: K-20001INUIMDG001.SAR
+      url: https://softwaredownloads.sap.com/file/0010000001029322016
+      checksum: 3639089001a6f15dd04d74826160bbf50c01f5e6cd595a00efebb18bc155e70a
+      download: false
+
+    - name: "UIMDG001 200: SP 0002"
+      archive: K-20002INUIMDG001.SAR
+      url: https://softwaredownloads.sap.com/file/0010000014298612017
+      checksum: 7c4872138665abcc330fa0d19e684614acf24e39432c28a1d5cb0e8aaf9567b2
+      download: false
+
+    - name: "UIMDG001 200: SP 0003"
+      archive: K-20003INUIMDG001.SAR
+      url: https://softwaredownloads.sap.com/file/0010000019125502017
+      checksum: 861af02e6f495c92d0dc49f2677fd3642f15b69e87e0c124257a4f1edb9064eb
+      download: false
+
+    - name: "UIMDG001 200: SP 0004"
+      archive: K-20004INUIMDG001.SAR
+      url: https://softwaredownloads.sap.com/file/0010000019849022017
+      checksum: d9c795e1d59924dbe4d0990f7df1ab0810c87b06d98f3fe712b1ac20fd8b685e
+      download: false
+
+    - name: "UIMDG001 200: SP 0005"
+      archive: K-20005INUIMDG001.SAR
+      url: https://softwaredownloads.sap.com/file/0010000020421762017
+      checksum: 529614708b9b17b002b1c3f5eb9082cad12d738a40d19de52ea1120746494ffa
+      download: false
+
+    - name: "UIMDG001 200: SP 0006"
+      archive: K-20006INUIMDG001.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000493392018
+      checksum: eb5a15d27b619ae30e16992eca95379af3634ee0b0a9b1c62f761c891a05b5cf
+      download: false
+
+    - name: "UIMDG001 200: SP 0007"
+      archive: K-20007INUIMDG001.SAR
+      url: https://softwaredownloads.sap.com/file/0010000001935022018
+      checksum: 2690224cca026a4024c5ebdbbfcdf64151cc5122c3b2f7a3d824b4f9f3405197
+      download: false
+
+    - name: "UIMDG001 200: SP 0008"
+      archive: K-20008INUIMDG001.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000464372019
+      checksum: e3889def8a21765d43bbee56ed4c24b7ecdf2b85a7b2652481d20942101ca127
+      download: false
+
+    - name: "UIMDG001 200: SP 0009"
+      archive: K-20009INUIMDG001.SAR
+      url: https://softwaredownloads.sap.com/file/0010000001525852020
+      checksum: ffa03f6352323ddc48c91fefbcbccec8f17be6e3a031a72b6493f4832dc391c1
+      download: false
+
+    - name: "UIMDG001 200: SP 0010"
+      archive: K-20010INUIMDG001.SAR
+      url: https://softwaredownloads.sap.com/file/0010000002085772020
+      checksum: 093bb0d51add5f3886f3f74174d5137e0a26740f7159b3eef824cc1c8d788720
+      download: false
+
+    - name: "UIMDG001 200: SP 0011"
+      archive: K-20011INUIMDG001.SAR
+      url: https://softwaredownloads.sap.com/file/0010000001278222021
+      checksum: e73c99075ec2348a649bda5eba57f97a0bbb7c7dd243e858c704dc7baf4300fd
+      download: false
+
+    - name: "UIMDG001 200: SP 0012"
+      archive: K-20012INUIMDG001.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000335852022
+      checksum: 84c6f3ffce55e0ca00b6a19ac5babf5327e519e4b059861ea94140baae204305
+      download: false
+
+    - name: "UIMDG001 200: Add-On Installation"
+      archive: K-200AGINUIMDG001.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000696272016
+      checksum: 9467d4a3a3e8aec8f8a7139863ba6f903ce5ae6aa16f4d0a726e709501a581ab
+      download: false
+
+    - name: "UITRV001 300: SP 0001"
+      archive: K-30001INUITRV001.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000045572019
+      checksum: d54e623fc3ad3a4b617ea5f1c94eddefd8f51ac43e3b0626d095d4c05e4cd1e9
+      download: false
+
+    - name: "UITRV001 300: SP 0002"
+      archive: K-30002INUITRV001.SAR
+      url: https://softwaredownloads.sap.com/file/0010000001273832019
+      checksum: 8a66ff2c8ae7077bb35014dedc629cd775fdb2731e6a34f513a2f251030101ff
+      download: false
+
+    - name: "UITRV001 300: SP 0003"
+      archive: K-30003INUITRV001.SAR
+      url: https://softwaredownloads.sap.com/file/0010000001810452019
+      checksum: e7d9b4924bb946e06f386aedc98f8a6ddf6bf78c1bfb534cc1bc88ae3862b583
+      download: false
+
+    - name: "UITRV001 300: SP 0004"
+      archive: K-30004INUITRV001.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000341512020
+      checksum: 39aa1d34fe9b12db2c9141a2bc1c16388a8c696ad12a2df4a935bb49c585802d
+      download: false
+
+    - name: "UITRV001 300: SP 0005"
+      archive: K-30005INUITRV001.SAR
+      url: https://softwaredownloads.sap.com/file/0010000001616922020
+      checksum: 80a791a3939e8c53cabcb69f9c07e21aac6d9f23938a33fd70a66741089dec4b
+      download: false
+
+    - name: "UITRV001 300: SP 0006"
+      archive: K-30006INUITRV001.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000335052021
+      checksum: e90f40adbfc56cd39e293589041e1dc83adbbc39aec4f1944781ef0f13d9bb9e
+      download: false
+
+    - name: "UITRV001 300: SP 0007"
+      archive: K-30007INUITRV001.SAR
+      url: https://softwaredownloads.sap.com/file/0010000001278572021
+      checksum: 442d12c4760a678d7e7969b39d2907e00d97f93874fa08e1c5d423786ff53f33
+      download: false
+
+    - name: "UITRV001 300: SP 0008"
+      archive: K-30008INUITRV001.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000337402022
+      checksum: 3cb902d7570a77be33f7feb5a71a0a880442f5720ba0505a305814af245b1063
+      download: false
+
+    - name: "UITRV001 300: SP 0009"
+      archive: K-30009INUITRV001.SAR
+      url: https://softwaredownloads.sap.com/file/0010000001144932022
+      checksum: a8d588099c7d35a73c59d2088c301f4083ea208e012829b23ee74a15fbb157bb
+      download: false
+
+    - name: "UITRV001 300: Add-On Installation"
+      archive: K-300AGINUITRV001.SAR
+      url: https://softwaredownloads.sap.com/file/0010000001909232018
+      checksum: ab970fce38141f3fc2752fb2169447681bb739471ebbb37385058eb50f72f02f
+      download: false
+
+    - name: "GBX01HR5 605: SP 0022"
+      archive: K-60522INGBX01HR5.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000733882022
+      checksum: d7bb094df493bf6cc9970b138b6e01f1a1020572a3c66222492fa35924ab76e8
+      download: false
+
+    - name: "GBX01HR5 605: SP 0023"
+      archive: K-60523INGBX01HR5.SAR
+      url: https://softwaredownloads.sap.com/file/0010000001100012022
+      checksum: 2f48025ef5b265052407b32c3fb565a960d918000c64db1757c1e7dfb6ea5cbd
+      download: false
+
+    - name: "GBX01HR5 605: SP 0024"
+      archive: K-60524INGBX01HR5.SAR
+      url: https://softwaredownloads.sap.com/file/0010000001681602022
+      checksum: 9974e7e90701a04f13f27f37336a3fdf72f2f816b67dab7e1335986e052dd5e4
+      download: false
+
+    - name: "GBX01HR5 605: SP 0025"
+      archive: K-60525INGBX01HR5.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000242932023
+      checksum: 016fdf36b2d9c177d1d11e301b1786dc448fffd0c0a5cb3f02673e84ef036dc2
+      download: false
+
+    - name: "ST-PI 740: SP 0019"
+      archive: K-74019INSTPI.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000788312022
+      checksum: 4f46e84736c31cea16c2095b6337347a7e9707982ed969a434ba44350842abd2
+      download: false
+
+    - name: "ST-PI 740: SP 0020"
+      archive: K-74020INSTPI.SAR
+      url: https://softwaredownloads.sap.com/file/0010000001268542022
+      checksum: 17cf5b9b5919f4a74eb2897b7d8a0c463c4fa9c7787541a87580964ccd82bae8
+      download: false
+
+    - name: "ST-PI 740: SP 0021"
+      archive: K-74021INSTPI.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000003862023
+      checksum: 4d1b497ff6332bdf3b27b7acbed03de07f74de35e999f83ba0b3e5a82c1a2e89
+      download: false
+
+    - name: "ST-PI 740: SP 0022"
+      archive: K-74022INSTPI.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000316762023
+      checksum: b823dce9183a94ec3d88d75ba7aaad9c18dc4a135f4e74a0936a37444ee71b7d
+      download: false
+
+    - name: "ST-PI 740: SP 0023"
+      archive: K-74023INSTPI.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000698242023
+      checksum: 9a809b9037c482da10934ae0656c10d04099527e195c1442e7ed2f31167a2bf4
+      download: false
+
+    - name: "SAP_BASIS 757: SP 0001"
+      archive: K-75701INSAPBASIS.SAR
+      url: https://softwaredownloads.sap.com/file/0010000001746392022
+      checksum: 0101b1188ab3619b92c0ee173d1d1237b7ac96b1beb320dc32ccd45b7b1e9b8f
+      download: false
+
+    - name: "SAP_BW 757: SP 0001"
+      archive: K-75701INSAPBW.SAR
+      url: https://softwaredownloads.sap.com/file/0010000001643282022
+      checksum: 9bf9da73e2294eb2ffd2d25e50b28bcda55bea978f52f31a9a43f82584990a44
+      download: false9bf9da73e2294eb2ffd2d25e50b28bcda55bea978f52f31a9a43f82584990a44
+
+    - name: "SAP_GWFND 757: SP 0001"
+      archive: K-75701INSAPGWFND.SAR
+      url: https://softwaredownloads.sap.com/file/0010000001643292022
+      checksum: b09f63c00cd89913548c68bb2ca564fe81919bdbbfb5550df45d21cbe1e02837
+      download: false
+
+    - name: "SAP_UI 757: SP 0001"
+      archive: K-75701INSAPUI.SAR
+      url: https://softwaredownloads.sap.com/file/0010000001310042022
+      checksum: 0eaed73180e5fcf73ae39a6aa41ad894cd545cfcc8e429004964d70c433a558f
+      download: false
+
+    - name: "UIBAS001 757: SP 0001"
+      archive: K-75701INUIBAS001.SAR
+      url: https://softwaredownloads.sap.com/file/0010000001639812022
+      checksum: 693f256029498a4f86e2ccc63da52eaae01845f34b4b0a9479ada432fe06ebfd
+      download: false
+
+    - name: "SAP_BASIS 757: SP 0002"
+      archive: K-75702INSAPBASIS.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000446482023
+      checksum: 1007ac829ae0b340f0fcc54935b8609fd0ddbad180f7980d7d9ce73eca56a35e
+      download: false
+
+    - name: "SAP_BW 757: SP 0002"
+      archive: K-75702INSAPBW.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000366762023
+      checksum: 66ec435e32ced32e641eba6bed033f23d635dc2e84950e40f2f11e463649251a
+      download: false
+
+    - name: "SAP_GWFND 757: SP 0002"
+      archive: K-75702INSAPGWFND.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000366772023
+      checksum: a34d10e145c32ebb3bdc1daf62e4fc9572b337e52f05349927e0a9e25c1e7508
+      download: false
+
+    - name: "SAP_UI 757: SP 0002"
+      archive: K-75702INSAPUI.SAR
+      url: https://softwaredownloads.sap.com/file/0010000001643312022
+      checksum: 63ee4fb474e373b79570dc8bbee0ced36d37aa8b6349e5b6fe2bf919d0463af1
+      download: false
+
+    - name: "SAP_UI 757: SP 0003"
+      archive: K-75703INSAPUI.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000366792023
+      checksum: adb89809ebfca38b59fc2104b6d46d0a29f5fb55dfa2ecbfcfd3ae563283aec3
+      download: false
+
+    - name: "UIBAS001 757: Add-On Installation"
+      archive: K-757AGINUIBAS001.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000611422022
+      checksum: d5488c81ee00a48b3bd5116a735be031ffb2197e7a316fb626d2dbf4ddfeb04f
+      download: false
+
+    - name: "SAP_ABA 75H: SP 0001"
+      archive: K-75H01INSAPABA.SAR
+      url: https://softwaredownloads.sap.com/file/0010000001643332022
+      checksum: 9b5bcb987dcab2b2eec84d9c7d4ff85e47869e4fd40964fb497efce6b0e020c9
+      download: false
+
+    - name: "SAP_ABA 75H: SP 0002"
+      archive: K-75H02INSAPABA.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000366802023
+      checksum: 057c797390466370679967a503c6244b068e19f206ef26b0e328a2134e0920df
+      download: false
+
+    - name: "UIS4HOP1 800: SP 0001"
+      archive: K-80001INUIS4HOP1.SAR
+      url: https://softwaredownloads.sap.com/file/0010000001538162022
+      checksum: 85afbd070d5e5da5b665f57a0fbe335220fbe04395b76607f2c334f0f7cc2f03
+      download: false
+
+    - name: "UIS4HOP1 800: SP 0002"
+      archive: K-80002INUIS4HOP1.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000432262023
+      checksum: 55c754678bebb1b63dbc833c1c234d703a4a8fc731efe8d106e708dab4d3e6f1
+      download: false
+
+    - name: "UIS4HOP1 800: Add-On Installation"
+      archive: K-800AGINUIS4HOP1.SAR
+      url: https://softwaredownloads.sap.com/file/0010000001018992022
+      checksum: f0a55286cd30e042e345b2322d5673f0f8a7c876ed57ffb0bcd6dedcc9681d1f
+      download: false
+
+    - name: "EA-DFPS 807: SP 0001"
+      archive: K-80701INEADFPS.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000028402023
+      checksum: 59a35987a00e284126f2531dc7ae11a72e85e697a199acecfc27d6c43a244e12
+      download: false
+
+    - name: "EA-PS 807: SP 0001"
+      archive: K-80701INEAPS.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000028412023
+      checksum: 70f681d3e2e6d21c3404dfccce26b29d2bc62415ce055aa8d581096ee94b2eb9
+      download: false
+
+    - name: "FI-CAX 807: SP 0001"
+      archive: K-80701INFICAX.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000028422023
+      checksum: 8b982de9bccc4c95e207f1634e7fa330718329689251cafb3cced40c0726a5d8
+      download: false
+
+    - name: "IS-OIL 807: SP 0001"
+      archive: K-80701INISOIL.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000028432023
+      checksum: 137caf100aec7046429edfef87db6ffddff4b9dc093584e56651869b98893bf6
+      download: false
+
+    - name: "IS-PRA 807: SP 0001"
+      archive: K-80701INISPRA.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000028442023
+      checksum: 1232c7859092a6ec482fc36afe5ddd3550eb7f2d52378d16264b606620a811d3
+      download: false
+
+    - name: "IS-PS-CA 807: SP 0001"
+      archive: K-80701INISPSCA.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000028452023
+      checksum: eea75dc01e51672e870beab2ab6b1ac69584d6341733b1c18257bf145186af38
+      download: false
+
+    - name: "IS-UT 807: SP 0001"
+      archive: K-80701INISUT.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000028462023
+      checksum: 3e3a6a2253d7f1bd782ba9ac2fef7a30cfa7c71730aa1c272b12c91be6b18a2f
+      download: false
+
+    - name: "MDG_APPL 807: SP 0001"
+      archive: K-80701INMDGAPPL.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000028472023
+      checksum: da1b77f387d7804c85bb8b1a9812e54162f18857a1e507a094442abb7708dba8
+      download: false
+
+    - name: "MDG_FND 807: SP 0001"
+      archive: K-80701INMDGFND.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000028482023
+      checksum: 3cc52d211941060375b5d6baeb1d9c889099c625fa9f4239923f808a2688a2d4
+      download: false
+
+    - name: "EA-DFPS 807: SP 0002"
+      archive: K-80702INEADFPS.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000490472023
+      checksum: d4bb1f55e8ddf98b48d8a4d7e65883d1dda56bfd3d075b5cdd1942c625221161
+      download: false
+
+    - name: "EA-PS 807: SP 0002"
+      archive: K-80702INEAPS.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000490482023
+      checksum: 6e508cfb665f25f3130f62196d405fbd74a1825cce7885dca2bef7105a0f1ed7
+      download: false
+
+    - name: "FI-CAX 807: SP 0002"
+      archive: K-80702INFICAX.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000490492023
+      checksum: 1ac2b4ea3ffb8061c4a7019b458f81de8c98845984bce24ff9765b000dd5fbd7
+      download: false
+
+    - name: "IS-OIL 807: SP 0002"
+      archive: K-80702INISOIL.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000490502023
+      checksum: 752d2b93af3345dd10c739190dd40c47034edb11eb16c0c64d1af76ba8c6a5e1
+      download: false
+
+    - name: "IS-PRA 807: SP 0002"
+      archive: K-80702INISPRA.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000490512023
+      checksum: 68b49f9ae84e12753c36cf71ed457ce99ab2da52a9cd1b78848e1b3fc08c13ca
+      download: false
+
+    - name: "IS-PS-CA 807: SP 0002"
+      archive: K-80702INISPSCA.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000490522023
+      checksum: ea1e823f26d07df648b71abf6a3c0930192d6635a875de97ba759052e2b2151f
+      download: false
+
+    - name: "IS-UT 807: SP 0002"
+      archive: K-80702INISUT.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000490532023
+      checksum: 5f935dfb9eba1da30bf859e21b27aa1918570e105d949bb29d8d8b8039e1a7d2
+      download: false
+
+    - name: "MDG_APPL 807: SP 0002"
+      archive: K-80702INMDGAPPL.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000490542023
+      checksum: 6034a8d0f893390a979169eaaef2c50fbe7a15840a3a10382ffa9b3576c69ee7
+      download: false
+
+    - name: "MDG_FND 807: SP 0002"
+      archive: K-80702INMDGFND.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000490552023
+      checksum: 9df4a066377c106b6a2a88060f894c7a00aff708d2e2769beb7a2de77d8bc27d
+      download: false
+
+    - name: "UIAPFI70 901: SP 0001"
+      archive: K-90101INUIAPFI70.SAR
+      url: https://softwaredownloads.sap.com/file/0010000001537962022
+      checksum: 25b51e2a523bfe662fe3ecaf45b88f453120ffead2e5f7ca0fe078659d1ab575
+      download: false
+
+    - name: "UIAPFI70 901: SP 0002"
+      archive: K-90102INUIAPFI70.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000432202023
+      checksum: 00af515f90cba47184e84fdaa2ffaf43f053dfd7f4de1ee65236728af1bdea10
+      download: false
+
+    - name: "UIAPFI70 901: Add-On Installation"
+      archive: K-901AGINUIAPFI70.SAR
+      url: https://softwaredownloads.sap.com/file/0010000001018862022
+      checksum: 2c5bf09f7dc4258649e92655e20a0fd40169371a13d5682e0a1076e0da80b122
+      download: false
+
+    - name:         "Servicetools for SAP Basis 731 and higher (KITABC3.SAR)"
+      archive:      KITABC3.SAR
+      url:          https://softwaredownloads.sap.com/file/0010000000512722022
+      checksum:     3041541cc92cfd6bc2164d540b128060bdf96909b1fe871dee8db866e4c89037
+      download: false
+
+    - name:         "Servicetools for SAP Basis 731 and higher (KITABC4.SAR)"
+      archive:      KITABC4.SAR
+      url:          https://softwaredownloads.sap.com/file/0010000001370422022
+      checksum:     6c6fc1d02395bec4ddacd592d0db7e6173168dd4066f89dd061b097b51f168a0
+      download: false
+
+    - name:         "Servicetools for SAP Basis 731 and higher (KITABC5.SAR)"
+      archive:      KITABC5.SAR
+      url:          https://softwaredownloads.sap.com/file/0010000000419832023
+      checksum:     52af226f22a1759376a695767657b1061304c9a09a49de75e84bd14ec3d9b75e
+      download: false
+
+    - name:         "Servicetools for SAP Basis 731 and higher (KITAB9Y.SAR)"
+      archive:      KITAB9Y.SAR
+      url:          https://softwaredownloads.sap.com/file/0010000000469212020
+      checksum:     02c07a82c809c19fc66254c70449cad39851342b246263f3184aad453b333580
+      download: false
+
+    - name: "Attribute Change Package 05 for S4HCM 100"
+      archive: S4HCM100.SAR
+      url: https://softwaredownloads.sap.com/file/0010000001431132022
+      checksum: b431a4c51973d18bd93efb74174696bf9491e7e433b41c91aa4ec7071270a203
+      download: false
+
+    - name: "Attribute Change Package 01 for SAP_BASIS 757"
+      archive: SAP_BASIS757.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000446502023
+      checksum: eb4abd5dd88f6c89fba2b631d4ffe2d9dcd776a5649481423cd9bbfe762598bd
+      download: false
+
+    - name: "Attribute Change Package 01 for SAP_UI 757"
+      archive: SAP_UI757.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000188482023
+      checksum: 49ae645dc33ef08a0f140aa11b6772ff0d77cdeaa3d8e22ed119c76239fa9ca7
+      download: false
+
+    - name: "Attribute Change Package 56 for ST-PI 740"
+      archive: ST-PI740.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000297212015
+      checksum: 564fcbe7d359516cb09d21098223dd87ca81873777e7d3ab36a2a73b2406871c
+      download: false
+
+    - name: "Attribute Change Package 36 for UIHR002 100"
+      archive: UIHR002100.SAR
+      url: https://softwaredownloads.sap.com/file/0010000020208092017
+      checksum: 689436077b2a9033cba4e2805127d351d580e61916952f060b3758991b6d5faf
+      download: false
+
+    - name: "Attribute Change Package 18 for UIMDG001 200"
+      archive: UIMDG001200.SAR
+      url: https://softwaredownloads.sap.com/file/0010000014247222017
+      checksum: efe6263197cdbb31f80bf4770d3431cc03c4d6aed954e33d68ce930eac5ffa2a
+      download: false
+
+    - name: "Attribute Change Package 19 for UITRV001 300"
+      archive: UITRV001300.SAR
+      url: https://softwaredownloads.sap.com/file/0010000000561182019
+      checksum: 049a690586683062f6f4ef887a70e11479eefafdb467619b6dc5f920dd32ac86
+      download: false
+
+    - name:  "Support Package SAP WEB DISPATCHER 7.81 Linux on x86_64 64bit"
+      archive:  SAPWEBDISP_SP_110-70005393.SAR
+      checksum:  706e5f4eab5d8a3573c3cc2bf6695562b8c71c59b5079e2f7e7b8afb283ee5fc
+      url:   https://softwaredownloads.sap.com/file/0020000000314542021
+      download:    true
+
+...

@@ -1,0 +1,181 @@
+{
+    "db": {
+      "Custom": {
+        "compute": {
+          "vm_size": "Standard_E20ds_v4",
+          "accelerated_networking": true
+        },
+        "storage": [
+          {
+            "name": "os",
+            "count": 1,
+            "disk_type": "Premium_LRS",
+            "size_gb": 128,
+            "caching": "ReadWrite"
+          },
+          {
+            "name": "backup",
+            "count": 1,
+            "disk_type": "Premium_LRS",
+            "size_gb": 256,
+            "caching": "ReadWrite",
+            "write_accelerator": false,
+            "lun_start": 13
+          }
+        ]
+      }
+    },
+    "app": {
+      "Custom": {
+        "compute": {
+          "vm_size": "Standard_D4ds_v5",
+          "accelerated_networking": true
+        },
+        "storage": [
+          {
+            "name": "os",
+            "count": 1,
+            "disk_type": "Premium_LRS",
+            "size_gb": 128,
+            "caching": "ReadWrite"
+          },
+          {
+            "name": "sap",
+            "count": 1,
+            "disk_type": "Premium_LRS",
+            "size_gb": 128,
+            "caching": "ReadWrite",
+            "write_accelerator": false,
+            "lun_start": 0
+          }
+        ]
+      },
+      "Optimized": {
+        "compute": {
+          "vm_size": "Standard_D4ds_v5",
+          "accelerated_networking": true
+        },
+        "storage": [
+          {
+            "name": "os",
+            "count": 1,
+            "disk_type": "Premium_LRS",
+            "size_gb": 128,
+            "caching": "ReadWrite"
+          },
+          {
+            "name": "sap",
+            "count": 1,
+            "disk_type": "Premium_LRS",
+            "size_gb": 128,
+            "caching": "ReadWrite",
+            "write_accelerator": false,
+            "lun_start": 0
+          }
+        ]
+      }
+    },
+    "scs": {
+      "Custom": {
+        "compute": {
+          "vm_size": "Standard_D4ds_v5",
+          "accelerated_networking": true
+        },
+        "storage": [
+          {
+            "name": "os",
+            "count": 1,
+            "disk_type": "Premium_LRS",
+            "size_gb": 128,
+            "caching": "ReadWrite"
+          },
+          {
+            "name": "sap",
+            "count": 1,
+            "disk_type": "Premium_LRS",
+            "size_gb": 128,
+            "caching": "ReadWrite",
+            "write_accelerator": false,
+            "lun_start": 0
+          }
+        ]
+      }
+    },
+    "scsha": {
+      "Custom": {
+        "compute": {
+          "vm_size": "Standard_D4ds_v5",
+          "accelerated_networking": true
+        },
+        "storage": [
+          {
+            "name": "os",
+            "count": 1,
+            "disk_type": "Premium_LRS",
+            "size_gb": 128,
+            "caching": "ReadWrite"
+          },
+          {
+            "name": "sap",
+            "count": 1,
+            "disk_type": "Premium_LRS",
+            "size_gb": 128,
+            "caching": "ReadWrite",
+            "write_accelerator": false,
+            "lun_start": 0
+          }
+        ]
+      },
+      "Optimized": {
+        "compute": {
+          "vm_size": "Standard_D4s_v5",
+          "accelerated_networking": true
+        },
+        "storage": [
+          {
+            "name": "os",
+            "count": 1,
+            "disk_type": "Premium_LRS",
+            "size_gb": 128,
+            "caching": "ReadWrite"
+          },
+          {
+            "name": "sap",
+            "count": 1,
+            "disk_type": "Premium_LRS",
+            "size_gb": 128,
+            "caching": "ReadWrite",
+            "write_accelerator": false,
+            "lun_start": 0
+          }
+        ]
+      }
+    },
+    "web": {
+      "Custom": {
+        "compute": {
+          "vm_size": "Standard_D4ds_v5",
+          "accelerated_networking": true
+        },
+        "storage": [
+          {
+            "name": "os",
+            "count": 1,
+            "disk_type": "Premium_LRS",
+            "size_gb": 128,
+            "caching": "ReadWrite"
+          },
+          {
+            "name": "sap",
+            "count": 1,
+            "disk_type": "Premium_LRS",
+            "size_gb": 128,
+            "caching": "ReadWrite",
+            "write_accelerator": false,
+            "lun_start": 0
+          }
+        ]
+      }
+    }
+  }
+  

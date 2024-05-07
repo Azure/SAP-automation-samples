@@ -7,13 +7,13 @@ materials:
 
   media:
     # SWPM
-    - name:                     "SWPM 1.0 SP40 for NW higher than 7.0x ; OS: Windows 64bit"
-      archive:                  SWPM10SP40_2-20009707.SAR
-      checksum:                 f68968ce90a64e885f2433b49e2622c479aeab3da3f8394bda65632a01630600
+    - name:                     "SWPM 1.0 SP40 for NW higher than 7.0x; Support Package SOFTWARE PROVISIONING MGR 1.0 Windows on x86_64 64bit"
+      archive:                  SWPM10SP40_3-20009707.SAR
+      checksum:                 2905f0ec11fee51be9e3b9c9435cb39961b91c0e014b57d282eab6345a0426d3
       filename:                 "SWPM.SAR"
       extract:                  true
       extractDir:               SWPM
-      url:                      https://softwaredownloads.sap.com/file/0020000000324862024
+      url:                      https://softwaredownloads.sap.com/file/0020000000394342024
       path:                     download_basket
 
 

@@ -1,7 +1,7 @@
 ---
 # 3015539 - SAP S/4HANA 2021: Release Information Note
 name:                                  "SAP S/4HANA 2021 ISS 00"
-filename:                              "S4HANA_2021_ISS_v0001ms"
+filename:                              "S4HANA_2021_ISS_v0002ms"
 target:                                "S/4 HANA 2021 ISS 00"
 version:                               2
 platform:                              'HANA'
@@ -26,22 +26,10 @@ product_ids:
 
 materials:
   dependencies:
-    - name:                            "HANA_2_00_067_v0002ms"
+    - name:                            "HANA_2_00_067_v0006ms"
+    - name:                            "SWPM20SP17_latest"
+    - name:                            "SUM20SP19_latest"
   media:
-
-    # SWPM - Dynamic Download
-    - name:                            swpm20
-      dynamic:                         true
-      platform:                        LNX
-      extract:                         true
-      extractDir:                      SWPM
-      creates:                         SIGNATURE.SMF
-
-    # SUM - Dynamic Download
-    - name:                            sum20
-      dynamic:                         true
-      platform:                        LNX
-      download:                        false
 
     # SAPCAR 7.22
     - name:                            "SAPCAR 7.22; OS: Linux on x86_64 64bit"
@@ -53,16 +41,16 @@ materials:
 
     # kernel components
     # Kernel
-    - name:                            "Kernel Part I (785); OS: Linux on x86_64 64bit ; DB: Database independent"
-      archive:                         SAPEXE_100-80005374.SAR
-      checksum:                        31002d86645b5ed2f03a5ee5508083939b0e219116e2a7a126c3930beb642888
-      url:                             https://softwaredownloads.sap.com/file/0020000000249732022
+    - name:                            "Support Package SAP KERNEL 7.89 64-BIT UNICODE ; DB: Database independent"
+      archive:                         SAPEXE_201-70006642.SAR
+      checksum:                        6870163f42419f65c52bc771398ce25811ebc58be5cf55d05bd99cee9843b5f0
+      url:                             https://softwaredownloads.sap.com/file/0020000000449852024
       path:                            download_basket
 
-    - name:                            "Kernel Part II (785); OS: Linux on x86_64 64bit ; DB: SAP HANA database"
-      archive:                         SAPEXEDB_100-80005373.SAR
-      checksum:                        05a16e9ba5c6c882972fc37ee09c675ca5c06e02d56ea3cd36e39aa0bb809b37
-      url:                             https://softwaredownloads.sap.com/file/0020000000250002022
+    - name:                            "Support Package SAP KERNEL 7.89 64-BIT UNICODE Linux on x86_64 64bit SAP HANA database"
+      archive:                         SAPEXEDB_201-70006641.SAR
+      checksum:                        88995e74424e648160538967fd5e9be614be7ee863eb1503ae77da1794f1fb79
+      url:                             https://softwaredownloads.sap.com/file/0020000000450002024
       path:                            download_basket
 
     # SAP Host Agent
@@ -596,5 +584,6 @@ materials:
       checksum:                        706e5f4eab5d8a3573c3cc2bf6695562b8c71c59b5079e2f7e7b8afb283ee5fc
       url:                             https://softwaredownloads.sap.com/file/0020000000314542021
       download:                        true
+
 
 ...
