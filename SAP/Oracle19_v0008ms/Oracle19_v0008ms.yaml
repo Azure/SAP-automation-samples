@@ -35,14 +35,14 @@ materials:
 # SBP Patches are downloaded based on SAP Note 2799920 - Patches 19c: Database
     
     - name:         "Oracle SBP - Database Release Update 19.18.0.0.230117"
-      archive:      GIRU19P_2402-70004508.ZIP
-      checksum:     680d5cfbaee14a888e5cd259231075a1ea91af4866a8743bc33511b80a215e12
+      archive:      GIRU19P_2405-70004508.ZIP
+      checksum:     dd648a0d56b9be779f31b70f99faa8e6841aa9df293f9f1ec8378256d57919d2
       extract:      false
       download:     true
       extractDir:   SBP/GIRU19P
       path:         SBP
       creates:      SIGNATURE.SMF
-      url:          https://softwaredownloads.sap.com/file/0020000000181802024
+      url:          https://softwaredownloads.sap.com/file/0020000000570022024
 
     - name:         "Oracle SBP - Bundle patches for 19c: SAP19P"
       archive:      OPATCH19P_2405-70004508.ZIP
@@ -54,13 +54,13 @@ materials:
       url:          https://softwaredownloads.sap.com/file/0020000000565292024
 
     - name:         "Oracle SBP - Bundle patches for 19c: SBPJDK19P"
-      archive:      SBPJDK19P_2402-70004508.ZIP
-      checksum:     60b25b60c0b969d310eb1ae6ceda17da9404d7164afd1dac77160dbbfa476d72
+      archive:      SBPJDK19P_2405-70004508.ZIP
+      checksum:     cc62ece30ef29750ac4f899d86e14f5e9a4463893a29df0c465c54494004447b
       extract:      false
       extractDir:   SBP/SBPJDK
       path:         SBP
       creates:      SIGNATURE.SMF
-      url:          https://softwaredownloads.sap.com/file/0020000000170132024
+      url:          https://softwaredownloads.sap.com/file/0020000000568972024
 
     - name:         "Oracle compact-lib"
       archive:      compat-libcap1-1.10-7.el7.x86_64.rpm
@@ -104,43 +104,43 @@ materials:
 # GRID SBP Patches are downloaded based on SAP Note 2799920 - Patches 19c: Database
 
     - name:         "Oracle GRID SBP - Bundle patches for 19c: GIRU"
-      archive:      GIRU19P_2402-70004550.ZIP
-      checksum:     7f20170cf5070b6d13c879a7163cf2b7db860a9a93d6ae0f57709b9338035746
+      archive:      GIRU19P_2405-70004550.ZIP
+      checksum:     ff1bd8a9d813b9ed7992f8a629166c405d008ec12fe66dc55eb2e74142991b66
       extract:      false
       download:     true
       # extractDir:   SBP/GIRU19P
       path:         SBP/GSBP
       # creates:     SIGNATURE.SMF
-      url:          https://softwaredownloads.sap.com/file/0020000000176862024
+      url:          https://softwaredownloads.sap.com/file/0020000000569922024
 
     - name:         "Oracle GRID SBP - Opatch OPatch 12.2.0.1.40"
-      archive:      OPATCH19P_2402-70004550.ZIP
-      checksum:     79ba596d2af5f376f1598286c7ecce3381dff3c53ff82960420f066388dc1fd2
+      archive:      OPATCH19P_2405-70004550.ZIP
+      checksum:     32bd518eb9d82e36596875b475370e38f85ea80737b0b6f5b92c3c2b169679e6
       extract:      true
       download:     true
       extractDir:   SBP/GSBP/OPATCH
       path:         SBP/GSBP
       creates:      SIGNATURE.SMF
-      url:          https://softwaredownloads.sap.com/file/0020000000170292024
+      url:          https://softwaredownloads.sap.com/file/0020000000563682024
 
     - name:         "Oracle GRID SBP - Bundle patches for 19c: SGR"
-      archive:      SGR19P_2402-70004550.ZIP
-      checksum:     97bae0fd9671f210033d4986976e3c9fa661091be142800499a7a61375ac33c1
+      archive:      SGR19P_2405-70004550.ZIP
+      checksum:     5861c07adc666806d73a4f1cb5bf66bfabfc773f1b71f215c001ce6474e6dc49
       extract:      true
       download:     true
       extractDir:   SBP/GSBP/SGR19P
       path:         SBP/GSBP
       # creates:     SIGNATURE.SMF
-      url:          https://softwaredownloads.sap.com/file/0020000000169912024
+      url:          https://softwaredownloads.sap.com/file/0020000000563602024
   
     - name:         "Oracle GRID SBP - Bundle patches for 19c: SBPJDK19P"
-      archive:      SBPJDK19P_2402-70004550.ZIP
-      checksum:     763905b984a221294ff4809cf4bf468e8e61b4309a8d17807078aef2411cceb8
+      archive:      SBPJDK19P_2405-70004550.ZIP
+      checksum:     5c93601cfd05c558d8f7288203e647450b124903be3f76292f405742bae837a8
       extract:      false
       extractDir:   SBP/GSBP/SBPJDK
       path:         SBP/GSBP
       # creates:     SIGNATURE.SMF
-      url:          https://softwaredownloads.sap.com/file/0020000000170262024
+      url:          https://softwaredownloads.sap.com/file/0020000000563462024
     
 
     # - name:         "Grid Infrastructure OCW Merge 19.20.0.0.230718"
