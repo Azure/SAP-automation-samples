@@ -62,16 +62,6 @@ materials:
       creates:      SIGNATURE.SMF
       url:          https://softwaredownloads.sap.com/file/0020000000170132024
 
-    - name:         "Oracle SBP - Bundle patches for 19c: OPatch 12.2.0.1.37"
-      archive:      OPATCH19P_2402-70004508.ZIP
-      checksum:     6242e197ef912e460451e7c80a818c6e1970979ca761624fa659b6f43ab347a8
-      extract:      true
-      extractDir:   SBP/OPATCH
-      path:         SBP
-      creates:      SIGNATURE.SMF
-      url:          https://softwaredownloads.sap.com/file/0020000000169962024
-
-
     - name:         "Oracle compact-lib"
       archive:      compat-libcap1-1.10-7.el7.x86_64.rpm
       extract:      false
