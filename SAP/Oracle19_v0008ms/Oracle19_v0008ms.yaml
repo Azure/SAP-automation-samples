@@ -45,13 +45,13 @@ materials:
       url:          https://softwaredownloads.sap.com/file/0020000000181802024
 
     - name:         "Oracle SBP - Bundle patches for 19c: SAP19P"
-      archive:      SAP19P_2402-70004508.ZIP
-      checksum:     1f8decc6f2321a192f19196548df4fd7af90dd02a29ddf659a4402ed0376bbd7
+      archive:      OPATCH19P_2405-70004508.ZIP
+      checksum:     ec8ce2a499561b160763fd848c53bd244ae517757d7515aeca47e6f83af5d014
       extract:      true
       extractDir:   SBP/SAPSBP
       path:         SBP
       creates:      SIGNATURE.SMF
-      url:          https://softwaredownloads.sap.com/file/0020000000169892024
+      url:          https://softwaredownloads.sap.com/file/0020000000565292024
 
     - name:         "Oracle SBP - Bundle patches for 19c: SBPJDK19P"
       archive:      SBPJDK19P_2402-70004508.ZIP
