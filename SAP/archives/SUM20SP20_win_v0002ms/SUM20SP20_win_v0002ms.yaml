@@ -1,0 +1,14 @@
+---
+name:    'SUM20SP20'
+target:  'SUM20SP20'
+version: 002
+
+materials:
+
+  media:
+
+    - name:         "Patch 2 for SOFTWARE UPDATE MANAGER 2.0 SP20 (Windows)"
+      archive:      SUM20SP20_2-80002458.SAR
+      checksum:     b326494cb5435df03fce520735bcf94cd17e04d3dc2525d725252afdebbf9649
+      download:     false
+      url:          https://softwaredownloads.sap.com/file/0020000000754852024
