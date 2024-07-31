@@ -1,9 +1,9 @@
 ---
 
     name:                              "SAP S/4HANA 2020 ISS 00"
-    filename:                          "S42020ISS00_v0003ms"
+    filename:                          "S42020ISS00_v0004ms"
     target:                            'S/4 HANA 2020 ISS 00'
-    version:                           3
+    version:                           4
     platform:                          'HANA'
     InstanceType:                      "ABAP"
 
