@@ -1,14 +1,14 @@
 ---
-name:    'SUM20SP20'
-target:  'SUM20SP20'
-version: 004
+name:               'SUM20SP20'
+target:             'SUM20SP20'
+version:            005
 
 materials:
 
   media:
 
-    - name:         "Patch 4 for SOFTWARE UPDATE MANAGER 2.0 SP20 (Windows)"
-      archive:      SUM20SP20_4-80002458.SAR
-      checksum:     141f5c2004774db96e8675a08bf740b5fa9c8b2046e24f2cd824e184eecd2dfe
+    - name:         "Patch 5 for SOFTWARE UPDATE MANAGER 2.0 SP20 (Windows)"
+      archive:      SUM20SP20_5-80002458.SAR
+      checksum:     ff8118f644f3e30417bf757eccd6dc0f95a143ed6308be02eab405df06a55158
       download:     false
-      url:          https://softwaredownloads.sap.com/file/0020000000858952024
+      url:          https://softwaredownloads.sap.com/file/0020000000892742024
