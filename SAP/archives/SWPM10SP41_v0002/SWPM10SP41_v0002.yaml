@@ -1,0 +1,18 @@
+---
+name:    'SWPM10SP41'
+target:  'SWPM10SP41'
+version: 002
+
+materials:
+
+  media:
+    # SWPM
+    - name:         "SWPM 1.0 SP41 for NW higher than 7.0x; Support Package SOFTWARE PROVISIONING MGR 1.0 Linux on x86_64 64bit"
+      archive:      SWPM10SP41_2-20009701.SAR
+      checksum:     3445ed4e37e8957049ca6e880de6478fb152471431eb258802bdaba0768a2dc4
+      extract:      true
+      extractDir:   SWPM
+      creates:      SIGNATURE.SMF
+      url:          https://softwaredownloads.sap.com/file/0020000000744182024
+
+...
