@@ -1,19 +1,19 @@
 ---
 name:    'SWPM10SP41'
 target:  'SWPM10SP41'
-version: 005
+version: 001
 
 materials:
 
   media:
     # SWPM
     - name:                     "SWPM 1.0 SP41 for NW higher than 7.0x; Support Package SOFTWARE PROVISIONING MGR 1.0 Windows on x86_64 64bit"
-      archive:                  SWPM10SP41_5-20009707.SAR
-      checksum:                 b87e12b3ae669dee6e5f8eeb6db933de45ff22275dd9cef419eef0fdf7277577
+      archive:                  SWPM10SP41_1-20009707.SAR
+      checksum:                 0dadaa863f8813bae86fc1cc677d15112190d10dccffe6c070e692a09ac3d4ce
       filename:                 "SWPM.SAR"
       extract:                  true
       extractDir:               SWPM
-      url:                      https://softwaredownloads.sap.com/file/0020000000925292024
+      url:                      https://softwaredownloads.sap.com/file/0020000000683162024
       path:                     download_basket
 
 
