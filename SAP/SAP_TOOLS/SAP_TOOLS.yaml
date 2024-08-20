@@ -16,25 +16,25 @@ materials:
       permissions:  '0755'
       url:          https://softwaredownloads.sap.com/file/0020000000098642022
 
-    - name:         "SWPM 2.0 SP17 ; OS: Linux on x86_64 64bit"
-      archive:      SWPM20SP17_2-80003424.SAR
-      checksum:     cbab76099db4b66b62b54904ce4cf5ae93d7333d581eb2466685f1b9eb1c75f2
+    - name:         "SWPM 2.0 SP18 ; OS: Linux on x86_64 64bit"
+      archive:      SWPM20SP18_2-80003424.SAR
+      checksum:     10cac9efd81dad9e578932d21200fa375d49fa40e99baaa365dafc647bfb22c0
       filename:     swpm20
       extract:      true
       extractDir:   SWPM
       creates:      SIGNATURE.SMF
-      url:          https://softwaredownloads.sap.com/file/0020000000394222024
+      url:          https://softwaredownloads.sap.com/file/0020000000925282024
       path:         linuxswpm20
 
     - name:         "SWPM 1.0 SP40 for NW higher than 7.0x; Support Package SOFTWARE PROVISIONING MGR 1.0 Linux on x86_64 64bit"
-      archive:      SWPM10SP40_3-20009701.SAR
-      checksum:     32df22cb6fdecc9cd27363eb6d2f26933b5dd2977d3bc59f530200dc25fde0a0
+      archive:      SWPM10SP41_5-20009701.SAR
+      checksum:     18440f7691ce60eae2f4bce4b57df66f44f8737449c26c88fef6d66fafedd00c
       filename:     swpm10
       extract:      true
       extractDir:   SWPM
       creates:      SIGNATURE.SMF
       path:         linuxswpm10
-      url:          https://softwaredownloads.sap.com/file/0020000000394532024
+      url:          https://softwaredownloads.sap.com/file/0020000000925282024
 
 # ToDo: Change to have the Windows components
 
