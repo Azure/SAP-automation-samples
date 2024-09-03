@@ -4,7 +4,7 @@
 #
 name:                                  NW750SPS20_v0004ms
 target:                                NETWEAVER 7.50 SPS 20
-version:                               0004
+version:                               0005
 
 product_ids:
   dbl:                                 NW_ABAP_DB:NW750.HDB.ABAP
