@@ -25,7 +25,8 @@ product_ids:
 materials:
   dependencies:
     - name:                            HANA_2_00_067_v0002ms
-    - name:                            SWPM10SP36_latest
+    - name:                            SWPM10SP41_latest
+    - name:                            SUM11SP30_latest
 
   media:
     # DB Export
@@ -468,13 +469,6 @@ materials:
       archive:          SRUI25_0-80000717.SCA
       checksum:         8869009f718c3b4aff617bc804117eb1017fbecdf6101a028255f2b66c0f1c9c
       url:              https://softwaredownloads.sap.com/file/0020000001171752022
-      path:             download_basket
-      download:         false
-
-    - name:             "Patch 11 for SOFTWARE UPDATE MANAGER 1.1 SP00"
-      archive:          SUM11SP00_11-80006800.SAR
-      checksum:         a715cfab53a4740988a4382be4e9cc6e4f8c127a177db85e48d7e6f93907d114
-      url:              https://softwaredownloads.sap.com/file/0020000000055522023
       path:             download_basket
       download:         false
 
