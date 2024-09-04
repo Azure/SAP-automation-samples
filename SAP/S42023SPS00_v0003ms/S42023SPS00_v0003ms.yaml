@@ -76,7 +76,7 @@ materials:
       archive: igsexe_4-70005417.sar
       url: https://softwaredownloads.sap.com/file/0020000000632872023
       path: download_basket
-      checksum: c92e7ed27bd33c9e416a45e363032baad84039bf958f4a182e85b099be3fe377
+      checksum: 237b86dc21f3d6ff0161a57aaa3917c5a11e3377330edbe73ceab78350085b23
 
     - name: "SAP IGS Fonts and Textures"
       archive: igshelper_17-10010245.sar
