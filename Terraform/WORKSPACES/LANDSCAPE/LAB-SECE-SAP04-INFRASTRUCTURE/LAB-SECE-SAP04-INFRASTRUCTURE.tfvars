@@ -36,28 +36,6 @@ location = "swedencentral"
 #If you want to provide a custom naming json use the following parameter.
 #name_override_file = ""
 
-# If defined, will add the Microsoft.Azure.Monitor.AzureMonitorLinuxAgent extension to the virtual machines
-deploy_monitoring_extension = true
-
-# If defined, will add the Microsoft.Azure.Security.Monitoring extension to the virtual machines
-deploy_defender_extension = false
-
-
-#########################################################################################
-#                                                                                       #
-#  Resource group details                                                               #
-#                                                                                       #
-#########################################################################################
-
-# The two resource group name and arm_id can be used to control the naming and the creation of the resource group
-
-# The resourcegroup_name value is optional, it can be used to override the name of the resource group that will be provisioned
-#resourcegroup_name = ""
-
-# The resourcegroup_name arm_id is optional, it can be used to provide an existing resource group for the deployment
-#resourcegroup_arm_id = ""
-
-
 #########################################################################################
 #                                                                                       #
 #  Networking                                                                           #
@@ -293,20 +271,66 @@ web_subnet_address_prefix = "10.10.128.0/19"
 
 #########################################################################################
 #                                                                                       #
+#  Common Virtual Machine settings                                                      #
+#                                                                                       #
+#########################################################################################
+
+# user_assigned_identity_id defines the user assigned identity to be assigned to the Virtual Machines
+#user_assigned_identity_id = ""
+
+# If defined, will add the Microsoft.Azure.Monitor.AzureMonitorLinuxAgent extension to the Virtual Machines
+deploy_monitoring_extension = true
+
+# If defined, will add the Microsoft.Azure.Security.Monitoring extension to the Virtual Machines
+deploy_defender_extension = false
+
+# If defined, defines the patching mode for the Virtual Machines
+patch_mode = "ImageDefault"
+
+# If defined, defines the mode of VM Guest Patching for the Virtual Machines
+patch_assessment_mode = "ImageDefault"
+
+
+#########################################################################################
+#                                                                                       #
+#  Resource group details                                                               #
+#                                                                                       #
+#########################################################################################
+
+# The two resource group name and arm_id can be used to control the naming and the creation of the resource group
+
+# The resourcegroup_name value is optional, it can be used to override the name of the resource group that will be provisioned
+#resourcegroup_name = ""
+
+# The resourcegroup_name arm_id is optional, it can be used to provide an existing resource group for the deployment
+#resourcegroup_arm_id = ""
+
+
+
+#########################################################################################
+#                                                                                       #
 #  DNS Settings                                                                         #
 #                                                                                       #
 #########################################################################################
 
-# custom dns resource group name
+
+# Subscription for the resource group containing the Private DNS zone for the compute resources
+#management_dns_subscription_id = ""
+
+# Resource group name for the resource group containing the Private DNS zone for the compute resources
 #management_dns_resourcegroup_name = ""
 
-# custom dns subscription
-#management_dns_subscription_id = ""
+# Subscription for the resource group containing the Private DNS zone for the Privatelink resources
+#privatelink_dns_subscription_id = ""
+
+# Resource group name for the resource group containing the Private DNS zone for the Privatelink resources
+#privatelink_dns_resourcegroup_name = ""
+
 
 # Defines if a custom dns solution is used
 use_custom_dns_a_registration = false
 
-# Defines if the Virtual network for the Virtual machines is registered with DNS
+# Defines if the Virtual network for the Virtual Machines is registered with DNS
 # This also controls the creation of DNS entries for the load balancers
 register_virtual_network_to_dns = false
 
@@ -339,6 +363,9 @@ enable_rbac_authorization_for_keyvault = false
 
 # The number of days that items should be retained in the soft delete period
 soft_delete_retention_days = 14
+
+# Set expiry date for secrets
+set_secret_expiry = false
 
 #########################################################################################
 #                                                                                       #
@@ -527,9 +554,6 @@ iscsi_authentication_username = "azureadm"
 # Defines the Availability zones for the iSCSI devices
 #iscsi_vm_zones = []
 
-# user_assigned_identity_id defines the user assigned identity to be assigned to the Virtual machines
-#user_assigned_identity_id = ""
-
 #########################################################################################
 #                                                                                       #
 #  Terraform deployment parameters                                                      #
@@ -603,3 +627,30 @@ create_ams_instance = false
 
 # ams_laws_arm_id if provided, Azure resource id for the Log analytics workspace in AMS
 #ams_laws_arm_id = ""
+
+#######################################4#######################################8
+#                                                                              #
+#                             NAT Gateway variables                            #
+#                                                                              #
+#######################################4#######################################8
+
+# If true, a NAT gateway will be created
+deploy_nat_gateway = false
+
+# If provided, the name of the NAT Gateway
+#nat_gateway_name = ""
+
+# If provided, the Azure resource id for the NAT Gateway
+#nat_gateway_arm_id = ""
+
+# If provided, the zones for the NAT Gateway public IP
+#nat_gateway_public_ip_zones = []
+
+# If provided, Azure resource id for the NAT Gateway public IP
+#nat_gateway_public_ip_arm_id = ""
+
+# The idle timeout in minutes for the NAT Gateway
+#nat_gateway_idle_timeout_in_minutes = 0
+
+# If provided, the tags for the NAT Gateway public IP
+#nat_gateway_public_ip_tags = {}
