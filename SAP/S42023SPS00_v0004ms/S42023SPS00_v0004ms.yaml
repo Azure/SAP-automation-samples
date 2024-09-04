@@ -72,7 +72,7 @@ materials:
       path: download_basket
       checksum: c5d5d750d26b343edd8582f9f683cb25978e01c86d8da8493b7f4f4023956c73
 
-    - name: "Installation for SAP IGS integrated in SAP Kernel"
+    - name: "Installation for SAP IGS integrated in SAP Kernel Support Package 7.81"
       archive: igsexe_4-70005417.sar
       url: https://softwaredownloads.sap.com/file/0020000000632872023
       path: download_basket
