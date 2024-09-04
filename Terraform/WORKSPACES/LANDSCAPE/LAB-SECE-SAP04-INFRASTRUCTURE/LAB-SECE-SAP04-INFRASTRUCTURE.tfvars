@@ -570,7 +570,7 @@ iscsi_authentication_username = "azureadm"
 #deployer_tfstate_key = ""
 
 # use_spn defines if the deployments are performed using Service Principals or the deployer's managed identiry, true=SPN, false=MSI
-use_spn = true
+use_spn = false
 
 
 #########################################################################################
@@ -635,7 +635,7 @@ create_ams_instance = false
 #######################################4#######################################8
 
 # If true, a NAT gateway will be created
-deploy_nat_gateway = false
+deploy_nat_gateway = true
 
 # If provided, the name of the NAT Gateway
 #nat_gateway_name = ""

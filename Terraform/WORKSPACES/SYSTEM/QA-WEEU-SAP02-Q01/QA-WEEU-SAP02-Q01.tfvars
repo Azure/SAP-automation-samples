@@ -893,7 +893,7 @@ enable_purge_control_for_keyvaults = false
 #landscape_tfstate_key = null
 
 # use_spn defines if the deployments are performed using Service Principals or the deployer's managed identiry, true=SPN, false=MSI
-use_spn = true
+use_spn = false
 
 #########################################################################################
 #                                                                                       #

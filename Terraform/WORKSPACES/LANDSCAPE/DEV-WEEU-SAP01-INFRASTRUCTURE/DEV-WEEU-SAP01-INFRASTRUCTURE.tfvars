@@ -570,7 +570,7 @@ iscsi_authentication_username = "azureadm"
 #deployer_tfstate_key = ""
 
 # use_spn defines if the deployments are performed using Service Principals or the deployer's managed identiry, true=SPN, false=MSI
-use_spn = true
+use_spn = false
 
 
 #########################################################################################
