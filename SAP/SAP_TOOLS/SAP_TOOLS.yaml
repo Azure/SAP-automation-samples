@@ -17,24 +17,24 @@ materials:
       url:          https://softwaredownloads.sap.com/file/0020000000098642022
 
     - name:         "SWPM 2.0 SP18 ; OS: Linux on x86_64 64bit"
-      archive:      SWPM20SP18_2-80003424.SAR
-      checksum:     10cac9efd81dad9e578932d21200fa375d49fa40e99baaa365dafc647bfb22c0
+      archive:      SWPM20SP18_3-80003424.SAR
+      checksum:     f907eae71802a621fd49e59c7f1e5c642aaa244ef31e98fac6d12daae8dda5a1
       filename:     swpm20
       extract:      true
       extractDir:   SWPM
       creates:      SIGNATURE.SMF
-      url:          https://softwaredownloads.sap.com/file/0020000000925282024
+      url:          https://softwaredownloads.sap.com/file/0020000001012852024
       path:         linuxswpm20
 
     - name:         "SWPM 1.0 SP40 for NW higher than 7.0x; Support Package SOFTWARE PROVISIONING MGR 1.0 Linux on x86_64 64bit"
-      archive:      SWPM10SP41_5-20009701.SAR
-      checksum:     18440f7691ce60eae2f4bce4b57df66f44f8737449c26c88fef6d66fafedd00c
+      archive:      SWPM10SP41_6-20009701.SAR
+      checksum:     58f899f29b8fb5f4ad7a2faf93b94e8b3cf1977ce624e9c38e0ab4c8bd52f8a6
       filename:     swpm10
       extract:      true
       extractDir:   SWPM
       creates:      SIGNATURE.SMF
       path:         linuxswpm10
-      url:          https://softwaredownloads.sap.com/file/0020000000925282024
+      url:          https://softwaredownloads.sap.com/file/0020000001012992024
 
 # ToDo: Change to have the Windows components
 
@@ -44,24 +44,24 @@ materials:
       filename:     SAPCAR.exe
       url:          https://softwaredownloads.sap.com/file/0020000000098632022
 
-    - name:         "SWPM 1.0 SP40 for NW higher than 7.0x; Support Package SOFTWARE PROVISIONING MGR 1.0 Windows on x86_64 64bit"
-      archive:      SWPM10SP41_5-20009707.SAR
-      checksum:     b87e12b3ae669dee6e5f8eeb6db933de45ff22275dd9cef419eef0fdf7277577
+    - name:         "SWPM 1.0 SP41 for NW higher than 7.0x; Support Package SOFTWARE PROVISIONING MGR 1.0 Windows on x86_64 64bit"
+      archive:      SWPM10SP41_6-20009707.SAR
+      checksum:     25359a6ebb96424460f0f5117198903d2ce439ccadc65e61a5c3aaf86679fc05
       filename:     swpm10win
       extract:      true
       extractDir:   SWPM
       creates:      SIGNATURE.SMF
       path:         winswpm10
-      url:          https://softwaredownloads.sap.com/file/0020000000925292024
+      url:          https://softwaredownloads.sap.com/file/0020000001013162024
 
-    - name:         "SWPM 2.0 SP17 ; OS: Windows on x86_64 64bit"
-      archive:      SWPM20SP18_2-70003212.SAR
-      checksum:     4107758ee49b36a6db37bb717146b663c20cce8006044cf1a5b092724b80cb67
+    - name:         "SWPM 2.0 SP18 ; OS: Windows on x86_64 64bit"
+      archive:      SWPM20SP18_3-70003212.SAR
+      checksum:     ff641cb3269659b575dea87d3dd562457b9cc1e522c5e584e1a2dfbcaaca1140
       filename:     swpm20win
       extract:      true
       extractDir:   SWPM
       creates:      SIGNATURE.SMF
-      url:          https://softwaredownloads.sap.com/file/0020000000743972024
+      url:          https://softwaredownloads.sap.com/file/0020000001012912024
       path:         winswpm20
 
     # - name:         "SAPCAR 7.22; OS: Linux on x86_64 64bit"
