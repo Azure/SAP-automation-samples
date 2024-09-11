@@ -15,15 +15,15 @@ materials:
       permissions:  '0755'
       url:          https://softwaredownloads.sap.com/file/0020000000098642022
 
-    # HANA Client v2.9
-    - name:         SAP HANA CLIENT Version 2.9
-      archive:      IMDB_CLIENT20_009_28-80002082.SAR
-      checksum:     22f1db5fe4163f4e6d5ebdf2cd4e4a6269cb8cbced2df26988460ab054ddc587
+    # HANA Client v2.13
+    - name:         "SAP HANA CLIENT Version 2.13"
+      archive:      IMDB_CLIENT20_013_22-80002082.SAR
+      checksum:     5e16ba25d28420fcf7814c7aa3fe33e51ad33951e4d93f77d3e0e297d2f6fc0c
       extract:      true
       extractDir:   CD_HDBCLIENT
       creates:      SIGNATURE.SMF
       path:         download_basket
-      url:          https://softwaredownloads.sap.com/file/0020000001117022021
+      url:          https://softwaredownloads.sap.com/file/0020000000919882022
 
     # Revision 2.00.059.14 (SPS05) for HANA DB 2.0
     - name:         Revision 2.00.059.14 (SPS05) for HANA DB 2.0
