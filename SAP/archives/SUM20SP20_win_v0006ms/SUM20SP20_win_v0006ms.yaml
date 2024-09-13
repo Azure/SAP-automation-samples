@@ -1,0 +1,14 @@
+---
+name:               'SUM20SP20'
+target:             'SUM20SP20'
+version:            006
+
+materials:
+
+  media:
+
+    - name:         "Patch 6 for SOFTWARE UPDATE MANAGER 2.0 SP20 (Windows)"
+      archive:      SUM20SP20_6-80002458.SAR
+      checksum:     3164fc7b3bf72eb13700a8e69a18ebbf04a7af9c5f1a7dcd46ee090d95d5c112
+      download:     false
+      url:          https://softwaredownloads.sap.com/file/0020000000944952024
