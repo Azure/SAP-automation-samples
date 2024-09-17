@@ -1,15 +1,15 @@
 ---
 name:               'SUM20SP20'
 target:             'SUM20SP20'
-version:            007
+version:            008
 
 materials:
 
   media:
     # SUM
-    - name:         "Patch 7 for SOFTWARE UPDATE MANAGER 2.0 SP20 (Linux on x86_64)"
-      archive:      SUM20SP20_7-80002456.SAR
-      checksum:     f6982d7dfab164cd3439642dd6faa0095c954d30973d524aa3c5df2f1817643d
+    - name:         "Patch 8 for SOFTWARE UPDATE MANAGER 2.0 SP20 (Linux on x86_64)"
+      archive:      SUM20SP20_8-80002456.SAR
+      checksum:     c3374b505020a4ee744b3fdcff8e34a02051170bc8cddd9f7f5b5ad58547060c
       download:     false
-      url:          https://softwaredownloads.sap.com/file/0020000001026932024
+      url:          https://softwaredownloads.sap.com/file/0020000001042032024
 
