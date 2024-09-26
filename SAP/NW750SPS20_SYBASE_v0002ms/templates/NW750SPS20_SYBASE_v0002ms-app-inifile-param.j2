@@ -9,8 +9,6 @@
 
 # Location of Export CD
 SAPINST.CD.PACKAGE.LOAD                                                                     = {{ target_media_location }}/CD_EXPORT
-SAPINST.CD.PACKAGE.CLIENT                                                                   = {{ target_media_location }}/sapdb2_software/db2client
-SAPINST.CD.PACKAGE.RDBMS                                                                    = {{ target_media_location }}/sapdb2_software/db2server/LINUXX86_64
 NW_Unpack.sapExeDbSar                                                                       = {{ target_media_location }}/download_basket
 NW_Unpack.sapExeSar                                                                         = {{ target_media_location }}/download_basket
 archives.downloadBasket                                                                     = {{ target_media_location }}/download_basket
@@ -38,7 +36,7 @@ NW_getDBInfoGeneric.dbhost                                                      
 NW_getDBInfoGeneric.dbsid                                                                   = {{ db_sid | upper }}
 
 # ABAP system is Unicode (true|false), only needed if it cannot be determined from the system.
-NW_getUnicode.isUnicode = true
+NW_getUnicode.isUnicode                                                                     = true
 
 # Specify whether this system is to be a Unicode system.
-NW_GetSidNoProfiles.unicode = true
+NW_GetSidNoProfiles.unicode                                                                 = true
