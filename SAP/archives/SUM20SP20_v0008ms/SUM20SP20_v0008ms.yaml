@@ -1,0 +1,15 @@
+---
+name:               'SUM20SP20'
+target:             'SUM20SP20'
+version:            008
+
+materials:
+
+  media:
+    # SUM
+    - name:         "Patch 8 for SOFTWARE UPDATE MANAGER 2.0 SP20 (Linux on x86_64)"
+      archive:      SUM20SP20_8-80002456.SAR
+      checksum:     c3374b505020a4ee744b3fdcff8e34a02051170bc8cddd9f7f5b5ad58547060c
+      download:     false
+      url:          https://softwaredownloads.sap.com/file/0020000001042032024
+
