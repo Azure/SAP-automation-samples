@@ -27,7 +27,7 @@
       dependencies:
         - name:     HANA_2_00_067_v0006ms
         - name:     SWPM20SP18_latest
-        - name:     SUM20SP20_latest
+        - name:     SUM20SP21_latest
 
       media:
         # SAPCAR 7.XX
