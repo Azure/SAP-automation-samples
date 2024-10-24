@@ -22,7 +22,7 @@ product_ids:
 materials:
   dependencies:
     - name:                            HANA_2_00_067_v0006ms
-    - name:                            SWPM10SP41_latest
+    - name:                            SWPM10SP42_latest
 
   media:
   
