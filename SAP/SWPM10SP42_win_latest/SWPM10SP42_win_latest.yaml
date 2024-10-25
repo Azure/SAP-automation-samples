@@ -1,0 +1,19 @@
+---
+name:    'SWPM10SP42'
+target:  'SWPM10SP42'
+version: 001
+
+materials:
+
+  media:
+    # SWPM
+    - name:                     "SWPM 1.0 SP42; NW higher than 7.0x; OS: Windows on x86_64 64bit"
+      archive:                  SWPM10SP42_1-20009707.SAR
+      checksum:                 96730e929fa7c14d011e8a62ddb35833b6a47c2edad44faeeccd2df9345ae48e
+      filename:                 "SWPM.SAR"
+      extract:                  true
+      extractDir:               SWPM
+      url:                      https://softwaredownloads.sap.com/file/0020000001195102024
+      path:                     download_basket
+
+...
