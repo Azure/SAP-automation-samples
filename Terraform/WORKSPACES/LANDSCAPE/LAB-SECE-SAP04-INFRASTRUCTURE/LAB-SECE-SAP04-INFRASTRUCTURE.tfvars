@@ -31,7 +31,7 @@ environment = "LAB"
 location = "swedencentral"
 
 # Description of the Workload zone.
-#Description = ""
+Description = "LAB workload zone"
 
 #If you want to provide a custom naming json use the following parameter.
 #name_override_file = ""
@@ -70,7 +70,7 @@ network_logical_name = "SAP04"
 network_address_space = "10.10.0.0/16"
 
 # use_private_endpoint is a boolean flag controlling if the key vaults and storage accounts have private endpoints
-use_private_endpoint = true
+use_private_endpoint = false
 
 # use_service_endpoint is a boolean flag controlling if the key vaults and storage accounts have service endpoints
 use_service_endpoint = true
@@ -79,7 +79,7 @@ use_service_endpoint = true
 peer_with_control_plane_vnet = true
 
 # Defines if access to the key vaults and storage accounts is restricted to the SAP and deployer VNets
-enable_firewall_for_keyvaults_and_storage = false
+enable_firewall_for_keyvaults_and_storage = true
 
 # Defines if public access is allowed for the storage accounts and key vaults
 public_network_access_enabled = true
@@ -305,7 +305,8 @@ patch_assessment_mode = "ImageDefault"
 # The resourcegroup_name arm_id is optional, it can be used to provide an existing resource group for the deployment
 #resourcegroup_arm_id = ""
 
-
+# Prevent deletion of resource group if there are Resources left within the Resource Group during deletion
+prevent_deletion_if_contains_resources = false
 
 #########################################################################################
 #                                                                                       #
@@ -335,7 +336,7 @@ use_custom_dns_a_registration = false
 register_virtual_network_to_dns = false
 
 # register_endpoints_with_dns defines if the endpoints should be registered with the DNS
-register_endpoints_with_dns = true
+register_endpoints_with_dns = false
 
 
 #########################################################################################
@@ -406,7 +407,7 @@ install_volume_size = 1024
 #install_private_endpoint_id = ""
 
 # create_transport_storage defines if the workload zone will host storage for the transport data
-create_transport_storage = true
+create_transport_storage = false
 
 # Defines the size of the transport volume
 transport_volume_size = 128
@@ -426,6 +427,19 @@ transport_volume_size = 128
 
 # storage_account_replication_type defines the replication type for Azure Files for NFS storage accounts
 storage_account_replication_type = "ZRS"
+
+# shared_access_key_enabled defines Storage account authorization using Shared Access Key.
+shared_access_key_enabled = false
+
+# shared_access_key_enabled_nfs defines Storage account used for NFS shares authorization using Shared Access Key.
+shared_access_key_enabled_nfs = true
+
+
+# Value indicating if file shares are created when using existing storage accounts
+install_always_create_fileshares = true
+
+# Value indicating if SMB shares should be created
+install_create_smb_shares = true
 
 
 #########################################################################################

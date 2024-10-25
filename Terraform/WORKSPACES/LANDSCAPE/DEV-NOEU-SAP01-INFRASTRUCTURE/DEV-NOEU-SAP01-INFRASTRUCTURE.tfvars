@@ -31,7 +31,7 @@ environment = "DEV"
 location = "northeurope"
 
 # Description of the Workload zone.
-#Description = ""
+Description = "Workload zone for Development systems"
 
 #If you want to provide a custom naming json use the following parameter.
 #name_override_file = ""
@@ -305,7 +305,8 @@ patch_assessment_mode = "ImageDefault"
 # The resourcegroup_name arm_id is optional, it can be used to provide an existing resource group for the deployment
 #resourcegroup_arm_id = ""
 
-
+# Prevent deletion of resource group if there are Resources left within the Resource Group during deletion
+prevent_deletion_if_contains_resources = true
 
 #########################################################################################
 #                                                                                       #
@@ -365,7 +366,7 @@ enable_rbac_authorization_for_keyvault = false
 soft_delete_retention_days = 14
 
 # Set expiry date for secrets
-set_secret_expiry = false
+set_secret_expiry = true
 
 #########################################################################################
 #                                                                                       #
@@ -427,6 +428,19 @@ transport_volume_size = 128
 # storage_account_replication_type defines the replication type for Azure Files for NFS storage accounts
 storage_account_replication_type = "ZRS"
 
+# shared_access_key_enabled defines Storage account authorization using Shared Access Key.
+shared_access_key_enabled = false
+
+# shared_access_key_enabled_nfs defines Storage account used for NFS shares authorization using Shared Access Key.
+shared_access_key_enabled_nfs = true
+
+
+# Value indicating if file shares are created when using existing storage accounts
+install_always_create_fileshares = true
+
+# Value indicating if SMB shares should be created
+install_create_smb_shares = true
+
 
 #########################################################################################
 #                                                                                       #
@@ -435,7 +449,7 @@ storage_account_replication_type = "ZRS"
 #########################################################################################
 
 # If defined provides the DNS label for the Virtual Network
-dns_label = "azure.noeu.sdaf.contoso.net"
+dns_label = "noeu.sdaf.contoso.net"
 
 #If defined provides the lsit of DNS servers to attach to the Virtual NEtwork
 #dns_server_list = []
@@ -450,10 +464,10 @@ dns_label = "azure.noeu.sdaf.contoso.net"
 # AFS indicates that Azure Files for NFS is used
 # ANF indicates that Azure NetApp Files is used
 # NFS indicates that a custom solution is used for NFS
-NFS_provider = "AFS"
+NFS_provider = "NFS"
 
 # use_AFS_for_shared_storage defines if shared media is on AFS even when using ANF for data
-use_AFS_for_shared_storage = true
+use_AFS_for_shared_storage = false
 
 #########################################################################################
 #                                                                                       #

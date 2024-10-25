@@ -305,7 +305,8 @@ patch_assessment_mode = "ImageDefault"
 # The resourcegroup_name arm_id is optional, it can be used to provide an existing resource group for the deployment
 #resourcegroup_arm_id = ""
 
-
+# Prevent deletion of resource group if there are Resources left within the Resource Group during deletion
+prevent_deletion_if_contains_resources = true
 
 #########################################################################################
 #                                                                                       #
@@ -426,6 +427,19 @@ transport_volume_size = 128
 
 # storage_account_replication_type defines the replication type for Azure Files for NFS storage accounts
 storage_account_replication_type = "ZRS"
+
+# shared_access_key_enabled defines Storage account authorization using Shared Access Key.
+shared_access_key_enabled = false
+
+# shared_access_key_enabled_nfs defines Storage account used for NFS shares authorization using Shared Access Key.
+shared_access_key_enabled_nfs = true
+
+
+# Value indicating if file shares are created when using existing storage accounts
+install_always_create_fileshares = true
+
+# Value indicating if SMB shares should be created
+install_create_smb_shares = true
 
 
 #########################################################################################
