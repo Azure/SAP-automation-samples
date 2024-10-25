@@ -37,7 +37,7 @@ environment = "DEV"
 location = "westeurope"
 
 # The sid value is a mandatory field that defines the SAP Application SID
-sid = "HAN"
+sid = "HA2"
 
 # The database_sid defines the database SID
 database_sid = "HDB"
@@ -96,7 +96,7 @@ upgrade_packages = false
 database_server_count = 1
 
 # database_high_availability is a boolean flag controlling if the database tier is deployed highly available (more than 1 node)
-database_high_availability = false
+database_high_availability = true
 
 # For M series VMs use the SKU name for instance "M32ts"
 # If using a custom disk sizing populate with the node name for Database you have used in the file custom_disk_sizes_filename

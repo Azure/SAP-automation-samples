@@ -37,10 +37,10 @@ environment = "DEV"
 location = "westeurope"
 
 # The sid value is a mandatory field that defines the SAP Application SID
-sid = "HAN"
+sid = "WI2"
 
 # The database_sid defines the database SID
-database_sid = "HDB"
+database_sid = "WIN"
 
 # The database_platform defines the database backend, supported values are
 # - HANA
@@ -50,10 +50,10 @@ database_sid = "HDB"
 # - SYBASE
 # - SQLSERVER
 # - NONE (in this case no database tier is deployed)
-database_platform = "HANA"
+database_platform = "SQLSERVER"
 
 # Description of the SAP system.
-Description = "HANA distributed system on SUSE sles-sap-15-sp4 gen2"
+Description = "SQLSERVER distributed system on MicrosoftWindowsServer windowsserver 2022-datacenter"
 
 #########################################################################################
 #                                                                                       #
@@ -69,7 +69,7 @@ Description = "HANA distributed system on SUSE sles-sap-15-sp4 gen2"
 #custom_disk_sizes_filename = ""
 
 # use_secondary_ips controls if the virtual machines should be deployed with two IP addresses. Required for SAP Virtual Hostname support
-use_secondary_ips = true
+use_secondary_ips = false
 
 # subscription is the subscription in which the system will be deployed (informational only)
 #subscription = ""
@@ -96,11 +96,11 @@ upgrade_packages = false
 database_server_count = 1
 
 # database_high_availability is a boolean flag controlling if the database tier is deployed highly available (more than 1 node)
-database_high_availability = false
+database_high_availability = true
 
 # For M series VMs use the SKU name for instance "M32ts"
 # If using a custom disk sizing populate with the node name for Database you have used in the file custom_disk_sizes_filename
-database_size = "E20ds_v4"
+database_size = "512"
 
 # database_vm_sku, if provided defines the Virtual Machine SKU to use for the database virtual machines"
 #database_vm_sku = ""
@@ -173,11 +173,11 @@ database_vm_use_DHCP = true
 # in this case os_type must also be specified
 
 database_vm_image = {
-  os_type = "LINUX",
+  os_type = "WINDOWS",
   source_image_id = "",
-  publisher = "SUSE",
-  offer = "sles-sap-15-sp6",
-  sku = "gen2",
+  publisher = "MicrosoftWindowsServer",
+  offer = "windowsserver",
+  sku = "2022-datacenter",
   version = "latest",
   type = "marketplace"
 }
@@ -192,7 +192,7 @@ database_vm_zones = ["2"]
 #database_vm_avset_arm_ids = []
 
 # Optional, Defines the that the database virtual machines will not be placed in a proximity placement group
-database_use_ppg = true
+database_use_ppg = false
 
 # Optional, Defines the that the database virtual machines will not be placed in an availability set
 database_use_avset = false
@@ -209,7 +209,7 @@ database_use_avset = false
 app_tier_sizing_dictionary_key = "Optimized"
 
 # enable_app_tier_deployment is a boolean flag controlling if the application tier should be deployed
-enable_app_tier_deployment = false
+enable_app_tier_deployment = true
 
 # app_tier_use_DHCP is a boolean flag controlling if Azure subnet provided IP addresses should be used (true)
 app_tier_use_DHCP = true
@@ -221,23 +221,23 @@ app_tier_use_DHCP = true
 #########################################################################################
 
 # scs_server_count defines how many SCS servers to deploy
-scs_server_count = 0
+scs_server_count = 1
 
 # scs_high_availability is a boolean flag controlling if SCS should be highly available
-scs_high_availability = false
+scs_high_availability = true
 
 # scs_instance_number defines the instance number for SCS
-scs_instance_number = "01"
+scs_instance_number = "00"
 
 # ers_instance_number defines the instance number for ERS
-ers_instance_number = "02"
+ers_instance_number = "01"
 
 # pas_instance_number defines the instance number for PAS
-pas_instance_number = "03"
+pas_instance_number = "00"
 
 
 # scs_server_zones is an optional list defining the availability zones to which deploy the SCS servers
-scs_server_zones = ["1", "2"]
+scs_server_zones = ["2"]
 
 # scs_server_sku, if defined provides the SKU to use for the SCS servers
 #scs_server_sku = ""
@@ -246,11 +246,11 @@ scs_server_zones = ["1", "2"]
 # if source_image_id is specified the deployment will use the custom image provided,
 # in this case os_type must also be specified
 scs_server_image = {
-  os_type = "LINUX",
+  os_type = "WINDOWS",
   source_image_id = "",
-  publisher = "SUSE",
-  offer = "sles-sap-15-sp4",
-  sku = "gen2",
+  publisher = "MicrosoftWindowsServer",
+  offer = "windowsserver",
+  sku = "2022-datacenter",
   version = "latest",
   type = "marketplace"
 }
@@ -259,7 +259,7 @@ scs_server_image = {
 scs_server_use_ppg = true
 
 # scs_server_use_avset defines the that the SCS virtual machines will be placed in an availability set
-scs_server_use_avset = false
+scs_server_use_avset = true
 
 # scs_server_app_nic_ips, if provided provides the static IP addresses
 # for the network interface cards connected to the application subnet
@@ -287,10 +287,10 @@ scs_server_use_avset = false
 #########################################################################################
 
 # application_server_count defines how many application servers to deploy
-application_server_count = 0
+application_server_count = 2
 
 # application_server_zones is an optional list defining the availability zones to which deploy the application servers
-application_server_zones = ["1", "2"]
+application_server_zones = ["2"]
 
 # application_server_sku, if defined provides the SKU to use for the application servers
 #application_server_sku = ""
@@ -329,11 +329,11 @@ application_server_use_avset = true
 # if source_image_id is specified the deployment will use the custom image provided,
 # in this case os_type must also be specified
 application_server_image = {
-  os_type = "LINUX",
+  os_type = "WINDOWS",
   source_image_id = "",
-  publisher = "SUSE",
-  offer = "sles-sap-15-sp4",
-  sku = "gen2",
+  publisher = "MicrosoftWindowsServer",
+  offer = "windowsserver",
+  sku = "2019-datacenter",
   version = "latest",
   type = "marketplace"
 }
@@ -350,7 +350,7 @@ application_server_image = {
 webdispatcher_server_count = 0
 
 # web_sid is the Web Dispatcher SID
-web_sid = "W00"
+#web_sid = ""
 
 # web_instance_number defines the web instance number
 web_instance_number = "00"
@@ -385,20 +385,12 @@ webdispatcher_server_use_avset = false
 #webdispatcher_server_tags = {}
 
 # webdispatcher_server_zones is an optional list defining the availability zones to which deploy the web dispatchers
-webdispatcher_server_zones = ["1"]
+#webdispatcher_server_zones = []
 
 # The vm_image defines the Virtual machine image to use for the web dispatchers,
 # if source_image_id is specified the deployment will use the custom image provided,
 # in this case os_type must also be specified
-webdispatcher_server_image = {
-  os_type = "LINUX",
-  source_image_id = "",
-  publisher = "SUSE",
-  offer = "sles-sap-15-sp4",
-  sku = "gen2",
-  version = "latest",
-  type = "marketplace"
-}
+#webdispatcher_server_image = {}
 
 
 #########################################################################################
@@ -896,7 +888,7 @@ use_private_endpoint = true
 #landscape_tfstate_key = null
 
 # use_spn defines if the deployments are performed using Service Principals or the deployer's managed identiry, true=SPN, false=MSI
-use_spn = false
+use_spn = true
 
 #########################################################################################
 #                                                                                       #
@@ -909,7 +901,9 @@ use_spn = false
 #bom_name = ""
 
 # configuration_settings is a dictionary containing values that will be persisted in sap-parameters.yaml
-#configuration_settings = {}
+configuration_settings = {
+  "domain_name" = "sdaf.contoso.net",
+}
 
 ############################################################################################
 #                                                                                          #
@@ -982,17 +976,17 @@ register_endpoints_with_dns = true
 #########################################################################################
 
 # deploy_application_security_groups if defined will create application security groups
-deploy_application_security_groups = false
+deploy_application_security_groups = true
 
 # deploy_v1_monitoring_extension Defines if the Microsoft.AzureCAT.AzureEnhancedMonitoring extension will be deployed
-deploy_v1_monitoring_extension = true
+deploy_v1_monitoring_extension = false
 
 # resource_offset can be used to provide an offset for resource naming
 # server#, disk#
-resource_offset = 1
+#resource_offset = 0
 
 # save_naming_information,defines that a json formatted file defining the resource names will be created
-save_naming_information = true
+save_naming_information = false
 
 # custom_prefix defines the prefix that will be added to the resource names
 #custom_prefix = ""

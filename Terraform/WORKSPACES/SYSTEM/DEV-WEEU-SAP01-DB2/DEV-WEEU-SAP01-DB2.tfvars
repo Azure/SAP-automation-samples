@@ -53,7 +53,7 @@ database_sid = "DB2"
 database_platform = "DB2"
 
 # Description of the SAP system.
-Description = "DB2 distributed system on RedHat RHEL-SAP-HA 8_4"
+Description = "DB2 distributed system on RedHat RHEL-SAP-HA 88sapha-gen2"
 
 #########################################################################################
 #                                                                                       #
@@ -84,7 +84,7 @@ use_scalesets_for_deployment = false
 database_use_premium_v2_storage = false
 
 # upgrade_packages defines if all packages should be upgraded after installation
-upgrade_packages = true
+upgrade_packages = false
 
 #########################################################################################
 #                                                                                       #
@@ -177,7 +177,7 @@ database_vm_image = {
   source_image_id = "",
   publisher = "RedHat",
   offer = "RHEL-SAP-HA",
-  sku = "8_4",
+  sku = "88sapha-gen2",
   version = "latest",
   type = "marketplace"
 }
@@ -250,7 +250,7 @@ scs_server_image = {
   source_image_id = "",
   publisher = "RedHat",
   offer = "RHEL-SAP-HA",
-  sku = "8_4",
+  sku = "88sapha-gen2",
   version = "latest",
   type = "marketplace"
 }
@@ -333,7 +333,7 @@ application_server_image = {
   source_image_id = "",
   publisher = "RedHat",
   offer = "RHEL-SAP-HA",
-  sku = "8_4",
+  sku = "88sapha-gen2",
   version = "latest",
   type = "marketplace"
 }
@@ -350,7 +350,7 @@ application_server_image = {
 webdispatcher_server_count = 0
 
 # web_sid is the Web Dispatcher SID
-web_sid = "WH2"
+#web_sid = ""
 
 # web_instance_number defines the web instance number
 web_instance_number = "00"
@@ -671,6 +671,10 @@ nsg_asg_with_vnet = false
 # The resourcegroup_name arm_id is optional, it can be used to provide an existing resource group for the deployment
 #resourcegroup_arm_id = ""
 
+# Prevent deletion of resource group if there are Resources left within the Resource Group during deletion
+prevent_deletion_if_contains_resources = true
+
+
 #########################################################################################
 #                                                                                       #
 #  Proximity Placement Group                                                            #
@@ -911,18 +915,24 @@ use_spn = false
 
 #########################################################################################
 #                                                                                       #
-#  Scaleout variables                                                                   #
+#  Scale out variables                                                                   #
 #                                                                                       #
 #########################################################################################
 
-#If true, the database tier will be configured for scaleout scenario
-database_HANA_use_ANF_scaleout_scenario = false
+#If true, the database tier will be configured for scale out scenario
+database_HANA_use_scaleout_scenario = false
 
 #If true, the database scale out tier will not have a standby role
 database_HANA_no_standby_role = false
 
-# Defined the standbynode count in a scaleout scenario
+# Defined the standby node count in a scale out scenario
 stand_by_node_count = 0
+
+# The Azure Resource identifier for the HANA shared volume storage account
+hanashared_id = [""]
+
+# The Azure Resource identifier for the private endpoint connection to the HANA shared volume
+hanashared_private_endpoint_id = [""]
 
 
 #########################################################################################
@@ -962,10 +972,10 @@ register_endpoints_with_dns = true
 #########################################################################################
 
 # deploy_application_security_groups if defined will create application security groups
-deploy_application_security_groups = true
+deploy_application_security_groups = false
 
 # deploy_v1_monitoring_extension Defines if the Microsoft.AzureCAT.AzureEnhancedMonitoring extension will be deployed
-deploy_v1_monitoring_extension = false
+deploy_v1_monitoring_extension = true
 
 # resource_offset can be used to provide an offset for resource naming
 # server#, disk#
@@ -981,6 +991,10 @@ save_naming_information = false
 use_prefix = true
 
 # use_zonal_markers defines if a zonal markers will be added to the virtual machine resource names
-use_zonal_markers = true
+use_zonal_markers = false
 
+# shared_access_key_enabled defines Storage account authorization using Shared Access Key.
+shared_access_key_enabled = false
 
+# shared_access_key_enabled_nfs defines Storage account used for NFS shares authorization using Shared Access Key.
+shared_access_key_enabled_nfs = true
