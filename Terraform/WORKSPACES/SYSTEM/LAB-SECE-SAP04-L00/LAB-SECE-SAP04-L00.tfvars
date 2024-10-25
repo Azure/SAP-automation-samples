@@ -84,7 +84,7 @@ use_scalesets_for_deployment = false
 database_use_premium_v2_storage = false
 
 # upgrade_packages defines if all packages should be upgraded after installation
-upgrade_packages = true
+upgrade_packages = false
 
 #########################################################################################
 #                                                                                       #
@@ -414,10 +414,10 @@ webdispatcher_server_image = {
 #vm_disk_encryption_set_id = ""
 
 # If defined, will add the Microsoft.Azure.Monitor.AzureMonitorLinuxAgent extension to the virtual machines
-deploy_monitoring_extension = true
+deploy_monitoring_extension = false
 
 # If defined, will add the Microsoft.Azure.Security.Monitoring extension to the virtual machines
-deploy_defender_extension = true
+deploy_defender_extension = false
 
 # If defined, defines the patching mode for the virtual machines
 patch_mode = "ImageDefault"
@@ -892,7 +892,7 @@ use_private_endpoint = false
 #landscape_tfstate_key = null
 
 # use_spn defines if the deployments are performed using Service Principals or the deployer's managed identiry, true=SPN, false=MSI
-use_spn = false
+use_spn = true
 
 #########################################################################################
 #                                                                                       #
@@ -921,18 +921,24 @@ tags = {
 
 #########################################################################################
 #                                                                                       #
-#  Scaleout variables                                                                   #
+#  Scale out variables                                                                   #
 #                                                                                       #
 #########################################################################################
 
-#If true, the database tier will be configured for scaleout scenario
-database_HANA_use_ANF_scaleout_scenario = false
+#If true, the database tier will be configured for scale out scenario
+database_HANA_use_scaleout_scenario = false
 
 #If true, the database scale out tier will not have a standby role
 database_HANA_no_standby_role = false
 
-# Defined the standbynode count in a scaleout scenario
+# Defined the standby node count in a scale out scenario
 stand_by_node_count = 0
+
+# The Azure Resource identifier for the HANA shared volume storage account
+hanashared_id = [""]
+
+# The Azure Resource identifier for the private endpoint connection to the HANA shared volume
+hanashared_private_endpoint_id = [""]
 
 
 #########################################################################################
@@ -958,10 +964,10 @@ enable_os_monitoring = false
 #########################################################################################
 
 # dns_a_records_for_secondary_names defines if DNS records should be created for the virtual host names
-dns_a_records_for_secondary_names = true
+dns_a_records_for_secondary_names = false
 
 # register_endpoints_with_dns defines if the endpoints should be registered with the DNS
-register_endpoints_with_dns = true
+register_endpoints_with_dns = false
 
 
 
@@ -972,10 +978,10 @@ register_endpoints_with_dns = true
 #########################################################################################
 
 # deploy_application_security_groups if defined will create application security groups
-deploy_application_security_groups = true
+deploy_application_security_groups = false
 
 # deploy_v1_monitoring_extension Defines if the Microsoft.AzureCAT.AzureEnhancedMonitoring extension will be deployed
-deploy_v1_monitoring_extension = false
+deploy_v1_monitoring_extension = true
 
 # resource_offset can be used to provide an offset for resource naming
 # server#, disk#
@@ -993,4 +999,8 @@ use_prefix = true
 # use_zonal_markers defines if a zonal markers will be added to the virtual machine resource names
 use_zonal_markers = false
 
+# shared_access_key_enabled defines Storage account authorization using Shared Access Key.
+shared_access_key_enabled = false
 
+# shared_access_key_enabled_nfs defines Storage account used for NFS shares authorization using Shared Access Key.
+shared_access_key_enabled_nfs = true
