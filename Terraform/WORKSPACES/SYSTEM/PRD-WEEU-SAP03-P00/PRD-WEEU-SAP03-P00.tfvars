@@ -53,7 +53,7 @@ database_sid = "XDB"
 database_platform = "HANA"
 
 # Description of the SAP system.
-Description = "HANA high availability system on SUSE sles-sap-15-sp3 gen2"
+Description = "HANA high availability system on SUSE sles-sap-15-sp6 gen2"
 
 #########################################################################################
 #                                                                                       #
@@ -84,7 +84,7 @@ use_scalesets_for_deployment = false
 database_use_premium_v2_storage = false
 
 # upgrade_packages defines if all packages should be upgraded after installation
-upgrade_packages = true
+upgrade_packages = false
 
 #########################################################################################
 #                                                                                       #
@@ -176,7 +176,7 @@ database_vm_image = {
   os_type = "LINUX",
   source_image_id = "",
   publisher = "SUSE",
-  offer = "sles-sap-15-sp3",
+  offer = "sles-sap-15-sp6",
   sku = "gen2",
   version = "latest",
   type = "marketplace"
@@ -249,7 +249,7 @@ scs_server_image = {
   os_type = "",
   source_image_id = "",
   publisher = "SUSE",
-  offer = "sles-sap-15-sp3",
+  offer = "sles-sap-15-sp6",
   sku = "gen2",
   version = "latest",
   type = "marketplace"
@@ -332,7 +332,7 @@ application_server_image = {
   os_type = "LINUX",
   source_image_id = "",
   publisher = "SUSE",
-  offer = "sles-sap-15-sp3",
+  offer = "sles-sap-15-sp6",
   sku = "gen2",
   version = "latest",
   type = "marketplace"
@@ -517,7 +517,7 @@ ANF_HANA_use_Zones = true
 #########################################################################################
 
 # ANF_HANA_data, if defined, will create Azure NetApp Files volume(s) for HANA data.
-ANF_HANA_data = true
+#ANF_HANA_data = false
 
 # ANF_HANA_data_volume_size, if defined, provides the size of the HANA data volume(s).
 #ANF_HANA_data_volume_size = 0
@@ -542,7 +542,7 @@ ANF_HANA_data_volume_count = 1
 #########################################################################################
 
 # ANF_HANA_log, if defined, will create Azure NetApp Files volume(s) for HANA log.
-ANF_HANA_log = true
+#ANF_HANA_log = false
 
 # ANF_HANA_log_volume_size, if defined, provides the size of the HANA log volume(s).
 #ANF_HANA_log_volume_size = 0
@@ -566,7 +566,7 @@ ANF_HANA_log_volume_count = 1
 #########################################################################################
 
 # ANF_HANA_shared, if defined, will create Azure NetApp Files volume(s) for HANA shared.
-ANF_HANA_shared = true
+#ANF_HANA_shared = false
 
 # ANF_HANA_shared_volume_size, if defined, provides the size of the HANA shared volume(s).
 #ANF_HANA_shared_volume_size = 0
@@ -588,7 +588,7 @@ ANF_HANA_shared = true
 #########################################################################################
 
 # ANF_usr_sap, if defined, will create Azure NetApp Files volume /usr/sap
-ANF_usr_sap = true
+#ANF_usr_sap = false
 
 # ANF_usr_sap_volume_size, if defined, provides the size of the /usr/sap volume.
 #ANF_usr_sap_volume_size = 0
@@ -610,7 +610,7 @@ ANF_usr_sap = true
 #########################################################################################
 
 # ANF_sapmnt, if defined, will create Azure NetApp Files volume for /sapmnt
-ANF_sapmnt = true
+#ANF_sapmnt = false
 
 # ANF_sapmnt_volume_size, if defined, provides the size of the /sapmnt volume.
 #ANF_sapmnt_volume_size = 0
@@ -670,6 +670,10 @@ nsg_asg_with_vnet = false
 
 # The resourcegroup_name arm_id is optional, it can be used to provide an existing resource group for the deployment
 #resourcegroup_arm_id = ""
+
+# Prevent deletion of resource group if there are Resources left within the Resource Group during deletion
+prevent_deletion_if_contains_resources = true
+
 
 #########################################################################################
 #                                                                                       #
@@ -911,18 +915,24 @@ use_spn = false
 
 #########################################################################################
 #                                                                                       #
-#  Scaleout variables                                                                   #
+#  Scale out variables                                                                   #
 #                                                                                       #
 #########################################################################################
 
-#If true, the database tier will be configured for scaleout scenario
-database_HANA_use_ANF_scaleout_scenario = false
+#If true, the database tier will be configured for scale out scenario
+database_HANA_use_scaleout_scenario = false
 
 #If true, the database scale out tier will not have a standby role
 database_HANA_no_standby_role = false
 
-# Defined the standbynode count in a scaleout scenario
+# Defined the standby node count in a scale out scenario
 stand_by_node_count = 0
+
+# The Azure Resource identifier for the HANA shared volume storage account
+hanashared_id = [""]
+
+# The Azure Resource identifier for the private endpoint connection to the HANA shared volume
+hanashared_private_endpoint_id = [""]
 
 
 #########################################################################################
@@ -981,6 +991,10 @@ save_naming_information = false
 use_prefix = true
 
 # use_zonal_markers defines if a zonal markers will be added to the virtual machine resource names
-use_zonal_markers = true
+use_zonal_markers = false
 
+# shared_access_key_enabled defines Storage account authorization using Shared Access Key.
+shared_access_key_enabled = false
 
+# shared_access_key_enabled_nfs defines Storage account used for NFS shares authorization using Shared Access Key.
+shared_access_key_enabled_nfs = true

@@ -53,7 +53,7 @@ database_sid = "XDB"
 database_platform = "HANA"
 
 # Description of the SAP system.
-Description = "HANA high availability system on SUSE sles-sap-15-sp3 gen2"
+Description = "Scaleout system"
 
 #########################################################################################
 #                                                                                       #
@@ -84,7 +84,7 @@ use_scalesets_for_deployment = false
 database_use_premium_v2_storage = false
 
 # upgrade_packages defines if all packages should be upgraded after installation
-upgrade_packages = true
+upgrade_packages = false
 
 #########################################################################################
 #                                                                                       #
@@ -93,7 +93,7 @@ upgrade_packages = true
 #########################################################################################
 
 # Defines the number of database servers
-database_server_count = 1
+database_server_count = 2
 
 # database_high_availability is a boolean flag controlling if the database tier is deployed highly available (more than 1 node)
 database_high_availability = true
@@ -175,15 +175,15 @@ database_vm_use_DHCP = true
 database_vm_image = {
   os_type = "LINUX",
   source_image_id = "",
-  publisher = "RedHat",
-  offer = "RHEL-SAP-HA",
-  sku = "92sapha-gen2",
+  publisher = "SUSE",
+  offer = "sles-sap-15-sp6",
+  sku = "gen2",
   version = "latest",
   type = "marketplace"
 }
 
 # database_vm_zones is an optional list defining the availability zones to deploy the database servers
-database_vm_zones = ["2"]
+database_vm_zones = ["1", "2"]
 
 # Optional, Defines the default authentication model for the Database VMs (key/password)
 #database_vm_authentication_type = ""
@@ -195,7 +195,7 @@ database_vm_zones = ["2"]
 database_use_ppg = false
 
 # Optional, Defines the that the database virtual machines will not be placed in an availability set
-database_use_avset = true
+database_use_avset = false
 
 # Optional, Defines if the tags for the database virtual machines
 #database_tags = {}
@@ -237,7 +237,7 @@ pas_instance_number = "00"
 
 
 # scs_server_zones is an optional list defining the availability zones to which deploy the SCS servers
-scs_server_zones = ["2"]
+scs_server_zones = ["1", "2"]
 
 # scs_server_sku, if defined provides the SKU to use for the SCS servers
 #scs_server_sku = ""
@@ -248,9 +248,9 @@ scs_server_zones = ["2"]
 scs_server_image = {
   os_type = "LINUX",
   source_image_id = "",
-  publisher = "RedHat",
-  offer = "RHEL-SAP-HA",
-  sku = "92sapha-gen2",
+  publisher = "SUSE",
+  offer = "sles-sap-15-sp6",
+  sku = "gen2",
   version = "latest",
   type = "marketplace"
 }
@@ -290,7 +290,7 @@ scs_server_use_avset = false
 application_server_count = 2
 
 # application_server_zones is an optional list defining the availability zones to which deploy the application servers
-application_server_zones = ["2"]
+application_server_zones = ["1", "2"]
 
 # application_server_sku, if defined provides the SKU to use for the application servers
 #application_server_sku = ""
@@ -331,9 +331,9 @@ application_server_use_avset = true
 application_server_image = {
   os_type = "LINUX",
   source_image_id = "",
-  publisher = "RedHat",
-  offer = "RHEL-SAP-APPS",
-  sku = "92sapapps-gen2",
+  publisher = "SUSE",
+  offer = "sles-sap-15-sp6",
+  sku = "gen2",
   version = "latest",
   type = "marketplace"
 }
@@ -350,7 +350,7 @@ application_server_image = {
 webdispatcher_server_count = 0
 
 # web_sid is the Web Dispatcher SID
-web_sid = "W01"
+#web_sid = ""
 
 # web_instance_number defines the web instance number
 web_instance_number = "00"
@@ -390,15 +390,7 @@ webdispatcher_server_use_avset = true
 # The vm_image defines the Virtual machine image to use for the web dispatchers,
 # if source_image_id is specified the deployment will use the custom image provided,
 # in this case os_type must also be specified
-webdispatcher_server_image = {
-  os_type = "LINUX",
-  source_image_id = "",
-  publisher = "RedHat",
-  offer = "RHEL-SAP-APPS",
-  sku = "92sapapps-gen2",
-  version = "latest",
-  type = "marketplace"
-}
+#webdispatcher_server_image = {}
 
 
 #########################################################################################
@@ -414,10 +406,10 @@ webdispatcher_server_image = {
 #vm_disk_encryption_set_id = ""
 
 # If defined, will add the Microsoft.Azure.Monitor.AzureMonitorLinuxAgent extension to the virtual machines
-deploy_monitoring_extension = true
+deploy_monitoring_extension = false
 
 # If defined, will add the Microsoft.Azure.Security.Monitoring extension to the virtual machines
-deploy_defender_extension = true
+deploy_defender_extension = false
 
 # If defined, defines the patching mode for the virtual machines
 patch_mode = "ImageDefault"
@@ -512,7 +504,7 @@ use_random_id_for_storageaccounts = true
 #########################################################################################
 
 # ANF_HANA_use_AVG defines if the ANF volume will be created in an Application Volume Group
-ANF_HANA_use_AVG = true
+ANF_HANA_use_AVG = false
 
 # ANF_HANA_use_Zones defines if the ANF volume will be created in an Availability zones
 ANF_HANA_use_Zones = true
@@ -525,7 +517,7 @@ ANF_HANA_use_Zones = true
 #########################################################################################
 
 # ANF_HANA_data, if defined, will create Azure NetApp Files volume(s) for HANA data.
-ANF_HANA_data = true
+#ANF_HANA_data = false
 
 # ANF_HANA_data_volume_size, if defined, provides the size of the HANA data volume(s).
 #ANF_HANA_data_volume_size = 0
@@ -550,7 +542,7 @@ ANF_HANA_data_volume_count = 1
 #########################################################################################
 
 # ANF_HANA_log, if defined, will create Azure NetApp Files volume(s) for HANA log.
-ANF_HANA_log = true
+#ANF_HANA_log = false
 
 # ANF_HANA_log_volume_size, if defined, provides the size of the HANA log volume(s).
 #ANF_HANA_log_volume_size = 0
@@ -596,7 +588,7 @@ ANF_HANA_shared = true
 #########################################################################################
 
 # ANF_usr_sap, if defined, will create Azure NetApp Files volume /usr/sap
-ANF_usr_sap = true
+#ANF_usr_sap = false
 
 # ANF_usr_sap_volume_size, if defined, provides the size of the /usr/sap volume.
 #ANF_usr_sap_volume_size = 0
@@ -618,7 +610,7 @@ ANF_usr_sap = true
 #########################################################################################
 
 # ANF_sapmnt, if defined, will create Azure NetApp Files volume for /sapmnt
-ANF_sapmnt = true
+#ANF_sapmnt = false
 
 # ANF_sapmnt_volume_size, if defined, provides the size of the /sapmnt volume.
 #ANF_sapmnt_volume_size = 0
@@ -678,6 +670,10 @@ nsg_asg_with_vnet = false
 
 # The resourcegroup_name arm_id is optional, it can be used to provide an existing resource group for the deployment
 #resourcegroup_arm_id = ""
+
+# Prevent deletion of resource group if there are Resources left within the Resource Group during deletion
+prevent_deletion_if_contains_resources = true
+
 
 #########################################################################################
 #                                                                                       #
@@ -919,18 +915,24 @@ use_spn = false
 
 #########################################################################################
 #                                                                                       #
-#  Scaleout variables                                                                   #
+#  Scale out variables                                                                   #
 #                                                                                       #
 #########################################################################################
 
-#If true, the database tier will be configured for scaleout scenario
-database_HANA_use_ANF_scaleout_scenario = false
+#If true, the database tier will be configured for scale out scenario
+database_HANA_use_scaleout_scenario = true
 
 #If true, the database scale out tier will not have a standby role
-database_HANA_no_standby_role = false
+database_HANA_no_standby_role = true
 
-# Defined the standbynode count in a scaleout scenario
+# Defined the standby node count in a scale out scenario
 stand_by_node_count = 0
+
+# The Azure Resource identifier for the HANA shared volume storage account
+hanashared_id = [""]
+
+# The Azure Resource identifier for the private endpoint connection to the HANA shared volume
+hanashared_private_endpoint_id = [""]
 
 
 #########################################################################################
@@ -970,7 +972,7 @@ register_endpoints_with_dns = true
 #########################################################################################
 
 # deploy_application_security_groups if defined will create application security groups
-deploy_application_security_groups = true
+deploy_application_security_groups = false
 
 # deploy_v1_monitoring_extension Defines if the Microsoft.AzureCAT.AzureEnhancedMonitoring extension will be deployed
 deploy_v1_monitoring_extension = false
@@ -989,6 +991,10 @@ save_naming_information = false
 use_prefix = true
 
 # use_zonal_markers defines if a zonal markers will be added to the virtual machine resource names
-use_zonal_markers = true
+use_zonal_markers = false
 
+# shared_access_key_enabled defines Storage account authorization using Shared Access Key.
+shared_access_key_enabled = false
 
+# shared_access_key_enabled_nfs defines Storage account used for NFS shares authorization using Shared Access Key.
+shared_access_key_enabled_nfs = true

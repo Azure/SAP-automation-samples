@@ -149,26 +149,28 @@ SID: P00
 
 ## PRD-WEEU-SAP03-P01 ##
 
-This configuration deploys a highly available SUSE 15 SP3  system using Azure NetApp Files for shared files with the following components:
+This configuration deploys a highly available SUSE 15 SP6 HANA Scaleout system using Azure NetApp Files for shared files with the following components:
 
 SID: P01
 
-| Component                            | Virtual Machine Name              | Hostname        | Location        | Count | Details                                        |
-| ------------------------------------ | --------------------------------- | ----------------| --------------- | ----- | ---------------------------------------------- |
-| Resource Group                       | PRD-WEEU-SAP03-P00                | westeurope      |                 |       |                                                |
-|                                      |                                   |                 |                 |       |                                                |
-| Virtual Machine (database, primary)  | PRD-WEEU-SAP03-P01_p01dhdb00l###  | p01dhdb00l###   | westeurope      | 1     | E20dsv4, Disks: 4 P10 (data), 3 P6 (log) , P15 (sap), P20 (backup), P20 (shared) |
-| Virtual Machine (database,secondary) | PRD-WEEU-SAP03-P01_p01dhdb01l###  | p01dhdb01l###   | westeurope      | 1     | E20dsv4, Disks: 4 P10 (data), 3 P6 (log) , P15 (sap), P20 (backup), P20 (shared) |
-| Virtual Machine (scs, ASCS)          | PRD-WEEU-SAP03-P01_p01scs00l###   | p01scs00l###    | westeurope      | 1     | D4sv3, Disks: P10 (sap)             |
-| Virtual Machine (scs, ERS)           | PRD-WEEU-SAP03-P01_p01scs01l###   | p01scs01l###    | westeurope      | 1     | D4sv3, Disks: P10 (sap)             |
-| Virtual Machine (primary app)        | PRD-WEEU-SAP03-P01_p01app00l###   | p01app00l###    | westeurope      | 1     | D4sv3, Disks: P10 (sap)             |
-| Virtual Machine (app)                | PRD-WEEU-SAP03-P01_p001pp01l###   | p01app01l###    | westeurope      | 1     | D4sv3, Disks: P10 (sap)             |
-|                                      |                                   |                 |                 |       |                                                |
-| Load Balancer (database)             | PRD-WEEU-SAP03-P01_db-alb         | westeurope      |                 |       |                                                |
-| Load Balancer (scs)                  | PRD-WEEU-SAP03-P01_scs-alb        | westeurope      |                 |       |                                                |
-|                                      |                                   |                 |                 |       |                                                |
-| Proximity Placement Group            | PRD-WEEU-SAP03-P01-z1-ppg         | westeurope      |                 |       | One Proximity Placement Group per zone         |
-| Availability set                     | PRD-WEEU-SAP03-P01_z1_app-avset   | westeurope      |                 |       | One Availability set per zone                  |
+| Component                                    | Virtual Machine Name              | Hostname        | Location        | Count | Details                                        |
+| -------------------------------------------- | --------------------------------- | ----------------| --------------- | ----- | ---------------------------------------------- |
+| Resource Group                               | PRD-WEEU-SAP03-P00                | westeurope      |                 |       |                                                |
+|                                              |                                   |                 |                 |       |                                                |
+| Virtual Machine (database, primary)          | PRD-WEEU-SAP03-P01_p01dhdb00l###  | p01dhdb00l###   | westeurope      | 1     | E20dsv4, Disks: 4 P10 (data), 3 P6 (log) , P15 (sap), P20 (backup) |
+| Virtual Machine (database,secondary)         | PRD-WEEU-SAP03-P01_p01dhdb10l###  | p01dhdb10l###   | westeurope      | 1     | E20dsv4, Disks: 4 P10 (data), 3 P6 (log) , P15 (sap), P20 (backup) |
+| Virtual Machine (database, primary), worker  | PRD-WEEU-SAP03-P01_p01dhdb01l###  | p01dhdb01l###   | westeurope      | 1     | E20dsv4, Disks: 4 P10 (data), 3 P6 (log) , P15 (sap), P20 (backup) |
+| Virtual Machine (database,secondary), worker | PRD-WEEU-SAP03-P01_p01dhdb11l###  | p01dhdb11l###   | westeurope      | 1     | E20dsv4, Disks: 4 P10 (data), 3 P6 (log) , P15 (sap), P20 (backup) |
+| Virtual Machine (scs, ASCS)                  | PRD-WEEU-SAP03-P01_p01scs00l###   | p01scs00l###    | westeurope      | 1     | D4sv3, Disks: P10 (sap)             |
+| Virtual Machine (scs, ERS)                   | PRD-WEEU-SAP03-P01_p01scs01l###   | p01scs01l###    | westeurope      | 1     | D4sv3, Disks: P10 (sap)             |
+| Virtual Machine (primary app)                | PRD-WEEU-SAP03-P01_p01app00l###   | p01app00l###    | westeurope      | 1     | D4sv3, Disks: P10 (sap)             |
+| Virtual Machine (app)                        | PRD-WEEU-SAP03-P01_p001pp01l###   | p01app01l###    | westeurope      | 1     | D4sv3, Disks: P10 (sap)             |
+|                                              |                                   |                 |                 |       |                                                |
+| Load Balancer (database)                     | PRD-WEEU-SAP03-P01_db-alb         | westeurope      |                 |       |                                                |
+| Load Balancer (scs)                          | PRD-WEEU-SAP03-P01_scs-alb        | westeurope      |                 |       |                                                |
+|                                              |                                   |                 |                 |       |                                                |
+| Proximity Placement Group                    | PRD-WEEU-SAP03-P01-z1-ppg         | westeurope      |                 |       | One Proximity Placement Group per zone         |
+| Availability set                             | PRD-WEEU-SAP03-P01_z1_app-avset   | westeurope      |                 |       | One Availability set per zone                  |
 
 ## PRD-WEEU-SAP03-P02 ##
 
