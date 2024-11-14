@@ -1,0 +1,15 @@
+---
+name:               'SUM20SP21'
+target:             'SUM20SP21'
+version:            003
+
+materials:
+
+  media:
+
+    - name:         "Patch 3 for SOFTWARE UPDATE MANAGER 2.0 SP21 (Windows on x64 64bit)"
+      archive:      SUM20SP21_3-80002458.SAR
+      checksum:     b771709243e6c2712dab8488359a1c33d9f658a03b5ff0a29b0a669243c094e6
+      download:     false
+      url:          https://softwaredownloads.sap.com/file/0020000001256742024
+

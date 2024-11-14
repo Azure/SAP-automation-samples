@@ -19,5 +19,7 @@
         "titleBar.inactiveForeground": "#15202b99"
     },
     "peacock.color": "#f9e64f",
-    "ansible.python.interpreterPath": "c:\\Users\\kimforss\\AppData\\Local\\Microsoft\\WindowsApps\\python3.10.exe"
+    "cSpell.words": [
+        "SWPM"
+    ]
 }
