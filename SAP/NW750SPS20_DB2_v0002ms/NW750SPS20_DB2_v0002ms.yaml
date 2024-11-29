@@ -431,10 +431,10 @@ materials:
       url:          https://softwaredownloads.sap.com/file/0010000000183702019
       download:     false
 
-    - name:         "SPAM/SAINT Update - Version 752/0079"
-      archive:      KD75279.SAR
-      checksum:     3b5817e4f430cfbb10e48960d029513eddff2cea8bfb963d47c082fcb7700ce6
-      url:          https://softwaredownloads.sap.com/file/0010000001440222021
+    - name:         "SPAM/SAINT Update - Version 752/0089"
+      archive:      SAPKD75289.SAR
+      checksum:     29d2d3ab56f67997c6aa77f3ee2c1046848400c093dc8142fd0fd604dee9afd6
+      url:          https://softwaredownloads.sap.com/file/0010000001101152024
       download:     false
 
     - name:         "Attribute Change Package 13 for SAP_BASIS 752"
