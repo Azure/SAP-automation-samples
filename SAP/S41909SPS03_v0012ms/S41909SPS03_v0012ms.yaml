@@ -250,7 +250,7 @@ materials:
     # SPAM
     - name:         "SPAM/SAINT Update - Version 754/0077"
       archive:      KD75477.SAR
-      checksum:     9c5b28b704d0ef0a9c4a63b9511891c65bef53842b1c78e2ac0a6191a18a36e7
+      checksum:     6869d8692b2e174a1c69e295ae11025ef0d7b8cc544eab74174b5355cf295c5e
       download:     false
       url:          https://softwaredownloads.sap.com/file/0010000000216172021
 
