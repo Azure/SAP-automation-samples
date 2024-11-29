@@ -80,11 +80,11 @@ materials:
       url:                             https://softwaredownloads.sap.com/file/0030000000635142016
 
     # SPAM
-    - name:                            "SPAM/SAINT Update - Version 750/0077"
-      archive:                         KD75077.SAR
-      checksum:                        6c8a41df7da3c2f5aa31c31276ecddfdab0d87054ec0048067a48c5944090c0c
-      download:                        true
-      url:                             https://softwaredownloads.sap.com/file/0010000000216132021
+    - name:                            "SPAM/SAINT Update - Version 752/0089"
+      archive:                         SAPKD75289.SAR
+      checksum:                        29d2d3ab56f67997c6aa77f3ee2c1046848400c093dc8142fd0fd604dee9afd6
+      url:                             https://softwaredownloads.sap.com/file/0010000001101152024
+      download:                        false
 
     # Support Packs
     - name:                            "ST-PI 740: SP 0002"
