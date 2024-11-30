@@ -236,11 +236,11 @@ materials:
       url:          https://softwaredownloads.sap.com/file/0020000000146922024
 
     # SPAM
-    - name:         "SPAM/SAINT Update - Version 754/0077"
-      archive:      KD75477.SAR
-      checksum:     6869d8692b2e174a1c69e295ae11025ef0d7b8cc544eab74174b5355cf295c5e
+    - name:         "SPAM/SAINT Update - Version 758/0089"
+      archive:      SAPKD75889.SAR
+      checksum:     2b7e01750dfed48c3085e7a846379b13312711c5b4bd81888fbcf6172a42f379
       download:     false
-      url:          https://softwaredownloads.sap.com/file/0010000000216172021
+      url:          https://softwaredownloads.sap.com/file/0010000001101232024
 
     # Support Packs
     - name:         "Attribute Change Package 18 for EA-HR 608"
