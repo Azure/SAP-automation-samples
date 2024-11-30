@@ -21,5 +21,6 @@
     "peacock.color": "#f9e64f",
     "cSpell.words": [
         "SWPM"
-    ]
+    ],
+    "ansible.python.interpreterPath": "c:\\Users\\kimforss\\AppData\\Local\\Microsoft\\WindowsApps\\python3.12.exe"
 }
