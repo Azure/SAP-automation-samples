@@ -1,14 +1,14 @@
 ---
 name:               'SUM10SP30'
 target:             'SUM10SP30'
-version:            003
+version:            005
 
 materials:
 
   media:
     # SUM
-    - name:         "Patch 3 for SOFTWARE UPDATE MANAGER 1.1 SP03 (Linux on x86_64)"
-      archive:      SUM11SP03_3-80006800.SAR
-      checksum:     38f61e129bad365884e314a000ea5e96c7e08c828c2550c0bc514fec1ab3792d
+    - name:         "Patch 5 for SOFTWARE UPDATE MANAGER 1.1 SP03 (Linux on x86_64)"
+      archive:      SUM11SP03_5-80006800.SAR-80006800.SAR
+      checksum:     cf0058be17e1fe4532be8f50bb7acb2e49fc3e7aa57f72ff74748eadb33aa637
       download:     false
-      url:          https://softwaredownloads.sap.com/file/0020000001026852024
+      url:          https://softwaredownloads.sap.com/file/0020000001203902024
