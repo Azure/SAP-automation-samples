@@ -28,11 +28,11 @@ materials:
   media:
 
     # kernel components
-    - name:                            "SAPCAR 7.22; OS: Windows on x64 64bit"
-      archive:                         SAPCAR_1115-70006231.EXE
-      checksum:                        0808008d58f45d52b8ce38175117a37c97c133e939434644f95e6c6d815370fb
+    - name:                            "SAPCAR 7.53; OS: Windows on x64 64bit"
+      archive:                         SAPCAR_1300-70007719.EXE
+      checksum:                        99cd288044936b17c8d493a8b74d71b0471cb0a3f29aa712d6f9a0cda35dbff4
       filename:                        SAPCAR.exe
-      url:                             https://softwaredownloads.sap.com/file/0020000000098632022
+      url:                             https://softwaredownloads.sap.com/file/0020000000498412024
 
     - name:                            "Kernel Part II (789)"
       archive:                         SAPEXEDB_300-70006657.SAR
