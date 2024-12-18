@@ -34,16 +34,16 @@ materials:
       filename:                        SAPCAR.exe
       url:                             https://softwaredownloads.sap.com/file/0020000000498412024
 
-    - name:                            "Kernel Part II (789)"
-      archive:                         SAPEXEDB_300-70006657.SAR
-      url:                             https://softwaredownloads.sap.com/file/0020000001138542024
-      checksum:                        d87fe762602efcfc6b006490c5d3fe0401e66a5a4878dc00a09e80ad4ad684f0
+    - name:                            "Kernel Part II (754)"
+      archive:                         SAPEXEDB_400-80007650.SAR
+      url:                             https://softwaredownloads.sap.com/file/0020000000982132024
+      checksum:                        4f848fb9decd2e3040e7e0637ddc37c2588c20e4ad03b6090e6b8f30780ccb00
       path:                            download_basket
 
-    - name:                            "Kernel Part I (789)"
-      archive:                         SAPEXE_300-70006658.SAR
-      url:                             https://softwaredownloads.sap.com/file/0020000001138632024
-      checksum:                        b83612dfa9554cf3203e1805cd09ccff7cda243c8f22d4ac2e4c77210593124a
+    - name:                            "Kernel Part I (754)"
+      archive:                         SAPEXE_400-80007651.SAR
+      checksum:                        ee7cb9b9cea133631796913ebc4875f63003e8da652cf3b0fbe7bcb31177cf73
+      url:                             https://softwaredownloads.sap.com/file/0020000000982362024
       path:                            download_basket
 
     - name:                            "SAP HOST AGENT 7.22 SP66"
@@ -52,9 +52,16 @@ materials:
       checksum:                        390a029ba9d24ddc471c62c88e64faac746d7058881eec1fabd74d0a2d65098d
       path:                            download_basket
 
+    - name:                            "Support Package SAP KERNEL 7.54 64-BIT UNICODE"
+      archive:                         R3trans_424-80007651.SAR
+      url:                             https://softwaredownloads.sap.com/file/0020000001406112024
+      checksum:                        79b51041ed76f6cbdc81027334844613994af241a5fa298c25bb2fd087498808
+      path:                            download_basket
+
     - name:                            "Installation for SAP IGS integrated in SAP Kernel"
-      archive:                         igsexe_13-80003241.sar
-      url:                             https://softwaredownloads.sap.com/file/0020000001223862021
+      archive:                         igsexe_5-80007790.sar
+      url:                             https://softwaredownloads.sap.com/file/0020000001255562024
+      checksum:                        031f2c4e19773ee4833b6f39cecdd20f5a9cad176f88d62afab81edef65ceb3b
       path:                            download_basket
 
     - name:                            "SAP IGS Fonts and Textures"
