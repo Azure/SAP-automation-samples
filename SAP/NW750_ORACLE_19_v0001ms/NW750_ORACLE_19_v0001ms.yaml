@@ -69,7 +69,7 @@ materials:
     #   url:          https://softwaredownloads.sap.com/file/0020000001253802021
 
 
-    - name:       "Oracle installation dump"
+    - name:        "Oracle installation dump"
       archive:     51050829_3.ZIP
       checksum:    06c3a3cd5d1ad266f61ca202552468501d94cfdc7641ffdadf0a9abad82b648a
       extract:     true

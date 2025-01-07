@@ -36,32 +36,32 @@ materials:
 
 # SBP Patches are downloaded based on SAP Note 2799920 - Patches 19c: Database
     
-    - name:         "Oracle SBP - SAP Bundle Patch 19.24.0.0.240716 - 202408"
-      archive:      SAP19P_2408-70004508.ZIP
-      checksum:     3b1499037551a17ec4a287f0ea446bd6b8f0930c4750eb96f46fbbe4eca518de
+    - name:         "Oracle SBP - SAP Bundle Patch 19.24.0.0.240716 - 202411"
+      archive:      SAP19P_2411-70004508.ZIP
+      checksum:     22bfaf3dd3bf257ad8a33d79884b85b1a280f39d26ae2966c9246b155cc85ff5
       extract:      true
       extractDir:   SBP/SAPSBP
       path:         SBP
       creates:      SIGNATURE.SMF
-      url:          https://softwaredownloads.sap.com/file/0020000000932182024
+      url:          https://softwaredownloads.sap.com/file/0020000001373432024
 
-    - name:         "Oracle SBP - JDK Bundle Patch 19.0.0.0.240716"
-      archive:      SBPJDK19P_2408-70004508.ZIP
-      checksum:     d6300ef57009e5237c109a7876dccfbefa3967f2074add96e6afb435534f1b67
+    - name:         "Oracle SBP - JDK Bundle Patch 19.0.0.0.241015"
+      archive:      SBPJDK19P_2411-70004508.ZIP
+      checksum:     104b544e9786735ce1ce1012ab33bb81f8fb007465a5cb80d09d7ce311dd0beb
       extract:      false
       extractDir:   SBP/SBPJDK
       path:         SBP
       creates:      SIGNATURE.SMF
-      url:          https://softwaredownloads.sap.com/file/0020000000931942024
+      url:          https://softwaredownloads.sap.com/file/0020000001370552024
 
-    - name:         "Oracle SBP - Bundle patches for 19c: OPatch 12.2.0.1.41"
-      archive:      OPATCH19P_2408-70004508.ZIP
-      checksum:     2edab5d7cb117590a846db302a764e5bb0485b9cb1c9d66ba00e1b6a4af8af8b
+    - name:         "Oracle SBP - Bundle patches for 19c: OPatch 12.2.0.1.43"
+      archive:      OPATCH19P_2411-70004508.ZIP
+      checksum:     e2e383bb90fb9e97addd402dea0135bcb4373e452b8f0c41839c7fdd8b748a65
       extract:      true
       extractDir:   SBP/OPATCH
       path:         SBP
       creates:      SIGNATURE.SMF
-      url:          https://softwaredownloads.sap.com/file/0020000000933062024
+      url:          https://softwaredownloads.sap.com/file/0020000001373372024
 
 
     - name:         "Oracle compact-lib"
@@ -86,13 +86,13 @@ materials:
 # GRID SBP Patches are downloaded based on SAP Note 2799920 - Patches 19c: Database
 # Updated to 2405 on August 1, 2024 -- Grid Infrastructure Release Update 19.23.0.0.240416
 
-    - name:         "Oracle SBP - Grid Infrastructure Release Update 19.24.0.0.240716"
-      archive:      GIRU19P_2408-70004547.ZIP
-      checksum:     7f22fad568dba1af1eafd25a5314a02ce261e7a984e61587f94ca87ad2b8e3ce
+    - name:         "Oracle SBP - Grid Infrastructure Database Release Update 19.25.0.0.241015"
+      archive:      GIRU19P_2411-70004508.ZIP
+      checksum:     0731940678fb960f5f7c49f63beb22a37e6d614274a5b33a11450e9bb5460be2
       extract:      false
       download:     true
-#       extractDir:   SBP/GIRU19P
+      extractDir:   SBP/GIRU19P
       path:         SBP
-#       creates:      SIGNATURE.SMF
-      url:          https://softwaredownloads.sap.com/file/0020000000941772024
+      creates:      SIGNATURE.SMF
+      url:          https://softwaredownloads.sap.com/file/0020000001373592024
 
