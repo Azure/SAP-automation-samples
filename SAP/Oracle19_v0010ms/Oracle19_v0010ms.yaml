@@ -73,7 +73,7 @@ materials:
     - name:         "Oracle ASMSUPPORT RPM"
       archive:      oracleasm-support-3.0.0-6.el8.x86_64.rpm
       extract:      false
-      checksum:     A60037BEECBF5CC95957CB04ED7CDF511867FE8F65CFD014033FCEFC3BB29C0C
+      checksum:     44f141818683204eaa81c6c1e044be9f4edfa49447154f3e62a4c2d77e0a5cfb
       url:          https://yum.oracle.com/repo/OracleLinux/OL8/addons/x86_64/getPackage/oracleasm-support-3.0.0-6.el8.x86_64.rpm
 
     # - name:         "Oracle ASMLIB RPM"
