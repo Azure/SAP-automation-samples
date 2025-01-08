@@ -76,11 +76,12 @@ materials:
       checksum:     A60037BEECBF5CC95957CB04ED7CDF511867FE8F65CFD014033FCEFC3BB29C0C
       url:          https://yum.oracle.com/repo/OracleLinux/OL8/addons/x86_64/getPackage/oracleasm-support-3.0.0-6.el8.x86_64.rpm
 
-    - name:         "Oracle ASMLIB RPM"
-      archive:      oracleasmlib-3.0.0.-13.el8.x86_64.rpm
-      extract:      false
-      checksum:     0ABF6BD267E67C472D194DBBEFC723D3A1910AAF8D688FAE4BB6980CE1F3281A
-      url:          https://download.oracle.com/otn_software/asmlib/oracleasmlib-3.0.0.-13.el8.x86_64.rpm
+    # - name:         "Oracle ASMLIB RPM"
+    #   archive:      oracleasmlib-3.0.0.-13.el8.x86_64.rpm
+    #   extract:      false
+    #   checksum:     0ABF6BD267E67C472D194DBBEFC723D3A1910AAF8D688FAE4BB6980CE1F3281A
+    #   url:          https://download.oracle.com/otn_software/asmlib/oracleasmlib-3.0.0.-13.el8.x86_64.rpm
+                    
 
 # Oracle ASM GRID Patches
 # GRID SBP Patches are downloaded based on SAP Note 2799920 - Patches 19c: Database
