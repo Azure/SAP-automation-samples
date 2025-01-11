@@ -63,6 +63,12 @@ materials:
       creates:      SIGNATURE.SMF
       url:          https://softwaredownloads.sap.com/file/0020000001373372024
 
+    - name:         "Oracle Libbpf library"
+      archive:      libbpf-0.6.0-6.el8.x86_64.rpm
+      extract:      false
+      checksum:     70061603162801b5066a182699df82af1c5dfdc6cad4075c1f5cbe1373c00a2f
+      url:          https://yum.oracle.com/repo/OracleLinux/OL8/UEKR7/x86_64/getPackage/libbpf-0.6.0-6.el8.x86_64.rpm
+                    
     - name:         "Oracle compact-lib"
       archive:      compat-libcap1-1.10-7.el7.x86_64.rpm
       extract:      false
@@ -87,7 +93,7 @@ materials:
       extract:      false
       checksum:     70061603162801b5066a182699df82af1c5dfdc6cad4075c1f5cbe1373c00a2f
       url:          https://download.oracle.com/otn_software/asmlib/oracleasmlib-3.0.0.-13.el8.x86_64.rpm
-                    
+
 
 # Oracle ASM GRID Patches
 # GRID SBP Patches are downloaded based on SAP Note 2799920 - Patches 19c: Database
