@@ -63,7 +63,6 @@ materials:
       creates:      SIGNATURE.SMF
       url:          https://softwaredownloads.sap.com/file/0020000001373372024
 
-
     - name:         "Oracle compact-lib"
       archive:      compat-libcap1-1.10-7.el7.x86_64.rpm
       extract:      false
@@ -71,7 +70,7 @@ materials:
       url:          https://public-yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackage/compat-libcap1-1.10-7.el7.x86_64.rpm
 
     - name:         "Oracle compact-libc++"
-      archive:      compat-libstdc++-33-3.2.3-72.el7.x86_64
+      archive:      compat-libstdc++-33-3.2.3-72.el7.x86_64.rpm
       extract:      false
       checksum:     9ff47552be37e37ce223ac20f78e019dd1d7cfda272bb5e310566f641306763a
       url:          https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackage/compat-libstdc++-33-3.2.3-72.el7.x86_64.rpm
