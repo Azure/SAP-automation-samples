@@ -70,17 +70,24 @@ materials:
       checksum:     30FB28F1266049493E5AEFFE18E8939B1BB4A889F1013EBEF6DABE496156B501
       url:          https://public-yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackage/compat-libcap1-1.10-7.el7.x86_64.rpm
 
+    - name:         "Oracle compact-libc++"
+      archive:      compat-libstdc++-33-3.2.3-72.el7.x86_64
+      extract:      false
+      checksum:     30FB28F1266049493E5AEFFE18E8939B1BB4A889F1013EBEF6DABE496156B501
+      url:          https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackage/compat-libstdc++-33-3.2.3-72.el7.x86_64.rpm
+
     - name:         "Oracle ASMSUPPORT RPM"
       archive:      oracleasm-support-3.0.0-6.el8.x86_64.rpm
       extract:      false
       checksum:     44f141818683204eaa81c6c1e044be9f4edfa49447154f3e62a4c2d77e0a5cfb
       url:          https://yum.oracle.com/repo/OracleLinux/OL8/addons/x86_64/getPackage/oracleasm-support-3.0.0-6.el8.x86_64.rpm
+    
 
-    # - name:         "Oracle ASMLIB RPM"
-    #   archive:      oracleasmlib-3.0.0.-13.el8.x86_64.rpm
-    #   extract:      false
-    #   checksum:     0ABF6BD267E67C472D194DBBEFC723D3A1910AAF8D688FAE4BB6980CE1F3281A
-    #   url:          https://download.oracle.com/otn_software/asmlib/oracleasmlib-3.0.0.-13.el8.x86_64.rpm
+    - name:         "Oracle ASMLIB RPM"
+      archive:      oracleasmlib-3.0.0-13.el8.x86_64.rpm
+      extract:      false
+      checksum:     0ABF6BD267E67C472D194DBBEFC723D3A1910AAF8D688FAE4BB6980CE1F3281A
+      url:          https://download.oracle.com/otn_software/asmlib/oracleasmlib-3.0.0.-13.el8.x86_64.rpm
                     
 
 # Oracle ASM GRID Patches
