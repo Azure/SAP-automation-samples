@@ -48,7 +48,7 @@ materials:
     - name:         "Oracle SBP - JDK Bundle Patch 19.0.0.0.241015"
       archive:      SBPJDK19P_2411-70004508.ZIP
       checksum:     104b544e9786735ce1ce1012ab33bb81f8fb007465a5cb80d09d7ce311dd0beb
-      extract:      false
+      extract:      true
       extractDir:   SBP/SBPJDK
       path:         SBP
       creates:      SIGNATURE.SMF
@@ -102,7 +102,7 @@ materials:
     - name:         "Oracle SBP - Grid Infrastructure Database Release Update 19.25.0.0.241015"
       archive:      GIRU19P_2411-70004508.ZIP
       checksum:     0731940678fb960f5f7c49f63beb22a37e6d614274a5b33a11450e9bb5460be2
-      extract:      false
+      extract:      true
       download:     true
       extractDir:   SBP/GIRU19P
       path:         SBP
