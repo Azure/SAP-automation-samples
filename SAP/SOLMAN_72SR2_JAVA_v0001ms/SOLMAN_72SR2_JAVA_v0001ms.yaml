@@ -1,26 +1,29 @@
 ---
 
-name: "SAP SOLUTION MANAGER"
-target: "SAP NETWEAVER 7.5"
-
+name:                                   "SAP SOLUTION MANAGER"
+target:                                 "SAP NETWEAVER 7.5"
+version:                                1
+platform:                               HANA
+InstanceType:                           JAVA
 defaults:
-  target_location: "{ target_media_location }/download_basket"
+  target_location:                      "{ target_media_location }/download_basket"
 
 product_ids:
-  scs:    "NW_Java_SCS:SOLMAN72SR2.JAVA.HDB.PD"
-  dbl:    "NW_Java_DB:SOLMAN72SR2.JAVA.HDB.PD"
-  pas:    "NW_Java_CI:SOLMAN72SR2.JAVA.HDB.PD"
-  app:    "NW_DI:SOLMAN72SR2.JAVA.HDB.PD"
-  scs_ha: "NW_Java_SCS:SOLMAN72SR2.JAVA.HDB.HA"
-  ers_ha: "NW_ERS:SOLMAN72SR2.JAVA.HDB.HA"
-  dbl_ha: "NW_Java_DB:SOLMAN72SR2.JAVA.HDB.HA"
-  pas_ha: "NW_Java_CI:SOLMAN72SR2.JAVA.HDB.HA"
-  app_ha: "NW_DI:SOLMAN72SR2.JAVA.HDB.HA"
+  scs:                                 "NW_Java_SCS:SOLMAN72SR2.JAVA.HDB.PD"
+  dbl:                                 "NW_Java_DB:SOLMAN72SR2.JAVA.HDB.PD"
+  pas:                                 "NW_Java_CI:SOLMAN72SR2.JAVA.HDB.PD"
+  app:                                 "NW_DI:SOLMAN72SR2.JAVA.HDB.PD"
+  scs_ha:                              "NW_Java_SCS:SOLMAN72SR2.JAVA.HDB.HA"
+  ers_ha:                              "NW_ERS:SOLMAN72SR2.JAVA.HDB.HA"
+  dbl_ha:                              "NW_Java_DB:SOLMAN72SR2.JAVA.HDB.HA"
+  pas_ha:                              "NW_Java_CI:SOLMAN72SR2.JAVA.HDB.HA"
+  app_ha:                              "NW_DI:SOLMAN72SR2.JAVA.HDB.HA"
+
 
 materials:
   dependencies:
-    - name:     HANA_2_00_081_v0001ms
-    - name:     SWPM10SP42_latest
+    - name:                            HANA_2_00_081_v0001ms
+    - name:                            SWPM10SP42_latest
 
   media:
 
