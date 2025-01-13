@@ -171,12 +171,16 @@ materials:
       archive:                         ISAGENTJ500P_1-80007822.SCA
       url:                             https://softwaredownloads.sap.com/file/0020000000874552023
       path:                            download_basket
-    - name:                            "SP29 Patch3 for J2EE ENGINE APPLICATIONS 7.50"
-      archive:                         J2EEAPPS29P_3-80000576.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000980102024
+
+    - name:                            "SP29 Patch4 for J2EE ENGINE APPLICATIONS 7.50"
+      archive:                         J2EEAPPS29P_4-80000576.SCA
+      checksum:                        f47b3c6559a3bce456719bc9963e66bd0c0f73910923ef36eb6159dcf045fbd7
+      url:                             https://softwaredownloads.sap.com/file/0020000000017552025
       path:                            download_basket
+
     - name:                            "SP29 Patch4 for J2EE ENGINE FRAMEWORK 7.50"
       archive:                         J2EEFRMW29P_4-80000439.SCA
+      checksum:                        58b50bb09ed7b98b9089d78d37ef1eee987c2c24eca51034bdbf39f681cbe486
       url:                             https://softwaredownloads.sap.com/file/0020000001181152024
       path:                            download_basket
     # kernel components
