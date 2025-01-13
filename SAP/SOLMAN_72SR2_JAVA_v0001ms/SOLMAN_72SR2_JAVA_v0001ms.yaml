@@ -237,7 +237,7 @@ materials:
       archive:                         LMNWABASICCOMP29P_1-80000681.SCA
       url:                             https://softwaredownloads.sap.com/file/0020000001126652024
       path:                            download_basket
-      
+
     - name:                            "Patch for LM NWA BASIC MBEAN 7.50 SP29"
       archive:                         LMNWABASICMBEAN29P_1-80000676.SCA
       url:                             https://softwaredownloads.sap.com/file/0020000001126642024
@@ -270,10 +270,12 @@ materials:
       path:                            download_basket
     # other components
 
-    - name:                            "SP29 Patch8 for MESSAGING SYSTEM SERVICE 7.50"
-      archive:                         MESSAGING29P_8-80000682.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000001185512024
+    - name:                            "SP29 Patch10 for MESSAGING SYSTEM SERVICE 7.50"
+      archive:                         MESSAGING29P_10-80000682.SCA
+      url:                             https://softwaredownloads.sap.com/file/0020000000029722025
+      checksum:                        2bfb4d9c3573c99e1a9de28e67620947ff0fab8443abfa056e4c005144964eaf
       path:                            download_basket
+
     - name:                            "SP29 Patch2 for MMR SERVER 7.50"
       archive:                         MMRSERVER29P_2-80000683.SCA
       url:                             https://softwaredownloads.sap.com/file/0020000001013222024
@@ -355,11 +357,6 @@ materials:
       archive:                         SWLIFECYCL29_0-80000716.SCA
       url:                             https://softwaredownloads.sap.com/file/0020000000582472024
       path:                            download_basket
-    # other components
-
-    - name:                            "SWPM 1.0 SP42 for NW higher than 7.0x ; OS: Linux on x86_64 64bit"
-      archive:                         SWPM10SP42_4-20009701.SAR
-      download: false
     # other components
 
     - name:                            "SP29 Patch2 for ES UDDI 7.50"
