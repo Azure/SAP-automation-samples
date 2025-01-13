@@ -18,7 +18,7 @@ product_ids:
   dbl_ha:                              "NW_Java_DB:SOLMAN72SR2.JAVA.HDB.HA"
   pas_ha:                              "NW_Java_CI:SOLMAN72SR2.JAVA.HDB.HA"
   app_ha:                              "NW_DI:SOLMAN72SR2.JAVA.HDB.HA"
-
+  generic:                             "NW_Users_Create:GENERIC.HDB.PD"
 
 materials:
   dependencies:
