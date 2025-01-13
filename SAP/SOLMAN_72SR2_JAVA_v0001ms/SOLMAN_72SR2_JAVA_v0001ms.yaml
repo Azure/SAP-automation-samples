@@ -302,22 +302,33 @@ materials:
 
     - name:                            "Kernel Part II (754) ; OS: Linux on x86_64 64bit ; DB: SAP HANA database"
       archive:                         SAPEXEDB_400-80007611.SAR
-      download: false
+      checksum:                        7dc41cf769ef74e9af7628bfe0ffa3c1c61ed6d0ce1b15b7255c85ebee9a585d
+      url:                             https://softwaredownloads.sap.com/file/0020000000982042024
+      download:                        false
+
     - name:                            "Kernel Part I (754) ; OS: Linux on x86_64 64bit ; DB: Database independe"
       archive:                         SAPEXE_400-80007612.SAR
-      download: false
+      url:                             https://softwaredownloads.sap.com/file/0020000000982412024
+      download:                        false
+
     - name:                            "SAP HOST AGENT 7.22 SP66 ; OS: Linux on x86_64 64bit"
       archive:                         SAPHOSTAGENT66_66-80004822.SAR
-      download: false
+      checksum:                        b722469aaa23247055214f42d0bb49c8506ed8faac177a5b1a48087e4cb6d8e0
+      url:                             https://softwaredownloads.sap.com/file/0020000001380962024
+      download:                        false
+
     - name:                            "SAP JVM 8.1 ; OS: Linux on x86_64 64bit"
       archive:                         SAPJVM8_96-80000202.SAR
-      download: false
+      checksum:                        68bec74b2dca949c0a97f4432dfb0c80aa77540b5937edf4d1e221d7a634b4f1
+      url:                             https://softwaredownloads.sap.com/file/0020000001263482023
+      download:                        false
     # kernel components
 
     - name:                            "SP31 Patch0 for XI 3RD PARTY 7.50"
       archive:                         SAPXI3RDPARTY31_0-80000870.SCA
       url:                             https://softwaredownloads.sap.com/file/0020000001308652024
       path:                            download_basket
+
     - name:                            "SP29 for SECURITY EXTENSIONS 7.50"
       archive:                         SECURITYEXT29_0-80000712.SCA
       url:                             https://softwaredownloads.sap.com/file/0020000000584302024
@@ -334,10 +345,12 @@ materials:
       archive:                         SERVICECOMP29_0-80000713.SCA
       url:                             https://softwaredownloads.sap.com/file/0020000000584312024
       path:                            download_basket
+
     - name:                            "SP29 for SOA MONITORS BASIC 7.50"
       archive:                         SOAMONBASIC29_0-80000715.SCA
       url:                             https://softwaredownloads.sap.com/file/0020000000583822024
       path:                            download_basket
+
     - name:                            "SP29 for SR UI 7.50"
       archive:                         SRUI29_0-80000717.SCA
       url:                             https://softwaredownloads.sap.com/file/0020000000582462024
@@ -353,6 +366,7 @@ materials:
       archive:                         SUPPORTTOOLS29_0-80000707.SCA
       url:                             https://softwaredownloads.sap.com/file/0020000000583892024
       path:                            download_basket
+
     - name:                            "SP29 for SOFTWARE LIFECYCLE 7.50"
       archive:                         SWLIFECYCL29_0-80000716.SCA
       url:                             https://softwaredownloads.sap.com/file/0020000000582472024
