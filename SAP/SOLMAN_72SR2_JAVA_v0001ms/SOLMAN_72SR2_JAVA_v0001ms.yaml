@@ -357,9 +357,6 @@ materials:
       path:                            download_basket
     # other components
 
-    - name:                            "Patch 7 for SOFTWARE UPDATE MANAGER 1.1 SP03 ; OS: Linux on x86_64 64bit"
-      archive:                         SUM11SP03_7-80006800.SAR
-      download: false
     # kernel components
 
     - name:                            "SP29 for SAP SUPPORT TOOLS 7.50"
@@ -399,6 +396,7 @@ materials:
       archive:                         WDADOBE29_0-80000729.SCA
       url:                             https://softwaredownloads.sap.com/file/0020000000582432024
       path:                            download_basket
+
     - name:                            "SP29 for WEB DYNPRO APPLICATIONS 7.50"
       archive:                         WDAPPS29_0-80000730.SCA
       url:                             https://softwaredownloads.sap.com/file/0020000000582612024
@@ -415,6 +413,7 @@ materials:
       archive:                         WDRUNTIMEEXT29_0-80000733.SCA
       url:                             https://softwaredownloads.sap.com/file/0020000000584332024
       path:                            download_basket
+
     - name:                            "SP29 for ESI - WSRM 7.50"
       archive:                         WSRM29_0-80000632.SCA
       url:                             https://softwaredownloads.sap.com/file/0020000000581782024
@@ -430,35 +429,5 @@ materials:
       archive:                         igshelper_17-10010245.sar
       url:                             https://softwaredownloads.sap.com/file/0020000000703122018
       path:                            download_basket
-
-  templates:
-    - name:                            "SAP SOLUTION MANAGER ini file"
-      file: "SAP SOLUTION MANAGER.inifile.params"
-      override_target_location: "{ target_media_location }/config"
-
-  stackfiles:
-    - name:                            "Download Basket JSON Manifest"
-      file: "SDAF-BoM-SolMan-JAVA.json"
-      override_target_location: "{ target_media_location }/config"
-
-    - name:                            "Download Basket Spreadsheet"
-      file: "MP_Excel_1002178425_2025018_SWC.xls"
-      override_target_location: "{ target_media_location }/config"
-
-    - name:                            "Download Basket Plan"
-      file: "MP_Plan_1002178425_2025018_.pdf"
-      override_target_location: "{ target_media_location }/config"
-
-    - name:                            "Download Basket Stack text"
-      file: "MP_Stack_1002178425_2025018_.txt"
-      override_target_location: "{ target_media_location }/config"
-
-    - name:                            "Download Basket Stack XML"
-      file: "MP_Stack_1002178425_2025018_.xml"
-      override_target_location: "{ target_media_location }/config"
-
-    - name:                            "Download Basket permalinks"
-      file: "myDownloadBasketFiles.txt"
-      override_target_location: "{ target_media_location }/config"
 
 ...
