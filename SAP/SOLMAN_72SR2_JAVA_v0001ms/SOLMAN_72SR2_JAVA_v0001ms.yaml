@@ -227,14 +227,17 @@ materials:
       path:                            download_basket
     # other components
 
-    - name:                            "SP29 Patch3 for LM NWA BASIC APPS 7.50"
-      archive:                         LMNWABASICAPPS29P_3-80000675.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000001331242024
+    - name:                            "SP29 Patch4 for LM NWA BASIC APPS 7.50"
+      archive:                         LMNWABASICAPPS29P_4-80000675.SCA
+      checksum:                        95c01fca8081cb88573206f47c5e8d6b559ab199d73ceba90c7e77f66f169656  
+      url:                             https://softwaredownloads.sap.com/file/0020000000019652025
       path:                            download_basket
+
     - name:                            "SP29 Patch1 for LMNWABASICCOMP 7.50"
       archive:                         LMNWABASICCOMP29P_1-80000681.SCA
       url:                             https://softwaredownloads.sap.com/file/0020000001126652024
       path:                            download_basket
+      
     - name:                            "Patch for LM NWA BASIC MBEAN 7.50 SP29"
       archive:                         LMNWABASICMBEAN29P_1-80000676.SCA
       url:                             https://softwaredownloads.sap.com/file/0020000001126642024
