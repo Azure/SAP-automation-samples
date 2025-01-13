@@ -68,7 +68,8 @@ materials:
 
     - name:                            "SP29 Patch5 for J2EE ENGINE CORE TOOLS 7.50"
       archive:                         CORETOOLS29P_5-80000437.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000001085162024
+      url:                             https://softwaredownloads.sap.com/file/0020000000584022024
+      checksum:                        97fcb512a77478da7ef433d19ff7596c208f8d5bc9a2bd89672d633248d26d97
       path:                            download_basket
     # kernel components
 
