@@ -304,24 +304,28 @@ materials:
       archive:                         SAPEXEDB_400-80007611.SAR
       checksum:                        7dc41cf769ef74e9af7628bfe0ffa3c1c61ed6d0ce1b15b7255c85ebee9a585d
       url:                             https://softwaredownloads.sap.com/file/0020000000982042024
-      download:                        false
+      extract:                         false
+      path:                            download_basket
 
     - name:                            "Kernel Part I (754) ; OS: Linux on x86_64 64bit ; DB: Database independe"
       archive:                         SAPEXE_400-80007612.SAR
       url:                             https://softwaredownloads.sap.com/file/0020000000982412024
-      download:                        false
+      extract:                         false
+      path:                            download_basket
 
     - name:                            "SAP HOST AGENT 7.22 SP66 ; OS: Linux on x86_64 64bit"
       archive:                         SAPHOSTAGENT66_66-80004822.SAR
       checksum:                        b722469aaa23247055214f42d0bb49c8506ed8faac177a5b1a48087e4cb6d8e0
       url:                             https://softwaredownloads.sap.com/file/0020000001380962024
-      download:                        false
+      extract:                         false
+      path:                            download_basket
 
     - name:                            "SAP JVM 8.1 ; OS: Linux on x86_64 64bit"
       archive:                         SAPJVM8_96-80000202.SAR
       checksum:                        68bec74b2dca949c0a97f4432dfb0c80aa77540b5937edf4d1e221d7a634b4f1
       url:                             https://softwaredownloads.sap.com/file/0020000001263482023
-      download:                        false
+      extract:                         false
+      path:                            download_basket
     # kernel components
 
     - name:                            "SP31 Patch0 for XI 3RD PARTY 7.50"
