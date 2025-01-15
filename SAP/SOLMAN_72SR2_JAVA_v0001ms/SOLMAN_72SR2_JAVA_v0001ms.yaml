@@ -159,14 +159,6 @@ materials:
       path:                            download_basket
     # other components
 
-    - name:                            "SAP HANA CLIENT Version 2.23 ; OS: Linux on x86_64 64bit"
-      archive:                         IMDB_CLIENT20_023_24-80002082.SAR
-      download: false
-    - name:                            "Revision 2.00.081.0 (SPS08) for HANA DB 2.0 ; OS: Linux on x86_64 64bit"
-      archive:                         IMDB_SERVER20_081_0-80002031.SAR
-      download: false
-    # other components
-
     - name:                            "Patch for WILY INTRO AGT10.8 MIN J5VIASM SP00"
       archive:                         ISAGENTJ500P_1-80007822.SCA
       url:                             https://softwaredownloads.sap.com/file/0020000000874552023
