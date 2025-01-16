@@ -71,6 +71,7 @@ materials:
       archive:                         51054655_1.zip
       path:                            download_basket
       url:                             https://softwaredownloads.sap.com/file/0030000000222342021
+      checksum:                        66146ff62acb7ef2d99f13eaa4cb71b63e51a0dd35591ac80484ffb890e3e7e4
       extract:                         true
       extractDir:                      CD_EXPORT
 
@@ -78,6 +79,7 @@ materials:
       archive:                         51054655_2.zip
       path:                            download_basket
       url:                             https://softwaredownloads.sap.com/file/0030000000222362021
+      checksum:                        b5ea2e9024db3bfe50ce422652f04194b7af4f8fdea7f42809f8e44ea546d6ab
       extract:                         true
       extractDir:                      CD_EXPORT
 
@@ -86,6 +88,7 @@ materials:
       archive:                         51054655_3.zip
       path:                            download_basket
       url:                             https://softwaredownloads.sap.com/file/0030000000222352021
+      checksum:                        178ed3a7bc50c82a9ba2d7dafb183c8f4721f3dcad5a8d89d84f8e409ee1e3db
       extract:                         true
       extractDir:                      CD_EXPORT
 
@@ -94,6 +97,7 @@ materials:
       archive:                         51054655_4.zip
       path:                            download_basket
       url:                             https://softwaredownloads.sap.com/file/0030000000221892021
+      checksum:                        09bc876af4ddb19736e2ef9c58ec10915b8db1cdcd647f56701b6a0537069b7b
       extract:                         true
       extractDir:                      CD_EXPORT
 
