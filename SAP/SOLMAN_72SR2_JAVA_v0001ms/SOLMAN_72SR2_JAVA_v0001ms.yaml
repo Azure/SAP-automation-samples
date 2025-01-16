@@ -456,7 +456,9 @@ materials:
 
     - name:                            "Installation for SAP IGS integrated in SAP Kernel ; OS: Linux on x86_64"
       archive:                         igsexe_5-80007786.sar
-      download: false
+      path:                            download_basket
+      checksum:                        7c066400840850f39ffde61f8c2c00e96f1ca51a85f191258afb367a7b5a2ebc
+      url:                             https://softwaredownloads.sap.com/file/0020000001255692024
     # kernel components
 
     - name:                            "SAP IGS Fonts and Textures"
