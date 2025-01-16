@@ -64,6 +64,40 @@ materials:
       archive:                         COMPBUILDT29_0-80000600.SCA
       url:                             https://softwaredownloads.sap.com/file/0020000000581722024
       path:                            download_basket
+
+    # Exports
+    # DB Export
+    - name:                            "SAP Solution Manager 7.2 SR2 Installation Export I"
+      archive:                         51054655_1.zip
+      path:                            download_basket
+      url:                             https://softwaredownloads.sap.com/file/0030000000222342021
+      extract:                         true
+      extractDir:                      CD_EXPORT
+
+    - name:                            "SAP Solution Manager 7.2 SR2 Installation Export II"
+      archive:                         51054655_2.zip
+      path:                            download_basket
+      url:                             https://softwaredownloads.sap.com/file/0030000000222362021
+      extract:                         true
+      extractDir:                      CD_EXPORT
+
+    # Languages
+    - name:                            "SAP Solution Manager 7.2 SR2 Language"
+      archive:                         51054655_3.zip
+      path:                            download_basket
+      url:                             https://softwaredownloads.sap.com/file/0030000000222352021
+      extract:                         true
+      extractDir:                      CD_EXPORT
+
+    # Java Components
+    - name:                            "SAP Solution Manager 7.2 SR2 - Java"
+      archive:                         51054655_4.zip
+      path:                            download_basket
+      url:                             https://softwaredownloads.sap.com/file/0030000000221892021
+      extract:                         true
+      extractDir:                      CD_EXPORT
+
+
     # other components
 
     - name:                            "SP29 Patch5 for J2EE ENGINE CORE TOOLS 7.50"
