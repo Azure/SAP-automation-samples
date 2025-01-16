@@ -1,0 +1,47 @@
+---
+#
+name:                                  BOM_Tester
+target:                                Tester
+version:                               0001
+platform:                              'HANA'
+InstanceType:                          'ABAP'
+
+product_ids:
+  dbl:                                 XXX
+  scs:                                 XXX
+  scs_ha:                              XXX
+  pas:                                 XXX
+  pas_ha:                              XXX
+  app:                                 XXX
+  app_ha:                              XXX
+  web:                                 XXX
+  ers:                                 XXX
+  ers_ha:                              XXX
+  generic:                             XXX
+
+materials:
+  dependencies:
+    - name:                            HANA_2_00_067_v0006ms
+    - name:                            SWPM10SP42_latest
+    - name:                            SUM20SP21_latest
+
+  media:
+    # Kernel
+    - name:                            "Kernel Part I (753) ; OS: Linux on x86_64 64bit ; DB: Database independent"
+      archive:                         SAPEXE_801-80002573.SAR
+      checksum:                        c1efbbd12cb16134720b251fd18cab4fdbc8a0a3ee93b54c2ee41671bc3048fc
+      path:                            download_basket
+      url:                             https://softwaredownloads.sap.com/file/0020000000937192021
+
+    - name:                            "Kernel Part II (753) ; OS: Linux on x86_64 64bit ; DB: SAP HANA database"
+      archive:                         SAPEXEDB_801-80002572.SAR
+      checksum:                        cea354d096aeca009ffcc81d0830956626fbb0b3c65e7507798256a18318bc5e
+      path:                            download_basket
+      url:                             https://softwaredownloads.sap.com/file/0020000000937602021
+
+    # SAP Host Agent
+    - name:                            "SAP HOST AGENT 7.21 SP51 ; OS: Linux on x86_64 64bit"
+      archive:                         SAPHOSTAGENT51_51-20009394.SAR
+      checksum:                        7a4dac4d1d57510b8a94d26a442b164f2b8580d01d8429e2427d1f613cd080a5
+      path:                            download_basket
+      url:                             https://softwaredownloads.sap.com/file/0020000000363342021
