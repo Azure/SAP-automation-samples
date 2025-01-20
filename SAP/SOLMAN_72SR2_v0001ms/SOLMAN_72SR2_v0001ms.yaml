@@ -2,22 +2,27 @@
 # Download time:  xx Minutes (Full    - xx GB)
 # Download time:  xx Minutes (Partial - xx GB)
 #
-name:    'SOLMAN72FPS12_v0001ms'
-target:  'Solution Manager 7.2 FPS 12'
-version: 0001ms
+name:                                   'SOLMAN_72SR2_v0001ms.yaml'
+target:                                 'Solution Manager 7.2 FPS 12'
+
+version:                                1
+platform:                               HANA
+InstanceType:                           ABAP
+defaults:
+  target_location:                      "{ target_media_location }/download_basket"
+
 
 product_ids:
-scs:                                    "NW_ABAP_ASCS:SOLMAN72SR2.ABAP.HDB.PD"
-dbl:                                    "NW_ABAP_DB:SOLMAN72SR2.ABAP.HDB.PD"
-pas:                                    "NW_ABAP_CI:SOLMAN72SR2.ABAP.HDB.PD"
-app:                                    "NW_DI:SOLMAN72SR2.ABAP.HDB.PD" 
-scs_ha:                                 "NW_ABAP_ASCS:SOLMAN72SR2.ABAP.HDB.HA"
-ers_ha:                                 "NW_ERS:SOLMAN72SR2.ABAP.HDB.HA"
-dbl_ha:                                 "NW_ABAP_DB:SOLMAN72SR2.ABAP.HDB.HA"
-pas_ha:                                 "NW_ABAP_CI:SOLMAN72SR2.ABAP.HDB.HA"
-app_ha:                                 "NW_DI:SOLMAN72SR2.ABAP.HDB.HA"
-generic:                                "NW_Users_Create:GENERIC.HDB.PD"
-
+  scs:                                  "NW_ABAP_ASCS:SOLMAN72SR2.ABAP.HDB.PD"
+  dbl:                                  "NW_ABAP_DB:SOLMAN72SR2.ABAP.HDB.PD"
+  pas:                                  "NW_ABAP_CI:SOLMAN72SR2.ABAP.HDB.PD"
+  app:                                  "NW_DI:SOLMAN72SR2.ABAP.HDB.PD" 
+  scs_ha:                               "NW_ABAP_ASCS:SOLMAN72SR2.ABAP.HDB.HA"
+  ers_ha:                               "NW_ERS:SOLMAN72SR2.ABAP.HDB.HA"
+  dbl_ha:                               "NW_ABAP_DB:SOLMAN72SR2.ABAP.HDB.HA"
+  pas_ha:                               "NW_ABAP_CI:SOLMAN72SR2.ABAP.HDB.HA"
+  app_ha:                               "NW_DI:SOLMAN72SR2.ABAP.HDB.HA"
+  generic:                              "NW_Users_Create:GENERIC.HDB.PD"
 
 materials:
   dependencies:
