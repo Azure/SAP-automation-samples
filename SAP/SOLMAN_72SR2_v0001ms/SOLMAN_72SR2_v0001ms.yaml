@@ -24,65 +24,24 @@ materials:
     - name:                            HANA_2_00_081_v0001ms
     - name:                            SWPM10SP42_latest
 
-#   templates:
-    # - name:     X
-    #   file:     S41909SPS03_v1.params
-    #   override_target_location: "{{ target_media_location }}/config"
-
-#   stackfiles:
-    # - name: Download Basket JSON Manifest
-    #   file: downloadbasket.json
-    #   override_target_location: "{{ target_media_location }}/config"
-
-    # - name: Download Basket Spreadsheet
-    #   file: MP_Excel_2001017452_20201030_SWC.xls
-    #   override_target_location: "{{ target_media_location }}/config"
-
-    # - name: Download Basket Plan doc
-    #   file: MP_Plan_2001017452_20201030_.pdf
-    #   override_target_location: "{{ target_media_location }}/config"
-
-    # - name: Download Basket Stack text
-    #   file: MP_Stack_2001017452_20201030_.txt
-    #   override_target_location: "{{ target_media_location }}/config"
-
-    # - name: Download Basket Stack XML
-    #   file: MP_Stack_2001017452_20201030_.xml
-    #   override_target_location: "{{ target_media_location }}/config"
-
-    # # Download Basket permalinks
-    # - name: Download Basket permalinks
-    #   file: myDownloadBasketFiles.txt
-    #   override_target_location: "{{ target_media_location }}/config"
-
   media:
-  # Format:
-  #   - name:           any value                           (Not Used)
-  #     archive:        filename in library
-  #     filename:       filename when downloaded
-  #     permissions:    octal value quoted
-  #     extract:
-  #     extractDir:
-  #     creates:
-  #     url:            optional download url if known      (Not Used at this time)
-  #
     # SAPCAR 7.22
-    - name:         SAPCAR
-      archive:      SAPCAR_1010-70006178.EXE
-      filename:     SAPCAR
-      permissions:  '0755'
-      url:          https://softwaredownloads.sap.com/file/0020000002208852020
+    - name:                            SAPCAR
+      archive:                         SAPCAR_1010-70006178.EXE
+      filename:                        SAPCAR
+      permissions:                     '0755'
+      url:                             https://softwaredownloads.sap.com/file/0020000002208852020
 
     # Kernel
-    - name:         "Kernel Part I (753) ; OS: Linux on x86_64 64bit ; DB: Database independe"
-      archive:      SAPEXE_800-80002573.SAR
-      path:         download_basket
-      url:          https://softwaredownloads.sap.com/file/0020000000401022021
+    - name:                            "Kernel Part I (753) ; OS: Linux on x86_64 64bit ; DB: Database independe"
+      archive:                         SAPEXE_800-80002573.SAR
+      path:                            download_basket
+      url:                             https://softwaredownloads.sap.com/file/0020000000401022021
 
-    - name:         "Kernel Part II (753) ; OS: Linux on x86_64 64bit ; DB: SAP HANA database"
-      archive:      SAPEXEDB_800-80002572.SAR
-      path:         download_basket
-      url:          https://softwaredownloads.sap.com/file/0020000000401532021
+    - name:                            "Kernel Part II (753) ; OS: Linux on x86_64 64bit ; DB: SAP HANA database"
+      archive:                         SAPEXEDB_800-80002572.SAR
+      path:                            download_basket
+      url:                             https://softwaredownloads.sap.com/file/0020000000401532021
 
     # SAP Host Agent
     - name:                            "SAP HOST AGENT 7.22 SP56"
