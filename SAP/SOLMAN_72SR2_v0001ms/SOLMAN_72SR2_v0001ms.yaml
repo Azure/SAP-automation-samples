@@ -105,6 +105,14 @@ materials:
       extract:                         true
       extractDir:                      CD_EXPORT
 
+    - name:                            "SAP Solution Manager 7.2 SR2 - Java"
+      archive:                         51054655_4.zip
+      path:                            download_basket
+      url:                             https://softwaredownloads.sap.com/file/0030000000221892021
+      checksum:                        09bc876af4ddb19736e2ef9c58ec10915b8db1cdcd647f56701b6a0537069b7b
+      extract:                         true
+      extractDir:                      CD_EXPORT
+
     - name:                            "ST-SER 720: SP 0020"
       archive:                         K-72020INSTSER.SAR
       download:                        true
