@@ -73,7 +73,7 @@ materials:
       checksum:    06c3a3cd5d1ad266f61ca202552468501d94cfdc7641ffdadf0a9abad82b648a
       extract:     true
       download:    true
-      extractDir:  EXPORT
+      extractDir:  CD_EXPORT
       path:        download_basket
       # creates:    SIGNATURE.SMF
       url:         https://softwaredownloads.sap.com/file/0030000000635092016
