@@ -1,0 +1,14 @@
+---
+name:               'SUM20SP21'
+target:             'SUM20SP21'
+version:            007
+
+materials:
+
+  media:
+  # SUM
+  - name:           "Patch 7 for SOFTWARE UPDATE MANAGER 2.0 SP21 (Linux on x86_64)"
+    archive:        SUM20SP21_7-80002456.SAR
+    checksum:       ccc58e87d9854f71ba6b90062623e5cd4a805c068d837e00876f6970b544acf3
+    download:       false
+    url:            https://softwaredownloads.sap.com/file/0020000001448582024
