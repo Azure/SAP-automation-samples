@@ -608,7 +608,7 @@ materials:
       archive: ST-PI740.SAR
       url: https://softwaredownloads.sap.com/file/0010000000297212015
       download: false
-      checksum: 564fcbe7d359516cb09d21098223dd87ca81873777e7d3ab36a2a73b2406871c
+      checksum: 3d069c1f14164a7244047596a7555f25eb2e9dd7fc642cb966ccf86f1987c84e
 
     - name: "Attribute Change Package 36 for UIHR002 100"
       archive: UIHR002100.SAR
