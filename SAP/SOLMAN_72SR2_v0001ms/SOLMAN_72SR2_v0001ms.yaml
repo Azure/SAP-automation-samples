@@ -27,7 +27,7 @@ product_ids:
 materials:
   dependencies:
     - name:                            HANA_2_00_081_v0001ms
-    - name:                            SWPM10SP42_latest
+    - name:                            SWPM10SP43_latest
 
   media:
     # SAPCAR 7.22
