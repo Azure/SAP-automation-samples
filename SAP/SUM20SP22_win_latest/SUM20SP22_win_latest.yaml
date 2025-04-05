@@ -1,15 +1,15 @@
 ---
 name:               'SUM20SP22'
 target:             'SUM20SP22'
-version:            003
+version:            004
 
 materials:
 
   media:
 
     - name:         "Patch 3 for SOFTWARE UPDATE MANAGER 2.0 SP22 (Windows on x64 64bit)"
-      archive:      SUM20SP22_3-80002458.SAR
-      checksum:     6ed5e6384e03e53e6a449316b2288a22f940ce2813429c941dec452238e7ce20
+      archive:      SUM20SP22_4-80002458.SAR
+      checksum:     c781a963ae0e576e9e9b2417697bfcb9bea995243d741e1662e0ad025038a7e1
       download:     false
-      url:          https://softwaredownloads.sap.com/file/0020000000301892025
+      url:          https://softwaredownloads.sap.com/file/0020000000371482025
 
