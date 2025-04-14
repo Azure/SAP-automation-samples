@@ -980,7 +980,7 @@ materials:
 
     - name: "Attribute Change Package 10 for SAP_BASIS 755"
       archive: SAP_BASIS755.SAR
-      checksum: 8145454f9a9851af3f6c4d6ebf31e7f179c5e9f8250efeef5055a7580872577b
+      checksum: 67822b7c420a79718c5616b5217355c9fe5f43756c2de729043a810d18c1b82a
       url: https://softwaredownloads.sap.com/file/0010000001467632021
       download: false
 
