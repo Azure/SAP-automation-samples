@@ -15,14 +15,14 @@
 
 #########################################################################################
 #                                                                                       #
-#  Environment definitioms                                                              #
+#  Environment definitions                                                              #
 #                                                                                       #
 #########################################################################################
 environment = "LAB"
 # The location/region value is a mandatory field, it is used to control where the resources are deployed
 location = "swedencentral"
 
-# RESOURCEGROUP
+# RESOURCE GROUP
 # The two resource group name and arm_id can be used to control the naming and the creation of the resource group
 # The resourcegroup_name value is optional, it can be used to override the name of the resource group that will be provisioned
 # The resourcegroup_name arm_id is optional, it can be used to provide an existing resource group for the deployment
@@ -30,7 +30,7 @@ location = "swedencentral"
 #resourcegroup_arm_id=""
 
 resourcegroup_tags = {
-  Control_plane = "West Europe"
+  Control_plane = "Sweden Central"
 }
 
 #########################################################################################
@@ -68,6 +68,13 @@ management_subnet_address_prefix = "10.175.20.64/28"
 #management_subnet_nsg_arm_id="/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/MGMT-WEEU-MGMT01-INFRASTRUCTURE/providers/Microsoft.Network/networkSecurityGroups/MGMT-WEEU-SAP01_managementSubnet-nsg"
 
 # management_subnet_nsg_allowed_ips is an optional parameter that if provided specifies a list of allowed IP ranges for the NSG
+
+
+# use_private_endpoint is a boolean flag controlling if the keyvaults and storage accounts have private endpoints
+#use_private_endpoint=false
+
+# use_service_endpoint is a boolean flag controlling service_endpoints are used
+use_service_endpoint = true
 
 #########################################################################################
 #                                                                                       #
@@ -114,7 +121,7 @@ management_bastion_subnet_address_prefix = "10.175.20.128/26"
 #########################################################################################
 
 # use_webapp is a boolean flag controlling if configuration Web App is to be deployed in the deployer VNet
-use_webapp = false
+webapp_deployment = false
 
 # webapp_subnet_arm_id is an optional parameter that if provided specifies Azure resource
 # identifier for the existing  subnet
@@ -131,7 +138,7 @@ webapp_subnet_address_prefix = "10.175.20.80/28"
 #                                                                                       #
 #########################################################################################
 
-# deployer_enable_public_ip defines if the deployers will be deployed with a public IP address
+# deployer_enable_public_ip defines if the deployer virtual machines will be deployed with a public IP address
 deployer_enable_public_ip = true
 
 # deployer_count is an optional parameter that specifies the number of deployer VMs to be provisioned
@@ -153,13 +160,13 @@ deployer_use_DHCP = true
 # The deployer_image defines the Virtual machine image to use, if source_image_id is specified the deployment will use the custom image provided, in this case os_type must also be specified
 
 deployer_image = {
-  "type"            = "marketplace"
-  "os_type"         = "Linux"
-  "source_image_id" = ""
-  "publisher"       = "Canonical"
-  "offer"           = "0001-com-ubuntu-server-jammy"
-  "sku"             = "22_04-lts-gen2"
-  "version"         = "latest"
+  type            = "marketplace"
+  os_type         = "Linux"
+  source_image_id = ""
+  publisher       = "Canonical"
+  offer           = "ubuntu-24_04-lts",
+  sku             = "server",
+  version         = "latest"
 }
 
 # Use this field if you are using a marketplace image that has a plan attached to it
@@ -205,7 +212,9 @@ user_assigned_identity_id="/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/r
 # deployer_password_secret_name if provided contains the secret name for the password
 #deployer_password_secret_name=""
 
-enable_purge_control_for_keyvaults = false
+enable_purge_control_for_keyvaults           = false
+
+enable_rbac_authorization_for_keyvault       = true
 
 # List of object IDs to add to key vault policies"
 #additional_users_to_add_to_keyvault_policies=["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy"]
@@ -213,18 +222,12 @@ enable_purge_control_for_keyvaults = false
 
 #########################################################################################
 #                                                                                       #
-#                            Miscallaneous settings                                     #
+#                            Miscellaneous settings                                     #
 #                                                                                       #
 #########################################################################################
 
 # deployer_assign_subscription_permissions is a boolean flag controlling if the deployment credential should be assigned Contribuor permissions on the subscription
 #deployer_assign_subscription_permissions=true
-
-# use_private_endpoint is a boolean flag controlling if the keyvaults and storage accounts have private endpoints
-#use_private_endpoint=false
-
-# use_service_endpoint is a boolean flag controlling service_endpoints are used
-use_service_endpoint = true
 
 # auto_configure_deployer is a boolean flag controlling if the automation should try to configure the deployer automatically
 # set to false if outbound internet on the deployer is not available
@@ -238,3 +241,27 @@ public_network_access_enabled = true
 
 # List of subnet IDs to add to storage account and key vault firewalls"
 #subnets_to_add_to_firewall_for_keyvaults_and_storage=["<azure_resource_id_for_subnet>"]
+
+#########################################################################################
+#                                                                                       #
+#                                     DNS Settings                                      #
+#                                                                                       #
+#########################################################################################
+
+# privatelink_dns_resourcegroup_name is the name of the resource group where the private link DNS zone is hosted
+#privatelink_dns_resourcegroup_name           = "cpln-noeu-dns-privatelink"
+
+# privatelink_dns_subscription_id is the subscription ID where the private link DNS zone is hosted
+#privatelink_dns_subscription_id              = "dcb2713e-5dc8-4139-a9af-9768287bbb8d"
+
+#########################################################################################
+#                                                                                       #
+#                                     Application Configuration                         #
+#                                                                                       #
+#########################################################################################
+
+# Defines the Azure application configuration Resource id
+#application_configuration_id = ""
+
+# If defined, will add the Azure Application configuration to the control plane
+application_configuration_deployment = true
