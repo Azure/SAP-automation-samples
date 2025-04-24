@@ -15,15 +15,15 @@ materials:
       path:          downloads
       url:          https://softwaredownloads.sap.com/file/0020000000098642022
 
-    # HANA Client v2.13
-    - name:         "SAP HANA CLIENT Version 2.23"
-      archive:      IMDB_CLIENT20_023_24-80002082.SAR
-      checksum:     226d2f4636252d0da7ffe5f3a8347a63cdb46ced725028b69f1397229d0a4f47
+    # HANA Client v2.27
+    - name:         "SAP HANA CLIENT Version 2.27"
+      archive:      IMDB_CLIENT20_023_27-80002082.SAR
+      checksum:     845360d7b556776430137ad3c201c4cb96981d769246b1daf8219043e0c839ed
       extract:      true
       extractDir:   CD_HDBCLIENT
       creates:      SIGNATURE.SMF
       path:         download_basket
-      url:          https://softwaredownloads.sap.com/file/0020000001395712024
+      url:          https://softwaredownloads.sap.com/file/0020000000104812025
 
     # v2_00_077 Revision 2.00.077.0 (SPS07) for HANA DB 2.0
     - name:         "SAP HANA 2 SPS08 Revision 081.0 (SPS08)"
