@@ -1,14 +1,14 @@
 ---
 name:               'SUM20SP22'
 target:             'SUM20SP22'
-version:            006
+version:            007
 
 materials:
 
   media:
   # SUM
-  - name:           "Patch 6 for SOFTWARE UPDATE MANAGER 2.0 SP22 (Linux on x86_64)"
-    archive:        SUM20SP22_6-80002456.SAR
-    checksum:       5641c75d7a3ae55ffa729b62ba17e682efd6f37879d2c4a1d56cb77986f59240
+  - name:           "Patch 7 for SOFTWARE UPDATE MANAGER 2.0 SP22 (Linux on x86_64)"
+    archive:        SUM20SP22_7-80002456.SAR
+    checksum:       71c51d21e402a95350fd3671ff2e6aa84277b6a3d54140f1ea9053fba2a52b7c
     download:       false
-    url:            https://softwaredownloads.sap.com/file/0025000000022072025
+    url:            https://softwaredownloads.sap.com/file/0025000000028732025
