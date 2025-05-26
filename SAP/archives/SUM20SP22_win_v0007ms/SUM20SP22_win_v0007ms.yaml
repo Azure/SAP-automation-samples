@@ -1,0 +1,14 @@
+---
+name:               'SUM20SP22'
+target:             'SUM20SP22'
+version:            007
+
+materials:
+
+  media:
+
+    - name:         "Patch 7 for SOFTWARE UPDATE MANAGER 2.0 SP22 (Windows on x64 64bit)"
+      archive:      SUM20SP22_7-80002458.SAR
+      checksum:     da519547c3ed1258e986df29db4b835b68f6adb228f928a2ed98ee97745a44e3
+      download:     false
+      url:          https://softwaredownloads.sap.com/file/0025000000028742025
