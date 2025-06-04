@@ -529,11 +529,11 @@ materials:
       url:                                   https://softwaredownloads.sap.com/file/0010000000914092021
       download:                              false
 
-    - name:                                  "Attribute Change Package 37 for SAP_HR 608"
-      archive:                               SAP_HR608.SAR
-      checksum:                              21055a344d47909f65f40a1c6febf7268650ea2623e6bfbef2f68b607388d469
-      url:                                   https://softwaredownloads.sap.com/file/0010000000249512014
-      download:                              false
+    - name:                            "Attribute Change Package 37 for SAP_HR 608"
+      archive:                         SAP_HR608.SAR
+      checksum:                        f12b3a57e62300c2d983f0cafcabd646adce0359a5762d9c992ed4c8cb4958e4
+      url:                             https://softwaredownloads.sap.com/file/0010000000249512014
+      download:                        false
 
     - name:                                  "Attribute Change Package 56 for ST-PI 740"
       archive:                               ST-PI740.SAR
