@@ -1,469 +1,469 @@
 ---
 
-name:                                   "SAP SOLUTION MANAGER"
-target:                                 "SAP NETWEAVER 7.5"
-version:                                1
-platform:                               HANA
-InstanceType:                           JAVA
+name:                                        "SAP SOLUTION MANAGER"
+target:                                      "SAP NETWEAVER 7.5"
+version:                                     1
+platform:                                    HANA
+InstanceType:                                JAVA
 defaults:
-  target_location:                      "{ target_media_location }/download_basket"
+  target_location:                           "{ target_media_location }/download_basket"
 
 product_ids:
-  scs:                                 "NW_Java_SCS:SOLMAN72SR2.JAVA.HDB.PD"
-  dbl:                                 "NW_Java_DB:SOLMAN72SR2.JAVA.HDB.PD"
-  pas:                                 "NW_Java_CI:SOLMAN72SR2.JAVA.HDB.PD"
-  app:                                 "NW_DI:SOLMAN72SR2.JAVA.HDB.PD"
-  scs_ha:                              "NW_Java_SCS:SOLMAN72SR2.JAVA.HDB.HA"
-  ers_ha:                              "NW_ERS:SOLMAN72SR2.JAVA.HDB.HA"
-  dbl_ha:                              "NW_Java_DB:SOLMAN72SR2.JAVA.HDB.HA"
-  pas_ha:                              "NW_Java_CI:SOLMAN72SR2.JAVA.HDB.HA"
-  app_ha:                              "NW_DI:SOLMAN72SR2.JAVA.HDB.HA"
-  generic:                             "NW_Users_Create:GENERIC.HDB.PD"
+  scs:                                       "NW_Java_SCS:SOLMAN72SR2.JAVA.HDB.PD"
+  dbl:                                       "NW_Java_DB:SOLMAN72SR2.JAVA.HDB.PD"
+  pas:                                       "NW_Java_CI:SOLMAN72SR2.JAVA.HDB.PD"
+  app:                                       "NW_DI:SOLMAN72SR2.JAVA.HDB.PD"
+  scs_ha:                                    "NW_Java_SCS:SOLMAN72SR2.JAVA.HDB.HA"
+  ers_ha:                                    "NW_ERS:SOLMAN72SR2.JAVA.HDB.HA"
+  dbl_ha:                                    "NW_Java_DB:SOLMAN72SR2.JAVA.HDB.HA"
+  pas_ha:                                    "NW_Java_CI:SOLMAN72SR2.JAVA.HDB.HA"
+  app_ha:                                    "NW_DI:SOLMAN72SR2.JAVA.HDB.HA"
+  generic:                                   "NW_Users_Create:GENERIC.HDB.PD"
 
 materials:
   dependencies:
-    - name:                            HANA_2_00_081_v0001ms
-    - name:                            SWPM10SP43_latest
+    - name:                                  HANA_2_00_081_v0001ms
+    - name:                                  SWPM10SP43_latest
 
   media:
 
     # other components
 
-    - name:                            "Patch for ADOBE DOCUMENT SERVICES 7.50 SP29"
-      archive:                         ADSSAP29P_5-80000623.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000001407552024
-      path:                            download_basket
+    - name:                                  "Patch for ADOBE DOCUMENT SERVICES 7.50 SP29"
+      archive:                               ADSSAP29P_5-80000623.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000001407552024
+      path:                                  download_basket
 
-    - name:                            "SP29 Patch9 for AJAX RUNTIME 7.50"
-      archive:                         AJAXRUNTIME29P_9-80000486.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000010252025
-      path:                            download_basket
+    - name:                                  "SP29 Patch9 for AJAX RUNTIME 7.50"
+      archive:                               AJAXRUNTIME29P_9-80000486.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000000010252025
+      path:                                  download_basket
     # kernel components
 
-    - name:                            "SP29 for J2EE ENGINE BASE TABLES 7.50"
-      archive:                         BASETABLES29_0-80000577.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000584182024
-      path:                            download_basket
-    - name:                            "SP29 for BI UDI 7.50"
-      archive:                         BIUDI29_0-80000573.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000581462024
-      path:                            download_basket
-    - name:                            "SP29 for BI WEBDYNPRO ALV 7.50"
-      archive:                         BIWDALV29_0-80000567.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000581482024
-      path:                            download_basket
-    - name:                            "SP29 for ZERO ADMIN CONFIG 7.50"
-      archive:                         CFGZA29_0-80000741.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000584402024
-      path:                            download_basket
-    - name:                            "SP29 for ZERO ADMIN TEMPLATES CE 7.50"
-      archive:                         CFGZACE29_0-80000742.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000584412024
-      path:                            download_basket
-    - name:                            "SP29 for COMPOSITION BUILD TOOL 7.50"
-      archive:                         COMPBUILDT29_0-80000600.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000581722024
-      path:                            download_basket
+    - name:                                  "SP29 for J2EE ENGINE BASE TABLES 7.50"
+      archive:                               BASETABLES29_0-80000577.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000000584182024
+      path:                                  download_basket
+    - name:                                  "SP29 for BI UDI 7.50"
+      archive:                               BIUDI29_0-80000573.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000000581462024
+      path:                                  download_basket
+    - name:                                  "SP29 for BI WEBDYNPRO ALV 7.50"
+      archive:                               BIWDALV29_0-80000567.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000000581482024
+      path:                                  download_basket
+    - name:                                  "SP29 for ZERO ADMIN CONFIG 7.50"
+      archive:                               CFGZA29_0-80000741.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000000584402024
+      path:                                  download_basket
+    - name:                                  "SP29 for ZERO ADMIN TEMPLATES CE 7.50"
+      archive:                               CFGZACE29_0-80000742.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000000584412024
+      path:                                  download_basket
+    - name:                                  "SP29 for COMPOSITION BUILD TOOL 7.50"
+      archive:                               COMPBUILDT29_0-80000600.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000000581722024
+      path:                                  download_basket
 
     # Exports
     # DB Export
-    - name:                            "SAP Solution Manager 7.2 SR2 Installation Export I"
-      archive:                         51054655_1.zip
-      path:                            download_basket
-      url:                             https://softwaredownloads.sap.com/file/0030000000222342021
-      checksum:                        66146ff62acb7ef2d99f13eaa4cb71b63e51a0dd35591ac80484ffb890e3e7e4
-      extract:                         true
-      extractDir:                      CD_EXPORT
+    - name:                                  "SAP Solution Manager 7.2 SR2 Installation Export I"
+      archive:                               51054655_1.zip
+      path:                                  download_basket
+      url:                                   https://softwaredownloads.sap.com/file/0030000000222342021
+      checksum:                              66146ff62acb7ef2d99f13eaa4cb71b63e51a0dd35591ac80484ffb890e3e7e4
+      extract:                               true
+      extractDir:                            CD_EXPORT
 
-    - name:                            "SAP Solution Manager 7.2 SR2 Installation Export II"
-      archive:                         51054655_2.zip
-      path:                            download_basket
-      url:                             https://softwaredownloads.sap.com/file/0030000000222362021
-      checksum:                        b5ea2e9024db3bfe50ce422652f04194b7af4f8fdea7f42809f8e44ea546d6ab
-      extract:                         true
-      extractDir:                      CD_EXPORT
+    - name:                                  "SAP Solution Manager 7.2 SR2 Installation Export II"
+      archive:                               51054655_2.zip
+      path:                                  download_basket
+      url:                                   https://softwaredownloads.sap.com/file/0030000000222362021
+      checksum:                              b5ea2e9024db3bfe50ce422652f04194b7af4f8fdea7f42809f8e44ea546d6ab
+      extract:                               true
+      extractDir:                            CD_EXPORT
 
     # Languages
-    - name:                            "SAP Solution Manager 7.2 SR2 Language"
-      archive:                         51054655_3.zip
-      path:                            download_basket
-      url:                             https://softwaredownloads.sap.com/file/0030000000222352021
-      checksum:                        178ed3a7bc50c82a9ba2d7dafb183c8f4721f3dcad5a8d89d84f8e409ee1e3db
-      extract:                         true
-      extractDir:                      CD_EXPORT
+    - name:                                  "SAP Solution Manager 7.2 SR2 Language"
+      archive:                               51054655_3.zip
+      path:                                  download_basket
+      url:                                   https://softwaredownloads.sap.com/file/0030000000222352021
+      checksum:                              178ed3a7bc50c82a9ba2d7dafb183c8f4721f3dcad5a8d89d84f8e409ee1e3db
+      extract:                               true
+      extractDir:                            CD_EXPORT
 
     # Java Components
-    - name:                            "SAP Solution Manager 7.2 SR2 - Java"
-      archive:                         51054655_4.zip
-      path:                            download_basket
-      url:                             https://softwaredownloads.sap.com/file/0030000000221892021
-      checksum:                        09bc876af4ddb19736e2ef9c58ec10915b8db1cdcd647f56701b6a0537069b7b
-      extract:                         true
-      extractDir:                      CD_EXPORT
+    - name:                                  "SAP Solution Manager 7.2 SR2 - Java"
+      archive:                               51054655_4.zip
+      path:                                  download_basket
+      url:                                   https://softwaredownloads.sap.com/file/0030000000221892021
+      checksum:                              09bc876af4ddb19736e2ef9c58ec10915b8db1cdcd647f56701b6a0537069b7b
+      extract:                               true
+      extractDir:                            CD_EXPORT
 
 
     # other components
 
-    - name:                            "SP29 Patch5 for J2EE ENGINE CORE TOOLS 7.50"
-      archive:                         CORETOOLS29P_5-80000437.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000584022024
-      checksum:                        97fcb512a77478da7ef433d19ff7596c208f8d5bc9a2bd89672d633248d26d97
-      path:                            download_basket
+    - name:                                  "SP29 Patch5 for J2EE ENGINE CORE TOOLS 7.50"
+      archive:                               CORETOOLS29P_5-80000437.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000000584022024
+      checksum:                              97fcb512a77478da7ef433d19ff7596c208f8d5bc9a2bd89672d633248d26d97
+      path:                                  download_basket
     # kernel components
 
-    - name:                            "SP29 for CU BASE JAVA 7.50"
-      archive:                         CUBASEJAVA29_0-80000601.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000582032024
-      path:                            download_basket
-    - name:                            "SP29 for CU BASE WEB DYNPRO 7.50"
-      archive:                         CUBASEWD29_0-80000603.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000582052024
-      path:                            download_basket
-    - name:                            "SP29 for DATA MAPPING 7.50"
-      archive:                         DATAMAPPING29_0-80000605.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000582072024
-      path:                            download_basket
-    - name:                            "SP29 for DI CLIENTS 7.50"
-      archive:                         DICLIENTS29_0-80000608.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000583952024
-      path:                            download_basket
-    - name:                            "SP29 for ECM CORE COMPONENTS 7.50"
-      archive:                         ECMCORE29_0-80000612.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000584872024
-      path:                            download_basket
-    - name:                            "SP29 for J2EE ENGINE FACADE 7.50"
-      archive:                         ENGFACADE29_0-80000438.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000584132024
-      path:                            download_basket
+    - name:                                  "SP29 for CU BASE JAVA 7.50"
+      archive:                               CUBASEJAVA29_0-80000601.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000000582032024
+      path:                                  download_basket
+    - name:                                  "SP29 for CU BASE WEB DYNPRO 7.50"
+      archive:                               CUBASEWD29_0-80000603.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000000582052024
+      path:                                  download_basket
+    - name:                                  "SP29 for DATA MAPPING 7.50"
+      archive:                               DATAMAPPING29_0-80000605.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000000582072024
+      path:                                  download_basket
+    - name:                                  "SP29 for DI CLIENTS 7.50"
+      archive:                               DICLIENTS29_0-80000608.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000000583952024
+      path:                                  download_basket
+    - name:                                  "SP29 for ECM CORE COMPONENTS 7.50"
+      archive:                               ECMCORE29_0-80000612.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000000584872024
+      path:                                  download_basket
+    - name:                                  "SP29 for J2EE ENGINE FACADE 7.50"
+      archive:                               ENGFACADE29_0-80000438.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000000584132024
+      path:                                  download_basket
     # other components
 
-    - name:                            "SP29 Patch6 for ENGINEAPI 7.50"
-      archive:                         ENGINEAPI29P_6-80000618.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000001401492024
-      path:                            download_basket
+    - name:                                  "SP29 Patch6 for ENGINEAPI 7.50"
+      archive:                               ENGINEAPI29P_6-80000618.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000001401492024
+      path:                                  download_basket
 
-    - name:                            "SP29 Patch11 for PORTAL BASIS 7.50"
-      archive:                         EPBASIS29P_11-80000701.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000010472025
-      path:                            download_basket
+    - name:                                  "SP29 Patch11 for PORTAL BASIS 7.50"
+      archive:                               EPBASIS29P_11-80000701.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000000010472025
+      path:                                  download_basket
     # kernel components
 
-    - name:                            "SP29 for PORTAL BASIS API 7.50"
-      archive:                         EPBASISAPI29_0-80000702.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000584152024
-      path:                            download_basket
+    - name:                                  "SP29 for PORTAL BASIS API 7.50"
+      archive:                               EPBASISAPI29_0-80000702.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000000584152024
+      path:                                  download_basket
 
-    - name:                            "SP29 for ESCONF BUILD TOOL 7.50"
-      archive:                         ESCONFBUILDT29_0-80000500.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000581542024
-      path:                            download_basket
+    - name:                                  "SP29 for ESCONF BUILD TOOL 7.50"
+      archive:                               ESCONFBUILDT29_0-80000500.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000000581542024
+      path:                                  download_basket
 
-    - name:                            "SP29 for ESI USER INTERFACE 7.50"
-      archive:                         ESIUI29_0-80000633.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000584082024
-      path:                            download_basket
+    - name:                                  "SP29 for ESI USER INTERFACE 7.50"
+      archive:                               ESIUI29_0-80000633.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000000584082024
+      path:                                  download_basket
 
-    - name:                            "SP29 for ESMP BUILD TOOL 7.50"
-      archive:                         ESMPBUILDT29_0-80000634.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000581732024
-      path:                            download_basket
+    - name:                                  "SP29 for ESMP BUILD TOOL 7.50"
+      archive:                               ESMPBUILDT29_0-80000634.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000000581732024
+      path:                                  download_basket
     # other components
 
-    - name:                            "SP29 Patch1 for ESI - ES PROTOCOL 7.50"
-      archive:                         ESPFRAMEWORK29P_1-80000631.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000001120352024
-      path:                            download_basket
+    - name:                                  "SP29 Patch1 for ESI - ES PROTOCOL 7.50"
+      archive:                               ESPFRAMEWORK29P_1-80000631.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000001120352024
+      path:                                  download_basket
     # kernel components
 
-    - name:                            "SP29 for ES REGISTRY BASIC 7.50"
-      archive:                         ESREGBASIC29_0-80000497.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000581792024
-      path:                            download_basket
+    - name:                                  "SP29 for ES REGISTRY BASIC 7.50"
+      archive:                               ESREGBASIC29_0-80000497.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000000581792024
+      path:                                  download_basket
 
-    - name:                            "SP29 for ES REGISTRY SERVICES 7.50"
-      archive:                         ESREGSERVICES29_0-80000498.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000581802024
-      path:                            download_basket
+    - name:                                  "SP29 for ES REGISTRY SERVICES 7.50"
+      archive:                               ESREGSERVICES29_0-80000498.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000000581802024
+      path:                                  download_basket
     # other components
 
-    - name:                            "SP29 Patch3 for JAVA FRAMEWORK OFFLINE 7.50"
-      archive:                         FRAMEWORK29P_3-80000661.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000010162025
-      path:                            download_basket
+    - name:                                  "SP29 Patch3 for JAVA FRAMEWORK OFFLINE 7.50"
+      archive:                               FRAMEWORK29P_3-80000661.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000000010162025
+      path:                                  download_basket
 
-    - name:                            "SP29 Patch1 for FRAMEWORK EXTENSIONS 7.50"
-      archive:                         FRAMEWORKEXT29P_1-80000637.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000001285972024
-      path:                            download_basket
+    - name:                                  "SP29 Patch1 for FRAMEWORK EXTENSIONS 7.50"
+      archive:                               FRAMEWORKEXT29P_1-80000637.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000001285972024
+      path:                                  download_basket
     # other components
 
-    - name:                            "Patch for WILY INTRO AGT10.8 MIN J5VIASM SP00"
-      archive:                         ISAGENTJ500P_1-80007822.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000874552023
-      path:                            download_basket
+    - name:                                  "Patch for WILY INTRO AGT10.8 MIN J5VIASM SP00"
+      archive:                               ISAGENTJ500P_1-80007822.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000000874552023
+      path:                                  download_basket
 
-    - name:                            "SP29 Patch4 for J2EE ENGINE APPLICATIONS 7.50"
-      archive:                         J2EEAPPS29P_4-80000576.SCA
-      checksum:                        f47b3c6559a3bce456719bc9963e66bd0c0f73910923ef36eb6159dcf045fbd7
-      url:                             https://softwaredownloads.sap.com/file/0020000000017552025
-      path:                            download_basket
+    - name:                                  "SP29 Patch4 for J2EE ENGINE APPLICATIONS 7.50"
+      archive:                               J2EEAPPS29P_4-80000576.SCA
+      checksum:                              f47b3c6559a3bce456719bc9963e66bd0c0f73910923ef36eb6159dcf045fbd7
+      url:                                   https://softwaredownloads.sap.com/file/0020000000017552025
+      path:                                  download_basket
 
-    - name:                            "SP29 Patch4 for J2EE ENGINE FRAMEWORK 7.50"
-      archive:                         J2EEFRMW29P_4-80000439.SCA
-      checksum:                        58b50bb09ed7b98b9089d78d37ef1eee987c2c24eca51034bdbf39f681cbe486
-      url:                             https://softwaredownloads.sap.com/file/0020000001181152024
-      path:                            download_basket
+    - name:                                  "SP29 Patch4 for J2EE ENGINE FRAMEWORK 7.50"
+      archive:                               J2EEFRMW29P_4-80000439.SCA
+      checksum:                              58b50bb09ed7b98b9089d78d37ef1eee987c2c24eca51034bdbf39f681cbe486
+      url:                                   https://softwaredownloads.sap.com/file/0020000001181152024
+      path:                                  download_basket
     # kernel components
 
-    - name:                            "SP29 Patch0 for JAVA SP MANAGER 7.50"
-      archive:                         JSPM29_0-70000681.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000582902024
-      path:                            download_basket
-    - name:                            "SP29 for SAP_IKS_7.50"
-      archive:                         KMKWJIKS29_0-80000624.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000582342024
-      path:                            download_basket
-    - name:                            "SP29 for LM CONFIGURATION 7.50"
-      archive:                         LMCFG29_0-80000669.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000584922024
-      path:                            download_basket
+    - name:                                  "SP29 Patch0 for JAVA SP MANAGER 7.50"
+      archive:                               JSPM29_0-70000681.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000000582902024
+      path:                                  download_basket
+    - name:                                  "SP29 for SAP_IKS_7.50"
+      archive:                               KMKWJIKS29_0-80000624.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000000582342024
+      path:                                  download_basket
+    - name:                                  "SP29 for LM CONFIGURATION 7.50"
+      archive:                               LMCFG29_0-80000669.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000000584922024
+      path:                                  download_basket
     # other components
 
-    - name:                            "SP29 Patch6 for J2EE ENGINE LM-CORE 7.50"
-      archive:                         LMCORE29P_6-80000440.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000001351812024
-      path:                            download_basket
+    - name:                                  "SP29 Patch6 for J2EE ENGINE LM-CORE 7.50"
+      archive:                               LMCORE29P_6-80000440.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000001351812024
+      path:                                  download_basket
     # kernel components
 
-    - name:                            "SP29 for LM CONFIGURATION WIZARD 7.50"
-      archive:                         LMCTC29_0-80000670.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000583262024
-      path:                            download_basket
-    - name:                            "SP29 for LM CTS 7.50"
-      archive:                         LMCTS29_0-80000671.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000584902024
-      path:                            download_basket
-    - name:                            "SP29 for LM CTS UIS 7.50"
-      archive:                         LMCTSUI29_0-80000672.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000584932024
-      path:                            download_basket
-    - name:                            "SP29 for LM MODEL BASE 7.50"
-      archive:                         LMMODELBASE29_0-80000673.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000585002024
-      path:                            download_basket
-    - name:                            "SP29 for LM MODEL NW 7.50"
-      archive:                         LMMODELNW29_0-80000674.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000585012024
-      path:                            download_basket
+    - name:                                  "SP29 for LM CONFIGURATION WIZARD 7.50"
+      archive:                               LMCTC29_0-80000670.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000000583262024
+      path:                                  download_basket
+    - name:                                  "SP29 for LM CTS 7.50"
+      archive:                               LMCTS29_0-80000671.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000000584902024
+      path:                                  download_basket
+    - name:                                  "SP29 for LM CTS UIS 7.50"
+      archive:                               LMCTSUI29_0-80000672.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000000584932024
+      path:                                  download_basket
+    - name:                                  "SP29 for LM MODEL BASE 7.50"
+      archive:                               LMMODELBASE29_0-80000673.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000000585002024
+      path:                                  download_basket
+    - name:                                  "SP29 for LM MODEL NW 7.50"
+      archive:                               LMMODELNW29_0-80000674.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000000585012024
+      path:                                  download_basket
     # other components
 
-    - name:                            "SP29 Patch4 for LM NWA BASIC APPS 7.50"
-      archive:                         LMNWABASICAPPS29P_4-80000675.SCA
-      checksum:                        95c01fca8081cb88573206f47c5e8d6b559ab199d73ceba90c7e77f66f169656  
-      url:                             https://softwaredownloads.sap.com/file/0020000000019652025
-      path:                            download_basket
+    - name:                                  "SP29 Patch4 for LM NWA BASIC APPS 7.50"
+      archive:                               LMNWABASICAPPS29P_4-80000675.SCA
+      checksum:                              95c01fca8081cb88573206f47c5e8d6b559ab199d73ceba90c7e77f66f169656
+      url:                                   https://softwaredownloads.sap.com/file/0020000000019652025
+      path:                                  download_basket
 
-    - name:                            "SP29 Patch1 for LMNWABASICCOMP 7.50"
-      archive:                         LMNWABASICCOMP29P_1-80000681.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000001126652024
-      path:                            download_basket
+    - name:                                  "SP29 Patch1 for LMNWABASICCOMP 7.50"
+      archive:                               LMNWABASICCOMP29P_1-80000681.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000001126652024
+      path:                                  download_basket
 
-    - name:                            "Patch for LM NWA BASIC MBEAN 7.50 SP29"
-      archive:                         LMNWABASICMBEAN29P_1-80000676.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000001126642024
-      path:                            download_basket
+    - name:                                  "Patch for LM NWA BASIC MBEAN 7.50 SP29"
+      archive:                               LMNWABASICMBEAN29P_1-80000676.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000001126642024
+      path:                                  download_basket
     # kernel components
 
-    - name:                            "SP29 for LM NWA CDP 7.50"
-      archive:                         LMNWACDP29_0-80000677.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000585152024
-      path:                            download_basket
-    - name:                            "SP29 for LM NWA TOOLS 7.50"
-      archive:                         LMNWATOOLS29_0-80000678.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000584992024
-      path:                            download_basket
-    - name:                            "SP29 for LM NWA UI FRAMEWORK 7.50"
-      archive:                         LMNWAUIFRMRK29_0-80000679.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000584952024
-      path:                            download_basket
-    - name:                            "SP14 Patch23 for SOLMANDIAG 720"
-      archive:                         LMSERVICE14_23-80000341.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000001457872024
-      path:                            download_basket
-    - name:                            "SP29 for LM SLD 7.50"
-      archive:                         LMSLD29_0-80000680.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000584222024
-      path:                            download_basket
-    - name:                            "SP29 for LIFECYCLE MGMT TOOLS 7.50"
-      archive:                         LMTOOLS29_0-80000668.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000584912024
-      path:                            download_basket
+    - name:                                  "SP29 for LM NWA CDP 7.50"
+      archive:                               LMNWACDP29_0-80000677.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000000585152024
+      path:                                  download_basket
+    - name:                                  "SP29 for LM NWA TOOLS 7.50"
+      archive:                               LMNWATOOLS29_0-80000678.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000000584992024
+      path:                                  download_basket
+    - name:                                  "SP29 for LM NWA UI FRAMEWORK 7.50"
+      archive:                               LMNWAUIFRMRK29_0-80000679.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000000584952024
+      path:                                  download_basket
+    - name:                                  "SP14 Patch23 for SOLMANDIAG 720"
+      archive:                               LMSERVICE14_23-80000341.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000001457872024
+      path:                                  download_basket
+    - name:                                  "SP29 for LM SLD 7.50"
+      archive:                               LMSLD29_0-80000680.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000000584222024
+      path:                                  download_basket
+    - name:                                  "SP29 for LIFECYCLE MGMT TOOLS 7.50"
+      archive:                               LMTOOLS29_0-80000668.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000000584912024
+      path:                                  download_basket
     # other components
 
-    - name:                            "SP29 Patch10 for MESSAGING SYSTEM SERVICE 7.50"
-      archive:                         MESSAGING29P_10-80000682.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000029722025
-      checksum:                        2bfb4d9c3573c99e1a9de28e67620947ff0fab8443abfa056e4c005144964eaf
-      path:                            download_basket
+    - name:                                  "SP29 Patch10 for MESSAGING SYSTEM SERVICE 7.50"
+      archive:                               MESSAGING29P_10-80000682.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000000029722025
+      checksum:                              2bfb4d9c3573c99e1a9de28e67620947ff0fab8443abfa056e4c005144964eaf
+      path:                                  download_basket
 
-    - name:                            "SP29 Patch2 for MMR SERVER 7.50"
-      archive:                         MMRSERVER29P_2-80000683.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000001013222024
-      path:                            download_basket
+    - name:                                  "SP29 Patch2 for MMR SERVER 7.50"
+      archive:                               MMRSERVER29P_2-80000683.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000001013222024
+      path:                                  download_basket
     # kernel components
 
-    - name:                            "SP29 for MOIN BUILD TOOL 7.50"
-      archive:                         MOINBUILDT29_0-80000684.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000584252024
-      path:                            download_basket
-    - name:                            "SP29 for NW TECHNOLOGY TOOLS 7.50"
-      archive:                         NWTEC29_0-80000686.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000584262024
-      path:                            download_basket
-    - name:                            "SP29 for SAP ODATA4J+CXF-REST LIB 7.50"
-      archive:                         ODATACXFEXT29_0-80000706.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000583872024
-      path:                            download_basket
-    - name:                            "SP29 for DI BUILD TOOL 7.50"
-      archive:                         SAPBUILDT29_0-80000606.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000584072024
-      path:                            download_basket
+    - name:                                  "SP29 for MOIN BUILD TOOL 7.50"
+      archive:                               MOINBUILDT29_0-80000684.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000000584252024
+      path:                                  download_basket
+    - name:                                  "SP29 for NW TECHNOLOGY TOOLS 7.50"
+      archive:                               NWTEC29_0-80000686.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000000584262024
+      path:                                  download_basket
+    - name:                                  "SP29 for SAP ODATA4J+CXF-REST LIB 7.50"
+      archive:                               ODATACXFEXT29_0-80000706.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000000583872024
+      path:                                  download_basket
+    - name:                                  "SP29 for DI BUILD TOOL 7.50"
+      archive:                               SAPBUILDT29_0-80000606.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000000584072024
+      path:                                  download_basket
     # other components
 
-    - name:                            "Kernel Part II (754) ; OS: Linux on x86_64 64bit ; DB: SAP HANA database"
-      archive:                         SAPEXEDB_400-80007611.SAR
-      checksum:                        7dc41cf769ef74e9af7628bfe0ffa3c1c61ed6d0ce1b15b7255c85ebee9a585d
-      url:                             https://softwaredownloads.sap.com/file/0020000000982042024
-      extract:                         false
-      path:                            download_basket
+    - name:                                  "Kernel Part II (754) ; OS: Linux on x86_64 64bit ; DB: SAP HANA database"
+      archive:                               SAPEXEDB_400-80007611.SAR
+      checksum:                              7dc41cf769ef74e9af7628bfe0ffa3c1c61ed6d0ce1b15b7255c85ebee9a585d
+      url:                                   https://softwaredownloads.sap.com/file/0020000000982042024
+      extract:                               false
+      path:                                  download_basket
 
-    - name:                            "Kernel Part I (754) ; OS: Linux on x86_64 64bit ; DB: Database independe"
-      archive:                         SAPEXE_400-80007612.SAR
-      url:                             https://softwaredownloads.sap.com/file/0020000000982412024
-      extract:                         false
-      path:                            download_basket
+    - name:                                  "Kernel Part I (754) ; OS: Linux on x86_64 64bit ; DB: Database independe"
+      archive:                               SAPEXE_400-80007612.SAR
+      url:                                   https://softwaredownloads.sap.com/file/0020000000982412024
+      extract:                               false
+      path:                                  download_basket
 
-    - name:                            "SAP HOST AGENT 7.22 SP66 ; OS: Linux on x86_64 64bit"
-      archive:                         SAPHOSTAGENT66_66-80004822.SAR
-      checksum:                        b722469aaa23247055214f42d0bb49c8506ed8faac177a5b1a48087e4cb6d8e0
-      url:                             https://softwaredownloads.sap.com/file/0020000001380962024
-      extract:                         false
-      path:                            download_basket
+    - name:                                  "SAP HOST AGENT 7.22 SP66 ; OS: Linux on x86_64 64bit"
+      archive:                               SAPHOSTAGENT66_66-80004822.SAR
+      checksum:                              b722469aaa23247055214f42d0bb49c8506ed8faac177a5b1a48087e4cb6d8e0
+      url:                                   https://softwaredownloads.sap.com/file/0020000001380962024
+      extract:                               false
+      path:                                  download_basket
 
-    - name:                            "SAP JVM 8.1 ; OS: Linux on x86_64 64bit"
-      archive:                         SAPJVM8_96-80000202.SAR
-      checksum:                        68bec74b2dca949c0a97f4432dfb0c80aa77540b5937edf4d1e221d7a634b4f1
-      url:                             https://softwaredownloads.sap.com/file/0020000001263482023
-      extract:                         false
-      path:                            download_basket
+    - name:                                  "SAP JVM 8.1 ; OS: Linux on x86_64 64bit"
+      archive:                               SAPJVM8_96-80000202.SAR
+      checksum:                              68bec74b2dca949c0a97f4432dfb0c80aa77540b5937edf4d1e221d7a634b4f1
+      url:                                   https://softwaredownloads.sap.com/file/0020000001263482023
+      extract:                               false
+      path:                                  download_basket
     # kernel components
 
-    - name:                            "SP31 Patch0 for XI 3RD PARTY 7.50"
-      archive:                         SAPXI3RDPARTY31_0-80000870.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000001308652024
-      path:                            download_basket
+    - name:                                  "SP31 Patch0 for XI 3RD PARTY 7.50"
+      archive:                               SAPXI3RDPARTY31_0-80000870.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000001308652024
+      path:                                  download_basket
 
-    - name:                            "SP29 for SECURITY EXTENSIONS 7.50"
-      archive:                         SECURITYEXT29_0-80000712.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000584302024
-      path:                            download_basket
+    - name:                                  "SP29 for SECURITY EXTENSIONS 7.50"
+      archive:                               SECURITYEXT29_0-80000712.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000000584302024
+      path:                                  download_basket
     # other components
 
-    - name:                            "SP29 Patch16 for J2EE ENGINE SERVERCORE 7.50"
-      archive:                         SERVERCORE29P_16-80000485.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000001350962024
-      path:                            download_basket
+    - name:                                  "SP29 Patch16 for J2EE ENGINE SERVERCORE 7.50"
+      archive:                               SERVERCORE29P_16-80000485.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000001350962024
+      path:                                  download_basket
     # kernel components
 
-    - name:                            "SP29 for SERVICE COMPOSITION 7.50"
-      archive:                         SERVICECOMP29_0-80000713.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000584312024
-      path:                            download_basket
+    - name:                                  "SP29 for SERVICE COMPOSITION 7.50"
+      archive:                               SERVICECOMP29_0-80000713.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000000584312024
+      path:                                  download_basket
 
-    - name:                            "SP29 for SOA MONITORS BASIC 7.50"
-      archive:                         SOAMONBASIC29_0-80000715.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000583822024
-      path:                            download_basket
+    - name:                                  "SP29 for SOA MONITORS BASIC 7.50"
+      archive:                               SOAMONBASIC29_0-80000715.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000000583822024
+      path:                                  download_basket
 
-    - name:                            "SP29 for SR UI 7.50"
-      archive:                         SRUI29_0-80000717.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000582462024
-      path:                            download_basket
+    - name:                                  "SP29 for SR UI 7.50"
+      archive:                               SRUI29_0-80000717.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000000582462024
+      path:                                  download_basket
     # other components
 
     # kernel components
 
-    - name:                            "SP29 for SAP SUPPORT TOOLS 7.50"
-      archive:                         SUPPORTTOOLS29_0-80000707.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000583892024
-      path:                            download_basket
+    - name:                                  "SP29 for SAP SUPPORT TOOLS 7.50"
+      archive:                               SUPPORTTOOLS29_0-80000707.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000000583892024
+      path:                                  download_basket
 
-    - name:                            "SP29 for SOFTWARE LIFECYCLE 7.50"
-      archive:                         SWLIFECYCL29_0-80000716.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000582472024
-      path:                            download_basket
+    - name:                                  "SP29 for SOFTWARE LIFECYCLE 7.50"
+      archive:                               SWLIFECYCL29_0-80000716.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000000582472024
+      path:                                  download_basket
     # other components
 
-    - name:                            "SP29 Patch2 for ES UDDI 7.50"
-      archive:                         UDDI29P_2-80000499.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000854242024
-      path:                            download_basket
-    - name:                            "SP31 Patch1 for SAPUI5 CLIENT RT AS JAVA 7.50"
-      archive:                         UISAPUI5JAVA31P_1-80000708.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000001382052024
-      path:                            download_basket
+    - name:                                  "SP29 Patch2 for ES UDDI 7.50"
+      archive:                               UDDI29P_2-80000499.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000000854242024
+      path:                                  download_basket
+    - name:                                  "SP31 Patch1 for SAPUI5 CLIENT RT AS JAVA 7.50"
+      archive:                               UISAPUI5JAVA31P_1-80000708.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000001382052024
+      path:                                  download_basket
     # kernel components
 
-    - name:                            "SP29 for UKMS JAVA 7.50"
-      archive:                         UKMSJAVA29_0-80000719.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000582522024
-      path:                            download_basket
+    - name:                                  "SP29 for UKMS JAVA 7.50"
+      archive:                               UKMSJAVA29_0-80000719.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000000582522024
+      path:                                  download_basket
     # other components
 
-    - name:                            "SP29 Patch1 for UME ADMINISTRATION 7.50"
-      archive:                         UMEADMIN29P_1-80000720.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000001350952024
-      path:                            download_basket
+    - name:                                  "SP29 Patch1 for UME ADMINISTRATION 7.50"
+      archive:                               UMEADMIN29P_1-80000720.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000001350952024
+      path:                                  download_basket
     # kernel components
 
-    - name:                            "SP29 for WEB DYNPRO ADOBE 7.50"
-      archive:                         WDADOBE29_0-80000729.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000582432024
-      path:                            download_basket
+    - name:                                  "SP29 for WEB DYNPRO ADOBE 7.50"
+      archive:                               WDADOBE29_0-80000729.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000000582432024
+      path:                                  download_basket
 
-    - name:                            "SP29 for WEB DYNPRO APPLICATIONS 7.50"
-      archive:                         WDAPPS29_0-80000730.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000582612024
-      path:                            download_basket
+    - name:                                  "SP29 for WEB DYNPRO APPLICATIONS 7.50"
+      archive:                               WDAPPS29_0-80000730.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000000582612024
+      path:                                  download_basket
     # other components
 
-    - name:                            "SP29 Patch5 for WEB DYNPRO RUNTIME 7.50"
-      archive:                         WDRUNTIME29P_5-80000736.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000001456652024
-      path:                            download_basket
+    - name:                                  "SP29 Patch5 for WEB DYNPRO RUNTIME 7.50"
+      archive:                               WDRUNTIME29P_5-80000736.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000001456652024
+      path:                                  download_basket
     # kernel components
 
-    - name:                            "SP29 for WEB DYNPRO RUNTIME EXT 7.50"
-      archive:                         WDRUNTIMEEXT29_0-80000733.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000584332024
-      path:                            download_basket
+    - name:                                  "SP29 for WEB DYNPRO RUNTIME EXT 7.50"
+      archive:                               WDRUNTIMEEXT29_0-80000733.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000000584332024
+      path:                                  download_basket
 
-    - name:                            "SP29 for ESI - WSRM 7.50"
-      archive:                         WSRM29_0-80000632.SCA
-      url:                             https://softwaredownloads.sap.com/file/0020000000581782024
-      path:                            download_basket
+    - name:                                  "SP29 for ESI - WSRM 7.50"
+      archive:                               WSRM29_0-80000632.SCA
+      url:                                   https://softwaredownloads.sap.com/file/0020000000581782024
+      path:                                  download_basket
     # other components
 
-    - name:                            "Installation for SAP IGS integrated in SAP Kernel ; OS: Linux on x86_64"
-      archive:                         igsexe_5-80007786.sar
-      path:                            download_basket
-      checksum:                        7c066400840850f39ffde61f8c2c00e96f1ca51a85f191258afb367a7b5a2ebc
-      url:                             https://softwaredownloads.sap.com/file/0020000001255692024
+    - name:                                  "Installation for SAP IGS integrated in SAP Kernel ; OS: Linux on x86_64"
+      archive:                               igsexe_5-80007786.sar
+      path:                                  download_basket
+      checksum:                              7c066400840850f39ffde61f8c2c00e96f1ca51a85f191258afb367a7b5a2ebc
+      url:                                   https://softwaredownloads.sap.com/file/0020000001255692024
     # kernel components
 
-    - name:                            "SAP IGS Fonts and Textures"
-      archive:                         igshelper_17-10010245.sar
-      url:                             https://softwaredownloads.sap.com/file/0020000000703122018
-      path:                            download_basket
+    - name:                                  "SAP IGS Fonts and Textures"
+      archive:                               igshelper_17-10010245.sar
+      url:                                   https://softwaredownloads.sap.com/file/0020000000703122018
+      path:                                  download_basket
 
 ...

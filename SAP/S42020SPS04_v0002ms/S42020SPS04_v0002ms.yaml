@@ -984,11 +984,11 @@ materials:
       url:                                   https://softwaredownloads.sap.com/file/0010000001467632021
       download:                              false
 
-    - name: "Attribute Change Package 37 for SAP_HR 608"
-      archive: SAP_HR608.SAR
-      checksum: f12b3a57e62300c2d983f0cafcabd646adce0359a5762d9c992ed4c8cb4958e4
-      url: https://softwaredownloads.sap.com/file/0010000000249512014
-      download: false
+    - name:                                  "Attribute Change Package 37 for SAP_HR 608"
+      archive:                               SAP_HR608.SAR
+      checksum:                              f12b3a57e62300c2d983f0cafcabd646adce0359a5762d9c992ed4c8cb4958e4
+      url:                                   https://softwaredownloads.sap.com/file/0010000000249512014
+      download:                              false
 
     - name:                                  "Attribute Change Package 04 for SAP_UI 755"
       archive:                               SAP_UI755.SAR

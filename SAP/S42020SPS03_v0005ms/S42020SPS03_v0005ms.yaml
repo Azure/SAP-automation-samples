@@ -7,10 +7,10 @@
     platform:                                'HANA'
     InstanceType:                            "ABAP"
 
-    defaults:                                
+    defaults:
       target_location:                       "{{ target_media_location }}/download_basket"
 
-    product_ids:                             
+    product_ids:
       scs:                                   NW_ABAP_ASCS:S4HANA2020.CORE.HDB.ABAP
       scs_ha:                                NW_ABAP_ASCS:S4HANA2020.CORE.HDB.ABAPHA
       dbl:                                   NW_ABAP_DB:S4HANA2020.CORE.HDB.ABAP
@@ -18,18 +18,18 @@
       pas_ha:                                NW_ABAP_CI:S4HANA2020.CORE.HDB.ABAPHA
       app:                                   NW_DI:S4HANA2020.CORE.HDB.PD
       app_ha:                                NW_DI:S4HANA2020.CORE.HDB.ABAPHA
-      web:                                   
+      web:
       ers:                                   NW_ERS:S4HANA2020.CORE.HDB.ABAP
       ers_ha:                                NW_ERS:S4HANA2020.CORE.HDB.ABAPHA
       generic:                               NW_Users_Create:GENERIC.HDB.PD
 
-    materials:                               
-      dependencies:                          
+    materials:
+      dependencies:
         - name:                              HANA_2_00_067_v0006ms
         - name:                              SWPM20SP20_latest
         - name:                              SUM20SP22_latest
 
-      media:                                 
+      media:
         # SAPCAR 7.XX
 
         - name:                              "SAPCAR 7.22; OS: Linux on x86_64 64bit"
@@ -975,11 +975,11 @@
           url:                               https://softwaredownloads.sap.com/file/0010000001467632021
           download:                          false
 
-        - name: "Attribute Change Package 37 for SAP_HR 608"
-          archive: SAP_HR608.SAR
-          checksum: f12b3a57e62300c2d983f0cafcabd646adce0359a5762d9c992ed4c8cb4958e4
-          url: https://softwaredownloads.sap.com/file/0010000000249512014
-          download: false
+        - name:                              "Attribute Change Package 37 for SAP_HR 608"
+          archive:                           SAP_HR608.SAR
+          checksum:                          f12b3a57e62300c2d983f0cafcabd646adce0359a5762d9c992ed4c8cb4958e4
+          url:                               https://softwaredownloads.sap.com/file/0010000000249512014
+          download:                          false
 
         - name:                              "Attribute Change Package 04 for SAP_UI 755"
           archive:                           SAP_UI755.SAR

@@ -1,136 +1,136 @@
 ---
-# Download time:  xx Minutes (Full    - xx GB)
-# Download time:  xx Minutes (Partial - xx GB)
+# Download time:                             xx Minutes (Full    - xx GB)
+# Download time:                             xx Minutes (Partial - xx GB)
 #
-name:                                   'SOLMAN_72SR2_v0001ms.yaml'
-target:                                 'Solution Manager 7.2 FPS 12'
+name:                                        'SOLMAN_72SR2_v0001ms.yaml'
+target:                                      'Solution Manager 7.2 FPS 12'
 
-version:                                1
-platform:                               HANA
-InstanceType:                           ABAP
+version:                                     1
+platform:                                    HANA
+InstanceType:                                ABAP
 defaults:
-  target_location:                      "{ target_media_location }/download_basket"
+  target_location:                           "{ target_media_location }/download_basket"
 
 
 product_ids:
-  scs:                                  "NW_ABAP_ASCS:SOLMAN72SR2.ABAP.HDB.PD"
-  dbl:                                  "NW_ABAP_DB:SOLMAN72SR2.ABAP.HDB.PD"
-  pas:                                  "NW_ABAP_CI:SOLMAN72SR2.ABAP.HDB.PD"
-  app:                                  "NW_DI:SOLMAN72SR2.ABAP.HDB.PD" 
-  scs_ha:                               "NW_ABAP_ASCS:SOLMAN72SR2.ABAP.HDB.HA"
-  ers_ha:                               "NW_ERS:SOLMAN72SR2.ABAP.HDB.HA"
-  dbl_ha:                               "NW_ABAP_DB:SOLMAN72SR2.ABAP.HDB.HA"
-  pas_ha:                               "NW_ABAP_CI:SOLMAN72SR2.ABAP.HDB.HA"
-  app_ha:                               "NW_DI:SOLMAN72SR2.ABAP.HDB.HA"
-  generic:                              "NW_Users_Create:GENERIC.HDB.PD"
+  scs:                                       "NW_ABAP_ASCS:SOLMAN72SR2.ABAP.HDB.PD"
+  dbl:                                       "NW_ABAP_DB:SOLMAN72SR2.ABAP.HDB.PD"
+  pas:                                       "NW_ABAP_CI:SOLMAN72SR2.ABAP.HDB.PD"
+  app:                                       "NW_DI:SOLMAN72SR2.ABAP.HDB.PD"
+  scs_ha:                                    "NW_ABAP_ASCS:SOLMAN72SR2.ABAP.HDB.HA"
+  ers_ha:                                    "NW_ERS:SOLMAN72SR2.ABAP.HDB.HA"
+  dbl_ha:                                    "NW_ABAP_DB:SOLMAN72SR2.ABAP.HDB.HA"
+  pas_ha:                                    "NW_ABAP_CI:SOLMAN72SR2.ABAP.HDB.HA"
+  app_ha:                                    "NW_DI:SOLMAN72SR2.ABAP.HDB.HA"
+  generic:                                   "NW_Users_Create:GENERIC.HDB.PD"
 
 materials:
   dependencies:
-    - name:                            HANA_2_00_081_v0001ms
-    - name:                            SWPM10SP43_latest
+    - name:                                  HANA_2_00_081_v0001ms
+    - name:                                  SWPM10SP43_latest
 
   media:
     # SAPCAR 7.22
-    - name:                            SAPCAR
-      archive:                         SAPCAR_1010-70006178.EXE
-      filename:                        SAPCAR
-      permissions:                     '0755'
-      url:                             https://softwaredownloads.sap.com/file/0020000002208852020
+    - name:                                  SAPCAR
+      archive:                               SAPCAR_1010-70006178.EXE
+      filename:                              SAPCAR
+      permissions:                           '0755'
+      url:                                   https://softwaredownloads.sap.com/file/0020000002208852020
 
     # Kernel
-    - name:                            "Kernel Part I (753) ; OS: Linux on x86_64 64bit ; DB: Database independe"
-      archive:                         SAPEXE_800-80002573.SAR
-      path:                            download_basket
-      url:                             https://softwaredownloads.sap.com/file/0020000000401022021
+    - name:                                  "Kernel Part I (753) ; OS: Linux on x86_64 64bit ; DB: Database independe"
+      archive:                               SAPEXE_800-80002573.SAR
+      path:                                  download_basket
+      url:                                   https://softwaredownloads.sap.com/file/0020000000401022021
 
-    - name:                            "Kernel Part II (753) ; OS: Linux on x86_64 64bit ; DB: SAP HANA database"
-      archive:                         SAPEXEDB_800-80002572.SAR
-      path:                            download_basket
-      url:                             https://softwaredownloads.sap.com/file/0020000000401532021
+    - name:                                  "Kernel Part II (753) ; OS: Linux on x86_64 64bit ; DB: SAP HANA database"
+      archive:                               SAPEXEDB_800-80002572.SAR
+      path:                                  download_basket
+      url:                                   https://softwaredownloads.sap.com/file/0020000000401532021
 
     # SAP Host Agent
-    - name:                            "SAP HOST AGENT 7.22 SP56"
-      archive:                         SAPHOSTAGENT56_56-80004822.SAR
-      checksum:                        9bd51d95caae86fdb33cb74ae8e478b7689f7321bb20058d5d27143ac54566c1
-      path:                            download_basket
-      url:                             https://softwaredownloads.sap.com/file/0020000000591682022
+    - name:                                  "SAP HOST AGENT 7.22 SP56"
+      archive:                               SAPHOSTAGENT56_56-80004822.SAR
+      checksum:                              9bd51d95caae86fdb33cb74ae8e478b7689f7321bb20058d5d27143ac54566c1
+      path:                                  download_basket
+      url:                                   https://softwaredownloads.sap.com/file/0020000000591682022
 
-    - name:                            "Installation for SAP IGS integrated in SAP Kernel"
-      archive:                         igsexe_13-80003187.sar
-      checksum:                        b508b1ff97ec0e3b7f4dd8f57e3840eb547b6326434df677927b8cfd6b4faa12
-      url:                             https://softwaredownloads.sap.com/file/0020000000534572021
-      path:                            download_basket
+    - name:                                  "Installation for SAP IGS integrated in SAP Kernel"
+      archive:                               igsexe_13-80003187.sar
+      checksum:                              b508b1ff97ec0e3b7f4dd8f57e3840eb547b6326434df677927b8cfd6b4faa12
+      url:                                   https://softwaredownloads.sap.com/file/0020000000534572021
+      path:                                  download_basket
 
-    - name:                            "SAP IGS Fonts and Textures"
-      archive:                         igshelper_17-10010245.sar
-      checksum:                        bc405afc4f8221aa1a10a8bc448f8afd9e4e00111100c5544097240c57c99732
-      url:                             https://softwaredownloads.sap.com/file/0020000000703122018
-      path:                            download_basket
+    - name:                                  "SAP IGS Fonts and Textures"
+      archive:                               igshelper_17-10010245.sar
+      checksum:                              bc405afc4f8221aa1a10a8bc448f8afd9e4e00111100c5544097240c57c99732
+      url:                                   https://softwaredownloads.sap.com/file/0020000000703122018
+      path:                                  download_basket
 
 
     # IGS
-    - name:                            "Installation for SAP IGS integrated in SAP Kernel ; OS: Linux on x86_64"
-      archive:                         igsexe_13-80003187.sar
-      path:                            download_basket
-      url:                             https://softwaredownloads.sap.com/file/0020000000534572021
+    - name:                                  "Installation for SAP IGS integrated in SAP Kernel ; OS: Linux on x86_64"
+      archive:                               igsexe_13-80003187.sar
+      path:                                  download_basket
+      url:                                   https://softwaredownloads.sap.com/file/0020000000534572021
 
-    - name:                            "SAP IGS Fonts and Textures"
-      archive:                         igshelper_17-10010245.sar
-      path:                            download_basket
-      url:                             https://softwaredownloads.sap.com/file/0020000000703122018
+    - name:                                  "SAP IGS Fonts and Textures"
+      archive:                               igshelper_17-10010245.sar
+      path:                                  download_basket
+      url:                                   https://softwaredownloads.sap.com/file/0020000000703122018
 
     # DB Export
-    - name:                            "SAP Solution Manager 7.2 SR2 Installation Export I"
-      archive:                         51054655_1.zip
-      path:                            download_basket
-      url:                             https://softwaredownloads.sap.com/file/0030000000222342021
-      checksum:                        66146ff62acb7ef2d99f13eaa4cb71b63e51a0dd35591ac80484ffb890e3e7e4
-      extract:                         true
-      extractDir:                      CD_EXPORT
+    - name:                                  "SAP Solution Manager 7.2 SR2 Installation Export I"
+      archive:                               51054655_1.zip
+      path:                                  download_basket
+      url:                                   https://softwaredownloads.sap.com/file/0030000000222342021
+      checksum:                              66146ff62acb7ef2d99f13eaa4cb71b63e51a0dd35591ac80484ffb890e3e7e4
+      extract:                               true
+      extractDir:                            CD_EXPORT
 
-    - name:                            "SAP Solution Manager 7.2 SR2 Installation Export II"
-      archive:                         51054655_2.zip
-      path:                            download_basket
-      url:                             https://softwaredownloads.sap.com/file/0030000000222362021
-      checksum:                        b5ea2e9024db3bfe50ce422652f04194b7af4f8fdea7f42809f8e44ea546d6ab
-      extract:                         true
-      extractDir:                      CD_EXPORT
+    - name:                                  "SAP Solution Manager 7.2 SR2 Installation Export II"
+      archive:                               51054655_2.zip
+      path:                                  download_basket
+      url:                                   https://softwaredownloads.sap.com/file/0030000000222362021
+      checksum:                              b5ea2e9024db3bfe50ce422652f04194b7af4f8fdea7f42809f8e44ea546d6ab
+      extract:                               true
+      extractDir:                            CD_EXPORT
 
     # Languages
-    - name:                            "SAP Solution Manager 7.2 SR2 Language"
-      archive:                         51054655_3.zip
-      path:                            download_basket
-      url:                             https://softwaredownloads.sap.com/file/0030000000222352021
-      checksum:                        178ed3a7bc50c82a9ba2d7dafb183c8f4721f3dcad5a8d89d84f8e409ee1e3db
-      extract:                         true
-      extractDir:                      CD_EXPORT
+    - name:                                  "SAP Solution Manager 7.2 SR2 Language"
+      archive:                               51054655_3.zip
+      path:                                  download_basket
+      url:                                   https://softwaredownloads.sap.com/file/0030000000222352021
+      checksum:                              178ed3a7bc50c82a9ba2d7dafb183c8f4721f3dcad5a8d89d84f8e409ee1e3db
+      extract:                               true
+      extractDir:                            CD_EXPORT
 
-    - name:                            "SAP Solution Manager 7.2 SR2 - Java"
-      archive:                         51054655_4.zip
-      path:                            download_basket
-      url:                             https://softwaredownloads.sap.com/file/0030000000221892021
-      checksum:                        09bc876af4ddb19736e2ef9c58ec10915b8db1cdcd647f56701b6a0537069b7b
-      extract:                         true
-      extractDir:                      CD_EXPORT
+    - name:                                  "SAP Solution Manager 7.2 SR2 - Java"
+      archive:                               51054655_4.zip
+      path:                                  download_basket
+      url:                                   https://softwaredownloads.sap.com/file/0030000000221892021
+      checksum:                              09bc876af4ddb19736e2ef9c58ec10915b8db1cdcd647f56701b6a0537069b7b
+      extract:                               true
+      extractDir:                            CD_EXPORT
 
-    - name:                            "ST-SER 720: SP 0020"
-      archive:                         K-72020INSTSER.SAR
-      download:                        true
-      url:                             https://softwaredownloads.sap.com/file/0010000001996882020
+    - name:                                  "ST-SER 720: SP 0020"
+      archive:                               K-72020INSTSER.SAR
+      download:                              true
+      url:                                   https://softwaredownloads.sap.com/file/0010000001996882020
 
-    - name:                            "ST-SER 720: SP 0021"
-      archive:                         K-72021INSTSER.SAR
-      download:                        true
-      url:                             https://softwaredownloads.sap.com/file/0010000000548132021
+    - name:                                  "ST-SER 720: SP 0021"
+      archive:                               K-72021INSTSER.SAR
+      download:                              true
+      url:                                   https://softwaredownloads.sap.com/file/0010000000548132021
 
-    - name:                            "SAP_GWFND 740: SP 0025"
-      archive:                         K-74025INSAPGWFND.SAR
-      download:                        true
-      url:                             https://softwaredownloads.sap.com/file/0010000001928582020
+    - name:                                  "SAP_GWFND 740: SP 0025"
+      archive:                               K-74025INSAPGWFND.SAR
+      download:                              true
+      url:                                   https://softwaredownloads.sap.com/file/0010000001928582020
 
-    - name:                            "SAP_UI 754: SP 0006"
-      archive:                         K-75406INSAPUI.SAR
-      download:                        true
-      url:                             https://softwaredownloads.sap.com/file/0010000000325802021
+    - name:                                  "SAP_UI 754: SP 0006"
+      archive:                               K-75406INSAPUI.SAR
+      download:                              true
+      url:                                   https://softwaredownloads.sap.com/file/0010000000325802021
 
 ...

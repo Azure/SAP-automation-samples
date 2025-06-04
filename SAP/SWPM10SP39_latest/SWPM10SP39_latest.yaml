@@ -1,19 +1,19 @@
 ---
-name:    'SWPM10SP39'
-target:  'SWPM10SP39'
-version: 005
+name:                                        'SWPM10SP39'
+target:                                      'SWPM10SP39'
+version:                                     005
 
 materials:
 
   media:
     # SWPM
-    - name:         "SWPM 1.0 SP39 for NW higher than 7.0x; Support Package SOFTWARE PROVISIONING MGR 1.0 Linux on x86_64 64bit"
-      archive:      SWPM10SP39_5-20009701.SAR
-      checksum:     bdd4eebffb37dd4d732b16f5580d7b175d88dd1f3fe69376586208e1bbfb9a20
-      extract:      true
-      extractDir:   SWPM
-      creates:      SIGNATURE.SMF
-      url:          https://softwaredownloads.sap.com/file/0020000000134582024
+    - name:                                  "SWPM 1.0 SP39 for NW higher than 7.0x; Support Package SOFTWARE PROVISIONING MGR 1.0 Linux on x86_64 64bit"
+      archive:                               SWPM10SP39_5-20009701.SAR
+      checksum:                              bdd4eebffb37dd4d732b16f5580d7b175d88dd1f3fe69376586208e1bbfb9a20
+      extract:                               true
+      extractDir:                            SWPM
+      creates:                               SIGNATURE.SMF
+      url:                                   https://softwaredownloads.sap.com/file/0020000000134582024
       
 
 ...

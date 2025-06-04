@@ -43,3 +43,4 @@ override.tf.json
 
 # Built Visual Studio Code Extensions
 *.vsix
+SAP/allfiles.ps1

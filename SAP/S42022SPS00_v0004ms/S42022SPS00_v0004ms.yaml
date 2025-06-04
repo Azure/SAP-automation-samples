@@ -7,11 +7,11 @@ version:                                     3
 platform:                                    'HANA'
 InstanceType:                                'ABAP'
 
-defaults:                                    
+defaults:
   target_location:                           "{{ target_media_location }}/download_basket"
 
 # HA product IDs need to be verified
-product_ids:                                 
+product_ids:
   scs:                                       "NW_ABAP_ASCS:S4HANA2022.CORE.HDB.ABAP"
   scs_ha:                                    "NW_ABAP_ASCS:S4HANA2022.CORE.HDB.ABAPHA"
   dbl:                                       "NW_ABAP_DB:S4HANA2022.CORE.HDB.ABAP"
@@ -24,10 +24,10 @@ product_ids:
   ers_ha:                                    "NW_ERS:S4HANA2022.CORE.HDB.ABAPHA"
   generic:                                   "NW_Users_Create:GENERIC.HDB.PD"
 
-materials:                                   
-  dependencies:                              
+materials:
+  dependencies:
     - name:                                  "HANA_2_00_077_v0002ms"
-  media:                                     
+  media:
 
     # SWPM - Dynamic Download
     - name:                                  swpm20
@@ -369,13 +369,13 @@ materials:
     - name:                                  "UIHR002 100: SP 0006"
       archive:                               K-10006INUIHR002
       checksum:                              6f05090977e230c30feb2a25b24ee9780eae53b8ba7d79248736252623224002
-      url:                                   https://softwaredownloads.sap.com/file/0010000000464552019   
+      url:                                   https://softwaredownloads.sap.com/file/0010000000464552019
       download:                              false
 
     - name:                                  "UIHR002 100: SP 0007"
       archive:                               K-10007INUIHR002
       checksum:                              4010e8821ce9badd733d92e8b372f0584e39bc0b5805e2af0ce1402ea8d5f09a
-      url:                                   https://softwaredownloads.sap.com/file/0010000001273902019   
+      url:                                   https://softwaredownloads.sap.com/file/0010000001273902019
       download:                              false
 
     - name:                                  "UIHR002 100: SP 0008"
@@ -387,7 +387,7 @@ materials:
     - name:                                  "UIHR002 100: SP 0009"
       archive:                               K-10009INUIHR002
       checksum:                              5ef6474c9ba556ba10cfa849f95a9791e612d1fe050747bfc06a2e93d0407422
-      url:                                   https://softwaredownloads.sap.com/file/0010000000341482020   
+      url:                                   https://softwaredownloads.sap.com/file/0010000000341482020
       download:                              false
 
     - name:                                  "UIHR002 100: SP 0010"
@@ -556,43 +556,43 @@ materials:
       archive:                               K-30006INUITRV001
       checksum:                              e90f40adbfc56cd39e293589041e1dc83adbbc39aec4f1944781ef0f13d9bb9e
       url:                                   https://softwaredownloads.sap.com/file/0010000000335052021
-      download:                              false      
+      download:                              false
 
     - name:                                  "UIMDG001 200: SP 0006"
       archive:                               K-30007INUITRV001
       checksum:                              442d12c4760a678d7e7969b39d2907e00d97f93874fa08e1c5d423786ff53f33
       url:                                   https://softwaredownloads.sap.com/file/0010000001278572021
-      download:                              false 
+      download:                              false
 
     - name:                                  "UIMDG001 200: SP 0006"
       archive:                               K-300AGINUITRV001
       checksum:                              ab970fce38141f3fc2752fb2169447681bb739471ebbb37385058eb50f72f02f
       url:                                   https://softwaredownloads.sap.com/file/0010000001909232018
-      download:                              false 
+      download:                              false
       
     - name:                                  "UIMDG001 200: SP 0006"
       archive:                               K-75701INSAPUI
       checksum:                              0eaed73180e5fcf73ae39a6aa41ad894cd545cfcc8e429004964d70c433a558f
       url:                                   https://softwaredownloads.sap.com/file/0010000001310042022
-      download:                              false 
+      download:                              false
       
     - name:                                  "UIMDG001 200: SP 0006"
       archive:                               K-757AGINUIBAS001
       checksum:                              d5488c81ee00a48b3bd5116a735be031ffb2197e7a316fb626d2dbf4ddfeb04f
       url:                                   https://softwaredownloads.sap.com/file/0010000000611422022
-      download:                              false 
+      download:                              false
       
     - name:                                  "UIMDG001 200: SP 0006"
       archive:                               K-800AGINUIS4HOP1
       checksum:                              f0a55286cd30e042e345b2322d5673f0f8a7c876ed57ffb0bcd6dedcc9681d1f
       url:                                   https://softwaredownloads.sap.com/file/0010000001018992022
-      download:                              false 
+      download:                              false
       
     - name:                                  "UIMDG001 200: SP 0006"
       archive:                               K-901AGINUIAPFI70
       checksum:                              2c5bf09f7dc4258649e92655e20a0fd40169371a13d5682e0a1076e0da80b122
       url:                                   https://softwaredownloads.sap.com/file/0010000001018862022
-      download:                              false 
+      download:                              false
   
   # Web Dispatcher
 

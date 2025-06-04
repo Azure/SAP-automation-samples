@@ -1,22 +1,22 @@
 ---
-name:    "SYBASE_1603SP14_v0001ms"
-target:  "Sybase 1603 SP14"
-platform: "SYBASE"
-version: 1
+name:                                        "SYBASE_1603SP14_v0001ms"
+target:                                      "Sybase 1603 SP14"
+platform:                                    "SYBASE"
+version:                                     1
 
 materials:
 
   media:
 # SAP Sybase Executables
-    - name:       "SAP ASE 16.0.03.15 RDBMS Linux on x86_64 64bit"
-      archive:     51057905_1.ZIP
-      checksum:    c7c368f9eb25a578ebd25fe9aa1464cbd484654ab2ce13873cb2c8cfb74b8929
-      extract:     true
-      download:    true
-      extractDir:  CD_SYBSERVER
-      path:        download_basket
-      creates:     CDLABEL.ASC
-      url:         https://softwaredownloads.sap.com/file/0030000000864742024
+    - name:                                  "SAP ASE 16.0.03.15 RDBMS Linux on x86_64 64bit"
+      archive:                               51057905_1.ZIP
+      checksum:                              c7c368f9eb25a578ebd25fe9aa1464cbd484654ab2ce13873cb2c8cfb74b8929
+      extract:                               true
+      download:                              true
+      extractDir:                            CD_SYBSERVER
+      path:                                  download_basket
+      creates:                               CDLABEL.ASC
+      url:                                   https://softwaredownloads.sap.com/file/0030000000864742024
       
 
 
