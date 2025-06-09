@@ -21,7 +21,7 @@ product_ids:
 materials:
   dependencies:
     - name:                                  Oracle19_v0010ms
-    - name:                                  SWPM10SP43_latest
+    - name:                                  SWPM10SP44_latest
 
   media:
     # SAPCAR 7.22

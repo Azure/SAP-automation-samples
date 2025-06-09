@@ -25,7 +25,7 @@ product_ids:
 materials:
   dependencies:
     - name:                                  DB2_UDB_11_5_v0001ms
-    - name:                                  SWPM10SP43_latest
+    - name:                                  SWPM10SP44_latest
     - name:                                  SUM20SP23_latest
 
   media:

@@ -24,7 +24,7 @@ materials:
   dependencies:
     - name:                                  "MSSQLSRV_2019_v0001ms"
     - name:                                  "SUM20SP21_win_latest"
-    - name:                                  "SWPM10SP43_win_latest"
+    - name:                                  "SWPM10SP44_win_latest"
 
   media:
 
