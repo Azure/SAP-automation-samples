@@ -1,14 +1,14 @@
 ---
 name:                                        'SUM20SP23'
 target:                                      'SUM20SP23'
-version:                                     001
+version:                                     002
 
 materials:
 
   media:
   # SUM
-  - name:                                    "Patch 1 for SOFTWARE UPDATE MANAGER 2.0 SP23 (Linux on x86_64)"
-    archive:                                 SUM20SP23_1-80002456.SAR
-    checksum:                                044975cd54a30ee2d8d155f6f9542f8f0f5de097d62de0b2faec3ebe36ddabfe
+  - name:                                    "Patch 2 for SOFTWARE UPDATE MANAGER 2.0 SP23 (Linux on x86_64)"
+    archive:                                 SUM20SP23_2-80002456.SAR
+    checksum:                                4e671059b2e6c5a5f41cdf02a3e95192a74672a9df99703c4d92bac91aa6b041
     download:                                false
-    url:                                     https://softwaredownloads.sap.com/file/0020000000584472025
+    url:                                     https://softwaredownloads.sap.com/file/0020000000658222025

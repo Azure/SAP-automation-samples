@@ -17,24 +17,24 @@ materials:
       url:                                   https://softwaredownloads.sap.com/file/0020000000098642022
 
     - name:                                  "SWPM 2.0 SP21 ; OS: Linux on x86_64 64bit"
-      archive:                               SWPM20SP21_0-80003424.SAR
-      checksum:                              b39e8d9c9e3e92c08f08f3c974afbae62b37d30995f586fd496a828575dc49db
+      archive:                               SWPM20SP21_1-80003424.SAR
+      checksum:                              6630a5f9ca7d22b8777522af03bcf90c7441b1687bbb6efbcb6879945ef3bdce
       filename:                              swpm20
       extract:                               true
       extractDir:                            SWPM
       creates:                               SIGNATURE.SMF
-      url:                                   https://softwaredownloads.sap.com/file/0020000000536452025
+      url:                                   https://softwaredownloads.sap.com/file/0020000000658372025
       path:                                  linuxswpm20
 
     - name:                                  "SWPM 1.0 SP44; NW higher than 7.0x; OS: Linux on x86_64 64bit"
-      archive:                               SWPM10SP44_0-20009701.SAR
-      checksum:                              9f56473c06a36bbd0e1070651521e203ec2be9ccbe887d93e4c528a7fbd9b696
+      archive:                               SWPM10SP44_1-20009701.SAR
+      checksum:                              df5023363f2dfdcf4397b8337c8f61d5a08802d691530848a889dbbdfd248655
       filename:                              swpm10
       extract:                               true
       extractDir:                            SWPM
       creates:                               SIGNATURE.SMF
       path:                                  linuxswpm10
-      url:                                   https://softwaredownloads.sap.com/file/0020000000536742025
+      url:                                   https://softwaredownloads.sap.com/file/0020000000658542025
 
 # ToDo:                                      Change to have the Windows components
 
@@ -45,23 +45,23 @@ materials:
       url:                                   https://softwaredownloads.sap.com/file/0020000000098632022
 
     - name:                                  "SWPM 1.0 SP44; NW higher than 7.0x; OS: Windows on x86_64 64bit"
-      archive:                               SWPM10SP44_0-20009707.SAR
-      checksum:                              0a8e5848f05a9d74564d53eed6baa9bc6aa063a5c49f19d01d258843ffdd1b25
+      archive:                               SWPM10SP44_1-20009707.SAR
+      checksum:                              fd312a8d2b3c7ab4515620bcde37ceb9e2c72b2285533aa43d69ba15436e7d26
       filename:                              swpm10win
       extract:                               true
       extractDir:                            SWPM
       creates:                               SIGNATURE.SMF
       path:                                  winswpm10
-      url:                                   https://softwaredownloads.sap.com/file/0020000000536762025
+      url:                                   https://softwaredownloads.sap.com/file/0020000000658552025
 
     - name:                                  "SWPM 2.0 SP21 ; OS: Windows on x86_64 64bit"
-      archive:                               SWPM20SP21_0-70003212.SAR
-      checksum:                              5dd33a7e6e65ed5f7e60428301af31fd0ebe561bb585b93d5a37d2ea8c2d8ec9
+      archive:                               SWPM20SP21_1-70003212.SAR
+      checksum:                              e5c14e91250b9072387fe7796f422327da2b9c2ea19d2c23278d97dd9c8280f5
       filename:                              swpm20win
       extract:                               true
       extractDir:                            SWPM
       creates:                               SIGNATURE.SMF
-      url:                                   https://softwaredownloads.sap.com/file/0020000000536512025
+      url:                                   https://softwaredownloads.sap.com/file/0020000000658672025
       path:                                  winswpm20
 
 ...
