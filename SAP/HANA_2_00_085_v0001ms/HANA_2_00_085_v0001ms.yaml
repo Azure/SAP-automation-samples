@@ -1,0 +1,70 @@
+---
+name:                                        'HANA_2_00_085_v0001ms'
+target:                                      'HANA 2.0'
+version:                                      2
+platform:                                    'HANA'
+materials:
+
+  media:
+    # SAPCAR 7.53
+    - name:                                  "SAPCAR 7.53; OS: Linux on x86_64 64bit"
+      archive:                               SAPCAR_1400-70007716.EXE
+      checksum:                              32fe4adb98c5f9238b6237fc06edc2603648295dd3d35f6b6d1fad1cbc9f24c8
+      filename:                              SAPCAR
+      permissions:                           '0755'
+      path:                                  downloads
+      url:                                   https://softwaredownloads.sap.com/file/0020000000488622025
+
+    # HANA Client v2.25
+    - name:                                  "SAP HANA CLIENT Version 2.25"
+      archive:                               IMDB_CLIENT20_025_22-80002082.SAR
+      checksum:                              ae33b5c22879ad2f15fafe6be9a784b191882921e4e593b9caf7d787344e9042
+      extract:                               true
+      extractDir:                            CD_HDBCLIENT
+      creates:                               SIGNATURE.SMF
+      path:                                  download_basket
+      url:                                   https://softwaredownloads.sap.com/file/0020000000641242025
+
+    # v2_00_085 Revision 2.00.085.0 (SPS08) for HANA DB 2.0
+    - name:                                  "SAP HANA 2 SPS08 Revision 085.0 (SPS08)"
+      archive:                               IMDB_SERVER20_085_0-80002046.SAR
+      checksum:                              f95e4faad25a119aa59de4fdb5cc8dc4016f1b34aa13841a43333c67ca9f777f
+      extract:                               true
+      extractDir:                            CD_HDBSERVER
+      creates:                               SIGNATURE.SMF
+      path:                                  download_basket
+      url:                                   https://softwaredownloads.sap.com/file/0025000000036032025
+
+    - name:                                  "SAP HANA AFL Rev 85.0 only for HANA 2.0"
+      archive:                               IMDB_AFL20_085_0-80002045.SAR
+      checksum:                              afc04859c498bc70e0952ec51165dc2dfb0c63f5a4979694936d5521f2f5b8bc
+      extract:                               true
+      extractDir:                            CD_HDBSERVER/COMPONENTS
+      creates:                               COMPONENTS/SAP_HANA_AFL/packages
+      url:                                   https://softwaredownloads.sap.com/file/0025000000035932025
+
+    - name:                                  "LCAPPS for HANA 2.0 Rev 85 Build 101.18 PL 002"
+      archive:                               IMDB_LCAPPS_2085_0-80002183.SAR
+      checksum:                              9ad5f3b9db61e71f1273b509c232b83459e2528453d0e278f74638ac6f68d325
+      extract:                               true
+      extractDir:                            CD_HDBSERVER/COMPONENTS
+      creates:                               COMPONENTS/SAP_HANA_LCAPPS/packages
+      url:                                   https://softwaredownloads.sap.com/file/0025000000036082025
+
+    - name:                                  "VCH AFL 2021 Rev 85.0 only for HANA 2.0 Rev 85"
+      archive:                               VCH202100_2085_0-70006350.SAR
+      checksum:                              ddebaedde279c5b41d69ca182d0a2338ea788b65556900050cd4e87c7805a77f
+      extract:                               true
+      extractDir:                            CD_HDBSERVER/COMPONENTS
+      creates:                               COMPONENTS/VCH_AFL_2021/packages
+      url:                                   https://softwaredownloads.sap.com/file/0025000000036162025
+
+    - name:                                  "SAP Host Agent"
+      archive:                               SAPHOSTAGENT66_66-80004822.SAR
+      checksum:                              b722469aaa23247055214f42d0bb49c8506ed8faac177a5b1a48087e4cb6d8e0
+      extract:                               false
+      download:                              true
+      path:                                  download_basket
+      url:                                   https://softwaredownloads.sap.com/file/0020000001380962024
+
+...
