@@ -2,12 +2,12 @@
 name:                                        'SUM20SP23'
 target:                                      'SUM20SP23'
 version:                                     002
-# Linux SUM changed. Leaving todo here for when windows one changes too.
+
 materials:
 
   media:
 
-    - name:                                  "Patch 3 for SOFTWARE UPDATE MANAGER 2.0 SP23 (Windows on x64 64bit)"
+    - name:                                  "Patch 2 for SOFTWARE UPDATE MANAGER 2.0 SP23 (Windows on x64 64bit)"
       archive:                               SUM20SP23_2-80002458.SAR
       checksum:                              6af70c6a290c4d43ac124b9c9651dbf5ebace4dc8efde706bacff1fec7cb210f
       download:                              false
