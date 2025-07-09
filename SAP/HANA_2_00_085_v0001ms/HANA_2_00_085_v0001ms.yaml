@@ -27,37 +27,37 @@ materials:
 
     # v2_00_085 Revision 2.00.085.0 (SPS08) for HANA DB 2.0
     - name:                                  "SAP HANA 2 SPS08 Revision 085.0 (SPS08)"
-      archive:                               IMDB_SERVER20_085_0-80002046.SAR
-      checksum:                              f95e4faad25a119aa59de4fdb5cc8dc4016f1b34aa13841a43333c67ca9f777f
+      archive:                               IMDB_SERVER20_085_0-80002031.SAR
+      checksum:                              f8b11ed89734b81193cf8d4d207e632ca42b2b5683b612916cd19ee99e3cc290
       extract:                               true
       extractDir:                            CD_HDBSERVER
       creates:                               SIGNATURE.SMF
       path:                                  download_basket
-      url:                                   https://softwaredownloads.sap.com/file/0025000000036032025
+      url:                                   https://softwaredownloads.sap.com/file/0025000000036002025
 
     - name:                                  "SAP HANA AFL Rev 85.0 only for HANA 2.0"
-      archive:                               IMDB_AFL20_085_0-80002045.SAR
-      checksum:                              afc04859c498bc70e0952ec51165dc2dfb0c63f5a4979694936d5521f2f5b8bc
+      archive:                               IMDB_AFL20_085_0-80001894.SAR
+      checksum:                              3f61b9444075be0507f93895dfd484174b9e6da5caa00efb921f5b08fd1cf28b
       extract:                               true
       extractDir:                            CD_HDBSERVER/COMPONENTS
       creates:                               COMPONENTS/SAP_HANA_AFL/packages
-      url:                                   https://softwaredownloads.sap.com/file/0025000000035932025
+      url:                                   https://softwaredownloads.sap.com/file/0025000000036022025
 
     - name:                                  "LCAPPS for HANA 2.0 Rev 85 Build 101.18 PL 002"
-      archive:                               IMDB_LCAPPS_2085_0-80002183.SAR
-      checksum:                              9ad5f3b9db61e71f1273b509c232b83459e2528453d0e278f74638ac6f68d325
+      archive:                               IMDB_LCAPPS_2085_0-20010426.SAR
+      checksum:                              3a83fd8a1d5c2797fc62b190253a3a9344b1d88e3cd3d998455120c8581bf700
       extract:                               true
       extractDir:                            CD_HDBSERVER/COMPONENTS
       creates:                               COMPONENTS/SAP_HANA_LCAPPS/packages
-      url:                                   https://softwaredownloads.sap.com/file/0025000000036082025
+      url:                                   https://softwaredownloads.sap.com/file/0025000000036072025
 
     - name:                                  "VCH AFL 2021 Rev 85.0 only for HANA 2.0 Rev 85"
-      archive:                               VCH202100_2085_0-70006350.SAR
-      checksum:                              ddebaedde279c5b41d69ca182d0a2338ea788b65556900050cd4e87c7805a77f
+      archive:                               VCH202100_2085_0-70006349.SAR
+      checksum:                              0502770257806d3617c6a81b72aafa3a31346995c00a97b9cf4e9740aaec735b
       extract:                               true
       extractDir:                            CD_HDBSERVER/COMPONENTS
       creates:                               COMPONENTS/VCH_AFL_2021/packages
-      url:                                   https://softwaredownloads.sap.com/file/0025000000036162025
+      url:                                   https://softwaredownloads.sap.com/file/0025000000036152025
 
     - name:                                  "SAP Host Agent"
       archive:                               SAPHOSTAGENT66_66-80004822.SAR
