@@ -23,16 +23,10 @@ materials:
   dependencies:
     - name:                                  HANA_2_00_085_v0001ms
     - name:                                  SWPM10SP44_latest
+    - name:                                  SUM11SP30_latest
 
   media:
-  
-  
-    # SUM - Dynamic Download
-    - name:                                  sum20
-      dynamic:                               true
-      platform:                              LNX
-      download:                              false
-
+    
     # Kernel
     - name:                                  "Kernel Part I (753) ; OS: Linux on x86_64 64bit ; DB: Database independent"
       archive:                               SAPEXE_801-80002573.SAR
