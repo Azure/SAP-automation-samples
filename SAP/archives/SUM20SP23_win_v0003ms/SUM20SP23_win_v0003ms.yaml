@@ -1,0 +1,14 @@
+---
+name:                                        'SUM20SP23'
+target:                                      'SUM20SP23'
+version:                                     003
+# Linux SUM changed. Leaving todo here for when windows one changes too.
+materials:
+# This has v2 details as v3 was not yet released when we fixed the linux variant.
+  media:
+
+    - name:                                  "Patch 3 for SOFTWARE UPDATE MANAGER 2.0 SP23 (Windows on x64 64bit)"
+      archive:                               SUM20SP23_2-80002458.SAR
+      checksum:                              6af70c6a290c4d43ac124b9c9651dbf5ebace4dc8efde706bacff1fec7cb210f
+      download:                              false
+      url:                                   https://softwaredownloads.sap.com/file/0020000000658132025
