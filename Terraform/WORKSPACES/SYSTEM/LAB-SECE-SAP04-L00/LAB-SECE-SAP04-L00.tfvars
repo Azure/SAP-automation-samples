@@ -55,6 +55,12 @@ database_platform = "HANA"
 # Description of the SAP system.
 Description = "HANA distributed system on SUSE sles-sap-15-sp5 gen2"
 
+# codename provides an additional component for naming the resources
+#codename = ""
+
+# management_subscription_id defines the management subscription used by the deployment
+#management_subscription_id = ""
+
 #########################################################################################
 #                                                                                       #
 #  Deployment parameters                                                                #
@@ -67,6 +73,15 @@ Description = "HANA distributed system on SUSE sles-sap-15-sp5 gen2"
 
 #If you want to customize the disk sizes for VMs use the following parameter to specify the custom sizing file.
 #custom_disk_sizes_filename = ""
+
+# data_plane_available defines if storage account access is via data plane
+#data_plane_available = true
+
+# disk_controller_type_database_tier defines the disk controller type for database VMs
+#disk_controller_type_database_tier = "SCSI"
+
+# disk_controller_type_app_tier defines the disk controller type for app tier VMs
+#disk_controller_type_app_tier = "SCSI"
 
 # use_secondary_ips controls if the virtual machines should be deployed with two IP addresses. Required for SAP Virtual Hostname support
 use_secondary_ips = false
@@ -1004,3 +1019,48 @@ shared_access_key_enabled = false
 
 # shared_access_key_enabled_nfs defines Storage account used for NFS shares authorization using Shared Access Key.
 shared_access_key_enabled_nfs = true
+
+#########################################################################################
+#                                                                                       #
+#                               Additional Configuration Variables                       #
+#                                                                                       #
+#########################################################################################
+
+# legacy_nic_order defines if the order of the NICs should be reversed
+#legacy_nic_order = false
+
+# use_admin_nic_suffix_for_observer defines if the admin nic suffix will be used for the observer
+#use_admin_nic_suffix_for_observer = false
+
+# use_admin_nic_for_asg defines if the admin nic will be assigned to the ASG instead of the second nic
+#use_admin_nic_for_asg = false
+
+# idle_timeout_scs_ers sets the idle timeout setting for the SCS and ERS loadbalancer
+#idle_timeout_scs_ers = 30
+
+# shared_home defines if shared-home support should be provided
+#shared_home = false
+
+# use_single_hana_shared defines if a single storage account should be used for all HANA file shares
+#use_single_hana_shared = false
+
+# enable_sap_cal defines if SAP CAL integration should be enabled
+#enable_sap_cal = false
+
+# calapi_kv defines the SAP CAL API Key Vault
+#calapi_kv = ""
+
+# sap_cal_product_name defines if SAP CAL should be used for system installation
+#sap_cal_product_name = ""
+
+# platform_updates specifies whether VMAgent Platform Updates is enabled
+#platform_updates = "true"
+
+# use_sles_saphanasr_angi defines if SAP HANA SR cluster will be configured with SAP HANA SR - An Next Generation Interface
+#use_sles_saphanasr_angi = false
+
+# database_active_active defines if database will be deployed with Active/Active configuration (HANA only)
+#database_active_active = false
+
+# enable_storage_nic defines if a storage nic should be used when scale out is enabled
+#enable_storage_nic = true

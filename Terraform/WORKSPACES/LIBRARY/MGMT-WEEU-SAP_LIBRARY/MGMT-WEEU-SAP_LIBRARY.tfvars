@@ -16,8 +16,29 @@
 # The environment value is a mandatory field, it is used for partitioning the environments, for example (PROD and NP)
 environment="MGMT"
 
+# codename is an additional component for naming the resources
+#codename = ""
+
 # The location valus is a mandatory field, it is used to control where the resources are deployed
 location="westeurope"
+
+# subscription_id defines the Azure subscription_id
+#subscription_id = ""
+
+# name_override_file contains a json formatted file defining the name overrides
+#name_override_file = ""
+
+# place_delete_lock_on_resources defines if a delete lock will be placed on the key resources
+#place_delete_lock_on_resources = false
+
+# prevent_deletion_if_contains_resources controls if resource groups are deleted even if they contain resources
+#prevent_deletion_if_contains_resources = true
+
+# short_named_endpoints_nics uses short names for private endpoints nics
+#short_named_endpoints_nics = false
+
+# deployer_prefix defines the prefix for the deployer
+#deployer_prefix = ""
 
 # RESOURCEGROUP
 # The two resource group name and arm_id can be used to control the naming and the creation of the resource group
@@ -161,3 +182,108 @@ management_dns_resourcegroup_name = ""
 
 # use_spn defines if the deployments are performed using Service Principals or the deployer's managed identiry, true=SPN, false=MSI
 # use_spn = false
+
+#########################################################################################
+#                                                                                       #
+#  Additional Variables from Main SAP Automation Repository                            #
+#                                                                                       #
+#########################################################################################
+
+# assign_permissions indicates if permissions should be assigned to the storage accounts
+#assign_permissions = true
+
+# spn_id defines the SPN ID to be used for the deployment
+#spn_id = ""
+
+# library_sapmedia_name defines the name of the storage account where the SAP bits will be stored
+#library_sapmedia_name = ""
+
+# library_terraform_state_name defines the name of the storage account where the terraform state will be stored
+#library_terraform_state_name = ""
+
+# library_terraform_vars_blob_container_is_existing controls if the terraform vars blob container already exists
+#library_terraform_vars_blob_container_is_existing=false
+
+# library_terraform_vars_blob_container_name is the name of the terraform vars blob container
+#library_terraform_vars_blob_container_name="tfvars"
+
+# shared_access_key_enabled indicates whether the storage account permits requests to be authorized with the account access key via Shared Key
+#shared_access_key_enabled = false
+
+# data_plane_available indicates if storage account access is via data plane
+#data_plane_available = true
+
+# custom_random_id defines the value of the custom random id
+#custom_random_id = ""
+
+# public_network_access_enabled indicates if public access should be enabled for key vaults and storage
+#public_network_access_enabled = true
+
+#########################################################################################
+#                                                                                       #
+#  Enhanced DNS Settings                                                                #
+#                                                                                       #
+#########################################################################################
+
+# dns_zone_names defines the Private DNS zone names
+#dns_zone_names = {
+#  "file_dns_zone_name"      = "privatelink.file.core.windows.net"
+#  "blob_dns_zone_name"      = "privatelink.blob.core.windows.net"
+#  "table_dns_zone_name"     = "privatelink.table.core.windows.net"
+#  "vault_dns_zone_name"     = "privatelink.vaultcore.azure.net"
+#  "appconfig_dns_zone_name" = "privatelink.azconfig.io"
+#}
+
+# privatelink_dns_subscription_id gives the possibility to register custom PrivateLink DNS A records in a separate subscription
+#privatelink_dns_subscription_id = ""
+
+# privatelink_dns_resourcegroup_name gives the possibility to register custom PrivateLink DNS A records in a separate resourcegroup
+#privatelink_dns_resourcegroup_name = ""
+
+# enable_firewall_for_keyvaults_and_storage indicates if firewall should be enabled for key vaults and storage
+#enable_firewall_for_keyvaults_and_storage = true
+
+# register_storage_accounts_keyvaults_with_dns indicates if storage accounts and key vaults should be registered to the corresponding dns zones
+#register_storage_accounts_keyvaults_with_dns = true
+
+# register_endpoints_with_dns indicates if endpoints should be registered to the dns zone
+#register_endpoints_with_dns = true
+
+# create_privatelink_dns_zones indicates if PrivateLink DNS Zones should be created
+#create_privatelink_dns_zones = true
+
+#########################################################################################
+#                                                                                       #
+#  Web App and Application Configuration                                                #
+#                                                                                       #
+#########################################################################################
+
+# application_configuration_deployment indicates if a webapp should be deployed
+#application_configuration_deployment = false
+
+# Agent_IP defines the IP address of the agent
+#Agent_IP = ""
+
+# add_Agent_IP indicates if the Agent IP should be added to the storage and key vault firewalls
+#add_Agent_IP = true
+
+#########################################################################################
+#                                                                                       #
+#  Network and Miscellaneous Settings                                                  #
+#                                                                                       #
+#########################################################################################
+
+# additional_network_id defines the Agent Network resource ID
+#additional_network_id = ""
+
+# management_network_id defines the Management Network resource ID
+#management_network_id = ""
+
+# tfstate_resource_id defines the Resource id of tfstate storage account
+#tfstate_resource_id = ""
+
+# deployment defines the type of deployment
+#deployment = "update"
+
+# tags defines global tags for all resources
+#tags = {}

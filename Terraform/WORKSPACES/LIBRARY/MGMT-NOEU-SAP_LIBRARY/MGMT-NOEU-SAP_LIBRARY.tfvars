@@ -4,6 +4,24 @@
 
 #########################################################################################
 #                                                                                       #
+#  Environment definitions                                                              #
+#                                                                                       #
+#########################################################################################
+
+# codename is used to describe the environment
+# codename = ""
+
+# subscription_id is the Azure subscription where the SAP library is deployed
+# subscription_id = ""
+
+# name_override_file is the name of the file containing the custom naming convention
+# name_override_file = ""
+
+# place_delete_lock_on_resources is a boolean flag to place delete lock on resources
+# place_delete_lock_on_resources = false
+
+#########################################################################################
+#                                                                                       #
 #  Terraform deploy parameters                                                          #
 #                                                                                       #
 #########################################################################################
@@ -131,3 +149,114 @@ use_private_endpoint=true
 
 # use_spn defines if the deployments are performed using Service Principals or the deployer's managed identiry, true=SPN, false=MSI
 # use_spn = false
+
+##########################################################################################
+#                                                                                        #
+#  Storage account configurations                                                        #
+#                                                                                        #
+##########################################################################################
+
+# Defines the storage account tier
+# storage_account_tier = "Premium_LRS"
+
+# Defines the storage account replication type
+# storage_account_replication_type = "LRS"
+
+# Defines the storage account for the state files, by default a new storage account will be created
+# storage_account_name = ""
+
+# Defines if a blob container is created in the storage account, by default true
+# create_containers = true
+
+# Defines if the storage accounts are locked for deletion
+# place_delete_lock_on_resources = false
+
+##########################################################################################
+#                                                                                        #
+#  DNS zone configurations                                                               #
+#                                                                                        #
+##########################################################################################
+
+# Defines if a new DNS zone is created for the SAP environment
+# dns_zone_names = ["azure.sdaf.contoso.net"]
+
+# Defines the resource group for the DNS zone
+# dns_zone_resourcegroup_name = ""
+
+# Defines if the DNS zone is private
+# use_private_dns = false
+
+##########################################################################################
+#                                                                                        #
+#  Web app configurations                                                                #
+#                                                                                        #
+##########################################################################################
+
+# Defines if a web app is created for the SAP environment
+# create_webapp = false
+
+# Defines the name of the web app
+# webapp_name = ""
+
+# Defines the resource group for the web app
+# webapp_resourcegroup_name = ""
+
+# Defines the location for the web app
+# webapp_location = ""
+
+# Defines the SKU for the web app
+# webapp_sku = "F1"
+
+##########################################################################################
+#                                                                                        #
+#  Network configurations                                                                #
+#                                                                                        #
+##########################################################################################
+
+# Defines the name of the virtual network
+# network_name = ""
+
+# Defines the address space for the virtual network
+# network_address_space = ""
+
+# Defines if the virtual network is created or an existing one is used
+# network_arm_id = ""
+
+# Defines if the virtual network is created with NSG
+# use_custom_dns_names = false
+
+# Defines if Azure Firewall is used
+# use_azure_firewall = false
+
+# Defines if the virtual network has a route table
+# use_route_table = false
+
+##########################################################################################
+#                                                                                        #
+#  Miscellaneous configurations                                                          #
+#                                                                                        #
+##########################################################################################
+
+# Defines tags for the deployment
+# tags = {}
+
+# Defines if preview features are enabled
+# enable_preview_features = false
+
+# Defines if diagnostic logging is enabled
+# enable_diagnostic_logging = false
+
+# Defines the log analytics workspace ARM ID
+# log_analytics_workspace_arm_id = ""
+
+# Defines if Application Insights is used
+# use_application_insights = false
+
+# Defines the Application Insights ARM ID
+# application_insights_arm_id = ""
+
+# Additional optional configurations
+# enable_rbac = false
+# use_msi_for_clusters = false
+# create_transport_storage = false
+# create_install_storage = false
