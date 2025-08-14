@@ -33,6 +33,24 @@ location = "swedencentral"
 # Description of the Workload zone.
 Description = "LAB workload zone"
 
+# codename provides an additional component for naming the resources
+#codename = ""
+
+# subscription_id defines the target subscription for the deployment
+#subscription_id = ""
+
+# management_subscription_id defines the management subscription used by the deployment  
+#management_subscription_id = ""
+
+# use_deployer defines if deployer should be used to deploy the resources
+#use_deployer = true
+
+# prevent_deletion_if_contains_resources controls if resource groups are deleted even if they contain resources
+#prevent_deletion_if_contains_resources = true
+
+# encryption_at_host_enabled enables host encryption for sap landscape vms
+#encryption_at_host_enabled = false
+
 #If you want to provide a custom naming json use the following parameter.
 #name_override_file = ""
 
@@ -68,6 +86,12 @@ network_logical_name = "SAP04"
 
 # network_address_space is a mandatory parameter when an existing Virtual network is not used
 network_address_space = "10.10.0.0/16"
+
+# network_flow_timeout_in_minutes defines the flow timeout in minutes of the virtual network
+#network_flow_timeout_in_minutes = null
+
+# network_enable_route_propagation enables network route table propagation
+#network_enable_route_propagation = true
 
 # use_private_endpoint is a boolean flag controlling if the key vaults and storage accounts have private endpoints
 use_private_endpoint = false
@@ -248,6 +272,9 @@ web_subnet_address_prefix = "10.10.128.0/19"
 ###########################################################################
 #                                                                         #
 #                               Storage Subnet                            #
+
+# use_separate_storage_subnet defines if a separate subnet should be used for storage (needed for HANA Scaleout deployments)
+#use_separate_storage_subnet = false
 #                                                                         #
 ###########################################################################
 
@@ -433,6 +460,9 @@ shared_access_key_enabled = false
 
 # shared_access_key_enabled_nfs defines Storage account used for NFS shares authorization using Shared Access Key.
 shared_access_key_enabled_nfs = true
+
+# data_plane_available defines if storage account access is via data plane
+#data_plane_available = true
 
 
 # Value indicating if file shares are created when using existing storage accounts
@@ -668,3 +698,39 @@ deploy_nat_gateway = true
 
 # If provided, the tags for the NAT Gateway public IP
 #nat_gateway_public_ip_tags = {}
+
+#########################################################################################
+#                                                                                       #
+#                               Export Share Control                                    #
+#                                                                                       #
+#########################################################################################
+
+# export_install_path defines if the export mount path should be created for the installation media
+#export_install_path = true
+
+# export_transport_path defines if the export mount path should be created for the transport media  
+#export_transport_path = true
+
+#########################################################################################
+#                                                                                       #
+#                               Miscellaneous Settings                                  #
+#                                                                                       #
+#########################################################################################
+
+# assign_permissions defines if subscription permissions should be assigned
+#assign_permissions = false
+
+# spn_id defines the Service Principal Id to be used for the deployment
+#spn_id = ""
+
+# platform_updates specifies whether VMAgent Platform Updates is enabled
+#platform_updates = "true"
+
+# additional_network_id defines the Agent Network resource ID
+#additional_network_id = ""
+
+# additional_subnet_id defines the Agent subnet resource ID
+#additional_subnet_id = ""
+
+# custom_random_id defines a custom random id value
+#custom_random_id = ""
