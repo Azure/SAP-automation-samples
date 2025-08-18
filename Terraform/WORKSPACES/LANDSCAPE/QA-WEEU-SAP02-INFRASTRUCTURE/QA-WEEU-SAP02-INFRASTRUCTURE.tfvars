@@ -69,6 +69,12 @@ network_logical_name = "SAP02"
 # network_address_space is a mandatory parameter when an existing Virtual network is not used
 network_address_space = "10.111.0.0/16"
 
+# network_flow_timeout_in_minutes defines the flow timeout in minutes of the virtual network
+#network_flow_timeout_in_minutes = null
+
+# network_enable_route_propagation enables network route table propagation
+#network_enable_route_propagation = true
+
 # use_private_endpoint is a boolean flag controlling if the key vaults and storage accounts have private endpoints
 use_private_endpoint = true
 
@@ -248,6 +254,9 @@ web_subnet_address_prefix = "10.111.128.0/19"
 ###########################################################################
 #                                                                         #
 #                               Storage Subnet                            #
+
+# use_separate_storage_subnet defines if a separate subnet should be used for storage (needed for HANA Scaleout deployments)
+#use_separate_storage_subnet = false
 #                                                                         #
 ###########################################################################
 
@@ -337,6 +346,27 @@ register_virtual_network_to_dns = true
 
 # register_endpoints_with_dns defines if the endpoints should be registered with the DNS
 register_endpoints_with_dns = true
+
+# register_storage_accounts_keyvaults_with_dns defines if storage accounts and key vaults should be registered to the corresponding dns zones
+#register_storage_accounts_keyvaults_with_dns = true
+
+# dns_zone_names defines the Private DNS zone names
+#dns_zone_names = {
+#  "file_dns_zone_name"      = "privatelink.file.core.windows.net"
+#  "blob_dns_zone_name"      = "privatelink.blob.core.windows.net"
+#  "table_dns_zone_name"     = "privatelink.table.core.windows.net"
+#  "vault_dns_zone_name"     = "privatelink.vaultcore.azure.net"
+#  "appconfig_dns_zone_name" = "privatelink.azconfig.io"
+#}
+
+# privatelink_file_id defines the ID of the private link file resource
+#privatelink_file_id = ""
+
+# privatelink_storage_id defines the ID of the private link storage resource
+#privatelink_storage_id = ""
+
+# privatelink_keyvault_id defines the ID of the private link keyvault resource
+#privatelink_keyvault_id = ""
 
 
 #########################################################################################
@@ -433,6 +463,9 @@ shared_access_key_enabled = false
 
 # shared_access_key_enabled_nfs defines Storage account used for NFS shares authorization using Shared Access Key.
 shared_access_key_enabled_nfs = true
+
+# data_plane_available defines if storage account access is via data plane
+#data_plane_available = true
 
 
 # Value indicating if file shares are created when using existing storage accounts
@@ -668,3 +701,39 @@ deploy_nat_gateway = false
 
 # If provided, the tags for the NAT Gateway public IP
 #nat_gateway_public_ip_tags = {}
+
+#########################################################################################
+#                                                                                       #
+#                               Export Share Control                                    #
+#                                                                                       #
+#########################################################################################
+
+# export_install_path defines if the export mount path should be created for the installation media
+#export_install_path = true
+
+# export_transport_path defines if the export mount path should be created for the transport media  
+#export_transport_path = true
+
+#########################################################################################
+#                                                                                       #
+#                               Miscellaneous Settings                                  #
+#                                                                                       #
+#########################################################################################
+
+# assign_permissions defines if subscription permissions should be assigned
+#assign_permissions = false
+
+# spn_id defines the Service Principal Id to be used for the deployment
+#spn_id = ""
+
+# platform_updates specifies whether VMAgent Platform Updates is enabled
+#platform_updates = "true"
+
+# additional_network_id defines the Agent Network resource ID
+#additional_network_id = ""
+
+# additional_subnet_id defines the Agent subnet resource ID
+#additional_subnet_id = ""
+
+# custom_random_id defines a custom random id value
+#custom_random_id = ""
