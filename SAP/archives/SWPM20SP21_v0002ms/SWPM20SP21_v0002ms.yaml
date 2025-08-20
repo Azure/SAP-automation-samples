@@ -2,16 +2,16 @@
 
 name:                                        'SWPM20SP21'
 target:                                      'SWPM20SP21'
-version:                                     003
+version:                                     002
 
 materials:
 
   media:
     # SWPM
     - name:                                  "SWPM 2.0 SP21 ; OS: Linux on x86_64 64bit"
-      archive:                               SWPM20SP21_3-80003424.SAR
-      checksum:                              a6053e21aadb49d75123032874e898724398812fc00503faadada704c33a56f2
+      archive:                               SWPM20SP21_2-80003424.SAR
+      checksum:                              2329d955df42aa208028330346124feb3de1942feebadaa259ed0a69a6975548
       extract:                               true
       extractDir:                            SWPM
       creates:                               SIGNATURE.SMF
-      url:                                   https://softwaredownloads.sap.com/file/0020000000897032025
+      url:                                   https://softwaredownloads.sap.com/file/0025000000039652025
