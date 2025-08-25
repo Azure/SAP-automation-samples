@@ -85,7 +85,7 @@ network_logical_name = "SAP04"
 #network_arm_id = ""
 
 # network_address_space is a mandatory parameter when an existing Virtual network is not used
-network_address_space = "10.10.0.0/16"
+network_address_space = ["10.10.0.0/16"]
 
 # network_flow_timeout_in_minutes defines the flow timeout in minutes of the virtual network
 #network_flow_timeout_in_minutes = null
@@ -734,3 +734,4 @@ deploy_nat_gateway = true
 
 # custom_random_id defines a custom random id value
 #custom_random_id = ""
+
