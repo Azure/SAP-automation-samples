@@ -3,7 +3,7 @@
 # Download time:                             43 Minutes (Partial - 38GB)
 #
 name:                                        "SAP S/4HANA 1909 ISS 00"
-filename:                                    'S41909ISS00_v00015ms'
+filename:                                    'S41909ISS00_v0015ms'
 target:                                      'S/4 HANA 1909 ISS 00'
 version:                                     15
 platform:                                    "HANA"
