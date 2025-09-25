@@ -1,0 +1,21 @@
+---
+
+name:                                        "MSSQLSRV_2019_0001ms"
+target:                                      'RDBMS MSSQLSRV 2022'
+version:                                     001
+platform:                                    "SQLSERVER"
+
+materials:
+
+  media:
+
+    - name:                                  "RDBMS MSSQLSRV 2022"
+      archive:                               51055918.ZIP
+      extract:                               true
+      download:                              true
+      extractDir:                            mssserver2022
+      path:                                  download_basket
+      checksum:                              34688c042f8487f24a44d1ed431f01dd1505c1cb56026a279f5aa42db9f31dad
+      url:                                   https://softwaredownloads.sap.com/file/0030000000514582023
+
+...
