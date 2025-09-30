@@ -3,7 +3,7 @@ name:                                        'NW750_ORACLE_19_ASM_v0003ms'
 filename:                                    "NW750_ORACLE_19_ASM_v0003ms.yaml"
 target:                                      'Oracle 19c'
 version:                                     "3"
-platform:                                    "ORACLE"
+platform:                                    "ORACLE ASM"
 
 product_ids:
   scs:                                       NW_ABAP_ASCS:NW750.ORA.ABAP
