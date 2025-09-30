@@ -1,8 +1,8 @@
 ---
-name:                                        'NW750_ORACLE_19_ASM_v0002ms'
-filename:                                    "NW750_ORACLE_19_ASM_v0002ms.yaml"
+name:                                        'NW750_ORACLE_19_ASM_v0003ms'
+filename:                                    "NW750_ORACLE_19_ASM_v0003ms.yaml"
 target:                                      'Oracle 19c'
-version:                                     "2"
+version:                                     "3"
 platform:                                    "ORACLE"
 
 product_ids:
@@ -19,7 +19,7 @@ product_ids:
 materials:
   dependencies:
     - name:                                  SWPM10SP44_latest
-    - name:                                  Oracle19_v0010ms
+    - name:                                  Oracle19_v0011ms
 
   media:
     # SAPCAR 7.22
