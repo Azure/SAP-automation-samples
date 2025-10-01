@@ -67,7 +67,9 @@ materials:
       archive:                               libbpf-0.6.0-6.el8.x86_64.rpm
       extract:                               False
       checksum:                              347b92549e21d08469431afce06b48ca371f0d2d29c84570076230b8453efc91
-      path:                                  ASM
+      extractDir:                            RPM
+      download:                              true
+      path:                                  RPM
       type:                                  rpm
       url:                                   https://yum.oracle.com/repo/OracleLinux/OL8/UEKR7/x86_64/getPackage/libbpf-0.6.0-6.el8.x86_64.rpm
 
@@ -75,7 +77,9 @@ materials:
       archive:                               compat-libcap1-1.10-7.el7.x86_64.rpm
       extract:                               False
       checksum:                              30FB28F1266049493E5AEFFE18E8939B1BB4A889F1013EBEF6DABE496156B501
-      path:                                  ASM
+      extractDir:                            RPM
+      download:                              true
+      path:                                  RPM
       type:                                  rpm
       url:                                   https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackage/compat-libcap1-1.10-7.el7.x86_64.rpm
 
@@ -83,23 +87,27 @@ materials:
       archive:                               compat-libstdc++-33-3.2.3-72.el7.x86_64.rpm
       extract:                               False
       checksum:                              9ff47552be37e37ce223ac20f78e019dd1d7cfda272bb5e310566f641306763a
-      path:                                  ASM
+      extractDir:                            RPM
+      download:                              true
+      path:                                  RPM
       type:                                  rpm
       url:                                   https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackage/compat-libstdc++-33-3.2.3-72.el7.x86_64.rpm
 
     - name:                                  "OracleASMSupport"
       archive:                               oracleasm-support-3.0.0-6.el8.x86_64.rpm
       extract:                               false
+      extractDir:                            RPM
       download:                              true
-      path:                                  ASM
+      path:                                  RPM
       type:                                  rpm
       url:                                   https://yum.oracle.com/repo/OracleLinux/OL8/addons/x86_64/getPackage/oracleasm-support-3.0.0-6.el8.x86_64.rpm
 
     - name:                                  "Oracle ASM Library"
       archive:                               oracleasmlib-3.1.1-1.el8.x86_64.rpm
       extract:                               false
+      extractDir:                            RPM
       download:                              true
-      path:                                  ASM
+      path:                                  RPM
       type:                                  rpm
       url:                                   https://download.oracle.com/otn_software/asmlib/oracleasmlib-3.1.1-1.el8.x86_64.rpm
 
