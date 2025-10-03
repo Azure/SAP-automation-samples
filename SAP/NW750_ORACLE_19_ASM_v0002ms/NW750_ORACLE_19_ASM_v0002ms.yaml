@@ -96,14 +96,16 @@ materials:
     - name:                                  "Oracle ASM Library"
       archive:                               oracleasmlib-3.1.1-1.el8.x86_64.rpm
       extract:                               false
+      extractDir:                            RPM
       download:                              true
-      path:                                  ASM
+      path:                                  RPM
       type:                                  rpm
 
     - name:                                  "Oracle ASM Support"
       archive:                               oracleasm-support-3.0.0-6.el8.x86_64.rpm
       extract:                               false
+      extractDir:                            RPM
       download:                              true
-      path:                                  ASM
+      path:                                  RPM
       type:                                  rpm
 
