@@ -9,7 +9,13 @@ InstanceType:                                "ABAP"
 # New 2408 SBP Patch included in this version
 # 11/13/2024
 
-# Oracle client software download updated 03/19/2024
+# Oracle client software download updated 10/01/2025
+patch:
+  SBP_DBRU:                                  37960098
+  SBP_OCWRU:                                 37962946
+  SBP_ACFSRU:                                37962938
+
+
 materials:
 
   media:
@@ -46,22 +52,22 @@ materials:
       url:                                   https://softwaredownloads.sap.com/file/0020000000865322025
 
     - name:                                  "Oracle - JDK Bundle Patch 19.0.0.0.250715"
-      archive:                               SBPJDK19P_2508-70004508.ZIP
-      checksum:                              4d13b8de2beae8389b9f559dcfc9b281c6caa1553b6d3ca0772059388d38dd0c
+      archive:                               SBPJDK19P_2508-70004550.ZIP
+      checksum:                              22e5c7ba1783e339ed023cbc49bd5497deae24b41eb4348c5d8a8c30111d0b9e
       extract:                               true
       extractDir:                            SBP/SBPJDK
       path:                                  SBP
       creates:                               SIGNATURE.SMF
-      url:                                   https://softwaredownloads.sap.com/file/0020000000865852025
+      url:                                   https://softwaredownloads.sap.com/file/0020000000871192025
 
     - name:                                  "Oracle - Bundle patches for 19c: OPatch 12.2.0.1.46"
-      archive:                               OPATCH19P_2508-70004508.ZIP
-      checksum:                              950b1bb0d5b9971295847ba24378f3d236c1515165fc280d8a293a21b930e0ba
+      archive:                               OPATCH19P_2508-70004550.ZIP
+      checksum:                              0eafef27aebb763f344baed62a558b04c43cd28692cea5e54b0c3476f0dab809
       extract:                               true
       extractDir:                            SBP/OPATCH
       path:                                  SBP
       creates:                               SIGNATURE.SMF
-      url:                                   https://softwaredownloads.sap.com/file/0020000000865392025
+      url:                                   https://softwaredownloads.sap.com/file/0020000000873012025
 
     - name:                                  "Oracle Libbpf library"
       archive:                               libbpf-0.6.0-6.el8.x86_64.rpm
@@ -116,13 +122,23 @@ materials:
 # GRID SBP Patches are downloaded based on SAP Note 2799920 - Patches 19c: Database
 # Updated to 2405 on August 1, 2024 -- Grid Infrastructure Release Update 19.23.0.0.240416
 
-    - name:                                  "Oracle - Grid Infrastructure Database Release Update 19.28.0.0.250715"
-      archive:                               GIRU19P_2508-70004508.ZIP
-      checksum:                              589ea1591f133512c751509fb69f793c23a5a2a2b9e0a29e8aa4a7f263acab5b
+    - name:                                  "Oracle - Grid Infrastructure Release Update 19.28.0.0.250715"
+      archive:                               GIRU19P_2508-70004550.ZIP
+      checksum:                              ad657b977a879226286b669f9d2093f63f28589850697f85cf7bea42789c5743
       extract:                               true
       download:                              true
       extractDir:                            SBP/GIRU19P
       path:                                  SBP
       creates:                               SIGNATURE.SMF
-      url:                                   https://softwaredownloads.sap.com/file/0020000000875242025
+      url:                                   https://softwaredownloads.sap.com/file/0020000000874732025                                                                                    0020000000874732025
 
+
+    - name:                                  "Oracle - SBP 19.28.0.0.250715 - 202508 for Grid Infrastructure"
+      archive:                               SGR19P_2508-70004550.ZIP
+      checksum:                              49d1f3afde568e90a40efcf2147d96cbaa5b39b0f0e3c615b0b3c4608584face
+      extract:                               true
+      download:                              true
+      extractDir:                            SBP/SGR19P
+      path:                                  SBP
+      creates:                               SIGNATURE.SMF
+      url:                                   https://softwaredownloads.sap.com/file/0020000000873072025
