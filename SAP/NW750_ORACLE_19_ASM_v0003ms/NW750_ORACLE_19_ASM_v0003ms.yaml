@@ -5,6 +5,18 @@ target:                                      'Oracle 19c'
 version:                                     "3"
 platform:                                    "ORACLE ASM"
 
+# Oracle client software download updated 10/01/2025
+patch_information:
+  SBP_DBRU:                                  37960098
+  SBP_OCWRU:                                 37962946
+  SBP_ACFSRU:                                37962938
+  MOPatch:                                   2.11
+  OPatch:                                    12.2.0.1.46
+  ora_release:                               19
+  ora_version:                               19.0.0
+  oracle_sbp_patch:                          SAP19P_2508-70004508.ZIP
+  oracle_grid_sbp_patch:                     SGR19P_2508-70004550.ZIP
+
 product_ids:
   scs:                                       NW_ABAP_ASCS:NW750.ORA.ABAP
   scs_ha:                                    NW_ABAP_ASCS:NW750.ORA.ABAPHA
