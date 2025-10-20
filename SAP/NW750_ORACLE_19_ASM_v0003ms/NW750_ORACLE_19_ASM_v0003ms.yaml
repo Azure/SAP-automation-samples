@@ -10,6 +10,8 @@ patch_information:
   SBP_DBRU:                                  37960098
   SBP_OCWRU:                                 37962946
   SBP_ACFSRU:                                37962938
+  SBP_JDKRU:                                 37860476
+  
   MOPatch:                                   2.11
   OPatch:                                    12.2.0.1.46
   ora_release:                               19
@@ -31,7 +33,7 @@ product_ids:
 materials:
   dependencies:
     - name:                                  SWPM10SP44_latest
-    - name:                                  Oracle19_v0011ms
+    - name:                                  Oracle19_v2580ms
 
   media:
     # SAPCAR 7.22
