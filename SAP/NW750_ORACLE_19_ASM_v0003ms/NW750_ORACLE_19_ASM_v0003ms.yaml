@@ -11,7 +11,6 @@ patch_information:
   SBP_OCWRU:                                 37962946
   SBP_ACFSRU:                                37962938
   SBP_JDKRU:                                 37860476
-  
   MOPatch:                                   2.11
   OPatch:                                    12.2.0.1.46
   ora_release:                               19
