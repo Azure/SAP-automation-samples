@@ -118,6 +118,13 @@ materials:
       type:                                  rpm
       url:                                   https://download.oracle.com/otn_software/asmlib/oracleasmlib-3.1.1-1.el8.x86_64.rpm
 
+    - name:                                  "Updated RUNINSTALLER for Oracle 19c"
+      archive:                               19cinstall-19-031-202407021105.zip
+      extract:                               true
+      extractDir:                            SAP
+      download:                              true
+      path:                                  SAP
+
 
 # Oracle ASM GRID Patches
 # GRID SBP Patches are downloaded based on SAP Note 2799920 - Patches 19c: Database
