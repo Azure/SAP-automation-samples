@@ -25,15 +25,15 @@ materials:
       path:                                  download_basket
       url:                                   https://softwaredownloads.sap.com/file/0020000000890972025
 
-    # v2_00_085 Revision 2.00.075.0 (SPS08) for HANA DB 2.0
-    - name:                                  "SAP HANA 2 SPS08 Revision 087.0 (SPS08)"
-      archive:                               IMDB_SERVER20_087_0-80002031.SAR
-      checksum:                              63618bfdd54bce63e027d84ef03849b4f03463ac28bf50553c3c1ddda5f8b34b
+    # v2_00_085 Revision 2.00.085.0 (SPS08) for HANA DB 2.0
+    - name:                                  "SAP HANA 2 SPS08 Revision 085.0 (SPS08)"
+      archive:                               IMDB_SERVER20_085_0-80002031.SAR
+      checksum:                              f8b11ed89734b81193cf8d4d207e632ca42b2b5683b612916cd19ee99e3cc290
       extract:                               true
       extractDir:                            CD_HDBSERVER
       creates:                               SIGNATURE.SMF
       path:                                  download_basket
-      url:                                   https://softwaredownloads.sap.com/file/0020000000959752025
+      url:                                   https://softwaredownloads.sap.com/file/0025000000036002025
 
     - name:                                  "SAP HANA AFL Rev 85.0 only for HANA 2.0"
       archive:                               IMDB_AFL20_085_0-80001894.SAR
