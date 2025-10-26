@@ -100,6 +100,15 @@ materials:
       type:                                  rpm
       url:                                   https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackage/compat-libstdc++-33-3.2.3-72.el7.x86_64.rpm
 
+    - name:                                  "compat-sap-c++-12"
+      archive:                               compat-sap-c++-12-12.1.1-1.2.el8_9.x86_64.rpm
+      extract:                               False
+      checksum:                              9ff47552be37e37ce223ac20f78e019dd1d7cfda272bb5e310566f641306763a
+      extractDir:                            RPM
+      download:                              true
+      path:                                  RPM
+      type:                                  rpm
+
     - name:                                  "OracleASMSupport"
       archive:                               oracleasm-support-3.0.0-6.el8.x86_64.rpm
       extract:                               false
@@ -121,7 +130,6 @@ materials:
     - name:                                  "Updated RUNINSTALLER for Oracle 19c"
       archive:                               19cinstall-19-031-202407021105.zip
       extract:                               true
-      extractDir:                            SAP
       download:                              true
       path:                                  SAP
 
