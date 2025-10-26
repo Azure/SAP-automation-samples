@@ -132,6 +132,7 @@ materials:
       download:                              true
       path:                                  SAP
       extractDir:                            SAP
+      creates:                               SAP/19cinstall.sh
 
 
 # Oracle ASM GRID Patches
