@@ -131,6 +131,7 @@ materials:
       extract:                               true
       download:                              true
       path:                                  SAP
+      extractDir:                            SAP
 
 
 # Oracle ASM GRID Patches
