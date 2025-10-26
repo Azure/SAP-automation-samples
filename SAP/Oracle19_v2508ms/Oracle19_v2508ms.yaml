@@ -100,8 +100,8 @@ materials:
       type:                                  rpm
       url:                                   https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackage/compat-libstdc++-33-3.2.3-72.el7.x86_64.rpm
 
-    - name:                                  "compat-sap-c++-12"
-      archive:                               compat-sap-c++-12-12.1.1-1.2.el8_9.x86_64.rpm
+    - name:                                  "compat-sap-c++-10"
+      archive:                               compat-sap-c++-10-10.2.1-11.el7_9.x86_64.rpm
       extract:                               False
       extractDir:                            RPM
       download:                              true
