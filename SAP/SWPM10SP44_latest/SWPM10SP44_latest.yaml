@@ -7,12 +7,12 @@ materials:
 
   media:
     # SWPM
-    - name:                                  "SWPM 1.0 SP45; NW higher than 7.0x; OS: Linux on x86_64 64bit"
-      archive:                               SWPM10SP45_1-20009701.SAR
-      checksum:                              bf3a6fefe77353b00d59f1d9a53ccf17223d6f2433bc14e330e2207d64e86dd6
+    - name:                                  "SWPM 1.0 SP44; NW higher than 7.0x; OS: Linux on x86_64 64bit"
+      archive:                               SWPM10SP44_5-20009701.SAR
+      checksum:                              b24d02b6a5c46ffc746f11309b60a0acde87506e381265510d07fb9e0f8b178b
       extract:                               true
       extractDir:                            SWPM
       creates:                               SIGNATURE.SMF
-      url:                                   https://softwaredownloads.sap.com/file/0025000000072462025
+      url:                                   https://softwaredownloads.sap.com/file/0020000001042482025
 
 ...
