@@ -1,0 +1,14 @@
+---
+name:                                        'SUM10SP50'
+target:                                      'SUM10SP50'
+version:                                     001
+
+materials:
+
+  media:
+    # SUM
+    - name:                                  "Patch 1 for SOFTWARE UPDATE MANAGER 1.1 SP05 (Linux on x86_64)"
+      archive:                               SUM11SP05_0-80006800.SAR
+      checksum:                              75def83a35b19313857746807466d8ce62c1d23864418e54862fc85ce1f06da0
+      download:                              false
+      url:                                   https://softwaredownloads.sap.com/file/0020000001096412025
