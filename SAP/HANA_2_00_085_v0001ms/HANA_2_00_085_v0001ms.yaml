@@ -25,7 +25,7 @@ materials:
       path:                                  download_basket
       url:                                   https://softwaredownloads.sap.com/file/0020000000890972025
 
-    # v2_00_088 Revision 2.00.088.0 (SPS08) for HANA DB 2.0
+    # v2_00_085 Revision 2.00.088.0 (SPS08) for HANA DB 2.0
     - name:                                  "SAP HANA 2 SPS08 Revision 088.0 (SPS08)"
       archive:                               IMDB_SERVER20_088_0-80002031.SAR
       checksum:                              80d3c8c3cb78a96ac3874780f43d05cc4bcc09d0ece32b7b21fd615ee2a448aa
