@@ -1,7 +1,7 @@
 ---
-name:                                        'HANA_2_00_088_v0001ms'
+name:                                        'HANA_2_00_085_v0001ms'
 target:                                      'HANA 2.0'
-version:                                      1
+version:                                      2
 platform:                                    'HANA'
 materials:
 
@@ -25,7 +25,7 @@ materials:
       path:                                  download_basket
       url:                                   https://softwaredownloads.sap.com/file/0020000000890972025
 
-    - name:                                  "SAP HANA 2 SPS08 Revision 087.0 (SPS08)"
+    - name:                                  "SAP HANA 2 SPS08 Revision 088.0 (SPS08)"
       archive:                               IMDB_SERVER20_088_0-80002031.SAR
       checksum:                              80d3c8c3cb78a96ac3874780f43d05cc4bcc09d0ece32b7b21fd615ee2a448aa
       extract:                               true
@@ -34,29 +34,29 @@ materials:
       path:                                  download_basket
       url:                                   https://softwaredownloads.sap.com/file/0025000000084392025
 
-    - name:                                  "SAP HANA AFL Rev 87.0 only for HANA 2.0"
-      archive:                               IMDB_AFL20_087_0-80001894.SAR
+    - name:                                  "SAP HANA AFL Rev 88.0 only for HANA 2.0"
+      archive:                               IMDB_AFL20_088_0-80001894.SAR
       checksum:                              ccc38dcf05323deffe3f91afc8af3251744f6489a05ab46357a3a609019c2991
       extract:                               true
       extractDir:                            CD_HDBSERVER/COMPONENTS
       creates:                               COMPONENTS/SAP_HANA_AFL/packages
-      url:                                   https://softwaredownloads.sap.com/file/0020000000959802025
+      url:                                   https://softwaredownloads.sap.com/file/0025000000084562025
 
-    - name:                                  "LCAPPS for HANA 2.0 Rev 87 Build 101.18 PL 002"
-      archive:                               IMDB_LCAPPS_2087_0-20010426.SAR
-      checksum:                              4aedbc06b1733a6a2d52648b4956d0227ac288efb9745a18416b6e493d11bd69
+    - name:                                  "LCAPPS for HANA 2.0 Rev 88 Build 101.18 PL 002"
+      archive:                               IMDB_LCAPPS_2088_0-20010426.SAR
+      checksum:                              6513997da00879d658944308484722c27fb2d95961ec20fae76420307580a1f0
       extract:                               true
       extractDir:                            CD_HDBSERVER/COMPONENTS
       creates:                               COMPONENTS/SAP_HANA_LCAPPS/packages
-      url:                                   https://softwaredownloads.sap.com/file/0020000000959882025
+      url:                                   https://softwaredownloads.sap.com/file/0025000000084632025
 
-    - name:                                  "VCH AFL 2021 Rev 87.0 only for HANA 2.0 Rev 87"
-      archive:                               VCH202100_2087_0-70006349.SAR
-      checksum:                              8c786a644ec75eea23fc6563b0e5c85b1b583dd9e0775c3eaf8a643601192d4e
+    - name:                                  "VCH AFL 2021 Rev 88.0 only for HANA 2.0 Rev 88"
+      archive:                               VCH202100_2088_0-70006349.SAR
+      checksum:                              af20c86a91c261a18937571e71cd5d4045aeb02a27a34ed6a4934aea680e7d09
       extract:                               true
       extractDir:                            CD_HDBSERVER/COMPONENTS
       creates:                               COMPONENTS/VCH_AFL_2021/packages
-      url:                                   https://softwaredownloads.sap.com/file/0020000000959982025
+      url:                                   https://softwaredownloads.sap.com/file/0025000000084752025
 
     - name:                                  "SAP Host Agent"
       archive:                               SAPHOSTAGENT66_66-80004822.SAR
