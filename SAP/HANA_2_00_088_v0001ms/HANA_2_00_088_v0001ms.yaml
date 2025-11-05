@@ -36,7 +36,7 @@ materials:
 
     - name:                                  "SAP HANA AFL Rev 88.0 only for HANA 2.0"
       archive:                               IMDB_AFL20_088_0-80001894.SAR
-      checksum:                              ccc38dcf05323deffe3f91afc8af3251744f6489a05ab46357a3a609019c2991
+      checksum:                              2cf98291d67787f9e6382a6184a563e0089705dd2a068bfbdaa0a0d9bb6c4b56
       extract:                               true
       extractDir:                            CD_HDBSERVER/COMPONENTS
       creates:                               COMPONENTS/SAP_HANA_AFL/packages
