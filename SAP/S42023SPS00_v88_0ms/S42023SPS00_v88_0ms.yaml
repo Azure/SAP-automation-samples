@@ -1,7 +1,7 @@
 ---
 
 name:                                        "SAP S/4HANA 2023 ISS 00"
-filename:                                    "S42023SPS00_v87_0ms"
+filename:                                    "S42023SPS00_v88_0ms"
 target:                                      "S/4 HANA 2023 ISS 00"
 version:                                     5
 platform:                                    'HANA'
