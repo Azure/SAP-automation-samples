@@ -1,0 +1,334 @@
+---
+
+name:                                        "SAP S/4HANA 2025 ISS 00"
+filename:                                    "S42023SPS00_v88_0ms"
+target:                                      "S/4 HANA 2025 ISS 00"
+version:                                     1
+platform:                                    'HANA'
+InstanceType:                                'ABAP'
+
+
+defaults:
+  target_location:                           "{{ target_media_location }}/download_basket"
+
+product_ids:
+  scs:                                       "NW_ABAP_ASCS:S4HANA2025.CORE.HDB.ABAP"
+  scs_ha:                                    "NW_ABAP_ASCS:S4HANA2025.CORE.HDB.ABAPHA"
+  dbl:                                       "NW_ABAP_DB:S4HANA2025.CORE.HDB.ABAP"
+  pas:                                       "NW_ABAP_CI:S4HANA2025.CORE.HDB.ABAP"
+  pas_ha:                                    "NW_ABAP_CI:S4HANA2025.CORE.HDB.ABAPHA"
+  app:                                       "NW_DI:S4HANA2025.CORE.HDB.PD"
+  app_ha:                                    "NW_DI:S4HANA2025.CORE.HDB.ABAPHA"
+  web:                                       "NW_Webdispatcher:NW750.IND.PD"
+  ers:                                       "NW_ERS:S4HANA2025.CORE.HDB.ABAP"
+  ers_ha:                                    "NW_ERS:S4HANA2025.CORE.HDB.ABAPHA"
+  generic:                                   "NW_Users_Create:GENERIC.HDB.PD"
+
+
+materials:
+  dependencies:
+    - name:                                  "SWPM20SP22_latest"
+    - name:                                  "SUM20SP24_latest"
+
+  media:
+     # SAPCAR 7.22
+    - name:                                  "SAPCAR 7.22; OS: Linux on x86_64 64bit"
+      archive:                               SAPCAR_1115-70006178.EXE
+      checksum:                              765412436934362cc5497e3d659fbb78be91093a091c11ec4fbe84dfb415a0e5
+      filename:                              SAPCAR
+      permissions:                           '0755'
+      url:                                   https://softwaredownloads.sap.com/file/0020000000098642022
+
+    # kernel components
+
+    - name:                                  "Kernel Part II (793)"
+      archive:                               SAPEXEDB_51-70007806.SAR
+      url:                                   https://softwaredownloads.sap.com/file/0020000001134862023
+      path:                                  download_basket
+      checksum:                              6866c46a6bb13a09dae82d8ce160fe8d73d4bcdff0da00e5a52cfffda7af7891
+
+    - name:                                  "Kernel Part I (793)"
+      archive:                               SAPEXE_51-70007807.SAR
+      url:                                   https://softwaredownloads.sap.com/file/0020000001133782023
+      path:                                  download_basket
+      checksum:                              27a6c126cd2a15e0fdf3973cc914805d2f0dc738ff3a42c7220ea4fb2fa7590d
+
+    - name:                                  "SP12 Patch8 for UMML4HANA 1"
+      archive:                               HANAUMML12_8-70001054.ZIP
+      url:                                   https://softwaredownloads.sap.com/file/0020000000146922024
+      path:                                  download_basket
+      checksum:                              ef60422cab183f76cae3c3296f0e9d08c9f692ff44542d23e94e0dedd50fbae4
+
+    - name:                                  "SAP HOST AGENT 7.22 SP61"
+      archive:                               SAPHOSTAGENT61_61-80004822.SAR
+      url:                                   https://softwaredownloads.sap.com/file/0020000000867792023
+      path:                                  download_basket
+      checksum:                              280c13ca76d3b2fb1aba5cccdff9b9e3ae7988f6ca5f2553563fd2360dc8f688
+
+    - name:                                  "Predi. Analy. APL 2405 for SAP HANA 2.0 SPS03 and beyond "
+      archive:                               SAPPAAPL4_2405_0-80004547.ZIP
+      url:                                   https://softwaredownloads.sap.com/file/0020000000155712024
+      path:                                  download_basket
+      checksum:                              06c5619b9f7f153a26f194285891bbcbce4b04110f626e6f750fb543eff3fb1e
+
+    - name:                                  "Support Package SAP IGS 9.16 Linux on x86_64 64bit"
+      archive:                               igsexe_0-70008564.sar
+      url:                                   https://softwaredownloads.sap.com/file/0020000001085822025
+      path:                                  download_basket
+      checksum:                              38e422563c5a15aecee222cf05d919145633714ca7404ae1f1a68e7760464fc1
+
+    - name:                                  "SAP IGS Fonts and Textures"
+      archive:                               igshelper_17-10010245.sar
+      url:                                   https://softwaredownloads.sap.com/file/0020000000703122018
+      path:                                  download_basket
+      checksum:                              bc405afc4f8221aa1a10a8bc448f8afd9e4e00111100c5544097240c57c99732
+
+    # db export components
+
+    - name:                                  "File on DVD - S4HANAOP109_INST_EXPORT_1.zip"
+      archive:                               S4HANAOP109_INST_EXPORT_1.zip
+      url:                                   https://softwaredownloads.sap.com/file/0030000001069402025
+      path:                                  download_basket
+      checksum:                              a432a304d8cfa1f0e9dc58edb845152c2aada0883b7f1201782f44e1839752fc
+
+    - name:                                  "File on DVD - S4HANAOP109_INST_EXPORT_10.zip"
+      archive:                               S4HANAOP109_INST_EXPORT_10.zip
+      url:                                   https://softwaredownloads.sap.com/file/0030000001069432025
+      path:                                  download_basket
+      checksum:                              45582235f13a16a8ee30e0175f30c2e3219260cff622f611dcc4ce93d02eaca1
+
+    - name:                                  "File on DVD - S4HANAOP109_INST_EXPORT_11.zip"
+      archive:                               S4HANAOP109_INST_EXPORT_11.zip
+      url:                                   https://softwaredownloads.sap.com/file/0030000001069452025
+      path:                                  download_basket
+      checksum:                              46dcc2fd2205b002493a833cd40779f90f734e5c479c21bdee1ca58f85173dbf
+
+    - name:                                  "File on DVD - S4HANAOP109_INST_EXPORT_12.zip"
+      archive:                               S4HANAOP109_INST_EXPORT_12.zip
+      url:                                   https://softwaredownloads.sap.com/file/0030000001069522025
+      path:                                  download_basket
+      checksum:                              15a632793329bd0d36177b9e4e779d4b3049c996a3d798c26f08e397f74005ff
+
+    - name:                                  "File on DVD - S4HANAOP109_INST_EXPORT_13.zip"
+      archive:                               S4HANAOP109_INST_EXPORT_13.zip
+      url:                                   https://softwaredownloads.sap.com/file/0030000001069562025
+      path:                                  download_basket
+      checksum:                              e9d9351f99cf477340b7c0826c4cd3211a51630889c1d46ae79361cc7f32f5bd
+
+    - name:                                  "File on DVD - S4HANAOP109_INST_EXPORT_14.zip"
+      archive:                               S4HANAOP109_INST_EXPORT_14.zip
+      url:                                   https://softwaredownloads.sap.com/file/0030000001069572025
+      path:                                  download_basket
+      checksum:                              dd745fcb7b7f2cddb116b4dc44773821ef5f15d8f3cd93bdbf775b88cd63a6f1
+
+    - name:                                  "File on DVD - S4HANAOP109_INST_EXPORT_15.zip"
+      archive:                               S4HANAOP109_INST_EXPORT_15.zip
+      url:                                   https://softwaredownloads.sap.com/file/0030000001069592025
+      path:                                  download_basket
+      checksum:                              d7a118e54f5f3a6a6f7b801bb7fcafa7da9d5df7bdb15ec08704d6e72f966023
+
+    - name:                                  "File on DVD - S4HANAOP109_INST_EXPORT_16.zip"
+      archive:                               S4HANAOP109_INST_EXPORT_16.zip
+      url:                                   https://softwaredownloads.sap.com/file/0030000001069602025
+      path:                                  download_basket
+      checksum:                              3c14c25db98ddfc6c6e23f7ece3d520552800624dde0da29dd9b9733c58ee8f7
+
+    - name:                                  "File on DVD - S4HANAOP109_INST_EXPORT_17.zip"
+      archive:                               S4HANAOP109_INST_EXPORT_17.zip
+      url:                                   https://softwaredownloads.sap.com/file/0030000001070772025
+      path:                                  download_basket
+      checksum:                              e38765c456d9908dab57223824cbf97a7eb691e4aadef974a9863a0b107ddfe3
+
+    - name:                                  "File on DVD - S4HANAOP109_INST_EXPORT_18.zip"
+      archive:                               S4HANAOP109_INST_EXPORT_18.zip
+      url:                                   https://softwaredownloads.sap.com/file/0030000001070782025
+      path:                                  download_basket
+      checksum:                              d732f93fc9489052f45e4079f4a10c6c97eb8f4a9f2447748f18cc3232685c84
+
+    - name:                                  "File on DVD - S4HANAOP109_INST_EXPORT_19.zip"
+      archive:                               S4HANAOP109_INST_EXPORT_19.zip
+      url:                                   https://softwaredownloads.sap.com/file/0030000001070852025
+      path:                                  download_basket
+      checksum:                              ff0f5d855938cb78194b678de55c12a550a59d361ea5d897debd41a8159cc7cf
+
+    - name:                                  "File on DVD - S4HANAOP109_INST_EXPORT_2.zip"
+      archive:                               S4HANAOP109_INST_EXPORT_2.zip
+      url:                                   https://softwaredownloads.sap.com/file/0030000001070862025
+      path:                                  download_basket
+      checksum:                              1ecc423d739754697e171b22869d8a80c2575cde1f71718118ef6c2ca6745a7a
+
+    - name:                                  "File on DVD - S4HANAOP109_INST_EXPORT_20.zip"
+      archive:                               S4HANAOP109_INST_EXPORT_20.zip
+      url:                                   https://softwaredownloads.sap.com/file/0030000001070872025
+      path:                                  download_basket
+      checksum:                              0541befd9a97b0406efb8f1a06cce00d99cbd37844c71ac62d0cec41bf562991
+
+    - name:                                  "File on DVD - S4HANAOP109_INST_EXPORT_21.zip"
+      archive:                               S4HANAOP109_INST_EXPORT_21.zip
+      url:                                   https://softwaredownloads.sap.com/file/0030000001071292025
+      path:                                  download_basket
+      checksum:                              60741bad1b8cfdb4b3bb53a34ecf780101a7f9cf1cd448a0f915a878994f3fdb
+
+    - name:                                  "File on DVD - S4HANAOP109_INST_EXPORT_22.zip"
+      archive:                               S4HANAOP109_INST_EXPORT_22.zip
+      url:                                   https://softwaredownloads.sap.com/file/0030000001070892025
+      path:                                  download_basket
+      checksum:                              9672c54e57149ad9894d773fdf0a4800f404f305ee786b04409ce711dffdb700
+
+    - name:                                  "File on DVD - S4HANAOP109_INST_EXPORT_23.zip"
+      archive:                               S4HANAOP109_INST_EXPORT_23.zip
+      url:                                   https://softwaredownloads.sap.com/file/0030000001070902025
+      path:                                  download_basket
+      checksum:                              0c1d38a634479b8a14e3cccf1602e318ba2d2c5e110c5fe4165cbf0746fdb0a0
+
+    - name:                                  "File on DVD - S4HANAOP109_INST_EXPORT_24.zip"
+      archive:                               S4HANAOP109_INST_EXPORT_24.zip
+      url:                                   https://softwaredownloads.sap.com/file/0030000001070912025
+      path:                                  download_basket
+      checksum:                              a9cfe76e32818dbb1ee8c42c1ff27b6499f8c232c82b4c7793c83a8623f3b5f3
+
+    - name:                                  "File on DVD - S4HANAOP109_INST_EXPORT_25.zip"
+      archive:                               S4HANAOP109_INST_EXPORT_25.zip
+      url:                                   https://softwaredownloads.sap.com/file/0030000001070922025
+      path:                                  download_basket
+      checksum:                              577965339b9102ee220be87c3996a35e42effb13a17c4c5939cf2f651e08d0bb
+
+    - name:                                  "File on DVD - S4HANAOP109_INST_EXPORT_26.zip"
+      archive:                               S4HANAOP109_INST_EXPORT_26.zip
+      url:                                   https://softwaredownloads.sap.com/file/0030000001070942025
+      path:                                  download_basket
+      checksum:                              80ea0020d6efa663b7b1720644482bccdbc0308b86a97bba91a079c2dd7d8a29
+
+    - name:                                  "File on DVD - S4HANAOP109_INST_EXPORT_27.zip"
+      archive:                               S4HANAOP109_INST_EXPORT_27.zip
+      url:                                   https://softwaredownloads.sap.com/file/0030000001070952025
+      path:                                  download_basket
+      checksum:                              8974638c7d75a342662471172daf9156051f5c2aaa15ff69f217be23fdbeef7d
+
+    - name:                                  "File on DVD - S4HANAOP109_INST_EXPORT_28.zip"
+      archive:                               S4HANAOP109_INST_EXPORT_28.zip
+      url:                                   https://softwaredownloads.sap.com/file/0030000001070972025
+      path:                                  download_basket
+      checksum:                              c28fc6a11927dcb9a325bc272c904f96c150a2ea11e7b9545ec5c6240a11d43a
+
+    - name:                                  "File on DVD - S4HANAOP109_INST_EXPORT_29.zip"
+      archive:                               S4HANAOP109_INST_EXPORT_29.zip
+      url:                                   https://softwaredownloads.sap.com/file/0030000001070982025
+      path:                                  download_basket
+      checksum:                              633f317758eb7a79ac2b1cdbd20679f8ad0bdb32bb912e5a3fb11bbcea02a735
+
+    - name:                                  "File on DVD - S4HANAOP109_INST_EXPORT_3.zip"
+      archive:                               S4HANAOP109_INST_EXPORT_3.zip
+      url:                                   https://softwaredownloads.sap.com/file/0030000001070992025
+      path:                                  download_basket
+      checksum:                              10fdce5f30c556227bcba5f746a9f700c17fe1ca90c2df9c11a5a130ed24e77c
+
+    - name:                                  "File on DVD - S4HANAOP109_INST_EXPORT_30.zip"
+      archive:                               S4HANAOP109_INST_EXPORT_30.zip
+      url:                                   https://softwaredownloads.sap.com/file/0030000001071072025
+      path:                                  download_basket
+      checksum:                              a28391c6bbd7cfaec9ecfcb438c55966912977761f74b9c88f6e61d45e074335
+
+    - name:                                  "File on DVD - S4HANAOP109_INST_EXPORT_31.zip"
+      archive:                               S4HANAOP109_INST_EXPORT_31zip
+      url:                                   https://softwaredownloads.sap.com/file/0030000001071082025
+      path:                                  download_basket
+      checksum:                              02603b7929e0a9c0abcb106d5f8a9aa795afdb9148fab679f639f10abf89f2b6
+
+    - name:                                  "File on DVD - S4HANAOP109_INST_EXPORT_32.zip"
+      archive:                               S4HANAOP109_INST_EXPORT_32.zip
+      url:                                   https://softwaredownloads.sap.com/file/0030000001071092025
+      path:                                  download_basket
+      checksum:                              43f540544c4694d6a50c4f17b2d9dee16318c7dda2cad35c4c3c05286d3734e1
+
+    - name:                                  "File on DVD - S4HANAOP109_INST_EXPORT_33.zip"
+      archive:                               S4HANAOP109_INST_EXPORT_33.zip
+      url:                                   https://softwaredownloads.sap.com/file/0030000001071102025
+      path:                                  download_basket
+      checksum:                              0a5c91c6d75aad0d66e2b1ddd6dd766d1a0d15bb563a41640262d7af4b5bb644
+
+    - name:                                  "File on DVD - S4HANAOP109_INST_EXPORT_34.zip"
+      archive:                               S4HANAOP109_INST_EXPORT_34.zip
+      url:                                   https://softwaredownloads.sap.com/file/0030000001071112025
+      path:                                  download_basket
+      checksum:                              dbba0f07a8ab2538afc691484481625b76eee8e799ae4676357703615eb959fd
+
+    - name:                                  "File on DVD - S4HANAOP109_INST_EXPORT_4.zip"
+      archive:                               S4HANAOP109_INST_EXPORT_4.zip
+      url:                                   https://softwaredownloads.sap.com/file/0030000001071002025
+      path:                                  download_basket
+      checksum:                              79179a62692ec824b27caf60dd5e102344bf24441157b337094acaa8d467529c
+
+    - name:                                  "File on DVD - S4HANAOP109_INST_EXPORT_5.zip"
+      archive:                               S4HANAOP109_INST_EXPORT_5.zip
+      url:                                   https://softwaredownloads.sap.com/file/0030000001071012025
+      path:                                  download_basket
+      checksum:                              e23e25b09985bb2364d1968b706ab589226d89ed53b7e3b838f8eac349ce9d81
+
+    - name:                                  "File on DVD - S4HANAOP109_INST_EXPORT_6.zip"
+      archive:                               S4HANAOP109_INST_EXPORT_6.zip
+      url:                                   https://softwaredownloads.sap.com/file/0030000001071022025
+      path:                                  download_basket
+      checksum:                              eac0ad507e53ff5cea4facdc04367e7d6ad84d72077c85dde9441dd5f1c14122
+
+    - name:                                  "File on DVD - S4HANAOP109_INST_EXPORT_7.zip"
+      archive:                               S4HANAOP109_INST_EXPORT_7.zip
+      url:                                   https://softwaredownloads.sap.com/file/0030000001071032025
+      path:                                  download_basket
+      checksum:                              51e693ad2b7d102f5e4c1183656cd773ced0ad5b4491f7bc75c3f8495dc350c8
+
+    - name:                                  "File on DVD - S4HANAOP109_INST_EXPORT_8.zip"
+      archive:                               S4HANAOP109_INST_EXPORT_8.zip
+      url:                                   https://softwaredownloads.sap.com/file/0030000001071282025
+      path:                                  download_basket
+      checksum:                              6d0b9215bca5e9b9501d4a550e67a53d96a48688546e1485bdf9c5343054c5ff
+
+    - name:                                  "File on DVD - S4HANAOP109_INST_EXPORT_9.zip"
+      archive:                               S4HANAOP109_INST_EXPORT_9.zip
+      url:                                   https://softwaredownloads.sap.com/file/0030000001071052025
+      path:                                  download_basket
+      checksum:                              74528483cb7b0d3c0591c1b7e86acdf3cd48a593baad107352825d33e58b58e5
+
+    - name:                                  "File on DVD - S4HANAOP109_ERP_LANG_DE.SAR"
+      archive:                               S4HANAOP109_ERP_LANG_DE.SAR
+      url:                                   https://softwaredownloads.sap.com/file/0030000001068242025
+      path:                                  download_basket
+      checksum:                              a98db8d843725a56c1ef9ede7da84b38c79fd8fab5756906a5be6a7e194b1261
+
+    - name:                                  "File on DVD - S4HANAOP109_ERP_LANG_EN.SAR"
+      archive:                               S4HANAOP109_ERP_LANG_EN.SAR
+      url:                                   https://softwaredownloads.sap.com/file/0030000001068302025
+      path:                                  download_basket
+      checksum:                              17220612d0d2fa37d8cf43e05debe802a9ff48c63f4e6307345ee5413e589e41
+
+    - name:                                  "File on DVD - S4HANAOP109_PRC_INST_EXPORT_1.zip"
+      archive:                               S4HANAOP109_PRC_INST_EXPORT_1.zip
+      url:                                   https://softwaredownloads.sap.com/file/0030000001071062025
+      path:                                  download_basket
+      checksum:                              4c0f34276345ae7c5f53b2783bad5138ce8b43897d04e13a03bf79b641938469
+
+    - name:                                  "Servicetools for SAP Basis 731 and higher"
+      archive:                               KITABC5.SAR
+      url:                                   https://softwaredownloads.sap.com/file/0010000001370422022
+      download:                              false
+      checksum:                              6c6fc1d02395bec4ddacd592d0db7e6173168dd4066f89dd061b097b51f168a0
+
+    - name:                                  "Servicetools for SAP Basis 731 and higher"
+      archive:                               KITABC6.SAR
+      url:                                   https://softwaredownloads.sap.com/file/0010000001370422022
+      download:                              false
+      checksum:                              6c6fc1d02395bec4ddacd592d0db7e6173168dd4066f89dd061b097b51f168a0
+
+    - name:                                  "ST-PI 740: SP 0031"
+      archive:                               K-74031INSTPI.SAR
+      url:                                   https://softwaredownloads.sap.com/file/0010000000642592025
+      download:                              false
+      checksum:                              ec7c93f8cd412b31131cdeb5123ce669cc5e2fe45a95e5734d5b00eb9aeff49d
+
+    - name:                                  "ST-PI 740: SP 0032"
+      archive:                               K-74032INSTPI.SAR
+      url:                                   https://softwaredownloads.sap.com/file/0010000000952762025
+      download:                              false
+      checksum:                              fe5fa314ba3198b36591e98f3ca2bee7f627743ba233ed1bba397ffec9fcc8de
+
+...
