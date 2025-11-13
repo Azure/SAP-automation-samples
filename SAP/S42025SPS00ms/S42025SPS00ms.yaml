@@ -42,16 +42,16 @@ materials:
     # kernel components
 
     - name:                                  "Kernel Part II (793)"
-      archive:                               SAPEXEDB_51-70007806.SAR
-      url:                                   https://softwaredownloads.sap.com/file/0020000001134862023
+      archive:                               SAPEXEDB_71-70008101.SAR
+      url:                                   https://softwaredownloads.sap.com/file/0025000000060112025
       path:                                  download_basket
-      checksum:                              6866c46a6bb13a09dae82d8ce160fe8d73d4bcdff0da00e5a52cfffda7af7891
+      checksum:                              63e1b1b1fa06e82371084741008c4825a8986beaf4a1162cc69d231ce1e6e2dc
 
-    - name:                                  "Kernel Part I (793)"
-      archive:                               SAPEXE_51-70007807.SAR
-      url:                                   https://softwaredownloads.sap.com/file/0020000001133782023
+    - name:                                  "Kernel Part I (916)"
+      archive:                               SAPEXE_71-70008102.SAR
+      url:                                   https://softwaredownloads.sap.com/file/0025000000060132025
       path:                                  download_basket
-      checksum:                              27a6c126cd2a15e0fdf3973cc914805d2f0dc738ff3a42c7220ea4fb2fa7590d
+      checksum:                              fef9584b883dbc75958cb42c1025946aef1888fd23a0b5ffd7e90e4d178154bb
 
     - name:                                  "SP12 Patch8 for UMML4HANA 1"
       archive:                               HANAUMML12_8-70001054.ZIP
