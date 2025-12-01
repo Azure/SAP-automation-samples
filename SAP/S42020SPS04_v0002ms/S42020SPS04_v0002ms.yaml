@@ -248,7 +248,7 @@ materials:
 
     - name:                                  "Attribute Change Package 28 for GBX01HR5 605"
       archive:                               GBX01HR5605.SAR
-      checksum:                              9b5f3fca5b87ba80f4048f857a22b2a63033b58ffb977a19241b1316a4731701
+      checksum:                              87d02737397b008c79f971f47eb37e222ba866aa8edfef25f645e2ab502279b2
       url:                                   https://softwaredownloads.sap.com/file/0010000000033172015
       download:                              false
 
@@ -566,7 +566,7 @@ materials:
 
     - name:                                  "SAP_BASIS 755: SP 0001"
       archive:                               K-75501INSAPBASIS.SAR
-      checksum:                              50604b03747cf8bd6051ed7b45f7f874b5a17771645322215d3aeee7b26cc5a8
+      checksum:                              26ccc058cb4fc03c10eea9322817eee0ec8c1d16f34cf9d2da6b395619c900b1
       url:                                   https://softwaredownloads.sap.com/file/0010000000042962021
       download:                              false
 
@@ -980,7 +980,7 @@ materials:
 
     - name:                                  "Attribute Change Package 10 for SAP_BASIS 755"
       archive:                               SAP_BASIS755.SAR
-      checksum:                              67822b7c420a79718c5616b5217355c9fe5f43756c2de729043a810d18c1b82a
+      checksum:                              84a739f862fa7c91ec462d7093a62c149b4021d7ba4bd0e490cf9da5e5ebddd0
       url:                                   https://softwaredownloads.sap.com/file/0010000001467632021
       download:                              false
 
@@ -1004,7 +1004,7 @@ materials:
 
     - name:                                  "Attribute Change Package 56 for ST-PI 740"
       archive:                               ST-PI740.SAR
-      checksum:                              603e83e417638508f7bfda9eed3e2f13bf7853e26439e5ff494ce9d51a930da5
+      checksum:                              e32d4e1343b7babddd2d07a8741f24eb156a856df4bdd368c24c1064a74a1960
       url:                                   https://softwaredownloads.sap.com/file/0010000000297212015
       download:                              false
 

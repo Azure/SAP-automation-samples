@@ -820,7 +820,7 @@ materials:
     - name:                                  "Attribute Change Package 18 for UIMDG001 200"
       archive:                               UIMDG001200.SAR
       url:                                   https://softwaredownloads.sap.com/file/0010000014247222017
-      checksum:                              efe6263197cdbb31f80bf4770d3431cc03c4d6aed954e33d68ce930eac5ffa2a
+      checksum:                              5f697e5c348a29eba1991bb0e67e92f2d813801cbb48014cd068b0192c42055f
       download:                              false
 
     - name:                                  "Attribute Change Package 01 for UIS4HOP1 700"
@@ -832,7 +832,7 @@ materials:
     - name:                                  "Attribute Change Package 19 for UITRV001 300"
       archive:                               UITRV001300.SAR
       url:                                   https://softwaredownloads.sap.com/file/0010000000561182019
-      checksum:                              049a690586683062f6f4ef887a70e11479eefafdb467619b6dc5f920dd32ac86
+      checksum:                              b16283118cd7738dbab616935d62261c0ba45496eb3d9090358b99db30b535b5
       download:                              false
 
 ...
