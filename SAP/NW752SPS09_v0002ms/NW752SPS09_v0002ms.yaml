@@ -24,7 +24,7 @@ materials:
   dependencies:
     - name:                                  HANA_2_00_067_v0006ms
     - name:                                  SWPM10SP44_latest
-    - name:                                  SUM20SP23_latest
+    - name:                                  SUM20SP24_latest
 
   media:
 
@@ -456,7 +456,7 @@ materials:
 
     - name:                                  "Attribute Change Package 56 for ST-PI 740"
       archive:                               ST-PI740.SAR
-      checksum:                              603e83e417638508f7bfda9eed3e2f13bf7853e26439e5ff494ce9d51a930da5
+      checksum:                              e32d4e1343b7babddd2d07a8741f24eb156a856df4bdd368c24c1064a74a1960
       url:                                   https://softwaredownloads.sap.com/file/0010000000297212015
       download:                              false
 

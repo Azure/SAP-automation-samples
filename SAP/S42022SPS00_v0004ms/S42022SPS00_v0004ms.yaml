@@ -308,31 +308,31 @@ materials:
 
     - name:                                  "Attribute Change Package 56 for ST-PI 740"
       archive:                               ST-PI740
-      checksum:                              603e83e417638508f7bfda9eed3e2f13bf7853e26439e5ff494ce9d51a930da5
+      checksum:                              e32d4e1343b7babddd2d07a8741f24eb156a856df4bdd368c24c1064a74a1960
       url:                                   https://softwaredownloads.sap.com/file/0010000000297212015
       download:                              false
 
     - name:                                  "Attribute Change Package 28 for GBX01HR 600"
       archive:                               GBX01HR5605
-      checksum:                              9b5f3fca5b87ba80f4048f857a22b2a63033b58ffb977a19241b1316a4731701
+      checksum:                              87d02737397b008c79f971f47eb37e222ba866aa8edfef25f645e2ab502279b2
       url:                                   https://softwaredownloads.sap.com/file/0010000000033172015
       download:                              false
  
     - name:                                  "Attribute Change Package 36 for UIHR002 100"
       archive:                               UIHR002100
-      checksum:                              689436077b2a9033cba4e2805127d351d580e61916952f060b3758991b6d5faf
+      checksum:                              9a53e482b6dc5c29955f8fd721c7215345c5e6164e6a82e510f1994ec4ac9b56
       url:                                   https://softwaredownloads.sap.com/file/0010000020208092017
       download:                              false
 
     - name:                                  "Attribute Change Package 18 for UIMDG001 200"
       archive:                               UIMDG001200
-      checksum:                              efe6263197cdbb31f80bf4770d3431cc03c4d6aed954e33d68ce930eac5ffa2a
+      checksum:                              5f697e5c348a29eba1991bb0e67e92f2d813801cbb48014cd068b0192c42055f
       url:                                   https://softwaredownloads.sap.com/file/0010000014247222017
       download:                              false
   
     - name:                                  "Attribute Change Package 19 for UITRV001 300"
       archive:                               UITRV001300
-      checksum:                              049a690586683062f6f4ef887a70e11479eefafdb467619b6dc5f920dd32ac86
+      checksum:                              b16283118cd7738dbab616935d62261c0ba45496eb3d9090358b99db30b535b5
       url:                                   https://softwaredownloads.sap.com/file/0010000000561182019
       download:                              false
   
