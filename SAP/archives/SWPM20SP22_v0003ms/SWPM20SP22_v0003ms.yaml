@@ -2,16 +2,16 @@
 
 name:                                  'SWPM20SP22'
 target:                                'SWPM20SP22'
-version:                               4
+version:                               3
 
 materials:
 
   media:
     # SWPM
     - name:                            "Support Package SOFTWARE PROVISIONING MGR 2.0 SP22 Linux on x86_64 64bit"
-      archive:                         SWPM20SP22_4-80003424.SAR
-      checksum:                        d5015c4e13428163b06f25d0d5effc6301c2e8b2377e1a597b2dc29129f06b82
+      archive:                         SWPM20SP22_3-80003424.SAR
+      checksum:                        8521d13f9ae858fcdfdb0552366ccf41876a7ea6b4aace2ead213fc368c66bbf
       extract:                         true
       extractDir:                      SWPM
       creates:                         SIGNATURE.SMF
-      url:                             https://softwaredownloads.sap.com/file/0025000000163782025
+      url:                             https://softwaredownloads.sap.com/file/0025000000145442025
