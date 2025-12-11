@@ -107,7 +107,7 @@ materials:
       url:                                   https://softwaredownloads.sap.com/file/0020000000703122018
 
     - name:                                  "Oracle ASM Library"
-      archive:                               oracleasmlib-3.1.1-1.el8.x86_64.rpm
+      archive:                               oracleasmlib-3.1.1-1.el9.x86_64.rpm
       extract:                               false
       extractDir:                            RPM
       download:                              true
@@ -115,9 +115,10 @@ materials:
       type:                                  rpm
 
     - name:                                  "Oracle ASM Support"
-      archive:                               oracleasm-support-3.0.0-6.el8.x86_64.rpm
+      archive:                               oracleasm-support-3.1.1-4.el9.x86_64.rpm
       extract:                               false
       extractDir:                            RPM
       download:                              true
       path:                                  RPM
       type:                                  rpm
+      url:                                   https://yum.oracle.com/repo/OracleLinux/OL9/addons/x86_64/getPackage/oracleasm-support-3.1.1-4.el9.x86_64.rpm
