@@ -83,7 +83,7 @@ materials:
     - name:                                  "Oracle libbpf rpm package EL9"
       archive:                               libbpf-1.5.0-1.el9.x86_64.rpm
       extract:                               False
-      checksum:                              347b92549e21d08469431afce06b48ca371f0d2d29c84570076230b8453efc91
+      checksum:                              173dfddfd6b52b288e4e858c00e0db57b8c1c77f381b152c8b8fa25e20308411
       extractDir:                            RPM
       download:                              true
       path:                                  RPM
