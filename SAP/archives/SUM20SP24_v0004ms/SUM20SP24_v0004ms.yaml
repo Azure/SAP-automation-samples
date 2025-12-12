@@ -1,0 +1,17 @@
+---
+# Updated 09212025
+
+name:                                        'SUM20SP24'
+target:                                      'SUM20SP24'
+version:                                     004  
+
+materials:
+
+  media:
+  # SUM
+  - name:                                    "Patch 4 for SOFTWARE UPDATE MANAGER 2.0 SP24 (Linux on x86_64)"
+    archive:                                 SUM20SP24_4-80002456.SAR
+    checksum:                                91912a4e37f945a5f03ade9a14f862a9e2475c02334dbe7a58b4434157304aea
+    download:                                false
+    url:                                     https://softwaredownloads.sap.com/file/0025000000163802025
+    
