@@ -70,7 +70,8 @@ materials:
       creates:                               SIGNATURE.SMF
       url:                                   https://softwaredownloads.sap.com/file/0020000000873012025
 
-    - name:                                  "Oracle Libbpf library"
+
+    - name:                                  "Oracle libbpf rpm package EL8"
       archive:                               libbpf-0.6.0-6.el8.x86_64.rpm
       extract:                               False
       checksum:                              347b92549e21d08469431afce06b48ca371f0d2d29c84570076230b8453efc91
@@ -78,7 +79,19 @@ materials:
       download:                              true
       path:                                  RPM
       type:                                  rpm
-      url:                                   https://yum.oracle.com/repo/OracleLinux/OL8/UEKR7/x86_64/getPackage/libbpf-0.6.0-6.el8.x86_64.rpm
+      url:                                   https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackage/libbpf-0.5.0-1.el8.x86_64.rpm
+      distributions:                         [oraclelinux8]
+
+    - name:                                  "Oracle libbpf rpm package EL9"
+      archive:                               libbpf-1.5.0-1.el9.x86_64.rpm
+      extract:                               False
+      checksum:                              173dfddfd6b52b288e4e858c00e0db57b8c1c77f381b152c8b8fa25e20308411
+      extractDir:                            RPM
+      download:                              true
+      path:                                  RPM
+      type:                                  rpm
+      url:                                   https://yum.oracle.com/repo/OracleLinux/OL9/baseos/latest/x86_64/getPackage/libbpf-1.5.0-1.el9.x86_64.rpm
+      distributions:                         [oraclelinux9]
 
     - name:                                  "Oraclecompact-lib"
       archive:                               compat-libcap1-1.10-7.el7.x86_64.rpm
@@ -89,6 +102,7 @@ materials:
       path:                                  RPM
       type:                                  rpm
       url:                                   https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackage/compat-libcap1-1.10-7.el7.x86_64.rpm
+      distributions:                        [oraclelinux7]
 
     - name:                                  "Oraclecompact-libc++"
       archive:                               compat-libstdc++-33-3.2.3-72.el7.x86_64.rpm
@@ -99,6 +113,7 @@ materials:
       path:                                  RPM
       type:                                  rpm
       url:                                   https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackage/compat-libstdc++-33-3.2.3-72.el7.x86_64.rpm
+      distributions:                         [oraclelinux7, redhat7]
 
     - name:                                  "compat-sap-c++-10"
       archive:                               compat-sap-c++-10-10.2.1-11.el7_9.x86_64.rpm
@@ -107,25 +122,68 @@ materials:
       download:                              true
       path:                                  RPM
       type:                                  rpm
+      distributions:                         [oraclelinux7, redhat7]
+      url:                                   https://repo.almalinux.org/almalinux/8/SAP/x86_64/os/Packages/compat-sap-c++-10-10.2.1-1.2.el8_9.x86_64.rpm
 
-    - name:                                  "Oracle ASM Support"
-      archive:                               oracleasm-support-3.0.0-6.el8.x86_64.rpm
+    - name:                                  "compat-sap-c++-12"
+      archive:                               compat-sap-c++-12-12.1.1-1.2.el8_9.x86_64.rpm
+      extract:                               False
+      extractDir:                            RPM
+      download:                              true
+      path:                                  RPM
+      type:                                  rpm
+      distributions:                         [oraclelinux8, redhat8]
+      url:                                   https://repo.almalinux.org/almalinux/8/SAP/x86_64/os/Packages/compat-sap-c++-12-12.1.1-1.2.el8_9.x86_64.rpm
+
+    - name:                                  "compat-sap-c++-13"
+      archive:                               compat-sap-c++-13-13.2.1-6.3.2.el9_4.x86_64.rpm
+      extract:                               False
+      extractDir:                            RPM
+      download:                              true
+      path:                                  RPM
+      type:                                  rpm
+      distributions:                         [oraclelinux9, redhat9]
+      url:                                   https://repo.almalinux.org/almalinux/9/SAPHANA/x86_64/os/Packages/compat-sap-c++-13-13.2.1-6.3.2.el9_4.x86_64.rpm
+
+    - name:                                  "Oracle ASM Library OEL8"
+      archive:                               oracleasmlib-3.1.1-1.el8.x86_64.rpm		
       extract:                               false
       extractDir:                            RPM
       download:                              true
       path:                                  RPM
       type:                                  rpm
-      url:                                   https://yum.oracle.com/repo/OracleLinux/OL8/addons/x86_64/getPackage/oracleasm-support-3.0.0-6.el8.x86_64.rpm
+      distributions:                         [oraclelinux8, redhat8]
 
-    - name:                                  "Oracle ASM Library"
-      archive:                               oracleasmlib-3.1.1-1.el8.x86_64.rpm
+    - name:                                  "Oracle ASM Library OEL9"
+      archive:                               oracleasmlib-3.1.1-1.el9.x86_64.rpm
       extract:                               false
       extractDir:                            RPM
       download:                              true
       path:                                  RPM
       type:                                  rpm
-      url:                                   https://download.oracle.com/otn_software/asmlib/oracleasmlib-3.1.1-1.el8.x86_64.rpm
+      distributions:                         [oraclelinux9, redhat9]
 
+    - name:                                  "Oracle ASM Support OEL9"
+      archive:                               oracleasm-support-3.1.1-4.el9.x86_64.rpm
+      extract:                               false
+      extractDir:                            RPM
+      download:                              true
+      path:                                  RPM
+      type:                                  rpm
+      url:                                   https://yum.oracle.com/repo/OracleLinux/OL9/addons/x86_64/getPackage/oracleasm-support-3.1.1-4.el9.x86_64.rpm
+      distributions:                         [oraclelinux9, redhat9]
+
+    - name:                                  "Oracle ASM Support OEL8"
+      archive:                               oracleasm-support-3.1.1-4.el8.x86_64.rpm
+      extract:                               false
+      extractDir:                            RPM
+      download:                              true
+      path:                                  RPM
+      type:                                  rpm
+      url:                                   https://yum.oracle.com/repo/OracleLinux/OL8/addons/x86_64/getPackage/oracleasm-support-3.1.1-4.el8.x86_64.rpm
+      distributions:                         [oraclelinux8, redhat8]
+
+# Download the zip file from: https://me.sap.com/notes/2660017 - Oracle 19c Installation Guide for SAP Systems
     - name:                                  "Updated RUNINSTALLER for Oracle 19c"
       archive:                               19cinstall-19-031-202407021105.zip
       extract:                               true

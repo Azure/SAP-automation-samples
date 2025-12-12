@@ -78,7 +78,7 @@ materials:
       path:                                  RPM
       type:                                  rpm
       url:                                   https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackage/libbpf-0.5.0-1.el8.x86_64.rpm
-      distributions:                        [oraclelinux8]
+      distributions:                         [oraclelinux8]
 
     - name:                                  "Oracle libbpf rpm package EL9"
       archive:                               libbpf-1.5.0-1.el9.x86_64.rpm
@@ -89,8 +89,7 @@ materials:
       path:                                  RPM
       type:                                  rpm
       url:                                   https://yum.oracle.com/repo/OracleLinux/OL9/baseos/latest/x86_64/getPackage/libbpf-1.5.0-1.el9.x86_64.rpm
-      distributions:                        [oraclelinux9]
-
+      distributions:                         [oraclelinux9]
 
     - name:                                  "Oraclecompact-lib"
       archive:                               compat-libcap1-1.10-7.el7.x86_64.rpm
@@ -182,6 +181,7 @@ materials:
       url:                                   https://yum.oracle.com/repo/OracleLinux/OL8/addons/x86_64/getPackage/oracleasm-support-3.1.1-4.el8.x86_64.rpm
       distributions:                         [oraclelinux8, redhat8]
 
+# Download the zip file from: https://me.sap.com/notes/2660017 - Oracle 19c Installation Guide for SAP Systems
 
     - name:                                  "Updated RUNINSTALLER for Oracle 19c"
       archive:                               19cinstall-19-031-202407021105.zip
