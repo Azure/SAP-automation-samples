@@ -94,7 +94,7 @@ materials:
       type:                                  rpm
       url:                                   https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackage/compat-libstdc++-33-3.2.3-72.el7.x86_64.rpm
 
-    - name:                                  "OracleASMSupport"
+    - name:                                  "Oracle ASM Support"
       archive:                               oracleasm-support-3.0.0-6.el8.x86_64.rpm
       extract:                               false
       extractDir:                            RPM

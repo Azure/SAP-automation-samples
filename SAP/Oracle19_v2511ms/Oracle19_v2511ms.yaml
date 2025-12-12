@@ -108,23 +108,22 @@ materials:
       path:                                  RPM
       type:                                  rpm
 
-    - name:                                  "OracleASMSupport"
-      archive:                               oracleasm-support-3.0.0-6.el8.x86_64.rpm
-      extract:                               false
-      extractDir:                            RPM
-      download:                              true
-      path:                                  RPM
-      type:                                  rpm
-      url:                                   https://yum.oracle.com/repo/OracleLinux/OL8/addons/x86_64/getPackage/oracleasm-support-3.0.0-6.el8.x86_64.rpm
-
     - name:                                  "Oracle ASM Library"
-      archive:                               oracleasmlib-3.1.1-1.el8.x86_64.rpm
+      archive:                               oracleasmlib-3.1.1-1.el9.x86_64.rpm
       extract:                               false
       extractDir:                            RPM
       download:                              true
       path:                                  RPM
       type:                                  rpm
-      url:                                   https://download.oracle.com/otn_software/asmlib/oracleasmlib-3.1.1-1.el8.x86_64.rpm
+
+    - name:                                  "Oracle ASM Support"
+      archive:                               oracleasm-support-3.1.1-4.el9.x86_64.rpm
+      extract:                               false
+      extractDir:                            RPM
+      download:                              true
+      path:                                  RPM
+      type:                                  rpm
+      url:                                   https://yum.oracle.com/repo/OracleLinux/OL9/addons/x86_64/getPackage/oracleasm-support-3.1.1-4.el9.x86_64.rpm
 
     - name:                                  "Updated RUNINSTALLER for Oracle 19c"
       archive:                               19cinstall-19-031-202407021105.zip

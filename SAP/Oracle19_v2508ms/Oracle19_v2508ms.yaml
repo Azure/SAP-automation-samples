@@ -108,7 +108,7 @@ materials:
       path:                                  RPM
       type:                                  rpm
 
-    - name:                                  "OracleASMSupport"
+    - name:                                  "Oracle ASM Support"
       archive:                               oracleasm-support-3.0.0-6.el8.x86_64.rpm
       extract:                               false
       extractDir:                            RPM
