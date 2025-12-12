@@ -8,7 +8,7 @@ platform:                                    "ORACLE ASM"
 # Oracle client software download updated 10/01/2025
 patch_information:
   SBP_DBRU:                                  38291812 
-  SBP_OCWRU:                                 38298204
+  SBP_OCWRU:                                 38322923
   SBP_ACFSRU:                                38311528
   SBP_JDKRU:                                 38245243
   MOPatch:                                   2.11

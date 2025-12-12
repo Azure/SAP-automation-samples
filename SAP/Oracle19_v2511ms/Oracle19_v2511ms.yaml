@@ -12,7 +12,7 @@ InstanceType:                                "ABAP"
 # Oracle client software download updated 12/11/2025
 patch:
   SBP_DBRU:                                  38291812 
-  SBP_OCWRU:                                 38298204
+  SBP_OCWRU:                                 38322923
   SBP_ACFSRU:                                38311528
   SBP_JDKRU:                                 38245243
 
