@@ -71,7 +71,7 @@ materials:
       url:                                   https://softwaredownloads.sap.com/file/0020000000873012025
 
     - name:                                  "Oracle libbpf rpm package EL8"
-      archive:                               libbpf-0.6.0-6.el8.x86_64.rpm
+      archive:                               libbpf-0.5.0-1.el8.x86_64.rpm
       extract:                               False
       checksum:                              347b92549e21d08469431afce06b48ca371f0d2d29c84570076230b8453efc91
       extractDir:                            RPM
