@@ -150,47 +150,6 @@ materials:
 #      repourl:                               https://repo.almalinux.org/almalinux/9/SAPHANA/x86_64/os
       distributions:                         [oraclelinux9, redhat9]
 
-    - name:                                  "Oracle ASM Library OEL8"
-      archive:                               oracleasmlib-3.0.0-13.el8.x86_64.rpm		
-      extract:                               false
-      extractDir:                            RPM
-      download:                              true
-      path:                                  RPM
-      type:                                  rpm
-      distributions:                         [oraclelinux8, redhat8]
-
-    - name:                                  "Oracle ASM Support OEL8"
-      archive:                               oracleasm-support-3.0.0-6.el8.x86_64.rpm
-      extract:                               false
-      extractDir:                            RPM
-      download:                              true
-      path:                                  RPM
-      type:                                  rpm
-      url:                                   https://yum.oracle.com/repo/OracleLinux/OL8/addons/x86_64/getPackage/oracleasm-support-3.0.0-6.el8.x86_64.rpm
-      # repourl:                               https://yum.oracle.com/repo/OracleLinux/OL8/addons/x86_64
-      distributions:                         [oraclelinux8, redhat8]
-
-    - name:                                  "Oracle ASM Library OEL9"
-      archive:                               oracleasmlib-3.1.1-1.el9.x86_64.rpm
-      extract:                               false
-      extractDir:                            RPM
-      download:                              true
-      path:                                  RPM
-      type:                                  rpm
-      distributions:                         [oraclelinux9, redhat9]
-
-    - name:                                  "Oracle ASM Support OEL9"
-      archive:                               oracleasm-support-3.1.1-4.el9.x86_64.rpm
-      extract:                               false
-      extractDir:                            RPM
-      download:                              true
-      path:                                  RPM
-      type:                                  rpm
-      url:                                   https://yum.oracle.com/repo/OracleLinux/OL9/addons/x86_64/getPackage/oracleasm-support-3.1.1-4.el9.x86_64.rpm
-      # repourl:                               https://yum.oracle.com/repo/OracleLinux/OL9/addons/x86_64
-      distributions:                         [oraclelinux9, redhat9]
-
-
 # Download the zip file from: https://me.sap.com/notes/2660017 - Oracle 19c Installation Guide for SAP Systems
 
     - name:                                  "Updated RUNINSTALLER for Oracle 19c"
