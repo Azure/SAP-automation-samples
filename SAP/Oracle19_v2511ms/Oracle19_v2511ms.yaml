@@ -114,7 +114,7 @@ materials:
       path:                                  RPM
       type:                                  rpm
       url:                                   https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackage/compat-libstdc++-33-3.2.3-72.el7.x86_64.rpm
-      repourl:                               https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64
+#      repourl:                               https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64
       distributions:                         [oraclelinux7, redhat7]
 
     - name:                                  "compat-sap-c++-10"
@@ -125,7 +125,7 @@ materials:
       path:                                  RPM
       type:                                  rpm
       url:                                   https://repo.almalinux.org/almalinux/8/SAP/x86_64/os/Packages/compat-sap-c++-10-10.2.1-1.2.el8_9.x86_64.rpm
-      repourl:                               https://repo.almalinux.org/almalinux/8/SAP/x86_64/os
+#      repourl:                               https://repo.almalinux.org/almalinux/8/SAP/x86_64/os
       distributions:                         [oraclelinux7, redhat7]
 
     - name:                                  "compat-sap-c++-12"
@@ -136,7 +136,7 @@ materials:
       path:                                  RPM
       type:                                  rpm
       url:                                   https://repo.almalinux.org/almalinux/8/SAP/x86_64/os/Packages/compat-sap-c++-12-12.1.1-1.2.el8_9.x86_64.rpm
-      repourl:                               https://repo.almalinux.org/almalinux/8/SAP/x86_64/os
+#      repourl:                               https://repo.almalinux.org/almalinux/8/SAP/x86_64/os
       distributions:                         [oraclelinux8, redhat8]
 
     - name:                                  "compat-sap-c++-13"
