@@ -77,7 +77,7 @@ materials:
       path:                                  download_basket
       url:                                   https://softwaredownloads.sap.com/file/0020000001179602021
 
-    - name:                                  "SAP IGS"
+    - name:                                  "Support Package SAP IGS 7.53 Linux on x86_64 64bit	"
       archive:                               igsexe_13-80003187.sar
       checksum:                              b508b1ff97ec0e3b7f4dd8f57e3840eb547b6326434df677927b8cfd6b4faa12
       extract:                               false
