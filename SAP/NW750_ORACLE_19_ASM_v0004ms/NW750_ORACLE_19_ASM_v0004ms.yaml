@@ -83,20 +83,20 @@ materials:
       url:                                   https://softwaredownloads.sap.com/file/0030000000635092016
 
     - name:                                  "SAP Host Agent"
-      archive:                               SAPHOSTAGENT53_53-80004822.SAR
-      checksum:                              a8d8df83417bf15b4d822ccce5aef7f19917cafc0784457a0aa5946a4252aadf
-      extract:                               false
-      download:                              true
+      archive:                               SAPHOSTAGENT66_66-80004822.SAR
+      checksum:                              b722469aaa23247055214f42d0bb49c8506ed8faac177a5b1a48087e4cb6d8e0
+      extract:                               False
+      download:                              True
       path:                                  download_basket
-      url:                                   https://softwaredownloads.sap.com/file/0020000001179602021
+      url:                                   https://softwaredownloads.sap.com/file/0020000001380962024
 
-    - name:                                  "SAP IGS"
-      archive:                               igsexe_13-80003187.sar
-      checksum:                              b508b1ff97ec0e3b7f4dd8f57e3840eb547b6326434df677927b8cfd6b4faa12
-      extract:                               false
-      download:                              true
+    - name:                                  "Support Package SAP IGS 7.54 Linux on x86_64 64bit"
+      archive:                               igsexe_5-80007786.sar
+      checksum:                              7c066400840850f39ffde61f8c2c00e96f1ca51a85f191258afb367a7b5a2ebc
+      extract:                               False
+      download:                              True
       path:                                  download_basket
-      url:                                   https://softwaredownloads.sap.com/file/0020000000534572021
+      url:                                   https://softwaredownloads.sap.com/file/0020000001255692024
 
     - name:                                  "SAP IGSHELPER"
       archive:                               igshelper_17-10010245.sar
