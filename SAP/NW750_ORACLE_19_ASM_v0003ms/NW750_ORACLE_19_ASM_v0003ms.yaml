@@ -83,20 +83,28 @@ materials:
       url:                                   https://softwaredownloads.sap.com/file/0030000000635092016
 
     - name:                                  "SAP Host Agent"
-      archive:                               SAPHOSTAGENT53_53-80004822.SAR
-      checksum:                              a8d8df83417bf15b4d822ccce5aef7f19917cafc0784457a0aa5946a4252aadf
+      archive:                               SAPHOSTAGENT69_69-80004822.SAR
+      checksum:                              a411aae3c8ee7f9be9e104725be4ed75507927771faabed3ac8121521dfc14c0
       extract:                               false
       download:                              true
       path:                                  download_basket
-      url:                                   https://softwaredownloads.sap.com/file/0020000001179602021
+      url:                                   https://softwaredownloads.sap.com/file/0025000000056272025
 
-    - name:                                  "SAP IGS"
-      archive:                               igsexe_13-80003187.sar
-      checksum:                              b508b1ff97ec0e3b7f4dd8f57e3840eb547b6326434df677927b8cfd6b4faa12
+    - name:                                  "SAP Host Agent RPM package"
+      archive:                               saphostagentrpm_69-80004822.rpm
+      checksum:                              ea8258abfd1c02d6caf7708349c011e8b028c30c24c51346edf07489e4a0781e
       extract:                               false
       download:                              true
       path:                                  download_basket
-      url:                                   https://softwaredownloads.sap.com/file/0020000000534572021
+      url:                                   https://softwaredownloads.sap.com/file/0020000001095772025
+
+    - name:                                  "SAP IGS 7.54"
+      archive:                               igsexe_6-80007786.sar
+      checksum:                              328988cb82b0f69825d6b615e9667411aad632dbf74e1a454f9db93f6b247b26
+      extract:                               false
+      download:                              true
+      path:                                  download_basket
+      url:                                   https://softwaredownloads.sap.com/file/0020000000555162025
 
     - name:                                  "SAP IGSHELPER"
       archive:                               igshelper_17-10010245.sar
