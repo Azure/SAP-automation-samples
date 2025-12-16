@@ -45,23 +45,23 @@ materials:
 
 # SAP Oracle executables, SWMP and Installation exports
 
-    - name:                                  "DB Independent Kernel Files"
-      archive:                               SAPEXE_801-80002573.SAR
-      checksum:                              c1efbbd12cb16134720b251fd18cab4fdbc8a0a3ee93b54c2ee41671bc3048fc
+    - name:                                  "DB Independent Kernel Files Kernel Part I (754)"
+      archive:                               SAPEXE_400-80007612.SAR
+      checksum:                              724d3f6a5c246e2b54a167410ae2de36ee15a386d4502628afea6270c7a072b8
       extract:                               false
       # download:                            true
       path:                                  download_basket
       # creates:                             SIGNATURE.SMF
-      url:                                   https://softwaredownloads.sap.com/file/0020000000937192021
+      url:                                   https://softwaredownloads.sap.com/file/0020000000982412024
 
-    - name:                                  "Oracle DB specific kernel files"
-      archive:                               SAPEXEDB_801-80002605.SAR
-      checksum:                              3682acc6bbc9b5a122af422835217875e01cecd372b04649ef0659fcade3163e
+    - name:                                  "Oracle DB specific kernel files Kernel Part II (754)"
+      archive:                               SAPEXEDB_400-80007644.SAR
+      checksum:                              0cbdab31c5a8f052a2c8f360548f375457f99973b6056013c2bdb0d3ac1e532b
       extract:                               false
       # download:                            true
       path:                                  download_basket
       # creates:                             SIGNATURE.SMF
-      url:                                   https://softwaredownloads.sap.com/file/0020000000937422021
+      url:                                   https://softwaredownloads.sap.com/file/0020000000982632024
 
     - name:                                  "Oracle DBATOOLS; OS: Linux on x86_64 64bit"
       archive:                               DBATL740O11_48-80001514.SAR

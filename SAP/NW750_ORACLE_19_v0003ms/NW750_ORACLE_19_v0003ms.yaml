@@ -64,24 +64,32 @@ materials:
       # creates:                             SIGNATURE.SMF
       url:                                   https://softwaredownloads.sap.com/file/0020000000982632024
 
+    # - name:                                  "DB Independent Kernel Files 7.53"
+    #   archive:                               SAPEXE_801-80002573.SAR
+    #   checksum:                              c1efbbd12cb16134720b251fd18cab4fdbc8a0a3ee93b54c2ee41671bc3048fc
+    #   extract:                               false
+    #   # download:                            true
+    #   path:                                  download_basket
+    #   # creates:                             SIGNATURE.SMF
+    #   url:                                   https://softwaredownloads.sap.com/file/0020000000937192021
+
+    # - name:                                  "Oracle DB specific kernel files 7.53"
+    #   archive:                               SAPEXEDB_801-80002605.SAR
+    #   checksum:                              3682acc6bbc9b5a122af422835217875e01cecd372b04649ef0659fcade3163e
+    #   extract:                               false
+    #   # download:                            true
+    #   path:                                  download_basket
+    #   # creates:                             SIGNATURE.SMF
+    #   url:                                   https://softwaredownloads.sap.com/file/0020000000937422021
+
     - name:                                  "Oracle DBATOOLS; OS: Linux on x86_64 64bit"
-      archive:                               DBATL740O11_49-80007590.SAR
-      checksum:                              f3c7e17de52ba443768b4bab91d99f1d3a8cc55fd8d577786282c518f14685a6
+      archive:                               DBATL740O11_48-80001514.SAR
+      checksum:                              49e5f348176430cc2f675c6858de95cd68f3fd8003dd6c212a43e60e8691b86e
       extract:                               false
       # download:                            true
       path:                                  download_basket
       # creates:                             SIGNATURE.SMF
-      url:                                   https://softwaredownloads.sap.com/file/0020000000566302023
-
-    #   # SWPM
-    # - name:                                "SWPM20SP09 OS: Linux on x86_64 64bit"
-    #   archive:                             SWPM10SP32_5-20009701.SAR
-    #   checksum:                            48c479550d76354ba28f8765c1171d4795d82fea185e150ec1035a7fcfb90f29
-    #   extract:                             true
-    #   extractDir:                          SWPM
-    #   creates:                             SIGNATURE.SMF
-    #   url:                                 https://softwaredownloads.sap.com/file/0020000001253802021
-
+      url:                                   https://softwaredownloads.sap.com/file/0020000001370652022
 
     - name:                                  "Oracle installation dump"
       archive:                               51050829_3.ZIP
@@ -94,12 +102,28 @@ materials:
       url:                                   https://softwaredownloads.sap.com/file/0030000000635092016
 
     - name:                                  "SAP Host Agent"
-      archive:                               SAPHOSTAGENT66_66-80004822.SAR
-      checksum:                              b722469aaa23247055214f42d0bb49c8506ed8faac177a5b1a48087e4cb6d8e0
+      archive:                               SAPHOSTAGENT69_69-80004822.SAR
+      checksum:                              a411aae3c8ee7f9be9e104725be4ed75507927771faabed3ac8121521dfc14c0
       extract:                               false
       download:                              true
       path:                                  download_basket
-      url:                                   https://softwaredownloads.sap.com/file/0020000001380962024
+      url:                                   https://softwaredownloads.sap.com/file/0025000000056272025
+
+    - name:                                  "SAP Host Agent RPM package"
+      archive:                               saphostagentrpm_69-80004822.rpm
+      checksum:                              ea8258abfd1c02d6caf7708349c011e8b028c30c24c51346edf07489e4a0781e
+      extract:                               false
+      download:                              true
+      path:                                  download_basket
+      url:                                   https://softwaredownloads.sap.com/file/0020000001095772025
+
+    # - name:                                  "Support Package SAP IGS 7.53 Linux on x86_64 64bit	"
+    #   archive:                               igsexe_13-80003187.sar
+    #   checksum:                              b508b1ff97ec0e3b7f4dd8f57e3840eb547b6326434df677927b8cfd6b4faa12
+    #   extract:                               false
+    #   download:                              true
+    #   path:                                  download_basket
+    #   url:                                   https://softwaredownloads.sap.com/file/0020000000534572021
 
     - name:                                  "Support Package SAP IGS 7.54 Linux on x86_64 64bit	"
       archive:                               igsexe_5-80007786.sar
