@@ -1,0 +1,14 @@
+---
+name:                                        'SUM20SP24'
+target:                                      'SUM20SP24'
+version:                                     005
+
+materials:
+
+  media:
+
+    - name:                                  "Patch 5 for SOFTWARE UPDATE MANAGER 2.0 SP24 (Windows on x64 64bit)"
+      archive:                               SUM20SP24_5-80002458.SAR
+      checksum:                              ac696586c679f1c6f3f8583ea4491d33d2ef24e6ea61521176292c99be980132
+      download:                              false
+      url:                                   https://softwaredownloads.sap.com/file/0025000000173752025
