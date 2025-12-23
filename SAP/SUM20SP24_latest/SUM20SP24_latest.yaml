@@ -3,15 +3,15 @@
 
 name:                                        'SUM20SP24'
 target:                                      'SUM20SP24'
-version:                                     006
+version:                                     007
 
 materials:
 
   media:
   # SUM
-  - name:                                    "Patch 6 for SOFTWARE UPDATE MANAGER 2.0 SP24 (Linux on x86_64)"
-    archive:                                 SUM20SP24_6-80002456.SAR
-    checksum:                                488d38e462c9acbd058f4daa73c9f9810ba8d27ddd7de77f31be9e9fcf9793fa
+  - name:                                    "Patch 7 for SOFTWARE UPDATE MANAGER 2.0 SP24 (Linux on x86_64)"
+    archive:                                 SUM20SP24_7-80002456.SAR
+    checksum:                                85c5305145ac40505e7a83ac91962964534733958c369292e55d52f8618b2940
     download:                                false
-    url:                                     https://softwaredownloads.sap.com/file/0025000000185782025
+    url:                                     https://softwaredownloads.sap.com/file/0025000000199112025
     
