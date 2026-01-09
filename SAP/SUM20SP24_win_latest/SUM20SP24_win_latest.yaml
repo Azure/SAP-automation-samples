@@ -1,14 +1,14 @@
 ---
 name:                                        'SUM20SP24'
 target:                                      'SUM20SP24'
-version:                                     007
+version:                                     008
 
 materials:
 
   media:
 
-    - name:                                  "Patch 7 for SOFTWARE UPDATE MANAGER 2.0 SP24 (Windows on x64 64bit)"
-      archive:                               SUM20SP24_7-80002458.SAR
-      checksum:                              f737b5d89b6748b0d45cbc747e87f502ed76926ebb7b22b4a0f54e5df40d6e2c
+    - name:                                  "Patch 8 for SOFTWARE UPDATE MANAGER 2.0 SP24 (Windows on x64 64bit)"
+      archive:                               SUM20SP24_8-80002458.SAR
+      checksum:                              d0447f40301dd5d81633e764d76e47e56816c41ca466810cf4a0be3d82bd789b
       download:                              false
-      url:                                   https://softwaredownloads.sap.com/file/0025000000199092025
+      url:                                   https://softwaredownloads.sap.com/file/0020000000006962026
