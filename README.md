@@ -1,6 +1,6 @@
 # Project
 
-This repo contains both the sample Terrraform configuration files for SDAF and the Bill of Material files for the SAP installations
+This repo contains both the sample Terraform configuration files for SDAF and the Bill of Material files for the SAP installations
 
 ## Contributing
 
