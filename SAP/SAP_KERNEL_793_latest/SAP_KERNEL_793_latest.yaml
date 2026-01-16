@@ -1,0 +1,28 @@
+---
+name:                                        'KERNEL793_latest'
+target:                                      'KERNEL793_latest'
+version:                                     001
+
+materials:
+
+  media:
+    # Kernel
+
+    - name:                                  "Kernel Part I (793)"
+      archive:                               SAPEXE_300-70007807.SAR
+      checksum:                              285410a09fc4e3b92458511c492bf96d3c0fefab225f17c0068df4399a5e951f
+      extract:                               true
+      url:                                   https://softwaredownloads.sap.com/file/0020000000458232025
+      platform:                              HANA 
+
+    # DB Kernel
+
+    - name:                                  "Kernel Part II (793) for SAP HANA"
+      archive:                               SAPEXEDB_300-70007806.SAR
+      checksum:                              db4cb0eac4fd0551fc4f718dfb42b2f994905e463f4fbb56ac234e47b831a305
+      extract:                               true
+      url:                                   https://softwaredownloads.sap.com/file/0020000000458292025
+      platform:                              HANA 
+
+
+...
