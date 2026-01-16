@@ -52,7 +52,7 @@ materials:
       creates:                               COMPONENTS/SAP_HANA_LCAPPS/packages
       url:                                   https://softwaredownloads.sap.com/file/0020000000008332026
 
-    - name:                                  "VCH AFL 2021 Rev 89.0 only for HANA 2.0 Rev 89
+    - name:                                  "VCH AFL 2021 Rev 89.0 only for HANA 2.0 Rev 89"
       archive:                               VCH202100_2089_0-70006349.SAR
       checksum:                              19d83a3aa6d404ba8d6e116a427c2e3c1e1cde8222b81fd762b283e3823b3a69
       extract:                               true
