@@ -1,0 +1,36 @@
+---
+name:                                        'KERNEL754_latest'
+target:                                      'KERNEL754_latest'
+version:                                     001
+
+materials:
+
+  media:
+    # Kernel
+
+    - name:                                  "Kernel Part I (754) ; OS: Linux on x86_64 64bit ; DB: Database independent"
+      archive:                               SAPEXE_600-80007612.SAR
+      checksum:                              c43c5737109f0df9cb895b25f4c59345c20e2769e27bca8876b8f1e676e3ef97
+      path:                                  download_basket
+      url:                                   https://softwaredownloads.sap.com/file/0020000000815822025
+
+    - name:                                  "Kernel Part II (754) ; OS: Linux on x86_64 64bit ; DB: SAP HANA database"
+      archive:                               SAPEXEDB_600-80007611.SAR
+      checksum:                              cea354d096aeca009ffcc81d0830956626fbb0b3c65e7507798256a18318bc5e
+      path:                                  download_basket
+      url:                                   https://softwaredownloads.sap.com/file/0020000000815502025
+
+
+    # IGS
+    - name:                                  "Installation for SAP IGS integrated in SAP Kernel ; OS: Linux on x86_64"
+      archive:                               igsexe_6-80007786.sar
+      checksum:                              328988cb82b0f69825d6b615e9667411aad632dbf74e1a454f9db93f6b247b26
+      path:                                  download_basket
+      url:                                   https://softwaredownloads.sap.com/file/0020000000555162025
+
+    - name:                                  "SAP IGS Fonts and Textures"
+      archive:                               igshelper_17-10010245.sar
+      checksum:                              bc405afc4f8221aa1a10a8bc448f8afd9e4e00111100c5544097240c57c99732
+      path:                                  download_basket
+      url:                                   https://softwaredownloads.sap.com/file/0020000000703122018
+
