@@ -42,21 +42,6 @@ materials:
       download:                         True
       checksum:                         7f6f7efebcdb31bfde8ee1393f095473e1a1c71f138cc7f1f2a1dd561c3c61d2
 
-    # kernel components
-
-    - name:                             "Kernel Part I (916) ; OS: Linux on x86_64 64bit ; DB: Database independe"
-      archive:                          SAPEXE_50-70008102.SAR
-      url:                              https://softwaredownloads.sap.com/file/0020000001086572025
-      download:                         True
-      checksum:                         2bc364b795d72f11c9a0365634d8648f70e9f85c9515bf3576d5338e7f10c0cf
-
-    - name:                             "Kernel Part II (916) ; OS: Linux on x86_64 64bit ; DB: SAP HANA database"
-      archive:                          SAPEXEDB_50-70008101.SAR
-      url:                              https://softwaredownloads.sap.com/file/0020000001086052025
-      download:                         True
-      checksum:                         330b04efe2156f88ca280b151f363b00f86e29daa47632be10ae6aab6620a093
-
-
     # db export components
     - name:                             "File on DVD"
       archive:                          S4HANAOP109_ERP_LANG_DE.SAR
@@ -636,3 +621,4 @@ materials:
       download:                         True
 
 ...
+
