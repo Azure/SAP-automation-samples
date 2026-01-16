@@ -19,6 +19,7 @@ materials:
       checksum:                              cea354d096aeca009ffcc81d0830956626fbb0b3c65e7507798256a18318bc5e
       path:                                  download_basket
       url:                                   https://softwaredownloads.sap.com/file/0020000000937602021
+      platform:                              'HANA'
 
 
     # IGS
