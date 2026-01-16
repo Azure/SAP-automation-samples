@@ -1,0 +1,1207 @@
+---
+
+name:                                        NW750SPS34_SPS08ms
+target:                                      NETWEAVER 7.50 SPS 34
+version:                                     SPS 08
+
+product_ids:
+  dbl:                                       NW_ABAP_DB:NW750.HDB.ABAP
+  scs:                                       NW_ABAP_ASCS:NW750.HDB.ABAP
+  scs_ha:                                    NW_ABAP_ASCS:NW750.HDB.ABAPHA
+  pas:                                       NW_ABAP_CI:NW750.HDB.ABAP
+  pas_ha:                                    NW_ABAP_CI:NW750.HDB.ABAPHA
+  app:                                       NW_DI:NW750.HDB.PD
+  app_ha:                                    NW_DI:NW750.HDB.ABAPHA
+  web:                                       NW_Webdispatcher:NW750.IND.PD
+  ers:                                       NW_ERS:NW750.HDB.ABAP
+  ers_ha:                                    NW_ERS:NW750.HDB.ABAPHA
+  generic:                                   NW_Users_Create:GENERIC.HDB.PD
+
+materials:
+  dependencies:
+    - name:                                  HANA_2_00_SPS08_latest
+    - name:                                  SAP_KERNEL_754_latest
+    - name:                                  SWPM10SP45_latest
+    - name:                                  SUM11S530_latest
+
+  media:
+
+    # support package components
+    - name:                             "ST-PI 740: SP 0002"
+      archive:                          K-74002INSTPI.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000057482015
+      path:                             download_basket
+      download:                         True
+
+    - name:                             "ST-PI 740: SP 0003"
+      archive:                          K-74003INSTPI.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000057492015
+      path:                             download_basket
+      download:                         True
+
+    - name:                             "ST-PI 740: SP 0004"
+      archive:                          K-74004INSTPI.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000059202016
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "ST-PI 740: SP 0005"
+      archive:                          K-74005INSTPI.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000841352016
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "ST-PI 740: SP 0006"
+      archive:                          K-74006INSTPI.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000012329692017
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "ST-PI 740: SP 0007"
+      archive:                          K-74007INSTPI.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000019616252017
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "ST-PI 740: SP 0008"
+      archive:                          K-74008INSTPI.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000623832018
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "ST-PI 740: SP 0009"
+      archive:                          K-74009INSTPI.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000002257102018
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "ST-PI 740: SP 0010"
+      archive:                          K-74010INSTPI.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000161692019
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "ST-PI 740: SP 0011"
+      archive:                          K-74011INSTPI.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000001051532019
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "ST-PI 740: SP 0012"
+      archive:                          K-74012INSTPI.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000002162182019
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "ST-PI 740: SP 0013"
+      archive:                          K-74013INSTPI.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000660652020
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "ST-PI 740: SP 0014"
+      archive:                          K-74014INSTPI.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000001984822020
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "ST-PI 740: SP 0015"
+      archive:                          K-74015INSTPI.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000853222021
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "ST-PI 740: SP 0016"
+      archive:                          K-74016INSTPI.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000001454472021
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "ST-PI 740: SP 0017"
+      archive:                          K-74017INSTPI.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000096822022
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "ST-PI 740: SP 0018"
+      archive:                          K-74018INSTPI.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000509342022
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "ST-PI 740: SP 0019"
+      archive:                          K-74019INSTPI.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000788312022
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "ST-PI 740: SP 0020"
+      archive:                          K-74020INSTPI.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000001268542022
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "ST-PI 740: SP 0021"
+      archive:                          K-74021INSTPI.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000003862023
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "ST-PI 740: SP 0022"
+      archive:                          K-74022INSTPI.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000316762023
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "ST-PI 740: SP 0023"
+      archive:                          K-74023INSTPI.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000698242023
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "ST-PI 740: SP 0024"
+      archive:                          K-74024INSTPI.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000001020382023
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "ST-PI 740: SP 0025"
+      archive:                          K-74025INSTPI.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000052512024
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "ST-PI 740: SP 0026"
+      archive:                          K-74026INSTPI.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000322012024
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "ST-PI 740: SP 0027"
+      archive:                          K-74027INSTPI.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000661872024
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "ST-PI 740: SP 0028"
+      archive:                          K-74028INSTPI.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000001011762024
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "ST-PI 740: SP 0029"
+      archive:                          K-74029INSTPI.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000024712025
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "ST-PI 740: SP 0030"
+      archive:                          K-74030INSTPI.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000213932025
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "ST-PI 740: SP 0031"
+      archive:                          K-74031INSTPI.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000642592025
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "ST-PI 740: SP 0032"
+      archive:                          K-74032INSTPI.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000952762025
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_ABA 750: SP 0001"
+      archive:                          K-75001INSAPABA.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000062252015
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BASIS 750: SP 0001"
+      archive:                          K-75001INSAPBASIS.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000062262015
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BW 750: SP 0001"
+      archive:                          K-75001INSAPBW.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000062272015
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_GWFND 750: SP 0001"
+      archive:                          K-75001INSAPGWFND.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000062282015
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_ABA 750: SP 0002"
+      archive:                          K-75002INSAPABA.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000066952016
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BASIS 750: SP 0002"
+      archive:                          K-75002INSAPBASIS.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000062292015
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BW 750: SP 0002"
+      archive:                          K-75002INSAPBW.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000066962016
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_GWFND 750: SP 0002"
+      archive:                          K-75002INSAPGWFND.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000066972016
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_ABA 750: SP 0003"
+      archive:                          K-75003INSAPABA.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000066982016
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BASIS 750: SP 0003"
+      archive:                          K-75003INSAPBASIS.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000066992016
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BW 750: SP 0003"
+      archive:                          K-75003INSAPBW.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000067002016
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_GWFND 750: SP 0003"
+      archive:                          K-75003INSAPGWFND.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000067012016
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_ABA 750: SP 0004"
+      archive:                          K-75004INSAPABA.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000065922016
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BASIS 750: SP 0004"
+      archive:                          K-75004INSAPBASIS.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000065932016
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BW 750: SP 0004"
+      archive:                          K-75004INSAPBW.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000065942016
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_GWFND 750: SP 0004"
+      archive:                          K-75004INSAPGWFND.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000065952016
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_ABA 750: SP 0005"
+      archive:                          K-75005INSAPABA.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000508142016
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BASIS 750: SP 0005"
+      archive:                          K-75005INSAPBASIS.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000508152016
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BW 750: SP 0005"
+      archive:                          K-75005INSAPBW.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000508182016
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_GWFND 750: SP 0005"
+      archive:                          K-75005INSAPGWFND.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000508162016
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_ABA 750: SP 0006"
+      archive:                          K-75006INSAPABA.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000869062016
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BASIS 750: SP 0006"
+      archive:                          K-75006INSAPBASIS.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000869072016
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BW 750: SP 0006"
+      archive:                          K-75006INSAPBW.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000869102016
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_GWFND 750: SP 0006"
+      archive:                          K-75006INSAPGWFND.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000869082016
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_ABA 750: SP 0007"
+      archive:                          K-75007INSAPABA.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000004963902017
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BASIS 750: SP 0007"
+      archive:                          K-75007INSAPBASIS.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000004963522017
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BW 750: SP 0007"
+      archive:                          K-75007INSAPBW.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000004963602017
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_GWFND 750: SP 0007"
+      archive:                          K-75007INSAPGWFND.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000004966192017
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_ABA 750: SP 0008"
+      archive:                          K-75008INSAPABA.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000018731672017
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BASIS 750: SP 0008"
+      archive:                          K-75008INSAPBASIS.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000018731682017
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BW 750: SP 0008"
+      archive:                          K-75008INSAPBW.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000018731712017
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_GWFND 750: SP 0008"
+      archive:                          K-75008INSAPGWFND.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000018731692017
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_ABA 750: SP 0009"
+      archive:                          K-75009INSAPABA.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000019379412017
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BASIS 750: SP 0009"
+      archive:                          K-75009INSAPBASIS.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000019379502017
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BW 750: SP 0009"
+      archive:                          K-75009INSAPBW.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000019379582017
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_GWFND 750: SP 0009"
+      archive:                          K-75009INSAPGWFND.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000019379602017
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_ABA 750: SP 0010"
+      archive:                          K-75010INSAPABA.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000019960222017
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BASIS 750: SP 0010"
+      archive:                          K-75010INSAPBASIS.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000019960242017
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BW 750: SP 0010"
+      archive:                          K-75010INSAPBW.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000019960282017
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_GWFND 750: SP 0010"
+      archive:                          K-75010INSAPGWFND.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000019960292017
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_ABA 750: SP 0011"
+      archive:                          K-75011INSAPABA.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000174662018
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BASIS 750: SP 0011"
+      archive:                          K-75011INSAPBASIS.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000174692018
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BW 750: SP 0011"
+      archive:                          K-75011INSAPBW.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000174712018
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_GWFND 750: SP 0011"
+      archive:                          K-75011INSAPGWFND.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000174722018
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_ABA 750: SP 0012"
+      archive:                          K-75012INSAPABA.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000940002018
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BASIS 750: SP 0012"
+      archive:                          K-75012INSAPBASIS.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000940032018
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BW 750: SP 0012"
+      archive:                          K-75012INSAPBW.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000940052018
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_GWFND 750: SP 0012"
+      archive:                          K-75012INSAPGWFND.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000940072018
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_ABA 750: SP 0013"
+      archive:                          K-75013INSAPABA.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000001555712018
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BASIS 750: SP 0013"
+      archive:                          K-75013INSAPBASIS.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000001555662018
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BW 750: SP 0013"
+      archive:                          K-75013INSAPBW.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000001555672018
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_GWFND 750: SP 0013"
+      archive:                          K-75013INSAPGWFND.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000001555682018
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_ABA 750: SP 0014"
+      archive:                          K-75014INSAPABA.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000002622019
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BASIS 750: SP 0014"
+      archive:                          K-75014INSAPBASIS.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000134642019
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BW 750: SP 0014"
+      archive:                          K-75014INSAPBW.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000134652019
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_GWFND 750: SP 0014"
+      archive:                          K-75014INSAPGWFND.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000134662019
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_ABA 750: SP 0015"
+      archive:                          K-75015INSAPABA.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000794332019
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BASIS 750: SP 0015"
+      archive:                          K-75015INSAPBASIS.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000794362019
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BW 750: SP 0015"
+      archive:                          K-75015INSAPBW.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000794372019
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_GWFND 750: SP 0015"
+      archive:                          K-75015INSAPGWFND.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000794382019
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_ABA 750: SP 0016"
+      archive:                          K-75016INSAPABA.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000001417012019
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BASIS 750: SP 0016"
+      archive:                          K-75016INSAPBASIS.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000001417142019
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BW 750: SP 0016"
+      archive:                          K-75016INSAPBW.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000001428782019
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_GWFND 750: SP 0016"
+      archive:                          K-75016INSAPGWFND.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000001417282019
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_ABA 750: SP 0017"
+      archive:                          K-75017INSAPABA.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000002325032019
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BASIS 750: SP 0017"
+      archive:                          K-75017INSAPBASIS.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000002325042019
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BW 750: SP 0017"
+      archive:                          K-75017INSAPBW.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000002325072019
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_GWFND 750: SP 0017"
+      archive:                          K-75017INSAPGWFND.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000002325082019
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_ABA 750: SP 0018"
+      archive:                          K-75018INSAPABA.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000673222020
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BASIS 750: SP 0018"
+      archive:                          K-75018INSAPBASIS.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000673242020
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BW 750: SP 0018"
+      archive:                          K-75018INSAPBW.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000673272020
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_GWFND 750: SP 0018"
+      archive:                          K-75018INSAPGWFND.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000673282020
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_ABA 750: SP 0019"
+      archive:                          K-75019INSAPABA.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000001250502020
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BASIS 750: SP 0019"
+      archive:                          K-75019INSAPBASIS.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000001250512020
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BW 750: SP 0019"
+      archive:                          K-75019INSAPBW.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000001250522020
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_GWFND 750: SP 0019"
+      archive:                          K-75019INSAPGWFND.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000001250532020
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_ABA 750: SP 0020"
+      archive:                          K-75020INSAPABA.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000074672021
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BASIS 750: SP 0020"
+      archive:                          K-75020INSAPBASIS.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000074682021
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BW 750: SP 0020"
+      archive:                          K-75020INSAPBW.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000074692021
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_GWFND 750: SP 0020"
+      archive:                          K-75020INSAPGWFND.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000074702021
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_ABA 750: SP 0021"
+      archive:                          K-75021INSAPABA.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000618092021
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BASIS 750: SP 0021"
+      archive:                          K-75021INSAPBASIS.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000618132021
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BW 750: SP 0021"
+      archive:                          K-75021INSAPBW.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000618142021
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_GWFND 750: SP 0021"
+      archive:                          K-75021INSAPGWFND.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000618152021
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_ABA 750: SP 0022"
+      archive:                          K-75022INSAPABA.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000001100722021
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BASIS 750: SP 0022"
+      archive:                          K-75022INSAPBASIS.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000001198852021
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BW 750: SP 0022"
+      archive:                          K-75022INSAPBW.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000001100762021
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_GWFND 750: SP 0022"
+      archive:                          K-75022INSAPGWFND.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000001100772021
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_ABA 750: SP 0023"
+      archive:                          K-75023INSAPABA.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000059732022
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BASIS 750: SP 0023"
+      archive:                          K-75023INSAPBASIS.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000059742022
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BW 750: SP 0023"
+      archive:                          K-75023INSAPBW.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000059752022
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_GWFND 750: SP 0023"
+      archive:                          K-75023INSAPGWFND.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000059772022
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_ABA 750: SP 0024"
+      archive:                          K-75024INSAPABA.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000536962022
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BASIS 750: SP 0024"
+      archive:                          K-75024INSAPBASIS.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000536972022
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BW 750: SP 0024"
+      archive:                          K-75024INSAPBW.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000536992022
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_GWFND 750: SP 0024"
+      archive:                          K-75024INSAPGWFND.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000537002022
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_ABA 750: SP 0025"
+      archive:                          K-75025INSAPABA.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000974702022
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BASIS 750: SP 0025"
+      archive:                          K-75025INSAPBASIS.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000974722022
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BW 750: SP 0025"
+      archive:                          K-75025INSAPBW.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000974752022
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_GWFND 750: SP 0025"
+      archive:                          K-75025INSAPGWFND.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000974762022
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_ABA 750: SP 0026"
+      archive:                          K-75026INSAPABA.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000043002023
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BASIS 750: SP 0026"
+      archive:                          K-75026INSAPBASIS.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000043012023
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BW 750: SP 0026"
+      archive:                          K-75026INSAPBW.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000043042023
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_GWFND 750: SP 0026"
+      archive:                          K-75026INSAPGWFND.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000043052023
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_ABA 750: SP 0027"
+      archive:                          K-75027INSAPABA.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000497352023
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BASIS 750: SP 0027"
+      archive:                          K-75027INSAPBASIS.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000497372023
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BW 750: SP 0027"
+      archive:                          K-75027INSAPBW.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000497392023
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_GWFND 750: SP 0027"
+      archive:                          K-75027INSAPGWFND.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000497402023
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_ABA 750: SP 0028"
+      archive:                          K-75028INSAPABA.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000888492023
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BASIS 750: SP 0028"
+      archive:                          K-75028INSAPBASIS.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000888502023
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BW 750: SP 0028"
+      archive:                          K-75028INSAPBW.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000888512023
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_GWFND 750: SP 0028"
+      archive:                          K-75028INSAPGWFND.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000888522023
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_ABA 750: SP 0029"
+      archive:                          K-75029INSAPABA.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000402742024
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BASIS 750: SP 0029"
+      archive:                          K-75029INSAPBASIS.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000557302024
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BW 750: SP 0029"
+      archive:                          K-75029INSAPBW.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000402762024
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_GWFND 750: SP 0029"
+      archive:                          K-75029INSAPGWFND.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000402772024
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_ABA 750: SP 0030"
+      archive:                          K-75030INSAPABA.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000781462024
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BASIS 750: SP 0030"
+      archive:                          K-75030INSAPBASIS.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000781482024
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BW 750: SP 0030"
+      archive:                          K-75030INSAPBW.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000781522024
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_GWFND 750: SP 0030"
+      archive:                          K-75030INSAPGWFND.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000781532024
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_ABA 750: SP 0031"
+      archive:                          K-75031INSAPABA.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000001056422024
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BASIS 750: SP 0031"
+      archive:                          K-75031INSAPBASIS.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000001056432024
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BW 750: SP 0031"
+      archive:                          K-75031INSAPBW.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000001056442024
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_GWFND 750: SP 0031"
+      archive:                          K-75031INSAPGWFND.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000001056452024
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_ABA 750: SP 0032"
+      archive:                          K-75032INSAPABA.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000344412025
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BASIS 750: SP 0032"
+      archive:                          K-75032INSAPBASIS.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000370062025
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BW 750: SP 0032"
+      archive:                          K-75032INSAPBW.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000344442025
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_GWFND 750: SP 0032"
+      archive:                          K-75032INSAPGWFND.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000344452025
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_ABA 750: SP 0033"
+      archive:                          K-75033INSAPABA.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000712992025
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BASIS 750: SP 0033"
+      archive:                          K-75033INSAPBASIS.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000713032025
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BW 750: SP 0033"
+      archive:                          K-75033INSAPBW.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000713162025
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_GWFND 750: SP 0033"
+      archive:                          K-75033INSAPGWFND.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000713172025
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_ABA 750: SP 0034"
+      archive:                          K-75034INSAPABA.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000001034912025
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BASIS 750: SP 0034"
+      archive:                          K-75034INSAPBASIS.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000001034922025
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_BW 750: SP 0034"
+      archive:                          K-75034INSAPBW.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000001034932025
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_GWFND 750: SP 0034"
+      archive:                          K-75034INSAPGWFND.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000001034942025
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_UI 754: SP 0001"
+      archive:                          K-75401INSAPUI.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000001661402019
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_UI 754: SP 0002"
+      archive:                          K-75402INSAPUI.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000002197612019
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_UI 754: SP 0003"
+      archive:                          K-75403INSAPUI.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000380882020
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_UI 754: SP 0004"
+      archive:                          K-75404INSAPUI.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000876572020
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_UI 754: SP 0005"
+      archive:                          K-75405INSAPUI.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000001523772020
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_UI 754: SP 0006"
+      archive:                          K-75406INSAPUI.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000325802021
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_UI 754: SP 0007"
+      archive:                          K-75407INSAPUI.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000771642021
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_UI 754: SP 0008"
+      archive:                          K-75408INSAPUI.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000001264832021
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_UI 754: SP 0009"
+      archive:                          K-75409INSAPUI.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000299862022
+      path:                             download_basket
+      download:                         True
+    -
+      name:                             "SAP_UI 754: SP 0010"
+      archive:                          K-75410INSAPUI.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000689632022
+      path:                             download_basket
+      download:                         True
+
+    -
+      name:                             "SAP_UI 754: SP 0011"
+      archive:                          K-75411INSAPUI.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000001058842022
+      path:                             download_basket
+      download:                         True
+
+    -
+      name:                             "SAP_UI 754: SP 0012"
+      archive:                          K-75412INSAPUI.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000289022023
+      path:                             download_basket
+      download:                         True
+
+    -
+      name:                             "SAP_UI 754: SP 0013"
+      archive:                          K-75413INSAPUI.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000588762023
+      path:                             download_basket
+      download:                         True
+
+    -
+      name:                             "SAP_UI 754: SP 0014"
+      archive:                          K-75414INSAPUI.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000001065272023
+      path:                             download_basket
+      download:                         True
+
+    -
+      name:                             "SAP_UI 754: SP 0015"
+      archive:                          K-75415INSAPUI.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000579852024
+      path:                             download_basket
+      download:                         True
+
+    -
+      name:                             "SAP_UI 754: SP 0016"
+      archive:                          K-75416INSAPUI.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000001237712024
+      path:                             download_basket
+      download:                         True
+
+    -
+      name:                             "SAP_UI 754: SP 0017"
+      archive:                          K-75417INSAPUI.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000477612025
+      path:                             download_basket
+      download:                         True
+
+    -
+      name:                             "SAP_UI 754: SP 0018"
+      archive:                          K-75418INSAPUI.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000001146782025
+      path:                             download_basket
+      download:                         True
+
+    -
+      name:                             "SAP_UI 754 Update: Meta-Commandfile"
+      archive:                          K-754BHINSAPUI.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000183702019
+      path:                             download_basket
+      download:                         True
+
+    -
+      name:                             "SPAM/SAINT Update - Version 750/0092"
+      archive:                          KD75092.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000001070542025
+      path:                             download_basket
+      download:                         True
+
+    - name:                             "Patch For Linux on x86_64 64bit"
+      archive:                          R3trans_631-80007612.SAR
+      url:                              https://softwaredownloads.sap.com/file/0020000000016062026
+      checksum:                         54cd026d67d803cfa4f58c53d62e859c4f73b8e3fa4739c1cd138cb9d54b701a
+      path:                             download_basket
+      download:                         True
+
+    - name:                             "Attribute Change Package 06 for SAP_BASIS 750"
+      archive:                          SAP_BASIS750.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000062582015
+      path:                             download_basket
+      download:                         True
+
+    - name:                             "Attribute Change Package 07 for SAP_BW 750"
+      archive:                          SAP_BW750.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000067382016
+      path:                             download_basket
+      download:                         True
+
+    - name:                             "Attribute Change Package 03 for SAP_GWFND 750"
+      archive:                          SAP_GWFND750.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000067402016
+      path:                             download_basket
+      download:                         True
+
+    - name:                             "Attribute Change Package 07 for SAP_UI 754"
+      archive:                          SAP_UI754.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000031692020
+      path:                             download_basket
+      download:                         True
+
+    - name:                             "Attribute Change Package 65 for ST-PI 740"
+      archive:                          ST-PI740.SAR
+      url:                              https://softwaredownloads.sap.com/file/0010000000297212015
+      path:                             download_basket
+      download:                         True
+
+# other components
+
+    - name:                                  "SAPCAR"
+      archive:                               SAPCAR_1115-70006178.EXE
+      checksum:                              765412436934362cc5497e3d659fbb78be91093a091c11ec4fbe84dfb415a0e5
+      filename:                              SAPCAR
+      permissions:                           '0755'
+      url:                                   https://softwaredownloads.sap.com/file/0020000000098642022
+...
