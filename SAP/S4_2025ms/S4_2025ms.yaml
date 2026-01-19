@@ -1,12 +1,13 @@
 ---
 
 name:                                   "SAP S/4HANA 2025 ISS 00"
-filename:                               "S42025SPS00ms"
+filename:                               "S4_2025"
 target:                                 'ABAP PLATFORM 2025'
 sps:                                    'Initial Shipment Stack'
 version:                                001
 platform:                               'HANA'
 InstanceType:                           'ABAP'
+supportedSPSVersions:                   ['SPS06', 'SPS07']
 
 
 defaults:

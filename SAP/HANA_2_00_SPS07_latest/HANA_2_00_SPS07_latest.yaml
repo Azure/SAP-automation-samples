@@ -1,0 +1,69 @@
+---
+name:                                        'HANA_2_00_SPS07_latest'
+target:                                      'HANA 2.0'
+version:                                     1
+platform:                                    'HANA'
+SPS:                                         'SPS07'
+materials:
+
+  media:
+    # SAPCAR 7.22
+    - name:                                  "SAPCAR 7.22; OS: Linux on x86_64 64bit"
+      archive:                               SAPCAR_1115-70006178.EXE
+      checksum:                              765412436934362cc5497e3d659fbb78be91093a091c11ec4fbe84dfb415a0e5
+      filename:                              SAPCAR
+      permissions:                           '0755'
+      path:                                  downloads
+      url:                                   https://softwaredownloads.sap.com/file/0020000000098642022
+
+    # HANA Client v2.13
+    - name:                                  "SAP HANA CLIENT Version 2.13"
+      archive:                               IMDB_CLIENT20_013_22-80002082.SAR
+      checksum:                              5e16ba25d28420fcf7814c7aa3fe33e51ad33951e4d93f77d3e0e297d2f6fc0c
+      extract:                               true
+      extractDir:                            CD_HDBCLIENT
+      creates:                               SIGNATURE.SMF
+      path:                                  download_basket
+      url:                                   https://softwaredownloads.sap.com/file/0020000000919882022
+
+    # v2_00_079 Revision 2.00.079.8 (SPS07) for HANA DB 2.0
+    - name:                                  "SAP HANA 2 SPS07 Revision 079.08 for HANA DB 2.0"
+      archive:                               IMDB_SERVER20_079_8-80002031.SAR
+      checksum:                              62bfe48f85ba6a7cce317b92daed322e530f321ea99c09d8dbbb0fb9b40466d0
+      extract:                               true
+      extractDir:                            CD_HDBSERVER
+      creates:                               SIGNATURE.SMF
+      path:                                  download_basket
+      url:                                   https://softwaredownloads.sap.com/file/0020000000007442026
+
+    - name:                                  "SAP HANA AFL Rev 79.0 only for HANA 2.0 Rev 79"
+      archive:                               IMDB_AFL20_079P_800-80001894.SAR
+      checksum:                              2875bf51fcd0b4e739d411939bf1a7f6df6f748bb2f3da3766120703b932f9c3
+      extract:                               true
+      extractDir:                            CD_HDBSERVER/COMPONENTS
+      creates:                               COMPONENTS/SAP_HANA_AFL/packages
+      url:                                   https://softwaredownloads.sap.com/file/0020000000007422026
+
+    - name:                                  "LCAPPS for HANA 2.0 Rev 79 Build 101.15 PL 003"
+      archive:                               IMDB_LCAPPS_2079P_800-20010426.SAR
+      checksum:                              e1ca981528dac279a80523575f19d4a379a947c209fe94b5bd04c0a730a5ba25
+      extract:                               true
+      extractDir:                            CD_HDBSERVER/COMPONENTS
+      creates:                               COMPONENTS/SAP_HANA_LCAPPS/packages
+      url:                                   https://softwaredownloads.sap.com/file/0020000000007312026
+
+    - name:                                  "VCH AFL 2021 Rev 79.0 only for HANA 2.0 Rev 79"
+      archive:                               VCH202100_2079P_800-70006349.SAR
+      checksum:                              38e70a8724d84872bed6e358d0144b3ccdd473680394e7814a65dd5835a6181b
+      extract:                               true
+      extractDir:                            CD_HDBSERVER/COMPONENTS
+      creates:                               COMPONENTS/VCH_AFL_2021/packages
+      url:                                   https://softwaredownloads.sap.com/file/0020000000007392026
+
+    - name:                                 "SAP HOST AGENT 7.22 SP69 ; OS: Linux on x86_64 64bit"
+      archive:                              SAPHOSTAGENT69_69-80004822.SAR
+      url:                                  https://softwaredownloads.sap.com/file/0025000000056272025
+      download:                             True
+      path:                                 download_basket
+
+...
