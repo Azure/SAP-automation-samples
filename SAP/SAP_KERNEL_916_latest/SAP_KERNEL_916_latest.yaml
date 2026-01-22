@@ -1,7 +1,8 @@
 ---
-name:                                        'KERNEL916_latest'
-target:                                      'KERNEL916_latest'
-version:                                     001
+name:                                  'KERNEL916_latest'
+target:                                'KERNEL916_latest'
+version:                               001
+kernel:                                '916'
 
 materials:
 

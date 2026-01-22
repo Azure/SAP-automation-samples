@@ -7,7 +7,8 @@ sps:                                    'Initial Shipment Stack'
 version:                                001
 platform:                               'HANA'
 InstanceType:                           'ABAP'
-supportedSPSVersions:                   ['SPS06', 'SPS07']
+supportedSPSVersions:                   ['SPS06', 'SPS07', 'SPS08']
+supportedKernels:                       ['793', '916']
 
 
 defaults:

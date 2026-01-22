@@ -2,6 +2,7 @@
 name:                                        'KERNEL753_latest'
 target:                                      'KERNEL753_latest'
 version:                                     001
+kernel:                                      '753'
 
 materials:
 

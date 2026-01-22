@@ -2,6 +2,8 @@
 name:                                        'KERNEL754_latest'
 target:                                      'KERNEL754_latest'
 version:                                     001
+kernel:                                      '754'
+
 
 materials:
 
