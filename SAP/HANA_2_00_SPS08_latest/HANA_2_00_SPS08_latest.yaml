@@ -1,8 +1,8 @@
 ---
 name:                                        'HANA_2_00_SPS08_latest'
 target:                                      'HANA 2.0'
-version:                                      SPS 08
-platform:                                    'HANA'
+version:                                     SPS08
+platform:                                    HANA
 
 
 materials:
