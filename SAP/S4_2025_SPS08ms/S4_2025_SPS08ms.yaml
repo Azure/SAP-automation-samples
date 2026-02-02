@@ -32,17 +32,19 @@ materials:
     - name:                             "SWPM20SP22_latest"
     - name:                             "SUM20SP24_latest"
   media:
-    - name:                             "Kernel Part II (793)"
-      archive:                          SAPEXEDB_51-70007806.SAR
-      url:                              https://softwaredownloads.sap.com/file/0020000001134862023
+    - name:                             "Kernel Part I (916) ; OS: Linux on x86_64 64bit ; DB: Database independent"
+      archive:                          SAPEXE_50-70008102.SAR
+      url:                              https://softwaredownloads.sap.com/file/0020000001086572025
       path:                             download_basket
-      checksum:                         6866c46a6bb13a09dae82d8ce160fe8d73d4bcdff0da00e5a52cfffda7af7891
+      download:                         True
+      checksum:                         2bc364b795d72f11c9a0365634d8648f70e9f85c9515bf3576d5338e7f10c0cf
 
-    - name:                             "Kernel Part I (793)"
-      archive:                          SAPEXE_51-70007807.SAR
-      url:                              https://softwaredownloads.sap.com/file/0020000001133782023
+    - name:                             "Kernel Part II (916) ; OS: Linux on x86_64 64bit ; DB: SAP HANA database"
+      archive:                          SAPEXEDB_50-70008101.SAR
+      url:                              https://softwaredownloads.sap.com/file/0020000001086052025
       path:                             download_basket
-      checksum:                         27a6c126cd2a15e0fdf3973cc914805d2f0dc738ff3a42c7220ea4fb2fa7590d
+      download:                         True
+      checksum:                         330b04efe2156f88ca280b151f363b00f86e29daa47632be10ae6aab6620a093
 
     # SAPCAR
     - name:                             "SAPCAR"
