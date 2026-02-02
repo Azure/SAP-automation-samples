@@ -607,6 +607,7 @@ materials:
     - name:                             "SAP HOST AGENT 7.22 SP69 ; OS: Linux on x86_64 64bit"
       archive:                          SAPHOSTAGENT69_69-80004822.SAR
       url:                              https://softwaredownloads.sap.com/file/0025000000056272025
+      path:                             download_basket
       download:                         True
 
     - name:                             "Predi. Analy. APL 2405 for SAP HANA 2.0 SPS03 and beyond ; OS: Linux on"
