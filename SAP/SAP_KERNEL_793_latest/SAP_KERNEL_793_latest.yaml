@@ -9,21 +9,62 @@ materials:
   media:
     # Kernel
 
-    - name:                                  "Kernel Part I (793)"
+    - name:                                  "Kernel Part I (793); Patch Level 300; OS: Linux on x86_64 64bit"
       archive:                               SAPEXE_300-70007807.SAR
       checksum:                              285410a09fc4e3b92458511c492bf96d3c0fefab225f17c0068df4399a5e951f
       extract:                               true
       url:                                   https://softwaredownloads.sap.com/file/0020000000458232025
-      platform:                              HANA
 
     # DB Kernel
 
-    - name:                                  "Kernel Part II (793) for SAP HANA"
+    - name:                                  "Kernel Part II (793) for SAP HANA; Patch Level 300; OS: Linux on x86_64 64bit"
       archive:                               SAPEXEDB_300-70007806.SAR
       checksum:                              db4cb0eac4fd0551fc4f718dfb42b2f994905e463f4fbb56ac234e47b831a305
       extract:                               true
       url:                                   https://softwaredownloads.sap.com/file/0020000000458292025
       platform:                              HANA
+
+    - name:                                  "Kernel Part II (793) ; DB: DB2 database; Patch Level 300; OS: Linux on x86_64 64bit"
+      archive:                               SAPEXEDB_300-70007814.SAR
+      checksum:                              4ee718fec3ded9f5e57258de6d24d01b74f9c542125f8934a91b56f52523609f
+      path:                                  download_basket
+      url:                                   https://softwaredownloads.sap.com/file/0020000000458082025
+      platform:                              'DB2'
+
+    - name:                                  "Kernel Part II (793) ; DB: ASE database; Patch Level 300; OS: Linux on x86_64 64bit"
+      archive:                               SAPEXEDB_300-70007826.SAR
+      checksum:                              195e7a695279024241d35710d386722560db325f35aaec08df0017cda157cd25
+      path:                                  download_basket
+      url:                                   https://softwaredownloads.sap.com/file/0020000000457792025
+      platform:                              'ASE'
+
+    - name:                                  "Kernel Part II (793) ; DB: ORACLE database; Patch Level 300; OS: Linux on x86_64 64bit"
+      archive:                               SAPEXEDB_300-70007816.SAR
+      checksum:                              a5d844b610890a008389ee549986f8db412ba2f9f0b6845bf950aefbbab5efa8
+      path:                                  download_basket
+      url:                                   https://softwaredownloads.sap.com/file/0020000000457942025
+      platform:                              'ORACLE'
+
+    - name:                                  "Kernel Part II (793) ; DB: ORACLE database; Patch Level 300; OS: Linux on x86_64 64bit"
+      archive:                               SAPEXEDB_300-70007816.SAR
+      checksum:                              a5d844b610890a008389ee549986f8db412ba2f9f0b6845bf950aefbbab5efa8
+      path:                                  download_basket
+      url:                                   https://softwaredownloads.sap.com/file/0020000000457942025
+      platform:                              'ORACLE-ASM'
+
+    - name:                                  "Kernel Part I (793) ; OS: Windows on x86_64 64bit; Patch Level 300 ; DB: Database independent"
+      archive:                               SAPEXE_300-70007823.SAR
+      checksum:                              bbbd3e06506929863601c5b8028ca248f6d58b4e992855bbb4f4561242bde18f
+      extract:                               true
+      url:                                   https://softwaredownloads.sap.com/file/0020000000457882025
+      platform:                              'SQLSERVER'
+
+    - name:                                  "Kernel Part II (793) ; OS: Windows on x86_64 64bit; Patch Level 300 ; DB: SQLSERVER"
+      archive:                               SAPEXEDB_300-70007822.SAR
+      checksum:                              c16bf1b6b5bfe100e232493c0c5fbf6fc902552d5799bb9384c70601de03b133
+      extract:                               true
+      url:                                   https://softwaredownloads.sap.com/file//0020000000458252025
+      platform:                              'SQLSERVER'
 
 
 ...

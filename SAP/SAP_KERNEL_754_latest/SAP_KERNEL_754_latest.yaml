@@ -10,17 +10,62 @@ materials:
   media:
     # Kernel
 
-    - name:                                  "Kernel Part I (754) ; OS: Linux on x86_64 64bit ; DB: Database independent"
+    - name:                                  "Kernel Part I (754) ; OS: Linux on x86_64 64bit; Patch Level 600 ; DB: Database independent"
       archive:                               SAPEXE_600-80007612.SAR
       checksum:                              c43c5737109f0df9cb895b25f4c59345c20e2769e27bca8876b8f1e676e3ef97
       path:                                  download_basket
       url:                                   https://softwaredownloads.sap.com/file/0020000000815822025
 
-    - name:                                  "Kernel Part II (754) ; OS: Linux on x86_64 64bit ; DB: SAP HANA database"
+    - name:                                  "Kernel Part II (754) ; DB: SAP HANA database; Patch Level 600; OS: Linux on x86_64 64bit"
       archive:                               SAPEXEDB_600-80007611.SAR
-      checksum:                              cea354d096aeca009ffcc81d0830956626fbb0b3c65e7507798256a18318bc5e
+      checksum:                              99b1facdaf547040d0513734192bc52ee06ec7c8bb472e2e57205dd17bd4a61a
       path:                                  download_basket
       url:                                   https://softwaredownloads.sap.com/file/0020000000815502025
+      platform:                              'HANA'
+
+    - name:                                  "Kernel Part II (754) ; DB: DB2 database; Patch Level 600; OS: Linux on x86_64 64bit"
+      archive:                               SAPEXEDB_600-80007642.SAR
+      checksum:                              a6edfde23b58bc526d3c268b7c6b59b038e2797491f012069a27770a4e05612b
+      path:                                  download_basket
+      url:                                   https://softwaredownloads.sap.com/file/0020000000815252025
+      platform:                              'DB2'
+
+    - name:                                  "Kernel Part II (754) ; DB: ASE database; Patch Level 600; OS: Linux on x86_64 64bit"
+      archive:                               SAPEXEDB_600-80007655.SAR
+      checksum:                              3cc55c9c6abb7d8f4318ca5640218f136c82fdac47add1dd79d92907a976bb2c
+      path:                                  download_basket
+      url:                                   https://softwaredownloads.sap.com/file/0020000000815442025
+      platform:                              'ASE'
+
+    - name:                                  "Kernel Part II (754) ; DB: ORACLE database; Patch Level 600; OS: Linux on x86_64 64bit"
+      archive:                               SAPEXEDB_600-80007644.SAR
+      checksum:                              e063861cbf0c92fd1cdd18d2da881dbdbd3a2875a93ef27ebad6cc26c4445b00
+      path:                                  download_basket
+      url:                                   https://softwaredownloads.sap.com/file/0020000000815272025
+      platform:                              'ORACLE'
+
+    - name:                                  "Kernel Part II (754) ; DB: ORACLE database; Patch Level 600; OS: Linux on x86_64 64bit"
+      archive:                               SAPEXEDB_600-80007644.SAR
+      checksum:                              e063861cbf0c92fd1cdd18d2da881dbdbd3a2875a93ef27ebad6cc26c4445b00
+      path:                                  download_basket
+      url:                                   https://softwaredownloads.sap.com/file/0020000000815272025
+      platform:                              'ORACLE-ASM'
+
+# Windows
+
+    - name:                                  "Kernel Part I (754) ; OS: Windows on x86_64 64bit; Patch Level 600 ; DB: Database independent"
+      archive:                               SAPEXE_500-80007651.SAR
+      checksum:                              f657a8b72a82027860c5bf273f2e2ff849a7ae5b1af873e1d094cad0e837f33b
+      path:                                  download_basket
+      url:                                   https://softwaredownloads.sap.com/file/0020000000154172025
+      platform:                              'SQLSERVER'
+
+    - name:                                  "Kernel Part II (754) ; DB: SQLSERVER database; Patch Level 600; OS: Windows on x86_64 64bit"
+      archive:                               SAPEXEDB_600-80007650.SAR
+      checksum:                              50520d2db65d12bf435251315853c2b58de802f8417f942705aca6fca3f5c9fb
+      path:                                  download_basket
+      url:                                   https://softwaredownloads.sap.com/file/0020000000815342025
+      platform:                              'SQLSERVER'
 
 
     # IGS

@@ -22,6 +22,7 @@ materials:
       url:                              https://softwaredownloads.sap.com/file/0020000001086052025
       download:                         True
       checksum:                         330b04efe2156f88ca280b151f363b00f86e29daa47632be10ae6aab6620a093
+      platform:                         hana
 
     # IGS
 
