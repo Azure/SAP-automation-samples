@@ -1,9 +1,8 @@
 ---
 name:                                        'HANA_2_00_SPS07_latest'
 target:                                      'HANA 2.0'
-version:                                     1
+version:                                     SPS07
 platform:                                    'HANA'
-SPS:                                         'SPS07'
 materials:
 
   media:
