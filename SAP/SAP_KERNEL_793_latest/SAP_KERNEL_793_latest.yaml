@@ -12,6 +12,7 @@ materials:
     - name:                                  "Kernel Part I (793); Patch Level 300; OS: Linux on x86_64 64bit"
       archive:                               SAPEXE_300-70007807.SAR
       checksum:                              285410a09fc4e3b92458511c492bf96d3c0fefab225f17c0068df4399a5e951f
+      path:                                  download_basket
       extract:                               true
       url:                                   https://softwaredownloads.sap.com/file/0020000000458232025
 
@@ -21,6 +22,7 @@ materials:
       archive:                               SAPEXEDB_300-70007806.SAR
       checksum:                              db4cb0eac4fd0551fc4f718dfb42b2f994905e463f4fbb56ac234e47b831a305
       extract:                               true
+      path:                                  download_basket
       url:                                   https://softwaredownloads.sap.com/file/0020000000458292025
       platform:                              HANA
 
