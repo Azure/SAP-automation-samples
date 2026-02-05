@@ -34,12 +34,13 @@ materials:
 
   media:
      # SAPCAR 7.22
-    - name:                                  "SAPCAR 7.22; OS: Linux on x86_64 64bit"
-      archive:                               SAPCAR_1115-70006178.EXE
-      checksum:                              765412436934362cc5497e3d659fbb78be91093a091c11ec4fbe84dfb415a0e5
+    - name:                                  "SAPCAR 7.53; OS: Linux on x86_64 64bit"
+      archive:                               SAPCAR_1400-70007716.EXE
+      checksum:                              32fe4adb98c5f9238b6237fc06edc2603648295dd3d35f6b6d1fad1cbc9f24c8
       filename:                              SAPCAR
       permissions:                           '0755'
-      url:                                   https://softwaredownloads.sap.com/file/0020000000098642022
+      path:                                  download_basket
+      url:                                   https://softwaredownloads.sap.com/file/0020000000488622025
 
     - name:                                  "SP12 Patch8 for UMML4HANA 1"
       archive:                               HANAUMML12_8-70001054.ZIP

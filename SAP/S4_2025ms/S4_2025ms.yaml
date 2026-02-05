@@ -35,13 +35,13 @@ materials:
     - name:                             "SUM20SP24_latest"
   media:
     # SAPCAR
-    - name:                             "SAPCAR"
-      archive:                          SAPCAR_1200-70007716.EXE
-      override_target_filename:         SAPCAR.EXE
-      url:                              https://softwaredownloads.sap.com/file/0020000001143902023
+    - name:                             "SAPCAR 7.53; OS: Linux on x86_64 64bit"
+      archive:                          SAPCAR_1400-70007716.EXE
+      checksum:                         32fe4adb98c5f9238b6237fc06edc2603648295dd3d35f6b6d1fad1cbc9f24c8
+      filename:                         SAPCAR
+      permissions:                      '0755'
       path:                             download_basket
-      download:                         True
-      checksum:                         7f6f7efebcdb31bfde8ee1393f095473e1a1c71f138cc7f1f2a1dd561c3c61d2
+      url:                              https://softwaredownloads.sap.com/file/0020000000488622025
 
     # db export components
     - name:                             "File on DVD"
