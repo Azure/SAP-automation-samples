@@ -3,6 +3,8 @@ name:                                        'HANA_2_00_SPS08_latest'
 target:                                      'HANA 2.0'
 version:                                     SPS08
 platform:                                    HANA
+minimumRedHatVersion:                        [9.2]
+minimumSLESVersion:                          [15.5]
 
 
 materials:

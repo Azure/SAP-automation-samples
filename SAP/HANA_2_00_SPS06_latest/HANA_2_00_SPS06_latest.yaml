@@ -4,6 +4,10 @@ target:                                      'HANA 2.0'
 version:                                     1
 platform:                                    'HANA'
 SPS:                                         'SPS06'
+minimumRedHatVersion:                        [8.1]
+minimumSLESVersion:                          [15.4]
+
+
 materials:
 
   media:
