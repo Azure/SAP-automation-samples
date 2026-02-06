@@ -1,43 +1,43 @@
 ---
-name:                                  'KERNEL916_latest'
-target:                                'KERNEL916_latest'
-version:                               001
-kernel:                                '916'
+name:                                        'KERNEL916_latest'
+target:                                      'KERNEL916_latest'
+version:                                     001
+kernel:                                      '916'
 
 materials:
 
   media:
     # Kernel
 
-    - name:                             "Kernel Part I (916) ; OS: Linux on x86_64 64bit ; DB: Database independent"
-      archive:                          SAPEXE_50-70008102.SAR
-      checksum:                         2bc364b795d72f11c9a0365634d8648f70e9f85c9515bf3576d5338e7f10c0cf
-      download:                         True
-      path:                             download_basket
-      url:                              https://softwaredownloads.sap.com/file/0020000001086572025
+    - name:                                  "Kernel Part I (916) ; OS: Linux on x86_64 64bit ; DB: Database independent"
+      archive:                               SAPEXE_50-70008102.SAR
+      checksum:                              2bc364b795d72f11c9a0365634d8648f70e9f85c9515bf3576d5338e7f10c0cf
+      download:                              True
+      path:                                  download_basket
+      url:                                   https://softwaredownloads.sap.com/file/0020000001086572025
 
     # DB Kernel
 
-    - name:                             "Kernel Part II (916) ; OS: Linux on x86_64 64bit ; DB: SAP HANA database"
-      archive:                          SAPEXEDB_50-70008101.SAR
-      checksum:                         330b04efe2156f88ca280b151f363b00f86e29daa47632be10ae6aab6620a093
-      download:                         True
-      path:                             download_basket
-      url:                              https://softwaredownloads.sap.com/file/0020000001086052025
-      platform:                         hana
+    - name:                                  "Kernel Part II (916) ; OS: Linux on x86_64 64bit ; DB: SAP HANA database"
+      archive:                               SAPEXEDB_50-70008101.SAR
+      checksum:                              330b04efe2156f88ca280b151f363b00f86e29daa47632be10ae6aab6620a093
+      download:                              True
+      path:                                  download_basket
+      url:                                   https://softwaredownloads.sap.com/file/0020000001086052025
+      platform:                              hana
     # IGS
 
-    - name:                             "Installation for SAP IGS integrated in SAP Kernel ; OS: Linux on x86_64"
-      archive:                          igsexe_0-70008564.sar
-      checksum:                         38e422563c5a15aecee222cf05d919145633714ca7404ae1f1a68e7760464fc1
-      download:                         True
-      path:                             download_basket
-      url:                              https://softwaredownloads.sap.com/file/0020000001085822025
+    - name:                                  "Installation for SAP IGS integrated in SAP Kernel ; OS: Linux on x86_64"
+      archive:                               igsexe_0-70008564.sar
+      checksum:                              38e422563c5a15aecee222cf05d919145633714ca7404ae1f1a68e7760464fc1
+      download:                              True
+      path:                                  download_basket
+      url:                                   https://softwaredownloads.sap.com/file/0020000001085822025
 
-    - name:                             "SAP IGS Fonts and Textures"
-      archive:                          igshelper_17-10010245.sar
-      checksum:                         bc405afc4f8221aa1a10a8bc448f8afd9e4e00111100c5544097240c57c99732
-      download:                         True
-      path:                             download_basket
-      url:                              https://softwaredownloads.sap.com/file/0020000000703122018
+    - name:                                  "SAP IGS Fonts and Textures"
+      archive:                               igshelper_17-10010245.sar
+      checksum:                              bc405afc4f8221aa1a10a8bc448f8afd9e4e00111100c5544097240c57c99732
+      download:                              True
+      path:                                  download_basket
+      url:                                   https://softwaredownloads.sap.com/file/0020000000703122018
 ...
