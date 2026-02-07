@@ -82,7 +82,7 @@ materials:
       url:                                   https://softwaredownloads.sap.com/file/0030000001069522025
       path:                                  download_basket
       download:                              True
-      checksum:                              a411aae3c8ee7f9be9e104725be4ed75507927771faabed3ac8121521dfc14c0
+      checksum:                              15a632793329bd0d36177b9e4e779d4b3049c996a3d798c26f08e397f74005ff
 
     - name:                                  "File on DVD - S4HANAOP109_INST_EXPORT_13.zip"
       archive:                               S4HANAOP109_INST_EXPORT_13.zip
@@ -306,7 +306,7 @@ materials:
       url:                                   https://softwaredownloads.sap.com/file/0010000000033172015
       path:                                  download_basket
       download:                              True
-      checksum:                              87d02737397b008c79f971f47eb37e222ba866aa8edfef25f645e2ab502279b2
+      checksum:                              9b5f3fca5b87ba80f4048f857a22b2a63033b58ffb977a19241b1316a4731701
 
     - name:                                  "UIHR002 100: SP 0001"
       archive:                               K-10001INUIHR002.SAR
