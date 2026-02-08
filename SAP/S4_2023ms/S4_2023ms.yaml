@@ -39,7 +39,6 @@ materials:
       checksum:                              32fe4adb98c5f9238b6237fc06edc2603648295dd3d35f6b6d1fad1cbc9f24c8
       filename:                              SAPCAR
       permissions:                           '0755'
-      path:                                  download_basket
       url:                                   https://softwaredownloads.sap.com/file/0020000000488622025
 
     - name:                                  "SP12 Patch8 for UMML4HANA 1"
