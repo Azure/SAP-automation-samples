@@ -16,6 +16,15 @@ materials:
       extract:                               true
       url:                                   https://softwaredownloads.sap.com/file/0020000000458232025
 
+
+    - name:                                  "R3Trans SAP KERNEL 7.93 64-BIT UNICODE Linux on x86_64 64bit #Database independent"
+      archive:                               R3trans_346-70007807.SAR
+      url:                                   https://softwaredownloads.sap.com/file/0025000000010602026
+      download:                              false
+      checksum:                              89e11991ddd3653b05fb7805bb2767c2ebc427bb49831079c30aadce796bd3c0
+
+
+
     # DB Kernel
 
     - name:                                  "Kernel Part II (793) for SAP HANA; Patch Level 300; OS: Linux on x86_64 64bit"
@@ -64,6 +73,7 @@ materials:
     - name:                                  "Kernel Part II (793) ; OS: Windows on x86_64 64bit; Patch Level 300 ; DB: SQLSERVER"
       archive:                               SAPEXEDB_300-70007822.SAR
       checksum:                              c16bf1b6b5bfe100e232493c0c5fbf6fc902552d5799bb9384c70601de03b133
+      path:                                  download_basket
       extract:                               true
       url:                                   https://softwaredownloads.sap.com/file//0020000000458252025
       platform:                              'SQLSERVER'
