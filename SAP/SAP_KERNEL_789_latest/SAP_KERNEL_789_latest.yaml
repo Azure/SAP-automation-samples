@@ -76,5 +76,19 @@ materials:
       url:                                   https://softwaredownloads.sap.com/file/0025000000007772025
       platform:                              'SQLSERVER'
 
+    # IGS
+    - name:                                  "Installation for SAP IGS integrated in SAP Kernel ; OS: Linux on x86_64"
+      archive:                               igsexe_6-70005417.sar
+      checksum:                              193581976afbc66c0e1a31f9a6c3c6017be1babd26614eec321333fa24d88a2e
+      download:                              True
+      path:                                  download_basket
+      url:                                   https://softwaredownloads.sap.com/file/0020000000555202025
+
+    - name:                                  "SAP IGS Fonts and Textures"
+      archive:                               igshelper_17-10010245.sar
+      checksum:                              bc405afc4f8221aa1a10a8bc448f8afd9e4e00111100c5544097240c57c99732
+      download:                              True
+      path:                                  download_basket
+      url:                                   https://softwaredownloads.sap.com/file/0020000000703122018
 
 ...

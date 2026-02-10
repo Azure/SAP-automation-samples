@@ -25,8 +25,8 @@ materials:
       path:                                  download_basket
       url:                                   https://softwaredownloads.sap.com/file/0020000001086052025
       platform:                              hana
-    # IGS
 
+    # IGS
     - name:                                  "Installation for SAP IGS integrated in SAP Kernel ; OS: Linux on x86_64"
       archive:                               igsexe_0-70008564.sar
       checksum:                              38e422563c5a15aecee222cf05d919145633714ca7404ae1f1a68e7760464fc1
