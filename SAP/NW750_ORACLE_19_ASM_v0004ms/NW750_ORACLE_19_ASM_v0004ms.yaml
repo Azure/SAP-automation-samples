@@ -7,7 +7,7 @@ platform:                                    "ORACLE ASM"
 
 # Oracle client software download updated 10/01/2025
 patch_information:
-  SBP_DBRU:                                  38291812 
+  SBP_DBRU:                                  38291812
   SBP_OCWRU:                                 38322923
   SBP_ACFSRU:                                38311528
   SBP_JDKRU:                                 38245243
@@ -107,13 +107,14 @@ materials:
       url:                                   https://softwaredownloads.sap.com/file/0020000000703122018
 
     - name:                                  "Oracle ASM Library OEL8"
-      archive:                               oracleasmlib-3.0.0-13.el8.x86_64.rpm		
+      archive:                               oracleasmlib-3.0.0-13.el8.x86_64.rpm
       extract:                               false
       extractDir:                            RPM
       download:                              true
       path:                                  RPM
       type:                                  rpm
       distributions:                         [oraclelinux8, redhat8]
+      platform:                              ORACLE-ASM"
 
     - name:                                  "Oracle ASM Support OEL8"
       archive:                               oracleasm-support-3.0.0-6.el8.x86_64.rpm
@@ -125,6 +126,7 @@ materials:
       url:                                   https://yum.oracle.com/repo/OracleLinux/OL8/addons/x86_64/getPackage/oracleasm-support-3.0.0-6.el8.x86_64.rpm
       # repourl:                               https://yum.oracle.com/repo/OracleLinux/OL8/addons/x86_64
       distributions:                         [oraclelinux8, redhat8]
+      platform:                              ORACLE-ASM"
 
     - name:                                  "Oracle ASM Library OEL9"
       archive:                               oracleasmlib-3.1.1-1.el9.x86_64.rpm
@@ -134,6 +136,7 @@ materials:
       path:                                  RPM
       type:                                  rpm
       distributions:                         [oraclelinux9, redhat9]
+      platform:                              ORACLE-ASM"
 
     - name:                                  "Oracle ASM Support OEL9"
       archive:                               oracleasm-support-3.1.1-4.el9.x86_64.rpm
@@ -145,4 +148,5 @@ materials:
       url:                                   https://yum.oracle.com/repo/OracleLinux/OL9/addons/x86_64/getPackage/oracleasm-support-3.1.1-4.el9.x86_64.rpm
       # repourl:                               https://yum.oracle.com/repo/OracleLinux/OL9/addons/x86_64
       distributions:                         [oraclelinux9, redhat9]
+      platform:                              ORACLE-ASM"
 

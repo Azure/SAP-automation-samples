@@ -42,7 +42,7 @@ materials:
 
 
 # SBP Patches are downloaded based on SAP Note 2799920 - Patches 19c: Database
-    
+
     - name:                                  "Oracle - SAP Bundle Patch 19.28.0.0.250715 - 202508"
       archive:                               SAP19P_2508-70004508.ZIP
       checksum:                              673857457e8af278be6b1e94afe13736b5bc91fa4975fc90e6c26a41298826a2
@@ -185,6 +185,7 @@ materials:
       path:                                  SBP
       creates:                               SIGNATURE.SMF
       url:                                   https://softwaredownloads.sap.com/file/0020000000874732025
+      platform:                              ORACLE-ASM"
 
 
     - name:                                  "Oracle - SBP 19.28.0.0.250715 - 202508 for Grid Infrastructure"
@@ -196,3 +197,49 @@ materials:
       path:                                  SBP
       creates:                               SIGNATURE.SMF
       url:                                   https://softwaredownloads.sap.com/file/0020000000873072025
+      platform:                              ORACLE-ASM"
+
+    - name:                                  "Oracle ASM Library OEL8"
+      archive:                               oracleasmlib-3.0.0-13.el8.x86_64.rpm
+      extract:                               false
+      extractDir:                            RPM
+      download:                              true
+      path:                                  RPM
+      type:                                  rpm
+      distributions:                         [oraclelinux8, redhat8]
+      platform:                              ORACLE-ASM"
+
+    - name:                                  "Oracle ASM Support OEL8"
+      archive:                               oracleasm-support-3.0.0-6.el8.x86_64.rpm
+      extract:                               false
+      extractDir:                            RPM
+      download:                              true
+      path:                                  RPM
+      type:                                  rpm
+      url:                                   https://yum.oracle.com/repo/OracleLinux/OL8/addons/x86_64/getPackage/oracleasm-support-3.0.0-6.el8.x86_64.rpm
+      # repourl:                               https://yum.oracle.com/repo/OracleLinux/OL8/addons/x86_64
+      distributions:                         [oraclelinux8, redhat8]
+      platform:                              ORACLE-ASM"
+
+    - name:                                  "Oracle ASM Library OEL9"
+      archive:                               oracleasmlib-3.1.1-1.el9.x86_64.rpm
+      extract:                               false
+      extractDir:                            RPM
+      download:                              true
+      path:                                  RPM
+      type:                                  rpm
+      distributions:                         [oraclelinux9, redhat9]
+      platform:                              ORACLE-ASM"
+
+    - name:                                  "Oracle ASM Support OEL9"
+      archive:                               oracleasm-support-3.1.1-4.el9.x86_64.rpm
+      extract:                               false
+      extractDir:                            RPM
+      download:                              true
+      path:                                  RPM
+      type:                                  rpm
+      url:                                   https://yum.oracle.com/repo/OracleLinux/OL9/addons/x86_64/getPackage/oracleasm-support-3.1.1-4.el9.x86_64.rpm
+      # repourl:                               https://yum.oracle.com/repo/OracleLinux/OL9/addons/x86_64
+      distributions:                         [oraclelinux9, redhat9]
+      platform:                              ORACLE-ASM"
+

@@ -6,7 +6,7 @@ platform:                                    'HANA'
 SPS:                                         'SPS06'
 minimumRedHatVersion:                        [8.1]
 minimumSLESVersion:                          [15.4]
-
+code:                                        HDB
 
 materials:
 

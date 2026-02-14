@@ -5,7 +5,7 @@ version:                                     SPS08
 platform:                                    HANA
 minimumRedHatVersion:                        [9.2]
 minimumSLESVersion:                          [15.5]
-
+code:                                        HDB
 
 materials:
 
