@@ -29,14 +29,14 @@ materials:
       path:                                  download_basket
       url:                                   https://softwaredownloads.sap.com/file/0025000000002552026
 
-    - name:                                  "Revision 2.00.089.0 (SPS08) for HANA DB 2.0"
-      archive:                               IMDB_SERVER20_089_0-80002031.SAR
-      checksum:                              b040b16cc4c98ceacc6cb664fad38e38938dc73984e274a1f7792a5136c4a8b7
+    - name:                                  "Revision 2.00.089.1 (SPS08) for HANA DB 2.0"
+      archive:                               IMDB_SERVER20_089_1-80002031.SAR
+      checksum:                              e6655f9fd3a1c1e8a234dc10096cf60ef0f6a3103119da7ac1f046bc59db078a
       extract:                               true
       extractDir:                            CD_HDBSERVER
       creates:                               SIGNATURE.SMF
       path:                                  download_basket
-      url:                                   https://softwaredownloads.sap.com/file/0020000000008282026
+      url:                                   https://softwaredownloads.sap.com/file/0025000000041962026
 
     - name:                                  "SAP HANA AFL Rev 89.0 only for HANA 2.0 Rev 89"
       archive:                               IMDB_AFL20_089_0-80001894.SAR
