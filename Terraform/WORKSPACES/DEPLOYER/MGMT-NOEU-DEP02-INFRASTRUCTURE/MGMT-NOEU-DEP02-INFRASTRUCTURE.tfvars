@@ -19,7 +19,7 @@
 #########################################################################################
 # REQUIRED
 # subscription_id defines the Azure subscription_id
-subscription_id = "<xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx>"
+subscription_id = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
 
 # REQUIRED
 # The environment value is a mandatory field, it is used for partitioning the environments, for example (PROD and NP)
