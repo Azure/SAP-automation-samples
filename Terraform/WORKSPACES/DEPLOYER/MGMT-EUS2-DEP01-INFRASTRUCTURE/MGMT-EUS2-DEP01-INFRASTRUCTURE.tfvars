@@ -1,16 +1,22 @@
+#########################################################################################
+#                                                                                       #
+#  Environment definitions                                                              #
+#                                                                                       #
+#########################################################################################
+# REQUIRED
+# subscription_id defines the Azure subscription_id
+subscription_id = "<xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx>"
 
-# Infrastructure block
+# REQUIRED
 # The environment value is a mandatory field, it is used for partitioning the environments, for example (PROD and NP)
 environment = "MGMT"
 
-# codename is an additional component for naming the resources
-#codename = ""
-
+# REQUIRED
 # The location/region value is a mandatory field, it is used to control where the resources are deployed
 location = "eastus2"
 
-# subscription_id defines the Azure subscription_id
-#subscription_id = ""
+# codename is an additional component for naming the resources
+#codename = ""
 
 # prevent_deletion_if_contains_resources controls if resource groups are deleted even if they contain resources
 #prevent_deletion_if_contains_resources = true
