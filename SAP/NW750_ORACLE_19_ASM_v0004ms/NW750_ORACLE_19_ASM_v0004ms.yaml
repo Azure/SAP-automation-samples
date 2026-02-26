@@ -106,6 +106,14 @@ materials:
       path:                                  download_basket
       url:                                   https://softwaredownloads.sap.com/file/0020000000703122018
 
+    - name:                                  "R3trans 6.31"
+      archive:                               R3trans_631-80007594.SAR
+      checksum:                              044f935cf0e1d9db9ae96891348cd06e28db9e52ad57132d2dd425364bdcfd24
+      extract:                               false
+      download:                              true
+      path:                                  download_basket
+      url:                                   https://softwaredownloads.sap.com/file/0020000000016072026
+
     - name:                                  "Oracle ASM Library OEL8"
       archive:                               oracleasmlib-3.0.0-13.el8.x86_64.rpm
       extract:                               false
