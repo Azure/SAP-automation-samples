@@ -73,7 +73,7 @@ materials:
     - name:                                  "Oracle libbpf rpm package EL8"
       archive:                               libbpf-0.6.0-6.el8.x86_64.rpm
       extract:                               False
-      checksum:                              ad42655f128e1613a0fd8cb2cc50488e718d9a8b15008dc1a1ba88c3f601ff05
+      checksum:                              347b92549e21d08469431afce06b48ca371f0d2d29c84570076230b8453efc91
       extractDir:                            RPM
       download:                              true
       path:                                  RPM
@@ -169,7 +169,7 @@ materials:
       path:                                  RPM
       type:                                  rpm
       distributions:                         [oraclelinux8, redhat8]
-      platform:                              ORACLE-ASM"
+      platform:                              ORACLE-ASM
 
     - name:                                  "Oracle ASM Support OEL8"
       archive:                               oracleasm-support-3.0.0-6.el8.x86_64.rpm
@@ -181,7 +181,7 @@ materials:
       url:                                   https://yum.oracle.com/repo/OracleLinux/OL8/addons/x86_64/getPackage/oracleasm-support-3.0.0-6.el8.x86_64.rpm
       # repourl:                               https://yum.oracle.com/repo/OracleLinux/OL8/addons/x86_64
       distributions:                         [oraclelinux8, redhat8]
-      platform:                              ORACLE-ASM"
+      platform:                              ORACLE-ASM
 
     - name:                                  "Oracle ASM Library OEL9"
       archive:                               oracleasmlib-3.1.1-1.el9.x86_64.rpm
@@ -191,7 +191,7 @@ materials:
       path:                                  RPM
       type:                                  rpm
       distributions:                         [oraclelinux9, redhat9]
-      platform:                              ORACLE-ASM"
+      platform:                              ORACLE-ASM
 
     - name:                                  "Oracle ASM Support OEL9"
       archive:                               oracleasm-support-3.1.1-4.el9.x86_64.rpm
@@ -203,7 +203,7 @@ materials:
       url:                                   https://yum.oracle.com/repo/OracleLinux/OL9/addons/x86_64/getPackage/oracleasm-support-3.1.1-4.el9.x86_64.rpm
       # repourl:                               https://yum.oracle.com/repo/OracleLinux/OL9/addons/x86_64
       distributions:                         [oraclelinux9, redhat9]
-      platform:                              ORACLE-ASM"
+      platform:                              ORACLE-ASM
 
 
 
@@ -220,7 +220,7 @@ materials:
       path:                                  SBP
       creates:                               SIGNATURE.SMF
       url:                                   https://softwaredownloads.sap.com/file/0025000000062492026
-      platform:                              ORACLE-ASM"
+      platform:                              ORACLE-ASM
 
 
     - name:                                  "Oracle - SBP 19.30.0.0.260120 - 202602 for Grid Infrastructure"
@@ -232,4 +232,4 @@ materials:
       path:                                  SBP
       creates:                               SIGNATURE.SMF
       url:                                   https://softwaredownloads.sap.com/file/0025000000062282026
-      platform:                              ORACLE-ASM"
+      platform:                              ORACLE-ASM
