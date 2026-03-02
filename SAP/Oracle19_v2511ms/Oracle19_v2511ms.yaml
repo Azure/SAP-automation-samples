@@ -158,7 +158,6 @@ materials:
       extract:                               true
       download:                              true
       path:                                  SAP
-      extractDir:                            SAP
       creates:                               SAP/19cinstall.sh
 
     - name:                                  "Oracle ASM Library OEL8"
