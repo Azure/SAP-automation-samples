@@ -50,6 +50,21 @@ materials:
       url:                                   https://softwaredownloads.sap.com/file/0020000000700472025
       platform:                              'ORACLE-ASM'
 
+    - name:                                  "DBATOOLS Package for Oracle 11g, 12c and higher; OS: Linux on x86_64 64bit"
+      archive:                               DBATL740O11_49-80002670.SAR
+      checksum:                              26897a2285b15cb06909ca825eea6c9cf6b517b73e940b97849f12339738e8c3
+      path:                                  download_basket
+      url:                                   https://softwaredownloads.sap.com/file/0020000000661472023
+      platform:                              'ORACLE'
+
+    - name:                                  "DBATOOLS Package for Oracle 11g, 12c and higher; OS: Linux on x86_64 64bit"
+      archive:                               DBATL740O11_49-80002670.SAR
+      checksum:                              26897a2285b15cb06909ca825eea6c9cf6b517b73e940b97849f12339738e8c3
+      path:                                  download_basket
+      url:                                   https://softwaredownloads.sap.com/file/0020000000661472023
+      platform:                              'ORACLE-ASM'
+
+
 # Windows
 
     - name:                                  "Kernel Part I (753) ; OS: Windows on x86_64 64bit; Patch Level 1500 ; DB: Database independent"
