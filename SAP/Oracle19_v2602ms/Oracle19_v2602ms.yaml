@@ -157,7 +157,7 @@ materials:
       archive:                               19cinstall-19-031-202407021105.zip
       extract:                               true
       download:                              true
-      path:                                  SAP
+      extractDir:                            SBP
       creates:                               SAP/19cinstall.sh
 
     - name:                                  "Oracle ASM Library OEL8"
@@ -229,6 +229,7 @@ materials:
 # Oracle ASM GRID Patches
 # GRID SBP Patches are downloaded based on SAP Note 2799920 - Patches 19c: Database
 
+
     - name:                                  "Oracle - SBP 19.30.0.0.260120 - 202602 for Grid Infrastructure"
       archive:                               SGR19P_2602-70004550.ZIP
       checksum:                              6e87c051ff473a6584f582bf5dd1d3aae1a1a0ef264466cf92ee90cec2b914b2
@@ -239,3 +240,6 @@ materials:
       creates:                               SIGNATURE.SMF
       url:                                   https://softwaredownloads.sap.com/file/0025000000062282026
       platform:                              ORACLE-ASM
+
+
+
