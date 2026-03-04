@@ -25,6 +25,8 @@ product_ids:
   ers_ha:                               "NW_ERS:S4HANA2025.CORE.HDB.ABAPHA"
   generic:                              "NW_Users_Create:GENERIC.HDB.PD"
 
+patch_information:
+  info:                                'This section is for patch information. Please update it with the latest patch details.'
 
 materials:
   dependencies:

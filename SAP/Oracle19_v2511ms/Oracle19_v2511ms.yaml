@@ -11,7 +11,7 @@ code:                                        ORA
 # 11/13/2024
 
 # Oracle client software download updated 12/11/2025
-patch:
+patch_information:
   SBP_DBRU:                                  38291812
   SBP_OCWRU:                                 38322923
   SBP_ACFSRU:                                38311528

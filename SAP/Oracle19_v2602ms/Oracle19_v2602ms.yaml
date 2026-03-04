@@ -11,7 +11,8 @@ code:                                        ORA
 
 
 # Oracle client software download updated 28/02/2026
-patch:
+patch_information:
+  info:                                      "Oracle client software download updated 28/02/2026."
   SBP_DBRU:                                  38632161
   SBP_OCWRU:                                 38661284
   SBP_ACFSRU:                                38653268

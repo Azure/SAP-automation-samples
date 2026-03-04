@@ -7,6 +7,9 @@ minimumRedHatVersion:                        [9.2]
 minimumSLESVersion:                          [15.5]
 code:                                        HDB
 
+patch_information:
+  placeholder:                               'This section is for patch information. Please update it with the latest patch details.'
+
 materials:
 
   media:
