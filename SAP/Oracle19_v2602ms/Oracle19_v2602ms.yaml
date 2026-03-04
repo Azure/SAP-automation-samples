@@ -17,6 +17,9 @@ patch_information:
   SBP_OCWRU:                                 38661284
   SBP_ACFSRU:                                38653268
   SBP_JDKRU:                                 38586770
+  ora_release:                               19
+  ora_version:                               19.0.0
+  oracle_sbp_patch:                          SAP19P_2602-70004508.ZIP
 
 
 materials:
