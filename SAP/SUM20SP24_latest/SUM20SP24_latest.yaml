@@ -1,17 +1,17 @@
 ---
-# Updated 09212025
+# Updated 11032026
 
-name:                                        'SUM20SP24'
-target:                                      'SUM20SP24'
-version:                                     009
+name:                                  'SUM20SP25'
+target:                                'SUM20SP25'
+version:                               002
 
 materials:
 
   media:
   # SUM
-  - name:                                    "Patch 9 for SOFTWARE UPDATE MANAGER 2.0 SP24 (Linux on x86_64)"
-    archive:                                 SUM20SP24_9-80002456.SAR
-    checksum:                                4fc9ffdbd164bfae73a39a2f029d1c95a91910f95347685c36ddcf91e1955449
-    download:                                false
-    url:                                     https://softwaredownloads.sap.com/file/0025000000035112026
-    
+  - name:                              "Patch 2 for SOFTWARE UPDATE MANAGER 2.0 SP25 (Linux on x86_64)"
+    archive:                           SUM20SP25_2-80002456.SAR
+    checksum:                          9e477e89909b69cbfd4d2da9a84fe02c102a73b79351c73b056dad633fed11bd
+    download:                          false
+    url:                               https://softwaredownloads.sap.com/file/0025000000089482026
+

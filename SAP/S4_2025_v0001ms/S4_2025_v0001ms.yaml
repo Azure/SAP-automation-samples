@@ -33,7 +33,7 @@ patch_information:
 
 materials:
   dependencies:
-    - name:                                  "SWPM20SP22_latest"
+    - name:                                  "SWPM20SP23_latest"
     - name:                                  "SUM20SP24_latest"
   media:
     - name:                                  "SAPCAR 7.53; OS: Linux on x86_64 64bit"

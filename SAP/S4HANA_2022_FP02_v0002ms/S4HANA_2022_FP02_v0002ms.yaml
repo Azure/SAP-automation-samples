@@ -26,7 +26,7 @@ product_ids:
 materials:
   dependencies:
     - name:                                  "HANA_2_00_076_v0001ms"
-    - name:                                  "SWPM20SP22_latest"
+    - name:                                  "SWPM20SP23_latest"
     - name:                                  "SUM20SP24_latest"
 
   media:
@@ -63,7 +63,7 @@ materials:
       url:                                   https://softwaredownloads.sap.com/file/0020000000146922024
       checksum:                              ef60422cab183f76cae3c3296f0e9d08c9f692ff44542d23e94e0dedd50fbae4
       path:                                  download_basket
-      
+
     - name:                                  "Predi. Analy. APL 2203 for SAP HANA 2.0 SPS03 and beyond"
       archive:                               SAPPAAPL4_2203_2-80004547.ZIP
       url:                                   https://softwaredownloads.sap.com/file/0020000000163142022

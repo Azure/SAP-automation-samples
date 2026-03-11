@@ -30,7 +30,7 @@ product_ids:
 materials:
   dependencies:
     - name:                                  "SUM20SP24_latest"
-    - name:                                  "SWPM20SP22_latest"
+    - name:                                  "SWPM20SP23_latest"
   media:
 
     # SAPCAR 7.22

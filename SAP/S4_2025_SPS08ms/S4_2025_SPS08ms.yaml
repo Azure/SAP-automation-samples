@@ -31,7 +31,7 @@ patch_information:
 materials:
   dependencies:
     - name:                             "HANA_2_00_SPS08_latest"
-    - name:                             "SWPM20SP22_latest"
+    - name:                             "SWPM20SP23_latest"
     - name:                             "SUM20SP24_latest"
   media:
     - name:                             "Kernel Part I (916) ; OS: Linux on x86_64 64bit ; DB: Database independent"
