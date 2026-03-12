@@ -1,0 +1,14 @@
+*           text=auto
+*.j2        text eol=lf
+*.txt       text
+*.vcproj    text eol=crlf
+*.params    text eol=lf
+*.ps1       text eol=crlf
+*.sh        text eol=lf
+*.tfvars    text eol=lf
+*.tmpl      text eol=lf
+*.tf        text eol=lf
+*.tmpl      text eol=lf
+*.yml       text eol=lf
+*.yaml      text eol=lf
+*.jpg       -text
