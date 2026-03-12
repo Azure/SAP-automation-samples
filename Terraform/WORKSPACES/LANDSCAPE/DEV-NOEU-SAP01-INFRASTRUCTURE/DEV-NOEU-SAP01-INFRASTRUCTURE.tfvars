@@ -39,7 +39,7 @@ Description = "Workload zone for Development systems"
 # subscription_id defines the target subscription for the deployment
 #subscription_id = ""
 
-# management_subscription_id defines the management subscription used by the deployment  
+# management_subscription_id defines the management subscription used by the deployment
 #management_subscription_id = ""
 
 # use_deployer defines if deployer should be used to deploy the resources
@@ -85,7 +85,7 @@ network_logical_name = "SAP01"
 #network_arm_id = ""
 
 # network_address_space is a mandatory parameter when an existing Virtual network is not used
-network_address_space = "10.120.0.0/16"
+network_address_space = ["10.120.0.0/16"]
 
 # network_flow_timeout_in_minutes defines the flow timeout in minutes of the virtual network
 #network_flow_timeout_in_minutes = null
@@ -371,7 +371,7 @@ register_endpoints_with_dns = true
 # dns_zone_names defines the Private DNS zone names
 #dns_zone_names = {
 #  "file_dns_zone_name"      = "privatelink.file.core.windows.net"
-#  "blob_dns_zone_name"      = "privatelink.blob.core.windows.net" 
+#  "blob_dns_zone_name"      = "privatelink.blob.core.windows.net"
 #  "table_dns_zone_name"     = "privatelink.table.core.windows.net"
 #  "vault_dns_zone_name"     = "privatelink.vaultcore.azure.net"
 #  "appconfig_dns_zone_name" = "privatelink.azconfig.io"
@@ -380,7 +380,7 @@ register_endpoints_with_dns = true
 # privatelink_file_id defines the ID of the private link file resource
 #privatelink_file_id = ""
 
-# privatelink_storage_id defines the ID of the private link storage resource  
+# privatelink_storage_id defines the ID of the private link storage resource
 #privatelink_storage_id = ""
 
 # privatelink_keyvault_id defines the ID of the private link keyvault resource
@@ -686,7 +686,7 @@ tags = {
 # export_install_path defines if the export mount path should be created for the installation media
 #export_install_path = true
 
-# export_transport_path defines if the export mount path should be created for the transport media  
+# export_transport_path defines if the export mount path should be created for the transport media
 #export_transport_path = true
 
 #########################################################################################

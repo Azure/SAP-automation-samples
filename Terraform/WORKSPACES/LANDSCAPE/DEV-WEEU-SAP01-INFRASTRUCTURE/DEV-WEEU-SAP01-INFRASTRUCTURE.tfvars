@@ -85,7 +85,7 @@ network_logical_name = "SAP01"
 #network_arm_id = ""
 
 # network_address_space is a mandatory parameter when an existing Virtual network is not used
-network_address_space = "10.110.0.0/16"
+network_address_space = ["10.110.0.0/16"]
 
 # network_flow_timeout_in_minutes defines the flow timeout in minutes of the virtual network
 #network_flow_timeout_in_minutes = null
@@ -729,7 +729,7 @@ deploy_nat_gateway = false
 # export_install_path defines if the export mount path should be created for the installation media
 #export_install_path = true
 
-# export_transport_path defines if the export mount path should be created for the transport media  
+# export_transport_path defines if the export mount path should be created for the transport media
 #export_transport_path = true
 
 #########################################################################################
