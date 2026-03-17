@@ -19,7 +19,7 @@
 #########################################################################################
 # REQUIRED
 # subscription_id defines the Azure subscription_id
-subscription_id = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+# subscription_id = ""
 
 # REQUIRED
 # The environment value is a mandatory field, it is used for partitioning the environments, for example (PROD and NP)
@@ -176,8 +176,8 @@ deployer_image = {
   "os_type"         = "Linux"
   "source_image_id" = ""
   "publisher"       = "Canonical"
-  "offer"           = "0001-com-ubuntu-server-jammy"
-  "sku"             = "22_04-lts-gen2"
+  "offer"           = "ubuntu-24_04-lts",
+  "sku"             = "server",
   "version"         = "latest"
 }
 
@@ -420,3 +420,40 @@ enable_firewall_for_keyvaults_and_storage = true
 
 # deploy_defender_extension adds the Microsoft.Azure.Security.Monitoring extension to the virtual machines
 #deploy_defender_extension = false
+
+#########################################################################################
+#                                                                                       #
+#                            Key Vault information                                    #
+#                                                                                       #
+#########################################################################################
+
+# These variables define the keyvault that is used to store the deployer credentials
+# user_keyvault_id is the Azure resource identifier for the keyvault that will contain the credentials keys
+#user_keyvault_id=""
+
+# deployer_private_key_secret_name if provided contains the secret name for the private key
+#deployer_private_key_secret_name=""
+
+# deployer_public_key_secret_name if provided contains the secret name for the public key
+#deployer_public_key_secret_name=""
+
+# deployer_username_secret_name if provided contains the secret name for the username
+#deployer_username_secret_name=""
+
+# deployer_password_secret_name if provided contains the secret name for the password
+#deployer_password_secret_name=""
+
+enable_purge_control_for_keyvaults           = false
+
+# soft_delete_retention_days defines the number of days that items should be retained in the soft delete period
+#soft_delete_retention_days = 7
+
+# enable_rbac_authorization enables RBAC authorization for Azure keyvault
+enable_rbac_authorization = true
+
+# set_secret_expiry defines if expiry date should be set for secrets
+#set_secret_expiry = false
+
+# List of object IDs to add to key vault policies"
+#additional_users_to_add_to_keyvault_policies=["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy"]
+

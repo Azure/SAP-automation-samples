@@ -405,7 +405,7 @@ register_endpoints_with_dns = true
 enable_purge_control_for_keyvaults = false
 
 # enable_rbac_authorization_for_keyvault Controls the access policy model for the workload zone keyvault.
-enable_rbac_authorization_for_keyvault = false
+enable_rbac_authorization_for_keyvault = true
 
 # Defines a list of Object IDs to be added to the keyvault
 #additional_users_to_add_to_keyvault_policies = []
@@ -500,7 +500,7 @@ install_create_smb_shares = true
 #########################################################################################
 
 # If defined provides the DNS label for the Virtual Network
-dns_label = "noeu.sdaf.contoso.net"
+dns_label = "azure.sdaf.weeu.contoso.net"
 
 #If defined provides the lsit of DNS servers to attach to the Virtual NEtwork
 #dns_server_list = []

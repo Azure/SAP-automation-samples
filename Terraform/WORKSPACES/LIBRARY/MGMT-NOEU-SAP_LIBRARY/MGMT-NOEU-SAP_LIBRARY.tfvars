@@ -141,7 +141,7 @@ location = "northeurope"
 #library_ansible_blob_container_name="ansible"
 
 # dns_label if specified is the DNS name of the private DNS zone
-dns_label = "azure.sdaf.contoso.net"
+dns_label = "azure.sdaf.noeu.contoso.net"
 
 # use_private_endpoint is a boolean flag controlling if the keyvaults and storage accounts have private endpoints
 use_private_endpoint=true
