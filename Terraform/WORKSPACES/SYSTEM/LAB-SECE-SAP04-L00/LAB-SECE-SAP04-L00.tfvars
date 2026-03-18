@@ -187,6 +187,7 @@ database_vm_use_DHCP = true
 # if source_image_id is specified the deployment will use the custom image provided,
 # in this case os_type must also be specified
 
+# Virtual machine image to use for the database server
 database_vm_image = {
   os_type = "LINUX",
   source_image_id = "",
@@ -1064,3 +1065,205 @@ shared_access_key_enabled_nfs = true
 
 # enable_storage_nic defines if a storage nic should be used when scale out is enabled
 #enable_storage_nic = true
+
+
+# Optional inputs not explicitly set above.
+# These are sourced from terraform-docs and kept commented as documentation.
+
+# Boolean value indicating if the Agent IP should be added to the storage and key vault firewalls
+# add_Agent_IP = true
+
+# Enable encryption in transit for Azure Files
+# AFS_enable_encryption_in_transit = false
+
+# If provided, contains the IP address of the agent
+# Agent_IP = ""
+
+# IMDS API Version
+# api-version = "2019-04-30"
+
+# The Instance number for the Application Server Instance
+# app_instance_number = "00"
+
+# Dictionary value to sizing json
+# app_tier_vm_sizing = ""
+
+# Defines the Azure application configuration Resource id
+# application_configuration_id = ""
+
+# [Obsolete]If true, the application tier will not be placed availability set
+# application_server_no_avset = null
+
+# [Obsolete]If provided, the application servers will not be placed in a proximity placement group
+# application_server_no_ppg = null
+
+# Dictionary key value to sizing json
+# application_size = ""
+
+# Details of the Application layer
+# application_tier = {
+#   "application_server_count": 0,
+#   "dual_nics": false,
+#   "enable_deployment": true,
+#   "use_DHCP": false
+# }
+
+# Defining the SDU credentials
+# authentication = {}
+
+# Version for automated deployment
+# auto-deploy-version = "v2"
+
+# The name of the control plane
+# control_plane_name = ""
+
+# If provided, the value of the custom random id
+# custom_random_id = ""
+
+# [Obsolete] If true, the database tier will not use an availability set
+# database_no_avset = null
+
+# [Obsolete] If provided, the database tier will not be placed in a proximity placement group
+# database_no_ppg = null
+
+# Details of the database node
+# databases = [
+#   {
+#     "use_DHCP": false
+#   }
+# ]
+
+# Custom disk configuration json file for database tier
+# db_disk_sizes_filename = ""
+
+# Dictionary value to sizing json
+# db_sizing_dictionary_key = ""
+
+# The type of deployment
+# deployment = "update"
+
+# Private DNS zone names
+# dns_zone_names = {
+#   "blob_dns_zone_name": "privatelink.blob.core.windows.net",
+#   "file_dns_zone_name": "privatelink.file.core.windows.net",
+#   "vault_dns_zone_name": "privatelink.vaultcore.azure.net"
+# }
+
+# Boolean value indicating if firewall should be enabled for key vaults and storage
+# enable_firewall_for_keyvaults_and_storage = true
+
+# Enables host encryption for sap vms
+# encryption_at_host_enabled = false
+
+# The volume size in GB for hana shared
+# hanashared_volume_size = 128
+
+# Details of the Azure infrastructure to deploy the SAP landscape into
+# infrastructure = {}
+
+# Details of keyvault
+# key_vault = {}
+
+# Specifies the license type for the OS
+# license_type = ""
+
+# String value giving the possibility to register custom dns a records in a separate resourcegroup
+# management_dns_resourcegroup_name = ""
+
+# String value giving the possibility to register custom dns a records in a separate subscription
+# management_dns_subscription_id = ""
+
+# If provided, the database tier observer virtual machines will be configured with the specified IPs (db subnet)
+# observer_nic_ips = [
+#   ""
+# ]
+
+# The VM size to use for the observer
+# observer_vm_size = "Standard_D4s_v3"
+
+# Tags to use specifically for the observer VM
+# observer_vm_tags = {}
+
+# The zone to deploy the observer in
+# observer_vm_zones = []
+
+# Configuration options
+# options = {
+#   "legacy_nic_order": false,
+#   "nsg_asg_with_vnet": false,
+#   "resource_offset": 0
+# }
+
+# Controls if resource groups are deleted even if they contain resources
+# prevent_deletion_if_contains_resources = true
+
+# String value giving the possibility to register custom PrivateLink DNS A records in a separate resourcegroup
+# privatelink_dns_resourcegroup_name = ""
+
+# String value giving the possibility to register custom PrivateLink DNS A records in a separate subscription
+# privatelink_dns_subscription_id = ""
+
+# Boolean value indicating if storage accounts and key vaults should be registered to the corresponding dns zones
+# register_storage_accounts_keyvaults_with_dns = true
+
+# If provided, tags for the resource group
+# resourcegroup_tags = {}
+
+# Deployment Scenario
+# scenario = "HANA Database"
+
+# [Obsolete] If true, the SAP Central Services tier will not use an availability set
+# scs_server_no_avset = null
+
+# [Obsolete] If provided, the Central Services will not be placed in a proximity placement group
+# scs_server_no_ppg = null
+
+# Timeout for connection that is used by provisioner
+# ssh-timeout = "30s"
+
+# Storage account replication type
+# storage_account_replication_type = "ZRS"
+
+# The address prefix for the storage subnet
+# storage_subnet_address_prefix = ""
+
+# If provided, Azure resource id for the storage subnet
+# storage_subnet_arm_id = ""
+
+# If provided, the name of the storage subnet
+# storage_subnet_name = ""
+
+# If provided, Azure resource id for the storage subnet NSG
+# storage_subnet_nsg_arm_id = ""
+
+# If provided, the name of the storage subnet NSG
+# storage_subnet_nsg_name = ""
+
+# Target subscription
+# subscription_id = ""
+
+# If defined, the SUSE registration code for BYOS/BYOL images. Leave empty for PAYG marketplace images.
+# suse_subscription_id = ""
+
+# The version of Terraform templates that were identified in the state file
+# terraform_template_version = ""
+
+# If true, will use AFS for all shared storage.
+# use_AFS_for_shared_storage = false
+
+# Boolean value indicating if a custom dns a record should be created when using private endpoints
+# use_custom_dns_a_registration = false
+
+# If true, an observer virtual machine will be used
+# use_observer = true
+
+# [OBSOLUTE]If true, the Web Dispatcher tier will not use an availability set
+# webdispatcher_server_no_avset = null
+
+# [OBSOLUTE]If provided, the web dispatchers will not be placed in a proximity placement group
+# webdispatcher_server_no_ppg = null
+
+# The name of the workload zone
+# workload_zone_name = ""
+
+

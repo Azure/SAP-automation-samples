@@ -287,3 +287,36 @@ management_dns_resourcegroup_name = ""
 
 # tags defines global tags for all resources
 #tags = {}
+
+
+# Optional inputs not explicitly set above.
+# These are sourced from terraform-docs and kept commented as documentation.
+
+# Defines the Azure application configuration Resource id
+# application_configuration_id = ""
+
+# The name of the control plane
+# control_plane_name = ""
+
+# Details of deployer
+# deployer = {}
+
+# Folder name of folder containing the terraform state file
+# deployer_statefile_foldername = ""
+
+# Details of the Azure infrastructure to deploy the SAP library into
+# infrastructure = {}
+
+# Import existing Azure Key Vaults
+# key_vault = {}
+
+# Details of the Storage account for storing sap bits
+# storage_account_sapbits = {}
+
+# Details of the Storage account for storing tfstate
+# storage_account_tfstate = {}
+
+# The version of Terraform templates that were identified in the state file
+# terraform_template_version = ""
+
+

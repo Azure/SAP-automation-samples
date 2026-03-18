@@ -39,7 +39,7 @@ Description = "LAB workload zone"
 # subscription_id defines the target subscription for the deployment
 #subscription_id = ""
 
-# management_subscription_id defines the management subscription used by the deployment  
+# management_subscription_id defines the management subscription used by the deployment
 #management_subscription_id = ""
 
 # use_deployer defines if deployer should be used to deploy the resources
@@ -708,7 +708,7 @@ deploy_nat_gateway = true
 # export_install_path defines if the export mount path should be created for the installation media
 #export_install_path = true
 
-# export_transport_path defines if the export mount path should be created for the transport media  
+# export_transport_path defines if the export mount path should be created for the transport media
 #export_transport_path = true
 
 #########################################################################################
@@ -734,4 +734,98 @@ deploy_nat_gateway = true
 
 # custom_random_id defines a custom random id value
 #custom_random_id = ""
+
+
+# Optional inputs not explicitly set above.
+# These are sourced from terraform-docs and kept commented as documentation.
+
+# Boolean value indicating if the Agent IP should be added to the storage and key vault firewalls
+# add_Agent_IP = true
+
+# Enable encryption in transit for Azure Files
+# AFS_enable_encryption_in_transit = false
+
+# If provided, contains the IP address of the agent
+# Agent_IP = ""
+
+# If defined, specifies the allowed client list for ANF export policy
+# ANF_export_policy_client_access_list = []
+
+# Defines the Azure application configuration Resource id
+# application_configuration_id = ""
+
+# Details of ssh key pair
+# authentication = {
+#   "path_to_private_key": "",
+#   "path_to_public_key": "",
+#   "username": "azureadm"
+# }
+
+# The name of the control plane
+# control_plane_name = ""
+
+# The type of deployment
+# deployment = "update"
+
+# Storage account information for diagnostics account
+# diagnostics_storage_account = {
+#   "arm_id": ""
+# }
+
+# Private DNS zone names
+# dns_zone_names = {
+#   "appconfig_dns_zone_name": "privatelink.azconfig.io",
+#   "blob_dns_zone_name": "privatelink.blob.core.windows.net",
+#   "file_dns_zone_name": "privatelink.file.core.windows.net",
+#   "table_dns_zone_name": "privatelink.table.core.windows.net",
+#   "vault_dns_zone_name": "privatelink.vaultcore.azure.net"
+# }
+
+# Details of the Azure infrastructure to deploy the SAP landscape into
+# infrastructure = {}
+
+# The user brings existing Azure Key Vaults
+# key_vault = {}
+
+# Existing private endpoint for key vault
+# keyvault_private_endpoint_id = ""
+
+# Configuration options
+# options = {}
+
+# ID of the private link file resource
+# privatelink_file_id = ""
+
+# ID of the private link keyvault resource
+# privatelink_keyvault_id = ""
+
+# ID of the private link storage resource
+# privatelink_storage_id = ""
+
+# Boolean value indicating if storage accounts and key vaults should be registered to the corresponding dns zones
+# register_storage_accounts_keyvaults_with_dns = true
+
+# Tags to be applied to the resource group
+# resourcegroup_tags = {}
+
+# The version of Terraform templates that were identified in the state file
+# terraform_template_version = ""
+
+# Storage account information for witness storage account
+# witness_storage_account = {
+#   "arm_id": ""
+# }
+
+# Defines the name of the secret in the Azure Key Vault that contains the password
+# workload_zone_password_secret_name = ""
+
+# Defines the name of the secret in the Azure Key Vault that contains the private key
+# workload_zone_private_key_secret_name = ""
+
+# Defines the name of the secret in the Azure Key Vault that contains the public key
+# workload_zone_public_key_secret_name = ""
+
+# Defines the name of the secret in the Azure Key Vault that contains the user name
+# workload_zone_username_secret_name = ""
+
 

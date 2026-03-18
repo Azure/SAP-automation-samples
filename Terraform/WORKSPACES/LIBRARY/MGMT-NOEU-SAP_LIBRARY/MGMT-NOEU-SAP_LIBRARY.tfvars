@@ -1,5 +1,5 @@
 # The automation supports both creating resources (greenfield) or using existing resources (brownfield)
-# For the greenfield scenario the automation defines default names for resources, if there is a XXXXname variable then the name is customizable 
+# For the greenfield scenario the automation defines default names for resources, if there is a XXXXname variable then the name is customizable
 # for the brownfield scenario the Azure resource identifiers for the resources must be specified
 
 #########################################################################################
@@ -260,3 +260,123 @@ use_private_endpoint=true
 # use_msi_for_clusters = false
 # create_transport_storage = false
 # create_install_storage = false
+
+
+# Optional inputs not explicitly set above.
+# These are sourced from terraform-docs and kept commented as documentation.
+
+# Boolean value indicating if the Agent IP should be added to the storage and key vault firewalls
+# add_Agent_IP = true
+
+# Agent Network resource ID
+# additional_network_id = ""
+
+# IP address of the agent
+# Agent_IP = ""
+
+# Boolean value indicating if a webapp should be deployed
+# application_configuration_deployment = false
+
+# Defines the Azure application configuration Resource id
+# application_configuration_id = ""
+
+# Boolean value indicating if permissions should be assigned to the storage accounts
+# assign_permissions = true
+
+# The name of the control plane
+# control_plane_name = ""
+
+# Boolean value indicating if PrivateLink DNS Zones should be created
+# create_privatelink_dns_zones = true
+
+# If provided, the value of the custom random id
+# custom_random_id = ""
+
+# Boolean value indicating if storage account access is via data plane
+# data_plane_available = true
+
+# Details of deployer
+# deployer = {}
+
+# Defines the prefix for the deployer
+# deployer_prefix = ""
+
+# Folder name of folder containing the terraform state file
+# deployer_statefile_foldername = ""
+
+# The type of deployment
+# deployment = "update"
+
+# Boolean value indicating if firewall should be enabled for key vaults and storage
+# enable_firewall_for_keyvaults_and_storage = true
+
+# Details of the Azure infrastructure to deploy the SAP library into
+# infrastructure = {}
+
+# Import existing Azure Key Vaults
+# key_vault = {}
+
+# If defined, the name of the storage account where the SAP bits will be stored
+# library_sapmedia_name = ""
+
+# Optional name for the storage account where the terraform state will be stored
+# library_terraform_state_name = ""
+
+# If defined use an existing blob container for terraform vars
+# library_terraform_vars_blob_container_is_existing = false
+
+# If defined, the blob container name to create
+# library_terraform_vars_blob_container_name = "tfvars"
+
+# String value giving the possibility to register custom dns a records in a separate resourcegroup
+# management_dns_resourcegroup_name = ""
+
+# String value giving the possibility to register custom dns a records in a separate subscription
+# management_dns_subscription_id = ""
+
+# Management Network resource ID
+# management_network_id = ""
+
+# Controls if resource groups are deleted even if they contain resources
+# prevent_deletion_if_contains_resources = true
+
+# String value giving the possibility to register custom PrivateLink DNS A records in a separate resourcegroup
+# privatelink_dns_resourcegroup_name = ""
+
+# String value giving the possibility to register custom PrivateLink DNS A records in a separate subscription
+# privatelink_dns_subscription_id = ""
+
+# Boolean value indicating if public access should be enabled for key vaults and storage
+# public_network_access_enabled = true
+
+# Boolean value indicating if endpoints should be registered to the dns zone
+# register_endpoints_with_dns = true
+
+# Boolean value indicating if storage accounts and key vaults should be registered to the corresponding dns zones
+# register_storage_accounts_keyvaults_with_dns = true
+
+# Indicates whether the storage account permits requests to be authorized with the account access key via Shared Key.
+# shared_access_key_enabled = false
+
+# If defined, uses short names for private endpoints nics
+# short_named_endpoints_nics = false
+
+# SPN ID to be used for the deployment
+# spn_id = ""
+
+# Details of the Storage account for storing sap bits
+# storage_account_sapbits = {}
+
+# Details of the Storage account for storing tfstate
+# storage_account_tfstate = {}
+
+# The version of Terraform templates that were identified in the state file
+# terraform_template_version = ""
+
+# Boolean value indicating if a custom dns a record should be created when using private endpoints
+# use_custom_dns_a_registration = false
+
+# Boolean value indicating if a webapp should be created
+# use_webapp = false
+
+

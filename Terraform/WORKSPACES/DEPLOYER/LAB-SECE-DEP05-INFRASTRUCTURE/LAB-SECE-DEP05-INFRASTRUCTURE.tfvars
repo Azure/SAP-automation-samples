@@ -46,6 +46,7 @@ location = "swedencentral"
 #resourcegroup_name=""
 #resourcegroup_arm_id=""
 
+# If provided, tags for the resource group
 resourcegroup_tags = {
   Control_plane = "Sweden Central"
 }
@@ -216,6 +217,7 @@ deployer_use_DHCP = true
 #
 # The deployer_image defines the Virtual machine image to use, if source_image_id is specified the deployment will use the custom image provided, in this case os_type must also be specified
 
+# The image to be used for the deployer VM
 deployer_image = {
   type            = "marketplace"
   os_type         = "Linux"
@@ -302,6 +304,7 @@ user_assigned_identity_id="/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/r
 # deployer_password_secret_name if provided contains the secret name for the password
 #deployer_password_secret_name=""
 
+# Disables the purge protection for Azure keyvaults.
 enable_purge_control_for_keyvaults           = false
 
 # soft_delete_retention_days defines the number of days that items should be retained in the soft delete period
@@ -507,3 +510,87 @@ application_configuration_deployment = true
 
 # deploy_defender_extension adds the Microsoft.Azure.Security.Monitoring extension to the virtual machines
 #deploy_defender_extension = false
+
+
+# Optional inputs not explicitly set above.
+# These are sourced from terraform-docs and kept commented as documentation.
+
+# Defines the Azure application configuration name
+# application_configuration_name = ""
+
+# The client ID of the service principal used to authenticate to Azure
+# arm_client_id = ""
+
+# Assign permissions on the subscription
+# assign_subscription_permissions = true
+
+# Authentication details
+# authentication = {
+#   "path_to_private_key": "",
+#   "path_to_public_key": "",
+#   "username": "azureadm"
+# }
+
+# The name of the control plane
+# control_plane_name = ""
+
+# Boolean flag indicating if the resource permissions should be assigned
+# deployer_assign_resource_permissions = true
+
+# The type of the disk for the deployer VM
+# deployer_disk_type = "Premium_LRS"
+
+# Details of the list of deployer(s)
+# deployers = [
+#   {}
+# ]
+
+# The type of deployment
+# deployment = "update"
+
+# Type of agent to be used
+# devops_platform = ""
+
+# If provided, contains the API Url of the GitHub instance
+# github_api_url = "https://api.github.com"
+
+# If provided, contains token to access github
+# github_app_token = ""
+
+# If provided, contains the Reference to the repositry (e.g. owner/repository)
+# github_repository = ""
+
+# If provided, contains the Server Url of the GitHub instance
+# github_server_url = "https://github.com"
+
+# Details of the Azure infrastructure to deploy the deployer into
+# infrastructure = {}
+
+# Import existing Azure Key Vaults
+# key_vault = {}
+
+# If provided, the access mode for the network security perimeter association. Possible values are Audit, Enforced, and Learning.
+# network_security_access_mode = "Enforced"
+
+# If defined, will add the Microsoft.Azure.NetworkSecurityPerimeter
+# network_security_perimeter_deployment = false
+
+# If provided, the Azure network security perimeter id
+# network_security_perimeter_id = ""
+
+# If provided, the name of the network security perimeter to be created
+# network_security_perimeter_name = ""
+
+# Configuration options
+# options = {}
+
+# Azure resource identifier for the keyvault where the spn will be stored
+# spn_keyvault_id = ""
+
+# Timeout for connection that is used by provisioner
+# ssh-timeout = "30s"
+
+# The version of Terraform templates that were identified in the state file
+# terraform_template_version = ""
+
+

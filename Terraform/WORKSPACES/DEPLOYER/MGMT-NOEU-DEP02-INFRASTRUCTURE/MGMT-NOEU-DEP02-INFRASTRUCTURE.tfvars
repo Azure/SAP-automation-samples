@@ -8,8 +8,8 @@
 ##########################################################################################
 
 # The automation supports both creating resources (greenfield) or using existing resources (brownfield)
-# For the greenfield scenario the automation defines default names for resources, 
-# if there is a XXXXname variable then the name is customizable 
+# For the greenfield scenario the automation defines default names for resources,
+# if there is a XXXXname variable then the name is customizable
 # for the brownfield scenario the Azure resource identifiers for the resources must be specified
 
 #########################################################################################
@@ -46,6 +46,7 @@ location = "northeurope"
 #resourcegroup_arm_id=""
 
 
+# If provided, tags for the resource group
 resourcegroup_tags = {
   Control_plane = "North Europe"
 }
@@ -79,7 +80,7 @@ management_network_address_space = "10.11.20.0/24"
 
 # management subnet
 # If defined these parameters control the subnet name and the subnet prefix
-# management_subnet_name is an optional parameter and should only be used if the default naming is not acceptable 
+# management_subnet_name is an optional parameter and should only be used if the default naming is not acceptable
 #management_subnet_name=""
 
 # management_subnet_address_prefix is a mandatory parameter if the subnets are not defined in the workload or if existing subnets are not used
@@ -153,6 +154,7 @@ management_bastion_subnet_address_prefix = "10.11.20.128/26"
 #
 ########################################################
 
+# value to enable/disable public ip
 deployer_enable_public_ip = false
 
 
@@ -165,12 +167,13 @@ deployer_enable_public_ip = false
 # deployer_use_DHCP is a boolean flag controlling if Azure subnet provided IP addresses should be used (true)
 #deployer_use_DHCP = true
 
-# private_ip_address if defined will provide the IP addresses for the network interface cards 
+# private_ip_address if defined will provide the IP addresses for the network interface cards
 #private_ip_address=""
 
 #
 # The deployer_image defines the Virtual machine image to use, if source_image_id is specified the deployment will use the custom image provided, in this case os_type must also be specified
 
+# The image to be used for the deployer VM
 deployer_image = {
   "type"            = "marketplace"
   "os_type"         = "Linux"
@@ -188,7 +191,7 @@ deployer_image = {
 This block describes the variables for the authentication section block in the json file
 */
 
-# deployer_authentication_type defines the authentication type for the deployer virtual machine 
+# deployer_authentication_type defines the authentication type for the deployer virtual machine
 #deployer_authentication_type="key"
 
 # deployer_authentication_username defines the username for the deployer virtual machine
@@ -210,16 +213,16 @@ This block describes the variables for the authentication section block in the j
 # automation_keyvault_id is the Azure resource identifier for the keyvault that will be used by the automation (not used currently)
 #automation_keyvault_id=""
 
-# deployer_private_key_secret_name if provided contains the secret name for the private key 
+# deployer_private_key_secret_name if provided contains the secret name for the private key
 #deployer_private_key_secret_name=""
 
-# deployer_public_key_secret_name if provided contains the secret name for the public key 
+# deployer_public_key_secret_name if provided contains the secret name for the public key
 #deployer_public_key_secret_name=""
 
-# deployer_username_secret_name if provided contains the secret name for the username 
+# deployer_username_secret_name if provided contains the secret name for the username
 #deployer_username_secret_name=""
 
-# deployer_password_secret_name if provided contains the secret name for the password 
+# deployer_password_secret_name if provided contains the secret name for the password
 #deployer_password_secret_name=""
 
 # deployer_assign_subscription_permissions is a boolean flag controlling if the deployment credential should be assigned Contribuor permissions on the subscription
@@ -443,6 +446,7 @@ enable_firewall_for_keyvaults_and_storage = true
 # deployer_password_secret_name if provided contains the secret name for the password
 #deployer_password_secret_name=""
 
+# Disables the purge protection for Azure keyvaults.
 enable_purge_control_for_keyvaults           = false
 
 # soft_delete_retention_days defines the number of days that items should be retained in the soft delete period
@@ -456,4 +460,134 @@ enable_rbac_authorization = true
 
 # List of object IDs to add to key vault policies"
 #additional_users_to_add_to_keyvault_policies=["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy"]
+
+
+# Optional inputs not explicitly set above.
+# These are sourced from terraform-docs and kept commented as documentation.
+
+# Defines the Azure application configuration name
+# application_configuration_name = ""
+
+# The client ID of the service principal used to authenticate to Azure
+# arm_client_id = ""
+
+# Assign permissions on the subscription
+# assign_subscription_permissions = true
+
+# Authentication details
+# authentication = {
+#   "path_to_private_key": "",
+#   "path_to_public_key": "",
+#   "username": "azureadm"
+# }
+
+# Tags for the public\_ip resource attached to bastion
+# bastion_public_ip_tags = null
+
+# The SKU of the Bastion Host. Accepted values are Basic or Standard
+# bastion_sku = "Basic"
+
+# The name of the control plane
+# control_plane_name = ""
+
+# If provided, the value of the custom random id
+# custom_random_id = ""
+
+# Boolean value indicating if storage account access is via data plane
+# data_plane_available = true
+
+# Boolean flag indicating if the resource permissions should be assigned
+# deployer_assign_resource_permissions = true
+
+# Number of deployer VMs to be created
+# deployer_count = 1
+
+# The type of the disk for the deployer VM
+# deployer_disk_type = "Premium_LRS"
+
+# If provides, the value of the deployer Virtual machine IPs
+# deployer_private_ip_address = [
+#   ""
+# ]
+
+# Tags for the public\_ip resource attached to deployer
+# deployer_public_ip_tags = null
+
+# Details of the list of deployer(s)
+# deployers = [
+#   {}
+# ]
+
+# The type of deployment
+# deployment = "update"
+
+# Type of agent to be used
+# devops_platform = ""
+
+# Enable or disable host encryption for the deployer
+# encryption_at_host_enabled = false
+
+# List of allowed IP addresses to be part of the firewall rule
+# firewall_allowed_ipaddresses = []
+
+# Tags for the public\_ip resource attached to firewall
+# firewall_public_ip_tags = null
+
+# If provided, contains the API Url of the GitHub instance
+# github_api_url = "https://api.github.com"
+
+# If provided, contains token to access github
+# github_app_token = ""
+
+# If provided, contains the Reference to the repositry (e.g. owner/repository)
+# github_repository = ""
+
+# If provided, contains the Server Url of the GitHub instance
+# github_server_url = "https://github.com"
+
+# Details of the Azure infrastructure to deploy the deployer into
+# infrastructure = {}
+
+# Import existing Azure Key Vaults
+# key_vault = {}
+
+# The type of the image to be used for the deployer VM
+# license_type = ""
+
+# IP allowed to access the deployer
+# management_subnet_nsg_allowed_ips = []
+
+# The name of the network security group
+# management_subnet_nsg_name = ""
+
+# If provided, the access mode for the network security perimeter association. Possible values are Audit, Enforced, and Learning.
+# network_security_access_mode = "Enforced"
+
+# If defined, will add the Microsoft.Azure.NetworkSecurityPerimeter
+# network_security_perimeter_deployment = false
+
+# If provided, the Azure network security perimeter id
+# network_security_perimeter_id = ""
+
+# If provided, the name of the network security perimeter to be created
+# network_security_perimeter_name = ""
+
+# Configuration options
+# options = {}
+
+# Boolean value indicating if public access should be enabled for key vaults and storage
+# public_network_access_enabled = true
+
+# Indicates whether the storage account permits requests to be authorized with the account access key via Shared Key.
+# shared_access_key_enabled = false
+
+# Azure resource identifier for the keyvault where the spn will be stored
+# spn_keyvault_id = ""
+
+# Timeout for connection that is used by provisioner
+# ssh-timeout = "30s"
+
+# The version of Terraform templates that were identified in the state file
+# terraform_template_version = ""
+
 
