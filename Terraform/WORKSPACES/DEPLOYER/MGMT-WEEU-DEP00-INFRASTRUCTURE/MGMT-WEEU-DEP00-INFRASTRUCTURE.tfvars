@@ -178,7 +178,6 @@ webapp_subnet_address_prefix = "10.170.20.80/28"
 #app_service_SKU_name = "S1"
 
 
-
 #########################################################################################
 #                                                                                       #
 #                            Deployer VM information                                    #
@@ -458,3 +457,22 @@ enable_firewall_for_keyvaults_and_storage = false
 
 # deploy_defender_extension adds the Microsoft.Azure.Security.Monitoring extension to the virtual machines
 #deploy_defender_extension = false
+
+
+#######################################4#######################################8
+#                                                                              #
+#                          Network Security Perimeter definitions             #
+#                                                                              #
+#######################################4#######################################8
+
+# If defined, will add the Microsoft.Azure.NetworkSecurityPerimeter
+network_security_perimeter_deployment = false
+# If provided, the name of the network security perimeter to be created
+#network_security_perimeter_name = ""
+
+# If provided, the access mode for the network security perimeter association. Possible values are Audit, Enforced, and Learning.
+#network_security_access_mode = "Enforced"
+
+# If provided, the Azure network security perimeter id
+#network_security_perimeter_id = ""
+

@@ -96,7 +96,6 @@ management_subnet_address_prefix = "10.175.20.64/28"
 # management_subnet_nsg_name is an optional parameter and should only be used if the default naming is not acceptable
 #management_subnet_nsg_name = ""
 
-
 # use_private_endpoint is a boolean flag controlling if the keyvaults and storage accounts have private endpoints
 #use_private_endpoint=false
 
@@ -185,7 +184,6 @@ webapp_subnet_address_prefix = "10.175.20.80/28"
 #app_service_SKU_name = "S1"
 
 
-
 #########################################################################################
 #                                                                                       #
 #                            Deployer VM information                                    #
@@ -229,19 +227,11 @@ deployer_image = {
 # license_type defines the type of the image to be used for the deployer VM
 #license_type = ""
 
-# Use this field if you are using a marketplace image that has a plan attached to it
-plan = {
-  "use"       = false
-  "name"      = ""
-  "publisher" = ""
-  "product"   = ""
-}
-
-# deployer_diagnostics_account_arm_id defines the diagnosting storage account for the deployer
+# deployer_diagnostics_account_arm_id defines the diagnostics storage account for the deployer
 # deployer_diagnostics_account_arm_id = ""
 
 # shared_access_key_enabled indicates whether the storage account permits requests to be authorized with the account access key via Shared Key
-#shared_access_key_enabled = false
+shared_access_key_enabled = false
 
 # encryption_at_host_enabled enables or disables host encryption for the deployer
 #encryption_at_host_enabled = false
@@ -271,7 +261,7 @@ plan = {
 use_spn = false
 
 # user_assigned_identity_id defines the user assigned identity that will be assigned to the deployers
-user_assigned_identity_id="/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/XXXXXXXX/providers/Microsoft.ManagedIdentity/userAssignedIdentities/xxxxxxxxxx"
+#user_assigned_identity_id="/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/XXXXXXXX/providers/Microsoft.ManagedIdentity/userAssignedIdentities/xxxxxxxxxx"
 
 # deployer_public_ip_tags defines tags for the public_ip resource attached to deployer
 #deployer_public_ip_tags = {}
@@ -494,7 +484,7 @@ public_network_access_enabled = true
 #application_configuration_id = ""
 
 # If defined, will add the Azure Application configuration to the control plane
-application_configuration_deployment = true
+application_configuration_deployment = false
 
 #########################################################################################
 #                                                                                       #
@@ -507,3 +497,23 @@ application_configuration_deployment = true
 
 # deploy_defender_extension adds the Microsoft.Azure.Security.Monitoring extension to the virtual machines
 #deploy_defender_extension = false
+
+
+#######################################4#######################################8
+#                                                                              #
+#                          Network Security Perimeter definitions             #
+#                                                                              #
+#######################################4#######################################8
+
+# If defined, will add the Microsoft.Azure.NetworkSecurityPerimeter
+network_security_perimeter_deployment = false
+# If provided, the name of the network security perimeter to be created
+#network_security_perimeter_name = ""
+
+# If provided, the access mode for the network security perimeter association. Possible values are Audit, Enforced, and Learning.
+#network_security_access_mode = "Enforced"
+
+# If provided, the Azure network security perimeter id
+#network_security_perimeter_id = ""
+
+

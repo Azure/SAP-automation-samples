@@ -1,5 +1,5 @@
 # The automation supports both creating resources (greenfield) or using existing resources (brownfield)
-# For the greenfield scenario the automation defines default names for resources, if there is a XXXXname variable then the name is customizable 
+# For the greenfield scenario the automation defines default names for resources, if there is a XXXXname variable then the name is customizable
 # for the brownfield scenario the Azure resource identifiers for the resources must be specified
 
 #########################################################################################
@@ -112,7 +112,7 @@ location = "northeurope"
 #library_sapmedia_blob_container_name="sapbits"
 
 #######################################################################################
-# Terrafrom state storage account
+# Terraform state storage account
 # This account will contain the Terraform state files
 #######################################################################################
 

@@ -109,7 +109,7 @@ location="westeurope"
 
 #########################################################################################
 #                                                                                       #
-#   Terrafrom state storage account                                                     #
+#   Terraform state storage account                                                     #
 #   This account will contain the Terraform state files                                 #
 #                                                                                       #
 #########################################################################################
@@ -154,7 +154,7 @@ dns_label="azure.sdaf.weeu.contoso.net"
 # String value giving the possibility to register custom dns a records in a separate subscription
 # management_dns_subscription_id = ""
 # String value giving the possibility to register custom dns a records in a separate resourcegroup
-management_dns_resourcegroup_name = ""
+#management_dns_resourcegroup_name = ""
 
 # use_private_endpoint is a boolean flag controlling if the keyvaults and storage accounts have private endpoints
 #use_private_endpoint=false
@@ -163,7 +163,7 @@ management_dns_resourcegroup_name = ""
 
 #########################################################################################
 #                                                                                       #
-#  Web App definitioms                                                                  #
+#  Web App definitions                                                                  #
 #                                                                                       #
 #########################################################################################
 

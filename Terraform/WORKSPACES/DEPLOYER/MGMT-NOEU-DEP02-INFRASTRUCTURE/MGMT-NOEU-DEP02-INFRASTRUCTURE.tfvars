@@ -8,8 +8,8 @@
 ##########################################################################################
 
 # The automation supports both creating resources (greenfield) or using existing resources (brownfield)
-# For the greenfield scenario the automation defines default names for resources, 
-# if there is a XXXXname variable then the name is customizable 
+# For the greenfield scenario the automation defines default names for resources,
+# if there is a XXXXname variable then the name is customizable
 # for the brownfield scenario the Azure resource identifiers for the resources must be specified
 
 #########################################################################################
@@ -79,7 +79,7 @@ management_network_address_space = "10.11.20.0/24"
 
 # management subnet
 # If defined these parameters control the subnet name and the subnet prefix
-# management_subnet_name is an optional parameter and should only be used if the default naming is not acceptable 
+# management_subnet_name is an optional parameter and should only be used if the default naming is not acceptable
 #management_subnet_name=""
 
 # management_subnet_address_prefix is a mandatory parameter if the subnets are not defined in the workload or if existing subnets are not used
@@ -165,7 +165,7 @@ deployer_enable_public_ip = false
 # deployer_use_DHCP is a boolean flag controlling if Azure subnet provided IP addresses should be used (true)
 #deployer_use_DHCP = true
 
-# private_ip_address if defined will provide the IP addresses for the network interface cards 
+# private_ip_address if defined will provide the IP addresses for the network interface cards
 #private_ip_address=""
 
 #
@@ -188,7 +188,7 @@ deployer_image = {
 This block describes the variables for the authentication section block in the json file
 */
 
-# deployer_authentication_type defines the authentication type for the deployer virtual machine 
+# deployer_authentication_type defines the authentication type for the deployer virtual machine
 #deployer_authentication_type="key"
 
 # deployer_authentication_username defines the username for the deployer virtual machine
@@ -210,16 +210,16 @@ This block describes the variables for the authentication section block in the j
 # automation_keyvault_id is the Azure resource identifier for the keyvault that will be used by the automation (not used currently)
 #automation_keyvault_id=""
 
-# deployer_private_key_secret_name if provided contains the secret name for the private key 
+# deployer_private_key_secret_name if provided contains the secret name for the private key
 #deployer_private_key_secret_name=""
 
-# deployer_public_key_secret_name if provided contains the secret name for the public key 
+# deployer_public_key_secret_name if provided contains the secret name for the public key
 #deployer_public_key_secret_name=""
 
-# deployer_username_secret_name if provided contains the secret name for the username 
+# deployer_username_secret_name if provided contains the secret name for the username
 #deployer_username_secret_name=""
 
-# deployer_password_secret_name if provided contains the secret name for the password 
+# deployer_password_secret_name if provided contains the secret name for the password
 #deployer_password_secret_name=""
 
 # deployer_assign_subscription_permissions is a boolean flag controlling if the deployment credential should be assigned Contribuor permissions on the subscription
@@ -456,4 +456,34 @@ enable_rbac_authorization = true
 
 # List of object IDs to add to key vault policies"
 #additional_users_to_add_to_keyvault_policies=["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy"]
+
+
+#########################################################################################
+#                                                                                       #
+#                                     Application Configuration                         #
+#                                                                                       #
+#########################################################################################
+
+# Defines the Azure application configuration Resource id
+#application_configuration_id = ""
+
+# If defined, will add the Azure Application configuration to the control plane
+#application_configuration_deployment = false
+
+#######################################4#######################################8
+#                                                                              #
+#                          Network Security Perimeter definitions             #
+#                                                                              #
+#######################################4#######################################8
+
+# If defined, will add the Microsoft.Azure.NetworkSecurityPerimeter
+#network_security_perimeter_deployment = false
+# If provided, the name of the network security perimeter to be created
+#network_security_perimeter_name = ""
+
+# If provided, the access mode for the network security perimeter association. Possible values are Audit, Enforced, and Learning.
+#network_security_access_mode = "Enforced"
+
+# If provided, the Azure network security perimeter id
+#network_security_perimeter_id = ""
 

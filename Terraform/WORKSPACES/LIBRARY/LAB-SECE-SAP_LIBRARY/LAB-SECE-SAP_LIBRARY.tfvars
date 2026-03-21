@@ -121,7 +121,7 @@ location="swedencentral"
 
 #########################################################################################
 #                                                                                       #
-#   Terrafrom state storage account                                                     #
+#   Terraform state storage account                                                     #
 #   This account will contain the Terraform state files                                 #
 #                                                                                       #
 #########################################################################################
@@ -179,7 +179,7 @@ location="swedencentral"
 #########################################################################################
 
 # dns_label if specified is the DNS name of the private DNS zone
-dns_label="lab.sdaf.contoso.net"
+dns_label="lab.sdaf.sece.contoso.net"
 
 # dns_zone_names defines the Private DNS zone names
 #dns_zone_names = {
