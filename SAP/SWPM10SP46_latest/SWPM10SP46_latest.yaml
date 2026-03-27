@@ -1,0 +1,19 @@
+---
+name:                                        'SWPM10SP46'
+target:                                      'SWPM10SP46'
+version:                                     002
+
+materials:
+
+  media:
+    # SWPM
+
+    - name:                                  "SWPM 1.0 SP46; NW higher than 7.0x; OS: Linux on x86_64 64bit"
+      archive:                               SWPM10SP46_2-20009701.SAR
+      checksum:                              127744684f634c9b4224f11896178973de7f918f1e8de33828405146d646df76
+      extract:                               true
+      extractDir:                            SWPM
+      creates:                               SIGNATURE.SMF
+      url:                                   https://softwaredownloads.sap.com/file/0025000000123272026
+
+...
