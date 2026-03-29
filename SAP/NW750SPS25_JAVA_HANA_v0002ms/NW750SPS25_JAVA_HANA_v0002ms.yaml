@@ -5,6 +5,7 @@ target:                                      "NETWEAVER 7.50 JAVA SPS 25"
 version:                                     0002
 InstanceType:                                "JAVA"
 platform:                                    "HANA"
+schema_name:                                 "SAPJAVA1"
 
 defaults:
   target_location:                           "{{ target_media_location }}/download_basket"
