@@ -471,7 +471,7 @@ network_security_perimeter_deployment = false
 #network_security_perimeter_name = ""
 
 # If provided, the access mode for the network security perimeter association. Possible values are Audit, Enforced, and Learning.
-#network_security_access_mode = "Enforced"
+network_security_access_mode = "Learning"
 
 # If provided, the Azure network security perimeter id
 #network_security_perimeter_id = ""
