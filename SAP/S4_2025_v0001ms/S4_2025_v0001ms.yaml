@@ -307,7 +307,7 @@ materials:
       url:                                   https://softwaredownloads.sap.com/file/0010000000033172015
       path:                                  download_basket
       download:                              True
-      checksum:                              9b5f3fca5b87ba80f4048f857a22b2a63033b58ffb977a19241b1316a4731701
+      checksum:                              87d02737397b008c79f971f47eb37e222ba866aa8edfef25f645e2ab502279b2
 
     - name:                                  "UIHR002 100: SP 0001"
       archive:                               K-10001INUIHR002.SAR
@@ -656,7 +656,7 @@ materials:
       url:                                   https://softwaredownloads.sap.com/file/0010000000297212015
       path:                                  download_basket
       download:                              True
-      checksum:                              564fcbe7d359516cb09d21098223dd87ca81873777e7d3ab36a2a73b2406871c
+      checksum:                              e32d4e1343b7babddd2d07a8741f24eb156a856df4bdd368c24c1064a74a1960
 
     - name:                                  "Attribute Change Package 39 for UIHR002 100"
       archive:                               UIHR002100.SAR
