@@ -1,15 +1,8 @@
 ---
-name:                                        'HANA_2_00_SPS07_latest'
+name:                                        'HANA_2_00_079_v0003ms'
 target:                                      'HANA 2.0'
-version:                                     SPS07
-platform:                                    HANA
-minimumRedHatVersion:                        [8.4]
-minimumSLESVersion:                          [15.3]
-code:                                        HDB
-
-patch_information:
-  placeholder:                               'This section is for patch information. Please update it with the latest patch details.'
-
+version:                                     1
+platform:                                    'HANA'
 materials:
 
   media:
@@ -58,6 +51,14 @@ materials:
       creates:                               COMPONENTS/SAP_HANA_LCAPPS/packages
       url:                                   https://softwaredownloads.sap.com/file/0025000000137142026
 
+    - name:                                  "VCH AFL 2022 Rev 79.900 only for HANA 2.0 Rev 79.09"
+      archive:                               VCH202200_2079P_900-80007053.SAR
+      checksum:                              e03e1ee4769b539817239ec137268b231f94649f809a40a9611f58c9388b8a1d
+      extract:                               true
+      extractDir:                            CD_HDBSERVER/COMPONENTS
+      creates:                               COMPONENTS/VCH_AFL_2022/packages
+      url:                                   https://softwaredownloads.sap.com/file/0025000000137202026
+
     - name:                                  "VCH AFL 2021 Rev 79.900 only for HANA 2.0 Rev 79.09"
       archive:                               VCH202100_2079P_900-70006349.SAR
       checksum:                              4a81ca07c834a6a180b7c7bb8e756bcf462aa03714d9d526a5a8aad87c13b267
@@ -66,10 +67,15 @@ materials:
       creates:                               COMPONENTS/VCH_AFL_2021/packages
       url:                                   https://softwaredownloads.sap.com/file/0025000000137112026
 
-    - name:                                 "SAP HOST AGENT 7.22 SP69 ; OS: Linux on x86_64 64bit"
-      archive:                              SAPHOSTAGENT69_69-80004822.SAR
-      url:                                  https://softwaredownloads.sap.com/file/0025000000056272025
-      download:                             True
-      path:                                 download_basket
+    - name:                                  "SAP HOST AGENT 7.22 SP66"
+      archive:                               SAPHOSTAGENT66_66-80004822.SAR
+      checksum:                              b722469aaa23247055214f42d0bb49c8506ed8faac177a5b1a48087e4cb6d8e0
+      path:                                  download_basket
+      url:                                   https://softwaredownloads.sap.com/file/0020000001380962024
+
+    - name:                                  "SAPHostAgent RPM Package"
+      archive:                               saphostagentrpm_66-80004822.rpm
+      checksum:                              88129159e18b3e35aa89a8071fb61ddc6afa41b86216bb010a8808a8270eb96a
+      url:                                   https://softwaredownloads.sap.com/file/0020000001299882024
 
 ...
