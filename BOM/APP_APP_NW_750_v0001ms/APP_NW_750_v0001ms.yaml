@@ -21,7 +21,7 @@ product_ids:
 
 materials:
   dependencies:
-    - name:                                  SWPM10SP46_latest
+    - name:                                  SWPM10SP45_latest
     - name:                                  SUM11S530_latest
 
   media:
