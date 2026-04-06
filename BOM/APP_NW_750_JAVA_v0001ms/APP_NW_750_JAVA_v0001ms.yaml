@@ -28,6 +28,14 @@ materials:
     - name:                                  SUM11SP50_latest
 
   media:
+
+    - name:                                  "SAPCAR 7.53; OS: Linux on x86_64 64bit"
+      archive:                               SAPCAR_1400-70007716.EXE
+      checksum:                              32fe4adb98c5f9238b6237fc06edc2603648295dd3d35f6b6d1fad1cbc9f24c8
+      filename:                              SAPCAR
+      permissions:                           '0755'
+      url:                                   https://softwaredownloads.sap.com/file/0020000000488622025
+
     # DB Export
     - name:                                  "NW 7.5 JAVA Installation Export"
       archive:                               51055106.ZIP
