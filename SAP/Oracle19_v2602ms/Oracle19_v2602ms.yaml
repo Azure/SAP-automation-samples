@@ -164,6 +164,19 @@ materials:
       extractDir:                            SBP
       creates:                               SAP/19cinstall.sh
 
+    - name:                                  "Oracle - Database Release Update 19.30.0.0.260120"
+      archive:                               GIRU19P_2602-70004508.ZIP
+      checksum:                              69073f66b55264d8dcec5aa3b1f7d9047644751d5e0588b5afeba26baa76d041
+      extract:                               true
+      download:                              true
+      extractDir:                            SBP/GIRU19P
+      path:                                  SBP
+      creates:                               SIGNATURE.SMF
+      url:                                   https://softwaredownloads.sap.com/file/0025000000062492026
+
+# Oracle ASM GRID Patches
+# GRID SBP Patches are downloaded based on SAP Note 2799920 - Patches 19c: Database
+
     - name:                                  "Oracle ASM Library OEL8"
       archive:                               oracleasmlib-3.0.0-13.el8.x86_64.rpm
       extract:                               false
@@ -207,31 +220,6 @@ materials:
       # repourl:                               https://yum.oracle.com/repo/OracleLinux/OL9/addons/x86_64
       distributions:                         [oraclelinux9, redhat9]
       platform:                              ORACLE-ASM
-
-    - name:                                  "Oracle - Database Release Update 19.30.0.0.260120"
-      archive:                               GIRU19P_2602-70004508.ZIP
-      checksum:                              69073f66b55264d8dcec5aa3b1f7d9047644751d5e0588b5afeba26baa76d041
-      extract:                               true
-      download:                              true
-      extractDir:                            SBP/GIRU19P
-      path:                                  SBP
-      creates:                               SIGNATURE.SMF
-      url:                                   https://softwaredownloads.sap.com/file/0025000000062492026
-      platform:                              ORACLE-ASM
-
-    - name:                                  "Oracle - Database Release Update 19.30.0.0.260120"
-      archive:                               GIRU19P_2602-70004508.ZIP
-      checksum:                              69073f66b55264d8dcec5aa3b1f7d9047644751d5e0588b5afeba26baa76d041
-      extract:                               true
-      download:                              true
-      extractDir:                            SBP/GIRU19P
-      path:                                  SBP
-      creates:                               SIGNATURE.SMF
-      url:                                   https://softwaredownloads.sap.com/file/0025000000062492026
-      platform:                              ORACLE
-
-# Oracle ASM GRID Patches
-# GRID SBP Patches are downloaded based on SAP Note 2799920 - Patches 19c: Database
 
 
     - name:                                  "Oracle - SBP 19.30.0.0.260120 - 202602 for Grid Infrastructure"
