@@ -163,6 +163,32 @@ materials:
       path:                                  SAP
       creates:                               SAP/19cinstall.sh
 
+    - name:                                  "Oracle - Grid Infrastructure Release Update 19.29.0.0.251021"
+      archive:                               GIRU19P_2511-70004550.ZIP
+      checksum:                              6869d633e4ba0780ffe30684c6ebcdc2e7db52ff16b431c7076594eb08def719
+      extract:                               true
+      download:                              true
+      extractDir:                            SBP/GIRU19P
+      path:                                  SBP
+      creates:                               SIGNATURE.SMF
+      url:                                   https://softwaredownloads.sap.com/file/0025000000133222025
+
+
+# Oracle ASM GRID Patches
+# GRID SBP Patches are downloaded based on SAP Note 2799920 - Patches 19c: Database
+# Updated to 2405 on August 1, 2024 -- Grid Infrastructure Release Update 19.23.0.0.240416
+
+    - name:                                  "Oracle - SBP 19.29.0.0.251021 - 202511 for Grid Infrastructure"
+      archive:                               SGR19P_2511-70004550.ZIP
+      checksum:                              4c01f3daaa94f029767f1625edd1a524dd9904d1a5f920acb94f5cf51a54474f
+      extract:                               true
+      download:                              true
+      extractDir:                            SBP/SGR19P
+      path:                                  SBP
+      creates:                               SIGNATURE.SMF
+      url:                                   https://softwaredownloads.sap.com/file/0025000000132632025
+      platform:                              ORACLE-ASM"
+
     - name:                                  "Oracle ASM Library OEL8"
       archive:                               oracleasmlib-3.0.0-13.el8.x86_64.rpm
       extract:                               false
@@ -205,34 +231,4 @@ materials:
       url:                                   https://yum.oracle.com/repo/OracleLinux/OL9/addons/x86_64/getPackage/oracleasm-support-3.1.1-4.el9.x86_64.rpm
       # repourl:                               https://yum.oracle.com/repo/OracleLinux/OL9/addons/x86_64
       distributions:                         [oraclelinux9, redhat9]
-      platform:                              ORACLE-ASM"
-
-
-
-
-# Oracle ASM GRID Patches
-# GRID SBP Patches are downloaded based on SAP Note 2799920 - Patches 19c: Database
-# Updated to 2405 on August 1, 2024 -- Grid Infrastructure Release Update 19.23.0.0.240416
-
-    - name:                                  "Oracle - Grid Infrastructure Release Update 19.29.0.0.251021"
-      archive:                               GIRU19P_2511-70004550.ZIP
-      checksum:                              6869d633e4ba0780ffe30684c6ebcdc2e7db52ff16b431c7076594eb08def719
-      extract:                               true
-      download:                              true
-      extractDir:                            SBP/GIRU19P
-      path:                                  SBP
-      creates:                               SIGNATURE.SMF
-      url:                                   https://softwaredownloads.sap.com/file/0025000000133222025
-      platform:                              ORACLE-ASM"
-
-
-    - name:                                  "Oracle - SBP 19.29.0.0.251021 - 202511 for Grid Infrastructure"
-      archive:                               SGR19P_2511-70004550.ZIP
-      checksum:                              4c01f3daaa94f029767f1625edd1a524dd9904d1a5f920acb94f5cf51a54474f
-      extract:                               true
-      download:                              true
-      extractDir:                            SBP/SGR19P
-      path:                                  SBP
-      creates:                               SIGNATURE.SMF
-      url:                                   https://softwaredownloads.sap.com/file/0025000000132632025
       platform:                              ORACLE-ASM"
