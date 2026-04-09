@@ -163,6 +163,7 @@ materials:
       download:                              true
       extractDir:                            SBP
       creates:                               SAP/19cinstall.sh
+      url:                                   https://raw.githubusercontent.com/Azure/SAP-automation-samples/refs/heads/main/SAP/Oracle19_v2602ms/19cinstall-19-031-202407021105.zip
 
     - name:                                  "Oracle - Database Release Update 19.30.0.0.260120"
       archive:                               GIRU19P_2602-70004508.ZIP
