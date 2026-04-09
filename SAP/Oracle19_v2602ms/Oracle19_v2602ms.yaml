@@ -163,6 +163,7 @@ materials:
       download:                              true
       extractDir:                            SBP
       creates:                               SAP/19cinstall.sh
+      url:                                   https://raw.githubusercontent.com/Azure/SAP-automation-samples/refs/heads/main/SAP/Oracle19_v2602ms/19cinstall-19-031-202407021105.zip
 
     - name:                                  "Oracle ASM Library OEL8"
       archive:                               oracleasmlib-3.0.0-13.el8.x86_64.rpm
