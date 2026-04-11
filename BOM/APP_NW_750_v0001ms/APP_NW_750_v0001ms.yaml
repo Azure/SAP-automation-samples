@@ -5,6 +5,8 @@
 name:                                        NW750SPS20_v0008ms
 target:                                      NETWEAVER 7.50 SPS 20
 version:                                     006
+supportedPlatforms:                          ['HANA', 'ORACLE', 'ORACLE-ASM', 'SYBASE', 'DB2']
+supportedKernels:                            ['753','754','789', '793', '916']
 
 product_ids:
   dbl:                                       NW_ABAP_DB:NW750.HDB.ABAP
@@ -21,7 +23,7 @@ product_ids:
 
 materials:
   dependencies:
-    - name:                                  SWPM10SP45_latest
+    - name:                                  SWPM10SP46_latest
     - name:                                  SUM11S530_latest
 
   media:

@@ -35,7 +35,7 @@ materials:
       checksum:                              3cc55c9c6abb7d8f4318ca5640218f136c82fdac47add1dd79d92907a976bb2c
       path:                                  download_basket
       url:                                   https://softwaredownloads.sap.com/file/0020000000815442025
-      platform:                              'ASE'
+      platform:                              'SYBASE'
 
     - name:                                  "Kernel Part II (754) ; DB: ORACLE database; Patch Level 600; OS: Linux on x86_64 64bit"
       archive:                               SAPEXEDB_600-80007644.SAR

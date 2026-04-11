@@ -4,7 +4,6 @@ filename:                                    "Oracle19_v2602ms.yaml"
 target:                                      'Oracle 19'
 version:                                     2602
 platform:                                    "ORACLE"
-InstanceType:                                "ABAP"
 code:                                        ORA
 
 # New 2602 SBP Patch included in this version
@@ -77,7 +76,7 @@ materials:
     - name:                                  "Oracle libbpf rpm package EL8"
       archive:                               libbpf-0.6.0-6.el8.x86_64.rpm
       extract:                               False
-      checksum:                              347b92549e21d08469431afce06b48ca371f0d2d29c84570076230b8453efc91
+      checksum:                              ad42655f128e1613a0fd8cb2cc50488e718d9a8b15008dc1a1ba88c3f601ff05
       extractDir:                            RPM
       download:                              true
       path:                                  RPM

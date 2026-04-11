@@ -1,8 +1,9 @@
 ---
-name:                                        "SYBASE_1603SP14_v0001ms"
+name:                                        "DB_SYBASE_1603SP15_v0001ms"
 target:                                      "Sybase 1603 SP14"
 platform:                                    "SYBASE"
 version:                                     1
+code:                                        ASE
 
 materials:
 
@@ -17,7 +18,5 @@ materials:
       path:                                  download_basket
       creates:                               CDLABEL.ASC
       url:                                   https://softwaredownloads.sap.com/file/0030000000864742024
-      
-
 
 ...

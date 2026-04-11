@@ -1,10 +1,12 @@
 ---
 
-name:                                        "NW750SPS25_JAVA_v0002ms"
-target:                                      "NETWEAVER 7.50 JAVA SPS 25"
-version:                                     0002
+name:                                        "APP_NW_750_JAVA_v0001ms"
+target:                                      "NETWEAVER 7.50 JAVA"
+version:                                     0001
 InstanceType:                                "JAVA"
-platform:                                    "HANA"
+
+supportedPlatforms:                          ['HANA', 'ORACLE', 'ORACLE-ASM', 'SYBASE', 'DB2']
+supportedKernels:                            ['753','754','789', '793', '916']
 
 defaults:
   target_location:                           "{{ target_media_location }}/download_basket"
@@ -56,19 +58,6 @@ materials:
       archive:                               SAPHOSTAGENT58_58-80004822.SAR
       checksum:                              b14fc73f3ebc01eebf192033577d64c3e3a0259d10fb010b74708940ff04f29b
       url:                                   https://softwaredownloads.sap.com/file/0020000001370172022
-      path:                                  download_basket
-
-    # IGS
-    - name:                                  "Installation for SAP IGS integrated in SAP Kernel"
-      archive:                               igsexe_13-80003187.sar
-      checksum:                              b508b1ff97ec0e3b7f4dd8f57e3840eb547b6326434df677927b8cfd6b4faa12
-      url:                                   https://softwaredownloads.sap.com/file/0020000000534572021
-      path:                                  download_basket
-
-    - name:                                  "SAP IGS Fonts and Textures"
-      archive:                               igshelper_17-10010245.sar
-      checksum:                              bc405afc4f8221aa1a10a8bc448f8afd9e4e00111100c5544097240c57c99732
-      url:                                   https://softwaredownloads.sap.com/file/0020000000703122018
       path:                                  download_basket
 
     # Other files
