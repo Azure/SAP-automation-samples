@@ -18,7 +18,10 @@ patch_information:
   SBP_JDKRU:                                 38586770
   ora_release:                               19
   ora_version:                               19.0.0
+  MOPatch:                                   2.13
+  OPatch:                                    12.2.0.1.48
   oracle_sbp_patch:                          SAP19P_2602-70004508.ZIP
+  oracle_grid_sbp_patch:                     SGR19P_2602-70004550.ZIP
 
 
 materials:
@@ -162,6 +165,7 @@ materials:
       download:                              true
       extractDir:                            SBP
       creates:                               SAP/19cinstall.sh
+      url:                                   https://raw.githubusercontent.com/Azure/SAP-automation-samples/refs/heads/main/SAP/Oracle19_v2602ms/19cinstall-19-031-202407021105.zip
 
     - name:                                  "Oracle ASM Library OEL8"
       archive:                               oracleasmlib-3.0.0-13.el8.x86_64.rpm
@@ -216,18 +220,6 @@ materials:
       path:                                  SBP
       creates:                               SIGNATURE.SMF
       url:                                   https://softwaredownloads.sap.com/file/0025000000062492026
-      platform:                              ORACLE-ASM
-
-    - name:                                  "Oracle - Database Release Update 19.30.0.0.260120"
-      archive:                               GIRU19P_2602-70004508.ZIP
-      checksum:                              69073f66b55264d8dcec5aa3b1f7d9047644751d5e0588b5afeba26baa76d041
-      extract:                               true
-      download:                              true
-      extractDir:                            SBP/GIRU19P
-      path:                                  SBP
-      creates:                               SIGNATURE.SMF
-      url:                                   https://softwaredownloads.sap.com/file/0025000000062492026
-      platform:                              ORACLE
 
 # Oracle ASM GRID Patches
 # GRID SBP Patches are downloaded based on SAP Note 2799920 - Patches 19c: Database
