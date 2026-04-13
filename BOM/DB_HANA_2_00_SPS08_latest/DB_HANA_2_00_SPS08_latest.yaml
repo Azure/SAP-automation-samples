@@ -65,10 +65,10 @@ materials:
       creates:                               COMPONENTS/VCH_AFL_2021/packages
       url:                                   https://softwaredownloads.sap.com/file/0025000000154132026
 
-    - name:                                 "SAP HOST AGENT 7.22 SP69 ; OS: Linux on x86_64 64bit"
-      archive:                              SAPHOSTAGENT69_69-80004822.SAR
-      url:                                  https://softwaredownloads.sap.com/file/0025000000056272025
-      download:                             True
-      path:                                 download_basket
+    - name:                                  "SAP HOST AGENT 7.22 SP69 ; OS: Linux on x86_64 64bit"
+      archive:                               SAPHOSTAGENT69_69-80004822.SAR
+      url:                                   https://softwaredownloads.sap.com/file/0025000000056272025
+      download:                              True
+      path:                                  download_basket
 
 ...
