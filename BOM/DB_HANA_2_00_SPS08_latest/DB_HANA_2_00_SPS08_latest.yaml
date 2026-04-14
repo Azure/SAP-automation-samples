@@ -41,7 +41,7 @@ materials:
       path:                                  download_basket
       url:                                   https://softwaredownloads.sap.com/file/0025000000154312026
 
-    - name:                                  "SAP HANA AFL Rev 89.200 only for HANA 2.0 Rev 89.01"
+    - name:                                  "SAP HANA AFL Rev 89.200 only for HANA 2.0 Rev 89.02"
       archive:                               IMDB_AFL20_089P_200-80001894.SAR
       checksum:                              e743fae53d225418ceb58249c684369dab88070c5f890fcbd0e38039140272a3
       extract:                               true
@@ -49,7 +49,7 @@ materials:
       creates:                               COMPONENTS/SAP_HANA_AFL/packages
       url:                                   https://softwaredownloads.sap.com/file/0025000000154022026
 
-    - name:                                  "LCAPPS for HANA 2.0 Rev 89.02 Build 101.24 PL 003"
+    - name:                                  "LCAPPS for HANA 2.0 Rev 89.02 Build 101.24 PL 009"
       archive:                               IMDB_LCAPPS_2089P_200-20010426.SAR
       checksum:                              d96d66660227251269d486407a7504743c2d8ab4f3fe978d37aeef4a7f894c33
       extract:                               true
