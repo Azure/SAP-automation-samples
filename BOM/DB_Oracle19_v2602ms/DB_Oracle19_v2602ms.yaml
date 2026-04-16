@@ -168,7 +168,7 @@ materials:
       url:                                   https://raw.githubusercontent.com/Azure/SAP-automation-samples/refs/heads/main/SAP/Oracle19_v2602ms/19cinstall-19-031-202407021105.zip
 
     - name:                                  "Oracle ASM Library OEL8"
-      archive:                               oracleasmlib-3.0.0-13.el8.x86_64.rpm
+      archive:                               oracleasmlib-3.1.1-1.el8.x86_64.rpm
       extract:                               false
       extractDir:                            RPM
       download:                              true
@@ -184,7 +184,7 @@ materials:
       download:                              true
       path:                                  RPM
       type:                                  rpm
-      url:                                   https://yum.oracle.com/repo/OracleLinux/OL8/addons/x86_64/getPackage/oracleasm-support-3.0.0-6.el8.x86_64.rpm
+      url:                                   https://yum.oracle.com/repo/OracleLinux/OL8/addons/x86_64/getPackage/oracleasm-support-3.1.1-4.el8.x86_64.rpm
       # repourl:                               https://yum.oracle.com/repo/OracleLinux/OL8/addons/x86_64
       distributions:                         [oraclelinux8, redhat8]
       platform:                              ORACLE-ASM
@@ -206,7 +206,7 @@ materials:
       download:                              true
       path:                                  RPM
       type:                                  rpm
-      url:                                   https://yum.oracle.com/repo/OracleLinux/OL9/addons/x86_64/getPackage/oracleasm-support-3.1.1-4.el9.x86_64.rpm
+      url:                                   https://yum.oracle.com/repo/OracleLinux/OL9/addons/x86_64/getPackage/oracleasm-support-3.1.1-5.el9.x86_64.rpm
       # repourl:                               https://yum.oracle.com/repo/OracleLinux/OL9/addons/x86_64
       distributions:                         [oraclelinux9, redhat9]
       platform:                              ORACLE-ASM
