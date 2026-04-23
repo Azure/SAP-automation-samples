@@ -24,14 +24,14 @@ materials:
 
     # HANA Client v2.28
     - name:                                  "SAP HANA CLIENT Version 2.28; OS: Linux on x86_64 64bit"
-      archive:                               IMDB_CLIENT20_028_19-80002082.SAR
-      checksum:                              2f11ad3a48b5c7f482828796357402fa36127d34d5d82ea80519b3c9048a0603
+      archive:                               IMDB_CLIENT20_028_20-80002082.SAR
+      checksum:                              d9ba5f3b0d66671cbc16429b3ad2390da8300de54886f9e0f9de47ace750ad2d
       extract:                               true
       extractDir:                            CD_HDBCLIENT
       creates:                               SIGNATURE.SMF
       path:                                  download_basket
-      url:                                   https://softwaredownloads.sap.com/file/0025000000128362026
-
+      url:                                   https://softwaredownloads.sap.com/file/0020000000230782026
+      
     - name:                                  "Revision 2.00.089.2 (SPS08) for HANA DB 2.0"
       archive:                               IMDB_SERVER20_089_2-80002031.SAR
       checksum:                              923fe77857539400801e920acd9369ee3c1540773fee1ad750ee06300781a2aa
