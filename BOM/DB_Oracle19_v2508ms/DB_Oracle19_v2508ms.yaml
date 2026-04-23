@@ -1,24 +1,20 @@
 ---
-name:                                        'Oracle19_v2511ms'
-filename:                                    "Oracle19_v2511ms.yaml"
+name:                                        'Oracle19_v2580ms'
+filename:                                    "Oracle19_v2580ms.yaml"
 target:                                      'Oracle 19'
-version:                                     2511
+version:                                     2580
 platform:                                    "ORACLE"
 InstanceType:                                "ABAP"
-code:                                        ORA
 
 # New 2408 SBP Patch included in this version
 # 11/13/2024
 
-# Oracle client software download updated 12/11/2025
-patch_information:
-  SBP_DBRU:                                  38291812
-  SBP_OCWRU:                                 38322923
-  SBP_ACFSRU:                                38311528
-  SBP_JDKRU:                                 38245243
-  ora_release:                               19
-  ora_version:                               19.0.0
-  oracle_sbp_patch:                          SAP19P_2511-70004508.ZIP
+# Oracle client software download updated 10/01/2025
+patch:
+  SBP_DBRU:                                  37960098
+  SBP_OCWRU:                                 37962946
+  SBP_ACFSRU:                                37962938
+  SBP_JDKRU:                                 37860476
 
 
 materials:
@@ -33,6 +29,7 @@ materials:
       download:                              true
       url:                                   https://softwaredownloads.sap.com/file/0030000000188162024
 
+
     - name:                                  Oracle Software Server
       archive:                               51053828.ZIP
       checksum:                              a12e10404572813ce78862c34ce3d1288b67ebbffa12fbd6fe758a6743773154
@@ -46,35 +43,35 @@ materials:
 
 # SBP Patches are downloaded based on SAP Note 2799920 - Patches 19c: Database
 
-    - name:                                  "Oracle - SAP Bundle Patch 19.29.0.0.251021 - 2025118"
-      archive:                               SAP19P_2511-70004508.ZIP
-      checksum:                              0448dd140d97a24ec7b31cacc6fbdb2162f2e698dfdd81f05a2b46c23d0dc2b8
+    - name:                                  "Oracle - SAP Bundle Patch 19.28.0.0.250715 - 202508"
+      archive:                               SAP19P_2508-70004508.ZIP
+      checksum:                              673857457e8af278be6b1e94afe13736b5bc91fa4975fc90e6c26a41298826a2
       extract:                               true
       extractDir:                            SBP/SAPSBP
       path:                                  SBP
       creates:                               SIGNATURE.SMF
-      url:                                   https://softwaredownloads.sap.com/file/0025000000131412025
+      url:                                   https://softwaredownloads.sap.com/file/0020000000865322025
 
-    - name:                                  "Oracle - JDK Bundle Patch 19.0.0.0.251021"
-      archive:                               SBPJDK19P_2511-70004550.ZIP
-      checksum:                              3438f9aaf32fcb6e3fda26e14632af89aeca39ccee50207d7033e7b375e2adad
+    - name:                                  "Oracle - JDK Bundle Patch 19.0.0.0.250715"
+      archive:                               SBPJDK19P_2508-70004550.ZIP
+      checksum:                              22e5c7ba1783e339ed023cbc49bd5497deae24b41eb4348c5d8a8c30111d0b9e
       extract:                               true
       extractDir:                            SBP/SBPJDK
       path:                                  SBP
       creates:                               SIGNATURE.SMF
-      url:                                   https://softwaredownloads.sap.com/file/0025000000131972025
+      url:                                   https://softwaredownloads.sap.com/file/0020000000871192025
 
-    - name:                                  "Oracle - Bundle patches for 19c: OPatch 12.2.0.1.47"
-      archive:                               OPATCH19P_2511-70004550.ZIP
-      checksum:                              a183c5ae21541503590028902f18425a5543e862e20e26d57f9fb7265d4f12ec
+    - name:                                  "Oracle - Bundle patches for 19c: OPatch 12.2.0.1.46"
+      archive:                               OPATCH19P_2508-70004550.ZIP
+      checksum:                              0eafef27aebb763f344baed62a558b04c43cd28692cea5e54b0c3476f0dab809
       extract:                               true
       extractDir:                            SBP/OPATCH
       path:                                  SBP
       creates:                               SIGNATURE.SMF
-      url:                                   https://softwaredownloads.sap.com/file/0025000000132682025
+      url:                                   https://softwaredownloads.sap.com/file/0020000000873012025
 
     - name:                                  "Oracle libbpf rpm package EL8"
-      archive:                               libbpf-0.6.0-6.el8.x86_64.rpm
+      archive:                               libbpf-0.5.0-1.el8.x86_64.rpm
       extract:                               False
       checksum:                              ad42655f128e1613a0fd8cb2cc50488e718d9a8b15008dc1a1ba88c3f601ff05
       extractDir:                            RPM
@@ -82,7 +79,7 @@ materials:
       path:                                  RPM
       type:                                  rpm
       url:                                   https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackage/libbpf-0.5.0-1.el8.x86_64.rpm
-      repourl:                               https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64
+#      repourl:                               https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64
       distributions:                         [oraclelinux8]
 
     - name:                                  "Oracle libbpf rpm package EL9"
@@ -94,7 +91,7 @@ materials:
       path:                                  RPM
       type:                                  rpm
       url:                                   https://yum.oracle.com/repo/OracleLinux/OL9/baseos/latest/x86_64/getPackage/libbpf-1.5.0-1.el9.x86_64.rpm
-      repourl:                               https://yum.oracle.com/repo/OracleLinux/OL9/baseos/latest/x86_64
+#      repourl:                               https://yum.oracle.com/repo/OracleLinux/OL9/baseos/latest/x86_64
       distributions:                         [oraclelinux9]
 
     - name:                                  "Oraclecompact-lib"
@@ -132,6 +129,17 @@ materials:
 #      repourl:                               https://repo.almalinux.org/almalinux/8/SAP/x86_64/os
       distributions:                         [oraclelinux7, redhat7]
 
+    - name:                                  "compat-sap-c++-10"
+      archive:                               compat-sap-c++-10-10.2.1-1.2.el8_9.x86_64.rpm
+      extract:                               False
+      extractDir:                            RPM
+      download:                              true
+      path:                                  RPM
+      type:                                  rpm
+      url:                                   https://repo.almalinux.org/almalinux/8/SAP/x86_64/os/Packages/compat-sap-c++-10-10.2.1-1.2.el8_9.x86_64.rpm
+#      repourl:                               https://repo.almalinux.org/almalinux/8/SAP/x86_64/os
+      distributions:                         [oraclelinux8, redhat8]
+
     - name:                                  "compat-sap-c++-12"
       archive:                               compat-sap-c++-12-12.1.1-1.2.el8_9.x86_64.rpm
       extract:                               False
@@ -151,42 +159,43 @@ materials:
       path:                                  RPM
       type:                                  rpm
       url:                                   https://repo.almalinux.org/almalinux/9/SAPHANA/x86_64/os/Packages/compat-sap-c++-13-13.2.1-6.3.2.el9_4.x86_64.rpm
-#      repourl:                               https://repo.almalinux.org/almalinux/9/SAPHANA/x86_64/os
+ #     repourl:                               https://repo.almalinux.org/almalinux/9/SAPHANA/x86_64/os
       distributions:                         [oraclelinux9, redhat9]
 
 # Download the zip file from: https://me.sap.com/notes/2660017 - Oracle 19c Installation Guide for SAP Systems
-
     - name:                                  "Updated RUNINSTALLER for Oracle 19c"
       archive:                               19cinstall-19-031-202407021105.zip
       extract:                               true
       download:                              true
       path:                                  SAP
+      extractDir:                            SAP
       creates:                               SAP/19cinstall.sh
-
-    - name:                                  "Oracle - Grid Infrastructure Release Update 19.29.0.0.251021"
-      archive:                               GIRU19P_2511-70004550.ZIP
-      checksum:                              6869d633e4ba0780ffe30684c6ebcdc2e7db52ff16b431c7076594eb08def719
-      extract:                               true
-      download:                              true
-      extractDir:                            SBP/GIRU19P
-      path:                                  SBP
-      creates:                               SIGNATURE.SMF
-      url:                                   https://softwaredownloads.sap.com/file/0025000000133222025
+      url:                                   https://raw.githubusercontent.com/Azure/SAP-automation-samples/refs/heads/main/SAP/Oracle19_v2602ms/19cinstall-19-031-202407021105.zip
 
 
 # Oracle ASM GRID Patches
 # GRID SBP Patches are downloaded based on SAP Note 2799920 - Patches 19c: Database
 # Updated to 2405 on August 1, 2024 -- Grid Infrastructure Release Update 19.23.0.0.240416
+    - name:                                  "Oracle - Database Release Update 19.28.0.0.250715"
+      archive:                               GIRU19P_2508-70004550.ZIP
+      checksum:                              ad657b977a879226286b669f9d2093f63f28589850697f85cf7bea42789c5743
+      extract:                               true
+      download:                              true
+      extractDir:                            SBP/GIRU19P
+      path:                                  SBP
+      creates:                               SIGNATURE.SMF
+      url:                                   https://softwaredownloads.sap.com/file/0020000000874732025
 
-    - name:                                  "Oracle - SBP 19.29.0.0.251021 - 202511 for Grid Infrastructure"
-      archive:                               SGR19P_2511-70004550.ZIP
-      checksum:                              4c01f3daaa94f029767f1625edd1a524dd9904d1a5f920acb94f5cf51a54474f
+
+    - name:                                  "Oracle - SBP 19.28.0.0.250715 - 202508 for Grid Infrastructure"
+      archive:                               SGR19P_2508-70004550.ZIP
+      checksum:                              49d1f3afde568e90a40efcf2147d96cbaa5b39b0f0e3c615b0b3c4608584face
       extract:                               true
       download:                              true
       extractDir:                            SBP/SGR19P
       path:                                  SBP
       creates:                               SIGNATURE.SMF
-      url:                                   https://softwaredownloads.sap.com/file/0025000000132632025
+      url:                                   https://softwaredownloads.sap.com/file/0020000000873072025
       platform:                              ORACLE-ASM"
 
     - name:                                  "Oracle ASM Library OEL8"
@@ -232,3 +241,4 @@ materials:
       # repourl:                               https://yum.oracle.com/repo/OracleLinux/OL9/addons/x86_64
       distributions:                         [oraclelinux9, redhat9]
       platform:                              ORACLE-ASM"
+

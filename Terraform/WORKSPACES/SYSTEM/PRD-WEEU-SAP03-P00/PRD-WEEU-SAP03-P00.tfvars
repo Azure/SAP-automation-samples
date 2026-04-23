@@ -432,7 +432,7 @@ patch_assessment_mode = "ImageDefault"
 #########################################################################################
 
 # scs_cluster_type defines cluster quorum type; AFA (Azure Fencing Agent), ASD (Azure Shared Disk), ISCSI
-scs_cluster_type = "AFA"
+scs_cluster_type = "ISCSI"
 
 #scs_cluster_disk_lun defines the LUN number for the SAP Central Services cluster disk
 scs_cluster_disk_lun = 5
@@ -444,7 +444,7 @@ scs_cluster_disk_size = 128
 scs_cluster_disk_type = "Premium_ZRS"
 
 # database_cluster_type defines cluster quorum type; AFA (Azure Fencing Agent), ASD (Azure Shared Disk), ISCSI
-database_cluster_type = "AFA"
+database_cluster_type = "ISCSI"
 
 #database_cluster_disk_lun defines the LUN number for the database cluster disk
 database_cluster_disk_lun = 8
@@ -494,6 +494,9 @@ NFS_provider = "ANF"
 # sapmnt_volume_size defines the size of the sapmnt volume in GB
 sapmnt_volume_size = 512
 
+# use_AFS_for_shared_storage defines if shared media is on AFS even when using ANF for data
+use_AFS_for_shared_storage = true
+
 # azure_files_sapmnt_id defines the Resource identifier for Azure Files for NFS storage account for sapmnt
 #azure_files_sapmnt_id = ""
 
@@ -523,7 +526,7 @@ ANF_HANA_use_Zones = true
 #########################################################################################
 
 # ANF_HANA_data, if defined, will create Azure NetApp Files volume(s) for HANA data.
-#ANF_HANA_data = false
+ANF_HANA_data = true
 
 # ANF_HANA_data_volume_size, if defined, provides the size of the HANA data volume(s).
 #ANF_HANA_data_volume_size = 0
@@ -548,7 +551,7 @@ ANF_HANA_data_volume_count = 1
 #########################################################################################
 
 # ANF_HANA_log, if defined, will create Azure NetApp Files volume(s) for HANA log.
-#ANF_HANA_log = false
+ANF_HANA_log = true
 
 # ANF_HANA_log_volume_size, if defined, provides the size of the HANA log volume(s).
 #ANF_HANA_log_volume_size = 0
@@ -572,7 +575,7 @@ ANF_HANA_log_volume_count = 1
 #########################################################################################
 
 # ANF_HANA_shared, if defined, will create Azure NetApp Files volume(s) for HANA shared.
-#ANF_HANA_shared = false
+ANF_HANA_shared = false
 
 # ANF_HANA_shared_volume_size, if defined, provides the size of the HANA shared volume(s).
 #ANF_HANA_shared_volume_size = 0
@@ -594,7 +597,7 @@ ANF_HANA_log_volume_count = 1
 #########################################################################################
 
 # ANF_usr_sap, if defined, will create Azure NetApp Files volume /usr/sap
-#ANF_usr_sap = false
+ANF_usr_sap = false
 
 # ANF_usr_sap_volume_size, if defined, provides the size of the /usr/sap volume.
 #ANF_usr_sap_volume_size = 0
@@ -616,7 +619,7 @@ ANF_HANA_log_volume_count = 1
 #########################################################################################
 
 # ANF_sapmnt, if defined, will create Azure NetApp Files volume for /sapmnt
-#ANF_sapmnt = false
+ANF_sapmnt = false
 
 # ANF_sapmnt_volume_size, if defined, provides the size of the /sapmnt volume.
 #ANF_sapmnt_volume_size = 0
@@ -678,7 +681,7 @@ nsg_asg_with_vnet = false
 #resourcegroup_arm_id = ""
 
 # Prevent deletion of resource group if there are Resources left within the Resource Group during deletion
-prevent_deletion_if_contains_resources = true
+prevent_deletion_if_contains_resources = false
 
 
 #########################################################################################
