@@ -157,7 +157,11 @@ dns_label="azure.sdaf.weeu.contoso.net"
 #management_dns_resourcegroup_name = ""
 
 # use_private_endpoint is a boolean flag controlling if the keyvaults and storage accounts have private endpoints
-#use_private_endpoint=false
+#use_private_endpoint=true
+
+# enable_firewall_for_keyvaults_and_storage indicates if firewall should be enabled for key vaults and storage
+#enable_firewall_for_keyvaults_and_storage = true
+
 
 #name_override_file = "name-overrides.json"
 
@@ -239,9 +243,6 @@ dns_label="azure.sdaf.weeu.contoso.net"
 
 # privatelink_dns_resourcegroup_name gives the possibility to register custom PrivateLink DNS A records in a separate resourcegroup
 #privatelink_dns_resourcegroup_name = ""
-
-# enable_firewall_for_keyvaults_and_storage indicates if firewall should be enabled for key vaults and storage
-#enable_firewall_for_keyvaults_and_storage = true
 
 # register_storage_accounts_keyvaults_with_dns indicates if storage accounts and key vaults should be registered to the corresponding dns zones
 #register_storage_accounts_keyvaults_with_dns = true
