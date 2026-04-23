@@ -53,7 +53,7 @@ database_sid = "HDB"
 database_platform = "HANA"
 
 # Description of the SAP system.
-Description = "HANA distributed system on SUSE sles-sap-15-sp5 gen2"
+Description = "HANA distributed system on SUSE sles-sap-15-sp7 gen2"
 
 # codename provides an additional component for naming the resources
 #codename = ""
@@ -84,7 +84,7 @@ Description = "HANA distributed system on SUSE sles-sap-15-sp5 gen2"
 #disk_controller_type_app_tier = "SCSI"
 
 # use_secondary_ips controls if the virtual machines should be deployed with two IP addresses. Required for SAP Virtual Hostname support
-use_secondary_ips = true
+use_secondary_ips = false
 
 # subscription is the subscription in which the system will be deployed (informational only)
 #subscription = ""
@@ -191,7 +191,7 @@ database_vm_image = {
   os_type = "LINUX",
   source_image_id = "",
   publisher = "SUSE",
-  offer = "sles-sap-15-sp5",
+  offer = "sles-sap-15-sp7",
   sku = "gen2",
   version = "latest",
   type = "marketplace"
@@ -207,7 +207,7 @@ database_vm_zones = ["1"]
 #database_vm_avset_arm_ids = []
 
 # Optional, Defines the that the database virtual machines will not be placed in a proximity placement group
-database_use_ppg = true
+database_use_ppg = false
 
 #########################################################################################
 #                                                                                       #
@@ -285,7 +285,7 @@ scs_server_image = {
   os_type = "LINUX",
   source_image_id = "",
   publisher = "SUSE",
-  offer = "sles-sap-15-sp5",
+  offer = "sles-sap-15-sp7",
   sku = "gen2",
   version = "latest",
   type = "marketplace"
@@ -368,7 +368,7 @@ application_server_image = {
   os_type = "LINUX",
   source_image_id = "",
   publisher = "SUSE",
-  offer = "sles-sap-15-sp5",
+  offer = "sles-sap-15-sp7",
   sku = "gen2",
   version = "latest",
   type = "marketplace"
@@ -430,7 +430,7 @@ webdispatcher_server_image = {
   os_type = "LINUX",
   source_image_id = "",
   publisher = "SUSE",
-  offer = "sles-sap-15-sp5",
+  offer = "sles-sap-15-sp7",
   sku = "gen2",
   version = "latest",
   type = "marketplace"

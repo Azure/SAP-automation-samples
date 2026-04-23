@@ -20,7 +20,7 @@
 #########################################################################################
 # REQUIRED
 # subscription_id defines the Azure subscription_id
-subscription_id = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+#subscription_id = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
 
 # REQUIRED
 # The environment value is a mandatory field, it is used for partitioning the environments, for example (PROD and NP)
@@ -285,7 +285,7 @@ use_service_endpoint = true
 auto_configure_deployer = true
 
 # Boolean value indicating if firewall should be enabled for key vaults and storage
-enable_firewall_for_keyvaults_and_storage = false
+enable_firewall_for_keyvaults_and_storage = true
 
 # List of subnet IDs to add to storage account and key vault firewalls"
 #subnets_to_add_to_firewall_for_keyvaults_and_storage=["<azure_resource_id_for_subnet>"]
@@ -393,7 +393,7 @@ enable_firewall_for_keyvaults_and_storage = false
 #use_webapp = false
 
 # app_service_deployment indicates if a webapp should be deployed
-#app_service_deployment = false
+app_service_deployment = false
 
 # app_registration_app_id defines the app registration id to be used for the webapp
 #app_registration_app_id = ""
@@ -444,7 +444,7 @@ enable_firewall_for_keyvaults_and_storage = false
 #application_configuration_id = ""
 
 # If defined, will add the Azure Application configuration to the control plane
-#application_configuration_deployment = true
+application_configuration_deployment = false
 
 #########################################################################################
 #                                                                                       #

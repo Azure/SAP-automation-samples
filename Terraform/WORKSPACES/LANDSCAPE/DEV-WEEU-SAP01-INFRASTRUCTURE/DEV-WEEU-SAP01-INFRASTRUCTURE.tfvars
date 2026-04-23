@@ -480,7 +480,7 @@ storage_account_replication_type = "ZRS"
 shared_access_key_enabled = false
 
 # shared_access_key_enabled_nfs defines Storage account used for NFS shares authorization using Shared Access Key.
-shared_access_key_enabled_nfs = true
+shared_access_key_enabled_nfs = false
 
 # data_plane_available defines if storage account access is via data plane
 #data_plane_available = true
@@ -518,7 +518,7 @@ dns_label = "azure.sdaf.weeu.contoso.net"
 NFS_provider = "NFS"
 
 # use_AFS_for_shared_storage defines if shared media is on AFS even when using ANF for data
-use_AFS_for_shared_storage = false
+use_AFS_for_shared_storage = true
 
 #########################################################################################
 #                                                                                       #
