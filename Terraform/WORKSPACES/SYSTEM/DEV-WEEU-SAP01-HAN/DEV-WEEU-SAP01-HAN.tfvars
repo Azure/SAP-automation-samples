@@ -1,5 +1,18 @@
 #########################################################################################
 #                                                                                       #
+# This template defines a HANA only system on SLES 15 SP7                               #
+# with a single central services server, one database server and 2 application servers. #
+#                                                                                       #
+# SID is HANA                                                                           #
+#                                                                                       #
+# Storage is using premium disks                                                        #
+#                                                                                       #
+#########################################################################################
+
+
+
+#########################################################################################
+#                                                                                       #
 # Deployment topologies                                                                 #
 #                                                                                       #
 # Standard (All roles on same server)                                                   #
@@ -53,7 +66,7 @@ database_sid = "HDB"
 database_platform = "HANA"
 
 # Description of the SAP system.
-Description = "HANA distributed system on SUSE sles-sap-15-sp4 gen2"
+Description = "HANA only system on SUSE sles-sap-15-sp7 gen2"
 
 # codename provides an additional component for naming the resources
 #codename = ""
@@ -285,7 +298,7 @@ scs_server_image = {
   os_type = "LINUX",
   source_image_id = "",
   publisher = "SUSE",
-  offer = "sles-sap-15-sp4",
+  offer = "sles-sap-15-sp7",
   sku = "gen2",
   version = "latest",
   type = "marketplace"
@@ -368,7 +381,7 @@ application_server_image = {
   os_type = "LINUX",
   source_image_id = "",
   publisher = "SUSE",
-  offer = "sles-sap-15-sp4",
+  offer = "sles-sap-15-sp7",
   sku = "gen2",
   version = "latest",
   type = "marketplace"
@@ -430,7 +443,7 @@ webdispatcher_server_image = {
   os_type = "LINUX",
   source_image_id = "",
   publisher = "SUSE",
-  offer = "sles-sap-15-sp4",
+  offer = "sles-sap-15-sp7",
   sku = "gen2",
   version = "latest",
   type = "marketplace"

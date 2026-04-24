@@ -1,9 +1,9 @@
 #########################################################################################
 #                                                                                       #
-# This template defines a distributed ORACLE-ASM system on OL 86 and RedHat 86          #
+# This template defindes a distributed SYBASE system on RedHat 86                       #
 # with a single central services server, one database server and 2 application servers. #
 #                                                                                       #
-# SID is ORACLE                                                                         #
+# SID is ASE                                                                            #
 #                                                                                       #
 # Storage is using premium disks                                                        #
 #                                                                                       #
@@ -48,10 +48,10 @@ environment = "DEV"
 location = "westeurope"
 
 # The sid value is a mandatory field that defines the SAP Application SID
-sid = "ORA"
+sid = "ASE"
 
 # The database_sid defines the database SID
-database_sid = "ORA"
+database_sid = "ASE"
 
 # The database_platform defines the database backend, supported values are
 # - HANA
@@ -61,10 +61,10 @@ database_sid = "ORA"
 # - SYBASE
 # - SQLSERVER
 # - NONE (in this case no database tier is deployed)
-database_platform = "ORACLE-ASM"
+database_platform = "SYBASE"
 
 # Description of the SAP system.
-Description = "ORACLE-ASM distributed system on RedHat RHEL-SAP-HA 86sapha-gen2"
+Description = "SYBASE distributed system on RedHat RHEL-SAP-HA 86sapha-gen2"
 
 # codename provides an additional component for naming the resources
 #codename = ""
@@ -95,7 +95,7 @@ Description = "ORACLE-ASM distributed system on RedHat RHEL-SAP-HA 86sapha-gen2"
 #disk_controller_type_app_tier = "SCSI"
 
 # use_secondary_ips controls if the virtual machines should be deployed with two IP addresses. Required for SAP Virtual Hostname support
-use_secondary_ips = true
+use_secondary_ips = false
 
 # subscription is the subscription in which the system will be deployed (informational only)
 #subscription = ""
@@ -201,9 +201,9 @@ database_vm_use_DHCP = true
 database_vm_image = {
   os_type = "LINUX",
   source_image_id = "",
-  publisher = "Oracle",
-  offer = "Oracle-Linux",
-  sku = "ol86-lvm-gen2",
+  publisher = "SUSE",
+  offer = "sles-sap-15-sp7",
+  sku = "gen2",
   version = "latest",
   type = "marketplace"
 }
@@ -295,9 +295,9 @@ scs_server_zones = ["1"]
 scs_server_image = {
   os_type = "LINUX",
   source_image_id = "",
-  publisher = "RedHat",
-  offer = "RHEL-SAP-HA",
-  sku = "86sapha-gen2",
+  publisher = "SUSE",
+  offer = "sles-sap-15-sp7",
+  sku = "gen2",
   version = "latest",
   type = "marketplace"
 }
@@ -378,9 +378,9 @@ application_server_use_avset = true
 application_server_image = {
   os_type = "LINUX",
   source_image_id = "",
-  publisher = "Oracle",
-  offer = "Oracle-Linux",
-  sku = "ol86-lvm-gen2",
+  publisher = "SUSE",
+  offer = "sles-sap-15-sp7",
+  sku = "gen2",
   version = "latest",
   type = "marketplace"
 }
@@ -394,10 +394,10 @@ application_server_image = {
 ############################################################################################
 
 # webdispatcher_server_count defines how many web dispatchers to deploy
-webdispatcher_server_count = 0
+webdispatcher_server_count = 1
 
 # web_sid is the Web Dispatcher SID
-#web_sid = ""
+web_sid = "WSE"
 
 # web_instance_number defines the web instance number
 web_instance_number = "00"
@@ -437,7 +437,15 @@ webdispatcher_server_use_avset = true
 # The vm_image defines the Virtual machine image to use for the web dispatchers,
 # if source_image_id is specified the deployment will use the custom image provided,
 # in this case os_type must also be specified
-#webdispatcher_server_image = {}
+webdispatcher_server_image = {
+  os_type = "LINUX",
+  source_image_id = "",
+  publisher = "SUSE",
+  offer = "sles-sap-15-sp7",
+  sku = "gen2",
+  version = "latest",
+  type = "marketplace"
+}
 
 
 #########################################################################################
@@ -945,15 +953,12 @@ use_spn = false
 
 # bom_name is the name of the SAP Application Bill of Materials file
 
-#bom_name = ""
+#bom_name = "NW_ABAP_ASE_K753"
 
 # configuration_settings is a dictionary containing values that will be persisted in sap-parameters.yaml
-configuration_settings = {
-  "ora_release" = "19",
-  "ora_version" = "19.0.0",
-  "oracle_sbp_patch" = "SAP19P_2402-70004508.ZIP",
-  "oraclegrid_sbp_patch" = "GIRU19P_2402-70004508.ZIP",
-}
+#configuration_settings = {
+#  "deployer_free_temp_disk_space" = "10"
+#}
 
 ############################################################################################
 #                                                                                          #

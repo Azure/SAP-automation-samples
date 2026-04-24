@@ -1,5 +1,16 @@
 #########################################################################################
 #                                                                                       #
+# This template defines a distributed HANA system on SLES15 SP7                         #
+# with a single central services server, one database server and 2 application servers. #
+#                                                                                       #
+# SID is X00                                                                            #
+# Storage is using premium disks                                                        #
+#                                                                                       #
+#########################################################################################
+
+
+#########################################################################################
+#                                                                                       #
 # Deployment topologies                                                                 #
 #                                                                                       #
 # Standard (All roles on same server)                                                   #

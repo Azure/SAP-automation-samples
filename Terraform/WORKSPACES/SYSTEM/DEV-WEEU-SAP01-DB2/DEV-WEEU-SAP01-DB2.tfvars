@@ -1,5 +1,16 @@
 #########################################################################################
 #                                                                                       #
+# This template defines a distributed DB2 system on RedHat 88                           #
+# with a single central services server, one database server and 2 application servers. #
+#                                                                                       #
+# SID is DB2                                                                            #
+# Storage is using premium disks                                                        #
+#                                                                                       #
+#########################################################################################
+
+
+#########################################################################################
+#                                                                                       #
 # Deployment topologies                                                                 #
 #                                                                                       #
 # Standard (All roles on same server)                                                   #
