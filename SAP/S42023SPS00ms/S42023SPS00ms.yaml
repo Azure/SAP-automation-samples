@@ -283,7 +283,7 @@ materials:
       archive:                               GBX01HR5605.SAR
       url:                                   https://softwaredownloads.sap.com/file/0010000000033172015
       download:                              false
-      checksum:                              87d02737397b008c79f971f47eb37e222ba866aa8edfef25f645e2ab502279b2
+      checksum:                              739bc35d266c9d53d08efba15956dcada2d276254ff7d68d8a88c7378100dba2
 
     - name:                                  "UIHR002 100: SP 0001"
       archive:                               K-10001INUIHR002.SAR
