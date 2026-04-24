@@ -1,6 +1,6 @@
 #########################################################################################
 #                                                                                       #
-# This template defines a distributed ORACLE-ASM system on OL 86 and RedHat 86          #
+# This template defines a distributed ORACLE-ASM system on OL 88 and RedHat 88          #
 # with a single central services server, one database server and 2 application servers. #
 #                                                                                       #
 # SID is ORACLE                                                                         #
@@ -64,7 +64,7 @@ database_sid = "ORA"
 database_platform = "ORACLE-ASM"
 
 # Description of the SAP system.
-Description = "ORACLE-ASM distributed system on RedHat RHEL-SAP-HA 86sapha-gen2"
+Description = "ORACLE-ASM distributed system on RedHat RHEL-SAP-HA 88sapha-gen2"
 
 # codename provides an additional component for naming the resources
 #codename = ""
@@ -203,7 +203,7 @@ database_vm_image = {
   source_image_id = "",
   publisher = "Oracle",
   offer = "Oracle-Linux",
-  sku = "ol86-lvm-gen2",
+  sku = "ol88-lvm-gen2",
   version = "latest",
   type = "marketplace"
 }
@@ -297,7 +297,7 @@ scs_server_image = {
   source_image_id = "",
   publisher = "RedHat",
   offer = "RHEL-SAP-HA",
-  sku = "86sapha-gen2",
+  sku = "88sapha-gen2",
   version = "latest",
   type = "marketplace"
 }
@@ -380,7 +380,7 @@ application_server_image = {
   source_image_id = "",
   publisher = "Oracle",
   offer = "Oracle-Linux",
-  sku = "ol86-lvm-gen2",
+  sku = "ol88-lvm-gen2",
   version = "latest",
   type = "marketplace"
 }
