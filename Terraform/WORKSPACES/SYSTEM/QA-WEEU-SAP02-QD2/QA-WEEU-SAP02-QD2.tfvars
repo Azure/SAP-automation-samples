@@ -1,5 +1,17 @@
 #########################################################################################
 #                                                                                       #
+# This template defines a highly available DB2 system on RHEL 9.6                       #
+# with 2 central services servers, 2 database servers and 2 application servers.        #
+#                                                                                       #
+# SID is QD2                                                                            #
+# Storage is using premium v2 disks                                                     #
+# Deployment uses VMSS-Flex                                                             #
+#                                                                                       #
+#########################################################################################
+
+
+#########################################################################################
+#                                                                                       #
 # Deployment topologies                                                                 #
 #                                                                                       #
 # Standard (All roles on same server)                                                   #
@@ -23,7 +35,7 @@
 # be specified using the XXXX_armid fields.                                             #
 #                                                                                       #
 #########################################################################################
-
+s
 #########################################################################################
 #                                                                                       #
 #  Environment/Application definitions                                                  #
@@ -84,13 +96,13 @@ use_secondary_ips = false
 #subscription = ""
 
 # use_scalesets_for_deployment defines if Flexible Virtual Machine Scale Sets are used for the deployment
-use_scalesets_for_deployment = false
+use_scalesets_for_deployment = true
 
 # scaleset_id defines the scale set Azure resource Id
 #scaleset_id = ""
 
 # database_use_premium_v2_storage defines if the database tier will use premium v2 storage
-database_use_premium_v2_storage = false
+database_use_premium_v2_storage = true
 
 # upgrade_packages defines if all packages should be upgraded after installation
 upgrade_packages = false
@@ -186,13 +198,13 @@ database_vm_image = {
   source_image_id = "",
   publisher = "RedHat",
   offer = "RHEL-SAP-HA",
-  sku = "8_4",
+  sku = "96sapha-gen2",
   version = "latest",
   type = "marketplace"
 }
 
 # database_vm_zones is an optional list defining the availability zones to deploy the database servers
-database_vm_zones = ["1"]
+database_vm_zones = ["2", "3"]
 
 # Optional, Defines the default authentication model for the Database VMs (key/password)
 #database_vm_authentication_type = ""
@@ -267,7 +279,7 @@ pas_instance_number = "00"
 
 
 # scs_server_zones is an optional list defining the availability zones to which deploy the SCS servers
-scs_server_zones = ["1"]
+scs_server_zones = ["2", "3"]
 
 # scs_server_sku, if defined provides the SKU to use for the SCS servers
 #scs_server_sku = ""
@@ -280,7 +292,7 @@ scs_server_image = {
   source_image_id = "",
   publisher = "RedHat",
   offer = "RHEL-SAP-HA",
-  sku = "8_4",
+  sku = "96sapha-gen2",
   version = "latest",
   type = "marketplace"
 }
@@ -320,7 +332,7 @@ scs_server_use_avset = true
 application_server_count = 2
 
 # application_server_zones is an optional list defining the availability zones to which deploy the application servers
-#application_server_zones = []
+application_server_zones = ["2", "3"]
 
 # application_server_sku, if defined provides the SKU to use for the application servers
 #application_server_sku = ""
@@ -363,7 +375,7 @@ application_server_image = {
   source_image_id = "",
   publisher = "RedHat",
   offer = "RHEL-SAP-HA",
-  sku = "8_4",
+  sku = "96sapapps-gen2",
   version = "latest",
   type = "marketplace"
 }

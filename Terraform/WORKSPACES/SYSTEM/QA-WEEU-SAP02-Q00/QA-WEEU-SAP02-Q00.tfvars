@@ -1,5 +1,17 @@
 #########################################################################################
 #                                                                                       #
+# This template defines a highly available HANA system on RHEL 9.6                      #
+# with 2 central services servers, 2 database servers and 2 application servers.        #
+#                                                                                       #
+# SID is Q00                                                                            #
+# Storage is using premium v2 disks                                                     #
+# Deployment uses VMSS-Flex                                                             #
+#                                                                                       #
+#########################################################################################
+
+
+#########################################################################################
+#                                                                                       #
 # Deployment topologies                                                                 #
 #                                                                                       #
 # Standard (All roles on same server)                                                   #
@@ -84,16 +96,16 @@ use_secondary_ips = false
 #subscription = ""
 
 # use_scalesets_for_deployment defines if Flexible Virtual Machine Scale Sets are used for the deployment
-use_scalesets_for_deployment = false
+use_scalesets_for_deployment = true
 
 # scaleset_id defines the scale set Azure resource Id
 #scaleset_id = ""
 
 # database_use_premium_v2_storage defines if the database tier will use premium v2 storage
-database_use_premium_v2_storage = false
+database_use_premium_v2_storage = true
 
 # upgrade_packages defines if all packages should be upgraded after installation
-upgrade_packages = false
+upgrade_packages = true
 
 #########################################################################################
 #                                                                                       #
@@ -105,7 +117,7 @@ upgrade_packages = false
 database_server_count = 1
 
 # database_high_availability is a boolean flag controlling if the database tier is deployed highly available (more than 1 node)
-database_high_availability = false
+database_high_availability = true
 
 # For M series VMs use the SKU name for instance "M32ts"
 # If using a custom disk sizing populate with the node name for Database you have used in the file custom_disk_sizes_filename
@@ -186,13 +198,13 @@ database_vm_image = {
   source_image_id = "",
   publisher = "RedHat",
   offer = "RHEL-SAP-HA",
-  sku = "8_4",
+  sku = "96sapha-gen2",
   version = "latest",
   type = "marketplace"
 }
 
 # database_vm_zones is an optional list defining the availability zones to deploy the database servers
-database_vm_zones = ["1"]
+database_vm_zones = ["2", "3"]
 
 # Optional, Defines the default authentication model for the Database VMs (key/password)
 #database_vm_authentication_type = ""
@@ -233,7 +245,7 @@ app_tier_use_DHCP = true
 scs_server_count = 1
 
 # scs_high_availability is a boolean flag controlling if SCS should be highly available
-scs_high_availability = false
+scs_high_availability = true
 
 # scs_instance_number defines the instance number for SCS
 scs_instance_number = "00"
@@ -246,7 +258,7 @@ pas_instance_number = "00"
 
 
 # scs_server_zones is an optional list defining the availability zones to which deploy the SCS servers
-scs_server_zones = ["1"]
+scs_server_zones = ["2", "3"]
 
 # scs_server_sku, if defined provides the SKU to use for the SCS servers
 #scs_server_sku = ""
@@ -259,7 +271,7 @@ scs_server_image = {
   source_image_id = "",
   publisher = "RedHat",
   offer = "RHEL-SAP-HA",
-  sku = "8_4",
+  sku = "96sapha-gen2",
   version = "latest",
   type = "marketplace"
 }
@@ -299,7 +311,7 @@ scs_server_use_avset = false
 application_server_count = 2
 
 # application_server_zones is an optional list defining the availability zones to which deploy the application servers
-#application_server_zones = []
+application_server_zones = ["2", "3"]
 
 # application_server_sku, if defined provides the SKU to use for the application servers
 #application_server_sku = ""
@@ -341,8 +353,8 @@ application_server_image = {
   os_type = "linux",
   source_image_id = "",
   publisher = "RedHat",
-  offer = "RHEL-SAP-HA",
-  sku = "8_4",
+  offer = "RHEL-SAP-APPS",
+  sku = "96sapapps-gen2",
   version = "latest",
   type = "marketplace"
 }
@@ -356,10 +368,10 @@ application_server_image = {
 ############################################################################################
 
 # webdispatcher_server_count defines how many web dispatchers to deploy
-webdispatcher_server_count = 0
+webdispatcher_server_count = 2
 
 # web_sid is the Web Dispatcher SID
-#web_sid = ""
+web_sid = "W00"
 
 # web_instance_number defines the web instance number
 web_instance_number = "00"
@@ -385,7 +397,7 @@ web_instance_number = "00"
 #webdispatcher_server_sku = ""
 
 # webdispatcher_server_use_ppg defines the that the Web dispatcher virtual machines will be placed in a proximity placement group
-webdispatcher_server_use_ppg = true
+webdispatcher_server_use_ppg = false
 
 #webdispatcher_server_use_avset defines the that the Web dispatcher virtual machines will be placed in an availability set
 webdispatcher_server_use_avset = true
@@ -394,12 +406,20 @@ webdispatcher_server_use_avset = true
 #webdispatcher_server_tags = {}
 
 # webdispatcher_server_zones is an optional list defining the availability zones to which deploy the web dispatchers
-#webdispatcher_server_zones = []
+webdispatcher_server_zones = ["2", "3"]
 
 # The vm_image defines the Virtual machine image to use for the web dispatchers,
 # if source_image_id is specified the deployment will use the custom image provided,
 # in this case os_type must also be specified
-#webdispatcher_server_image = {}
+webdispatcher_server_image = {
+  os_type = "linux",
+  source_image_id = "",
+  publisher = "RedHat",
+  offer = "RHEL-SAP-APPS",
+  sku = "96sapapps-gen2",
+  version = "latest",
+  type = "marketplace"
+}
 
 
 #########################################################################################
@@ -907,7 +927,7 @@ use_spn = false
 
 # bom_name is the name of the SAP Application Bill of Materials file
 
-bom_name = "S41909SPS03_v0011ms"
+bom_name = "S42025SPS00_v88_v0002ms"
 
 # configuration_settings is a dictionary containing values that will be persisted in sap-parameters.yaml
 #configuration_settings = {}
