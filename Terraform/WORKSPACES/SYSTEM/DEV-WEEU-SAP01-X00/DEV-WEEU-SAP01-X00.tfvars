@@ -1,13 +1,28 @@
 #########################################################################################
 #                                                                                       #
-# This template defines a distributed HANA system on SLES15 SP7                         #
-# with a single central services server, one database server and 2 application servers. #
+# System Description                                                                    #
 #                                                                                       #
-# SID is X00                                                                            #
-# Storage is using premium disks                                                        #
+# Type of system: Distributed                                                           #
+# Database: HANA                                                                        #
+# System Identifier: X00                                                                #
+#                                                                                       #
+# Azure Region: westeurope                                                              #
+# Workload Zone: DEV-WEEU-SAP01-INFRASTRUCTURE                                          #
+#                                                                                       #
+# Database servers: 1 SUSE sles-sap-15-sp7 gen2                                         #
+# SCS servers: 1 SUSE sles-sap-15-sp7 gen2                                              #
+# Application servers: 2 SUSE sles-sap-15-sp7 gen2                                      #
+#                                                                                       #
+# Scale-out: No, Standby: Yes                                                           #
+#                                                                                       #
+# Database cluster type: AFA                                                            #
+# SCS cluster type: AFA                                                                 #
+#                                                                                       #
+# Storage: Premium Disks                                                                #
+# No scalesets in use                                                                   #
+# NFS Implementation: AFS                                                               #
 #                                                                                       #
 #########################################################################################
-
 
 #########################################################################################
 #                                                                                       #
@@ -47,6 +62,12 @@ environment = "DEV"
 # The location value is a mandatory field, it is used to control where the resources are deployed
 location = "westeurope"
 
+# The network logical name is mandatory - it is used in the naming convention and should map to the workload virtual network logical name
+network_logical_name = "SAP01"
+
+# The subscription ID is used to control where the resources are deployed
+# subscription_id = ""
+
 # The sid value is a mandatory field that defines the SAP Application SID
 sid = "X00"
 
@@ -66,12 +87,6 @@ database_platform = "HANA"
 # Description of the SAP system.
 Description = "HANA distributed system on SUSE sles-sap-15-sp7 gen2"
 
-# codename provides an additional component for naming the resources
-#codename = ""
-
-# management_subscription_id defines the management subscription used by the deployment
-#management_subscription_id = ""
-
 #########################################################################################
 #                                                                                       #
 #  Deployment parameters                                                                #
@@ -79,26 +94,14 @@ Description = "HANA distributed system on SUSE sles-sap-15-sp7 gen2"
 #########################################################################################
 
 
-#If you want to provide a custom naming json use the following parameter.
+# If you want to provide a custom naming json use the following parameter.
 #name_override_file = ""
 
-#If you want to customize the disk sizes for VMs use the following parameter to specify the custom sizing file.
+# If you want to customize the disk sizes for VMs use the following parameter to specify the custom sizing file.
 #custom_disk_sizes_filename = ""
-
-# data_plane_available defines if storage account access is via data plane
-#data_plane_available = true
-
-# disk_controller_type_database_tier defines the disk controller type for database VMs
-#disk_controller_type_database_tier = "SCSI"
-
-# disk_controller_type_app_tier defines the disk controller type for app tier VMs
-#disk_controller_type_app_tier = "SCSI"
 
 # use_secondary_ips controls if the virtual machines should be deployed with two IP addresses. Required for SAP Virtual Hostname support
 use_secondary_ips = false
-
-# subscription is the subscription in which the system will be deployed (informational only)
-#subscription = ""
 
 # use_scalesets_for_deployment defines if Flexible Virtual Machine Scale Sets are used for the deployment
 use_scalesets_for_deployment = false
@@ -111,6 +114,18 @@ database_use_premium_v2_storage = false
 
 # upgrade_packages defines if all packages should be upgraded after installation
 upgrade_packages = false
+
+# suse_subscription_id defines the SUSE subscription ID to use for registering the SUSE VMs with the SUSE subscription management service
+#suse_subscription_id = ""
+
+# AFS_enable_encryption_in_transit defines if encryption in transit is enabled for AFS
+AFS_enable_encryption_in_transit = false
+
+# disk_controller_type_database_tier defines the disk controller type for the database tier VMs, supported values are "SCSI" and "NVMe"
+disk_controller_type_database_tier = "SCSI"
+
+# disk_controller_type_app_tier defines the disk controller type for the application tier VMs, supported values are "SCSI" and "NVMe"
+disk_controller_type_app_tier = "SCSI"
 
 #########################################################################################
 #                                                                                       #
@@ -159,41 +174,6 @@ database_vm_use_DHCP = true
 # for the network interface cards connected to the storage subnet
 #database_vm_storage_nic_ips = []
 
-# Sample Images for different database backends
-
-# Oracle
-#database_vm_image = {
-#  os_type         = "LINUX"
-#  source_image_id = ""
-#  publisher       = "Oracle"
-#  offer           = "Oracle-Linux",
-#  sku             = "82-gen2",
-#  version         = "latest"
-#  type            = "marketplace"
-#}
-
-#SUSE 15 SP3
-#database_vm_image = {
-#  os_type         = "LINUX"
-#  source_image_id = ""
-#  publisher       = "SUSE"
-#  offer           = "sles-sap-15-sp3"
-#  sku             = "gen2"
-#  version         = "latest"
-#  type            = "marketplace"
-#}
-
-#RedHat
-#database_vm_image={
-#  os_type         = "LINUX"
-#  source_image_id = ""
-#  publisher       = "RedHat"
-#  offer           = "RHEL-SAP-HA"
-#  sku             = "8_4"
-#  version         = "latest"
-#  type            = "marketplace"
-#}
-
 # The vm_image defines the Virtual machine image to use,
 # if source_image_id is specified the deployment will use the custom image provided,
 # in this case os_type must also be specified
@@ -214,38 +194,20 @@ database_vm_zones = ["1"]
 # Optional, Defines the default authentication model for the Database VMs (key/password)
 #database_vm_authentication_type = ""
 
-# Optional, Defines the list of availability sets to deployt the Database VMs in
+# Optional, Defines the list of availability sets to deploy the Database VMs in
 #database_vm_avset_arm_ids = []
 
 # Optional, Defines the that the database virtual machines will not be placed in a proximity placement group
 database_use_ppg = false
-
-#########################################################################################
-#                                                                                       #
-#                                    Observer Variables                                 #
-#                                                                                       #
-#########################################################################################
-
-# use_observer defines if an observer virtual machine will be used
-#use_observer = true
-
-# observer_vm_size defines the VM size to use for the observer
-#observer_vm_size = "Standard_D4s_v3"
-
-# observer_vm_tags defines tags to use specifically for the observer VM
-#observer_vm_tags = {}
-
-# observer_vm_zones defines the zone to deploy the observer in
-#observer_vm_zones = []
-
-# observer_nic_ips defines the IP addresses for the observer virtual machines
-#observer_nic_ips = [""]
 
 # Optional, Defines the that the database virtual machines will not be placed in an availability set
 database_use_avset = false
 
 # Optional, Defines if the tags for the database virtual machines
 #database_tags = {}
+
+# If true, database will deployed with Active/Active (read enabled) configuration, only supported for HANA
+#database_active_active = false
 
 #########################################################################################
 #                                                                                       #
@@ -357,7 +319,7 @@ app_tier_dual_nics = false
 # for the network interface cards connected to the admin subnet
 #application_server_admin_nic_ips = []
 
-#If you want to customize the disk sizes for application tier use the following parameter.
+# If you want to customize the disk sizes for application tier use the following parameter.
 #app_disk_sizes_filename = null
 
 # Optional, Defines the default authentication model for the Applicatiuon tier VMs (key/password)
@@ -425,7 +387,7 @@ web_instance_number = "00"
 # webdispatcher_server_use_ppg defines the that the Web dispatcher virtual machines will be placed in a proximity placement group
 webdispatcher_server_use_ppg = false
 
-#webdispatcher_server_use_avset defines the that the Web dispatcher virtual machines will be placed in an availability set
+# webdispatcher_server_use_avset defines the that the Web dispatcher virtual machines will be placed in an availability set
 webdispatcher_server_use_avset = false
 
 # webdispatcher_server_tags, if defined provides the tags to be associated to the web dispatchers
@@ -483,25 +445,25 @@ patch_assessment_mode = "ImageDefault"
 # scs_cluster_type defines cluster quorum type; AFA (Azure Fencing Agent), ASD (Azure Shared Disk), ISCSI
 scs_cluster_type = "AFA"
 
-#scs_cluster_disk_lun defines the LUN number for the SAP Central Services cluster disk
+# scs_cluster_disk_lun defines the LUN number for the SAP Central Services cluster disk
 scs_cluster_disk_lun = 5
 
-#scs_cluster_disk_size defines the size for the SAP Central Services cluster disk
+# scs_cluster_disk_size defines the size for the SAP Central Services cluster disk
 scs_cluster_disk_size = 128
 
-#scs_cluster_disk_type defines the storage_account_type of the shared disk for the SAP Central Services cluster
+# scs_cluster_disk_type defines the storage_account_type of the shared disk for the SAP Central Services cluster
 scs_cluster_disk_type = "Premium_ZRS"
 
 # database_cluster_type defines cluster quorum type; AFA (Azure Fencing Agent), ASD (Azure Shared Disk), ISCSI
 database_cluster_type = "AFA"
 
-#database_cluster_disk_lun defines the LUN number for the database cluster disk
+# database_cluster_disk_lun defines the LUN number for the database cluster disk
 database_cluster_disk_lun = 8
 
-#database_cluster_disk_size defines the size for the database cluster disk
+# database_cluster_disk_size defines the size for the database cluster disk
 database_cluster_disk_size = 128
 
-#database_cluster_disk_type defines the storage_account_type of the shared disk for the Database cluster
+# database_cluster_disk_type defines the storage_account_type of the shared disk for the Database cluster
 database_cluster_disk_type = "Premium_ZRS"
 
 # use_msi_for_clusters if defined will use managed service identity for the Pacemaker cluster fencing
@@ -528,6 +490,8 @@ use_fence_kdump_size_gb_scs = 64
 # Default LUN number of the kdump disk which will be attached to the VMs which are part of SCS cluster
 use_fence_kdump_lun_scs = 4
 
+# If true, the SAP HANA SR cluster will be configured with SAP HANA SR - An Next Generation Interface
+#use_sles_saphanasr_angi = false
 
 #########################################################################################
 #                                                                                       #
@@ -726,6 +690,10 @@ nsg_asg_with_vnet = false
 # The resourcegroup_name arm_id is optional, it can be used to provide an existing resource group for the deployment
 #resourcegroup_arm_id = ""
 
+# Prevent deletion of resource group if there are Resources left within the Resource Group during deletion
+prevent_deletion_if_contains_resources = true
+
+
 #########################################################################################
 #                                                                                       #
 #  Proximity Placement Group                                                            #
@@ -783,9 +751,6 @@ enable_purge_control_for_keyvaults = false
 # be specified                                                                          #
 #                                                                                       #
 #########################################################################################
-
-# The network logical name is mandatory - it is used in the naming convention and should map to the workload virtual network logical name
-network_logical_name = "SAP01"
 
 # use_loadbalancers_for_standalone_deployments is a boolean flag that can be used to control if standalone deployments (non HA) will have load balancers
 use_loadbalancers_for_standalone_deployments = true
@@ -938,9 +903,6 @@ use_private_endpoint = true
 # landscape_tfstate_key is the state file name for the workload deployment
 #landscape_tfstate_key = null
 
-# use_spn defines if the deployments are performed using Service Principals or the deployer's managed identiry, true=SPN, false=MSI
-use_spn = false
-
 #########################################################################################
 #                                                                                       #
 #  SAP Application Information                                                          #
@@ -968,18 +930,24 @@ tags = {
 
 #########################################################################################
 #                                                                                       #
-#  Scaleout variables                                                                   #
+#  Scale out variables                                                                   #
 #                                                                                       #
 #########################################################################################
 
-#If true, the database tier will be configured for scaleout scenario
-database_HANA_use_ANF_scaleout_scenario = false
+# If true, the database tier will be configured for scale out scenario
+database_HANA_use_scaleout_scenario = false
 
-#If true, the database scale out tier will not have a standby role
+# If true, the database scale out tier will not have a standby role
 database_HANA_no_standby_role = false
 
-# Defined the standbynode count in a scaleout scenario
+# Defined the standby node count in a scale out scenario
 stand_by_node_count = 0
+
+# The Azure Resource identifier for the HANA shared volume storage account
+hanashared_id = [""]
+
+# The Azure Resource identifier for the private endpoint connection to the HANA shared volume
+hanashared_private_endpoint_id = [""]
 
 
 #########################################################################################
@@ -1009,9 +977,6 @@ dns_a_records_for_secondary_names = true
 
 # register_endpoints_with_dns defines if the endpoints should be registered with the DNS
 register_endpoints_with_dns = true
-
-# register_storage_accounts_keyvaults_with_dns defines if storage accounts and key vaults should be registered to the corresponding dns zones
-#register_storage_accounts_keyvaults_with_dns = true
 
 
 
@@ -1043,49 +1008,8 @@ use_prefix = true
 # use_zonal_markers defines if a zonal markers will be added to the virtual machine resource names
 use_zonal_markers = false
 
+# shared_access_key_enabled defines Storage account authorization using Shared Access Key.
+shared_access_key_enabled = false
 
-
-#########################################################################################
-#                                                                                       #
-#                               Additional Configuration Variables                       #
-#                                                                                       #
-#########################################################################################
-
-# legacy_nic_order defines if the order of the NICs should be reversed
-#legacy_nic_order = false
-
-# use_admin_nic_suffix_for_observer defines if the admin nic suffix will be used for the observer
-#use_admin_nic_suffix_for_observer = false
-
-# use_admin_nic_for_asg defines if the admin nic will be assigned to the ASG instead of the second nic
-#use_admin_nic_for_asg = false
-
-# idle_timeout_scs_ers sets the idle timeout setting for the SCS and ERS loadbalancer
-#idle_timeout_scs_ers = 30
-
-# shared_home defines if shared-home support should be provided
-#shared_home = false
-
-# use_single_hana_shared defines if a single storage account should be used for all HANA file shares
-#use_single_hana_shared = false
-
-# enable_sap_cal defines if SAP CAL integration should be enabled
-#enable_sap_cal = false
-
-# calapi_kv defines the SAP CAL API Key Vault
-#calapi_kv = ""
-
-# sap_cal_product_name defines if SAP CAL should be used for system installation
-#sap_cal_product_name = ""
-
-# platform_updates specifies whether VMAgent Platform Updates is enabled
-#platform_updates = "true"
-
-# use_sles_saphanasr_angi defines if SAP HANA SR cluster will be configured with SAP HANA SR - An Next Generation Interface
-#use_sles_saphanasr_angi = false
-
-# database_active_active defines if database will be deployed with Active/Active configuration (HANA only)
-#database_active_active = false
-
-# enable_storage_nic defines if a storage nic should be used when scale out is enabled
-#enable_storage_nic = true
+# shared_access_key_enabled_nfs defines Storage account used for NFS shares authorization using Shared Access Key.
+shared_access_key_enabled_nfs = false

@@ -3,15 +3,15 @@
 # System Description                                                                    #
 #                                                                                       #
 # Type of system:        High Availability                                              #
-# Database:              HANA                                                           #
-# System Identifier:     HA2                                                            #
+# Database:              ORACLE-ASM                                                     #
+# System Identifier:     QO2                                                            #
 #                                                                                       #
 # Azure Region:          westeurope                                                     #
-# Workload Zone:         DEV-WEEU-SAP01-INFRASTRUCTURE                                  #
+# Workload Zone:         QA-WEEU-SAP02-INFRASTRUCTURE                                   #
 #                                                                                       #
-# Database servers:      2 x SUSE sles-sap-15-sp6 gen2                                  #
-# SCS servers:           0 x SUSE sles-sap-15-sp7 gen2                                  #
-# Application servers:   0 x SUSE sles-sap-15-sp7 gen2                                  #
+# Database servers:      2 x Oracle Oracle-Linux ol89-lvm-gen2                          #
+# SCS servers:           2 x RedHat RHEL-SAP-HA 88sapha-gen2                            #
+# Application servers:   2 x Oracle Oracle-Linux ol89-lvm-gen2                          #
 #                                                                                       #
 # HANA Scale-out:        No                                                             #
 # Standby Server:        Yes                                                            #
@@ -19,8 +19,8 @@
 # Database cluster type: AFA                                                            #
 # SCS cluster type:      AFA                                                            #
 #                                                                                       #
-# Storage:               Premium Disks                                                  #
-# VMSS_Flex:             No scalesets in use                                            #
+# Storage:               Premium Disks v2                                               #
+# VMSS_Flex:             In use                                                         #
 # NFS Implementation:    AFS                                                            #
 #                                                                                       #
 #########################################################################################
@@ -58,22 +58,22 @@
 #########################################################################################
 
 # The environment value is a mandatory field, it is used for partitioning the environments, for example (PROD and NP)
-environment = "DEV"
+environment = "QA"
 
 # The location value is a mandatory field, it is used to control where the resources are deployed
 location = "westeurope"
 
 # The network logical name is mandatory - it is used in the naming convention and should map to the workload virtual network logical name
-network_logical_name = "SAP01"
+network_logical_name = "SAP02"
 
 # The subscription ID is used to control where the resources are deployed
 # subscription_id = ""
 
 # The sid value is a mandatory field that defines the SAP Application SID
-sid = "HA2"
+sid = "QO2"
 
 # The database_sid defines the database SID
-database_sid = "HDB"
+database_sid = "QD2"
 
 # The database_platform defines the database backend, supported values are
 # - HANA
@@ -83,10 +83,10 @@ database_sid = "HDB"
 # - SYBASE
 # - SQLSERVER
 # - NONE (in this case no database tier is deployed)
-database_platform = "HANA"
+database_platform = "ORACLE-ASM"
 
 # Description of the SAP system.
-Description = "HANA only system on SUSE sles-sap-15-sp7 gen2"
+Description = "ORACLE-ASM high availability system on RedHat RHEL-SAP-HA 88sapha-gen2"
 
 #########################################################################################
 #                                                                                       #
@@ -102,16 +102,16 @@ Description = "HANA only system on SUSE sles-sap-15-sp7 gen2"
 #custom_disk_sizes_filename = ""
 
 # use_secondary_ips controls if the virtual machines should be deployed with two IP addresses. Required for SAP Virtual Hostname support
-use_secondary_ips = true
+use_secondary_ips = false
 
 # use_scalesets_for_deployment defines if Flexible Virtual Machine Scale Sets are used for the deployment
-use_scalesets_for_deployment = false
+use_scalesets_for_deployment = true
 
 # scaleset_id defines the scale set Azure resource Id
 #scaleset_id = ""
 
 # database_use_premium_v2_storage defines if the database tier will use premium v2 storage
-database_use_premium_v2_storage = false
+database_use_premium_v2_storage = true
 
 # upgrade_packages defines if all packages should be upgraded after installation
 upgrade_packages = false
@@ -142,7 +142,7 @@ database_high_availability = true
 
 # For M series VMs use the SKU name for instance "M32ts"
 # If using a custom disk sizing populate with the node name for Database you have used in the file custom_disk_sizes_filename
-database_size = "E20ds_v4"
+database_size = "1024"
 
 # database_vm_sku, if provided defines the Virtual Machine SKU to use for the database virtual machines"
 #database_vm_sku = ""
@@ -182,15 +182,15 @@ database_vm_use_DHCP = true
 database_vm_image = {
   os_type = "LINUX",
   source_image_id = "",
-  publisher = "SUSE",
-  offer = "sles-sap-15-sp6",
-  sku = "gen2",
+  publisher = "Oracle",
+  offer = "Oracle-Linux",
+  sku = "ol89-lvm-gen2",
   version = "latest",
   type = "marketplace"
 }
 
 # database_vm_zones is an optional list defining the availability zones to deploy the database servers
-database_vm_zones = ["2"]
+database_vm_zones = ["2", "3"]
 
 # Optional, Defines the default authentication model for the Database VMs (key/password)
 #database_vm_authentication_type = ""
@@ -202,7 +202,7 @@ database_vm_zones = ["2"]
 database_use_ppg = true
 
 # Optional, Defines the that the database virtual machines will not be placed in an availability set
-database_use_avset = false
+database_use_avset = true
 
 # Optional, Defines if the tags for the database virtual machines
 #database_tags = {}
@@ -241,7 +241,7 @@ use_observer = false
 app_tier_sizing_dictionary_key = "Optimized"
 
 # enable_app_tier_deployment is a boolean flag controlling if the application tier should be deployed
-enable_app_tier_deployment = false
+enable_app_tier_deployment = true
 
 # app_tier_use_DHCP is a boolean flag controlling if Azure subnet provided IP addresses should be used (true)
 app_tier_use_DHCP = true
@@ -253,23 +253,23 @@ app_tier_use_DHCP = true
 #########################################################################################
 
 # scs_server_count defines how many SCS servers to deploy
-scs_server_count = 0
+scs_server_count = 1
 
 # scs_high_availability is a boolean flag controlling if SCS should be highly available
-scs_high_availability = false
+scs_high_availability = true
 
 # scs_instance_number defines the instance number for SCS
-scs_instance_number = "01"
+scs_instance_number = "00"
 
 # ers_instance_number defines the instance number for ERS
-ers_instance_number = "02"
+ers_instance_number = "01"
 
 # pas_instance_number defines the instance number for PAS
-pas_instance_number = "03"
+pas_instance_number = "00"
 
 
 # scs_server_zones is an optional list defining the availability zones to which deploy the SCS servers
-scs_server_zones = ["1", "2"]
+scs_server_zones = ["2", "3"]
 
 # scs_server_sku, if defined provides the SKU to use for the SCS servers
 #scs_server_sku = ""
@@ -280,9 +280,9 @@ scs_server_zones = ["1", "2"]
 scs_server_image = {
   os_type = "LINUX",
   source_image_id = "",
-  publisher = "SUSE",
-  offer = "sles-sap-15-sp7",
-  sku = "gen2",
+  publisher = "RedHat",
+  offer = "RHEL-SAP-HA",
+  sku = "88sapha-gen2",
   version = "latest",
   type = "marketplace"
 }
@@ -319,10 +319,10 @@ scs_server_use_avset = false
 #########################################################################################
 
 # application_server_count defines how many application servers to deploy
-application_server_count = 0
+application_server_count = 2
 
 # application_server_zones is an optional list defining the availability zones to which deploy the application servers
-application_server_zones = ["1", "2"]
+application_server_zones = ["2", "3"]
 
 # application_server_sku, if defined provides the SKU to use for the application servers
 #application_server_sku = ""
@@ -352,7 +352,7 @@ app_tier_dual_nics = false
 application_server_use_ppg = true
 
 # application_server_use_avset defines the that the application server virtual machines will be placed in an availability set
-application_server_use_avset = true
+application_server_use_avset = false
 
 # application_server_tags, if defined provides the tags to be associated to the application servers
 #application_server_tags = {}
@@ -363,9 +363,9 @@ application_server_use_avset = true
 application_server_image = {
   os_type = "LINUX",
   source_image_id = "",
-  publisher = "SUSE",
-  offer = "sles-sap-15-sp7",
-  sku = "gen2",
+  publisher = "Oracle",
+  offer = "Oracle-Linux",
+  sku = "ol89-lvm-gen2",
   version = "latest",
   type = "marketplace"
 }
@@ -382,7 +382,7 @@ application_server_image = {
 webdispatcher_server_count = 0
 
 # web_sid is the Web Dispatcher SID
-web_sid = "W00"
+#web_sid = ""
 
 # web_instance_number defines the web instance number
 web_instance_number = "00"
@@ -408,29 +408,21 @@ web_instance_number = "00"
 #webdispatcher_server_sku = ""
 
 # webdispatcher_server_use_ppg defines the that the Web dispatcher virtual machines will be placed in a proximity placement group
-webdispatcher_server_use_ppg = false
+webdispatcher_server_use_ppg = true
 
 # webdispatcher_server_use_avset defines the that the Web dispatcher virtual machines will be placed in an availability set
-webdispatcher_server_use_avset = false
+webdispatcher_server_use_avset = true
 
 # webdispatcher_server_tags, if defined provides the tags to be associated to the web dispatchers
 #webdispatcher_server_tags = {}
 
 # webdispatcher_server_zones is an optional list defining the availability zones to which deploy the web dispatchers
-webdispatcher_server_zones = ["1"]
+#webdispatcher_server_zones = []
 
 # The vm_image defines the Virtual machine image to use for the web dispatchers,
 # if source_image_id is specified the deployment will use the custom image provided,
 # in this case os_type must also be specified
-webdispatcher_server_image = {
-  os_type = "LINUX",
-  source_image_id = "",
-  publisher = "SUSE",
-  offer = "sles-sap-15-sp7",
-  sku = "gen2",
-  version = "latest",
-  type = "marketplace"
-}
+#webdispatcher_server_image = {}
 
 
 #########################################################################################
@@ -946,9 +938,7 @@ use_private_endpoint = true
 ############################################################################################
 
 # These tags will be applied to all resources
-tags = {
-  "DeployedBy" = "SDAF",
-}
+#tags = {}
 
 
 #########################################################################################
@@ -1010,7 +1000,7 @@ register_endpoints_with_dns = true
 #########################################################################################
 
 # deploy_application_security_groups if defined will create application security groups
-deploy_application_security_groups = false
+deploy_application_security_groups = true
 
 # deploy_v1_monitoring_extension Defines if the Microsoft.AzureCAT.AzureEnhancedMonitoring extension will be deployed
 deploy_v1_monitoring_extension = true
@@ -1020,7 +1010,7 @@ deploy_v1_monitoring_extension = true
 resource_offset = 1
 
 # save_naming_information,defines that a json formatted file defining the resource names will be created
-save_naming_information = true
+save_naming_information = false
 
 # custom_prefix defines the prefix that will be added to the resource names
 #custom_prefix = ""
@@ -1029,7 +1019,7 @@ save_naming_information = true
 use_prefix = true
 
 # use_zonal_markers defines if a zonal markers will be added to the virtual machine resource names
-use_zonal_markers = false
+use_zonal_markers = true
 
 # shared_access_key_enabled defines Storage account authorization using Shared Access Key.
 shared_access_key_enabled = false
