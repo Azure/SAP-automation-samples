@@ -1,3 +1,27 @@
+#########################################################################################
+#                                                                                       #
+# Workload zone description                                                             #
+#                                                                                       #
+# Azure Region:       westeurope                                                        #
+# Workload Zone:      PRD-WEEU-SAP03                                                    #
+#                                                                                       #
+# Virtual Network:    New                                                               #
+# App Subnet:         Defined                                                           #
+# DB Subnet:          Defined
+# Web Subnet:         Defined                                                           #
+# Admin Subnet:       Defined                                                           #
+# ANF Subnet:         Defined                                                           #
+# Storage Subnet:     Defined                                                           #
+# iSCSI Subnet:       Defined                                                           #
+#                                                                                       #
+# Key Vault:          New                                                               #
+# NAT:                No                                                                #
+#                                                                                       #
+# iSCSI servers:      3 x SUSE sles-sap-15-sp7 gen2                                     #
+# NFS Implementation: ANF                                                               #
+#                                                                                       #
+#########################################################################################
+
 
 #########################################################################################
 #                                                                                       #
@@ -33,8 +57,11 @@ location = "westeurope"
 # Description of the Workload zone.
 #Description = ""
 
-#If you want to provide a custom naming json use the following parameter.
+# If you want to provide a custom naming json use the following parameter.
 #name_override_file = ""
+
+# The subscription ID is used to control where the resources are deployed
+# subscription_id = ""
 
 #########################################################################################
 #                                                                                       #
@@ -67,13 +94,7 @@ network_logical_name = "SAP03"
 #network_arm_id = ""
 
 # network_address_space is a mandatory parameter when an existing Virtual network is not used
-network_address_space = ["10.112.0.0/16"]
-
-# network_flow_timeout_in_minutes defines the flow timeout in minutes of the virtual network
-#network_flow_timeout_in_minutes = null
-
-# network_enable_route_propagation enables network route table propagation
-#network_enable_route_propagation = true
+network_address_space = ["10.112.0.0/19"]
 
 # use_private_endpoint is a boolean flag controlling if the key vaults and storage accounts have private endpoints
 use_private_endpoint = true
@@ -81,17 +102,23 @@ use_private_endpoint = true
 # use_service_endpoint is a boolean flag controlling if the key vaults and storage accounts have service endpoints
 use_service_endpoint = true
 
-#Defines if the SAP VNet will be peered with the control plane VNet
+# Defines if the SAP VNet will be peered with the control plane VNet
 peer_with_control_plane_vnet = true
 
 # Defines if access to the key vaults and storage accounts is restricted to the SAP and deployer VNets
 enable_firewall_for_keyvaults_and_storage = true
 
 # Defines if public access is allowed for the storage accounts and key vaults
-public_network_access_enabled = true
+public_network_access_enabled = false
 
 # place_delete_lock_on_resources, If defined, a delete lock will be placed on the key resources
 place_delete_lock_on_resources = false
+
+# The flow timeout in minutes of the virtual network
+#network_flow_timeout_in_minutes = 0
+
+# Enable network route table propagation.
+#network_enable_route_propagation = false
 
 #########################################################################################
 #                                                                                       #
@@ -103,7 +130,7 @@ place_delete_lock_on_resources = false
 #admin_subnet_name = ""
 
 # admin_subnet_address_prefix is a mandatory parameter if the subnets are not defined in the workload or if existing subnets are not used
-admin_subnet_address_prefix = "10.112.0.0/19"
+admin_subnet_address_prefix = "10.112.20.0/22"
 
 # admin_subnet_arm_id is an optional parameter that if provided specifies Azure resource identifier for the existing subnet to use
 #admin_subnet_arm_id = ""
@@ -125,7 +152,7 @@ admin_subnet_address_prefix = "10.112.0.0/19"
 #db_subnet_name = ""
 
 # db_subnet_address_prefix is a mandatory parameter if the subnets are not defined in the workload or if existing subnets are not used
-db_subnet_address_prefix = "10.112.96.0/19"
+db_subnet_address_prefix = "10.112.16.0/22"
 
 # db_subnet_arm_id is an optional parameter that if provided specifies Azure resource identifier for the existing subnet to use
 #db_subnet_arm_id = ""
@@ -147,7 +174,7 @@ db_subnet_address_prefix = "10.112.96.0/19"
 #app_subnet_name = ""
 
 # app_subnet_address_prefix is a mandatory parameter if the subnets are not defined in the workload or if existing subnets are not used
-app_subnet_address_prefix = "10.112.32.0/19"
+app_subnet_address_prefix = "10.112.24.0/22"
 
 # app_subnet_arm_id is an optional parameter that if provided specifies Azure resource identifier for the existing subnet to use
 #app_subnet_arm_id = ""
@@ -169,7 +196,7 @@ app_subnet_address_prefix = "10.112.32.0/19"
 #web_subnet_name = ""
 
 # web_subnet_address_prefix is a mandatory parameter if the subnets are not defined in the workload or if existing subnets are not used
-web_subnet_address_prefix = "10.112.128.0/19"
+web_subnet_address_prefix = "10.112.28.0/22"
 
 # web_subnet_arm_id is an optional parameter that if provided specifies Azure resource identifier for the existing subnet to use
 #web_subnet_arm_id = ""
@@ -195,7 +222,7 @@ web_subnet_address_prefix = "10.112.128.0/19"
 
 # ANF requires a dedicated subnet, the address space for the subnet is provided with  anf_subnet_address_prefix
 # anf_subnet_address_prefix is a mandatory parameter if the subnets are not defined in the workload or if existing subnets are not used
-anf_subnet_address_prefix = "10.112.64.0/27"
+anf_subnet_address_prefix = "10.112.4.0/22"
 
 # $anf_subnet_nsg_name is an optional parameter and should only be used if the default naming is not acceptable for the network security group name
 #anf_subnet_nsg_name = ""
@@ -210,7 +237,6 @@ anf_subnet_address_prefix = "10.112.64.0/27"
 #                                                                         #
 ###########################################################################
 
-/* iscsi subnet information */
 # If defined these parameters control the subnet name and the subnet prefix
 # iscsi_subnet_name is an optional parameter and should only be used if the default naming is not acceptable
 #iscsi_subnet_name = ""
@@ -219,7 +245,7 @@ anf_subnet_address_prefix = "10.112.64.0/27"
 #iscsi_subnet_arm_id = ""
 
 # iscsi_subnet_address_prefix is a mandatory parameter if the subnets are not defined in the workload or if existing subnets are not used
-#iscsi_subnet_address_prefix = ""
+iscsi_subnet_address_prefix = "10.112.8.0/22"
 
 # iscsi_subnet_nsg_arm_id is an optional parameter that if provided specifies Azure resource identifier for the existing nsg
 #iscsi_subnet_nsg_arm_id = ""
@@ -233,7 +259,6 @@ anf_subnet_address_prefix = "10.112.64.0/27"
 #                                                                         #
 ###########################################################################
 
-/* ams subnet information */
 # If defined these parameters control the subnet name and the subnet prefix
 # ams_subnet_name is an optional parameter and should only be used if the default naming is not acceptable
 #ams_subnet_name = ""
@@ -254,13 +279,9 @@ anf_subnet_address_prefix = "10.112.64.0/27"
 ###########################################################################
 #                                                                         #
 #                               Storage Subnet                            #
-
-# use_separate_storage_subnet defines if a separate subnet should be used for storage (needed for HANA Scaleout deployments)
-#use_separate_storage_subnet = false
 #                                                                         #
 ###########################################################################
 
-/* storage subnet information */
 # If defined these parameters control the subnet name and the subnet prefix
 # storage_subnet_name is an optional parameter and should only be used if the default naming is not acceptable
 #storage_subnet_name = ""
@@ -269,7 +290,7 @@ anf_subnet_address_prefix = "10.112.64.0/27"
 #storage_subnet_arm_id = ""
 
 # storage_subnet_address_prefix is a mandatory parameter if the subnets are not defined in the workload or if existing subnets are not used
-#storage_subnet_address_prefix = ""
+storage_subnet_address_prefix = "10.112.0.0/22"
 
 # storage_subnet_nsg_arm_id is an optional parameter that if provided specifies Azure resource identifier for the existing nsg
 #storage_subnet_nsg_arm_id = ""
@@ -277,6 +298,8 @@ anf_subnet_address_prefix = "10.112.64.0/27"
 # storage_subnet_nsg_name is an optional parameter and should only be used if the default naming is not acceptable for the network security group name
 #storage_subnet_nsg_name = ""
 
+# use_separate_storage_subnet defines if a separate subnet is used (HANA Scale Out scenario))
+use_separate_storage_subnet = true
 
 #########################################################################################
 #                                                                                       #
@@ -299,7 +322,6 @@ patch_mode = "ImageDefault"
 # If defined, defines the mode of VM Guest Patching for the Virtual Machines
 patch_assessment_mode = "ImageDefault"
 
-
 #########################################################################################
 #                                                                                       #
 #  Resource group details                                                               #
@@ -315,7 +337,7 @@ patch_assessment_mode = "ImageDefault"
 #resourcegroup_arm_id = ""
 
 # Prevent deletion of resource group if there are Resources left within the Resource Group during deletion
-prevent_deletion_if_contains_resources = true
+prevent_deletion_if_contains_resources = false
 
 #########################################################################################
 #                                                                                       #
@@ -347,27 +369,6 @@ register_virtual_network_to_dns = true
 # register_endpoints_with_dns defines if the endpoints should be registered with the DNS
 register_endpoints_with_dns = true
 
-# register_storage_accounts_keyvaults_with_dns defines if storage accounts and key vaults should be registered to the corresponding dns zones
-#register_storage_accounts_keyvaults_with_dns = true
-
-# dns_zone_names defines the Private DNS zone names
-#dns_zone_names = {
-#  "file_dns_zone_name"      = "privatelink.file.core.windows.net"
-#  "blob_dns_zone_name"      = "privatelink.blob.core.windows.net"
-#  "table_dns_zone_name"     = "privatelink.table.core.windows.net"
-#  "vault_dns_zone_name"     = "privatelink.vaultcore.azure.net"
-#  "appconfig_dns_zone_name" = "privatelink.azconfig.io"
-#}
-
-# privatelink_file_id defines the ID of the private link file resource
-#privatelink_file_id = ""
-
-# privatelink_storage_id defines the ID of the private link storage resource
-#privatelink_storage_id = ""
-
-# privatelink_keyvault_id defines the ID of the private link keyvault resource
-#privatelink_keyvault_id = ""
-
 
 #########################################################################################
 #                                                                                       #
@@ -383,11 +384,11 @@ register_endpoints_with_dns = true
 # spn_keyvault_id is an optional parameter that if provided specifies the Azure resource identifier for an existing keyvault
 #spn_keyvault_id = ""
 
-# enable_purge_control_for_keyvaults is an optional parameter that czan be used to disable the purge protection fro Azure keyvaults
+# enable_purge_control_for_keyvaults is an optional parameter that can be used to disable the purge protection for Azure key vaults
 enable_purge_control_for_keyvaults = false
 
 # enable_rbac_authorization_for_keyvault Controls the access policy model for the workload zone keyvault.
-enable_rbac_authorization_for_keyvault = false
+enable_rbac_authorization_for_keyvault = true
 
 # Defines a list of Object IDs to be added to the keyvault
 #additional_users_to_add_to_keyvault_policies = []
@@ -396,7 +397,7 @@ enable_rbac_authorization_for_keyvault = false
 soft_delete_retention_days = 14
 
 # Set expiry date for secrets
-set_secret_expiry = false
+set_secret_expiry = true
 
 #########################################################################################
 #                                                                                       #
@@ -464,9 +465,6 @@ shared_access_key_enabled = false
 # shared_access_key_enabled_nfs defines Storage account used for NFS shares authorization using Shared Access Key.
 shared_access_key_enabled_nfs = false
 
-# data_plane_available defines if storage account access is via data plane
-#data_plane_available = true
-
 
 # Value indicating if file shares are created when using existing storage accounts
 install_always_create_fileshares = true
@@ -482,9 +480,9 @@ install_create_smb_shares = true
 #########################################################################################
 
 # If defined provides the DNS label for the Virtual Network
-dns_label = "azure.sdaf.contoso.net"
+dns_label = "azure.sdaf.weeu.contoso.net"
 
-#If defined provides the lsit of DNS servers to attach to the Virtual NEtwork
+# If defined provides the list of DNS servers to attach to the Virtual NEtwork
 #dns_server_list = []
 
 #########################################################################################
@@ -502,6 +500,9 @@ NFS_provider = "ANF"
 # use_AFS_for_shared_storage defines if shared media is on AFS even when using ANF for data
 use_AFS_for_shared_storage = true
 
+# Defines if encryption in transit is enabled for AFS on NFS shares
+AFS_enable_encryption_in_transit = false
+
 #########################################################################################
 #                                                                                       #
 #  Azure NetApp files support                                                           #
@@ -511,22 +512,22 @@ use_AFS_for_shared_storage = true
 # ANF_account_name is the name for the Netapp Account
 #ANF_account_name = ""
 
-#ANF_service_level is the service level for the NetApp pool
+# ANF_service_level is the service level for the NetApp pool
 ANF_service_level = "Ultra"
 
-#ANF_pool_name is the ANF pool name
+# ANF_pool_name is the ANF pool name
 #ANF_pool_name = ""
 
-#ANF_pool_size is the pool size in TB for the NetApp pool
+# ANF_pool_size is the pool size in TB for the NetApp pool
 ANF_pool_size = 8
 
-#ANF_qos_type defines the Quality of Service type of the pool (Auto or Manual)
+# ANF_qos_type defines the Quality of Service type of the pool (Auto or Manual)
 ANF_qos_type = "Manual"
 
 # ANF_account_arm_id is the Azure resource identifier for an existing Netapp Account
 #ANF_account_arm_id = ""
 
-#ANF_use_existing_pool defines if an existing pool is used
+# ANF_use_existing_pool defines if an existing pool is used
 #ANF_use_existing_pool = false
 
 #########################################################################################
@@ -556,16 +557,16 @@ ANF_qos_type = "Manual"
 #                                                                                       #
 #########################################################################################
 
-#ANF_install_volume_use_existing defines if an existing volume is used for install
+# ANF_install_volume_use_existing defines if an existing volume is used for install
 #ANF_install_volume_use_existing = false
 
-#ANF_install_volume_name is the name of the install volume
+# ANF_install_volume_name is the name of the install volume
 #ANF_install_volume_name = ""
 
-#ANF_install_volume_throughput is the throughput for the install volume
+# ANF_install_volume_throughput is the throughput for the install volume
 #ANF_install_volume_throughput = 0
 
-#ANF_install_volume_size is the size for the install volume
+# ANF_install_volume_size is the size for the install volume
 #ANF_install_volume_size = 0
 
 # ANF_install_volume_zone is the zone for the transport volume
@@ -578,7 +579,7 @@ ANF_qos_type = "Manual"
 ###########################################################################
 
 # Number of iSCSI devices to be created
-iscsi_count = 0
+iscsi_count = 3
 
 # Size of iSCSI Virtual Machines to be created
 iscsi_size = "Standard_D2s_v3"
@@ -587,7 +588,15 @@ iscsi_size = "Standard_D2s_v3"
 iscsi_useDHCP = true
 
 # Defines the Virtual Machine image for the iSCSI devices
-#iscsi_image = {}
+iscsi_image = {
+  os_type = "LINUX",
+  source_image_id = "",
+  publisher = "SUSE",
+  offer = "sles-sap-15-sp7",
+  sku = "gen2",
+  version = "latest",
+  type = "marketplace"
+}
 
 # Defines the Virtual Machine authentication type for the iSCSI devices
 iscsi_authentication_type = "key"
@@ -615,9 +624,6 @@ iscsi_authentication_username = "azureadm"
 
 # deployer_tfstate_key is the state file name for the deployer
 #deployer_tfstate_key = ""
-
-# use_spn defines if the deployments are performed using Service Principals or the deployer's managed identiry, true=SPN, false=MSI
-use_spn = false
 
 
 #########################################################################################
@@ -709,39 +715,3 @@ deploy_nat_gateway = false
 
 # If provided, the tags for the NAT Gateway public IP
 #nat_gateway_public_ip_tags = {}
-
-#########################################################################################
-#                                                                                       #
-#                               Export Share Control                                    #
-#                                                                                       #
-#########################################################################################
-
-# export_install_path defines if the export mount path should be created for the installation media
-#export_install_path = true
-
-# export_transport_path defines if the export mount path should be created for the transport media
-#export_transport_path = true
-
-#########################################################################################
-#                                                                                       #
-#                               Miscellaneous Settings                                  #
-#                                                                                       #
-#########################################################################################
-
-# assign_permissions defines if subscription permissions should be assigned
-#assign_permissions = false
-
-# spn_id defines the Service Principal Id to be used for the deployment
-#spn_id = ""
-
-# platform_updates specifies whether VMAgent Platform Updates is enabled
-#platform_updates = "true"
-
-# additional_network_id defines the Agent Network resource ID
-#additional_network_id = ""
-
-# additional_subnet_id defines the Agent subnet resource ID
-#additional_subnet_id = ""
-
-# custom_random_id defines a custom random id value
-#custom_random_id = ""
