@@ -2,7 +2,7 @@
   "db": {
     "Custom": {
       "compute": {
-        "vm_size": "Standard_E20ds_v4",
+        "vm_size": "Standard_E20d_v5",
         "accelerated_networking": true
       },
       "storage": [
