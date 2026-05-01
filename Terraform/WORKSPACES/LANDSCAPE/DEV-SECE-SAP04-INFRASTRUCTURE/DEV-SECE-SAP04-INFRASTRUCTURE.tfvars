@@ -2,23 +2,23 @@
 #                                                                                       #
 # Workload zone description                                                             #
 #                                                                                       #
-# Azure Region:       westeurope                                                        #
-# Workload Zone:      PRD-WEEU-SAP03                                                    #
+# Azure Region:       swedencentral                                                     #
+# Workload Zone:      DEV-SECE-SAP04                                                    #
 #                                                                                       #
 # Virtual Network:    New                                                               #
 # App Subnet:         Defined                                                           #
 # DB Subnet:          Defined
 # Web Subnet:         Defined                                                           #
 # Admin Subnet:       Defined                                                           #
-# ANF Subnet:         Defined                                                           #
-# Storage Subnet:     Defined                                                           #
-# iSCSI Subnet:       Defined                                                           #
+# ANF Subnet:         Not defined                                                       #
+# Storage Subnet:     Not defined                                                       #
+# iSCSI Subnet:       Not defined                                                       #
 #                                                                                       #
 # Key Vault:          New                                                               #
 # NAT:                No                                                                #
 #                                                                                       #
-# iSCSI servers:      3 x SUSE sles-sap-15-sp7 gen2                                     #
-# NFS Implementation: ANF                                                               #
+# iSCSI servers:      Not in use                                                        #
+# NFS Implementation: NFS                                                               #
 #                                                                                       #
 #########################################################################################
 
@@ -49,19 +49,19 @@
 #########################################################################################
 
 # The environment value is a mandatory field, it is used for partitioning the environments, for example (PROD and NP)
-environment = "PRD"
+environment = "DEV"
 
 # The location value is a mandatory field, it is used to control where the resources are deployed
-location = "westeurope"
+location = "swedencentral"
 
 # Description of the Workload zone.
-#Description = ""
+Description = "Workload zone for Development systems"
 
 # If you want to provide a custom naming json use the following parameter.
 #name_override_file = ""
 
 # The subscription ID is used to control where the resources are deployed
-# subscription_id = ""
+#subscription_id = ""
 
 #########################################################################################
 #                                                                                       #
@@ -85,7 +85,7 @@ location = "westeurope"
 #########################################################################################
 
 # The network logical name is mandatory - it is used in the naming convention and should map to the workload virtual network logical name
-network_logical_name = "SAP03"
+network_logical_name = "SAP04"
 
 # The name is optional - it can be used to override the default naming
 #network_name = ""
@@ -94,7 +94,7 @@ network_logical_name = "SAP03"
 #network_arm_id = ""
 
 # network_address_space is a mandatory parameter when an existing Virtual network is not used
-network_address_space = ["10.113.0.0/19"]
+network_address_space = ["10.114.0.0/19"]
 
 # use_private_endpoint is a boolean flag controlling if the key vaults and storage accounts have private endpoints
 use_private_endpoint = true
@@ -112,7 +112,7 @@ enable_firewall_for_keyvaults_and_storage = true
 public_network_access_enabled = false
 
 # place_delete_lock_on_resources, If defined, a delete lock will be placed on the key resources
-place_delete_lock_on_resources = false
+place_delete_lock_on_resources = true
 
 # The flow timeout in minutes of the virtual network
 #network_flow_timeout_in_minutes = 0
@@ -130,7 +130,7 @@ place_delete_lock_on_resources = false
 #admin_subnet_name = ""
 
 # admin_subnet_address_prefix is a mandatory parameter if the subnets are not defined in the workload or if existing subnets are not used
-admin_subnet_address_prefix = "10.113.20.0/22"
+admin_subnet_address_prefix = "10.114.20.0/22"
 
 # admin_subnet_arm_id is an optional parameter that if provided specifies Azure resource identifier for the existing subnet to use
 #admin_subnet_arm_id = ""
@@ -152,7 +152,7 @@ admin_subnet_address_prefix = "10.113.20.0/22"
 #db_subnet_name = ""
 
 # db_subnet_address_prefix is a mandatory parameter if the subnets are not defined in the workload or if existing subnets are not used
-db_subnet_address_prefix = "10.113.16.0/22"
+db_subnet_address_prefix = "10.114.16.0/22"
 
 # db_subnet_arm_id is an optional parameter that if provided specifies Azure resource identifier for the existing subnet to use
 #db_subnet_arm_id = ""
@@ -174,7 +174,7 @@ db_subnet_address_prefix = "10.113.16.0/22"
 #app_subnet_name = ""
 
 # app_subnet_address_prefix is a mandatory parameter if the subnets are not defined in the workload or if existing subnets are not used
-app_subnet_address_prefix = "10.113.24.0/22"
+app_subnet_address_prefix = "10.114.24.0/22"
 
 # app_subnet_arm_id is an optional parameter that if provided specifies Azure resource identifier for the existing subnet to use
 #app_subnet_arm_id = ""
@@ -196,7 +196,7 @@ app_subnet_address_prefix = "10.113.24.0/22"
 #web_subnet_name = ""
 
 # web_subnet_address_prefix is a mandatory parameter if the subnets are not defined in the workload or if existing subnets are not used
-web_subnet_address_prefix = "10.113.28.0/22"
+web_subnet_address_prefix = "10.114.28.0/22"
 
 # web_subnet_arm_id is an optional parameter that if provided specifies Azure resource identifier for the existing subnet to use
 #web_subnet_arm_id = ""
@@ -222,7 +222,7 @@ web_subnet_address_prefix = "10.113.28.0/22"
 
 # ANF requires a dedicated subnet, the address space for the subnet is provided with  anf_subnet_address_prefix
 # anf_subnet_address_prefix is a mandatory parameter if the subnets are not defined in the workload or if existing subnets are not used
-anf_subnet_address_prefix = "10.113.4.0/22"
+#anf_subnet_address_prefix = ""
 
 # $anf_subnet_nsg_name is an optional parameter and should only be used if the default naming is not acceptable for the network security group name
 #anf_subnet_nsg_name = ""
@@ -245,7 +245,7 @@ anf_subnet_address_prefix = "10.113.4.0/22"
 #iscsi_subnet_arm_id = ""
 
 # iscsi_subnet_address_prefix is a mandatory parameter if the subnets are not defined in the workload or if existing subnets are not used
-iscsi_subnet_address_prefix = "10.113.8.0/22"
+#iscsi_subnet_address_prefix = ""
 
 # iscsi_subnet_nsg_arm_id is an optional parameter that if provided specifies Azure resource identifier for the existing nsg
 #iscsi_subnet_nsg_arm_id = ""
@@ -290,7 +290,7 @@ iscsi_subnet_address_prefix = "10.113.8.0/22"
 #storage_subnet_arm_id = ""
 
 # storage_subnet_address_prefix is a mandatory parameter if the subnets are not defined in the workload or if existing subnets are not used
-storage_subnet_address_prefix = "10.113.0.0/22"
+#storage_subnet_address_prefix = ""
 
 # storage_subnet_nsg_arm_id is an optional parameter that if provided specifies Azure resource identifier for the existing nsg
 #storage_subnet_nsg_arm_id = ""
@@ -299,7 +299,7 @@ storage_subnet_address_prefix = "10.113.0.0/22"
 #storage_subnet_nsg_name = ""
 
 # use_separate_storage_subnet defines if a separate subnet is used (HANA Scale Out scenario))
-use_separate_storage_subnet = true
+use_separate_storage_subnet = false
 
 #########################################################################################
 #                                                                                       #
@@ -337,7 +337,7 @@ patch_assessment_mode = "ImageDefault"
 #resourcegroup_arm_id = ""
 
 # Prevent deletion of resource group if there are Resources left within the Resource Group during deletion
-prevent_deletion_if_contains_resources = false
+prevent_deletion_if_contains_resources = true
 
 #########################################################################################
 #                                                                                       #
@@ -495,7 +495,7 @@ dns_label = "azure.sdaf.weeu.contoso.net"
 # AFS indicates that Azure Files for NFS is used
 # ANF indicates that Azure NetApp Files is used
 # NFS indicates that a custom solution is used for NFS
-NFS_provider = "ANF"
+NFS_provider = "NFS"
 
 # use_AFS_for_shared_storage defines if shared media is on AFS even when using ANF for data
 use_AFS_for_shared_storage = true
@@ -519,7 +519,7 @@ ANF_service_level = "Ultra"
 #ANF_pool_name = ""
 
 # ANF_pool_size is the pool size in TB for the NetApp pool
-ANF_pool_size = 8
+#ANF_pool_size = 0
 
 # ANF_qos_type defines the Quality of Service type of the pool (Auto or Manual)
 ANF_qos_type = "Manual"
@@ -579,7 +579,7 @@ ANF_qos_type = "Manual"
 ###########################################################################
 
 # Number of iSCSI devices to be created
-iscsi_count = 3
+iscsi_count = 0
 
 # Size of iSCSI Virtual Machines to be created
 iscsi_size = "Standard_D2s_v3"
@@ -588,15 +588,7 @@ iscsi_size = "Standard_D2s_v3"
 iscsi_useDHCP = true
 
 # Defines the Virtual Machine image for the iSCSI devices
-iscsi_image = {
-  os_type = "LINUX",
-  source_image_id = "",
-  publisher = "SUSE",
-  offer = "sles-sap-15-sp7",
-  sku = "gen2",
-  version = "latest",
-  type = "marketplace"
-}
+#iscsi_image = {}
 
 # Defines the Virtual Machine authentication type for the iSCSI devices
 iscsi_authentication_type = "key"
@@ -634,10 +626,10 @@ iscsi_authentication_username = "azureadm"
 
 
 # Defines the number of workload _vms to create
-utility_vm_count = 1
+utility_vm_count = 0
 
 # Defines the SKU for the workload virtual machine
-utility_vm_size = "Standard_D4ds_v4"
+#utility_vm_size = ""
 
 # Defines the size of the OS disk for the Virtual Machine
 utility_vm_os_disk_size = "128"
@@ -650,15 +642,7 @@ utility_vm_os_disk_type = "Premium_LRS"
 utility_vm_useDHCP = true
 
 # Defines if the utility virtual machine image
-utility_vm_image = {
-  os_type = "windows",
-  source_image_id = "",
-  publisher = "MicrosoftWindowsServer",
-  offer = "windowsserver",
-  sku = "2022-datacenter",
-  version = "latest",
-  type = ""
-}
+#utility_vm_image = {}
 
 # Defines if the utility virtual machine IP
 #utility_vm_nic_ips = []

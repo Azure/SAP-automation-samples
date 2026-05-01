@@ -3,11 +3,11 @@
 # Workload zone description                                                             #
 #                                                                                       #
 # Azure Region:       westeurope                                                        #
-# Workload Zone:      DEV--SAP01                                                        #
+# Workload Zone:      DEV-WEEU-SAP01                                                    #
 #                                                                                       #
 # Virtual Network:    New                                                               #
 # App Subnet:         Defined                                                           #
-# DB Subnet:          Defined                                                           
+# DB Subnet:          Defined
 # Web Subnet:         Defined                                                           #
 # Admin Subnet:       Defined                                                           #
 # ANF Subnet:         Not defined                                                       #
@@ -94,7 +94,7 @@ network_logical_name = "SAP01"
 #network_arm_id = ""
 
 # network_address_space is a mandatory parameter when an existing Virtual network is not used
-network_address_space = ["10.110.0.0/16"]
+network_address_space = ["10.111.0.0/19"]
 
 # use_private_endpoint is a boolean flag controlling if the key vaults and storage accounts have private endpoints
 use_private_endpoint = true
@@ -130,7 +130,7 @@ place_delete_lock_on_resources = true
 #admin_subnet_name = ""
 
 # admin_subnet_address_prefix is a mandatory parameter if the subnets are not defined in the workload or if existing subnets are not used
-admin_subnet_address_prefix = "10.110.0.0/19"
+admin_subnet_address_prefix = "10.111.20.0/22"
 
 # admin_subnet_arm_id is an optional parameter that if provided specifies Azure resource identifier for the existing subnet to use
 #admin_subnet_arm_id = ""
@@ -152,7 +152,7 @@ admin_subnet_address_prefix = "10.110.0.0/19"
 #db_subnet_name = ""
 
 # db_subnet_address_prefix is a mandatory parameter if the subnets are not defined in the workload or if existing subnets are not used
-db_subnet_address_prefix = "10.110.96.0/19"
+db_subnet_address_prefix = "10.111.16.0/22"
 
 # db_subnet_arm_id is an optional parameter that if provided specifies Azure resource identifier for the existing subnet to use
 #db_subnet_arm_id = ""
@@ -174,7 +174,7 @@ db_subnet_address_prefix = "10.110.96.0/19"
 #app_subnet_name = ""
 
 # app_subnet_address_prefix is a mandatory parameter if the subnets are not defined in the workload or if existing subnets are not used
-app_subnet_address_prefix = "10.110.32.0/19"
+app_subnet_address_prefix = "10.111.24.0/22"
 
 # app_subnet_arm_id is an optional parameter that if provided specifies Azure resource identifier for the existing subnet to use
 #app_subnet_arm_id = ""
@@ -196,7 +196,7 @@ app_subnet_address_prefix = "10.110.32.0/19"
 #web_subnet_name = ""
 
 # web_subnet_address_prefix is a mandatory parameter if the subnets are not defined in the workload or if existing subnets are not used
-web_subnet_address_prefix = "10.110.128.0/19"
+web_subnet_address_prefix = "10.111.28.0/22"
 
 # web_subnet_arm_id is an optional parameter that if provided specifies Azure resource identifier for the existing subnet to use
 #web_subnet_arm_id = ""
@@ -337,7 +337,7 @@ patch_assessment_mode = "ImageDefault"
 #resourcegroup_arm_id = ""
 
 # Prevent deletion of resource group if there are Resources left within the Resource Group during deletion
-prevent_deletion_if_contains_resources = false
+prevent_deletion_if_contains_resources = true
 
 #########################################################################################
 #                                                                                       #
