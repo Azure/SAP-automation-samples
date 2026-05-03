@@ -40,10 +40,10 @@ materials:
       path:                                  download_basket
       url:                                   https://softwaredownloads.sap.com/file/0020000000703122018
 
-    - name:                                  "R3Trans SAP KERNEL 9.16 64-BIT UNICODE Linux on x86_64 64bit #Database independent"
-      archive:                               R3trans_89-70008127.SAR
-      url:                                   https://softwaredownloads.sap.com/file/0025000000089212026
-      path:                                  download_basket
-      download:                              true
-      checksum:                              bf9fca99e48ba4017aa35b3c46bb77bd976f5dad1dbb77bfd12f09bcf81b3b17
+    # - name:                                  "R3Trans SAP KERNEL 9.16 64-BIT UNICODE Linux on x86_64 64bit #Database independent"
+    #   archive:                               R3trans_89-70008127.SAR
+    #   url:                                   https://softwaredownloads.sap.com/file/0025000000089212026
+    #   path:                                  download_basket
+    #   download:                              true
+    #   checksum:                              bf9fca99e48ba4017aa35b3c46bb77bd976f5dad1dbb77bfd12f09bcf81b3b17
 ...
