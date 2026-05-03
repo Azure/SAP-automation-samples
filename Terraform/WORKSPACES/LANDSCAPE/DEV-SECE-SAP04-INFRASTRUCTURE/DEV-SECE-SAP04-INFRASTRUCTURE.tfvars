@@ -480,7 +480,7 @@ install_create_smb_shares = true
 #########################################################################################
 
 # If defined provides the DNS label for the Virtual Network
-dns_label = "azure.sdaf.weeu.contoso.net"
+dns_label = "azure.sdaf.sece.contoso.net"
 
 # If defined provides the list of DNS servers to attach to the Virtual NEtwork
 #dns_server_list = []
