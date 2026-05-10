@@ -4,7 +4,8 @@
 #      1 Deployer (deployer_count = 1)                                                   #
 #      Azure Firewall (firewall_deployment = true)                                       #
 #      Azure Bastion (bastion_deployment = true)                                         #
-#      Azure Web App (use_webapp = true)                                                 #
+#      Azure Web App (app_service_deployment = true)                                     #
+#      Azure App Config (application_configuration_deployment = true)                    #
 #                                                                                        #
 ##########################################################################################
 
@@ -148,12 +149,6 @@ management_bastion_subnet_address_prefix = "10.170.20.128/26"
 #                                   Azure Web App                                       #
 #                                                                                       #
 #########################################################################################
-
-# use_webapp is a boolean flag controlling if configuration Web App is to be deployed in the deployer VNet (deprecated, use app_service_deployment)
-use_webapp = false
-
-# app_service_deployment is a boolean flag controlling if configuration Web App is to be deployed in the deployer VNet
-#app_service_deployment = false
 
 # webapp_subnet_arm_id is an optional parameter that if provided specifies Azure resource
 # identifier for the existing  subnet
@@ -444,7 +439,7 @@ app_service_deployment = false
 #application_configuration_id = ""
 
 # If defined, will add the Azure Application configuration to the control plane
-application_configuration_deployment = false
+application_configuration_deployment = true
 
 #########################################################################################
 #                                                                                       #

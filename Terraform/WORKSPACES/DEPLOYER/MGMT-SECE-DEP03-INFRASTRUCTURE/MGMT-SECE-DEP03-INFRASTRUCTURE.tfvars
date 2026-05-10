@@ -4,7 +4,8 @@
 #      1 Deployer (deployer_count = 1)                                                   #
 #      Azure Firewall (firewall_deployment = true)                                       #
 #      Azure Bastion (bastion_deployment = true)                                         #
-#      Azure Web App (use_webapp = true)                                                 #
+#      Azure Web App (app_service_deployment = false)                                    #
+#      Azure App Config (application_configuration_deployment = true)                    #
 #                                                                                        #
 ##########################################################################################
 
@@ -148,13 +149,6 @@ management_bastion_subnet_address_prefix = "10.173.20.128/26"
 #                                   Azure Web App                                       #
 #                                                                                       #
 #########################################################################################
-
-# use_webapp indicates if a webapp should be deployed
-#use_webapp = false
-
-# app_service_deployment indicates if a webapp should be deployed
-app_service_deployment = true
-
 
 # webapp_subnet_arm_id is an optional parameter that if provided specifies Azure resource
 # identifier for the existing  subnet
@@ -412,6 +406,43 @@ enable_firewall_for_keyvaults_and_storage = true
 
 #########################################################################################
 #                                                                                       #
+#                              Web Application Settings                                 #
+#                                                                                       #
+#########################################################################################
+
+# use_webapp indicates if a webapp should be deployed
+#use_webapp = false
+
+# app_service_deployment indicates if a webapp should be deployed
+app_service_deployment = false
+
+# app_registration_app_id defines the app registration id to be used for the webapp
+#app_registration_app_id = ""
+
+# sa_connection_string defines the connection string for the Terraform state storage account
+#sa_connection_string = ""
+
+# webapp_client_secret defines the client secret for the webapp
+#webapp_client_secret = ""
+
+# app_service_devops_authentication_type defines the Authentication to use when calling Azure DevOps, MSI/PAT
+#app_service_devops_authentication_type = "MSI"
+
+# app_service_SKU_name defines the SKU of the App Service Plan
+#app_service_SKU_name = "S1"
+
+# enable_firewall_for_keyvaults_and_storage indicates if firewall should be enabled for key vaults and storage [OBSOLETE]
+#enable_firewall_for_keyvaults_and_storage = false
+
+# Agent_IP defines the IP address of the agent
+#Agent_IP = ""
+
+# add_Agent_IP indicates if the Agent IP should be added to the storage and key vault firewalls
+#add_Agent_IP = true
+
+
+#########################################################################################
+#                                                                                       #
 #                                    Identity                                           #
 #                                                                                       #
 #########################################################################################
@@ -435,7 +466,7 @@ enable_firewall_for_keyvaults_and_storage = true
 #application_configuration_id = ""
 
 # If defined, will add the Azure Application configuration to the control plane
-application_configuration_deployment = false
+application_configuration_deployment = true
 
 #########################################################################################
 #                                                                                       #
