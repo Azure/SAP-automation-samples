@@ -1,14 +1,14 @@
 ---
-name:                                  'SUM20SP25'
-target:                                'SUM20SP25'
-version:                               006
+name:                                  'SUM20SP25_8'
+target:                                'SUM20SP25_8'
+version:                               008
 
 materials:
 
   media:
 
-  - name:                              "Patch 6 for SOFTWARE UPDATE MANAGER 2.0 SP25 (Windows on x64 64bit)"
-    archive:                           SUM20SP25_6-80002458.SAR
-    checksum:                          e1820b3f1f49302ad1ccfa37cace9ec48ee60dca80bd96ab60ddb317796b0e0d
+  - name:                              "Patch 8 for SOFTWARE UPDATE MANAGER 2.0 SP25 (Windows on x64 64bit)"
+    archive:                           SUM20SP25_8-80002458.SAR
+    checksum:                          1dde56aad276c2a79b748b3893a7b39a72fbfe25f4e38f33c3e7e05588d30387
     download:                          false
-    url:                               https://softwaredownloads.sap.com/file/0020000000237202026
+    url:                               https://softwaredownloads.sap.com/file/0020000000334102026

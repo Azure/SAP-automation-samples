@@ -1,0 +1,16 @@
+---
+# Updated 11032026
+
+name:                                  'SUM20SP25'
+target:                                'SUM20SP25'
+version:                               007
+
+materials:
+
+  media:
+  # SUM
+  - name:                              "Patch 7 for SOFTWARE UPDATE MANAGER 2.0 SP25 (Linux on x86_64)"
+    archive:                           SUM20SP25_7-80002456.SAR
+    checksum:                          d1d9edaca8403914ceaa490bb575f96245179dd747266a5e1646305f95120cc8
+    download:                          false
+    url:                               https://softwaredownloads.sap.com/file/0020000000278912026

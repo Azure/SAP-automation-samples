@@ -1,0 +1,14 @@
+---
+name:                                  'SUM20SP25'
+target:                                'SUM20SP25'
+version:                               006
+
+materials:
+
+  media:
+
+  - name:                              "Patch 6 for SOFTWARE UPDATE MANAGER 2.0 SP25 (Windows on x64 64bit)"
+    archive:                           SUM20SP25_6-80002458.SAR
+    checksum:                          e1820b3f1f49302ad1ccfa37cace9ec48ee60dca80bd96ab60ddb317796b0e0d
+    download:                          false
+    url:                               https://softwaredownloads.sap.com/file/0020000000237202026
