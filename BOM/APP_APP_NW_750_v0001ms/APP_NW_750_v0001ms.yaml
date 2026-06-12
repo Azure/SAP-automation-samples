@@ -22,7 +22,7 @@ product_ids:
 materials:
   dependencies:
     - name:                                  SWPM10SP45_latest
-    - name:                                  SUM11S530_latest
+    - name:                                  SUM11SP50_latest
 
   media:
     - name:                                  "SAPCAR 7.53; OS: Linux on x86_64 64bit"
