@@ -23,7 +23,7 @@ materials:
   dependencies:
     - name:                                  "MSSQLSRV_2019_v0001ms"
     - name:                                  "SUM20SP21_win_latest"
-    - name:                                  "SWPM10SP44_win_latest"
+    - name:                                  "SWPM10SP47_win_latest"
 
   media:
 
@@ -46,10 +46,10 @@ materials:
       url:                                   https://softwaredownloads.sap.com/file/0020000000982362024
       path:                                  download_basket
 
-    - name:                                  "SAP HOST AGENT 7.22 SP66"
-      archive:                               SAPHOSTAGENT66_66-80004825.SAR
-      url:                                   https://softwaredownloads.sap.com/file/0020000001381042024
-      checksum:                              390a029ba9d24ddc471c62c88e64faac746d7058881eec1fabd74d0a2d65098d
+    - name:                                  "SAP HOST AGENT 7.22 SP71"
+      archive:                               SAPHOSTAGENT71_71-80004825.SAR
+      url:                                   https://softwaredownloads.sap.com/file/0020000000347602026
+      checksum:                              448320226cf0e63dd9a5ec4805b56f12958583f01c94c5d284257555cffa6126
       path:                                  download_basket
 
     - name:                                  "Support Package SAP KERNEL 7.54 64-BIT UNICODE"
