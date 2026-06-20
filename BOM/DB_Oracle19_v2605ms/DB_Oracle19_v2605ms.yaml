@@ -233,7 +233,7 @@ materials:
       extractDir:                            SBP/SGR19P
       path:                                  SBP
       creates:                               SIGNATURE.SMF
-      url:                                   https://softwaredownloads.sap.com/file/0020000000349522026
+      url:                                   https://softwaredownloads.sap.com/file/0020000000350812026
       platform:                              ORACLE-ASM
 
 
@@ -246,7 +246,6 @@ materials:
       path:                                  SBP
       url:                                   https://softwaredownloads.sap.com/file/0020000000349632026
       platform:                              ORACLE-ASM
-
 
 
 
