@@ -12,7 +12,7 @@ code:                                        ORA
 # Oracle client software download updated 12/06/2026
 patch_information:
   info:                                      "Oracle client software download updated 12/06/2026."
-  SBP_DBRU:                                  39036936
+  SBP_DBRU:                                  39034528
   SBP_OCWRU:                                 39039430
   SBP_ACFSRU:                                39044141
   SBP_JDKRU:                                 38930593
@@ -235,6 +235,18 @@ materials:
       creates:                               SIGNATURE.SMF
       url:                                   https://softwaredownloads.sap.com/file/0020000000349522026
       platform:                              ORACLE-ASM
+
+
+    - name:                                  "Grid Infrastructure ACFS Merge 19.31.0.0.260421"
+      archive:                               GIMERGEACFS19P_2605-70004550.ZIP
+      checksum:                              d4681bb4f8c992158c9bcac3f9a583c1380ef7fd15722d3cb255e8e3f64bb39b
+      extract:                               true
+      download:                              true
+      extractDir:                            SBP/GIMERGEACFS19P
+      path:                                  SBP
+      url:                                   https://softwaredownloads.sap.com/file/0020000000349632026
+      platform:                              ORACLE-ASM
+
 
 
 
