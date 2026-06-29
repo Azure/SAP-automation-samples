@@ -1,0 +1,17 @@
+---
+
+name:                                  'SWPM20SP24'
+target:                                'SWPM20SP24'
+version:                               1
+
+materials:
+
+  media:
+    # SWPM
+    - name:                            "Support Package SOFTWARE PROVISIONING MGR 2.0 SP24 Linux on x86_64 64bit"
+      archive:                         SWPM20SP24_1-80003424.SAR
+      checksum:                        220ba9fb5da6526f3e8ce0991d41b128af26f0d7d11d654d4cd6d792702b4c43
+      extract:                         true
+      extractDir:                      SWPM
+      creates:                         SIGNATURE.SMF
+      url:                             https://softwaredownloads.sap.com/file/0020000000444322026
