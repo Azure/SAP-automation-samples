@@ -1,0 +1,16 @@
+---
+# Updated 11032026
+
+name:                                  'SUM20SP26_2'
+target:                                'SUM20SP26_2'
+version:                               002
+
+materials:
+
+  media:
+  # SUM
+  - name:                              "Patch 2 for SOFTWARE UPDATE MANAGER 2.0 SP26 (Linux on x86_64)"
+    archive:                           SUM20SP26_2-80002457.SAR
+    checksum:                          aa48d615c4bee9d058a945a0a2d4576e2b307d1205dde75f610db62678494a88
+    download:                          false
+    url:                               https://softwaredownloads.sap.com/file/0020000000463042026
