@@ -29,7 +29,7 @@ product_ids:
 
 materials:
   dependencies:
-    - name:                                  "SUM20SP25_latest"
+    - name:                                  "SUM20SP26_latest"
     - name:                                  "SWPM20SP24_latest"
   media:
 
