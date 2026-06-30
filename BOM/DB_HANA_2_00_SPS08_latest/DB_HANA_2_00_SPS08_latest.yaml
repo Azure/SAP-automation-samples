@@ -41,21 +41,21 @@ materials:
       path:                                  download_basket
       url:                                   https://softwaredownloads.sap.com/file/0020000000395382026
 
-    - name:                                  "SAP HANA AFL Rev 89.200 only for HANA 2.0 Rev 89.02"
-      archive:                               IMDB_AFL20_089P_200-80001894.SAR
-      checksum:                              e743fae53d225418ceb58249c684369dab88070c5f890fcbd0e38039140272a3
+    - name:                                  "SAP HANA AFL Rev 89.300 only for HANA 2.0 Rev 89.03"
+      archive:                               IMDB_AFL20_089P_300-80001894.SAR
+      checksum:                              1cac69cc5d4aea7593c270594531092d8f19b541c68e49509fdfde82621d31d5
       extract:                               true
       extractDir:                            CD_HDBSERVER/COMPONENTS
       creates:                               COMPONENTS/SAP_HANA_AFL/packages
-      url:                                   https://softwaredownloads.sap.com/file/0025000000154022026
+      url:                                   https://softwaredownloads.sap.com/file/0020000000396602026
 
-    - name:                                  "LCAPPS for HANA 2.0 Rev 89.02 Build 101.24 PL 009"
-      archive:                               IMDB_LCAPPS_2089P_200-20010426.SAR
-      checksum:                              d96d66660227251269d486407a7504743c2d8ab4f3fe978d37aeef4a7f894c33
-      extract:                               true
+    - name:                                  "LCAPPS for HANA 2.0 Rev 89.03 Build 101.25 PL 001"
+      archive:                               IMDB_LCAPPS_2089P_300-20010426.SAR
+      checksum:                              7423bab1e50a4d13d3746ecaf24ad6cdb0d896b3c158b7a9869ea7df4b44f7f4
+      url:                                   https://softwaredownloads.sap.com/file/0020000000396782026
+      extract:                               True
       extractDir:                            CD_HDBSERVER/COMPONENTS
       creates:                               COMPONENTS/SAP_HANA_LCAPPS/packages
-      url:                                   https://softwaredownloads.sap.com/file/0025000000154082026
 
     - name:                                  "VCH AFL 2023 Rev 89.0 only for HANA 2.0 Rev 89"
       archive:                               VCH202300_2089_0-70007416.SAR
