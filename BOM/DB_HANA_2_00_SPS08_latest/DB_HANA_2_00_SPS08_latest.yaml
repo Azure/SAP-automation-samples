@@ -22,24 +22,24 @@ materials:
       path:                                  downloads
       url:                                   https://softwaredownloads.sap.com/file/0020000000488622025
 
-    # HANA Client v2.28
-    - name:                                  "SAP HANA CLIENT Version 2.28; OS: Linux on x86_64 64bit"
-      archive:                               IMDB_CLIENT20_028_20-80002082.SAR
-      checksum:                              d9ba5f3b0d66671cbc16429b3ad2390da8300de54886f9e0f9de47ace750ad2d
+    # HANA Client v2.29
+    - name:                                  "SAP HANA CLIENT Version 2.29; OS: Linux on x86_64 64bit"
+      archive:                               IMDB_CLIENT20_029_23-80002082.SAR
+      checksum:                              dd9b1b438db8460f8e039ba497e9ed07736f035201b1667c78d1c9a64da6ec29
       extract:                               true
       extractDir:                            CD_HDBCLIENT
       creates:                               SIGNATURE.SMF
       path:                                  download_basket
-      url:                                   https://softwaredownloads.sap.com/file/0020000000230782026
+      url:                                   https://softwaredownloads.sap.com/file/0020000000439952026
       
-    - name:                                  "Revision 2.00.089.2 (SPS08) for HANA DB 2.0"
-      archive:                               IMDB_SERVER20_089_2-80002031.SAR
-      checksum:                              923fe77857539400801e920acd9369ee3c1540773fee1ad750ee06300781a2aa
+    - name:                                  "Revision 2.00.089.3 (SPS08) for HANA DB 2.0"
+      archive:                               IMDB_SERVER20_089_3-80002031.SAR
+      checksum:                              3ef4361b476e17f9c56750525352a035eb4b9e5267864abff9c370dafacf4c62
       extract:                               true
       extractDir:                            CD_HDBSERVER
       creates:                               SIGNATURE.SMF
       path:                                  download_basket
-      url:                                   https://softwaredownloads.sap.com/file/0025000000154312026
+      url:                                   https://softwaredownloads.sap.com/file/0020000000395382026
 
     - name:                                  "SAP HANA AFL Rev 89.200 only for HANA 2.0 Rev 89.02"
       archive:                               IMDB_AFL20_089P_200-80001894.SAR
