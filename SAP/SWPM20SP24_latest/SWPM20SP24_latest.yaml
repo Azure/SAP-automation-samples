@@ -10,6 +10,7 @@ materials:
     # SWPM
     - name:                            "Support Package SOFTWARE PROVISIONING MGR 2.0 SP24 Linux on x86_64 64bit"
       archive:                         SWPM20SP24_2-80003424.SAR
+      checksum:                        e377379d9c1bfa6e1aa3b039815d7b6eb9f98ec951d5ae27a8ca6949c51ff27a
       extract:                         true
       extractDir:                      SWPM
       creates:                         SIGNATURE.SMF
