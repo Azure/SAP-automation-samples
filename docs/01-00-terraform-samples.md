@@ -36,7 +36,8 @@ The repository also contains:
   software-acquisition parameter file.
 - `Terraform/RESOURCE_NAMES/X00_resource_names.json`, an example custom
   resource-name definition.
-- `export.sh`, `export_cp.sh`, and `export_wl.sh`, local shell examples with
+- `Terraform/WORKSPACES/export.sh`, `Terraform/WORKSPACES/export_cp.sh`, and
+  `Terraform/WORKSPACES/export_wl.sh`, local shell examples with
   environment-specific paths and empty identity values. Do not treat them as
   production defaults.
 
