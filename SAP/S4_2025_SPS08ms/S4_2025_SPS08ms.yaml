@@ -30,7 +30,7 @@ patch_information:
 
 materials:
   dependencies:
-    - name:                             "HANA_2_00_SPS08_latest"
+    - name:                             "DB_HANA_2_00_SPS08_latest"
     - name:                             "SWPM20SP24_latest"
     - name:                             "SUM20SP26_latest"
   media:
