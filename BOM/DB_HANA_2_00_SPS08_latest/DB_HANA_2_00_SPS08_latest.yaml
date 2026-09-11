@@ -24,43 +24,43 @@ materials:
 
     # HANA Client v2.29
     - name:                                  "SAP HANA CLIENT Version 2.29; OS: Linux on x86_64 64bit"
-      archive:                               IMDB_CLIENT20_029_25-80002082.SAR
-      checksum:                              678925653b0f0fb8706cf72ab5d581e6d527a0cefaadbfc2971361fb21457538
+      archive:                               IMDB_CLIENT20_029_27-80002082.SAR
+      checksum:                              3b8d9a3eb3f0df052687bed39257958bc7f96997c3bd13413a773705e3eaa535
       extract:                               true
       extractDir:                            CD_HDBCLIENT
       creates:                               SIGNATURE.SMF
       path:                                  download_basket
-      url:                                   https://softwaredownloads.sap.com/file/0020000000528112026
+      url:                                   https://softwaredownloads.sap.com/file/0020000000718802026
       
-    - name:                                  "Revision 2.00.089.3 (SPS08) for HANA DB 2.0"
-      archive:                               IMDB_SERVER20_089_3-80002031.SAR
-      checksum:                              3ef4361b476e17f9c56750525352a035eb4b9e5267864abff9c370dafacf4c62
+    - name:                                  "Revision 2.00.089.4 (SPS08) for HANA DB 2.0"
+      archive:                               IMDB_SERVER20_089_4-80002031.SAR
+      checksum:                              672b0a9238891b32dbafbf52e5e2d05eae641360517f97cad4b6194327ddac37
       extract:                               true
       extractDir:                            CD_HDBSERVER
       creates:                               SIGNATURE.SMF
       path:                                  download_basket
-      url:                                   https://softwaredownloads.sap.com/file/0020000000395382026
+      url:                                   https://softwaredownloads.sap.com/file/0020000000600052026
 
-    - name:                                  "SAP HANA AFL Rev 89.300 only for HANA 2.0 Rev 89.03"
-      archive:                               IMDB_AFL20_089P_300-80001894.SAR
-      checksum:                              1cac69cc5d4aea7593c270594531092d8f19b541c68e49509fdfde82621d31d5
+    - name:                                  "SAP HANA AFL Rev 89.400 only for HANA 2.0 Rev 89.03"
+      archive:                               IMDB_AFL20_089P_400-80001894.SAR
+      checksum:                              4da71dde9f195201fe3206f3fd44a8752a364d80fbc0982e686f884cc44c5cfe
       extract:                               true
       extractDir:                            CD_HDBSERVER/COMPONENTS
       creates:                               COMPONENTS/SAP_HANA_AFL/packages
-      url:                                   https://softwaredownloads.sap.com/file/0020000000396602026
+      url:                                   https://softwaredownloads.sap.com/file/0020000000600472026
 
-    - name:                                  "LCAPPS for HANA 2.0 Rev 89.03 Build 101.25 PL 001"
-      archive:                               IMDB_LCAPPS_2089P_300-20010426.SAR
-      checksum:                              7423bab1e50a4d13d3746ecaf24ad6cdb0d896b3c158b7a9869ea7df4b44f7f4
-      url:                                   https://softwaredownloads.sap.com/file/0020000000396782026
+    - name:                                  "LCAPPS for HANA 2.0 Rev 89.04 Build 101.25 PL 001"
+      archive:                               IMDB_LCAPPS_2089P_400-20010426.SAR
+      checksum:                              aba6afcad1d284971c6dfca216352979c3d482204af10de7473c735dc9b31a0b
+      url:                                   https://softwaredownloads.sap.com/file/0020000000601002026
       extract:                               True
       extractDir:                            CD_HDBSERVER/COMPONENTS
       creates:                               COMPONENTS/SAP_HANA_LCAPPS/packages
 
-    - name:                                  "VCH AFL 2023 Rev 89.300 only for HANA 2.0 Rev 89.03"
-      archive:                               VCH202300_2089P_300-70007416.SAR
-      checksum:                              c8f9cfd070a3d74bc983ddcb6361391723f25e0cff2d886ba5ae7813a3cde4d0
-      url:                                   https://softwaredownloads.sap.com/file/0020000000396722026
+    - name:                                  "VCH AFL 2023 Rev 89.400 only for HANA 2.0 Rev 89.04"
+      archive:                               VCH202300_2089P_400-70007416.SAR
+      checksum:                              8f390a744b7fa5d5928c156d255003903d7caa39d42e36b827b312145cdc9e11
+      url:                                   https://softwaredownloads.sap.com/file/0020000000601132026
       extract:                               True
       extractDir:                            CD_HDBSERVER/COMPONENTS
       creates:                               COMPONENTS/VCH_AFL_2023/packages
