@@ -31,37 +31,37 @@ materials:
       creates:                               SIGNATURE.SMF
       path:                                  download_basket
       url:                                   https://softwaredownloads.sap.com/file/0020000000718802026
-      
-    - name:                                  "Revision 2.00.089.4 (SPS08) for HANA DB 2.0"
-      archive:                               IMDB_SERVER20_089_4-80002031.SAR
-      checksum:                              672b0a9238891b32dbafbf52e5e2d05eae641360517f97cad4b6194327ddac37
+
+    - name:                                  "Revision 2.00.089.5 (SPS08) for HANA DB 2.0"
+      archive:                               IMDB_SERVER20_089_5-80002031.SAR
+      checksum:                              67ae8cd82c7f1dcddb5c0c8c7cc5a856a14594a0a15e7eda1bc08e26ed94e01d
       extract:                               true
       extractDir:                            CD_HDBSERVER
       creates:                               SIGNATURE.SMF
       path:                                  download_basket
-      url:                                   https://softwaredownloads.sap.com/file/0020000000600052026
+      url:                                   https://softwaredownloads.sap.com/file/0020000000779662026
 
-    - name:                                  "SAP HANA AFL Rev 89.400 only for HANA 2.0 Rev 89.03"
-      archive:                               IMDB_AFL20_089P_400-80001894.SAR
-      checksum:                              4da71dde9f195201fe3206f3fd44a8752a364d80fbc0982e686f884cc44c5cfe
+    - name:                                  "SAP HANA AFL Rev 89.500 only for HANA 2.0 Rev 89.05"
+      archive:                               IMDB_AFL20_089P_500-80001894.SAR
+      checksum:                              ddd27061cece10825e871fe32d9881b5c0aa383a983b8618be86d85cf8f00209
       extract:                               true
       extractDir:                            CD_HDBSERVER/COMPONENTS
       creates:                               COMPONENTS/SAP_HANA_AFL/packages
-      url:                                   https://softwaredownloads.sap.com/file/0020000000600472026
+      url:                                   https://softwaredownloads.sap.com/file/0020000000779452026
 
-    - name:                                  "LCAPPS for HANA 2.0 Rev 89.04 Build 101.25 PL 001"
-      archive:                               IMDB_LCAPPS_2089P_400-20010426.SAR
-      checksum:                              aba6afcad1d284971c6dfca216352979c3d482204af10de7473c735dc9b31a0b
-      url:                                   https://softwaredownloads.sap.com/file/0020000000601002026
+    - name:                                  "LCAPPS for HANA 2.0 Rev 89.05 Build 101.25 PL 001"
+      archive:                               IMDB_LCAPPS_2089P_500-20010426.SAR
+      checksum:                              27b19c53756b91eb380e5b29746abf0db8eb21a0316da8ff1a26e572726846d0
+      url:                                   https://softwaredownloads.sap.com/file/0020000000779422026
       extract:                               True
       extractDir:                            CD_HDBSERVER/COMPONENTS
       creates:                               COMPONENTS/SAP_HANA_LCAPPS/packages
 
-    - name:                                  "VCH AFL 2023 Rev 89.400 only for HANA 2.0 Rev 89.04"
-      archive:                               VCH202300_2089P_400-70007416.SAR
-      checksum:                              8f390a744b7fa5d5928c156d255003903d7caa39d42e36b827b312145cdc9e11
-      url:                                   https://softwaredownloads.sap.com/file/0020000000601132026
-      extract:                               True
+    - name:                                  "VCH AFL 2023 Rev 89.500 only for HANA 2.0 Rev 89.05"
+      archive:                               VCH202300_2089P_500-70007416.SAR
+      checksum:                              037202bc61d8864cbadf1c65289507bb2b14a22996e6fd62f08760c39fe6142f
+      url:                                   https://softwaredownloads.sap.com/file/0020000000779192026
+      extract:                               true
       extractDir:                            CD_HDBSERVER/COMPONENTS
       creates:                               COMPONENTS/VCH_AFL_2023/packages
 
