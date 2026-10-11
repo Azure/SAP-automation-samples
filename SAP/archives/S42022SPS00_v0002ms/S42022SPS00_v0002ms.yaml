@@ -63,7 +63,7 @@ materials:
       url: https://softwaredownloads.sap.com/file/0020000000146922024
       checksum: ef60422cab183f76cae3c3296f0e9d08c9f692ff44542d23e94e0dedd50fbae4
       path: download_basket
-      
+
     - name: "Predi. Analy. APL 2203 for SAP HANA 2.0 SPS03 and beyond"
       archive: SAPPAAPL4_2203_2-80004547.ZIP
       url: https://softwaredownloads.sap.com/file/0020000000163142022
@@ -76,7 +76,7 @@ materials:
       checksum: c92e7ed27bd33c9e416a45e363032baad84039bf958f4a182e85b099be3fe377
       path: download_basket
 
-    - name: "SAP IGS Fonts and Textures"                           
+    - name: "SAP IGS Fonts and Textures"
       archive: igshelper_17-10010245.sar
       url: https://softwaredownloads.sap.com/file/0020000000703122018
       checksum: bc405afc4f8221aa1a10a8bc448f8afd9e4e00111100c5544097240c57c99732
@@ -985,7 +985,7 @@ materials:
     - name: "Attribute Change Package 36 for UIHR002 100"
       archive: UIHR002100.SAR
       url: https://softwaredownloads.sap.com/file/0010000020208092017
-      checksum: 689436077b2a9033cba4e2805127d351d580e61916952f060b3758991b6d5faf
+      checksum: 9a53e482b6dc5c29955f8fd721c7215345c5e6164e6a82e510f1994ec4ac9b56
       download: false
 
     - name: "Attribute Change Package 18 for UIMDG001 200"

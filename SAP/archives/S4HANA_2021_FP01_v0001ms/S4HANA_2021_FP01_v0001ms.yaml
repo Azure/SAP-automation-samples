@@ -633,7 +633,7 @@ materials:
     - name:         "SAP_BASIS 756: SP 0001"
       archive:      K-75601INSAPBASIS.SAR
       url:          https://softwaredownloads.sap.com/file/0010000001784012021
-      checksum:     f7fd2593b0316a1b320281ed7cfff9a41aa2aee580780b2c902514d18042426f           
+      checksum:     f7fd2593b0316a1b320281ed7cfff9a41aa2aee580780b2c902514d18042426f
       download:     false
 
     - name:         "SAP_BW 756: SP 0001"
@@ -801,7 +801,7 @@ materials:
     - name:         "Attribute Change Package 36 for UIHR002 100"
       archive:      UIHR002100.SAR
       url:          https://softwaredownloads.sap.com/file/0010000020208092017
-      checksum:     689436077b2a9033cba4e2805127d351d580e61916952f060b3758991b6d5faf
+      checksum:     9a53e482b6dc5c29955f8fd721c7215345c5e6164e6a82e510f1994ec4ac9b56
       download:     false
 
     - name:         "Attribute Change Package 18 for UIMDG001 200"

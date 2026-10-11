@@ -555,7 +555,7 @@ materials:
 
     - name:                            "Attribute Change Package 36 for UIHR002 100"
       archive:                         UIHR002100.SAR
-      checksum:                        689436077b2a9033cba4e2805127d351d580e61916952f060b3758991b6d5faf
+      checksum:                        9a53e482b6dc5c29955f8fd721c7215345c5e6164e6a82e510f1994ec4ac9b56
       url:                             https://softwaredownloads.sap.com/file/0010000020208092017
       download:                        false
 

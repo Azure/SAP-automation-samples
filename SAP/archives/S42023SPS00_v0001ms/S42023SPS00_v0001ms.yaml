@@ -39,7 +39,7 @@ materials:
       filename:                        SAPCAR
       permissions:                     '0755'
       url:                             https://softwaredownloads.sap.com/file/0020000000098642022
-      
+
     # kernel components
 
     - name: "Kernel Part II (793)"
@@ -53,7 +53,7 @@ materials:
       url: https://softwaredownloads.sap.com/file/0020000001133782023
       path: download_basket
       checksum: 27a6c126cd2a15e0fdf3973cc914805d2f0dc738ff3a42c7220ea4fb2fa7590d
-      
+
     - name: "SP12 Patch8 for UMML4HANA 1"
       archive: HANAUMML12_8-70001054.ZIP
       url: https://softwaredownloads.sap.com/file/0020000000146922024
@@ -614,7 +614,7 @@ materials:
       archive: UIHR002100.SAR
       url: https://softwaredownloads.sap.com/file/0010000020208092017
       download: false
-      checksum: 689436077b2a9033cba4e2805127d351d580e61916952f060b3758991b6d5faf
+      checksum: 9a53e482b6dc5c29955f8fd721c7215345c5e6164e6a82e510f1994ec4ac9b56
 
     - name: "Attribute Change Package 18 for UIMDG001 200"
       archive: UIMDG001200.SAR
