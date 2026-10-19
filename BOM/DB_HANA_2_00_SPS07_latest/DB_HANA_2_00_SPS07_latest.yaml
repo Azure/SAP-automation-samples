@@ -3,8 +3,8 @@ name:                                        'HANA_2_00_SPS07_latest'
 target:                                      'HANA 2.0'
 version:                                     SPS07
 platform:                                    HANA
-minimumRedHatVersion:                        [8.4]
-minimumSLESVersion:                          [15.3]
+minimumRedHatVersion:                        ["8.4"]
+minimumSLESVersion:                          ["15.3"]
 code:                                        HDB
 
 patch_information:
