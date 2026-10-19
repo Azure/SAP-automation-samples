@@ -32,39 +32,39 @@ materials:
       path:                                  download_basket
       url:                                   https://softwaredownloads.sap.com/file/0020000000919882022
 
-    # v2_00_079 Revision 2.00.079.9 (SPS07) for HANA DB 2.0
-    - name:                                  "SAP HANA 2 SPS07 Revision 079.09 for HANA DB 2.0"
-      archive:                               IMDB_SERVER20_079_9-80002031.SAR
-      checksum:                              aa44f4341978e0323e21cd3cade9043f42cf4160af638203eac33447388e9ea6
+    # v2_00_079 Revision 2.00.079.11 (SPS07) for HANA DB 2.0
+    - name:                                  "SAP HANA 2 SPS07 Revision 079.11 for HANA DB 2.0"
+      archive:                               IMDB_SERVER20_079_11-80002031.SAR
+      checksum:                              41935a4da09c155b05e5933305f6a820dcd5caca2fe2e0d51c1d108002890344
       extract:                               true
       extractDir:                            CD_HDBSERVER
       creates:                               SIGNATURE.SMF
       path:                                  download_basket
-      url:                                   https://softwaredownloads.sap.com/file/0025000000137332026
+      url:                                   https://softwaredownloads.sap.com/file/0020000000785022026
 
-    - name:                                  "SAP HANA AFL Rev 79.900 only for HANA 2.0 Rev 79.09"
-      archive:                               IMDB_AFL20_079P_900-80001894.SAR
-      checksum:                              34393c9a3b25e6a88679646b0b001e139d325ef8556b1a602b86c472d7f92e8e
+    - name:                                  "SAP HANA AFL Rev 79.900 only for HANA 2.0 Rev 79.11"
+      archive:                               IMDB_AFL20_079P_1100-80001894.SAR
+      checksum:                              b73593a409a962f64c8bc0688f0181ae679a90ede7bffe5c1879ae5bbfe72937
       extract:                               true
       extractDir:                            CD_HDBSERVER/COMPONENTS
       creates:                               COMPONENTS/SAP_HANA_AFL/packages
-      url:                                   https://softwaredownloads.sap.com/file/0025000000137102026
+      url:                                   https://softwaredownloads.sap.com/file/0020000000784702026
 
     - name:                                  "LCAPPS for HANA 2.0 Rev 79.09 Build 101.24 PL 004"
-      archive:                               IMDB_LCAPPS_2079P_900-20010426.SAR
-      checksum:                              435a91e8e2c4084a6a5ef528747739d652534c6fc25c23158aa37d2b7fa2db50
+      archive:                               IMDB_LCAPPS_2079P_1100-20010426.SAR
+      checksum:                              4cfc885f4da213c97647e45d72ee24c3bed353c60de54b561d294324f200e018
       extract:                               true
       extractDir:                            CD_HDBSERVER/COMPONENTS
       creates:                               COMPONENTS/SAP_HANA_LCAPPS/packages
-      url:                                   https://softwaredownloads.sap.com/file/0025000000137142026
+      url:                                   https://softwaredownloads.sap.com/file/0020000000784692026
 
-    - name:                                  "VCH AFL 2021 Rev 79.900 only for HANA 2.0 Rev 79.09"
-      archive:                               VCH202100_2079P_900-70006349.SAR
-      checksum:                              4a81ca07c834a6a180b7c7bb8e756bcf462aa03714d9d526a5a8aad87c13b267
+    - name:                                  "VCH AFL 2021 Rev 79.1100 only for HANA 2.0 Rev 79.11"
+      archive:                               VCH202100_2079P_1100-70006349.SAR
+      checksum:                              e706d890646c62117c1586bdef855950e22ecfd62f3eda9c69ff1d9bf87e569d
       extract:                               true
       extractDir:                            CD_HDBSERVER/COMPONENTS
       creates:                               COMPONENTS/VCH_AFL_2021/packages
-      url:                                   https://softwaredownloads.sap.com/file/0025000000137112026
+      url:                                   https://softwaredownloads.sap.com/file/0020000000784612026
 
     - name:                                 "SAP HOST AGENT 7.22 SP69 ; OS: Linux on x86_64 64bit"
       archive:                              SAPHOSTAGENT69_69-80004822.SAR
