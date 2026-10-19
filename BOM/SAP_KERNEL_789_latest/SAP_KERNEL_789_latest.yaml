@@ -16,12 +16,12 @@ materials:
       extract:                               true
       url:                                   https://softwaredownloads.sap.com/file/0025000000007802025
 
-    - name:                                  "R3Trans SAP KERNEL 7.89 64-BIT UNICODE Linux on x86_64 64bit #Database independent"
-      archive:                               R3trans_447-70006642.SAR
-      url:                                   https://softwaredownloads.sap.com/file/0025000000000342026
-      download:                              true
-      path:                                  download_basket
-      checksum:                              64c1415971193eed2e3e350ff017e4eb71f507f631eb1b3480bdd4d31339fed1
+    # - name:                                  "R3Trans SAP KERNEL 7.89 64-BIT UNICODE Linux on x86_64 64bit #Database independent"
+    #   archive:                               R3trans_447-70006642.SAR
+    #   url:                                   https://softwaredownloads.sap.com/file/0025000000000342026
+    #   download:                              true
+    #   path:                                  download_basket
+    #   checksum:                              64c1415971193eed2e3e350ff017e4eb71f507f631eb1b3480bdd4d31339fed1
 
     # DB Kernel
 
