@@ -1,6 +1,7 @@
 ---
 name:                                        'HANA_2_00_SPS06_latest'
 target:                                      'HANA 2.0'
+
 version:                                     'SPS06'
 platform:                                    'HANA'
 minimumRedHatVersion:                        [8.1]

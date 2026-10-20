@@ -1,7 +1,7 @@
 ---
 name:                                        'KERNEL789_latest'
 target:                                      'KERNEL789_latest'
-version:                                     001
+file_version:                                001
 kernel:                                      '789'
 
 materials:

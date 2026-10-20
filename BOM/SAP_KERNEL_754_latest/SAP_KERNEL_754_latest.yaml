@@ -1,7 +1,7 @@
 ---
 name:                                        'KERNEL754_latest'
 target:                                      'KERNEL754_latest'
-version:                                     001
+file_version:                                001
 kernel:                                      '754'
 
 
