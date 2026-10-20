@@ -2,7 +2,8 @@
 
 name:                                  'SWPM20SP25'
 target:                                'SWPM20SP25'
-version:                               0
+version:                               SWPM20SP25_0
+file_version:                          001
 
 materials:
 
