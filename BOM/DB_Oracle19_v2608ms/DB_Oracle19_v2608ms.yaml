@@ -248,5 +248,14 @@ materials:
       url:                                   https://softwaredownloads.sap.com/file/0020000000698132026
       platform:                              ORACLE-ASM
 
+    - name:                                  "Grid Infrastructure OCW Merge 19.32.0.0.260721"
+      archive:                               GIMERGEOCW19P_2608-70004550.ZIP
+      checksum:                              c5f7b7c482a519cee485fb9999b80a0ea823dfd369d261638c79d37529635a4d
+      extract:                               true
+      download:                              true
+      extractDir:                            SBP/GIMERGEOCW19P
+      path:                                  SBP
+      url:                                   https://softwaredownloads.sap.com/file/0020000000697952026
+      platform:                              ORACLE-ASM
 
 
